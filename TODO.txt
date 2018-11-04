@@ -1,6 +1,7 @@
 * VSM Pattern generator clock input bug
 	When the clock input is set to external positive edge but is not on the root sheet then the signal is not used?
 	The pattern generator windows still pop-up though, although they do not scroll.
+
 	
 	
 * 4C/4D when run at 6MHz will generate "sub optiminal write pulses" errors with default values. Running at 1MHz fixes these issues.
