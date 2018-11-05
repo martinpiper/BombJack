@@ -1,1 +1,5 @@
 * Output video signal with resistor ladder. Exclude from simulation once analog behavior has been verified.
+
+
+
+* Component references must not start with numbers otherwise the layout router will generate routes that intersect some component pins.
