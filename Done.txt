@@ -2,4 +2,4 @@
 
 
 
-* Component references must not start with numbers otherwise the layout router will generate routes that intersect some component pins.
+* Removed duplicate component references that were causing incorrect auto router errors.
