@@ -3,3 +3,7 @@
 
 
 * Removed duplicate component references that were causing incorrect auto router errors.
+
+
+
+* Sheet 8 - Palette read/write logic
