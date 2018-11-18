@@ -1,0 +1,3 @@
+bgr order
+000 000 fff 8ce fff 00f fa0 0ff 000 02a 00a 0a0 888 666 444 0f0
+000 00f 000 444 888 ccc fff 00f 000 00f 000 444 888 ccc fff ff0
