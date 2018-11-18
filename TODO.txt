@@ -18,3 +18,5 @@
 	http://pugnator.github.io/openvsm/vsm__api_8c.html
 	
 	
+	
+* Interesting logic with _9A00CS 7R 6R 6S 5R 5S as it is only taking DB0-3 which implies a value 0-15 only. Hmm.
