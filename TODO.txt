@@ -7,16 +7,3 @@
 * 4C/4D when run at 6MHz will generate "sub optimal write pulses" errors with default values. Running at 1MHz fixes these issues.
 	* The output pixel data seems to be better when the timing is reduced.
 	* Investigate the output for read/write timings of these memory ICs for 6MHz operation.
-
-	
-	
-* Need a VSM model for a display that takes digital RGB + HSYNC + VSYNC
-	https://github.com/MockbaTheBorg/VSMModel
-	https://www.edaboard.com/showthread.php?188054-Creating-A-New-Component-(DLL)-For-Proteus-VSM
-	http://fractale.gecif.net/si/logiciels/proteus/ProteusVSMSDK.pdf
-	https://github.com/Pugnator/openvsm
-	http://pugnator.github.io/openvsm/vsm__api_8c.html
-	
-	
-	
-* Interesting logic with _9A00CS 7R 6R 6S 5R 5S as it is only taking DB0-3 which implies a value 0-15 only. Hmm.

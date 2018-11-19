@@ -36,6 +36,7 @@
    $VIA#0_SIGNAL
    (spare
     $VIA#0_POWER
+    PS4
    )
   )
   (rule
@@ -2360,6 +2361,24 @@
    (shape (circle I14 1.27000 0 0))
    (shape (circle BOT 1.27000 0 0))
   )
+  (padstack PS4 (absolute on)
+   (shape (circle TOP 0.76200 0 0))
+   (shape (circle I1 0.76200 0 0))
+   (shape (circle I2 0.76200 0 0))
+   (shape (circle I3 0.76200 0 0))
+   (shape (circle I4 0.76200 0 0))
+   (shape (circle I5 0.76200 0 0))
+   (shape (circle I6 0.76200 0 0))
+   (shape (circle I7 0.76200 0 0))
+   (shape (circle I8 0.76200 0 0))
+   (shape (circle I9 0.76200 0 0))
+   (shape (circle I10 0.76200 0 0))
+   (shape (circle I11 0.76200 0 0))
+   (shape (circle I12 0.76200 0 0))
+   (shape (circle I13 0.76200 0 0))
+   (shape (circle I14 0.76200 0 0))
+   (shape (circle BOT 0.76200 0 0))
+  )
   (padstack $VIA#0_SIGNAL (absolute on)
    (shape (circle TOP 0.76200 0 0))
    (shape (circle I1 0.76200 0 0))
@@ -2425,7 +2444,7 @@
    )
    (pins 1C-12 5M-12)
   )
-  (net "#00150"
+  (net "#00142"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2434,7 +2453,7 @@
    )
    (pins)
   )
-  (net "#00151"
+  (net "#00143"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2443,7 +2462,7 @@
    )
    (pins)
   )
-  (net "#00157"
+  (net "#00149"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2452,7 +2471,7 @@
    )
    (pins)
   )
-  (net "#00234"
+  (net "#00226"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2461,7 +2480,7 @@
    )
    (pins)
   )
-  (net "#00236"
+  (net "#00228"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2470,7 +2489,7 @@
    )
    (pins)
   )
-  (net "#00238"
+  (net "#00230"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2479,7 +2498,7 @@
    )
    (pins)
   )
-  (net "#00243"
+  (net "#00235"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2488,7 +2507,7 @@
    )
    (pins)
   )
-  (net "#00333"
+  (net "#00358"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2497,7 +2516,7 @@
    )
    (pins 3T-7 3T-11)
   )
-  (net "#00345"
+  (net "#00370"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2506,7 +2525,7 @@
    )
    (pins 3R-6 3R-9 3S-14)
   )
-  (net "#00355"
+  (net "#00380"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2515,7 +2534,7 @@
    )
    (pins 3R-14 4R-8)
   )
-  (net "#00356"
+  (net "#00381"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2524,7 +2543,7 @@
    )
    (pins 3R-8 4R-7)
   )
-  (net "#00363"
+  (net "#00388"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2533,7 +2552,7 @@
    )
    (pins 4N-1 4N-12 4R-1)
   )
-  (net "#00364"
+  (net "#00389"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2542,7 +2561,7 @@
    )
    (pins 4N-11 4P-11)
   )
-  (net "#00380"
+  (net "#00405"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2551,7 +2570,7 @@
    )
    (pins 4P-1 4P-5)
   )
-  (net "#00393"
+  (net "#00418"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2560,7 +2579,7 @@
    )
    (pins 3N-6 3N-9 3P-14)
   )
-  (net "#00394"
+  (net "#00419"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2569,7 +2588,7 @@
    )
    (pins 3N-8 3P-8 2T-11)
   )
-  (net "#00404"
+  (net "#00429"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2578,7 +2597,7 @@
    )
    (pins 3N-14 2T-12)
   )
-  (net "#00413"
+  (net "#00438"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2587,7 +2606,7 @@
    )
    (pins 4N-7 5P-11)
   )
-  (net "#00439"
+  (net "#00464"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2596,7 +2615,7 @@
    )
    (pins 2N-1 2N-4 2N-9 2N-12 2P-1 2P-4 2P-9 2P-12 2R-1 2R-4 2R-9 2R-12 5T-2 5T-12)
   )
-  (net "#00496"
+  (net "#00521"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2605,7 +2624,7 @@
    )
    (pins 7N-8 7T-7)
   )
-  (net "#00520"
+  (net "#00545"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2614,7 +2633,7 @@
    )
    (pins 1S-0 1T-0 2T-5)
   )
-  (net "#00523"
+  (net "#00548"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2623,7 +2642,7 @@
    )
    (pins 1S-8 2T-3)
   )
-  (net "#00528"
+  (net "#00553"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2632,7 +2651,7 @@
    )
    (pins 1S-1 1T-12)
   )
-  (net "#00543"
+  (net "#00568"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2641,7 +2660,7 @@
    )
    (pins 4R-2 7D-7)
   )
-  (net "#00544"
+  (net "#00569"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2650,7 +2669,7 @@
    )
    (pins 4R-3 4S-1)
   )
-  (net "#00566"
+  (net "#00591"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2659,7 +2678,7 @@
    )
    (pins 7R-14 4S-8)
   )
-  (net "#00583"
+  (net "#00608"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2668,7 +2687,7 @@
    )
    (pins 5R-8 6R-14)
   )
-  (net "#00584"
+  (net "#00609"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2677,7 +2696,7 @@
    )
    (pins 5R-10 6R-11)
   )
-  (net "#00585"
+  (net "#00610"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2686,7 +2705,7 @@
    )
    (pins 5R-13 6R-9)
   )
-  (net "#00586"
+  (net "#00611"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2695,7 +2714,7 @@
    )
    (pins 5R-0 6R-6)
   )
-  (net "#00587"
+  (net "#00612"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2704,7 +2723,7 @@
    )
    (pins 5R-6 5T-9)
   )
-  (net "#00599"
+  (net "#00624"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2713,7 +2732,7 @@
    )
    (pins 6S-8 7R-3)
   )
-  (net "#00601"
+  (net "#00626"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2722,7 +2741,7 @@
    )
    (pins 6R-8 7R-5)
   )
-  (net "#00614"
+  (net "#00639"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2731,7 +2750,7 @@
    )
    (pins 5S-0 6S-6)
   )
-  (net "#00615"
+  (net "#00640"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2740,7 +2759,7 @@
    )
    (pins 5S-13 6S-9)
   )
-  (net "#00616"
+  (net "#00641"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2749,7 +2768,7 @@
    )
    (pins 5S-10 6S-11)
   )
-  (net "#00617"
+  (net "#00642"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2758,7 +2777,7 @@
    )
    (pins 5S-8 6S-14)
   )
-  (net "#00626"
+  (net "#00651"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2767,7 +2786,7 @@
    )
    (pins 5S-6 5T-8)
   )
-  (net "#00644"
+  (net "#00682"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2776,7 +2795,7 @@
    )
    (pins 6T-3 7S-1)
   )
-  (net "#00686"
+  (net "#00711"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2785,7 +2804,7 @@
    )
    (pins 3E-0 3F-0 1D-3)
   )
-  (net "#00689"
+  (net "#00714"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2794,7 +2813,7 @@
    )
    (pins 3E-1 3F-1 1D-6)
   )
-  (net "#00692"
+  (net "#00717"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2803,7 +2822,7 @@
    )
    (pins 3E-2 3F-2 1D-8)
   )
-  (net "#00695"
+  (net "#00720"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2812,7 +2831,7 @@
    )
    (pins 3E-3 3F-3 1D-11)
   )
-  (net "#00705"
+  (net "#00730"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2821,7 +2840,7 @@
    )
    (pins 3E-6 3F-6 2E-3)
   )
-  (net "#00707"
+  (net "#00732"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2830,7 +2849,7 @@
    )
    (pins 3E-5 3F-5 2E-6)
   )
-  (net "#00709"
+  (net "#00734"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2839,7 +2858,7 @@
    )
    (pins 3E-4 3F-4 2E-8)
   )
-  (net "#00717"
+  (net "#00742"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2848,7 +2867,7 @@
    )
    (pins 2F-0 3E-9 3F-9 3H-7 7C-8)
   )
-  (net "#00721"
+  (net "#00746"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2857,7 +2876,7 @@
    )
    (pins 3H-5 7C-9)
   )
-  (net "#00724"
+  (net "#00749"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2866,7 +2885,7 @@
    )
    (pins 2F-18 7C-7)
   )
-  (net "#00727"
+  (net "#00752"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2875,7 +2894,7 @@
    )
    (pins 2F-1 4F-11 3F-10)
   )
-  (net "#00729"
+  (net "#00754"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2884,7 +2903,7 @@
    )
    (pins 2F-2 4F-8 3F-11)
   )
-  (net "#00731"
+  (net "#00756"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2893,7 +2912,7 @@
    )
    (pins 2F-3 4F-4 3F-12)
   )
-  (net "#00733"
+  (net "#00758"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2902,7 +2921,7 @@
    )
    (pins 2F-4 4F-1 3F-13)
   )
-  (net "#00735"
+  (net "#00760"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2911,7 +2930,7 @@
    )
    (pins 2F-5 4E-11 3E-10)
   )
-  (net "#00737"
+  (net "#00762"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2920,7 +2939,7 @@
    )
    (pins 2F-6 4E-8 3E-11)
   )
-  (net "#00739"
+  (net "#00764"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2929,7 +2948,7 @@
    )
    (pins 2F-7 4E-4 3E-12)
   )
-  (net "#00741"
+  (net "#00766"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2938,7 +2957,7 @@
    )
    (pins 2F-8 4E-1 3E-13)
   )
-  (net "#00823"
+  (net "#00848"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2947,7 +2966,7 @@
    )
    (pins 5E-8 5F-6)
   )
-  (net "#00825"
+  (net "#00850"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2956,7 +2975,7 @@
    )
    (pins 5H-16 5F-3)
   )
-  (net "#00826"
+  (net "#00851"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2965,7 +2984,7 @@
    )
    (pins 5H-7 5F-0)
   )
-  (net "#00827"
+  (net "#00852"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2974,7 +2993,7 @@
    )
    (pins 5H-3 5F-12)
   )
-  (net "#00828"
+  (net "#00853"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2983,7 +3002,7 @@
    )
    (pins 5H-13 5F-9)
   )
-  (net "#00836"
+  (net "#00861"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -2992,7 +3011,7 @@
    )
    (pins 5H-2 5E-3)
   )
-  (net "#00837"
+  (net "#00862"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3001,7 +3020,7 @@
    )
    (pins 5H-12 5E-0)
   )
-  (net "#00838"
+  (net "#00863"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3010,7 +3029,7 @@
    )
    (pins 5H-17 5E-12)
   )
-  (net "#00839"
+  (net "#00864"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3019,7 +3038,7 @@
    )
    (pins 5H-6 5E-9)
   )
-  (net "#00844"
+  (net "#00869"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3028,7 +3047,7 @@
    )
    (pins 5H-1 6H-11)
   )
-  (net "#00845"
+  (net "#00870"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3037,7 +3056,7 @@
    )
    (pins 5H-4 7D-3)
   )
-  (net "#00846"
+  (net "#00871"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3046,7 +3065,7 @@
    )
    (pins 5H-5 6H-0)
   )
-  (net "#00847"
+  (net "#00872"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3055,7 +3074,7 @@
    )
    (pins 5H-8 7D-4)
   )
-  (net "#00848"
+  (net "#00873"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3064,7 +3083,7 @@
    )
    (pins 5H-11 6H-3)
   )
-  (net "#00849"
+  (net "#00874"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3073,7 +3092,7 @@
    )
    (pins 5H-14 7D-0)
   )
-  (net "#00851"
+  (net "#00876"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3082,7 +3101,7 @@
    )
    (pins 5H-18 6H-8)
   )
-  (net "#00864"
+  (net "#00889"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3091,7 +3110,7 @@
    )
    (pins 6E-1 6H-1 6H-4 6H-9 6H-12 4H-12)
   )
-  (net "#00865"
+  (net "#00890"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3100,7 +3119,7 @@
    )
    (pins 6E-4 7E-3 4H-4 4H-9)
   )
-  (net "#00868"
+  (net "#00893"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3109,7 +3128,7 @@
    )
    (pins 6E-11 7E-5)
   )
-  (net "#00869"
+  (net "#00894"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3118,7 +3137,7 @@
    )
    (pins 6E-14 7E-13)
   )
-  (net "#00870"
+  (net "#00895"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3127,7 +3146,7 @@
    )
    (pins 6E-15 7E-12)
   )
-  (net "#00871"
+  (net "#00896"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3136,7 +3155,7 @@
    )
    (pins 6E-18 7E-10)
   )
-  (net "#00876"
+  (net "#00901"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3145,7 +3164,7 @@
    )
    (pins 7E-8 7T-10)
   )
-  (net "#00970"
+  (net "#00995"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3154,7 +3173,7 @@
    )
    (pins 7J-10 5J-5)
   )
-  (net "#00971"
+  (net "#00996"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3163,7 +3182,7 @@
    )
    (pins 7J-11 5J-4)
   )
-  (net "#00972"
+  (net "#00997"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3172,7 +3191,7 @@
    )
    (pins 7J-12 5J-3)
   )
-  (net "#00973"
+  (net "#00998"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3181,7 +3200,7 @@
    )
    (pins 7J-14 5J-2)
   )
-  (net "#00974"
+  (net "#00999"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3190,7 +3209,7 @@
    )
    (pins 7J-15 6J-5)
   )
-  (net "#00975"
+  (net "#01000"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3199,7 +3218,7 @@
    )
    (pins 7J-16 6J-4)
   )
-  (net "#00976"
+  (net "#01001"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3208,7 +3227,7 @@
    )
    (pins 7J-17 6J-3)
   )
-  (net "#00977"
+  (net "#01002"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3217,7 +3236,7 @@
    )
    (pins 7J-18 6J-2)
   )
-  (net "#01006"
+  (net "#01031"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3226,7 +3245,7 @@
    )
    (pins 7L-10 5K-5)
   )
-  (net "#01007"
+  (net "#01032"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3235,7 +3254,7 @@
    )
    (pins 7L-11 5K-4)
   )
-  (net "#01008"
+  (net "#01033"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3244,7 +3263,7 @@
    )
    (pins 7L-12 5K-3)
   )
-  (net "#01009"
+  (net "#01034"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3253,7 +3272,7 @@
    )
    (pins 7L-14 5K-2)
   )
-  (net "#01010"
+  (net "#01035"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3262,7 +3281,7 @@
    )
    (pins 7L-15 6K-5)
   )
-  (net "#01011"
+  (net "#01036"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3271,7 +3290,7 @@
    )
    (pins 7L-16 6K-4)
   )
-  (net "#01012"
+  (net "#01037"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3280,7 +3299,7 @@
    )
    (pins 7L-17 6K-3)
   )
-  (net "#01013"
+  (net "#01038"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3289,7 +3308,7 @@
    )
    (pins 7L-18 6K-2)
   )
-  (net "#01042"
+  (net "#01067"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3298,7 +3317,7 @@
    )
    (pins 7M-10 5L-5)
   )
-  (net "#01043"
+  (net "#01068"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3307,7 +3326,7 @@
    )
    (pins 7M-11 5L-4)
   )
-  (net "#01044"
+  (net "#01069"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3316,7 +3335,7 @@
    )
    (pins 7M-12 5L-3)
   )
-  (net "#01045"
+  (net "#01070"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3325,7 +3344,7 @@
    )
    (pins 7M-14 5L-2)
   )
-  (net "#01046"
+  (net "#01071"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3334,7 +3353,7 @@
    )
    (pins 7M-15 6L-5)
   )
-  (net "#01047"
+  (net "#01072"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3343,7 +3362,7 @@
    )
    (pins 7M-16 6L-4)
   )
-  (net "#01048"
+  (net "#01073"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3352,7 +3371,7 @@
    )
    (pins 7M-17 6L-3)
   )
-  (net "#01049"
+  (net "#01074"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3361,7 +3380,7 @@
    )
    (pins 7M-18 6L-2)
   )
-  (net "#01063"
+  (net "#01088"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3370,7 +3389,7 @@
    )
    (pins 7C-4 7D-5)
   )
-  (net "#01068"
+  (net "#01093"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3379,7 +3398,7 @@
    )
    (pins 6M-2 7T-4 7C-5)
   )
-  (net "#01084"
+  (net "#01109"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3388,7 +3407,7 @@
    )
    (pins 5L-14 6L-6)
   )
-  (net "#01087"
+  (net "#01112"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3397,7 +3416,7 @@
    )
    (pins 5L-1 6L-11)
   )
-  (net "#01096"
+  (net "#01121"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3406,7 +3425,7 @@
    )
    (pins 5K-14 6K-6)
   )
-  (net "#01099"
+  (net "#01124"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3415,7 +3434,7 @@
    )
    (pins 5K-1 6K-11)
   )
-  (net "#01108"
+  (net "#01133"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3424,7 +3443,7 @@
    )
    (pins 5J-14 6J-6)
   )
-  (net "#01111"
+  (net "#01136"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3433,7 +3452,7 @@
    )
    (pins 5J-1 6J-11)
   )
-  (net "#01139"
+  (net "#01164"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3442,7 +3461,7 @@
    )
    (pins 3C-14 3D-14 7B-5)
   )
-  (net "#01195"
+  (net "#01220"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3451,7 +3470,7 @@
    )
    (pins 6D-13 5D-0)
   )
-  (net "#01197"
+  (net "#01222"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3460,7 +3479,7 @@
    )
    (pins 6D-12 5D-11)
   )
-  (net "#01199"
+  (net "#01224"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3469,7 +3488,7 @@
    )
    (pins 6D-11 5D-3)
   )
-  (net "#01201"
+  (net "#01226"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3478,7 +3497,7 @@
    )
    (pins 6D-10 5D-8)
   )
-  (net "#01203"
+  (net "#01228"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3487,7 +3506,7 @@
    )
    (pins 6C-14 6D-6 6D-9)
   )
-  (net "#01204"
+  (net "#01229"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3496,7 +3515,7 @@
    )
    (pins 6C-0 6D-0 7B-2)
   )
-  (net "#01209"
+  (net "#01234"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3505,7 +3524,7 @@
    )
    (pins 6C-13 5C-8)
   )
-  (net "#01211"
+  (net "#01236"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3514,7 +3533,7 @@
    )
    (pins 6C-12 5C-3)
   )
-  (net "#01213"
+  (net "#01238"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3523,7 +3542,7 @@
    )
    (pins 6C-11 5C-0)
   )
-  (net "#01215"
+  (net "#01240"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3532,7 +3551,7 @@
    )
    (pins 6C-10 5C-11)
   )
-  (net "#01225"
+  (net "#01250"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3541,7 +3560,7 @@
    )
    (pins 5C-1 5C-4 5C-9 5C-12 5D-1 5D-4 5D-9 5D-12 7A-2)
   )
-  (net "#01228"
+  (net "#01253"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3550,7 +3569,7 @@
    )
    (pins 4C-2 4D-2 5D-2)
   )
-  (net "#01231"
+  (net "#01256"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3559,7 +3578,7 @@
    )
    (pins 4C-0 4D-0 5D-5)
   )
-  (net "#01234"
+  (net "#01259"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3568,7 +3587,7 @@
    )
    (pins 4C-16 4D-16 5D-7)
   )
-  (net "#01237"
+  (net "#01262"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3577,7 +3596,7 @@
    )
    (pins 4C-1 4D-1 5D-10)
   )
-  (net "#01240"
+  (net "#01265"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3586,7 +3605,7 @@
    )
    (pins 4C-6 4D-6 5C-2)
   )
-  (net "#01243"
+  (net "#01268"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3595,7 +3614,7 @@
    )
    (pins 4C-5 4D-5 5C-5)
   )
-  (net "#01246"
+  (net "#01271"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3604,7 +3623,7 @@
    )
    (pins 4C-4 4D-4 5C-7)
   )
-  (net "#01249"
+  (net "#01274"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3613,7 +3632,7 @@
    )
    (pins 4C-3 4D-3 5C-10)
   )
-  (net "#01254"
+  (net "#01279"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3622,7 +3641,7 @@
    )
    (pins 4C-7 4D-7 7A-10)
   )
-  (net "#01313"
+  (net "#01338"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3631,7 +3650,7 @@
    )
    (pins 3A-14 3B-14 7B-7)
   )
-  (net "#01357"
+  (net "#01382"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3640,7 +3659,7 @@
    )
    (pins 6A-13 5A-0)
   )
-  (net "#01359"
+  (net "#01384"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3649,7 +3668,7 @@
    )
    (pins 6A-12 5A-11)
   )
-  (net "#01361"
+  (net "#01386"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3658,7 +3677,7 @@
    )
    (pins 6A-11 5A-3)
   )
-  (net "#01363"
+  (net "#01388"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3667,7 +3686,7 @@
    )
    (pins 6A-10 5A-8)
   )
-  (net "#01365"
+  (net "#01390"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3676,7 +3695,7 @@
    )
    (pins 6A-6 6A-9 6B-14)
   )
-  (net "#01366"
+  (net "#01391"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3685,7 +3704,7 @@
    )
    (pins 6A-0 6B-0 7B-10)
   )
-  (net "#01381"
+  (net "#01406"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3694,7 +3713,7 @@
    )
    (pins 5A-1 5A-4 5A-9 5A-12 5B-1 5B-4 5B-9 5B-12 7A-5)
   )
-  (net "#01384"
+  (net "#01409"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3703,7 +3722,7 @@
    )
    (pins 4A-2 4B-2 5A-2)
   )
-  (net "#01387"
+  (net "#01412"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3712,7 +3731,7 @@
    )
    (pins 4A-0 4B-0 5A-5)
   )
-  (net "#01390"
+  (net "#01415"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3721,7 +3740,7 @@
    )
    (pins 4A-16 4B-16 5A-7)
   )
-  (net "#01393"
+  (net "#01418"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3730,7 +3749,7 @@
    )
    (pins 4A-1 4B-1 5A-10)
   )
-  (net "#01396"
+  (net "#01421"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3739,7 +3758,7 @@
    )
    (pins 6B-11 5B-0)
   )
-  (net "#01397"
+  (net "#01422"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3748,7 +3767,7 @@
    )
    (pins 4A-6 4B-6 5B-2)
   )
-  (net "#01400"
+  (net "#01425"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3757,7 +3776,7 @@
    )
    (pins 6B-12 5B-3)
   )
-  (net "#01401"
+  (net "#01426"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3766,7 +3785,7 @@
    )
    (pins 4A-5 4B-5 5B-5)
   )
-  (net "#01404"
+  (net "#01429"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3775,7 +3794,7 @@
    )
    (pins 6B-13 5B-8)
   )
-  (net "#01405"
+  (net "#01430"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3784,7 +3803,7 @@
    )
    (pins 4A-4 4B-4 5B-7)
   )
-  (net "#01408"
+  (net "#01433"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3793,7 +3812,7 @@
    )
    (pins 6B-10 5B-11)
   )
-  (net "#01409"
+  (net "#01434"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3802,7 +3821,7 @@
    )
    (pins 4A-3 4B-3 5B-10)
   )
-  (net "#01414"
+  (net "#01439"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3811,7 +3830,7 @@
    )
    (pins 4A-7 4B-7 7A-7)
   )
-  (net "#01491"
+  (net "#01516"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3820,7 +3839,7 @@
    )
    (pins RR2-0 7A2-1)
   )
-  (net "#01492"
+  (net "#01517"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3829,7 +3848,7 @@
    )
    (pins RR1-0 7A2-4)
   )
-  (net "#01493"
+  (net "#01518"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3838,7 +3857,7 @@
    )
    (pins RG3-0 7A2-6)
   )
-  (net "#01494"
+  (net "#01519"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3847,7 +3866,7 @@
    )
    (pins RG4-0 7A2-9)
   )
-  (net "#01495"
+  (net "#01520"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3856,7 +3875,7 @@
    )
    (pins RR3-0 7A2-11)
   )
-  (net "#01496"
+  (net "#01521"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3865,7 +3884,7 @@
    )
    (pins RR4-0 7A2-14)
   )
-  (net "#01499"
+  (net "#01524"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3874,7 +3893,7 @@
    )
    (pins RB3-0 8B2-1)
   )
-  (net "#01500"
+  (net "#01525"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3883,7 +3902,7 @@
    )
    (pins RB2-0 8B2-4)
   )
-  (net "#01501"
+  (net "#01526"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3892,7 +3911,7 @@
    )
    (pins RB1-0 8B2-6)
   )
-  (net "#01502"
+  (net "#01527"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3901,7 +3920,7 @@
    )
    (pins RG2-0 8B2-9)
   )
-  (net "#01503"
+  (net "#01528"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3910,7 +3929,7 @@
    )
    (pins RG1-0 8B2-11)
   )
-  (net "#01533"
+  (net "#01558"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3919,7 +3938,7 @@
    )
    (pins 5E2-0 8S-5)
   )
-  (net "#01534"
+  (net "#01559"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3928,7 +3947,7 @@
    )
    (pins 5E2-1 8S-3)
   )
-  (net "#01535"
+  (net "#01560"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3937,7 +3956,7 @@
    )
    (pins 5E2-4 6F2-2)
   )
-  (net "#01536"
+  (net "#01561"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3946,7 +3965,7 @@
    )
    (pins 5E2-5 6F2-5)
   )
-  (net "#01537"
+  (net "#01562"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3955,7 +3974,7 @@
    )
    (pins 5E2-8 6F2-12)
   )
-  (net "#01538"
+  (net "#01563"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3964,7 +3983,7 @@
    )
    (pins 5E2-11 6D2-12)
   )
-  (net "#01539"
+  (net "#01564"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3973,7 +3992,7 @@
    )
    (pins 5E2-14 6D2-2)
   )
-  (net "#01540"
+  (net "#01565"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3982,7 +4001,7 @@
    )
    (pins 5E2-15 6D2-5)
   )
-  (net "#01541"
+  (net "#01566"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -3991,7 +4010,7 @@
    )
    (pins 5E2-18 6F2-9)
   )
-  (net "#01582"
+  (net "#01607"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -4000,7 +4019,7 @@
    )
    (pins 7B2-18 8C2-10)
   )
-  (net "#01664"
+  (net "#01689"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -5984,7 +6003,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 6C-8 6D-8 7B-11 7S-11)
+   (pins 6C-8 6D-8 7B-11 7S-10)
   )
   (net "_DBGWRITE"
    (circuit
@@ -6194,182 +6213,182 @@
    "#00021"
    "#00034"
    "#00056"
-   "#00150"
-   "#00151"
-   "#00157"
-   "#00234"
-   "#00236"
-   "#00238"
-   "#00243"
-   "#00333"
-   "#00345"
-   "#00355"
-   "#00356"
-   "#00363"
-   "#00364"
+   "#00142"
+   "#00143"
+   "#00149"
+   "#00226"
+   "#00228"
+   "#00230"
+   "#00235"
+   "#00358"
+   "#00370"
    "#00380"
-   "#00393"
-   "#00394"
-   "#00404"
-   "#00413"
-   "#00439"
-   "#00496"
-   "#00520"
-   "#00523"
-   "#00528"
-   "#00543"
-   "#00544"
-   "#00566"
-   "#00583"
-   "#00584"
-   "#00585"
-   "#00586"
-   "#00587"
-   "#00599"
-   "#00601"
-   "#00614"
-   "#00615"
-   "#00616"
-   "#00617"
+   "#00381"
+   "#00388"
+   "#00389"
+   "#00405"
+   "#00418"
+   "#00419"
+   "#00429"
+   "#00438"
+   "#00464"
+   "#00521"
+   "#00545"
+   "#00548"
+   "#00553"
+   "#00568"
+   "#00569"
+   "#00591"
+   "#00608"
+   "#00609"
+   "#00610"
+   "#00611"
+   "#00612"
+   "#00624"
    "#00626"
-   "#00644"
-   "#00686"
-   "#00689"
-   "#00692"
-   "#00695"
-   "#00705"
-   "#00707"
-   "#00709"
+   "#00639"
+   "#00640"
+   "#00641"
+   "#00642"
+   "#00651"
+   "#00682"
+   "#00711"
+   "#00714"
    "#00717"
-   "#00721"
-   "#00724"
-   "#00727"
-   "#00729"
-   "#00731"
-   "#00733"
-   "#00735"
-   "#00737"
-   "#00739"
-   "#00741"
-   "#00823"
-   "#00825"
-   "#00826"
-   "#00827"
-   "#00828"
-   "#00836"
-   "#00837"
-   "#00838"
-   "#00839"
-   "#00844"
-   "#00845"
-   "#00846"
-   "#00847"
+   "#00720"
+   "#00730"
+   "#00732"
+   "#00734"
+   "#00742"
+   "#00746"
+   "#00749"
+   "#00752"
+   "#00754"
+   "#00756"
+   "#00758"
+   "#00760"
+   "#00762"
+   "#00764"
+   "#00766"
    "#00848"
-   "#00849"
+   "#00850"
    "#00851"
+   "#00852"
+   "#00853"
+   "#00861"
+   "#00862"
+   "#00863"
    "#00864"
-   "#00865"
-   "#00868"
    "#00869"
    "#00870"
    "#00871"
+   "#00872"
+   "#00873"
+   "#00874"
    "#00876"
-   "#00970"
-   "#00971"
-   "#00972"
-   "#00973"
-   "#00974"
-   "#00975"
-   "#00976"
-   "#00977"
-   "#01006"
-   "#01007"
-   "#01008"
-   "#01009"
-   "#01010"
-   "#01011"
-   "#01012"
-   "#01013"
-   "#01042"
-   "#01043"
-   "#01044"
-   "#01045"
-   "#01046"
-   "#01047"
-   "#01048"
-   "#01049"
-   "#01063"
+   "#00889"
+   "#00890"
+   "#00893"
+   "#00894"
+   "#00895"
+   "#00896"
+   "#00901"
+   "#00995"
+   "#00996"
+   "#00997"
+   "#00998"
+   "#00999"
+   "#01000"
+   "#01001"
+   "#01002"
+   "#01031"
+   "#01032"
+   "#01033"
+   "#01034"
+   "#01035"
+   "#01036"
+   "#01037"
+   "#01038"
+   "#01067"
    "#01068"
-   "#01084"
-   "#01087"
-   "#01096"
-   "#01099"
-   "#01108"
-   "#01111"
-   "#01139"
-   "#01195"
-   "#01197"
-   "#01199"
-   "#01201"
-   "#01203"
-   "#01204"
-   "#01209"
-   "#01211"
-   "#01213"
-   "#01215"
-   "#01225"
+   "#01069"
+   "#01070"
+   "#01071"
+   "#01072"
+   "#01073"
+   "#01074"
+   "#01088"
+   "#01093"
+   "#01109"
+   "#01112"
+   "#01121"
+   "#01124"
+   "#01133"
+   "#01136"
+   "#01164"
+   "#01220"
+   "#01222"
+   "#01224"
+   "#01226"
    "#01228"
-   "#01231"
+   "#01229"
    "#01234"
-   "#01237"
+   "#01236"
+   "#01238"
    "#01240"
-   "#01243"
-   "#01246"
-   "#01249"
-   "#01254"
-   "#01313"
-   "#01357"
-   "#01359"
-   "#01361"
-   "#01363"
-   "#01365"
-   "#01366"
-   "#01381"
+   "#01250"
+   "#01253"
+   "#01256"
+   "#01259"
+   "#01262"
+   "#01265"
+   "#01268"
+   "#01271"
+   "#01274"
+   "#01279"
+   "#01338"
+   "#01382"
    "#01384"
-   "#01387"
+   "#01386"
+   "#01388"
    "#01390"
-   "#01393"
-   "#01396"
-   "#01397"
-   "#01400"
-   "#01401"
-   "#01404"
-   "#01405"
-   "#01408"
+   "#01391"
+   "#01406"
    "#01409"
-   "#01414"
-   "#01491"
-   "#01492"
-   "#01493"
-   "#01494"
-   "#01495"
-   "#01496"
-   "#01499"
-   "#01500"
-   "#01501"
-   "#01502"
-   "#01503"
-   "#01533"
-   "#01534"
-   "#01535"
-   "#01536"
-   "#01537"
-   "#01538"
-   "#01539"
-   "#01540"
-   "#01541"
-   "#01582"
-   "#01664"
+   "#01412"
+   "#01415"
+   "#01418"
+   "#01421"
+   "#01422"
+   "#01425"
+   "#01426"
+   "#01429"
+   "#01430"
+   "#01433"
+   "#01434"
+   "#01439"
+   "#01516"
+   "#01517"
+   "#01518"
+   "#01519"
+   "#01520"
+   "#01521"
+   "#01524"
+   "#01525"
+   "#01526"
+   "#01527"
+   "#01528"
+   "#01558"
+   "#01559"
+   "#01560"
+   "#01561"
+   "#01562"
+   "#01563"
+   "#01564"
+   "#01565"
+   "#01566"
+   "#01607"
+   "#01689"
    "128H"
    "128H'"
    "128V"
@@ -6622,5 +6641,281 @@
   )
  )
  (wiring
+  (wire (path TOP 0.25400 76.20000 36.83000 83.82000 36.83000) (net "#00464"))
+  (wire (path TOP 0.25400 76.20000 29.21000 83.82000 29.21000) (net "#00464"))
+   (wire (path TOP 0.25400 83.82000 -25.40000 82.55000 -24.13000 77.47000 -24.13000 76.20000 -25.40000
+  ) (net "#01406"))
+   (wire (path TOP 0.25400 76.20000 12.70000 77.47000 13.97000 82.55000 13.97000 83.82000 12.70000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 -1.27000 -55.88000 -2.54000 -57.15000 -2.54000 -64.77000 -1.27000 -66.04000
+  ) (net "#00419"))
+  (wire (path I2 0.25400 31.75000 -85.09000 31.75000 -77.47000) (net "#00464"))
+  (wire (path I2 0.25400 24.13000 -85.09000 24.13000 -77.47000) (net "#00464"))
+   (wire (path I2 0.25400 -68.58000 58.42000 -67.31000 59.69000 -67.31000 67.31000 -68.58000 68.58000
+  ) (net "#00711"))
+   (wire (path I2 0.25400 -66.04000 58.42000 -64.77000 59.69000 -64.77000 67.31000 -66.04000 68.58000
+  ) (net "#00714"))
+   (wire (path I2 0.25400 -63.50000 58.42000 -62.23000 59.69000 -62.23000 67.31000 -63.50000 68.58000
+  ) (net "#00717"))
+   (wire (path I2 0.25400 -60.96000 58.42000 -59.69000 59.69000 -59.69000 67.31000 -60.96000 68.58000
+  ) (net "#00720"))
+   (wire (path I2 0.25400 -53.34000 58.42000 -52.07000 59.69000 -52.07000 67.31000 -53.34000 68.58000
+  ) (net "#00730"))
+   (wire (path I2 0.25400 -55.88000 58.42000 -54.61000 59.69000 -54.61000 67.31000 -55.88000 68.58000
+  ) (net "#00732"))
+   (wire (path I2 0.25400 -58.42000 58.42000 -57.15000 59.69000 -57.15000 67.31000 -58.42000 68.58000
+  ) (net "#00734"))
+   (wire (path I2 0.25400 -48.26000 66.04000 -49.53000 67.31000 -49.53000 74.93000 -48.26000 76.20000
+  ) (net "#00742"))
+  (wire (path I2 0.25400 -25.40000 38.10000 -25.40000 45.72000) (net "#00889"))
+  (wire (path I2 0.25400 -33.02000 38.10000 -33.02000 45.72000) (net "#00889"))
+  (wire (path I2 0.25400 50.80000 74.93000 50.80000 82.55000) (net "#00890"))
+   (wire (path I2 0.25400 2.54000 -19.05000 3.81000 -20.32000 3.81000 -27.94000 2.54000 -29.21000
+  ) (net "#01253"))
+   (wire (path I2 0.25400 -2.54000 -19.05000 -1.27000 -20.32000 -1.27000 -27.94000 -2.54000 -29.21000
+  ) (net "#01256"))
+   (wire (path I2 0.25400 0.00000 -19.05000 1.27000 -20.32000 1.27000 -27.94000 0.00000 -29.21000
+  ) (net "#01262"))
+   (wire (path I2 0.25400 12.70000 -19.05000 13.97000 -20.32000 13.97000 -27.94000 12.70000 -29.21000
+  ) (net "#01265"))
+   (wire (path I2 0.25400 10.16000 -19.05000 11.43000 -20.32000 11.43000 -27.94000 10.16000 -29.21000
+  ) (net "#01268"))
+   (wire (path I2 0.25400 7.62000 -19.05000 8.89000 -20.32000 8.89000 -27.94000 7.62000 -29.21000
+  ) (net "#01271"))
+   (wire (path I2 0.25400 5.08000 -19.05000 6.35000 -20.32000 6.35000 -27.94000 5.08000 -29.21000
+  ) (net "#01274"))
+   (wire (path I2 0.25400 15.24000 -19.05000 16.51000 -20.32000 16.51000 -27.94000 15.24000 -29.21000
+  ) (net "#01279"))
+   (wire (path I2 0.25400 10.16000 1.27000 11.43000 0.00000 11.43000 -7.62000 10.16000 -8.89000
+  ) (net "#01409"))
+   (wire (path I2 0.25400 5.08000 1.27000 6.35000 0.00000 6.35000 -7.62000 5.08000 -8.89000
+  ) (net "#01412"))
+   (wire (path I2 0.25400 7.62000 1.27000 8.89000 0.00000 8.89000 -7.62000 7.62000 -8.89000
+  ) (net "#01418"))
+   (wire (path I2 0.25400 20.32000 1.27000 21.59000 0.00000 21.59000 -7.62000 20.32000 -8.89000
+  ) (net "#01422"))
+   (wire (path I2 0.25400 17.78000 1.27000 19.05000 0.00000 19.05000 -7.62000 17.78000 -8.89000
+  ) (net "#01426"))
+   (wire (path I2 0.25400 15.24000 1.27000 16.51000 0.00000 16.51000 -7.62000 15.24000 -8.89000
+  ) (net "#01430"))
+   (wire (path I2 0.25400 12.70000 1.27000 13.97000 0.00000 13.97000 -7.62000 12.70000 -8.89000
+  ) (net "#01434"))
+   (wire (path I2 0.25400 22.86000 1.27000 24.13000 0.00000 24.13000 -7.62000 22.86000 -8.89000
+  ) (net "#01439"))
+   (wire (path I2 0.25400 40.64000 30.48000 39.37000 31.75000 39.37000 39.37000 40.64000 40.64000
+  ) (net "128H"))
+  (wire (path I2 0.25400 73.66000 74.93000 73.66000 82.55000) (net "1H"))
+   (wire (path I2 0.25400 -41.91000 58.42000 -40.64000 59.69000 -40.64000 67.31000 -41.91000 68.58000
+  ) (net "1V*."))
+   (wire (path I2 0.25400 -16.51000 -63.50000 -15.24000 -64.77000 -15.24000 -72.39000
+   -16.51000 -73.66000) (net "256H"))
+  (wire (path I2 0.25400 76.20000 74.93000 76.20000 82.55000) (net "2H"))
+   (wire (path I2 0.25400 48.26000 30.48000 46.99000 31.75000 46.99000 39.37000 48.26000 40.64000
+  ) (net "32H"))
+   (wire (path I2 0.25400 43.18000 30.48000 44.45000 31.75000 44.45000 39.37000 43.18000 40.64000
+  ) (net "64H"))
+   (wire (path I2 0.25400 -52.22000 -11.38000 -50.80000 -12.80000 -50.80000 -44.96000
+   -52.22000 -46.38000) (net "6MHZ"))
+   (wire (path I2 0.25400 11.43000 53.34000 12.70000 54.61000 12.70000 62.23000 11.43000 63.50000
+  ) (net "6MHZ"))
+   (wire (path I2 0.25400 41.91000 -11.43000 43.18000 -12.70000 43.18000 -20.32000 41.91000 -21.59000
+  ) (net "6MHZ"))
+   (wire (path I2 0.25400 45.72000 8.89000 46.99000 7.62000 46.99000 0.00000 45.72000 -1.27000
+  ) (net "6MHZ"))
+   (wire (path I2 0.25400 58.42000 -2.54000 59.69000 -3.81000 59.69000 -11.43000 58.42000 -12.70000
+  ) (net "6MHZ"))
+   (wire (path I2 0.25400 -17.78000 -24.13000 -16.51000 -25.40000 -16.51000 -40.64000
+   -17.78000 -41.91000) (net "C0"))
+   (wire (path I2 0.25400 -20.32000 -24.13000 -19.05000 -25.40000 -19.05000 -40.64000
+   -20.32000 -41.91000) (net "C1"))
+   (wire (path I2 0.25400 -22.86000 8.89000 -22.86000 7.62000 -21.59000 6.35000 -21.59000 -6.98500
+   -22.22500 -7.62000 -22.86000 -7.62000 -22.86000 -8.89000) (net "C10"))
+   (wire (path I2 0.25400 -27.94000 8.89000 -26.67000 7.62000 -26.67000 -7.62000 -27.94000 -8.89000
+  ) (net "C11"))
+   (wire (path I2 0.25400 -38.10000 -24.13000 -36.83000 -25.40000 -36.83000 -40.64000
+   -38.10000 -41.91000) (net "C12"))
+   (wire (path I2 0.25400 -38.10000 -6.35000 -39.37000 -7.62000 -39.37000 -22.86000 -38.10000 -24.13000
+  ) (net "C12"))
+   (wire (path I2 0.25400 -22.86000 -24.13000 -21.59000 -25.40000 -21.59000 -40.64000
+   -22.86000 -41.91000) (net "C2"))
+   (wire (path I2 0.25400 -25.40000 -24.13000 -24.13000 -25.40000 -24.13000 -40.64000
+   -25.40000 -41.91000) (net "C3"))
+   (wire (path I2 0.25400 -27.94000 -24.13000 -26.67000 -25.40000 -26.67000 -40.64000
+   -27.94000 -41.91000) (net "C4"))
+   (wire (path I2 0.25400 -30.48000 -24.13000 -29.21000 -25.40000 -29.21000 -40.64000
+   -30.48000 -41.91000) (net "C5"))
+   (wire (path I2 0.25400 -33.02000 -24.13000 -31.75000 -25.40000 -31.75000 -40.64000
+   -33.02000 -41.91000) (net "C6"))
+   (wire (path I2 0.25400 -35.56000 -24.13000 -34.29000 -25.40000 -34.29000 -40.64000
+   -35.56000 -41.91000) (net "C7"))
+   (wire (path I2 0.25400 -33.02000 8.89000 -31.75000 7.62000 -31.75000 -7.62000 -33.02000 -8.89000
+  ) (net "C8"))
+   (wire (path I2 0.25400 -30.48000 8.89000 -29.21000 7.62000 -29.21000 -7.62000 -30.48000 -8.89000
+  ) (net "C9"))
+   (wire (path I2 0.25400 -40.64000 27.94000 -39.37000 29.21000 -39.37000 36.83000 -40.64000 38.10000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -48.26000 58.42000 -46.99000 59.69000 -46.99000 67.31000 -48.26000 68.58000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -39.37000 66.04000 -38.10000 67.31000 -38.10000 74.93000 -39.37000 76.20000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -24.13000 58.42000 -22.86000 59.69000 -22.86000 67.31000 -24.13000 68.58000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -25.40000 8.89000 -25.40000 7.62000 -24.13000 6.35000 -24.13000 -6.98500
+   -24.76500 -7.62000 -25.40000 -7.62000 -25.40000 -8.89000) (net "GND"))
+   (wire (path I2 0.25400 3.81000 27.94000 5.08000 29.21000 5.08000 36.83000 3.81000 38.10000
+  ) (net "GND"))
+   (wire (path I2 0.25400 25.40000 1.27000 26.67000 0.00000 26.67000 -7.62000 25.40000 -8.89000
+  ) (net "GND"))
+  (wire (path I2 0.25400 19.05000 74.93000 19.05000 82.55000) (net "GND"))
+   (wire (path I2 0.25400 26.67000 53.34000 27.94000 54.61000 27.94000 62.23000 26.67000 63.50000
+  ) (net "GND"))
+   (wire (path I2 0.25400 26.67000 33.02000 27.94000 34.29000 27.94000 41.91000 26.67000 43.18000
+  ) (net "GND"))
+   (wire (path I2 0.25400 40.64000 22.86000 41.91000 24.13000 41.91000 31.75000 40.64000 33.02000
+  ) (net "GND"))
+   (wire (path I2 0.25400 50.80000 33.02000 49.53000 34.29000 49.53000 41.91000 50.80000 43.18000
+  ) (net "GND"))
+   (wire (path I2 0.25400 50.80000 22.86000 52.07000 24.13000 52.07000 31.75000 50.80000 33.02000
+  ) (net "GND"))
+   (wire (path I2 0.25400 50.80000 1.27000 52.07000 0.00000 52.07000 -7.62000 50.80000 -8.89000
+  ) (net "GND"))
+   (wire (path I2 0.25400 46.99000 -19.05000 48.26000 -20.32000 48.26000 -27.94000 46.99000 -29.21000
+  ) (net "GND"))
+   (wire (path I2 0.25400 17.78000 -19.05000 19.05000 -20.32000 19.05000 -27.94000 17.78000 -29.21000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -1.27000 -63.50000 0.00000 -64.77000 0.00000 -72.39000 -1.27000 -73.66000
+  ) (net "GND"))
+   (wire (path I2 0.25400 -43.18000 -73.66000 -41.91000 -74.93000 -41.91000 -82.55000
+   -43.18000 -83.82000) (net "IP1"))
+   (wire (path I2 0.25400 -40.64000 -73.66000 -39.37000 -74.93000 -39.37000 -82.55000
+   -40.64000 -83.82000) (net "IP2"))
+   (wire (path I2 0.25400 -48.26000 -73.66000 -46.99000 -74.93000 -46.99000 -82.55000
+   -48.26000 -83.82000) (net "IP3"))
+   (wire (path I2 0.25400 -50.80000 -73.66000 -49.53000 -74.93000 -49.53000 -82.55000
+   -50.80000 -83.82000) (net "IP4"))
+   (wire (path I2 0.25400 -53.34000 -73.66000 -52.07000 -74.93000 -52.07000 -82.55000
+   -53.34000 -83.82000) (net "IP5"))
+   (wire (path I2 0.25400 -55.88000 -73.66000 -54.61000 -74.93000 -54.61000 -82.55000
+   -55.88000 -83.82000) (net "IP6"))
+   (wire (path I2 0.25400 13.97000 33.02000 15.24000 34.29000 15.24000 41.91000 13.97000 43.18000
+  ) (net "MC1"))
+   (wire (path I2 0.25400 21.59000 33.02000 22.86000 34.29000 22.86000 41.91000 21.59000 43.18000
+  ) (net "MC2"))
+   (wire (path I2 0.25400 24.13000 40.64000 25.40000 41.91000 25.40000 49.53000 24.13000 50.80000
+  ) (net "MC3"))
+   (wire (path I2 0.25400 -58.42000 35.56000 -59.69000 36.83000 -59.69000 44.45000 -58.42000 45.72000
+  ) (net "O0"))
+   (wire (path I2 0.25400 60.96000 -2.54000 62.23000 -3.81000 62.23000 -11.43000 60.96000 -12.70000
+  ) (net "O0"))
+   (wire (path I2 0.25400 63.50000 -2.54000 64.77000 -3.81000 64.77000 -11.43000 63.50000 -12.70000
+  ) (net "O1"))
+   (wire (path I2 0.25400 -48.26000 35.56000 -49.53000 36.83000 -49.53000 44.45000 -48.26000 45.72000
+  ) (net "O2"))
+   (wire (path I2 0.25400 66.04000 -2.54000 67.31000 -3.81000 67.31000 -11.43000 66.04000 -12.70000
+  ) (net "O2"))
+   (wire (path I2 0.25400 68.58000 -2.54000 69.85000 -3.81000 69.85000 -11.43000 68.58000 -12.70000
+  ) (net "O3"))
+   (wire (path I2 0.25400 -45.72000 27.94000 -44.45000 29.21000 -44.45000 36.83000 -45.72000 38.10000
+  ) (net "O4"))
+   (wire (path I2 0.25400 -48.26000 27.94000 -46.99000 29.21000 -46.99000 36.83000 -48.26000 38.10000
+  ) (net "O5"))
+   (wire (path I2 0.25400 -55.88000 27.94000 -54.61000 29.21000 -54.61000 36.83000 -55.88000 38.10000
+  ) (net "O6"))
+   (wire (path I2 0.25400 -58.42000 27.94000 -57.15000 29.21000 -57.15000 36.83000 -58.42000 38.10000
+  ) (net "O7"))
+   (wire (path I2 0.25400 44.45000 -11.43000 45.72000 -12.70000 45.72000 -20.32000 44.45000 -21.59000
+  ) (net "S1"))
+   (wire (path I2 0.25400 48.26000 8.89000 49.53000 7.62000 49.53000 0.00000 48.26000 -1.27000
+  ) (net "S1"))
+   (wire (path I2 0.25400 -55.88000 -66.04000 -57.15000 -67.31000 -57.15000 -74.93000
+   -55.88000 -76.20000) (net "VCC/VDD"))
+  (wire (path I2 0.25400 -63.50000 38.10000 -63.50000 45.72000) (net "VCC/VDD"))
+   (wire (path I2 0.25400 -68.58000 66.04000 -69.85000 67.31000 -69.85000 74.93000 -68.58000 76.20000
+  ) (net "VCC/VDD"))
+  (wire (path I2 0.25400 -30.48000 -85.09000 -30.48000 -77.47000) (net "VCC/VDD"))
+  (wire (path I2 0.25400 -2.54000 -85.09000 -2.54000 -77.47000) (net "VCC/VDD"))
+   (wire (path I2 0.25400 -41.91000 66.04000 -43.18000 67.31000 -43.18000 74.93000 -41.91000 76.20000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 -2.54000 -11.43000 -3.81000 -12.70000 -3.81000 -20.32000 -2.54000 -21.59000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 8.89000 40.64000 10.16000 41.91000 10.16000 49.53000 8.89000 50.80000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 35.56000 33.02000 34.29000 34.29000 34.29000 41.91000 35.56000 43.18000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 35.56000 22.86000 36.83000 24.13000 36.83000 31.75000 35.56000 33.02000
+  ) (net "VCC/VDD"))
+  (wire (path I2 0.25400 -13.97000 38.10000 -13.97000 45.72000) (net "VCC/VDD"))
+   (wire (path I2 0.25400 55.88000 5.08000 57.15000 3.81000 57.15000 -3.81000 55.88000 -5.08000
+  ) (net "VCC/VDD"))
+   (wire (path I2 0.25400 3.81000 35.56000 2.54000 36.83000 2.54000 44.45000 3.81000 45.72000
+  ) (net "_6MHZ"))
+   (wire (path I2 0.25400 -70.00000 -19.00000 -68.58000 -20.42000 -68.58000 -52.58000
+   -70.00000 -54.00000) (net "_VBLANK"))
+   (wire (path BOT 0.25400 0.00000 -11.43000 1.27000 -12.70000 1.27000 -20.32000 0.00000 -21.59000
+  ) (net "#01259"))
+   (wire (path BOT 0.25400 7.62000 8.89000 7.62000 7.62000 8.89000 6.35000 8.89000 0.63500
+   8.25500 0.00000 7.62000 0.00000 7.62000 -1.27000) (net "#01415"))
+   (wire (path BOT 0.25400 17.78000 -11.43000 19.05000 -12.70000 19.05000 -20.32000 17.78000 -21.59000
+  ) (net "6MHZ"))
+   (wire (path BOT 0.25400 25.40000 8.89000 25.40000 6.98500 26.67000 5.71500 26.67000 0.63500
+   26.03500 0.00000 25.40000 0.00000 25.40000 -1.27000) (net "6MHZ"))
+   (wire (path BOT 0.25400 -17.78000 -6.35000 -16.51000 -7.62000 -16.51000 -22.86000
+   -17.78000 -24.13000) (net "C0"))
+   (wire (path BOT 0.25400 -20.32000 -6.35000 -19.05000 -7.62000 -19.05000 -22.86000
+   -20.32000 -24.13000) (net "C1"))
+   (wire (path BOT 0.25400 -22.86000 -6.35000 -21.59000 -7.62000 -21.59000 -22.86000
+   -22.86000 -24.13000) (net "C2"))
+   (wire (path BOT 0.25400 -25.40000 -6.35000 -24.13000 -7.62000 -24.13000 -22.86000
+   -25.40000 -24.13000) (net "C3"))
+   (wire (path BOT 0.25400 -27.94000 -6.35000 -26.67000 -7.62000 -26.67000 -22.86000
+   -27.94000 -24.13000) (net "C4"))
+   (wire (path BOT 0.25400 -30.48000 -6.35000 -29.21000 -7.62000 -29.21000 -22.86000
+   -30.48000 -24.13000) (net "C5"))
+   (wire (path BOT 0.25400 -33.02000 -6.35000 -31.75000 -7.62000 -31.75000 -22.86000
+   -33.02000 -24.13000) (net "C6"))
+   (wire (path BOT 0.25400 -35.56000 -6.35000 -34.29000 -7.62000 -34.29000 -22.86000
+   -35.56000 -24.13000) (net "C7"))
+   (wire (path BOT 0.25400 -66.04000 66.04000 -64.77000 67.31000 -64.77000 74.93000 -66.04000 76.20000
+  ) (net "GND"))
+   (wire (path BOT 0.25400 -48.26000 -66.04000 -46.99000 -67.31000 -46.99000 -74.93000
+   -48.26000 -76.20000) (net "GND"))
+   (wire (path BOT 0.25400 10.16000 8.89000 10.16000 7.62000 11.43000 6.35000 11.43000 0.63500
+   10.79500 0.00000 10.16000 0.00000 10.16000 -1.27000) (net "GND"))
+   (wire (path BOT 0.25400 2.54000 -11.43000 3.81000 -12.70000 3.81000 -20.32000 2.54000 -21.59000
+  ) (net "GND"))
+   (wire (path BOT 0.25400 -53.34000 -66.04000 -52.07000 -67.31000 -52.07000 -74.93000
+   -53.34000 -76.20000) (net "IP7"))
+   (wire (path BOT 0.25400 -50.80000 -66.04000 -49.53000 -67.31000 -49.53000 -74.93000
+   -50.80000 -76.20000) (net "IP8"))
+   (wire (path BOT 0.25400 -55.88000 35.56000 -54.61000 36.83000 -54.61000 44.45000 -55.88000 45.72000
+  ) (net "O1"))
+   (wire (path BOT 0.25400 -45.72000 35.56000 -44.45000 36.83000 -44.45000 44.45000 -45.72000 45.72000
+  ) (net "O3"))
+   (wire (path BOT 0.25400 46.99000 -11.43000 48.26000 -12.70000 48.26000 -20.32000 46.99000 -21.59000
+  ) (net "S0"))
+   (wire (path BOT 0.25400 50.80000 8.89000 52.07000 7.62000 52.07000 0.00000 50.80000 -1.27000
+  ) (net "S0"))
+   (wire (path BOT 0.25400 5.08000 8.89000 5.08000 7.62000 6.35000 6.35000 6.35000 0.63500
+   5.71500 0.00000 5.08000 0.00000 5.08000 -1.27000) (net "VCC/VDD"))
+   (wire (path BOT 0.25400 35.56000 30.48000 36.83000 31.75000 36.83000 39.37000 35.56000 40.64000
+  ) (net "_256H"))
+  (via PS4 73.66000 10.79500 (net {NC-1}))
+  (via PS4 5.08000 57.15000 (net {NC-2}))
+  (via PS4 8.89000 46.99000 (net {NC-3}))
+  (via PS4 53.34000 -60.96000 (net {NC-4}))
+  (via PS4 82.55000 19.05000 (net {NC-5}))
+  (via PS4 3.81000 67.31000 (net {NC-6}))
+  (via PS4 -34.29000 31.11500 (net {NC-7}))
+  (via PS4 -30.48000 33.65500 (net {NC-8}))
+  (via PS4 49.53000 -7.62000 (net {NC-9}))
+  (via PS4 -39.37000 -3.81000 (net {NC-10}))
+  (via PS4 17.78000 68.58000 (net {NC-11}))
+  (via PS4 62.23000 -1.27000 (net {NC-12}))
+  (via PS4 24.13000 37.46500 (net {NC-13}))
+  (via PS4 -72.39000 63.50000 (net {NC-14}))
+  (via PS4 44.45000 3.81000 (net {NC-15}))
+  (via PS4 -37.46500 -1.27000 (net {NC-16}))
+  (via PS4 -53.34000 57.15000 (net {NC-17}))
+  (via PS4 59.69000 -31.75000 (net {NC-18}))
  )
 )

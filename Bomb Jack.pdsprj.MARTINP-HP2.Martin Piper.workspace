@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff810200000900000080070000b0020000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff0000000000000000ff040000a7020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="108" flags="00000003" y="109" h="200" pid="0" iid="-1">
+   <POPUP w="800" x="20" flags="00000003" y="55" h="200" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">542</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -32,7 +32,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="69" flags="00000001" y="362" h="466" pid="0" iid="20">
+   <POPUP w="610" x="69" flags="00008001" y="362" h="466" pid="0" iid="20">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="98" flags="0000000a" y="189" h="16" pid="1" iid="72">
@@ -75,7 +75,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="178" flags="0000000a" y="269" h="16" pid="1" iid="135">
+   <POPUP w="16" x="30" flags="0000000a" y="785" h="16" pid="1" iid="135">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -85,7 +85,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="198" flags="0000000a" y="289" h="16" pid="1" iid="134">
+   <POPUP w="16" x="33" flags="0000000a" y="550" h="16" pid="1" iid="134">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

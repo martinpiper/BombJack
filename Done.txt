@@ -7,3 +7,17 @@
 
 
 * Sheet 8 - Palette read/write logic
+
+
+
+* Need a VSM model for a display that takes digital RGB + HSYNC + VSYNC
+	https://github.com/MockbaTheBorg/VSMModel
+	https://www.edaboard.com/showthread.php?188054-Creating-A-New-Component-(DLL)-For-Proteus-VSM
+	http://fractale.gecif.net/si/logiciels/proteus/ProteusVSMSDK.pdf
+	https://github.com/Pugnator/openvsm
+	http://pugnator.github.io/openvsm/vsm__api_8c.html
+
+	
+	
+* Interesting logic with _9A00CS 7R 6R 6S 5R 5S as it is only taking DB0-3 which implies a value 0-15 only. Hmm.
+	Resulted in discovering new 0x9a00/0x9a01 functionality for sprite size select, documented in README.md
