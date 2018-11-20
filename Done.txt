@@ -21,3 +21,8 @@
 	
 * Interesting logic with _9A00CS 7R 6R 6S 5R 5S as it is only taking DB0-3 which implies a value 0-15 only. Hmm.
 	Resulted in discovering new 0x9a00/0x9a01 functionality for sprite size select, documented in README.md
+
+	
+	
+* For integration with the TTL 8 bit CPU the VSYNC signal could be exposed to EXPANSIONBUS2:EXTWANTIRQ
+	This is because memory writes to 0x98xx can only be made when the video HW is not accessing the sprite regs

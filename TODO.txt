@@ -7,3 +7,7 @@
 * 4C/4D when run at 6MHz will generate "sub optimal write pulses" errors with default values. Running at 1MHz fixes these issues.
 	* The output pixel data seems to be better when the timing is reduced.
 	* Investigate the output for read/write timings of these memory ICs for 6MHz operation.
+
+	
+	
+* There is also the possibility to allow the horizontal pixel clock and/or the vertical raster position to be read via a latch and suitable address chip enable logic of an 8 bit latch
