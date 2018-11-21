@@ -26,3 +26,10 @@
 	
 * For integration with the TTL 8 bit CPU the VSYNC signal could be exposed to EXPANSIONBUS2:EXTWANTIRQ
 	This is because memory writes to 0x98xx can only be made when the video HW is not accessing the sprite regs
+
+	
+	
+	
+* Examine bus SREAD for the timing of sprite reads corresponding to the BH pixel clock and pixel output timing during the scan
+	Done - Examine when the scan RAMs get cleared before sprite rendering
+	Find out the reason for the first few bytes of what looks like odd data being written even when sprites are not at that coordinate?
