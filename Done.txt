@@ -33,3 +33,7 @@
 * Examine bus SREAD for the timing of sprite reads corresponding to the BH pixel clock and pixel output timing during the scan
 	Done - Examine when the scan RAMs get cleared before sprite rendering
 	Find out the reason for the first few bytes of what looks like odd data being written even when sprites are not at that coordinate?
+
+	
+	
+* Add page 6 character screen logic

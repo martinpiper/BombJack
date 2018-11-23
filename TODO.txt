@@ -1,5 +1,5 @@
-* Add page 6 character screen logic
-	Almost done with the shifters...
+* Complete page 8 pixel combination logic
+
 
 
 * VSM Pattern generator clock input bug
