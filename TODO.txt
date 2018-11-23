@@ -1,7 +1,3 @@
-* Complete page 8 pixel combination logic
-
-
-
 * VSM Pattern generator clock input bug
 	When the clock input is set to external positive edge but is not on the root sheet then the signal is not used?
 	The pattern generator windows still pop-up though, although they do not scroll.

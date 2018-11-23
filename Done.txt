@@ -37,3 +37,10 @@
 	
 	
 * Add page 6 character screen logic
+
+
+
+* Complete page 8 pixel combination logic
+	page 8 - For the 153x4 ICs D3 seems to be left to float high. Which means, for those pixels it will be floating up to the last entry in the palette.
+	Added a push button to cause the D3 input to be lo or high producing a nice debug purple rendering option.
+	
