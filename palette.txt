@@ -1,3 +1,22 @@
-bgr order
-000 000 fff 8ce fff 00f fa0 0ff 000 02a 00a 0a0 888 666 444 0f0
-000 00f 000 444 888 ccc fff 00f 000 00f 000 444 888 ccc fff ff0
+bgr order from MAME palette view
+In IC 13.1r at $1500?
+During bootup screen
+ 0 : 000 000 fff 8ce fff 00f fa0 0ff 000 02a 050 0a0 888 666 444 0f0
+10 : 000 00f 000 444 888 ccc fff 00f 000 00f 000 444 888 ccc fff ff0
+20 : 000 00f 000 555 888 bbb ddd fff 000 000 000 00d 0dd aaa 000 fff
+30 : 000 00f 000 444 888 ccc fff 08f 000 088 fff fff 6f6 fff 0ff f00
+40 : 000 f00 06f 0ff 0f0 ff0 fff caf 000 888 8aa ccc 080 0a0 0c0 f0a
+50 : 000 888 888 000 000 000 000 f0a 000 000 000 00d 0dd aaa 000 fff
+60 : 000 00f 00d 00b 009 007 005 003 000 0f0 0d0 0b0 090 070 050 030
+70 : 000 f00 d00 b00 900 700 500 300 000 fff ddd bbb 999 777 555 333
+
+
+During the sphinx level
+ 0 : 000 000 fff 8ce fff 00f fa0 0ff 000 02a 050 0a0 888 666 444 0f0
+10 : 000 00f 000 444 888 ccc fff 00f 000 00f 000 444 888 ccc fff ff0
+20 : 000 004 000 555 888 bbb ddd fff 000 000 0ff 008 00c 00f 000 fff
+30 : 000 00f 000 444 888 ccc fff 08f 000 088 fff fff 6f6 fff fff f00
+40 : 000 00f 555 777 999 bbb ddd f00 000 03f 05f 07f 09f 0bf 0df 0ff
+50 : 000 c00 045 267 489 6ab 8cd aef 000 099 0aa 0bb 0cc fff 0ee 0ff
+60 : 000 444 666 888 aaa fff ccc 000 000 09f fff 008 00c 00f 000 fff
+70 : 000 40f 20f 00f 02f 04f 06f 08f 000 aff cff fff fcc faa f88 f66
