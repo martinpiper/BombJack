@@ -106,6 +106,9 @@ The Z80 CPU from the original schematic is not included, it was clocked independ
 
 The Z80 data write signals are mocked using a combination of simulator pattern generator and some simple timing logic, this is separate to the main video schematic and the components are excluded from the PCB layout.
 
+As per the orignal design all writes to the video hardware should be timed to coincide with the VBLANK. This is because the video hardware is almost always reading the RAM during the visible portion of the frame. Writing to the sprite registers outside the VBLANK will especially produce nasty looking effects on the screen. This RAM sharing model is quite common is old arcade and console hardware.
+
+
 * Using the pattern file: 9800.ptn
 
 	This includes background screen setup, char screen data setup and sprite palette, frames and position setup.
