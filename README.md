@@ -1,9 +1,28 @@
 # BombJack
 
+This is a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
+
+## Background
+
+This project started when old retro arcade hardware was being discussed. I was looking at Bomb Jack boards on ebay and pondering how they had enough fill-rate to draw 24 16x16 sprites and have the option for some to use 32x32 mode as well. A friend and I were discussing the clock speed and fill-rate while trying to deduce the operation of the hardware just by inspecting the hand drawn schematics, as you do.
+
+In the end to get some clarity on the sprite plotting specifically I started to transcribe what was thought to be the sprite logic portion of the schematic into Proteus, since it can simulate digital electronics really well.
+
+## Digital display simulation
+
+The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
+
+
+## References
+
 * https://github.com/mamedev/mame/blob/master/src/mame/drivers/bombjack.cpp
 * https://floooh.github.io/2018/10/06/bombjack.html
 * https://www.arcade-museum.com/game_detail.php?game_id=7180
 
+
+## Developer technical details
+
+### Memory map
 
 Sprite 32x32 size select
 0x9a00 start index of 32x32 sprites
@@ -27,7 +46,8 @@ Byte 3: The sprite’s Y position on screen
 
 
 
-Using a "6MHz" clock of 1M. Due to default 4A/4B/4C/4D RAM timings being too tight.
+Using a "6MHz" clock of 1M. Due to default 4A/4B/4C/4D RAM timings being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6...
+
 System->Set Animation Options
 	Single Step Time: 83n
 	500n For debugging full clock cycle and pixel clock
@@ -38,7 +58,7 @@ System->Set Animation Options
 Using: 9800 top left all the same.ptn
 Set BV[0..7] break for 0xe8
 
-Raster line schedule
+### Raster line schedule
 	BV = vertical raster
 	BH = horizontal pixel clock
 		Full line starts at $180 to $1ff then $000 to $0ff
