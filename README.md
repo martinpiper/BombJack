@@ -13,13 +13,6 @@ In the end to get some clarity on the sprite plotting specifically I started to 
 The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
 
 
-## References
-
-* https://github.com/mamedev/mame/blob/master/src/mame/drivers/bombjack.cpp
-* https://floooh.github.io/2018/10/06/bombjack.html
-* https://www.arcade-museum.com/game_detail.php?game_id=7180
-
-
 ## Developer technical details
 
 If you have Proteus setup with the digital display model, you should see a screen that looks somewhat like this when starting the simulation:
@@ -69,11 +62,13 @@ Remember to use:
 The Z80 data write signals are mocked using a combination of simulator pattern generator and some simple timing logic, this is separate to the main video schematic and the components are excluded from the PCB layout.
 
 * Using the pattern file: 9800.ptn
+
 	This includes background screen setup, char screen data setup and sprite palette, frames and position setup.
 	It provides good variation of sprites, palettes etc across the full range of screen coordinates. This is useful for testing expected masking logic and general visual integrity.
 
 
 * Using the pattern file: 9800 top left all the same.ptn
+
 	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios.
 	Setting a logic break on BV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
 
@@ -122,3 +117,11 @@ The Z80 data write signals are mocked using a combination of simulator pattern g
 			This clears the pixel just output to the final video palette check since it's obviously not needed
 	$0fe	SREAD $7f
 	Loops back to $180 again and BV increment
+
+	
+	
+## References
+
+* https://github.com/mamedev/mame/blob/master/src/mame/drivers/bombjack.cpp
+* https://floooh.github.io/2018/10/06/bombjack.html
+* https://www.arcade-museum.com/game_detail.php?game_id=7180
