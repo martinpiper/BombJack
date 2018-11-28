@@ -118,21 +118,22 @@ As per the orignal design all writes to the video hardware should be timed to co
 * Using the pattern file: 9800 top left all the same.ptn
 
 	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios.
-	Setting a logic break on BV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
+	Setting a logic break on RV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
+	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear ot $ff can be seen whilst signle stepping. Note the values for the RV and RH bus lines just below the video display.
 
 	
 
 ### Raster line schedule
 
-	BV = vertical raster
-	BH = horizontal pixel clock
+	RV = vertical raster line number
+	RH = horizontal pixel clock
 		Full line starts at $180 to $1ff then $000 to $0ff
 		Giving 384 pixel clocks per line
 		Visible portion $008 to $188.
 		The 8 pixel delay is to sync with the 8 pixel delay for sprite data output into the off scan buffer
 	SREAD = Sprite register address (lo byte)
 	
-	Line BH starts at $180
+	Line RH starts at $180
 	$180	SREAD $20
 			Begin sprite 0 register reads
 			1V*. H
@@ -164,7 +165,7 @@ As per the orignal design all writes to the video hardware should be timed to co
 			Pixel also cleared in 4C/D
 			This clears the pixel just output to the final video palette check since it's obviously not needed
 	$0fe	SREAD $7f
-	Loops back to $180 again and BV increment
+	Loops back to $180 again and RV increment
 
 	
 	
