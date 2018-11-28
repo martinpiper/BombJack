@@ -19,6 +19,8 @@ If you have Proteus setup with the digital display model, you should see a scree
 
 ![Screenshot](Capture.PNG?raw=true "Screenshot")
 
+The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
+
 ### Memory map
 
 Sprite 32x32 size select
@@ -45,17 +47,23 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 
 
 	
-### Clock speed
+### Clock speeds
 
-The original schematic uses a 6MHz clock for all the video hardware, as denoted by the "6MHz" signal line. The Z80 CPU is clocked independently and has its own RAM, except for the video hardware interfaces.
+The original schematic uses a 6MHz clock for all the video hardware, as denoted by the "6MHz" signal line. The clocking can be found on "Root sheet 1" just about the logic analyser.
 
-However the Proteus simulation uses 1MHz on this signal line. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
+However the Proteus simulation uses 1MHz on this signal line, I kept the naming of the line the same as the original schematic however. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
 
 Remember to use:
 
 	System->Set Animation Options
 		Single Step Time: 83n
 		500n For debugging full clock cycle and pixel clock
+
+
+### Where is the Z80 CPU?
+
+The Z80 CPU from the original schematic is not included, it was clocked independently and has its own RAM, except for the video hardware interfaces and isn't needed for the video simulation.
+
 
 ### Input data setup
 
