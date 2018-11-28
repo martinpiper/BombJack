@@ -117,7 +117,7 @@ As per the orignal design all writes to the video hardware should be timed to co
 
 * Using the pattern file: 9800 top left all the same.ptn
 
-	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios.
+	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios. The background is disabled and char screen uses transparent chars. This leaves just the sprite plane outputting pixels.
 	Setting a logic break on RV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
 	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear ot $ff can be seen whilst signle stepping. Note the values for the RV and RH bus lines just below the video display.
 
