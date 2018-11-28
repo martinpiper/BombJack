@@ -29,40 +29,58 @@ If you have Proteus setup with the digital display model, you should see a scree
 ### Memory map
 
 Sprite 32x32 size select
-0x9a00 start index of 32x32 sprites
-0x9a01 end index of 32x32 sprites (exclusive)
-	So 0,0 = no 32x32 sprites
-	0,8 means indexes 0 to 7 (inclusive) are 32x32
-	Maximum number in both is is 0xf
+
+	0x9a00 start index of 32x32 sprites
+	0x9a01 end index of 32x32 sprites (exclusive)
+		So 0,0 = no 32x32 sprites
+		0,8 means indexes 0 to 7 (inclusive) are 32x32
+		Maximum number in both is is 0xf
 
 At 0x9820 - 0x987f each sprite is described by 4 bytes:
 
-Byte 0:
-	The tile code for the sprite, used to look up the sprite’s image bitplanes in the tile ROMs
-	(MAME Emu documentation is wrong, bit 7 has nothing to do with selecting double size mode)
+	Byte 0:
+		The tile code for the sprite, used to look up the sprite’s image bitplanes in the tile ROMs
+		(MAME Emu documentation is wrong, bit 7 has nothing to do with selecting double size mode)
 
-Byte 1:
-	Bit 7: if set, the sprite is horizontally flipped
-	Bit 6: if set, the sprite is vertically flipped
-	Bits 3..0: 4 bits to provide the color value for the tile decoder
-Byte 2: The sprite’s X position on screen
-Byte 3: The sprite’s Y position on screen
+	Byte 1: HV..CCCC
+		Bit 7: H : If set, the sprite is horizontally flipped
+		Bit 6: V : If set, the sprite is vertically flipped
+		Bits 3..0: C : 4 bits to provide the color value for the tile decoder
+
+	Byte 2: The sprite’s X position on screen
+	Byte 3: The sprite’s Y position on screen
 
 
-
-Using a "6MHz" clock of 1M. Due to default 4A/4B/4C/4D RAM timings being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6...
-
-System->Set Animation Options
-	Single Step Time: 83n
-	500n For debugging full clock cycle and pixel clock
 	
-	
-	
+### Clock speed
 
-Using: 9800 top left all the same.ptn
-Set BV[0..7] break for 0xe8
+The original schematic uses a 6MHz clock for all the video hardware, as denoted by the "6MHz" signal line. The Z80 CPU is clocked independently and has its own RAM, except for the video hardware interfaces.
+
+However the Proteus simulation uses 1MHz on this signal line. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
+
+Remember to use:
+
+	System->Set Animation Options
+		Single Step Time: 83n
+		500n For debugging full clock cycle and pixel clock
+
+### Input data setup
+
+The Z80 data write signals are mocked using a combination of simulator pattern generator and some simple timing logic, this is separate to the main video schematic and the components are excluded from the PCB layout.
+
+* Using the pattern file: 9800.ptn
+	This includes background screen setup, char screen data setup and sprite palette, frames and position setup.
+	It provides good variation of sprites, palettes etc across the full range of screen coordinates. This is useful for testing expected masking logic and general visual integrity.
+
+
+* Using the pattern file: 9800 top left all the same.ptn
+	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios.
+	Setting a logic break on BV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
+
+	
 
 ### Raster line schedule
+
 	BV = vertical raster
 	BH = horizontal pixel clock
 		Full line starts at $180 to $1ff then $000 to $0ff
