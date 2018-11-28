@@ -6,7 +6,7 @@ This is a working schematic for the video display portion of the original Bomb J
 
 This project started when old retro arcade hardware was being discussed. In the back of my mind was the often fabled "Mega games" by Imagine Software which were planned to use extra hardware on the Spectrum and Commodore 64 to augment the machine's capabilities. Since this hardware uses TTL logic available back from the same time period I was wondering exactly how much extra graphical grunt could have been engineered and interfaced with these old 8-bit computers.
 
-Truth be told, the Imagine hardware was pretty much just extra RAM ([https://www.gamesthatwerent.com/gtw64/mega-games/]) but this was a fun project to see how far the arcade hardware was pushing the limits of board size and signal complexity.
+Truth be told, the Imagine hardware was pretty much just extra RAM https://www.gamesthatwerent.com/gtw64/mega-games/ but this was a fun project to see how far the arcade hardware was pushing the limits of board size and signal complexity.
 
 I was looking at Bomb Jack boards on ebay and pondering how they had enough fill-rate to draw 24 16x16 sprites and have the option for some to use 32x32 mode as well. A friend and I were discussing the clock speed and fill-rate while trying to deduce the operation of the hardware just by inspecting the hand drawn schematics, as you do.
 
@@ -16,6 +16,7 @@ In the end to get some clarity on the sprite plotting specifically I started to 
 
 The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
 
+This simulation can also be used to debug failures in original boards, since disabling chips or signals in the simulation can produce similar output display artefacts. For example disabling one of the scan line RAM chips (4A/4B/4C/4D) produces alternate pixels and bright lines, similar to the original hardware.
 
 ## Developer technical details
 
