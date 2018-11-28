@@ -22,6 +22,10 @@ The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digita
 
 ## Developer technical details
 
+If you have Proteus setup with the digital display model, you should see a screen that looks somewhat like this when starting the simulation:
+
+![Screenshot](/martinpiper/BombJack/blob/master/Capture.PNG?raw=true "Screenshot")
+
 ### Memory map
 
 Sprite 32x32 size select
