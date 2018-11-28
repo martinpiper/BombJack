@@ -1,4 +1,4 @@
-# BombJack
+# Bomb Jack display hardware
 
 This is a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 
