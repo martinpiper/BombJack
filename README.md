@@ -19,7 +19,44 @@ If you have Proteus setup with the digital display model, you should see a scree
 
 ![Screenshot](Capture.PNG?raw=true "Screenshot")
 
+### High level schematic sheets
+
 The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
+
+1. Logic analyser, virtual video display model, expansion bus header, pattern generators and associated debug memory write logic
+	1. Memory selection logic based on external address bus
+	2. Debug buttons for the video flip and spare background plane selection
+2. Intentionally left blank, the original schematic has dipswitch logic
+3. Video timing
+	1. Horizontal video signal generation
+	2. Vertical video signal generation
+	3. HBLANK and VBLANK signal generation
+	4. 32x32 sprite selection registers and comparison
+	5. Various signal timings generated for sprite loading, tile and colour fetch etc
+4. Sprite logic - Part 1
+	1. Sprite RAM register access logic, timing with the external address/data bus and video internal timings
+	2. Temporary storage for sprite position, palette and frame
+	3. Bit plane access and bit shifters for output pixels to scan RAM
+5. Sprite logic - Part 2
+	1. Dual scan line RAM buffers
+	2. Transparent pixel test logic based on inverted pixel temporary storage and selection with NOR check
+	3. Pixel writing to RAM based on 16 pixel chunks and position register contents
+	4. Logic for timing of pixel reads for possible video display, plus clearing of data just read
+6. Character screen RAM with associated colour screen
+	1. Associated external bus interface logic
+	2. Bit plane reads and pixel shifters
+	3. Output pixel logic for possible video display
+7. Read only background pixture logic
+	1. Logic for selection of approriate picture, based on high address lines
+	2. Bit plane reads and pixel shifters
+	3. Output pixel logic for possible video display, or disable background logic
+8. Output pixel pipeline and palette lookup
+	1. Pixel transparency test from background, character screen and sprites
+	2. Palette RAMs with external bus logic
+	3. Final pixel latching logic and palette RAM lookup
+	4. Output digital to analog conversion using resistor ladders
+	5. Analog RGB and associated sync signal output header
+	
 
 ### Memory map
 
