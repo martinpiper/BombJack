@@ -31,7 +31,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 1. Logic analyser, virtual video display model, expansion bus header, pattern generators and associated debug memory write logic
 	1. Memory selection logic based on external address bus
 	2. Debug buttons for the video flip and spare background plane selection
-2. Intentionally left blank, the original schematic has dipswitch logic
+2. Intentionally left blank, the original schematic has dip switch logic
 3. Video timing
 	1. Horizontal video signal generation
 	2. Vertical video signal generation
@@ -51,8 +51,8 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 	1. Associated external bus interface logic
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display
-7. Read only background pixture logic
-	1. Logic for selection of approriate picture, based on high address lines
+7. Read only background picture logic
+	1. Logic for selection of appropriate picture, based on high address lines
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display, or disable background logic
 8. Output pixel pipeline and palette lookup
@@ -124,7 +124,7 @@ As per the orignal design all writes to the video hardware should be timed to co
 
 	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios. The background is disabled and char screen uses transparent chars. This leaves just the sprite plane outputting pixels.
 	Setting a logic break on RV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
-	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear ot $ff can be seen whilst signle stepping. Note the values for the RV and RH bus lines just below the video display.
+	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear ot $ff can be seen whilst single stepping. Note the values for the RV and RH bus lines just below the video display.
 
 	
 
@@ -175,7 +175,7 @@ As per the orignal design all writes to the video hardware should be timed to co
 
 ### PCB Layout
 
-There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pullup resistors are also placed near the middle of the board.
+There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pull-up resistors are also placed near the middle of the board.
 
 The board edge is set with a four layer standard signal and power plane setup. The board will correctly populate with the auto-placer and default placement options. It will then correctly route, again using the default router options. This is so placement of the board can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement.
 

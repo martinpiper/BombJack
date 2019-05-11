@@ -1,3 +1,16 @@
+* Inspect original PCBs and look for 74 LS/HCT types to match with where possible
+
+
+
+* Parts list, Book of Materials, stock code links to ordering websites needed
+
+
+
+* The expansion bus and the memory write signals will need to be translated to the internal memory write signals
+
+
+
+
 * VSM Pattern generator clock input bug
 	When the clock input is set to external positive edge but is not on the root sheet then the signal is not used?
 	The pattern generator windows still pop-up though, although they do not scroll.
