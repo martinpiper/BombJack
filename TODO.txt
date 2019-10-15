@@ -1,8 +1,10 @@
-* Inspect original PCBs and look for 74 LS/HCT types to match with where possible
-
-
-
 * Parts list, Book of Materials, stock code links to ordering websites needed
+
+
+
+* _MEWR needs to be connected to the header
+	Actually, all the memory interface needs to be connected
+	The VSYNC output also needs to be connected to the header, or exposed to a memory address
 
 
 

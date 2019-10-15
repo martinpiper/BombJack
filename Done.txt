@@ -46,3 +46,10 @@
 	
 	
 * Page 7 background picture logic done
+
+
+
+* Inspect original PCBs and look for 74 LS/HCT types to match with where possible
+	https://www.jammarcade.net/tag/bomb-jack/
+	https://www.jammarcade.net/images/2019/06/Arcade-DIY-46-Bomb-Jack-pcb-repair-14-19-screenshot-768x432.png
+	Indicates that M74LS174P is 8B (174x2) should suffice
