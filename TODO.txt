@@ -2,9 +2,26 @@
 
 
 
-* _MEWR needs to be connected to the header
+* To interface with the CPU, the _9800CS and _MEWR lines can be used without any more tri-state buffering, since they are not driven by the video circuitry
+	
+
+
+
+* _MEWR needs to be connected to the header, might need invert?
 	Actually, all the memory interface needs to be connected
 	The VSYNC output also needs to be connected to the header, or exposed to a memory address
+
+
+* 6MHz clock needs a full can oscillator part in the schematic (disabled for simulation) and layout
+	https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-6M0000?qs=sGAEpiMZZMt8zWNA7msRCrC1jWmTwM81CWhS5%2FH3zJ0%3D
+	Needs the signal and not signal created
+	DIP-8 https://www.mouser.sg/datasheet/2/96/008-0258-0-786357.pdf
+	Same as OSCCLK for CPU project, root sheet 2
+	Check original schematic for inverse signal generation, it might have some offset skew
+	* Schematic sheet 3, top left, shows a 12MHz crystal driving a 7474 dual edge-triggered flip-flop and generating _6MHz 6MHz and .6MHz
+		But in the design I used .6MHz and 6MHz as the same thing, logically they are the same
+		The inverted output comes from the 74368 hex buffer inverting tristate outputs
+	
 
 
 
@@ -26,3 +43,17 @@
 	
 	
 * There is also the possibility to allow the horizontal pixel clock and/or the vertical raster position to be read via a latch and suitable address chip enable logic of an 8 bit latch
+
+
+
+* Allow the HBLANK and VLANK to be read via the external header, as memory mapped IO. Probably reuse the number of sprite register see _9A00CS
+	This would need _MERD to be added to the external header, might need invert?
+
+
+
+* Instead of using ROMs, use RAMs and add extra logic to enable their write via the external header.
+
+
+
+* Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
+	The final combination logic can then take the output pixels and combine the final result via the pallet lookups
