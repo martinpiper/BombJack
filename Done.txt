@@ -62,3 +62,16 @@
 	
 	
 * To interface with the CPU, the _9800CS and _MEWR lines can be used without any more tri-state buffering, since they are not driven by the video circuitry
+
+
+
+* 6MHz clock needs a full can oscillator part in the schematic (disabled for simulation) and layout
+	https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-6M0000?qs=sGAEpiMZZMt8zWNA7msRCrC1jWmTwM81CWhS5%2FH3zJ0%3D
+	Needs the signal and not signal created
+	DIP-8 https://www.mouser.sg/datasheet/2/96/008-0258-0-786357.pdf
+	Same as OSCCLK for CPU project, root sheet 2
+	Check original schematic for inverse signal generation, it might have some offset skew
+	* Schematic sheet 3, top left, shows a 12MHz crystal driving a 7474 dual edge-triggered flip-flop and generating _6MHz 6MHz and .6MHz
+		But in the design I used .6MHz and 6MHz as the same thing, logically they are the same
+		The inverted output comes from the 74368 hex buffer inverting tristate outputs
+	* Added VIDCLK signal and 3T:A and hex inverted drivers 4T
