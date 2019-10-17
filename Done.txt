@@ -53,3 +53,12 @@
 	https://www.jammarcade.net/tag/bomb-jack/
 	https://www.jammarcade.net/images/2019/06/Arcade-DIY-46-Bomb-Jack-pcb-repair-14-19-screenshot-768x432.png
 	Indicates that M74LS174P is 8B (174x2) should suffice
+
+	
+	
+* _MEWR needs to be connected to the header, might need invert?
+	No need an invert, active low
+
+	
+	
+* To interface with the CPU, the _9800CS and _MEWR lines can be used without any more tri-state buffering, since they are not driven by the video circuitry
