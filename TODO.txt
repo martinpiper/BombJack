@@ -1,3 +1,7 @@
+* Regarding 6MHz from 4T, the trace is very long. Perhpas this is why .6MHz was created in the original schematic?
+
+
+
 * Parts list, Book of Materials, stock code links to ordering websites needed
 
 
@@ -5,6 +9,8 @@
 * Reorganise the memory map detection logic, remove 3M:A for ROMs, 3M:B 4M 5M 2S:B 1C:A
 	Add new memory block detection for _9800CS, _9A00CS, _9C00CS, _9E00CS
 	Use a memory block that is not used by the expansion RAM, perhaps the BASIC ROM area
+	Check the CPU memory expansion, BUSDDR or CPUHASBUS can also be used to improve the memory block chip detection
+	
 
 
 * For integration with the TTL 8 bit CPU the VSYNC signal could be exposed to EXPANSIONBUS:EXTWANTIRQ
