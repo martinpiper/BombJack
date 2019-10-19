@@ -1,3 +1,7 @@
+* Note C5 200P capacitor, check it is a ceramic disc on the board
+
+
+
 * Parts list, Book of Materials, stock code links to ordering websites needed
 
 

@@ -66,12 +66,24 @@
 
 
 * 6MHz clock needs a full can oscillator part in the schematic (disabled for simulation) and layout
+	12MHz Can oscillator
 	https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D
 	Needs the signal and not signal created
 	DIP-8 https://www.mouser.sg/datasheet/2/96/008-0258-0-786357.pdf
+	
+	12.096MHz Short crystal
+	https://www.mouser.sg/ProductDetail/ECS/ECS-121-S-4X?qs=sGAEpiMZZMsBj6bBr9Q9aQVbz5FLOGxj6PWo6GSXrZU%3D
+	https://www.mouser.sg/datasheet/2/122/hc-49usx-791.pdf
+	12.096MHz Tall crystal
+	https://www.mouser.sg/ProductDetail/ECS/ECS-121-S-1X?qs=sGAEpiMZZMsBj6bBr9Q9aQVbz5FLOGxjBlVr3Wwx1PM%3D
+	https://www.mouser.sg/datasheet/2/122/hc49ux-88.pdf
+	
+	Added JP1 to select between crystal output from 4T pin 5 when connected, or can oscillator VIDCLK when disconnected
+	R1 and R2 from schematic top left page 3 are labelled R21 R22 in Proteus schematic
+	
 	Same as OSCCLK for CPU project, root sheet 2
 	Check original schematic for inverse signal generation, it might have some offset skew
-	* Schematic sheet 3, top left, shows a 12MHz crystal driving a 7474 dual edge-triggered flip-flop and generating _6MHz 6MHz and .6MHz
+	* Schematic sheet 3, top left, shows a 12.096MHz crystal driving a 7474 dual edge-triggered flip-flop and generating _6MHz 6MHz and .6MHz
 		But in the design I used .6MHz and 6MHz as the same thing, logically they are the same
 		The inverted output comes from the 74368 hex buffer inverting tristate outputs
 	* Added VIDCLK signal and 3T:A and hex inverted drivers 4T
