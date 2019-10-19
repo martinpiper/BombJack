@@ -80,3 +80,7 @@
 	
 * Regarding 6MHz from 4T, the trace is very long. Perhaps this is why .6MHz was created in the original schematic?
 	6N2:B root sheet 6 (6N 456 page 6 bottom middle left)
+
+	
+	
+* Change screen colours to exercise the 6N2:B flow

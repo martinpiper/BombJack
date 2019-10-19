@@ -65,6 +65,13 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 
 ### Memory map
 
+0x9000-0x93ff	Video RAM
+0x9400-0x97ff	Colour RAM
+0x9c00-0x9cff	Palette RAM
+
+0x9e00 xy		Background screen image enable (x) and index (y)
+
+
 Sprite 32x32 size select
 
 	0x9a00 start index of 32x32 sprites
@@ -82,7 +89,7 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 	Byte 1: HV..CCCC
 		Bit 7: H : If set, the sprite is horizontally flipped
 		Bit 6: V : If set, the sprite is vertically flipped
-		Bits 3..0: C : 4 bits to provide the color value for the tile decoder
+		Bits 3..0: C : 4 bits to provide the colour value for the tile decoder
 
 	Byte 2: The sprite’s X position on screen
 	Byte 3: The sprite’s Y position on screen

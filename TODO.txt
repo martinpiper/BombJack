@@ -1,7 +1,3 @@
-* Change sprite colour registers to exercise the 6N2:B flow
-
-
-
 * Parts list, Book of Materials, stock code links to ordering websites needed
 
 
