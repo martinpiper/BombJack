@@ -66,7 +66,7 @@
 
 
 * 6MHz clock needs a full can oscillator part in the schematic (disabled for simulation) and layout
-	https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-6M0000?qs=sGAEpiMZZMt8zWNA7msRCrC1jWmTwM81CWhS5%2FH3zJ0%3D
+	https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D
 	Needs the signal and not signal created
 	DIP-8 https://www.mouser.sg/datasheet/2/96/008-0258-0-786357.pdf
 	Same as OSCCLK for CPU project, root sheet 2
@@ -75,3 +75,8 @@
 		But in the design I used .6MHz and 6MHz as the same thing, logically they are the same
 		The inverted output comes from the 74368 hex buffer inverting tristate outputs
 	* Added VIDCLK signal and 3T:A and hex inverted drivers 4T
+
+	
+	
+* Regarding 6MHz from 4T, the trace is very long. Perhaps this is why .6MHz was created in the original schematic?
+	6N2:B root sheet 6 (6N 456 page 6 bottom middle left)

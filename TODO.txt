@@ -1,4 +1,4 @@
-* Regarding 6MHz from 4T, the trace is very long. Perhpas this is why .6MHz was created in the original schematic?
+* Change sprite colour registers to exercise the 6N2:B flow
 
 
 
