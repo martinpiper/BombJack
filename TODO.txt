@@ -17,7 +17,13 @@
 
 * Parts list, Book of Materials, stock code links to ordering websites needed
 	Adding links to the "stock code"
-	Breadboard https://www.mouser.sg/ProductDetail/Twin-Industries/TW-E41-1060?qs=sGAEpiMZZMvxYGX2LOb%252BCkpSd%2FF6Zib6rdOv%2FJq26CY%3D
+	Breadboard
+	https://www.mouser.sg/ProductDetail/Twin-Industries/TW-E41-1060?qs=sGAEpiMZZMvxYGX2LOb%252BCkpSd%2FF6Zib6rdOv%2FJq26CY%3D
+	Resistors
+	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5
+	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5?P=1z0z819Z1yzbpodZ1yyxf87
+	VGA
+	https://www.mouser.sg/ProductDetail/Gravitech/DB15F-VGA-TERM?qs=%2Fha2pyFadujCKQleo0iutDpWDaGRRxjTkj9IAyF0Np7%252BUoWsr1SFIUxZNLIelf9qWe7mZLtJ2l3bbZy4VSVLAA%3D%3D
 	
 
 
