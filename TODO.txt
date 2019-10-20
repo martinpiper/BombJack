@@ -1,8 +1,24 @@
+* Need to update ReadMe to reflect new design
+
+
+
+* Split design into layers, use common bus for internal communications
+	* Renumber component refs depending on their layer, 1xx main, 2xx screen... etc.
+	* Main: Clocking, video timing, pixel combination and palette lookups
+	* Screen + colour RAM
+	* Sprites
+	* Background picture
+
+
+
 * Note C5 200P capacitor, check it is a ceramic disc on the board
 
 
 
 * Parts list, Book of Materials, stock code links to ordering websites needed
+	Adding links to the "stock code"
+	Breadboard https://www.mouser.sg/ProductDetail/Twin-Industries/TW-E41-1060?qs=sGAEpiMZZMvxYGX2LOb%252BCkpSd%2FF6Zib6rdOv%2FJq26CY%3D
+	
 
 
 

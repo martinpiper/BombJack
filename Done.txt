@@ -87,6 +87,8 @@
 		But in the design I used .6MHz and 6MHz as the same thing, logically they are the same
 		The inverted output comes from the 74368 hex buffer inverting tristate outputs
 	* Added VIDCLK signal and 3T:A and hex inverted drivers 4T
+	
+	Breadboard https://www.mouser.sg/ProductDetail/Twin-Industries/TW-E41-1060?qs=sGAEpiMZZMvxYGX2LOb%252BCkpSd%2FF6Zib6rdOv%2FJq26CY%3D
 
 	
 	
