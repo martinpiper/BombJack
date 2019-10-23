@@ -184,7 +184,7 @@ As per the original design all writes to the video hardware should be timed to c
 
 There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pull-up resistors are also placed near the middle of the board.
 
-The board edge is set with a four layer standard signal and power plane setup. The board will correctly populate with the auto-placer and default placement options. It will then correctly route, again using the default router options. This is so placement of the board can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement.
+The board edge is set with a four layer standard signal and power plane setup. The board will correctly populate with the auto-placer and default placement options, choose all then schedule before starting. It will then correctly route, again using the default router options. This is so placement of the board can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement. The placement areas are to encourage areas of the board with high placement density to leave space for signals.
 
 An entire place and route on a decent machine will take approximately 20 minutes and result in an output image like:
 ![Layout](Layout.PNG?raw=true "Layout")
