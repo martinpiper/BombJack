@@ -24,8 +24,19 @@
 	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5?P=1z0z819Z1yzbpodZ1yyxf87
 	VGA
 	https://www.mouser.sg/ProductDetail/Gravitech/DB15F-VGA-TERM?qs=%2Fha2pyFadujCKQleo0iutDpWDaGRRxjTkj9IAyF0Np7%252BUoWsr1SFIUxZNLIelf9qWe7mZLtJ2l3bbZy4VSVLAA%3D%3D
-	
-
+	Sockets decoupling
+	https://www.digikey.sg/products/en/connectors-interconnects/sockets-for-ics-transistors/409?k=&pkeyword=dip+decoupling&sv=0&pv5=382168&sf=1&FV=589%7C405002%2C-8%7C409&quantity=&ColumnSort=0&page=1&pageSize=25
+	Same decoupling socket, found using manufacturer part number
+		https://www.digikey.com/product-detail/en/mill-max-manufacturing-corp/110-93-314-41-801000/ED2101-ND/33731
+		https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj
+	Digikey might be a better source?
+		https://www.digikey.sg/products/en/integrated-circuits-ics/logic-gates-and-inverters/705?k=74ls27&k=&pkeyword=74ls27&sv=0&pv69=411897&sf=0&FV=-8%7C705&quantity=&ColumnSort=0&page=1&pageSize=25
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D
+	Digikey has memory
+		https://www.digikey.sg/products/en/integrated-circuits-ics/memory/774?k=&pkeyword=&sv=0&pv69=411897&sf=1&FV=-8%7C774&quantity=&ColumnSort=0&page=1&pageSize=25
+		But no price: https://www.digikey.sg/products/en/integrated-circuits-ics/memory/774?k=&pkeyword=&sv=0&pv142=227740&sf=1&FV=-8%7C774%2C69%7C411897&quantity=&ColumnSort=0&page=1&pageSize=25
+		Jameco has: https://www.jameco.com/shop/ProductDisplay?catalogId=10001&langId=-1&storeId=10001&productId=38957
+			Faster: https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH
 
 
 * Reorganise the memory map detection logic, remove 3M:A for ROMs, 3M:B 4M 5M 2S:B 1C:A

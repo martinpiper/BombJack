@@ -1,0 +1,57 @@
+Category,Quantity,References,Value,Stock Code,Unit Cost,Description
+Capacitors,1,C5,200p,Maplin WX60Q,,220p Ceramic Capacitor
+Resistors,16,R1-R16,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,2,R17-R18,PULLDOWN,,,Digital Primitive Model Of A Pull-Down Resistor
+Resistors,2,R21-R22,220,,,Generic resistor symbol
+Resistors,1,R104,100,,,Generic resistor symbol
+Resistors,1,R105,470,,,Generic resistor symbol
+Integrated Circuits,1,U1,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,,Synchronous 4-Bit Binary Counters
+Integrated Circuits,1,U2,OR,,,Simple 2 Input OR Gate
+Integrated Circuits,1,U3,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,,Dual 2-Line to 4-Line Decoders/Demultiplexers
+Integrated Circuits,1,U4,AND,,,Simple Two Input AND Gate
+Integrated Circuits,1,U5,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters
+Integrated Circuits,1,U7,NOT,,,Simple Digital Inverter
+Miscellaneous,15,"1A,1B,1D,2E,5N7,6D2,6F2,6F6,6H6,6J6,6K6,6M,6T,7F,7H",74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,£0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,2,"1C,5M8",7427,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D,£0.81,Triple 3-Input Positive NOR Gates
+Miscellaneous,2,"1S,4N",7410,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS10N?qs=sGAEpiMZZMutXGli8Ay4kBELecaPbA6BixFJp4A71TE%3D,£0.87,Triple 3-Input Positive-NAND Gates
+Miscellaneous,5,"1T,7A,7C,8C2,8C6",7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,£0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,5,"2A,2B,2C,2D,7N",74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,£0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,4,"2F,3L6,7B2,7C2",74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245NE4?qs=sGAEpiMZZMs9F6aVvY09bhwfQrNqig7qIcn1fgzui%2FY%3D,£0.89,Octal Bus Transceivers With Tristate Outputs
+Miscellaneous,13,"2N,2P,2R,4H,5A,5B,5C,5D,5R7,5T,6H,6P6,6R7",74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,£1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,1,2R6,7420,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS20N?qs=sGAEpiMZZMtMa9lbYwD6ZOuZLcSXNpUa3nM3MdnqdeQ%3D,£0.77,Dual 4-Input Positive-NAND Gates
+Miscellaneous,3,"2S,3M,7R",74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,£0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
+Miscellaneous,2,"2T,4R",7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,£0.72,Hex Inverters
+Miscellaneous,4,"3A,3B,3C,3D",74LS258,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D,£1.02,Quadruple 2-Line To 1-Line Data Selectors/Multiplexers With Tristate Outputs
+Miscellaneous,9,"3E,3F,4A,4B,4C,4D,6A2,6B2,6C2",2114,https://www.jameco.com/shop/ProductDisplay?catalogId=10001&langId=-1&storeId=10001&productId=38957,£5.00,4K Static RAM (1K x 4bit)
+Miscellaneous,7,"3H,5P7,6N2,6N6,7B,7T,8S",7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,£0.87,Quad 2-input positive-OR gates
+Miscellaneous,1,3M8,74148,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS148N?qs=%2Fha2pyFaduh2M99jnePeauqUp%2FrIBfH7vdDEJ7aGS4Q%3D,£2.46,8-Line To 3-Line Priority Encoders
+Miscellaneous,4,"3N,3P,3R,3S",74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,£0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,1,3T,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,2,"4E,4F",74126,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS126AN?qs=%2Fha2pyFadugdvCHOFYeUo9JntWnIZ2YoHaFSsm4H%2FRg%3D,£0.90,Quadruple Bus Buffer Gate With Tristate Outputs
+Miscellaneous,7,"4L6,5E2,5H,5L6,6E,6F,6S7",74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,£0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,4,"4M,5M,7S,8D2",74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,£0.72,3-Line to 8-Line Decoders/Demultiplexers
+Miscellaneous,8,"4M6,4S7,5S7,6R,6S,7A2,7E,8B2",74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,£0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,4,"4P,4S,5P,E7P",7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,£0.72,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,10,"4P7,7J,7L,7M,8E6,8H6,8K6,8L7,8N7,8R7",2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,£5.00,64K (8Kx8) EPROM
+Miscellaneous,1,4T,74368,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS368AN?qs=%2Fha2pyFadug6ZOj3cmpD6YwUi6dGmUUQRqKJDT%2FBvsw%3D,,Hex Buffers/Line Drivers with Inverting Tristate Outputs
+Miscellaneous,2,"5E,5F",74283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,£1.30,4-Bit Binary Full Adders With Fast Carry
+Miscellaneous,4,"5F8,5H8,5J8,5K8",74153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153N?qs=%2Fha2pyFaduiKvNoFphi6HlKGeKB98vZDSnL2nsGsGDQ%3D,£0.98,Dual 1-of-4 Data Selectors/Multiplexers
+Miscellaneous,18,"5J,5K,5L,6J,6K,6L,7D6,7E6,7F6,7H6,7J6,7K6,7L7,7M7,7N7,7P7,7R7,7S7",74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,£1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,2,"5R,5S",7485,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS85N?qs=%2Fha2pyFadujWUs9azztjOlpLCPvFTfozqJRbtmiwunU%3D,£1.87,4-Bit Magnitude Comparator
+Miscellaneous,4,"6A,6B,6C,6D",74163,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS163AN?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6zp2qU1pEmtI%3D,£0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,1,6LM6,6116,https://www.jameco.com/z/6116P-70-Major-Brands-IC-6116P-70-Static-RAM-2Kx8-DIP-24-pin-70-ns_242675.html,£7.08,16K (2Kx8) Static RAM
+Miscellaneous,1,7D,74LS21,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOS8GB5LKZP7E%3D,£0.62,Dual 4-Input Positive-AND Gates
+Miscellaneous,2,BTN1-BTN2,BUTTON,,,SPST Push Button
+Miscellaneous,1,E6P,7402,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D,£0.72,Quadruple 2-Input Positive-NOR Gates
+Miscellaneous,1,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/TE-Connectivity/1658525-2?qs=sGAEpiMZZMs%252BGHln7q6pm4Fqf7MuBHLT6rOqfDeotQQ%3D,£8.89,0.1in pitch DIL connector strip
+Miscellaneous,1,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,,0.1in pitch SIL connector strip
+Miscellaneous,1,J1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,£2.53,0.1in pitch DIL connector strip
+Miscellaneous,1,JP1,JUMPER,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,,Animated Jumper
+Miscellaneous,3,"PATTERN DATA,PATTERN HI,PATTERN LO",,,,Pattern Generator (Virtual Instrument)
+Miscellaneous,3,"RB1,RG1,RR1",250,,,Generic resistor symbol
+Miscellaneous,6,"RB2,RB5,RG2,RG5,RR2,RR5",500,,,Generic resistor symbol
+Miscellaneous,3,"RB3,RG3,RR3",1k,,,Generic resistor symbol
+Miscellaneous,3,"RB4,RG4,RR4",2k,,,Generic resistor symbol
+Miscellaneous,1,VIDCLK,555,https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D,,Timer/Oscillator
+Miscellaneous,1,VSMDD1,VSMDIGITALDISPLAY,,,CRT Display with frequency detection
+Miscellaneous,1,X2,CRYSTAL,https://www.mouser.sg/ProductDetail/ECS/ECS-121-S-4X?qs=sGAEpiMZZMsBj6bBr9Q9aQVbz5FLOGxj6PWo6GSXrZU%3D,,Quartz crystal
