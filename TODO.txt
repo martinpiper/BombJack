@@ -85,7 +85,13 @@
 
 
 * Instead of using ROMs, use RAMs and add extra logic to enable their write via the external header.
-
+	* Will need 74245
+	* To free up the cartridge port, think about perhaps a non-memory mapped interface, so something via the C64 user port?
+		https://www.c64-wiki.com/wiki/User_Port
+			* The edge connectors have 3.96mm pitch (distance between contacts) and accept cards (PCBs) 1.57mm thick.
+		https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
+		https://csdb.dk/forums/?roomid=11&topicid=19759
+			/PC goes low for one cycle after port B access.
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
