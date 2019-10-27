@@ -92,6 +92,18 @@
 		https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
 		https://csdb.dk/forums/?roomid=11&topicid=19759
 			/PC goes low for one cycle after port B access.
+		http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_359.html#User
+			Looks like I can have 8 bits output with PC2 signalling when it's written
+				FLAG2 as input for VSYNC (NMI trigger or poll DD0D bit 4)
+				PA2 as an output bit flag
+			So on PA2 this can reset the state to reading a lo/hi address, then any number of bytes to store without needing the number of bytes
+				C64Docs\C64PRG10_TXT.txt
+					DD00
+					2      RS-232 Data Output (User Port)
+					DD02       56578                 Data Direction Register - Port A
+					PA2 is bit 2 of PORT A of the CIA
+	* Need to find out how much RAM will be needed and decide a memory map
+					
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
