@@ -103,6 +103,18 @@
 					DD02       56578                 Data Direction Register - Port A
 					PA2 is bit 2 of PORT A of the CIA
 	* Need to find out how much RAM will be needed and decide a memory map
+		All the used *.bin files (mapped into ROMs) total 64K of data.
+		This means a linear 16 bit address bus model won't work as there isn't space for the RAM to be mapped.
+		Instead, the ten!! ROMs can be selected with an explicit chip select register combined with an address, so 24 bits instead.
+		byte:
+			0		Chip select using a 74154 to map up to 16 chip groups
+			1/2		Lo/hi address setup
+			3		Bytes to store, address++
+		TODO: UserPortTo24BitAddress
+			U6-U9 needs to load the lo/hi address as needed, when they are selected and on the negative edge of _PC
+				RCO goes to ENP&ENT
+				CLK needs to cause the address to count up on the positive edge of _PC?
+
 					
 
 
