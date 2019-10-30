@@ -111,11 +111,15 @@
 			1/2		Lo/hi address setup
 			3		Bytes to store, address++
 		TODO: UserPortTo24BitAddress
-			U6-U9 needs to load the lo/hi address as needed, when they are selected and on the negative edge of _PC
-				RCO goes to ENP&ENT
-				CLK needs to cause the address to count up on the positive edge of _PC?
+			Done: U6-U9 needs to load the lo/hi address as needed, when they are selected and on the negative edge of _PC
+					RCO goes to ENP&ENT
+					CLK needs to cause the address to count up on the positive edge of _PC and only when U10 is being populated with CS3 low.
+			* U3, U10, U18 and U19 contain the chip select, data, addr lo/hi with auto increment
+			TODO: EMEMWRITE will need to be low for a short tick while after the data/address are stable
+				Perhaps add logic to toggle this based on a delayed flip-flop chain?
+			TODO: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
 
-					
+			
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
