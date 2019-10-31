@@ -115,8 +115,10 @@
 					RCO goes to ENP&ENT
 					CLK needs to cause the address to count up on the positive edge of _PC and only when U10 is being populated with CS3 low.
 			* U3, U10, U18 and U19 contain the chip select, data, addr lo/hi with auto increment
-			TODO: EMEMWRITE will need to be low for a short tick while after the data/address are stable
+			Done: EMEMWRITE will need to be low for a short tick while after the data/address are stable
 				Perhaps add logic to toggle this based on a delayed flip-flop chain?
+				* Actually just used the after byte tick instead
+				* Added a quick debug selector and RAM, to visually display the memory can be selected and written
 			TODO: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
 
 			
