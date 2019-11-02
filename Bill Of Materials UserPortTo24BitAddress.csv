@@ -1,0 +1,13 @@
+Category,Quantity,References,Value,Stock Code,Unit Cost,Description
+Integrated Circuits,5,"U1,U6-U9",74161,,,Synchronous 4-Bit Binary Counters
+Integrated Circuits,2,"U2,U21",74154,,,4-to-16 Line Decoder/Demultiplexer
+Integrated Circuits,6,"U3,U10,U15-U16,U18-U19",74LS374,,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs
+Integrated Circuits,2,"U4,U11",74LS02,,,Quadruple 2-Input Positive-NOR Gates
+Integrated Circuits,1,U5,74LS08,,,Quadruple 2-Input Positive-AND Gates
+Integrated Circuits,2,"U12,U17",74LS04,,,Hex Inverters
+Integrated Circuits,2,U13-U14,74LS32,,,Quad 2-input positive-OR gates
+Integrated Circuits,1,U20,6264,,,64K (8Kx8) Static RAM
+Miscellaneous,1,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/TE-Connectivity/1658525-2?qs=sGAEpiMZZMs%252BGHln7q6pm4Fqf7MuBHLT6rOqfDeotQQ%3D,£8.89,0.1in pitch DIL connector strip
+Miscellaneous,1,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,,0.1in pitch SIL connector strip
+Miscellaneous,1,EXPANSIONBUS3,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,1,USERPORT,CONN-DIL14,,,0.1in pitch DIL connector strip

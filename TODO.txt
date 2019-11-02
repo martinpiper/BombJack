@@ -120,7 +120,8 @@
 				* Actually just used the after byte tick instead
 				* Added a quick debug selector and RAM, to visually display the memory can be selected and written
 			TODO: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
-
+		* 74154 Obsolete!?
+			74139 used instead
 			
 
 
