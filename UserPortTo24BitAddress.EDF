@@ -6,9 +6,9 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -35.12700 -37.62700 50.73660 62.62700))
-  (boundary (path signal 0.20320 -35.00000 -37.50000 50.60960 -37.50000 50.60960 62.50000
-   -35.00000 62.50000 -35.00000 -37.50000))
+  (boundary (rect pcb -40.12700 -27.62700 52.02500 62.62700))
+  (boundary (path signal 0.20320 -40.00000 -27.50000 50.60960 -27.50000 50.60960 62.50000
+   -40.00000 62.50000 -40.00000 -27.50000))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction horizontal))
   (layer I1 (type signal) (direction horizontal))
@@ -51,30 +51,32 @@
   )
  )
  (placement
-  (component "CONN-DIL34_EXPANSIONBUS" (place EXPANSIONBUS -24.96000 55.36000 front -90
+  (component "CONN-DIL34_EXPANSIONBUS" (place EXPANSIONBUS 42.50000 50.20000 front -90
   ))
-  (component "CONN-SIL2_EXPANSIONBUS2" (place EXPANSIONBUS2 -24.96000 7.58000 front 0
+  (component "CONN-SIL2_EXPANSIONBUS2" (place EXPANSIONBUS2 42.50000 2.42000 front 0
   ))
-  (component "CONN-DIL14_J1" (place J1 -24.96000 -2.42000 front -90))
-  (component "CONN-DIL8_J2" (place J2 -25.00000 -25.00000 front -90))
-  (component DIL24_U2 (place U2 -13.97000 5.08000 front 0))
-  (component DIL20_U3 (place U3 -17.78000 -6.35000 front 270))
-  (component DIL20_U10 (place U10 -13.97000 22.86000 front 0))
-  (component DIL20_U15 (place U15 -6.35000 -11.43000 front 0))
-  (component DIL20_U18 (place U18 -13.97000 33.02000 front 0))
-  (component DIL20_U16 (place U16 -6.35000 -21.59000 front 0))
-  (component DIL20_U19 (place U19 24.13000 1.27000 front 90))
-  (component DIL16_U1 (place U1 -8.89000 43.18000 front 0))
-  (component DIL14_U5 (place U5 13.97000 33.02000 front 0))
-  (component DIL16_U6 (place U6 10.16000 -24.13000 front 180))
-  (component DIL14_U12 (place U12 22.86000 -11.43000 front 0))
-  (component DIL16_U7 (place U7 22.86000 -21.59000 front 0))
-  (component DIL16_U8 (place U8 33.02000 -25.40000 front 180))
-  (component DIL16_U9 (place U9 34.29000 1.27000 front 90))
-  (component DIL14_U17 (place U17 30.48000 22.86000 front 0))
-  (component DIL14_U4 (place U4 13.97000 43.18000 front 0))
-  (component DIL14_U14 (place U14 36.83000 13.97000 front 270))
-  (component DIL14_U11 (place U11 31.75000 50.80000 front 270))
+  (component "CONN-DIL14_USERPORT" (place USERPORT -35.00000 26.41000 front -90))
+  (component "CONN-DIL8_EXPANSIONBUS3" (place EXPANSIONBUS3 42.50000 -5.12000 front -90
+  ))
+  (component DIL24_U2 (place U2 -3.81000 19.05000 front 0))
+  (component DIL20_U3 (place U3 -3.81000 8.89000 front 0))
+  (component DIL20_U10 (place U10 -3.81000 36.83000 front 0))
+  (component DIL20_U15 (place U15 -3.81000 -1.27000 front 0))
+  (component DIL20_U18 (place U18 34.29000 17.78000 front 90))
+  (component DIL20_U16 (place U16 -7.62000 11.43000 front 90))
+  (component DIL20_U19 (place U19 -17.78000 11.43000 front 90))
+  (component DIL16_U1 (place U1 -3.81000 46.99000 front 0))
+  (component DIL14_U5 (place U5 -15.24000 53.34000 front 270))
+  (component DIL16_U6 (place U6 -3.81000 -11.43000 front 0))
+  (component DIL14_U12 (place U12 -24.13000 -1.27000 front 0))
+  (component DIL16_U7 (place U7 29.21000 -5.08000 front 90))
+  (component DIL16_U8 (place U8 -3.81000 -21.59000 front 0))
+  (component DIL16_U9 (place U9 -26.67000 -11.43000 front 0))
+  (component DIL14_U17 (place U17 -24.13000 -21.59000 front 0))
+  (component DIL14_U4 (place U4 -27.94000 31.75000 front 90))
+  (component DIL14_U14 (place U14 19.05000 46.99000 front 0))
+  (component DIL14_U11 (place U11 -17.78000 39.37000 front 90))
+  (component DIL14_U13 (place U13 19.05000 -19.05000 front 0))
  )
  (library
   (image "CONN-DIL34_EXPANSIONBUS" (side front)
@@ -119,7 +121,7 @@
    (pin PS0 (rotate 0) 0 0.00000 0.00000)
    (pin PS0 (rotate 0) 1 2.54000 0.00000)
   )
-  (image "CONN-DIL14_J1" (side front)
+  (image "CONN-DIL14_USERPORT" (side front)
    (outline (rect TOP -1.37160 -1.37160 16.61160 3.91160))
    (pin PS0 (rotate 0) 0 0.00000 0.00000)
    (pin PS0 (rotate 0) 1 2.54000 0.00000)
@@ -136,7 +138,7 @@
    (pin PS0 (rotate 0) 12 2.54000 2.54000)
    (pin PS0 (rotate 0) 13 0.00000 2.54000)
   )
-  (image "CONN-DIL8_J2" (side front)
+  (image "CONN-DIL8_EXPANSIONBUS3" (side front)
    (outline (rect TOP -1.37160 -1.37160 8.99160 3.91160))
    (pin PS0 (rotate 0) 0 0.00000 0.00000)
    (pin PS0 (rotate 0) 1 2.54000 0.00000)
@@ -509,6 +511,23 @@
    (pin PS2 (rotate 0) 12 2.54000 7.62000)
    (pin PS2 (rotate 0) 13 0.00000 7.62000)
   )
+  (image DIL14_U13 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS1 (rotate 0) 0 0.00000 0.00000)
+   (pin PS2 (rotate 0) 1 2.54000 0.00000)
+   (pin PS2 (rotate 0) 2 5.08000 0.00000)
+   (pin PS2 (rotate 0) 3 7.62000 0.00000)
+   (pin PS2 (rotate 0) 4 10.16000 0.00000)
+   (pin PS2 (rotate 0) 5 12.70000 0.00000)
+   (pin PS2 (rotate 0) 6 15.24000 0.00000)
+   (pin PS2 (rotate 0) 7 15.24000 7.62000)
+   (pin PS2 (rotate 0) 8 12.70000 7.62000)
+   (pin PS2 (rotate 0) 9 10.16000 7.62000)
+   (pin PS2 (rotate 0) 10 7.62000 7.62000)
+   (pin PS2 (rotate 0) 11 5.08000 7.62000)
+   (pin PS2 (rotate 0) 12 2.54000 7.62000)
+   (pin PS2 (rotate 0) 13 0.00000 7.62000)
+  )
   (padstack PS0 (absolute on)
    (shape (rect TOP -1.01600 -1.01600 1.01600 1.01600))
    (shape (rect I1 -1.01600 -1.01600 1.01600 1.01600))
@@ -601,7 +620,7 @@
   )
  )
  (network
-  (net "#00017"
+  (net "#00014"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -610,7 +629,7 @@
    )
    (pins U2-22 U1-13)
   )
-  (net "#00019"
+  (net "#00016"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -619,7 +638,7 @@
    )
    (pins U2-21 U1-12)
   )
-  (net "#00021"
+  (net "#00018"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -628,7 +647,7 @@
    )
    (pins U2-20 U1-11)
   )
-  (net "#00023"
+  (net "#00020"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -637,7 +656,7 @@
    )
    (pins U2-19 U1-10)
   )
-  (net "#00026"
+  (net "#00023"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -646,7 +665,7 @@
    )
    (pins U1-1 U5-2)
   )
-  (net "#00070"
+  (net "#00067"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -655,7 +674,7 @@
    )
    (pins U3-10 U4-0)
   )
-  (net "#00111"
+  (net "#00108"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -664,7 +683,7 @@
    )
    (pins U15-2 U6-13)
   )
-  (net "#00112"
+  (net "#00109"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -673,7 +692,7 @@
    )
    (pins U15-3 U6-12)
   )
-  (net "#00113"
+  (net "#00110"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -682,7 +701,7 @@
    )
    (pins U15-6 U6-11)
   )
-  (net "#00114"
+  (net "#00111"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -691,7 +710,7 @@
    )
    (pins U15-7 U6-10)
   )
-  (net "#00115"
+  (net "#00112"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -700,16 +719,16 @@
    )
    (pins U6-14 U7-6 U7-9)
   )
-  (net "#00117"
+  (net "#00114"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U6-1 U12-2 U7-1)
+   (pins U6-1 U12-2 U7-1 U13-2)
   )
-  (net "#00121"
+  (net "#00118"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -718,7 +737,7 @@
    )
    (pins U15-12 U7-13)
   )
-  (net "#00122"
+  (net "#00119"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -727,7 +746,7 @@
    )
    (pins U15-13 U7-12)
   )
-  (net "#00123"
+  (net "#00120"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -736,7 +755,7 @@
    )
    (pins U15-16 U7-11)
   )
-  (net "#00124"
+  (net "#00121"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -745,7 +764,7 @@
    )
    (pins U15-17 U7-10)
   )
-  (net "#00125"
+  (net "#00122"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -754,7 +773,7 @@
    )
    (pins U7-14 U8-6 U8-9)
   )
-  (net "#00129"
+  (net "#00126"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -763,7 +782,7 @@
    )
    (pins U16-2 U8-13)
   )
-  (net "#00130"
+  (net "#00127"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -772,7 +791,7 @@
    )
    (pins U16-3 U8-12)
   )
-  (net "#00131"
+  (net "#00128"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -781,7 +800,7 @@
    )
    (pins U16-6 U8-11)
   )
-  (net "#00132"
+  (net "#00129"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -790,7 +809,7 @@
    )
    (pins U16-7 U8-10)
   )
-  (net "#00133"
+  (net "#00130"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -799,7 +818,7 @@
    )
    (pins U8-14 U9-6 U9-9)
   )
-  (net "#00134"
+  (net "#00131"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -808,7 +827,7 @@
    )
    (pins U8-1 U9-1 U17-0 U14-2)
   )
-  (net "#00138"
+  (net "#00135"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -817,7 +836,7 @@
    )
    (pins U16-12 U9-13)
   )
-  (net "#00139"
+  (net "#00136"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -826,7 +845,7 @@
    )
    (pins U16-13 U9-12)
   )
-  (net "#00140"
+  (net "#00137"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -835,7 +854,7 @@
    )
    (pins U16-16 U9-11)
   )
-  (net "#00141"
+  (net "#00138"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -844,25 +863,25 @@
    )
    (pins U16-17 U9-10)
   )
-  (net "#00147"
+  (net "#00144"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U11-3)
+   (pins U11-3 U13-0)
   )
-  (net "#00152"
+  (net "#00149"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U11-9)
+   (pins U11-9 U13-1)
   )
-  (net "#00162"
+  (net "#00159"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -871,7 +890,7 @@
    )
    (pins U4-9 U14-0)
   )
-  (net "#00167"
+  (net "#00164"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -880,7 +899,7 @@
    )
    (pins U4-12 U14-1)
   )
-  (net "#00173"
+  (net "#00170"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -889,7 +908,7 @@
    )
    (pins U15-10 U12-3)
   )
-  (net "#00177"
+  (net "#00174"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -898,7 +917,7 @@
    )
    (pins U16-10 U17-1)
   )
-  (net "#00180"
+  (net "#00177"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -907,7 +926,7 @@
    )
    (pins U15-1 U18-2)
   )
-  (net "#00181"
+  (net "#00178"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -916,7 +935,7 @@
    )
    (pins U15-4 U18-3)
   )
-  (net "#00182"
+  (net "#00179"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -925,7 +944,7 @@
    )
    (pins U15-5 U18-6)
   )
-  (net "#00183"
+  (net "#00180"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -934,7 +953,7 @@
    )
    (pins U15-8 U18-7)
   )
-  (net "#00184"
+  (net "#00181"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -943,7 +962,7 @@
    )
    (pins U15-11 U18-12)
   )
-  (net "#00185"
+  (net "#00182"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -952,7 +971,7 @@
    )
    (pins U15-14 U18-13)
   )
-  (net "#00186"
+  (net "#00183"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -961,7 +980,7 @@
    )
    (pins U15-15 U18-16)
   )
-  (net "#00187"
+  (net "#00184"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -970,7 +989,7 @@
    )
    (pins U15-18 U18-17)
   )
-  (net "#00190"
+  (net "#00187"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -979,7 +998,7 @@
    )
    (pins U16-1 U19-2)
   )
-  (net "#00191"
+  (net "#00188"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -988,7 +1007,7 @@
    )
    (pins U16-4 U19-3)
   )
-  (net "#00192"
+  (net "#00189"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -997,7 +1016,7 @@
    )
    (pins U16-5 U19-6)
   )
-  (net "#00193"
+  (net "#00190"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1006,7 +1025,7 @@
    )
    (pins U16-8 U19-7)
   )
-  (net "#00194"
+  (net "#00191"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1015,7 +1034,7 @@
    )
    (pins U16-11 U19-12)
   )
-  (net "#00195"
+  (net "#00192"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1024,7 +1043,7 @@
    )
    (pins U16-14 U19-13)
   )
-  (net "#00196"
+  (net "#00193"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1033,7 +1052,7 @@
    )
    (pins U16-15 U19-16)
   )
-  (net "#00197"
+  (net "#00194"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1042,7 +1061,7 @@
    )
    (pins U16-18 U19-17)
   )
-  (net "#00253"
+  (net "#00250"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1283,7 +1302,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-0 U3-1)
+   (pins EXPANSIONBUS3-0 U3-1)
   )
   (net "EBS1"
    (circuit
@@ -1292,7 +1311,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-1 U3-4)
+   (pins EXPANSIONBUS3-1 U3-4)
   )
   (net "EBS2"
    (circuit
@@ -1301,7 +1320,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-2 U3-5)
+   (pins EXPANSIONBUS3-2 U3-5)
   )
   (net "EBS3"
    (circuit
@@ -1310,7 +1329,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-3 U3-8)
+   (pins EXPANSIONBUS3-3 U3-8)
   )
   (net "EBS4"
    (circuit
@@ -1319,7 +1338,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-4 U3-11)
+   (pins EXPANSIONBUS3-4 U3-11)
   )
   (net "EBS5"
    (circuit
@@ -1328,7 +1347,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-5 U3-14)
+   (pins EXPANSIONBUS3-5 U3-14)
   )
   (net "EBS6"
    (circuit
@@ -1337,7 +1356,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-6 U3-15)
+   (pins EXPANSIONBUS3-6 U3-15)
   )
   (net "EBS7"
    (circuit
@@ -1346,7 +1365,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-7 U3-18)
+   (pins EXPANSIONBUS3-7 U3-18)
   )
   (net "ECPUHASBUS"
    (circuit
@@ -1458,14 +1477,14 @@
   )
   (net "GND"
    (circuit
-    (use_layer TOP BOT)
+    (use_layer TOP I1 I2 BOT)
     (use_via
      $VIA#0_POWER
     )
    )
-    (pins EXPANSIONBUS-17 U2-11 U2-17 U2-18 U3-0 U3-9 U10-0 U10-9 U15-0 U15-9 U18-0 U18-9
-     U16-0 U16-9 U19-0 U19-9 U1-7 U5-6 U6-7 U12-6 U7-7 U8-7 U9-7 U17-6 U4-6 U14-6 U11-6
-   )
+    (pins EXPANSIONBUS-17 USERPORT-7 U2-11 U2-17 U2-18 U3-0 U3-9 U10-0 U10-9 U15-0 U15-9
+     U18-0 U18-9 U16-0 U16-9 U19-0 U19-9 U1-7 U5-6 U6-7 U12-6 U7-7 U8-7 U9-7 U17-6 U4-6
+    U14-6 U11-6 U13-6)
   )
   (net "PA2"
    (circuit
@@ -1474,7 +1493,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-1 U1-0)
+   (pins USERPORT-1 U1-0)
   )
   (net "RST"
    (circuit
@@ -1492,7 +1511,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-3 U3-2 U10-2 U6-2 U8-2)
+   (pins USERPORT-3 U3-2 U10-2 U6-2 U8-2)
   )
   (net "UD1"
    (circuit
@@ -1501,7 +1520,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-4 U3-3 U10-3 U6-3 U8-3)
+   (pins USERPORT-4 U3-3 U10-3 U6-3 U8-3)
   )
   (net "UD2"
    (circuit
@@ -1510,7 +1529,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-5 U3-6 U10-6 U6-4 U8-4)
+   (pins USERPORT-5 U3-6 U10-6 U6-4 U8-4)
   )
   (net "UD3"
    (circuit
@@ -1519,7 +1538,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-6 U3-7 U10-7 U6-5 U8-5)
+   (pins USERPORT-6 U3-7 U10-7 U6-5 U8-5)
   )
   (net "UD4"
    (circuit
@@ -1528,7 +1547,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-13 U3-12 U10-12 U7-2 U9-2)
+   (pins USERPORT-13 U3-12 U10-12 U7-2 U9-2)
   )
   (net "UD5"
    (circuit
@@ -1537,7 +1556,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-12 U3-13 U10-13 U7-3 U9-3)
+   (pins USERPORT-12 U3-13 U10-13 U7-3 U9-3)
   )
   (net "UD6"
    (circuit
@@ -1546,7 +1565,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-11 U3-16 U10-16 U7-4 U9-4)
+   (pins USERPORT-11 U3-16 U10-16 U7-4 U9-4)
   )
   (net "UD7"
    (circuit
@@ -1555,18 +1574,18 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-10 U3-17 U10-17 U7-5 U9-5)
+   (pins USERPORT-10 U3-17 U10-17 U7-5 U9-5)
   )
   (net "VCC/VDD"
    (circuit
-    (use_layer TOP BOT)
+    (use_layer TOP I1 I2 BOT)
     (use_via
      $VIA#0_POWER
     )
    )
-    (pins EXPANSIONBUS-16 U2-23 U3-19 U10-19 U15-19 U18-19 U16-19 U19-19 U1-6 U1-9 U1-15
-     U5-13 U6-0 U6-6 U6-9 U6-15 U12-13 U7-0 U7-15 U8-0 U8-15 U9-0 U9-15 U17-13 U4-13 U14-13
-    U11-13)
+    (pins EXPANSIONBUS-16 USERPORT-8 U2-23 U3-19 U10-19 U15-19 U18-19 U16-19 U19-19 U1-6
+     U1-9 U1-15 U5-13 U6-0 U6-6 U6-9 U6-15 U12-13 U7-0 U7-15 U8-0 U8-15 U9-0 U9-15 U17-13
+    U4-13 U14-13 U11-13 U13-13)
   )
   (net "_FLAG2"
    (circuit
@@ -1575,7 +1594,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-0)
+   (pins USERPORT-0)
   )
   (net "_PC"
    (circuit
@@ -1584,7 +1603,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-2 U5-0 U4-2 U4-5 U4-8 U11-5)
+   (pins USERPORT-2 U5-0 U4-2 U4-5 U4-8 U11-5)
   )
   (class POWER
    "GND"
@@ -1602,56 +1621,56 @@
    )
   )
   (class SIGNAL
-   "#00017"
-   "#00019"
-   "#00021"
+   "#00014"
+   "#00016"
+   "#00018"
+   "#00020"
    "#00023"
-   "#00026"
-   "#00070"
+   "#00067"
+   "#00108"
+   "#00109"
+   "#00110"
    "#00111"
    "#00112"
-   "#00113"
    "#00114"
-   "#00115"
-   "#00117"
+   "#00118"
+   "#00119"
+   "#00120"
    "#00121"
    "#00122"
-   "#00123"
-   "#00124"
-   "#00125"
+   "#00126"
+   "#00127"
+   "#00128"
    "#00129"
    "#00130"
    "#00131"
-   "#00132"
-   "#00133"
-   "#00134"
+   "#00135"
+   "#00136"
+   "#00137"
    "#00138"
-   "#00139"
-   "#00140"
-   "#00141"
-   "#00147"
-   "#00152"
-   "#00162"
-   "#00167"
-   "#00173"
+   "#00144"
+   "#00149"
+   "#00159"
+   "#00164"
+   "#00170"
+   "#00174"
    "#00177"
+   "#00178"
+   "#00179"
    "#00180"
    "#00181"
    "#00182"
    "#00183"
    "#00184"
-   "#00185"
-   "#00186"
    "#00187"
+   "#00188"
+   "#00189"
    "#00190"
    "#00191"
    "#00192"
    "#00193"
    "#00194"
-   "#00195"
-   "#00196"
-   "#00197"
-   "#00253"
+   "#00250"
    "ADDROUTLOAD"
    "AFTERBYTE"
    "BUSDDR"
