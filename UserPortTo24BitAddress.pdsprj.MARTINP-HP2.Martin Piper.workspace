@@ -5,6 +5,13 @@
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="ARES"/>
+  <WINDOW type="VIEW3D" module="VIEW3D">
+   <camera>
+    <position x="780480" y="1250000" z="13278174"/>
+    <focus x="780480" y="1250000" z="0"/>
+    <up x="0" y="1000000" z="0"/>
+   </camera>
+  </WINDOW>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
