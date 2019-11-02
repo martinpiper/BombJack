@@ -122,6 +122,7 @@
 			TODO: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
 		* 74154 Obsolete!?
 			74139 used instead
+			74138 is also available
 			
 
 
