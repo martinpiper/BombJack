@@ -140,7 +140,7 @@
 			EMEMWRITE might not have the correct setup timing constraints
 			There should be the memory and data setup, then a delayed write pulse (low) where the data and memory is still setup afterwards
 				Might be because _PC is timed wrong on the input simulated data?
-					* TODO: Yes, the signals need expanding a bit more to include the leadin and leadout states
+					* Done: Yes, the signals need expanding a bit more to include the leadin and leadout states
 					* TODO: Check leadin and leadout states on CIA timing diagram with _PC and data levels
 		
 			
