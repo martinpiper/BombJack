@@ -126,7 +126,16 @@
 	* 4T on sheet 3 which creates the 6MHz/.6MHz/_6MHz signals from the input VIDCLK has OE
 		This output enable could be tied to a register line to enable or disable the whole display, which would massively help with writing to any RAMs for the video data.
 		This could be the higher bits of 9e00?
-			Root sheet 7, 4S7 could store the extra bits if it was rewired a bit. Default is low, so now video output?
+			Root sheet 7, 4S7 could store the extra bits if it was rewired a bit. Default is low, so no video output?
+			3S+3R could also be reset on low
+			* Added DB5 line for 0 = disable display and 1 = enable (DISPLAYENABLE and _DISPLAYENABLE)
+				This allows large amounts of data to be written to RAM while the display is disabled without fear of contention with the display HW
+	* ROMs will need RAMs, the memory setup timings will need to be honoured.
+		The original RAMs can be selected as per normal and can be the first line, suitable _CSEN+_MREQ can be faked for those.
+			Inverted EBS0 perhaps?
+		The other lines can enable or disable the ROM->RAM segments as needed with perhaps 2-3 8K chunks memory mapped on each line
+			74LS245 plus 74157
+	* TODO: User port (write memory) timings, need to honour the expected timings for address and data setup
 		
 			
 
