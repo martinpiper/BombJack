@@ -123,6 +123,11 @@
 		* 74154 Obsolete!?
 			74139 used instead
 			74138 is also available
+	* 4T on sheet 3 which creates the 6MHz/.6MHz/_6MHz signals from the input VIDCLK has OE
+		This output enable could be tied to a register line to enable or disable the whole display, which would massively help with writing to any RAMs for the video data.
+		This could be the higher bits of 9e00?
+			Root sheet 7, 4S7 could store the extra bits if it was rewired a bit. Default is low, so now video output?
+		
 			
 
 

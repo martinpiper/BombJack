@@ -7,8 +7,8 @@
   <WINDOW type="default" module="ARES"/>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="530480" y="-6700179" z="8450179"/>
-    <focus x="530480" y="1750000" z="0"/>
+    <position x="750000" y="-6700179" z="8450179"/>
+    <focus x="750000" y="1750000" z="0"/>
     <up x="0" y="707106" z="707106"/>
    </camera>
   </WINDOW>
