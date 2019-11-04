@@ -110,7 +110,7 @@
 			0		Chip select using a 74154 to map up to 16 chip groups
 			1/2		Lo/hi address setup
 			3		Bytes to store, address++
-		TODO: UserPortTo24BitAddress
+		Done: UserPortTo24BitAddress
 			Done: U6-U9 needs to load the lo/hi address as needed, when they are selected and on the negative edge of _PC
 					RCO goes to ENP&ENT
 					CLK needs to cause the address to count up on the positive edge of _PC and only when U10 is being populated with CS3 low.
@@ -119,7 +119,7 @@
 				Perhaps add logic to toggle this based on a delayed flip-flop chain?
 				* Actually just used the after byte tick instead
 				* Added a quick debug selector and RAM, to visually display the memory can be selected and written
-			TODO: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
+			Done: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
 		* 74154 Obsolete!?
 			74139 used instead
 			74138 is also available
@@ -135,16 +135,18 @@
 			Inverted EBS0 perhaps?
 		The other lines can enable or disable the ROM->RAM segments as needed with perhaps 2-3 8K chunks memory mapped on each line
 			74LS245 plus 74157
-	* TODO: User port (write memory) timings, need to honour the expected timings for address and data setup
+	* Done: User port (write memory) timings, need to honour the expected timings for address and data setup
 		Check with the logic analyser
 			EMEMWRITE might not have the correct setup timing constraints
 			There should be the memory and data setup, then a delayed write pulse (low) where the data and memory is still setup afterwards
 				Might be because _PC is timed wrong on the input simulated data?
 					* Done: Yes, the signals need expanding a bit more to include the leadin and leadout states
-					* TODO: Check leadin and leadout states on CIA timing diagram with _PC and data levels
+					* Done: Check leadin and leadout states on CIA timing diagram with _PC and data levels
 						* BombJack loads 4S7 (root sheet 7) on the positive edge (trailing edge) of _MEWR with a low _9E00CS and 7432 (OR) output
 							This makes sense since it might be trying to accommodate timing issues where the data might be settling during RAM cycle timing
-						* TODO: So update userport design to also accommodate this?
+						* Done: So update userport design to also accommodate this
+							Memory and data are primed, _MEWR is held low for a short pulse, memory and data still held
+							Verified by logic analyser
 		
 			
 
