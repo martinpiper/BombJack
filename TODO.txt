@@ -147,6 +147,17 @@
 						* Done: So update userport design to also accommodate this
 							Memory and data are primed, _MEWR is held low for a short pulse, memory and data still held
 							Verified by logic analyser
+	* TODO: Attempt RAM replacement for Root sheet 7. Read only background picture logic
+		4P7 2764 can be replaced with a 6264
+			_CE will need a low to select
+			CS can be high all the time
+			_WE low on _MEWR
+			_OE low on memory read
+			To select address perhaps a 74157 with _A/B based on _ADDRCS? With _ADDRCS OR (7432) _MEWR going to _WE
+			74245 needed for bus tristate?
+				Or maybe a simple 74373 for tri-state outputs since we don't need read logic
+				The 6116 RAM on root sheet 6 has interesting _OE/_WE based on a simple NOT 7404
+
 		
 			
 
