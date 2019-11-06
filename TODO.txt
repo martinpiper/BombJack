@@ -147,7 +147,7 @@
 						* Done: So update userport design to also accommodate this
 							Memory and data are primed, _MEWR is held low for a short pulse, memory and data still held
 							Verified by logic analyser
-	* TODO: Attempt RAM replacement for Root sheet 7. Read only background picture logic
+	* Done: Attempt RAM replacement for Root sheet 7. Read only background picture logic
 		4P7 2764 can be replaced with a 6264
 			_CE will need a low to select
 			CS can be high all the time
@@ -157,7 +157,19 @@
 			74245 needed for bus tristate?
 				Or maybe a simple 74373 for tri-state outputs since we don't need read logic
 				The 6116 RAM on root sheet 6 has interesting _OE/_WE based on a simple NOT 7404
-
+		* 4P7R (RAM) replaces 4P7, BusEBS.ptn added to simulate "Root sheet 7 (.10000000) RAM select"
+			There are some logic contentions on BIDxx at the start, but similar CID contentions are also seen on 6LM6 RAM writes from the original schematic
+			* 4P7 has been schematic and placement disabled
+			* 4P7R is obviously enabled
+			* Only memory from 02_p04t.bin $400 to $5ff is included in the pattern file, to reduce the data specific to the sphinx graphics
+				It is $100 bytes of char data, followed by $100 bytes of colour data
+	* TODO: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
+		Something better like the display part will do.
+			Will need substantial outputs, and something to make it easier to output the address, with auto increment and _MEWR signals
+			EBS 8 bits, address 16 bits (in effect 24 bits address, might as well make it 32 bits) data 8 bits, plus _MEWR signal
+			Include binary chunks from data files, like the ROM dumps, no more editing hex values for binary image data
+			
+			
 		
 			
 
