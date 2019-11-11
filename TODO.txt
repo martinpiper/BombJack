@@ -68,11 +68,6 @@
 
 
 
-* VSM Pattern generator clock input bug
-	When the clock input is set to external positive edge but is not on the root sheet then the signal is not used?
-	The pattern generator windows still pop-up though, although they do not scroll.
-
-	
 	
 * 4C/4D when run at 6MHz will generate "sub optimal write pulses" errors with default values. Running at 1MHz fixes these issues.
 	* The output pixel data seems to be better when the timing is reduced.
@@ -165,6 +160,14 @@
 				It is $100 bytes of char data, followed by $100 bytes of colour data
 	* Done: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
 		VSMDD2 on root sheet 1 now uses TestData.txt to set all the data needed
+
+
+
+
+* Background layer (root sheet 7) pixel fine scrolling enable?
+	Could have an extra register $9e01 (l/h nybbles for x/y) that add values 0-15 to the X/Y pixel clock before addressing the background data?
+		This could in effect generate a pixel scrolled background image?
+		If yes, would need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
 
 
 		
