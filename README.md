@@ -28,9 +28,11 @@ If you have Proteus setup with the digital display model, you should see a scree
 
 The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
 
-1. Logic analyser, virtual video display model, expansion bus header, pattern generators and associated debug memory write logic
+1. Logic analyser, virtual video display model, expansion bus header, data generator
 	1. Memory selection logic based on external address bus
 	2. Debug buttons for the video flip and spare background plane selection
+	3. VSMDD2 is a replacement for the Proteus data generators because they have a 1024 byte limit. Proteus VSM project source: https://github.com/martinpiper/DigitalData
+	4. EXPANSIONBUS, EXPANSIONBUS2 and EXPANSIONBUS3 all relate to the C64 user port to 24 bit address logic in the project: UserPortTo24BitAddress.pdsprj
 2. Intentionally left blank, the original schematic has dip switch logic
 3. Video timing
 	1. Horizontal video signal generation

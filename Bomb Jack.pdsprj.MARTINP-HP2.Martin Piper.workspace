@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff0000000000000000ff040000a7020000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff80f8fffffaffffff7ffdffffa1020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
   <WINDOW type="default" module="DXP"/>
@@ -250,7 +250,7 @@
    <POPUP w="581" x="38" flags="00000020" y="129" h="339" pid="0" iid="308">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="16" x="1361" flags="0000000b" y="116" h="34" pid="1" iid="310">
+   <POPUP w="16" x="1361" flags="0000000a" y="116" h="34" pid="1" iid="310">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

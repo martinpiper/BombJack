@@ -163,11 +163,12 @@
 			* 4P7R is obviously enabled
 			* Only memory from 02_p04t.bin $400 to $5ff is included in the pattern file, to reduce the data specific to the sphinx graphics
 				It is $100 bytes of char data, followed by $100 bytes of colour data
-	* TODO: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
-			
-			
+	* Done: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
+		VSMDD2 on root sheet 1 now uses TestData.txt to set all the data needed
+
+
 		
-			
+
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.

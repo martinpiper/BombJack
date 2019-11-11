@@ -1,5 +1,296 @@
+; Blank (address b$0000)
 d0
 
-d$0112
+; Background image enable and index
+; x	Display enable (DB5)
+; With DBGWRITE ~= 10k then b$12 is needed first, to disable the display and avoid the data writes appearing in the display
+; Then at the end use b$32 to enable the display after all the memory is populated
+; With DBGWRITE >= 200K then the RAM writes (to the original RAM/registers) all complete before the VBLANK has finished
+; Using DBGWRITE = 1M safely writes all data very quickly, with a debug delayed _MEWR pulse from U1 U2 and U3:A
+; x	enable (DB4)
+;  y	index (DB0-3)
+; Write data from into RAM mapped at $9e00 with EBS $01
+d$9e000112
 
-d$0132
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+
+; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
+s$20008000
+<0,1,2,3,4,5,6,7,<02_p04t.bin
+
+
+; Write palette data into RAM mapped at $9c00 with EBS $01
+s$9c000100
+; Note the first colour in every palette entry is 000
+; Nybble format
+; GR XB
+; All red
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+;b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f,b$00
+
+; All green
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+;b$00,b$00,b$20,b$00,b$40,b$00,b$60,b$00,b$80,b$00,b$a0,b$00,b$c0,b$00,b$f0,b$00
+
+; All blue
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+;b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+
+
+; From palette.txt which is from MAME bombjack
+;During bootup screen
+;b$00,b$00,b$00,b$00,b$ff,b$0f,b$ce,b$08,b$ff,b$0f,b$0f,b$00,b$a0,b$0f,b$ff,b$00
+;b$00,b$00,b$2a,b$00,b$50,b$00,b$a0,b$00,b$88,b$08,b$66,b$06,b$44,b$04,b$f0,b$00
+;b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$0f,b$00
+;b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$f0,b$0f
+;b$00,b$00,b$0f,b$00,b$00,b$00,b$55,b$05,b$88,b$08,b$bb,b$0b,b$dd,b$0d,b$ff,b$0f
+;b$00,b$00,b$00,b$00,b$00,b$00,b$0d,b$00,b$dd,b$00,b$aa,b$0a,b$00,b$00,b$ff,b$0f
+;b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$8f,b$00
+;b$00,b$00,b$88,b$00,b$ff,b$0f,b$ff,b$0f,b$f6,b$06,b$ff,b$0f,b$ff,b$00,b$00,b$0f
+;b$00,b$00,b$00,b$0f,b$6f,b$00,b$ff,b$00,b$f0,b$00,b$f0,b$0f,b$ff,b$0f,b$af,b$0c
+;b$00,b$00,b$88,b$08,b$aa,b$08,b$cc,b$0c,b$80,b$00,b$a0,b$00,b$c0,b$00,b$0a,b$0f
+;b$00,b$00,b$88,b$08,b$88,b$08,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$0a,b$0f
+;b$00,b$00,b$00,b$00,b$00,b$00,b$0d,b$00,b$dd,b$00,b$aa,b$0a,b$00,b$00,b$ff,b$0f
+;b$00,b$00,b$0f,b$00,b$0d,b$00,b$0b,b$00,b$09,b$00,b$07,b$00,b$05,b$00,b$03,b$00
+;b$00,b$00,b$f0,b$00,b$d0,b$00,b$b0,b$00,b$90,b$00,b$70,b$00,b$50,b$00,b$30,b$00
+;b$00,b$00,b$00,b$0f,b$00,b$0d,b$00,b$0b,b$00,b$09,b$00,b$07,b$00,b$05,b$00,b$03
+;b$00,b$00,b$ff,b$0f,b$dd,b$0d,b$bb,b$0b,b$99,b$09,b$77,b$07,b$55,b$05,b$33,b$03
+
+;During the sphinx level
+b$00,b$00,b$00,b$00,b$ff,b$0f,b$ce,b$08,b$ff,b$0f,b$0f,b$00,b$a0,b$0f,b$ff,b$00
+b$00,b$00,b$2a,b$00,b$50,b$00,b$a0,b$00,b$88,b$08,b$66,b$06,b$44,b$04,b$f0,b$00
+b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$0f,b$00
+b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$f0,b$0f
+b$00,b$00,b$04,b$00,b$00,b$00,b$55,b$05,b$88,b$08,b$bb,b$0b,b$dd,b$0d,b$ff,b$0f
+b$00,b$00,b$00,b$00,b$ff,b$00,b$08,b$00,b$0c,b$00,b$0f,b$00,b$00,b$00,b$ff,b$0f
+b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$8f,b$00
+b$00,b$00,b$88,b$00,b$ff,b$0f,b$ff,b$0f,b$f6,b$06,b$ff,b$0f,b$ff,b$0f,b$00,b$0f
+b$00,b$00,b$0f,b$00,b$55,b$05,b$77,b$07,b$99,b$09,b$bb,b$0b,b$dd,b$0d,b$00,b$0f
+b$00,b$00,b$3f,b$00,b$5f,b$00,b$7f,b$00,b$9f,b$00,b$bf,b$00,b$df,b$00,b$ff,b$00
+b$00,b$00,b$00,b$0c,b$45,b$00,b$67,b$02,b$89,b$04,b$ab,b$06,b$cd,b$08,b$ef,b$0a
+b$00,b$00,b$99,b$00,b$aa,b$00,b$bb,b$00,b$cc,b$00,b$ff,b$0f,b$ee,b$00,b$ff,b$00
+b$00,b$00,b$44,b$04,b$66,b$06,b$88,b$08,b$aa,b$0a,b$ff,b$0f,b$cc,b$0c,b$00,b$00
+b$00,b$00,b$9f,b$00,b$ff,b$0f,b$08,b$00,b$0c,b$00,b$0f,b$00,b$00,b$00,b$ff,b$0f
+b$00,b$00,b$0f,b$04,b$0f,b$02,b$0f,b$00,b$2f,b$00,b$4f,b$00,b$6f,b$00,b$8f,b$00
+b$00,b$00,b$ff,b$0a,b$ff,b$0c,b$ff,b$0f,b$cc,b$0f,b$aa,b$0f,b$88,b$0f,b$0f,b$0f
+
+
+; Write screen data into RAM mapped at $9000 with EBS $01
+s$90400100
+; Screen data
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+s$91000100
+b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
+s$92000100
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+s$93000100
+b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
+
+; Write screen data into RAM mapped at $9400 with EBS $01
+; Colour data
+s$94400100
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$95000100
+b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$96000100
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$97000100
+b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+
+
+; Start and end (exclusive) of double size 32x32 sprite index
+s$9a000100
+b$0c,b$0f
+;b$00,b$00
+
+; Write sprite register data into RAM mapped at $9820 with EBS $01
+s$98200100
+
+; Byte ordering
+; frame
+; palette
+; x
+; y
+
+; Spread out all over the screen
+b$28,b$01,b$38,b$10
+b$29,b$01,b$3a,b$20
+b$2a,b$01,b$3c,b$30
+b$2b,b$01,b$3e,b$40
+
+b$14,b$42,b$80,b$41
+b$15,b$42,b$80,b$52
+b$16,b$42,b$c0,b$63
+b$17,b$42,b$c0,b$74
+
+b$18,b$42,b$10,b$81
+b$19,b$42,b$10,b$92
+b$1a,b$42,b$80,b$a3
+b$1b,b$42,b$80,b$b4
+
+b$1f,b$00,b$40,b$b0
+b$1f,b$40,b$60,b$c1
+b$1f,b$80,b$80,b$d2
+b$1f,b$c0,b$a0,b$e3
+
+
+b$20,b$c3,b$10,b$f1
+b$21,b$01,b$11,b$12
+b$22,b$81,b$88,b$23
+b$23,b$42,b$88,b$34
+
+b$24,b$42,b$88,b$41
+b$25,b$42,b$80,b$52
+b$26,b$42,b$c8,b$63
+b$27,b$42,b$c0,b$74
+
+
+
+; Top left all the same
+;b$14,b$40,b$10,b$00
+;b$15,b$43,b$10,b$00
+;b$16,b$40,b$10,b$00
+;b$17,b$43,b$10,b$00
+;
+;b$1f,b$04,b$10,b$00
+;b$1f,b$45,b$10,b$00
+;b$1f,b$86,b$10,b$00
+;b$1f,b$c7,b$10,b$00
+;
+;b$28,b$08,b$10,b$00
+;b$29,b$09,b$10,b$00
+;b$2a,b$0a,b$10,b$00
+;b$2b,b$0b,b$10,b$00
+;
+;b$18,b$4c,b$10,b$00
+;b$19,b$4d,b$10,b$00
+;b$1a,b$4e,b$10,b$00
+;b$1b,b$4f,b$10,b$00
+;
+;
+;b$20,b$c3,b$10,b$00
+;b$21,b$01,b$10,b$00
+;b$22,b$81,b$10,b$00
+;b$23,b$42,b$10,b$00
+;
+;b$24,b$42,b$10,b$00
+;b$25,b$42,b$10,b$00
+;b$26,b$42,b$10,b$00
+;b$27,b$42,b$10,b$00
+
+
+
+; X pos group
+;b$1f,b$00,b$b0,b$40
+;b$1f,b$41,b$b1,b$41
+;b$1f,b$82,b$b2,b$42
+;b$1f,b$c3,b$b3,b$43
+;
+;b$1f,b$00,b$b0,b$50
+;b$1f,b$41,b$b1,b$51
+;b$1f,b$82,b$b2,b$52
+;b$1f,b$c3,b$b3,b$53
+;
+;b$1f,b$00,b$b0,b$60
+;b$1f,b$41,b$b1,b$61
+;b$1f,b$82,b$b2,b$62
+;b$1f,b$c3,b$b3,b$63
+;
+;b$1f,b$00,b$b0,b$70
+;b$1f,b$41,b$b1,b$71
+;b$1f,b$82,b$b2,b$72
+;b$1f,b$c3,b$b3,b$73
+;
+;b$1f,b$00,b$b0,b$80
+;b$1f,b$41,b$b1,b$81
+;b$1f,b$82,b$b2,b$82
+;b$1f,b$c3,b$b3,b$83
+;
+;b$1f,b$00,b$b0,b$90
+;b$1f,b$41,b$b1,b$91
+;b$1f,b$82,b$b2,b$92
+;b$1f,b$c3,b$b3,b$93
+
+
+
+; Y pos group
+;b$1f,b$00,b$40,b$b0
+;b$1f,b$41,b$41,b$b1
+;b$1f,b$82,b$42,b$b2
+;b$1f,b$c3,b$43,b$b3
+;
+;b$1f,b$00,b$50,b$b0
+;b$1f,b$41,b$51,b$b1
+;b$1f,b$82,b$52,b$b2
+;b$1f,b$c3,b$53,b$b3
+;
+;b$1f,b$00,b$60,b$b0
+;b$1f,b$41,b$61,b$b1
+;b$1f,b$82,b$62,b$b2
+;b$1f,b$c3,b$63,b$b3
+;
+;b$1f,b$00,b$70,b$b0
+;b$1f,b$41,b$71,b$b1
+;b$1f,b$82,b$72,b$b2
+;b$1f,b$c3,b$73,b$b3
+;
+;b$1f,b$00,b$80,b$b0
+;b$1f,b$41,b$81,b$b1
+;b$1f,b$82,b$82,b$b2
+;b$1f,b$c3,b$83,b$b3
+;
+;b$1f,b$00,b$90,b$b0
+;b$1f,b$41,b$91,b$b1
+;b$1f,b$82,b$92,b$b2
+;b$1f,b$c3,b$93,b$b3
+
+
+
+; Background image enable and index
+d$9e000132
+
+d$0
+
