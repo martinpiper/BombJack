@@ -118,23 +118,47 @@ The Z80 CPU from the original schematic is not included, it was clocked independ
 
 ### Input data setup
 
-The Z80 data write signals are mocked using a combination of simulator pattern generator and some simple timing logic, this is separate to the main video schematic and the components are excluded from the PCB layout.
+The Z80 data write signals are mocked using a simulator pattern generator VSMDD2, this is separate to the main video schematic and the generator is are excluded from the PCB layout.
 
 As per the original design all writes to the video hardware should be timed to coincide with the VBLANK. This is because the video hardware is almost always reading the RAM during the visible portion of the frame. Writing to the sprite registers outside the VBLANK will especially produce nasty looking effects on the screen. This RAM sharing model is quite common is old arcade and console hardware.
 
+The original hardware has been expanded to include RAMs where the ROMs were located. These are addressed by an combination of EXPANSIONBUS3 to select the groups of RAMs and the EXPANSIONBUS group selector. It is entirely possible to write more than one group at a time by enabling multiple output bits in EXPANSIONBUS3.
 
-* Using the pattern file: 9800.ptn
+	| EXPANSIONBUS3	| Group							| EXPANSIONBUS address	| Behaviour								|
+	|---------------|-------------------------------|-----------------------|---------------------------------------|
+	| $01			| Original RAMs					| $9000	$400 bytes		| Screen character index				|
+	| $01			| Original RAMs					| $9400	$400 bytes		| Screen colour							|
+	| $01			| Original RAMs					| $9820	$60 bytes		| Sprite registers						|
+	| $01			| Original RAMs					| $9c00	$100 bytes		| Palette GR XB 2 bytes per entry		|
+	| $01			| Original RAMs					| $9e00					| Background image enable and index		|
+	| $01			| Original RAMs					| $9a00-$9a01			| Start/end 32x32 sprite index 0-f only	|
+	| $80			| Background 16x16 Root sheet 7	| $2000	8KB				| Tiles and colours into 4P7R			|
+	
 
+
+* Using the pattern file: TestData.txt
+
+	The sprite writes particularly have various configurations for sprite displays, these are commented in/out depending on the desired patterns
+
+	** Comment: Spread out all over the screen
+	
 	This includes background screen setup, char screen data setup and sprite palette, frames and position setup.
 	It provides good variation of sprites, palettes etc across the full range of screen coordinates. This is useful for testing expected masking logic and general visual integrity.
 
 
-* Using the pattern file: 9800 top left all the same.ptn
+	** Comment: Top left all the same
 
 	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios. The background is disabled and char screen uses transparent chars. This leaves just the sprite plane outputting pixels.
 	Setting a logic break on RV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
-	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear ot $ff can be seen whilst single stepping. Note the values for the RV and RH bus lines just below the video display.
+	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear to $ff can be seen whilst single stepping. Note the values for the RV and RH bus lines just below the video display.
 
+	** Comment: X pos group
+	
+		This regularly spaces the sprites with the same X pos +/-4 pixels. Useful for debugging.
+		
+	** Comment: Y pos group
+		
+		This regularly spaces the sprites with the same Y pos +/-4 pixels. Useful for debugging.
 	
 
 ### Raster line schedule

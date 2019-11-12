@@ -76,6 +76,22 @@
 	
 	
 * There is also the possibility to allow the horizontal pixel clock and/or the vertical raster position to be read via a latch and suitable address chip enable logic of an 8 bit latch
+	* For 6S7 and 5S7 timing
+			cba9876543210 = Address at 4P7R/4P7
+	_SL2	0010010100111
+	4x6MHz clocks
+	_SLOAD	0010110100111
+	4x6MHz clocks
+	_SL2	0010010101000	*
+	4x6MHz clocks			*
+	_SLOAD	0010110101000	*=
+	4x6MHz clocks			*==	One 16x16 tile being loaded, character/tile index then colour
+	_SL2	0010010101000	*=
+	4x6MHz clocks			*
+	_SLOAD	0010110101000	*
+	4x6MHz clocks			*
+	_SL2	0010010101001
+	
 
 
 

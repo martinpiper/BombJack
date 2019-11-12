@@ -131,10 +131,11 @@ b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 s$93000100
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 
-; Write screen data into RAM mapped at $9400 with EBS $01
+; Write colour data into RAM mapped at $9400 with EBS $01
 ; Colour data
 s$94400100
-b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+; Demonstrating various flips and also the extended character set using hi-nybble 1/2
+b$01,b$02,b$13,b$14,b$25,b$26,b$37,b$38,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 s$95000100
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 s$96000100
