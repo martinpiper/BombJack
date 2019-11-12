@@ -168,7 +168,7 @@
 			74245 needed for bus tristate?
 				Or maybe a simple 74373 for tri-state outputs since we don't need read logic
 				The 6116 RAM on root sheet 6 has interesting _OE/_WE based on a simple NOT 7404
-		* 4P7R (RAM) replaces 4P7, BusEBS.ptn added to simulate "Root sheet 7 (.10000000) RAM select"
+		* 4P7R (RAM) replaces 4P7, BusEBS.ptn added to simulate "Root sheet 7 EBS7 EA13 RAM select"
 			There are some logic contentions on BIDxx at the start, but similar CID contentions are also seen on 6LM6 RAM writes from the original schematic
 			* 4P7 has been schematic and placement disabled
 			* 4P7R is obviously enabled
@@ -176,7 +176,9 @@
 				It is $100 bytes of char data, followed by $100 bytes of colour data
 	* Done: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
 		VSMDD2 on root sheet 1 now uses TestData.txt to set all the data needed
-
+	* TODO: Root sheet 7 8R7 using 08_r08t.bin to RAM	EBS7 EA14 RAM select
+	* TODO: Root sheet 7 8N7 using 07_n08t.bin to RAM	EBS7 EA15 RAM select
+	* TODO: Root sheet 7 8L7 using 06_l08t.bin to RAM	EBS6 EA13 RAM select
 
 
 
