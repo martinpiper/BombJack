@@ -25,6 +25,13 @@ s$20008000
 s$40008000
 <0,1,2,3,4,5,6,7,<08_r08t.bin
 
+; Write background data from 07_n08t.bin into RAM mapped at $8000 with EBS $80
+s$80008000
+<0,1,2,3,4,5,6,7,<07_n08t.bin
+
+; Write background data from 06_l08t.bin into RAM mapped at $2000 with EBS $40
+s$20004000
+<0,1,2,3,4,5,6,7,<06_l08t.bin
 
 ; Write palette data into RAM mapped at $9c00 with EBS $01
 s$9c000100

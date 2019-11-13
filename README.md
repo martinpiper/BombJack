@@ -124,15 +124,18 @@ As per the original design all writes to the video hardware should be timed to c
 
 The original hardware has been expanded to include RAMs where the ROMs were located. These are addressed by an combination of EXPANSIONBUS3 to select the groups of RAMs and the EXPANSIONBUS group selector. It is entirely possible to write more than one group at a time by enabling multiple output bits in EXPANSIONBUS3.
 
-	| EXPANSIONBUS3	| Group							| EXPANSIONBUS address	| Behaviour								|
-	|---------------|-------------------------------|-----------------------|---------------------------------------|
-	| $01			| Original RAMs					| $9000	$400 bytes		| Screen character index				|
-	| $01			| Original RAMs					| $9400	$400 bytes		| Screen colour							|
-	| $01			| Original RAMs					| $9820	$60 bytes		| Sprite registers						|
-	| $01			| Original RAMs					| $9c00	$100 bytes		| Palette GR XB 2 bytes per entry		|
-	| $01			| Original RAMs					| $9e00					| Background image enable and index		|
-	| $01			| Original RAMs					| $9a00-$9a01			| Start/end 32x32 sprite index 0-f only	|
-	| $80			| Background 16x16 Root sheet 7	| $2000	8KB				| Tiles and colours into 4P7R			|
+   | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                             |
+   |---------------|-------------------------------|----------------------|---------------------------------------|
+   | $01           | Original RAMs                 | $9000   $400 bytes   | Screen character index                |
+   | $01           | Original RAMs                 | $9400   $400 bytes   | Screen colour                         |
+   | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                      |
+   | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry       |
+   | $01           | Original RAMs                 | $9e00                | Background image enable and index     |
+   | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only |
+   | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R           |
+   | $80           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 0 into 8R7R           |
+   | $80           | Background 16x16 Root sheet 7 | $8000   8KB          | Tiles bit plane 1 into 8N7R           |
+   | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 2 into 8L7R           |
 	
 
 
