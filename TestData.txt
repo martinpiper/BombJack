@@ -21,6 +21,10 @@ s$20008000
 ; This fills the remaining 4K of RAM which is addressed by d$9e000138 - d$9e00013f
 ;<0,1,2,3,4,5,6,7,<02_p04t.bin
 
+; Write background data from 08_r08t.bin into RAM mapped at $4000 with EBS $80
+s$40008000
+<0,1,2,3,4,5,6,7,<08_r08t.bin
+
 
 ; Write palette data into RAM mapped at $9c00 with EBS $01
 s$9c000100

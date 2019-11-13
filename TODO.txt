@@ -176,9 +176,9 @@
 				It is $100 bytes of char data, followed by $100 bytes of colour data
 	* Done: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
 		VSMDD2 on root sheet 1 now uses TestData.txt to set all the data needed
-	* TODO: Root sheet 7 8R7 using 08_r08t.bin to RAM	EBS7 EA14 RAM select
-	* TODO: Root sheet 7 8N7 using 07_n08t.bin to RAM	EBS7 EA15 RAM select
-	* TODO: Root sheet 7 8L7 using 06_l08t.bin to RAM	EBS6 EA13 RAM select
+	* Done: Root sheet 7 8R7 using 08_r08t.bin to RAM	EBS7 EA14 RAM select	$4000
+	* TODO: Root sheet 7 8N7 using 07_n08t.bin to RAM	EBS7 EA15 RAM select	$8000
+	* TODO: Root sheet 7 8L7 using 06_l08t.bin to RAM	EBS6 EA13 RAM select	$2000
 
 
 
