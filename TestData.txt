@@ -31,17 +31,31 @@ s$25008000
 ;b$42,b$83,b$c4,b$05,b$46,b$87,b$c8,b$09,b$4a,b$8b,b$cc,b$0d,b$4e,b$8f,b$c0,b$01
 
 
-; Write background data from 08_r08t.bin into RAM mapped at $4000 with EBS $80
+; Write tile data from 08_r08t.bin into RAM mapped at $4000 with EBS $80
 s$40008000
 <0,1,2,3,4,5,6,7,<08_r08t.bin
 
-; Write background data from 07_n08t.bin into RAM mapped at $8000 with EBS $80
+; Write tile data from 07_n08t.bin into RAM mapped at $8000 with EBS $80
 s$80008000
 <0,1,2,3,4,5,6,7,<07_n08t.bin
 
-; Write background data from 06_l08t.bin into RAM mapped at $2000 with EBS $40
+; Write tile data from 06_l08t.bin into RAM mapped at $2000 with EBS $40
 s$20004000
 <0,1,2,3,4,5,6,7,<06_l08t.bin
+
+
+; Character data
+; Write character data from 05_k08t.bin into RAM mapped at $4000 with EBS $40
+s$40004000
+<0,1,2,3,4,5,6,7,<05_k08t.bin
+
+; Write character data from 04_h08t.bin into RAM mapped at $8000 with EBS $40
+s$80004000
+<0,1,2,3,4,5,6,7,<04_h08t.bin
+
+; Write character data from 03_e08t.bin into RAM mapped at $2000 with EBS $20
+s$20002000
+<0,1,2,3,4,5,6,7,<03_e08t.bin
 
 ; Write palette data into RAM mapped at $9c00 with EBS $01
 s$9c000100
@@ -156,7 +170,7 @@ b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 ; Colour data
 s$94400100
 ; Demonstrating various flips and also the extended character set using hi-nybble 1/2
-b$01,b$02,b$13,b$14,b$25,b$26,b$37,b$38,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
+b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 s$95000100
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 s$96000100

@@ -135,7 +135,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R           |
    | $80           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 0 into 8R7R           |
    | $80           | Background 16x16 Root sheet 7 | $8000   8KB          | Tiles bit plane 1 into 8N7R           |
-   | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 2 into 8L7R           |
+   | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 2 into 8L7R           |
+   | $40           | Char screen 8x8 Root sheet 6  | $4000   8KB          | Char data bit plane 0 into 8K6R       |
+   | $40           | Char screen 8x8 Root sheet 6  | $8000   8KB          | Char data bit plane 1 into 8H6R       |
+   | $20           | Char screen 8x8 Root sheet 6  | $2000   8KB          | Char data bit plane 2 into 8E6R       |
 	
 
 

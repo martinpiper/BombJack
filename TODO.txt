@@ -181,6 +181,16 @@
 	* Done: Root sheet 7 8L7 using 06_l08t.bin to RAM	EBS6 EA13 RAM select	$2000
 	Note all new logic for the RAMs on root sheet 7. The original ROMs are still present, just disabled from the simulation and layout.
 	
+	* Character data
+	* Done: Root sheet 6 8K6 using 05_k08t.bin to RAM	EBS6 EA14 ram select	$4000
+	* Done: Root sheet 6 8H6 using 04_h08t.bin to RAM	EBS6 EA15 ram select	$8000
+	* Done: Root sheet 6 8E6 using 03_e08t.bin to RAM	EBS5 EA13 ram select	$2000
+	
+	
+
+* All the very similar block, for the new RAMs and also the pixel shift outputs, could use a sub-circuit now
+	Since they are RAM addressed and the ROM with its associated data file in the schematic is not important
+	If the RAM/ROM names are still important, then have them outside of the sub-circuit
 
 
 
