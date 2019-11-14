@@ -186,7 +186,8 @@
 	* Done: Root sheet 6 8H6 using 04_h08t.bin to RAM	EBS6 EA15 ram select	$8000
 	* Done: Root sheet 6 8E6 using 03_e08t.bin to RAM	EBS5 EA13 ram select	$2000
 	
-	* Sprite data
+	* TODO: Sprite data
+		RAMS
 
 
 
