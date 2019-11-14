@@ -98,3 +98,7 @@
 	
 	
 * Change screen colours to exercise the 6N2:B flow
+
+
+
+* Perhaps move the edge connectors up the board to improve component auto place?

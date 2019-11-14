@@ -189,6 +189,11 @@
 	* TODO: Sprite data
 		RAMS
 
+		
+
+* How many layers? Six?
+	https://www.allpcb.com/6_layer_pcb.html
+	http://referencedesigner.com/books/si/6-layer-stackup-ch6.php
 
 
 * Remove the vertical flip button and associated logic? Since it's not really needed as I'm not strictly emulating an arcade board any more.

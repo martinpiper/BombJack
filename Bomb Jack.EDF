@@ -6,15 +6,15 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -100.79500 -103.23660 203.23660 113.23660))
-  (boundary (path signal 0.20320 -98.10960 -103.10960 203.10960 -103.10960 203.10960 113.10960
-   -98.10960 113.10960 -98.10960 -103.10960))
+  (boundary (rect pcb -100.79500 -108.23660 203.23660 123.23660))
+  (boundary (path signal 0.20320 -98.10960 -108.10960 203.10960 -108.10960 203.10960 123.10960
+   -98.10960 123.10960 -98.10960 -108.10960))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction horizontal))
-  (layer I1 (type signal) (direction horizontal))
+  (layer I1 (type signal) (direction orthogonal))
   (layer I2 (type signal) (direction vertical))
-  (layer I3 (type signal) (direction off))
-  (layer I4 (type signal) (direction off))
+  (layer I3 (type signal) (direction horizontal))
+  (layer I4 (type signal) (direction vertical))
   (layer I5 (type signal) (direction off))
   (layer I6 (type signal) (direction off))
   (layer I7 (type signal) (direction off))
@@ -110,169 +110,186 @@
   (component DIL28_7J (place 7J -77.47000 -15.24000 front 0))
   (component DIL28_7L (place 7L -77.47000 2.54000 front 0))
   (component DIL28_7M (place 7M -77.47000 20.32000 front 0))
-  (component DIL28_8E6 (place 8E6 132.08000 26.67000 front 0))
-  (component DIL28_8H6 (place 8H6 132.08000 44.45000 front 0))
-  (component DIL28_8K6 (place 8K6 132.08000 62.23000 front 0))
-  (component DIL28_8L7R (place 8L7R -77.47000 39.37000 front 0))
-  (component DIL28_8N7R (place 8N7R -77.47000 -81.28000 front 0))
-  (component DIL28_8R7R (place 8R7R -27.94000 39.37000 front 0))
-  (component DIL24_6LM6 (place 6LM6 15.24000 40.64000 front 0))
-  (component DIL20_U11 (place U11 -27.94000 27.94000 front 0))
-  (component DIL20_U16 (place U16 -17.78000 57.15000 front 0))
-  (component DIL20_U18 (place U18 -39.37000 17.78000 front 0))
-  (component DIL20_U27 (place U27 -39.37000 53.34000 front 270))
-  (component DIL20_2F (place 2F -27.94000 7.62000 front 0))
-  (component DIL20_3L6 (place 3L6 -17.78000 67.31000 front 0))
-  (component DIL20_4L6 (place 4L6 20.32000 58.42000 front 0))
-  (component DIL20_5E2 (place 5E2 142.24000 -17.78000 front 0))
-  (component DIL20_5H (place 5H -17.78000 77.47000 front 0))
-  (component DIL20_5L6 (place 5L6 20.32000 68.58000 front 0))
-  (component DIL20_6E (place 6E 20.32000 80.01000 front 0))
-  (component DIL20_6F (place 6F 20.32000 90.17000 front 0))
-  (component DIL20_6S7 (place 6S7 0.00000 26.67000 front 0))
-  (component DIL20_7B2 (place 7B2 -27.94000 -2.54000 front 0))
-  (component DIL20_7C2 (place 7C2 -39.37000 -12.70000 front 0))
-  (component DIL14_2R6 (place 2R6 -39.37000 57.15000 front 0))
-  (component DIL14_4E (place 4E 20.32000 102.87000 front 0))
-  (component DIL14_4F (place 4F 7.62000 6.35000 front 0))
-  (component DIL14_6H (place 6H -59.69000 57.15000 front 0))
-  (component DIL14_8S (place 8S 132.08000 -7.62000 front 0))
-  (component DIL14_U15 (place U15 -59.69000 67.31000 front 0))
-  (component DIL14_U17 (place U17 -39.37000 -22.86000 front 0))
-  (component DIL18_3E (place 3E 15.24000 69.85000 front 90))
-  (component DIL18_3F (place 3F 19.05000 3.81000 front 180))
-  (component DIL18_6A2 (place 6A2 -57.15000 -33.02000 front 0))
-  (component DIL18_6B2 (place 6B2 -57.15000 -43.18000 front 0))
-  (component DIL18_6C2 (place 6C2 -64.77000 -53.34000 front 0))
-  (component DIL16_1A (place 1A -10.16000 -13.97000 front 0))
-  (component DIL16_2A (place 2A 147.32000 -27.94000 front 0))
-  (component DIL16_2D (place 2D 104.14000 6.35000 front 0))
-  (component DIL16_1B (place 1B -17.78000 -24.13000 front 0))
-  (component DIL16_2B (place 2B 147.32000 -38.10000 front 0))
-  (component DIL16_2C (place 2C 118.11000 -17.78000 front 0))
-  (component DIL16_1C (place 1C 104.14000 -38.10000 front 0))
-  (component DIL16_1D (place 1D 12.70000 -13.97000 front 0))
-  (component DIL16_2E (place 2E -17.78000 -34.29000 front 0))
-  (component DIL16_2S (place 2S -31.75000 -44.45000 front 0))
-  (component DIL16_6D2 (place 6D2 35.56000 -13.97000 front 0))
-  (component DIL16_6F2 (place 6F2 12.70000 -34.29000 front 0))
-  (component DIL16_3A (place 3A 118.11000 -27.94000 front 0))
-  (component DIL16_3B (place 3B 142.24000 -48.26000 front 0))
-  (component DIL16_3C (place 3C 104.14000 -7.62000 front 0))
-  (component DIL16_3D (place 3D 104.14000 21.59000 front 0))
-  (component DIL16_3M (place 3M -41.91000 77.47000 front 0))
-  (component DIL16_3M8 (place 3M8 81.28000 6.35000 front 0))
-  (component DIL16_3N (place 3N 25.40000 -3.81000 front 0))
-  (component DIL16_3P (place 3P 35.56000 6.35000 front 0))
-  (component DIL16_3R (place 3R 48.26000 -3.81000 front 0))
-  (component DIL14_U5 (place U5 48.26000 16.51000 front 0))
-  (component DIL16_3S (place 3S 71.12000 -5.08000 front 0))
-  (component DIL16_4M (place 4M -64.77000 77.47000 front 0))
-  (component DIL16_4M6 (place 4M6 35.56000 26.67000 front 0))
-  (component DIL16_4S7 (place 4S7 1.27000 95.25000 front 180))
-  (component DIL16_5E (place 5E -2.54000 97.79000 front 0))
-  (component DIL16_5F (place 5F 40.64000 102.87000 front 0))
-  (component DIL16_5F8 (place 5F8 58.42000 6.35000 front 0))
-  (component DIL16_5H8 (place 5H8 92.71000 2.54000 front 270))
-  (component DIL16_5J (place 5J -57.15000 -63.50000 front 0))
-  (component DIL16_5J8 (place 5J8 71.12000 -15.24000 front 0))
-  (component DIL16_5K (place 5K -35.56000 -48.26000 front 270))
-  (component DIL16_5K8 (place 5K8 55.88000 -8.89000 front 270))
-  (component DIL14_5M8 (place 5M8 81.28000 -31.75000 front 0))
-  (component DIL16_5L (place 5L -11.43000 -38.10000 front 270))
-  (component DIL16_5M (place 5M -27.94000 97.79000 front 0))
-  (component DIL16_5N7 (place 5N7 71.12000 -41.91000 front 0))
-  (component DIL16_5R (place 5R 12.70000 -44.45000 front 0))
-  (component DIL16_5S (place 5S 12.70000 -54.61000 front 0))
-  (component DIL16_5S7 (place 5S7 81.28000 21.59000 front 0))
-  (component DIL16_6A (place 6A 57.15000 80.01000 front 0))
-  (component DIL16_6B (place 6B 48.26000 90.17000 front 0))
-  (component DIL16_6C (place 6C 57.15000 68.58000 front 0))
-  (component DIL16_6D (place 6D 57.15000 58.42000 front 0))
-  (component DIL16_6F6 (place 6F6 62.23000 -54.61000 front 0))
-  (component DIL14_6P6 (place 6P6 48.26000 40.64000 front 0))
-  (component DIL16_6H6 (place 6H6 58.42000 26.67000 front 0))
-  (component DIL16_6J (place 6J -1.27000 -38.10000 front 270))
-  (component DIL16_6J6 (place 6J6 35.56000 -31.75000 front 0))
-  (component DIL16_6K (place 6K -24.13000 -48.26000 front 270))
-  (component DIL16_6K6 (place 6K6 35.56000 -46.99000 front 0))
-  (component DIL16_6L (place 6L -39.37000 -77.47000 front 0))
-  (component DIL16_6M (place 6M 15.24000 -64.77000 front 0))
-  (component DIL16_6R (place 6R -12.70000 -66.04000 front 0))
-  (component DIL16_6S (place 6S -12.70000 -77.47000 front 0))
-  (component DIL16_6T (place 6T 80.01000 68.58000 front 0))
-  (component DIL16_7F (place 7F 53.34000 69.85000 front 90))
-  (component DIL16_7D6 (place 7D6 81.28000 31.75000 front 0))
-  (component DIL16_7E6 (place 7E6 104.14000 31.75000 front 0))
-  (component DIL16_7E (place 7E 81.28000 43.18000 front 0))
-  (component DIL16_7F6 (place 7F6 104.14000 43.18000 front 0))
-  (component DIL16_7H6 (place 7H6 104.14000 53.34000 front 0))
-  (component DIL16_7H (place 7H -21.59000 95.25000 front 180))
-  (component DIL14_4H (place 4H -39.37000 67.31000 front 0))
-  (component DIL16_7J6 (place 7J6 104.14000 63.50000 front 0))
-  (component DIL16_7K6 (place 7K6 105.41000 73.66000 front 0))
-  (component DIL16_7L7 (place 7L7 69.85000 54.61000 front 270))
-  (component DIL16_7M7 (place 7M7 81.28000 53.34000 front 0))
-  (component DIL16_7N (place 7N 38.10000 -64.77000 front 0))
-  (component DIL14_7B (place 7B 80.01000 78.74000 front 0))
-  (component DIL16_7N7 (place 7N7 15.24000 -74.93000 front 0))
-  (component DIL16_7P7 (place 7P7 15.24000 -85.09000 front 0))
-  (component DIL16_7R (place 7R 38.10000 -74.93000 front 0))
-  (component DIL16_7R7 (place 7R7 71.12000 90.17000 front 0))
-  (component DIL16_7S7 (place 7S7 68.58000 102.87000 front 0))
-  (component DIL16_7S (place 7S 105.41000 88.90000 front 0))
-  (component DIL14_5P7 (place 5P7 85.09000 -52.07000 front 0))
-  (component DIL14_6N2 (place 6N2 105.41000 -48.26000 front 0))
-  (component DIL16_7T (place 7T 62.23000 -64.77000 front 0))
-  (component DIL16_8D2 (place 8D2 -12.70000 -87.63000 front 0))
-  (component DIL14_8C2 (place 8C2 -36.83000 -87.63000 front 0))
-  (component DIL16_U1 (place U1 38.10000 -85.09000 front 0))
-  (component DIL16_U3 (place U3 -82.55000 63.50000 front 0))
-  (component DIL16_U12 (place U12 -64.77000 87.63000 front 0))
-  (component DIL14_U13 (place U13 -85.09000 73.66000 front 0))
-  (component DIL16_U2 (place U2 -52.07000 97.79000 front 0))
-  (component DIL16_U4 (place U4 62.23000 -74.93000 front 0))
-  (component DIL16_U6 (place U6 85.09000 -62.23000 front 0))
-  (component DIL16_U7 (place U7 127.00000 81.28000 front 0))
-  (component DIL16_U8 (place U8 105.41000 100.33000 front 0))
-  (component DIL16_U19 (place U19 38.10000 -95.25000 front 0))
-  (component DIL16_U20 (place U20 -77.47000 99.06000 front 0))
-  (component DIL16_U21 (place U21 -69.85000 91.44000 front 180))
-  (component DIL16_U22 (place U22 15.24000 -95.25000 front 0))
-  (component DIL14_U10 (place U10 -39.37000 12.70000 front 270))
-  (component DIL16_U23 (place U23 62.23000 -85.09000 front 0))
-  (component DIL16_U24 (place U24 85.09000 -72.39000 front 0))
-  (component DIL16_U25 (place U25 99.06000 90.17000 front 90))
-  (component DIL16_U26 (place U26 62.23000 -95.25000 front 0))
-  (component DIL14_U9 (place U9 -87.63000 93.98000 front 90))
-  (component DIL14_U14 (place U14 85.09000 -82.55000 front 0))
-  (component DIL14_1S (place 1S 106.68000 -11.43000 front 270))
-  (component DIL14_1T (place 1T 107.95000 -62.23000 front 0))
-  (component DIL14_2T (place 2T 127.00000 -38.10000 front 0))
-  (component DIL14_2N (place 2N 85.09000 -95.25000 front 0))
-  (component DIL14_2P (place 2P 107.95000 -72.39000 front 0))
-  (component DIL14_2R (place 2R 102.87000 -76.20000 front 270))
-  (component DIL14_5T (place 5T 128.27000 -62.23000 front 0))
-  (component DIL14_3H (place 3H -64.77000 -91.44000 front 0))
-  (component DIL14_3T (place 3T 148.59000 -58.42000 front 0))
-  (component DIL14_4N (place 4N 114.30000 -96.52000 front 0))
-  (component DIL14_4P (place 4P 114.30000 -82.55000 front 0))
-  (component DIL14_4R (place 4R 134.62000 -82.55000 front 0))
-  (component DIL14_4S (place 4S 148.59000 -68.58000 front 0))
-  (component DIL14_5A (place 5A 149.86000 81.28000 front 0))
-  (component DIL14_5B (place 5B 149.86000 91.44000 front 0))
+  (component DIL28_8E6R (place 8E6R 128.27000 24.13000 front 0))
+  (component DIL28_8H6R (place 8H6R 132.08000 48.26000 front 0))
+  (component DIL28_8K6R (place 8K6R 128.27000 66.04000 front 0))
+  (component DIL28_8L7R (place 8L7R 134.62000 83.82000 front 0))
+  (component DIL28_8N7R (place 8N7R 132.08000 -21.59000 front 0))
+  (component DIL28_8R7R (place 8R7R 132.08000 -41.91000 front 0))
+  (component DIL24_6LM6 (place 6LM6 -76.20000 -81.28000 front 0))
+  (component DIL20_U11 (place U11 128.27000 -3.81000 front 0))
+  (component DIL20_U16 (place U16 104.14000 -13.97000 front 0))
+  (component DIL20_U18 (place U18 104.14000 -24.13000 front 0))
+  (component DIL20_U27 (place U27 90.17000 -3.81000 front 0))
+  (component DIL20_U28 (place U28 90.17000 6.35000 front 0))
+  (component DIL20_U35 (place U35 115.57000 19.05000 front 270))
+  (component DIL20_U40 (place U40 99.06000 22.86000 front 0))
+  (component DIL20_2F (place 2F 104.14000 -34.29000 front 0))
+  (component DIL20_3L6 (place 3L6 -44.45000 -49.53000 front 90))
+  (component DIL20_4L6 (place 4L6 -71.12000 -91.44000 front 0))
+  (component DIL20_5E2 (place 5E2 128.27000 -52.07000 front 0))
+  (component DIL20_5H (place 5H -77.47000 38.10000 front 0))
+  (component DIL20_5L6 (place 5L6 -71.12000 -101.60000 front 0))
+  (component DIL20_6E (place 6E -77.47000 48.26000 front 0))
+  (component DIL20_6F (place 6F -77.47000 58.42000 front 0))
+  (component DIL20_6S7 (place 6S7 90.17000 -44.45000 front 0))
+  (component DIL20_7B2 (place 7B2 -44.45000 -60.96000 front 0))
+  (component DIL20_7C2 (place 7C2 -43.18000 -71.12000 front 0))
+  (component DIL14_2R6 (place 2R6 -36.83000 -50.80000 front 0))
+  (component DIL14_4E (place 4E -39.37000 20.32000 front 0))
+  (component DIL14_4F (place 4F -39.37000 48.26000 front 0))
+  (component DIL14_6H (place 6H -39.37000 38.10000 front 0))
+  (component DIL14_8S (place 8S 111.76000 -62.23000 front 0))
+  (component DIL14_U15 (place U15 99.06000 33.02000 front 0))
+  (component DIL14_U17 (place U17 99.06000 48.26000 front 0))
+  (component DIL14_U34 (place U34 106.68000 58.42000 front 0))
+  (component DIL18_3E (place 3E 82.55000 -54.61000 front 0))
+  (component DIL18_3F (place 3F 64.77000 -44.45000 front 0))
+  (component DIL18_6A2 (place 6A2 -40.64000 -81.28000 front 0))
+  (component DIL18_6B2 (place 6B2 -40.64000 -91.44000 front 0))
+  (component DIL18_6C2 (place 6C2 -40.64000 -101.60000 front 0))
+  (component DIL16_1A (place 1A -39.37000 10.16000 front 0))
+  (component DIL16_2A (place 2A 80.01000 -24.13000 front 0))
+  (component DIL16_2D (place 2D 80.01000 -13.97000 front 0))
+  (component DIL16_1B (place 1B -36.83000 -1.27000 front 0))
+  (component DIL16_2B (place 2B 80.01000 -34.29000 front 0))
+  (component DIL16_2C (place 2C 67.31000 -3.81000 front 0))
+  (component DIL16_1C (place 1C -36.83000 -11.43000 front 0))
+  (component DIL16_1D (place 1D 49.53000 -34.29000 front 0))
+  (component DIL16_2E (place 2E 29.21000 -24.13000 front 0))
+  (component DIL16_2S (place 2S -36.83000 -40.64000 front 0))
+  (component DIL16_6D2 (place 6D2 -39.37000 -21.59000 front 0))
+  (component DIL16_6F2 (place 6F2 41.91000 -44.45000 front 0))
+  (component DIL16_3A (place 3A 57.15000 -13.97000 front 0))
+  (component DIL16_3B (place 3B 57.15000 -24.13000 front 0))
+  (component DIL16_3C (place 3C 29.21000 -11.43000 front 0))
+  (component DIL16_3D (place 3D 41.91000 -1.27000 front 0))
+  (component DIL16_3M (place 3M -72.39000 68.58000 front 0))
+  (component DIL16_3M8 (place 3M8 2.54000 -21.59000 front 0))
+  (component DIL16_3N (place 3N 25.40000 -34.29000 front 0))
+  (component DIL16_3P (place 3P 19.05000 -46.99000 front 0))
+  (component DIL16_3R (place 3R 25.40000 -57.15000 front 0))
+  (component DIL14_U5 (place U5 21.59000 -1.27000 front 0))
+  (component DIL16_3S (place 3S 2.54000 -33.02000 front 0))
+  (component DIL16_4M (place 4M -41.91000 58.42000 front 0))
+  (component DIL16_4M6 (place 4M6 -62.23000 -35.56000 front 270))
+  (component DIL16_4S7 (place 4S7 -6.35000 -50.80000 front 0))
+  (component DIL16_5E (place 5E -52.07000 55.88000 front 270))
+  (component DIL16_5F (place 5F -19.05000 44.45000 front 0))
+  (component DIL16_5F8 (place 5F8 -13.97000 -11.43000 front 0))
+  (component DIL16_5H8 (place 5H8 -13.97000 -1.27000 front 0))
+  (component DIL16_5J (place 5J -15.24000 -15.24000 front 270))
+  (component DIL16_5J8 (place 5J8 -13.97000 10.16000 front 0))
+  (component DIL16_5K (place 5K -6.35000 -60.96000 front 0))
+  (component DIL16_5K8 (place 5K8 8.89000 8.89000 front 0))
+  (component DIL14_5M8 (place 5M8 8.89000 3.81000 front 270))
+  (component DIL16_5L (place 5L -20.32000 30.48000 front 0))
+  (component DIL16_5M (place 5M -40.64000 68.58000 front 0))
+  (component DIL16_5N7 (place 5N7 -13.97000 20.32000 front 0))
+  (component DIL16_5R (place 5R 33.02000 -68.58000 front 0))
+  (component DIL16_5S (place 5S 33.02000 -78.74000 front 0))
+  (component DIL16_5S7 (place 5S7 59.69000 -54.61000 front 0))
+  (component DIL16_6A (place 6A -13.97000 54.61000 front 0))
+  (component DIL16_6B (place 6B 8.89000 20.32000 front 0))
+  (component DIL16_6C (place 6C 8.89000 30.48000 front 0))
+  (component DIL16_6D (place 6D 8.89000 41.91000 front 0))
+  (component DIL16_6F6 (place 6F6 8.89000 54.61000 front 0))
+  (component DIL16_6H6 (place 6H6 -17.78000 -44.45000 front 270))
+  (component DIL16_6J (place 6J -15.24000 -72.39000 front 0))
+  (component DIL16_6J6 (place 6J6 7.62000 -72.39000 front 0))
+  (component DIL16_6K (place 6K -15.24000 -82.55000 front 0))
+  (component DIL16_6K6 (place 6K6 7.62000 -82.55000 front 0))
+  (component DIL16_6L (place 6L -13.97000 68.58000 front 0))
+  (component DIL16_6M (place 6M 31.75000 8.89000 front 0))
+  (component DIL16_6R (place 6R -15.24000 -92.71000 front 0))
+  (component DIL16_6S (place 6S 7.62000 -92.71000 front 0))
+  (component DIL16_6T (place 6T 31.75000 20.32000 front 0))
+  (component DIL16_7F (place 7F -71.12000 78.74000 front 0))
+  (component DIL16_7D6 (place 7D6 67.31000 6.35000 front 0))
+  (component DIL16_7E6 (place 7E6 67.31000 19.05000 front 0))
+  (component DIL16_7E (place 7E 31.75000 30.48000 front 0))
+  (component DIL16_7F6 (place 7F6 55.88000 29.21000 front 0))
+  (component DIL16_7H6 (place 7H6 95.25000 17.78000 front 90))
+  (component DIL16_7H (place 7H -71.12000 88.90000 front 0))
+  (component DIL14_4H (place 4H -40.64000 78.74000 front 0))
+  (component DIL16_7J6 (place 7J6 31.75000 41.91000 front 0))
+  (component DIL16_7K6 (place 7K6 67.31000 39.37000 front 0))
+  (component DIL16_7L7 (place 7L7 72.39000 49.53000 front 0))
+  (component DIL16_7M7 (place 7M7 83.82000 59.69000 front 0))
+  (component DIL16_7N (place 7N 59.69000 -68.58000 front 0))
+  (component DIL14_7B (place 7B 53.34000 24.13000 front 270))
+  (component DIL16_7N7 (place 7N7 46.99000 52.07000 front 0))
+  (component DIL16_7P7 (place 7P7 46.99000 62.23000 front 0))
+  (component DIL16_7R (place 7R 33.02000 -92.71000 front 0))
+  (component DIL16_7R7 (place 7R7 83.82000 69.85000 front 0))
+  (component DIL16_7S7 (place 7S7 55.88000 73.66000 front 0))
+  (component DIL16_7S (place 7S 8.89000 68.58000 front 0))
+  (component DIL14_5P7 (place 5P7 34.29000 67.31000 front 270))
+  (component DIL14_6N2 (place 6N2 58.42000 83.82000 front 0))
+  (component DIL16_7T (place 7T 31.75000 73.66000 front 0))
+  (component DIL16_8D2 (place 8D2 59.69000 -78.74000 front 0))
+  (component DIL14_8C2 (place 8C2 82.55000 -68.58000 front 0))
+  (component DIL16_U1 (place U1 102.87000 -72.39000 front 0))
+  (component DIL16_U3 (place U3 132.08000 -62.23000 front 0))
+  (component DIL16_U12 (place U12 125.73000 -73.66000 front 0))
+  (component DIL16_U2 (place U2 82.55000 -82.55000 front 0))
+  (component DIL16_U4 (place U4 105.41000 -83.82000 front 0))
+  (component DIL16_U6 (place U6 72.39000 -92.71000 front 0))
+  (component DIL16_U7 (place U7 148.59000 -73.66000 front 0))
+  (component DIL16_U8 (place U8 132.08000 -83.82000 front 0))
+  (component DIL16_U19 (place U19 105.41000 -93.98000 front 0))
+  (component DIL16_U20 (place U20 132.08000 -93.98000 front 0))
+  (component DIL16_U21 (place U21 162.56000 -62.23000 front 90))
+  (component DIL16_U22 (place U22 154.94000 -83.82000 front 0))
+  (component DIL16_U23 (place U23 92.71000 -86.36000 front 270))
+  (component DIL16_U24 (place U24 60.96000 -86.36000 front 270))
+  (component DIL16_U25 (place U25 166.37000 -63.50000 front 0))
+  (component DIL16_U26 (place U26 154.94000 -93.98000 front 0))
+  (component DIL14_U14 (place U14 107.95000 69.85000 front 0))
+  (component DIL16_U29 (place U29 121.92000 -96.52000 front 180))
+  (component DIL16_U30 (place U30 55.88000 -95.25000 front 180))
+  (component DIL16_U31 (place U31 171.45000 -73.66000 front 0))
+  (component DIL16_U32 (place U32 177.80000 -86.36000 front 0))
+  (component DIL14_6P6 (place 6P6 -20.32000 78.74000 front 0))
+  (component DIL14_U9 (place U9 -20.32000 88.90000 front 0))
+  (component DIL14_U10 (place U10 83.82000 83.82000 front 0))
+  (component DIL16_U36 (place U36 88.90000 -95.25000 front 180))
+  (component DIL16_U37 (place U37 31.75000 -95.25000 front 180))
+  (component DIL16_U38 (place U38 179.07000 -53.34000 front 0))
+  (component DIL16_U39 (place U39 177.80000 -96.52000 front 0))
+  (component DIL16_U41 (place U41 144.78000 -97.79000 front 180))
+  (component DIL16_U42 (place U42 8.89000 -95.25000 front 180))
+  (component DIL16_U43 (place U43 193.04000 -25.40000 front 270))
+  (component DIL16_U44 (place U44 168.91000 -96.52000 front 180))
+  (component DIL14_U13 (place U13 -20.32000 99.06000 front 0))
+  (component DIL14_U33 (place U33 107.95000 83.82000 front 0))
+  (component DIL14_1S (place 1S 20.32000 83.82000 front 0))
+  (component DIL14_1T (place 1T 13.97000 86.36000 front 180))
+  (component DIL14_2N (place 2N -87.63000 -74.93000 front 270))
+  (component DIL14_2P (place 2P -40.64000 88.90000 front 0))
+  (component DIL14_2R (place 2R 116.84000 48.26000 front 270))
+  (component DIL14_5T (place 5T 0.00000 88.90000 front 0))
+  (component DIL14_2T (place 2T 20.32000 93.98000 front 0))
+  (component DIL14_3H (place 3H 107.95000 93.98000 front 0))
+  (component DIL14_3T (place 3T 83.82000 93.98000 front 0))
+  (component DIL14_4N (place 4N -77.47000 -92.71000 front 180))
+  (component DIL14_4P (place 4P -40.64000 99.06000 front 0))
+  (component DIL14_4R (place 4R 0.00000 99.06000 front 0))
+  (component DIL14_4S (place 4S 20.32000 104.14000 front 0))
+  (component DIL14_5A (place 5A 46.99000 93.98000 front 0))
+  (component DIL14_5B (place 5B 58.42000 104.14000 front 0))
   (component DIL14_5C (place 5C 171.45000 57.15000 front 0))
-  (component DIL14_5D (place 5D 171.45000 69.85000 front 0))
-  (component DIL14_7A (place 7A 129.54000 91.44000 front 0))
-  (component DIL14_5P (place 5P 128.27000 -72.39000 front 0))
-  (component DIL14_5R7 (place 5R7 152.40000 -76.20000 front 270))
-  (component DIL14_6R7 (place 6R7 134.62000 -96.52000 front 0))
-  (component DIL14_6N6 (place 6N6 -1.27000 -90.17000 front 180))
-  (component DIL14_8C6 (place 8C6 -85.09000 -91.44000 front 0))
-  (component DIL14_7C (place 7C -21.59000 -90.17000 front 180))
-  (component DIL14_7D (place 7D 173.99000 -73.66000 front 90))
-  (component RES40_R17 (place R17 123.19000 3.81000 front 0))
-  (component RES40_R18 (place R18 -2.54000 15.24000 front 90))
+  (component DIL14_5D (place 5D 171.45000 67.31000 front 0))
+  (component DIL14_7A (place 7A 83.82000 104.14000 front 0))
+  (component DIL14_5P (place 5P 0.00000 109.22000 front 0))
+  (component DIL14_5R7 (place 5R7 39.37000 111.76000 front 0))
+  (component DIL14_6R7 (place 6R7 -20.32000 109.22000 front 0))
+  (component DIL14_6N6 (place 6N6 -40.64000 109.22000 front 0))
+  (component DIL14_8C6 (place 8C6 -60.96000 107.95000 front 0))
+  (component DIL14_7C (place 7C 107.95000 104.14000 front 0))
+  (component DIL14_7D (place 7D -80.01000 99.06000 front 0))
+  (component RES40_R17 (place R17 -67.31000 -41.91000 front 270))
+  (component RES40_R18 (place R18 67.31000 119.38000 front 180))
  )
  (library
   (image "CONN-DIL34_EXPANSIONBUS" (side front)
@@ -815,7 +832,7 @@
    (pin PS3 (rotate 0) 26 2.54000 15.24000)
    (pin PS3 (rotate 0) 27 0.00000 15.24000)
   )
-  (image DIL28_8E6 (side front)
+  (image DIL28_8E6R (side front)
    (outline (rect TOP -1.37160 -0.63500 34.39160 15.87500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -846,7 +863,7 @@
    (pin PS3 (rotate 0) 26 2.54000 15.24000)
    (pin PS3 (rotate 0) 27 0.00000 15.24000)
   )
-  (image DIL28_8H6 (side front)
+  (image DIL28_8H6R (side front)
    (outline (rect TOP -1.37160 -0.63500 34.39160 15.87500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -877,7 +894,7 @@
    (pin PS3 (rotate 0) 26 2.54000 15.24000)
    (pin PS3 (rotate 0) 27 0.00000 15.24000)
   )
-  (image DIL28_8K6 (side front)
+  (image DIL28_8K6R (side front)
    (outline (rect TOP -1.37160 -0.63500 34.39160 15.87500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -1098,6 +1115,75 @@
    (pin PS3 (rotate 0) 19 0.00000 7.62000)
   )
   (image DIL20_U27 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 20.32000 0.00000)
+   (pin PS3 (rotate 0) 9 22.86000 0.00000)
+   (pin PS3 (rotate 0) 10 22.86000 7.62000)
+   (pin PS3 (rotate 0) 11 20.32000 7.62000)
+   (pin PS3 (rotate 0) 12 17.78000 7.62000)
+   (pin PS3 (rotate 0) 13 15.24000 7.62000)
+   (pin PS3 (rotate 0) 14 12.70000 7.62000)
+   (pin PS3 (rotate 0) 15 10.16000 7.62000)
+   (pin PS3 (rotate 0) 16 7.62000 7.62000)
+   (pin PS3 (rotate 0) 17 5.08000 7.62000)
+   (pin PS3 (rotate 0) 18 2.54000 7.62000)
+   (pin PS3 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U28 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 20.32000 0.00000)
+   (pin PS3 (rotate 0) 9 22.86000 0.00000)
+   (pin PS3 (rotate 0) 10 22.86000 7.62000)
+   (pin PS3 (rotate 0) 11 20.32000 7.62000)
+   (pin PS3 (rotate 0) 12 17.78000 7.62000)
+   (pin PS3 (rotate 0) 13 15.24000 7.62000)
+   (pin PS3 (rotate 0) 14 12.70000 7.62000)
+   (pin PS3 (rotate 0) 15 10.16000 7.62000)
+   (pin PS3 (rotate 0) 16 7.62000 7.62000)
+   (pin PS3 (rotate 0) 17 5.08000 7.62000)
+   (pin PS3 (rotate 0) 18 2.54000 7.62000)
+   (pin PS3 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U35 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 20.32000 0.00000)
+   (pin PS3 (rotate 0) 9 22.86000 0.00000)
+   (pin PS3 (rotate 0) 10 22.86000 7.62000)
+   (pin PS3 (rotate 0) 11 20.32000 7.62000)
+   (pin PS3 (rotate 0) 12 17.78000 7.62000)
+   (pin PS3 (rotate 0) 13 15.24000 7.62000)
+   (pin PS3 (rotate 0) 14 12.70000 7.62000)
+   (pin PS3 (rotate 0) 15 10.16000 7.62000)
+   (pin PS3 (rotate 0) 16 7.62000 7.62000)
+   (pin PS3 (rotate 0) 17 5.08000 7.62000)
+   (pin PS3 (rotate 0) 18 2.54000 7.62000)
+   (pin PS3 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U40 (side front)
    (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -1476,6 +1562,23 @@
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
   (image DIL14_U17 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U34 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -2467,23 +2570,6 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL14_6P6 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL16_6H6 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -3196,23 +3282,6 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL14_U13 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL16_U2 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -3384,23 +3453,6 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL14_U10 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL16_U23 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -3477,6 +3529,116 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
+  (image DIL14_U14 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL16_U29 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U30 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U31 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U32 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL14_6P6 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
   (image DIL14_U9 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -3494,7 +3656,193 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_U14 (side front)
+  (image DIL14_U10 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL16_U36 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U37 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U38 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U39 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U41 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U42 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U43 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U44 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL14_U13 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U33 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -3529,23 +3877,6 @@
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
   (image DIL14_1T (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
-  (image DIL14_2T (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -3614,6 +3945,23 @@
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
   (image DIL14_5T (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_2T (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -4076,7 +4424,7 @@
  (network
   (net "#00021"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4085,7 +4433,7 @@
   )
   (net "#00034"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4094,7 +4442,7 @@
   )
   (net "#00056"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4103,7 +4451,7 @@
   )
   (net "#00143"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4112,7 +4460,7 @@
   )
   (net "#00144"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4121,7 +4469,7 @@
   )
   (net "#00150"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4130,7 +4478,7 @@
   )
   (net "#00370"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4139,7 +4487,7 @@
   )
   (net "#00382"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4148,7 +4496,7 @@
   )
   (net "#00393"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4157,7 +4505,7 @@
   )
   (net "#00394"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4166,7 +4514,7 @@
   )
   (net "#00400"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4175,7 +4523,7 @@
   )
   (net "#00401"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4184,7 +4532,7 @@
   )
   (net "#00417"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4193,7 +4541,7 @@
   )
   (net "#00430"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4202,7 +4550,7 @@
   )
   (net "#00431"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4211,7 +4559,7 @@
   )
   (net "#00441"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4220,7 +4568,7 @@
   )
   (net "#00450"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4229,7 +4577,7 @@
   )
   (net "#00476"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4238,7 +4586,7 @@
   )
   (net "#00533"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4247,7 +4595,7 @@
   )
   (net "#00557"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4256,7 +4604,7 @@
   )
   (net "#00560"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4265,7 +4613,7 @@
   )
   (net "#00565"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4274,7 +4622,7 @@
   )
   (net "#00580"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4283,7 +4631,7 @@
   )
   (net "#00581"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4292,7 +4640,7 @@
   )
   (net "#00603"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4301,7 +4649,7 @@
   )
   (net "#00620"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4310,7 +4658,7 @@
   )
   (net "#00621"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4319,7 +4667,7 @@
   )
   (net "#00622"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4328,7 +4676,7 @@
   )
   (net "#00623"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4337,7 +4685,7 @@
   )
   (net "#00624"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4346,7 +4694,7 @@
   )
   (net "#00636"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4355,7 +4703,7 @@
   )
   (net "#00638"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4364,7 +4712,7 @@
   )
   (net "#00651"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4373,7 +4721,7 @@
   )
   (net "#00652"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4382,7 +4730,7 @@
   )
   (net "#00653"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4391,7 +4739,7 @@
   )
   (net "#00654"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4400,7 +4748,7 @@
   )
   (net "#00663"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4409,7 +4757,7 @@
   )
   (net "#00694"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4418,7 +4766,7 @@
   )
   (net "#00713"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4427,7 +4775,7 @@
   )
   (net "#00714"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4436,7 +4784,7 @@
   )
   (net "#00726"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4445,7 +4793,7 @@
   )
   (net "#00727"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4454,7 +4802,7 @@
   )
   (net "#00728"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4463,7 +4811,7 @@
   )
   (net "#00729"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4472,7 +4820,7 @@
   )
   (net "#00731"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4481,7 +4829,7 @@
   )
   (net "#00750"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4490,7 +4838,7 @@
   )
   (net "#00753"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4499,7 +4847,7 @@
   )
   (net "#00756"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4508,7 +4856,7 @@
   )
   (net "#00759"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4517,7 +4865,7 @@
   )
   (net "#00769"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4526,7 +4874,7 @@
   )
   (net "#00771"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4535,7 +4883,7 @@
   )
   (net "#00773"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4544,7 +4892,7 @@
   )
   (net "#00781"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4553,7 +4901,7 @@
   )
   (net "#00785"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4562,7 +4910,7 @@
   )
   (net "#00788"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4571,7 +4919,7 @@
   )
   (net "#00791"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4580,7 +4928,7 @@
   )
   (net "#00793"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4589,7 +4937,7 @@
   )
   (net "#00795"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4598,7 +4946,7 @@
   )
   (net "#00797"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4607,7 +4955,7 @@
   )
   (net "#00799"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4616,7 +4964,7 @@
   )
   (net "#00801"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4625,7 +4973,7 @@
   )
   (net "#00803"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4634,7 +4982,7 @@
   )
   (net "#00805"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4643,7 +4991,7 @@
   )
   (net "#00887"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4652,7 +5000,7 @@
   )
   (net "#00889"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4661,7 +5009,7 @@
   )
   (net "#00890"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4670,7 +5018,7 @@
   )
   (net "#00891"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4679,7 +5027,7 @@
   )
   (net "#00892"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4688,7 +5036,7 @@
   )
   (net "#00900"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4697,7 +5045,7 @@
   )
   (net "#00901"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4706,7 +5054,7 @@
   )
   (net "#00902"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4715,7 +5063,7 @@
   )
   (net "#00903"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4724,7 +5072,7 @@
   )
   (net "#00908"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4733,7 +5081,7 @@
   )
   (net "#00909"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4742,7 +5090,7 @@
   )
   (net "#00910"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4751,7 +5099,7 @@
   )
   (net "#00911"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4760,7 +5108,7 @@
   )
   (net "#00912"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4769,7 +5117,7 @@
   )
   (net "#00913"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4778,7 +5126,7 @@
   )
   (net "#00915"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4787,7 +5135,7 @@
   )
   (net "#00928"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4796,7 +5144,7 @@
   )
   (net "#00929"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4805,7 +5153,7 @@
   )
   (net "#00932"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4814,7 +5162,7 @@
   )
   (net "#00933"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4823,7 +5171,7 @@
   )
   (net "#00934"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4832,7 +5180,7 @@
   )
   (net "#00935"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4841,7 +5189,7 @@
   )
   (net "#00940"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4850,7 +5198,7 @@
   )
   (net "#01034"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4859,7 +5207,7 @@
   )
   (net "#01035"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4868,7 +5216,7 @@
   )
   (net "#01036"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4877,7 +5225,7 @@
   )
   (net "#01037"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4886,7 +5234,7 @@
   )
   (net "#01038"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4895,7 +5243,7 @@
   )
   (net "#01039"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4904,7 +5252,7 @@
   )
   (net "#01040"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4913,7 +5261,7 @@
   )
   (net "#01041"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4922,7 +5270,7 @@
   )
   (net "#01070"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4931,7 +5279,7 @@
   )
   (net "#01071"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4940,7 +5288,7 @@
   )
   (net "#01072"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4949,7 +5297,7 @@
   )
   (net "#01073"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4958,7 +5306,7 @@
   )
   (net "#01074"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4967,7 +5315,7 @@
   )
   (net "#01075"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4976,7 +5324,7 @@
   )
   (net "#01076"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4985,7 +5333,7 @@
   )
   (net "#01077"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -4994,7 +5342,7 @@
   )
   (net "#01106"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5003,7 +5351,7 @@
   )
   (net "#01107"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5012,7 +5360,7 @@
   )
   (net "#01108"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5021,7 +5369,7 @@
   )
   (net "#01109"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5030,7 +5378,7 @@
   )
   (net "#01110"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5039,7 +5387,7 @@
   )
   (net "#01111"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5048,7 +5396,7 @@
   )
   (net "#01112"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5057,7 +5405,7 @@
   )
   (net "#01113"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5066,7 +5414,7 @@
   )
   (net "#01127"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5075,7 +5423,7 @@
   )
   (net "#01132"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5084,7 +5432,7 @@
   )
   (net "#01148"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5093,7 +5441,7 @@
   )
   (net "#01151"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5102,7 +5450,7 @@
   )
   (net "#01160"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5111,7 +5459,7 @@
   )
   (net "#01163"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5120,7 +5468,7 @@
   )
   (net "#01172"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5129,7 +5477,7 @@
   )
   (net "#01175"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5138,7 +5486,7 @@
   )
   (net "#01203"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5147,7 +5495,7 @@
   )
   (net "#01259"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5156,7 +5504,7 @@
   )
   (net "#01261"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5165,7 +5513,7 @@
   )
   (net "#01263"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5174,7 +5522,7 @@
   )
   (net "#01265"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5183,7 +5531,7 @@
   )
   (net "#01267"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5192,7 +5540,7 @@
   )
   (net "#01268"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5201,7 +5549,7 @@
   )
   (net "#01273"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5210,7 +5558,7 @@
   )
   (net "#01275"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5219,7 +5567,7 @@
   )
   (net "#01277"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5228,7 +5576,7 @@
   )
   (net "#01279"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5237,7 +5585,7 @@
   )
   (net "#01289"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5246,7 +5594,7 @@
   )
   (net "#01292"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5255,7 +5603,7 @@
   )
   (net "#01295"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5264,7 +5612,7 @@
   )
   (net "#01298"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5273,7 +5621,7 @@
   )
   (net "#01301"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5282,7 +5630,7 @@
   )
   (net "#01304"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5291,7 +5639,7 @@
   )
   (net "#01307"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5300,7 +5648,7 @@
   )
   (net "#01310"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5309,7 +5657,7 @@
   )
   (net "#01313"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5318,7 +5666,7 @@
   )
   (net "#01318"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5327,7 +5675,7 @@
   )
   (net "#01377"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5336,7 +5684,7 @@
   )
   (net "#01421"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5345,7 +5693,7 @@
   )
   (net "#01423"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5354,7 +5702,7 @@
   )
   (net "#01425"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5363,7 +5711,7 @@
   )
   (net "#01427"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5372,7 +5720,7 @@
   )
   (net "#01429"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5381,7 +5729,7 @@
   )
   (net "#01430"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5390,7 +5738,7 @@
   )
   (net "#01445"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5399,7 +5747,7 @@
   )
   (net "#01448"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5408,7 +5756,7 @@
   )
   (net "#01451"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5417,7 +5765,7 @@
   )
   (net "#01454"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5426,7 +5774,7 @@
   )
   (net "#01457"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5435,7 +5783,7 @@
   )
   (net "#01460"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5444,7 +5792,7 @@
   )
   (net "#01461"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5453,7 +5801,7 @@
   )
   (net "#01464"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5462,7 +5810,7 @@
   )
   (net "#01465"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5471,7 +5819,7 @@
   )
   (net "#01468"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5480,7 +5828,7 @@
   )
   (net "#01469"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5489,7 +5837,7 @@
   )
   (net "#01472"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5498,7 +5846,7 @@
   )
   (net "#01473"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5507,7 +5855,7 @@
   )
   (net "#01478"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5516,7 +5864,7 @@
   )
   (net "#01586"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5525,7 +5873,7 @@
   )
   (net "#01590"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5534,7 +5882,7 @@
   )
   (net "#01599"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5543,7 +5891,7 @@
   )
   (net "#01600"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5552,7 +5900,7 @@
   )
   (net "#01601"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5561,7 +5909,7 @@
   )
   (net "#01602"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5570,7 +5918,7 @@
   )
   (net "#01606"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5579,7 +5927,7 @@
   )
   (net "#01607"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5588,7 +5936,7 @@
   )
   (net "#01608"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5597,7 +5945,7 @@
   )
   (net "#01609"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5606,7 +5954,7 @@
   )
   (net "#01616"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5615,7 +5963,7 @@
   )
   (net "#01617"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5624,7 +5972,7 @@
   )
   (net "#01618"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5633,7 +5981,7 @@
   )
   (net "#01619"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5642,7 +5990,7 @@
   )
   (net "#01623"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5651,7 +5999,7 @@
   )
   (net "#01634"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5660,7 +6008,7 @@
   )
   (net "#01688"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5669,7 +6017,7 @@
   )
   (net "#01732"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5678,7 +6026,7 @@
   )
   (net "#01748"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5687,7 +6035,7 @@
   )
   (net "#01749"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5696,7 +6044,7 @@
   )
   (net "#01750"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5705,7 +6053,7 @@
   )
   (net "#01751"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5714,7 +6062,7 @@
   )
   (net "#01752"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5723,88 +6071,16 @@
   )
   (net "#01753"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4L6-18 4M6-13)
   )
-  (net "#01785"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-10 7K6-5)
-  )
-  (net "#01786"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-11 7K6-4)
-  )
-  (net "#01787"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-12 7K6-3)
-  )
-  (net "#01788"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-14 7K6-2)
-  )
-  (net "#01789"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-15 7J6-5)
-  )
-  (net "#01790"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-16 7J6-4)
-  )
-  (net "#01791"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-17 7J6-3)
-  )
-  (net "#01792"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8K6-18 7J6-2)
-  )
   (net "#01805"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5813,88 +6089,16 @@
   )
   (net "#01808"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7J6-11 7K6-1)
   )
-  (net "#01834"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-10 7H6-5)
-  )
-  (net "#01835"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-11 7H6-4)
-  )
-  (net "#01836"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-12 7H6-3)
-  )
-  (net "#01837"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-14 7H6-2)
-  )
-  (net "#01838"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-15 7F6-5)
-  )
-  (net "#01839"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-16 7F6-4)
-  )
-  (net "#01840"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-17 7F6-3)
-  )
-  (net "#01841"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8H6-18 7F6-2)
-  )
   (net "#01854"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5903,88 +6107,16 @@
   )
   (net "#01857"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7F6-11 7H6-1)
   )
-  (net "#01883"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-10 7E6-5)
-  )
-  (net "#01884"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-11 7E6-4)
-  )
-  (net "#01885"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-12 7E6-3)
-  )
-  (net "#01886"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-14 7E6-2)
-  )
-  (net "#01887"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-15 7D6-5)
-  )
-  (net "#01888"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-16 7D6-4)
-  )
-  (net "#01889"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-17 7D6-3)
-  )
-  (net "#01890"
-   (circuit
-    (use_layer TOP I1 I2 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 8E6-18 7D6-2)
-  )
   (net "#01903"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -5993,7 +6125,7 @@
   )
   (net "#01906"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6002,7 +6134,7 @@
   )
   (net "#01921"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6011,943 +6143,1375 @@
   )
   (net "#01925"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 6F6-0 6P6-5 6N6-9)
   )
-  (net "#01985"
+  (net "#01968"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U29-0 U30-0 U31-0 U32-0 U9-10 U10-9)
+  )
+  (net "#01975"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-26 U28-0 U17-2 U10-7)
+  )
+  (net "#01978"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-21 U17-3)
+  )
+  (net "#02000"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-9 U29-3)
+  )
+  (net "#02001"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-8 U29-6)
+  )
+  (net "#02002"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-7 U29-8)
+  )
+  (net "#02003"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-6 U29-11)
+  )
+  (net "#02004"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-5 U30-3)
+  )
+  (net "#02005"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-4 U30-6)
+  )
+  (net "#02006"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-3 U30-8)
+  )
+  (net "#02007"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-2 U30-11)
+  )
+  (net "#02008"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-24 U31-3)
+  )
+  (net "#02009"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-23 U31-6)
+  )
+  (net "#02010"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-20 U31-8)
+  )
+  (net "#02011"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-22 U31-11)
+  )
+  (net "#02012"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-1 U32-3)
+  )
+  (net "#02018"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U36-0 U37-0 U38-0 U39-0 U13-5 U33-1)
+  )
+  (net "#02025"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-26 U35-0 U34-0 U33-2)
+  )
+  (net "#02028"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-21 U34-1)
+  )
+  (net "#02050"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-9 U36-3)
+  )
+  (net "#02051"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-8 U36-6)
+  )
+  (net "#02052"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-7 U36-8)
+  )
+  (net "#02053"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-6 U36-11)
+  )
+  (net "#02054"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-5 U37-3)
+  )
+  (net "#02055"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-4 U37-6)
+  )
+  (net "#02056"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-3 U37-8)
+  )
+  (net "#02057"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-2 U37-11)
+  )
+  (net "#02058"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-24 U38-3)
+  )
+  (net "#02059"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-23 U38-6)
+  )
+  (net "#02060"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-20 U38-8)
+  )
+  (net "#02061"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-22 U38-11)
+  )
+  (net "#02062"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-1 U39-3)
+  )
+  (net "#02068"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U41-0 U42-0 U43-0 U44-0 U13-7 U33-4)
+  )
+  (net "#02075"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-26 U40-0 U34-2 U33-5)
+  )
+  (net "#02078"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-21 U34-3)
+  )
+  (net "#02100"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-9 U41-3)
+  )
+  (net "#02101"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-8 U41-6)
+  )
+  (net "#02102"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-7 U41-8)
+  )
+  (net "#02103"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-6 U41-11)
+  )
+  (net "#02104"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-5 U42-3)
+  )
+  (net "#02105"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-4 U42-6)
+  )
+  (net "#02106"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-3 U42-8)
+  )
+  (net "#02107"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-2 U42-11)
+  )
+  (net "#02108"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-24 U43-3)
+  )
+  (net "#02109"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-23 U43-6)
+  )
+  (net "#02110"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-20 U43-8)
+  )
+  (net "#02111"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-22 U43-11)
+  )
+  (net "#02112"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-1 U44-3)
+  )
+  (net "#02294"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7R7-6 7S7-14)
   )
-  (net "#01988"
+  (net "#02297"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7R7-11 7S7-1)
   )
-  (net "#02019"
+  (net "#02328"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7N7-6 7P7-14)
   )
-  (net "#02022"
+  (net "#02331"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7N7-11 7P7-1)
   )
-  (net "#02053"
+  (net "#02362"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7L7-6 7M7-14)
   )
-  (net "#02056"
+  (net "#02365"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7L7-11 7M7-1)
   )
-  (net "#02073"
+  (net "#02382"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5S7-14 5R7-1)
   )
-  (net "#02074"
+  (net "#02383"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5N7-0 5P7-0 5R7-2)
   )
-  (net "#02089"
+  (net "#02398"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5S7-8 5P7-7)
   )
-  (net "#02094"
+  (net "#02403"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5R7-10 6R7-1 6R7-4 6R7-9 6R7-12)
   )
-  (net "#02099"
+  (net "#02408"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5S7-13 5P7-10 5R7-3)
   )
-  (net "#02198"
+  (net "#02507"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4S7-14 5R7-8)
   )
-  (net "#02204"
+  (net "#02513"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4S7-8 5P7-5)
   )
-  (net "#02242"
+  (net "#02551"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-9 U4-3)
   )
-  (net "#02243"
+  (net "#02552"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-8 U4-6)
   )
-  (net "#02244"
+  (net "#02553"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-7 U4-8)
   )
-  (net "#02245"
+  (net "#02554"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-6 U4-11)
   )
-  (net "#02246"
+  (net "#02555"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U4-0 U6-0 U7-0 U8-0 U10-1 U9-2)
+   (pins U4-0 U6-0 U7-0 U8-0 U9-2 U10-1)
   )
-  (net "#02258"
+  (net "#02567"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-5 U6-3)
   )
-  (net "#02259"
+  (net "#02568"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-4 U6-6)
   )
-  (net "#02260"
+  (net "#02569"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-3 U6-8)
   )
-  (net "#02261"
+  (net "#02570"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-2 U6-11)
   )
-  (net "#02273"
+  (net "#02582"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-24 U7-3)
   )
-  (net "#02274"
+  (net "#02583"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-23 U7-6)
   )
-  (net "#02275"
+  (net "#02584"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-20 U7-8)
   )
-  (net "#02276"
+  (net "#02585"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-22 U7-11)
   )
-  (net "#02288"
+  (net "#02597"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-1 U8-3)
   )
-  (net "#02300"
+  (net "#02609"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-26 U11-0 U5-12 U10-2)
   )
-  (net "#02303"
+  (net "#02612"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 4P7R-21 U5-11)
   )
-  (net "#02359"
+  (net "#02668"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U1-0 U3-0 U12-0 U13-2 U2-0 U14-1)
+   (pins U1-0 U3-0 U12-0 U2-0 U14-1 U13-2)
   )
-  (net "#02366"
+  (net "#02675"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-26 U16-0 U15-0 U14-2)
   )
-  (net "#02369"
+  (net "#02678"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-21 U15-1)
   )
-  (net "#02391"
+  (net "#02700"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-9 U1-3)
   )
-  (net "#02392"
+  (net "#02701"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-8 U1-6)
   )
-  (net "#02393"
+  (net "#02702"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-7 U1-8)
   )
-  (net "#02394"
+  (net "#02703"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-6 U1-11)
   )
-  (net "#02395"
+  (net "#02704"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-5 U2-3)
   )
-  (net "#02396"
+  (net "#02705"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-4 U2-6)
   )
-  (net "#02397"
+  (net "#02706"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-3 U2-8)
   )
-  (net "#02398"
+  (net "#02707"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-2 U2-11)
   )
-  (net "#02399"
+  (net "#02708"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-24 U3-3)
   )
-  (net "#02400"
+  (net "#02709"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-23 U3-6)
   )
-  (net "#02401"
+  (net "#02710"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-20 U3-8)
   )
-  (net "#02402"
+  (net "#02711"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-22 U3-11)
   )
-  (net "#02403"
+  (net "#02712"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8R7R-1 U12-3)
   )
-  (net "#02462"
+  (net "#02771"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U19-0 U20-0 U21-0 U22-0 U10-4 U9-5)
+   (pins U19-0 U20-0 U21-0 U22-0 U9-5 U10-4)
   )
-  (net "#02469"
+  (net "#02778"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-26 U18-0 U17-0 U10-5)
   )
-  (net "#02472"
+  (net "#02781"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-21 U17-1)
   )
-  (net "#02494"
+  (net "#02803"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-9 U19-3)
   )
-  (net "#02495"
+  (net "#02804"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-8 U19-6)
   )
-  (net "#02496"
+  (net "#02805"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-7 U19-8)
   )
-  (net "#02497"
+  (net "#02806"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-6 U19-11)
   )
-  (net "#02498"
+  (net "#02807"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-5 U20-3)
   )
-  (net "#02499"
+  (net "#02808"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-4 U20-6)
   )
-  (net "#02500"
+  (net "#02809"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-3 U20-8)
   )
-  (net "#02501"
+  (net "#02810"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-2 U20-11)
   )
-  (net "#02502"
+  (net "#02811"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-24 U21-3)
   )
-  (net "#02503"
+  (net "#02812"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-23 U21-6)
   )
-  (net "#02504"
+  (net "#02813"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-20 U21-8)
   )
-  (net "#02505"
+  (net "#02814"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-22 U21-11)
   )
-  (net "#02506"
+  (net "#02815"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8N7R-1 U22-3)
   )
-  (net "#02565"
+  (net "#02874"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U23-0 U24-0 U25-0 U26-0 U9-7 U14-4)
+   (pins U23-0 U24-0 U25-0 U26-0 U14-4 U9-7)
   )
-  (net "#02572"
+  (net "#02881"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-26 U27-0 U15-2 U14-5)
   )
-  (net "#02575"
+  (net "#02884"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-21 U15-3)
   )
-  (net "#02597"
+  (net "#02906"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-9 U23-3)
   )
-  (net "#02598"
+  (net "#02907"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-8 U23-6)
   )
-  (net "#02599"
+  (net "#02908"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-7 U23-8)
   )
-  (net "#02600"
+  (net "#02909"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-6 U23-11)
   )
-  (net "#02601"
+  (net "#02910"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-5 U24-3)
   )
-  (net "#02602"
+  (net "#02911"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-4 U24-6)
   )
-  (net "#02603"
+  (net "#02912"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-3 U24-8)
   )
-  (net "#02604"
+  (net "#02913"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-2 U24-11)
   )
-  (net "#02605"
+  (net "#02914"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-24 U25-3)
   )
-  (net "#02606"
+  (net "#02915"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-23 U25-6)
   )
-  (net "#02607"
+  (net "#02916"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-20 U25-8)
   )
-  (net "#02608"
+  (net "#02917"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-22 U25-11)
   )
-  (net "#02609"
+  (net "#02918"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 8L7R-1 U26-3)
   )
-  (net "#02662"
+  (net "#02971"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RR2-0 7A2-1)
   )
-  (net "#02663"
+  (net "#02972"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RR1-0 7A2-4)
   )
-  (net "#02664"
+  (net "#02973"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RG3-0 7A2-6)
   )
-  (net "#02665"
+  (net "#02974"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RG4-0 7A2-9)
   )
-  (net "#02666"
+  (net "#02975"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RR3-0 7A2-11)
   )
-  (net "#02667"
+  (net "#02976"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RR4-0 7A2-14)
   )
-  (net "#02670"
+  (net "#02979"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RB3-0 8B2-1)
   )
-  (net "#02671"
+  (net "#02980"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RB2-0 8B2-4)
   )
-  (net "#02672"
+  (net "#02981"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RB1-0 8B2-6)
   )
-  (net "#02673"
+  (net "#02982"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RG2-0 8B2-9)
   )
-  (net "#02674"
+  (net "#02983"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins RG1-0 8B2-11)
   )
-  (net "#02704"
+  (net "#03013"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-0 8S-5)
   )
-  (net "#02705"
+  (net "#03014"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-1 8S-3)
   )
-  (net "#02706"
+  (net "#03015"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-4 6F2-2)
   )
-  (net "#02707"
+  (net "#03016"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-5 6F2-5)
   )
-  (net "#02708"
+  (net "#03017"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-8 6F2-12)
   )
-  (net "#02709"
+  (net "#03018"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-11 6D2-12)
   )
-  (net "#02710"
+  (net "#03019"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-14 6D2-2)
   )
-  (net "#02711"
+  (net "#03020"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-15 6D2-5)
   )
-  (net "#02712"
+  (net "#03021"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5E2-18 6F2-9)
   )
-  (net "#02753"
+  (net "#03062"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7B2-18 8C2-10)
   )
-  (net "#02835"
+  (net "#03144"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 7C2-18 8C2-7)
   )
-  (net "#02898"
+  (net "#03207"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 3M8-1 5M8-5)
   )
-  (net "#02899"
+  (net "#03208"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 3M8-2 5M8-11)
   )
-  (net "#02900"
+  (net "#03209"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 3M8-3 5M8-7)
   )
-  (net "#02902"
+  (net "#03211"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 3M8-8 5F8-13 5H8-13 5J8-13 5K8-13)
   )
-  (net "#02903"
+  (net "#03212"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6956,7 +7520,7 @@
   )
   (net ".6MHZ"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6965,7 +7529,7 @@
   )
   (net "128H'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6974,7 +7538,7 @@
   )
   (net "128V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6983,7 +7547,7 @@
   )
   (net "16H'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -6992,7 +7556,7 @@
   )
   (net "16HSPR"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7001,7 +7565,7 @@
   )
   (net "16MH"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7010,7 +7574,7 @@
   )
   (net "16MV"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7019,7 +7583,7 @@
   )
   (net "16V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7028,7 +7592,7 @@
   )
   (net "1V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7037,7 +7601,7 @@
   )
   (net "1V*."
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7046,7 +7610,7 @@
   )
   (net "256H*."
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7055,7 +7619,7 @@
   )
   (net "2V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7064,7 +7628,7 @@
   )
   (net "32H'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7073,7 +7637,7 @@
   )
   (net "32V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7082,7 +7646,7 @@
   )
   (net "4V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7091,7 +7655,7 @@
   )
   (net "5H4I"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7100,7 +7664,7 @@
   )
   (net "5H4O"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7109,7 +7673,7 @@
   )
   (net "5JD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7118,7 +7682,7 @@
   )
   (net "5KD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7127,7 +7691,7 @@
   )
   (net "5LD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7136,7 +7700,7 @@
   )
   (net "64H'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7145,7 +7709,7 @@
   )
   (net "64V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7154,7 +7718,7 @@
   )
   (net "6JA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7163,7 +7727,7 @@
   )
   (net "6KA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7172,7 +7736,7 @@
   )
   (net "6LA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7181,7 +7745,7 @@
   )
   (net "6MHZ"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7192,7 +7756,7 @@
   )
   (net "7DA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7201,7 +7765,7 @@
   )
   (net "7ED"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7210,7 +7774,7 @@
   )
   (net "7FA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7219,7 +7783,7 @@
   )
   (net "7HD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7228,7 +7792,7 @@
   )
   (net "7JA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7237,7 +7801,7 @@
   )
   (net "7KD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7246,7 +7810,7 @@
   )
   (net "7LA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7255,7 +7819,7 @@
   )
   (net "7MD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7264,7 +7828,7 @@
   )
   (net "7NA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7273,7 +7837,7 @@
   )
   (net "7PD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7282,7 +7846,7 @@
   )
   (net "7RA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7291,25 +7855,241 @@
   )
   (net "7SD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 5N7-5 7S7-11)
   )
+  (net "8E6D0"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-10 U40-1 7E6-5)
+  )
+  (net "8E6D1"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-11 U40-4 7E6-4)
+  )
+  (net "8E6D2"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-12 U40-5 7E6-3)
+  )
+  (net "8E6D3"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-14 U40-8 7E6-2)
+  )
+  (net "8E6D4"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-15 U40-11 7D6-5)
+  )
+  (net "8E6D5"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-16 U40-14 7D6-4)
+  )
+  (net "8E6D6"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-17 U40-15 7D6-3)
+  )
+  (net "8E6D7"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8E6R-18 U40-18 7D6-2)
+  )
   (net "8H'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
    (pins 6K6-5 5T-10 5R7-4)
   )
+  (net "8H6D0"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-10 U35-1 7H6-5)
+  )
+  (net "8H6D1"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-11 U35-4 7H6-4)
+  )
+  (net "8H6D2"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-12 U35-5 7H6-3)
+  )
+  (net "8H6D3"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-14 U35-8 7H6-2)
+  )
+  (net "8H6D4"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-15 U35-11 7F6-5)
+  )
+  (net "8H6D5"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-16 U35-14 7F6-4)
+  )
+  (net "8H6D6"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-17 U35-15 7F6-3)
+  )
+  (net "8H6D7"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8H6R-18 U35-18 7F6-2)
+  )
+  (net "8K6D0"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-10 U28-1 7K6-5)
+  )
+  (net "8K6D1"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-11 U28-4 7K6-4)
+  )
+  (net "8K6D2"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-12 U28-5 7K6-3)
+  )
+  (net "8K6D3"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-14 U28-8 7K6-2)
+  )
+  (net "8K6D4"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-15 U28-11 7J6-5)
+  )
+  (net "8K6D5"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-16 U28-14 7J6-4)
+  )
+  (net "8K6D6"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-17 U28-15 7J6-3)
+  )
+  (net "8K6D7"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8K6R-18 U28-18 7J6-2)
+  )
   (net "8L7D0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7318,7 +8098,7 @@
   )
   (net "8L7D1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7327,7 +8107,7 @@
   )
   (net "8L7D2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7336,7 +8116,7 @@
   )
   (net "8L7D3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7345,7 +8125,7 @@
   )
   (net "8L7D4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7354,7 +8134,7 @@
   )
   (net "8L7D5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7363,7 +8143,7 @@
   )
   (net "8L7D6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7372,7 +8152,7 @@
   )
   (net "8L7D7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7381,7 +8161,7 @@
   )
   (net "8N7D0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7390,7 +8170,7 @@
   )
   (net "8N7D1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7399,7 +8179,7 @@
   )
   (net "8N7D2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7408,7 +8188,7 @@
   )
   (net "8N7D3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7417,7 +8197,7 @@
   )
   (net "8N7D4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7426,7 +8206,7 @@
   )
   (net "8N7D5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7435,7 +8215,7 @@
   )
   (net "8N7D6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7444,7 +8224,7 @@
   )
   (net "8N7D7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7453,7 +8233,7 @@
   )
   (net "8R7D0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7462,7 +8242,7 @@
   )
   (net "8R7D1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7471,7 +8251,7 @@
   )
   (net "8R7D2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7480,7 +8260,7 @@
   )
   (net "8R7D3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7489,7 +8269,7 @@
   )
   (net "8R7D4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7498,7 +8278,7 @@
   )
   (net "8R7D5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7507,7 +8287,7 @@
   )
   (net "8R7D6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7516,7 +8296,7 @@
   )
   (net "8R7D7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7525,7 +8305,7 @@
   )
   (net "8V'"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7534,7 +8314,7 @@
   )
   (net "B OUT"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7543,7 +8323,7 @@
   )
   (net "BBCL0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7552,7 +8332,7 @@
   )
   (net "BC0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7561,7 +8341,7 @@
   )
   (net "BC1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7570,7 +8350,7 @@
   )
   (net "BC2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7579,7 +8359,7 @@
   )
   (net "BC3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7588,7 +8368,7 @@
   )
   (net "BIA0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7597,7 +8377,7 @@
   )
   (net "BIA1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7606,7 +8386,7 @@
   )
   (net "BIA2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7615,7 +8395,7 @@
   )
   (net "BIA3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7624,7 +8404,7 @@
   )
   (net "BIA4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7633,7 +8413,7 @@
   )
   (net "BIA5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7642,7 +8422,7 @@
   )
   (net "BIA6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7651,7 +8431,7 @@
   )
   (net "BIA7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7660,7 +8440,7 @@
   )
   (net "BID0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7669,7 +8449,7 @@
   )
   (net "BID1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7678,7 +8458,7 @@
   )
   (net "BID2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7687,7 +8467,7 @@
   )
   (net "BID3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7696,7 +8476,7 @@
   )
   (net "BID4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7705,7 +8485,7 @@
   )
   (net "BID5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7714,7 +8494,7 @@
   )
   (net "BID6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7723,7 +8503,7 @@
   )
   (net "BID7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7732,7 +8512,7 @@
   )
   (net "BIS0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7741,7 +8521,7 @@
   )
   (net "BIS1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7750,7 +8530,7 @@
   )
   (net "BUSDDR"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7759,7 +8539,7 @@
   )
   (net "BV0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7768,7 +8548,7 @@
   )
   (net "BV1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7777,7 +8557,7 @@
   )
   (net "BV2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7786,7 +8566,7 @@
   )
   (net "C0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7795,7 +8575,7 @@
   )
   (net "C1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7804,7 +8584,7 @@
   )
   (net "C10"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7813,7 +8593,7 @@
   )
   (net "C11"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7822,7 +8602,7 @@
   )
   (net "C12"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7831,7 +8611,7 @@
   )
   (net "C2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7840,7 +8620,7 @@
   )
   (net "C3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7849,7 +8629,7 @@
   )
   (net "C4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7858,7 +8638,7 @@
   )
   (net "C5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7867,7 +8647,7 @@
   )
   (net "C6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7876,7 +8656,7 @@
   )
   (net "C7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7885,7 +8665,7 @@
   )
   (net "C8"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7894,7 +8674,7 @@
   )
   (net "C9"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -7903,97 +8683,97 @@
   )
   (net "CIA0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-6 8H6-6 8K6-6 5L6-11)
+   (pins 5L6-11 U29-12 U36-12 U41-12)
   )
   (net "CIA1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-5 8H6-5 8K6-5 5L6-14)
+   (pins 5L6-14 U30-2 U37-2 U42-2)
   )
   (net "CIA2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-4 8H6-4 8K6-4 5L6-15)
+   (pins 5L6-15 U30-5 U37-5 U42-5)
   )
   (net "CIA3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-3 8H6-3 8K6-3 5L6-18)
+   (pins 5L6-18 U30-9 U37-9 U42-9)
   )
   (net "CIA4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-2 8H6-2 8K6-2 5L6-8)
+   (pins 5L6-8 U30-12 U37-12 U42-12)
   )
   (net "CIA5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-24 8H6-24 8K6-24 5L6-5)
+   (pins 5L6-5 U31-2 U38-2 U43-2)
   )
   (net "CIA6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-23 8H6-23 8K6-23 5L6-4)
+   (pins 5L6-4 U31-5 U38-5 U43-5)
   )
   (net "CIA7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-20 8H6-20 8K6-20 5L6-1)
+   (pins 5L6-1 U31-9 U38-9 U43-9)
   )
   (net "CIA8"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-22 8H6-22 8K6-22 4L6-8)
+   (pins 4L6-8 U31-12 U38-12 U43-12)
   )
   (net "CIA9"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-1 8H6-1 8K6-1 4L6-5)
+   (pins 4L6-5 U32-2 U39-2 U44-2)
   )
   (net "CID0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8002,7 +8782,7 @@
   )
   (net "CID1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8011,7 +8791,7 @@
   )
   (net "CID2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8020,7 +8800,7 @@
   )
   (net "CID3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8029,7 +8809,7 @@
   )
   (net "CID4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8038,7 +8818,7 @@
   )
   (net "CID5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8047,7 +8827,7 @@
   )
   (net "CID6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8056,7 +8836,7 @@
   )
   (net "CID7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8065,7 +8845,7 @@
   )
   (net "CIS0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8074,7 +8854,7 @@
   )
   (net "CIS1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8083,7 +8863,7 @@
   )
   (net "CLK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8092,16 +8872,16 @@
   )
   (net "CMPBLK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-19 8E6-21 8H6-19 8H6-21 8K6-19 8K6-21 2T-9)
+   (pins 2T-9)
   )
   (net "CPUWANTBUS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8110,7 +8890,7 @@
   )
   (net "DISPLAYENABLE"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8119,151 +8899,156 @@
   )
   (net "EA0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-0 2E-10 6K6-4 7R-2 8D2-2 U1-1 U4-1 U19-1 U23-1)
+    (pins EXPANSIONBUS-0 2E-10 6K6-4 7R-2 8D2-2 U1-1 U4-1 U19-1 U23-1 U29-1 U36-1 U41-1
+   )
   )
   (net "EA1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-1 2E-4 6F2-1 6K6-10 U1-4 U4-4 U19-4 U23-4)
+   (pins EXPANSIONBUS-1 2E-4 6F2-1 6K6-10 U1-4 U4-4 U19-4 U23-4 U29-4 U36-4 U41-4)
   )
   (net "EA10"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-10 2S-12 6H6-13 U3-10 U7-10 U21-10 U25-10)
+    (pins EXPANSIONBUS-10 2S-12 6H6-13 U3-10 U7-10 U21-10 U25-10 U31-10 U38-10 U43-10
+   )
   )
   (net "EA11"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-11 4M-0 5M-0 U3-13 U7-13 U21-13 U25-13)
+   (pins EXPANSIONBUS-11 4M-0 5M-0 U3-13 U7-13 U21-13 U25-13 U31-13 U38-13 U43-13)
   )
   (net "EA12"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-12 4M-1 5M-1 U12-1 U8-1 U22-1 U26-1)
+   (pins EXPANSIONBUS-12 4M-1 5M-1 U12-1 U8-1 U22-1 U26-1 U32-1 U39-1 U44-1)
   )
   (net "EA13"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-13 3M-1 4M-2 5M-2 U9-0 U9-9)
+   (pins EXPANSIONBUS-13 3M-1 4M-2 5M-2 U9-0 U9-9 U13-9)
   )
   (net "EA14"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-14 3M-2 3M-13 U13-0)
+   (pins EXPANSIONBUS-14 3M-2 3M-13 U9-12 U13-0)
   )
   (net "EA15"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-15 3M-0 3M-12 U9-3)
+   (pins EXPANSIONBUS-15 3M-0 3M-12 U9-3 U13-3)
   )
   (net "EA2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-2 2E-1 6F2-4 6K6-13 U1-10 U4-10 U19-10 U23-10)
+    (pins EXPANSIONBUS-2 2E-1 6F2-4 6K6-13 U1-10 U4-10 U19-10 U23-10 U29-10 U36-10 U41-10
+   )
   )
   (net "EA3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-3 1D-13 6F2-13 6J6-1 U1-13 U4-13 U19-13 U23-13)
+    (pins EXPANSIONBUS-3 1D-13 6F2-13 6J6-1 U1-13 U4-13 U19-13 U23-13 U29-13 U36-13 U41-13
+   )
   )
   (net "EA4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-4 1D-10 6F2-10 6J6-4 U2-1 U6-1 U20-1 U24-1)
+   (pins EXPANSIONBUS-4 1D-10 6F2-10 6J6-4 U2-1 U6-1 U20-1 U24-1 U30-1 U37-1 U42-1)
   )
   (net "EA5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-5 1D-4 6D2-1 6J6-10 U2-4 U6-4 U20-4 U24-4)
+   (pins EXPANSIONBUS-5 1D-4 6D2-1 6J6-10 U2-4 U6-4 U20-4 U24-4 U30-4 U37-4 U42-4)
   )
   (net "EA6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-6 1D-1 6D2-4 6J6-13 U2-10 U6-10 U20-10 U24-10)
+    (pins EXPANSIONBUS-6 1D-1 6D2-4 6J6-13 U2-10 U6-10 U20-10 U24-10 U30-10 U37-10 U42-10
+   )
   )
   (net "EA7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-7 6D2-13 6H6-1 U2-13 U6-13 U20-13 U24-13)
+   (pins EXPANSIONBUS-7 6D2-13 6H6-1 U2-13 U6-13 U20-13 U24-13 U30-13 U37-13 U42-13)
   )
   (net "EA8"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-8 6D2-10 6H6-4 U3-1 U7-1 U21-1 U25-1)
+   (pins EXPANSIONBUS-8 6D2-10 6H6-4 U3-1 U7-1 U21-1 U25-1 U31-1 U38-1 U43-1)
   )
   (net "EA9"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-9 2S-13 6H6-10 U3-4 U7-4 U21-4 U25-4)
+   (pins EXPANSIONBUS-9 2S-13 6H6-10 U3-4 U7-4 U21-4 U25-4 U31-4 U38-4 U43-4)
   )
   (net "EBS0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8272,7 +9057,7 @@
   )
   (net "EBS1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8281,7 +9066,7 @@
   )
   (net "EBS2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8290,7 +9075,7 @@
   )
   (net "EBS3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8299,7 +9084,7 @@
   )
   (net "EBS4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8308,34 +9093,34 @@
   )
   (net "EBS5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-5)
+   (pins EXPANSIONBUS3-5 U13-8)
   )
   (net "EBS6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-6 U9-8)
+   (pins EXPANSIONBUS3-6 U9-8 U9-11 U13-4)
   )
   (net "EBS7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-7 U13-1 U9-1 U9-4)
+   (pins EXPANSIONBUS3-7 U9-1 U9-4 U13-1)
   )
   (net "ECPUHASBUS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8344,83 +9129,87 @@
   )
   (net "ED0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-    (pins EXPANSIONBUS-33 U11-2 U16-2 U18-2 U27-2 2F-10 3L6-1 7B2-17 7C2-17 4S7-3 6R-13
-    6S-13)
+    (pins EXPANSIONBUS-33 U11-2 U16-2 U18-2 U27-2 U28-2 U35-2 U40-2 2F-10 3L6-1 7B2-17
+    7C2-17 4S7-3 6R-13 6S-13)
   )
   (net "ED1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-    (pins EXPANSIONBUS-32 U11-3 U16-3 U18-3 U27-3 2F-11 3L6-2 7B2-16 7C2-16 4S7-5 6R-12
-    6S-12)
+    (pins EXPANSIONBUS-32 U11-3 U16-3 U18-3 U27-3 U28-3 U35-3 U40-3 2F-11 3L6-2 7B2-16
+    7C2-16 4S7-5 6R-12 6S-12)
   )
   (net "ED2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-    (pins EXPANSIONBUS-31 U11-6 U16-6 U18-6 U27-6 2F-12 3L6-3 7B2-15 7C2-15 4S7-12 6R-10
-    6S-10)
+    (pins EXPANSIONBUS-31 U11-6 U16-6 U18-6 U27-6 U28-6 U35-6 U40-6 2F-12 3L6-3 7B2-15
+    7C2-15 4S7-12 6R-10 6S-10)
   )
   (net "ED3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-    (pins EXPANSIONBUS-30 U11-7 U16-7 U18-7 U27-7 2F-13 3L6-4 7B2-14 7C2-14 4S7-10 6R-5
-    6S-5)
+    (pins EXPANSIONBUS-30 U11-7 U16-7 U18-7 U27-7 U28-7 U35-7 U40-7 2F-13 3L6-4 7B2-14
+    7C2-14 4S7-10 6R-5 6S-5)
   )
   (net "ED4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-29 U11-12 U16-12 U18-12 U27-12 2F-14 3L6-5 7B2-13 4S7-13)
+    (pins EXPANSIONBUS-29 U11-12 U16-12 U18-12 U27-12 U28-12 U35-12 U40-12 2F-14 3L6-5
+    7B2-13 4S7-13)
   )
   (net "ED5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-28 U11-13 U16-13 U18-13 U27-13 2F-15 3L6-6 7B2-12 4S7-2)
+    (pins EXPANSIONBUS-28 U11-13 U16-13 U18-13 U27-13 U28-13 U35-13 U40-13 2F-15 3L6-6
+    7B2-12 4S7-2)
   )
   (net "ED6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-27 U11-16 U16-16 U18-16 U27-16 2F-16 3L6-7 7B2-11)
+    (pins EXPANSIONBUS-27 U11-16 U16-16 U18-16 U27-16 U28-16 U35-16 U40-16 2F-16 3L6-7
+    7B2-11)
   )
   (net "ED7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-26 U11-17 U16-17 U18-17 U27-17 2F-17 3L6-8 7B2-10)
+    (pins EXPANSIONBUS-26 U11-17 U16-17 U18-17 U27-17 U28-17 U35-17 U40-17 2F-17 3L6-8
+    7B2-10)
   )
   (net "EMEMREAD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8429,7 +9218,7 @@
   )
   (net "EXTWANTBUS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8438,7 +9227,7 @@
   )
   (net "FLIP"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8447,7 +9236,7 @@
   )
   (net "FPX0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8456,7 +9245,7 @@
   )
   (net "FPX1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8465,7 +9254,7 @@
   )
   (net "FPX2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8474,7 +9263,7 @@
   )
   (net "FPX3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8483,7 +9272,7 @@
   )
   (net "FPX4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8492,7 +9281,7 @@
   )
   (net "FPX5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8501,7 +9290,7 @@
   )
   (net "G OUT"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8510,36 +9299,39 @@
   )
   (net "GND"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer I1 I3 I4)
     (use_via
      $VIA#0_POWER
     )
    )
     (pins EXPANSIONBUS-17 J1-4 RB5-1 RG5-1 RR5-1 7A2-7 8B2-7 4D-8 4D-14 4D-15 4C-8 4C-14
      4C-15 4A-8 4A-14 4A-15 4B-8 4B-14 4B-15 4T-7 VIDCLK-3 4P7R-13 4P7R-19 7J-13 7J-19
-     7J-21 7L-13 7L-19 7L-21 7M-13 7M-19 7M-21 8E6-13 8H6-13 8K6-13 8L7R-13 8L7R-19 8N7R-13
-     8N7R-19 8R7R-13 8R7R-19 6LM6-11 6LM6-17 U11-9 U16-9 U18-9 U27-9 2F-9 3L6-9 4L6-9
-     5E2-9 5H-9 5L6-9 6E-9 6F-9 6S7-9 7B2-9 7C2-9 2R6-6 4E-6 4F-6 6H-6 8S-6 U15-6 U17-6
-     3E-7 3E-8 3E-14 3E-15 3E-16 3F-7 3F-8 3F-14 3F-15 3F-16 6A2-4 6A2-7 6A2-8 6A2-14
-     6B2-4 6B2-7 6B2-8 6B2-14 6C2-4 6C2-7 6C2-8 6C2-14 1A-7 1A-14 2A-7 2D-7 1B-7 1B-14
-     2B-7 2C-7 1C-6 1D-7 1D-14 2E-7 2E-14 2S-7 6D2-7 6D2-9 6D2-14 6F2-7 6F2-14 3A-7 3B-7
-     3C-7 3D-7 3M-7 3M8-4 3M8-7 3N-5 3N-7 3P-2 3P-3 3P-7 3R-2 3R-3 3R-5 3R-7 U5-6 3S-2
-     3S-3 3S-4 3S-5 3S-7 4M-7 4M6-7 4S7-7 5E-6 5E-7 5F-7 5F8-0 5F8-7 5F8-14 5H8-0 5H8-7
-     5H8-14 5J-6 5J-7 5J8-0 5J8-7 5J8-14 5K-6 5K-7 5K8-0 5K8-7 5K8-14 5M8-6 5L-6 5L-7
-     5M-3 5M-7 5N7-7 5R-2 5R-3 5R-7 5S-2 5S-3 5S-7 5S7-7 6A-7 6B-7 6C-7 6D-7 6F6-7 6F6-14
-     6P6-6 6H6-7 6H6-14 6J-1 6J-7 6J6-7 6J6-14 6K-1 6K-7 6K6-7 6K6-14 6L-1 6L-7 6M-7 6M-14
-     6R-7 6S-7 6T-1 6T-5 6T-7 6T-14 7F-7 7F-14 7D6-1 7D6-7 7E6-6 7E6-7 7E-7 7F6-1 7F6-7
-     7H6-6 7H6-7 7H-7 7H-14 4H-6 7J6-1 7J6-7 7K6-6 7K6-7 7L7-1 7L7-7 7M7-6 7M7-7 7N-7
-     7B-6 7N7-1 7N7-7 7P7-6 7P7-7 7R-7 7R7-1 7R7-7 7S7-6 7S7-7 7S-3 7S-7 5P7-6 5P7-11
-     6N2-6 7T-6 8D2-7 8C2-6 U1-7 U1-14 U3-7 U3-14 U12-7 U12-14 U13-6 U2-7 U2-14 U4-7 U4-14
-     U6-7 U6-14 U7-7 U7-14 U8-7 U8-14 U19-7 U19-14 U20-7 U20-14 U21-7 U21-14 U22-7 U22-14
-     U10-6 U23-7 U23-14 U24-7 U24-14 U25-7 U25-14 U26-7 U26-14 U9-6 U14-6 1S-6 1T-6 2T-6
-     2N-6 2P-6 2R-6 5T-1 5T-6 3H-6 3T-6 4N-6 4P-6 4R-6 4S-6 5A-6 5B-6 5C-6 5D-6 7A-6 5P-1
-    5P-6 5R7-6 5R7-11 6R7-6 6N6-6 8C6-6 7C-6 7D-6 R17-1 R18-1)
+     7J-21 7L-13 7L-19 7L-21 7M-13 7M-19 7M-21 8E6R-13 8E6R-19 8H6R-13 8H6R-19 8K6R-13
+     8K6R-19 8L7R-13 8L7R-19 8N7R-13 8N7R-19 8R7R-13 8R7R-19 6LM6-11 6LM6-17 U11-9 U16-9
+     U18-9 U27-9 U28-9 U35-9 U40-9 2F-9 3L6-9 4L6-9 5E2-9 5H-9 5L6-9 6E-9 6F-9 6S7-9 7B2-9
+     7C2-9 2R6-6 4E-6 4F-6 6H-6 8S-6 U15-6 U17-6 U34-6 3E-7 3E-8 3E-14 3E-15 3E-16 3F-7
+     3F-8 3F-14 3F-15 3F-16 6A2-4 6A2-7 6A2-8 6A2-14 6B2-4 6B2-7 6B2-8 6B2-14 6C2-4 6C2-7
+     6C2-8 6C2-14 1A-7 1A-14 2A-7 2D-7 1B-7 1B-14 2B-7 2C-7 1C-6 1D-7 1D-14 2E-7 2E-14
+     2S-7 6D2-7 6D2-9 6D2-14 6F2-7 6F2-14 3A-7 3B-7 3C-7 3D-7 3M-7 3M8-4 3M8-7 3N-5 3N-7
+     3P-2 3P-3 3P-7 3R-2 3R-3 3R-5 3R-7 U5-6 3S-2 3S-3 3S-4 3S-5 3S-7 4M-7 4M6-7 4S7-7
+     5E-6 5E-7 5F-7 5F8-0 5F8-7 5F8-14 5H8-0 5H8-7 5H8-14 5J-6 5J-7 5J8-0 5J8-7 5J8-14
+     5K-6 5K-7 5K8-0 5K8-7 5K8-14 5M8-6 5L-6 5L-7 5M-3 5M-7 5N7-7 5R-2 5R-3 5R-7 5S-2
+     5S-3 5S-7 5S7-7 6A-7 6B-7 6C-7 6D-7 6F6-7 6F6-14 6H6-7 6H6-14 6J-1 6J-7 6J6-7 6J6-14
+     6K-1 6K-7 6K6-7 6K6-14 6L-1 6L-7 6M-7 6M-14 6R-7 6S-7 6T-1 6T-5 6T-7 6T-14 7F-7 7F-14
+     7D6-1 7D6-7 7E6-6 7E6-7 7E-7 7F6-1 7F6-7 7H6-6 7H6-7 7H-7 7H-14 4H-6 7J6-1 7J6-7
+     7K6-6 7K6-7 7L7-1 7L7-7 7M7-6 7M7-7 7N-7 7B-6 7N7-1 7N7-7 7P7-6 7P7-7 7R-7 7R7-1
+     7R7-7 7S7-6 7S7-7 7S-3 7S-7 5P7-6 5P7-11 6N2-6 7T-6 8D2-7 8C2-6 U1-7 U1-14 U3-7 U3-14
+     U12-7 U12-14 U2-7 U2-14 U4-7 U4-14 U6-7 U6-14 U7-7 U7-14 U8-7 U8-14 U19-7 U19-14
+     U20-7 U20-14 U21-7 U21-14 U22-7 U22-14 U23-7 U23-14 U24-7 U24-14 U25-7 U25-14 U26-7
+     U26-14 U14-6 U29-7 U29-14 U30-7 U30-14 U31-7 U31-14 U32-7 U32-14 6P6-6 U9-6 U10-6
+     U36-7 U36-14 U37-7 U37-14 U38-7 U38-14 U39-7 U39-14 U41-7 U41-14 U42-7 U42-14 U43-7
+     U43-14 U44-7 U44-14 U13-6 U33-6 1S-6 1T-6 2N-6 2P-6 2R-6 5T-1 5T-6 2T-6 3H-6 3T-6
+     4N-6 4P-6 4R-6 4S-6 5A-6 5B-6 5C-6 5D-6 7A-6 5P-1 5P-6 5R7-6 5R7-11 6R7-6 6N6-6 8C6-6
+    7C-6 7D-6 R17-1 R18-1)
   )
   (net "HBL"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8548,7 +9340,7 @@
   )
   (net "IAP10"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8557,7 +9349,7 @@
   )
   (net "IAP11"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8566,7 +9358,7 @@
   )
   (net "IAP12"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8575,7 +9367,7 @@
   )
   (net "IAP9"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8584,7 +9376,7 @@
   )
   (net "ID0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8593,7 +9385,7 @@
   )
   (net "ID1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8602,7 +9394,7 @@
   )
   (net "ID10"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8611,7 +9403,7 @@
   )
   (net "ID11"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8620,7 +9412,7 @@
   )
   (net "ID12"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8629,7 +9421,7 @@
   )
   (net "ID13"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8638,7 +9430,7 @@
   )
   (net "ID14"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8647,7 +9439,7 @@
   )
   (net "ID15"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8656,7 +9448,7 @@
   )
   (net "ID16"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8665,7 +9457,7 @@
   )
   (net "ID17"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8674,7 +9466,7 @@
   )
   (net "ID2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8683,7 +9475,7 @@
   )
   (net "ID3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8692,7 +9484,7 @@
   )
   (net "ID4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8701,7 +9493,7 @@
   )
   (net "ID5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8710,7 +9502,7 @@
   )
   (net "ID6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8719,7 +9511,7 @@
   )
   (net "ID7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8728,7 +9520,7 @@
   )
   (net "IP1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8737,7 +9529,7 @@
   )
   (net "IP2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8746,7 +9538,7 @@
   )
   (net "IP3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8755,7 +9547,7 @@
   )
   (net "IP4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8764,7 +9556,7 @@
   )
   (net "IP5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8773,7 +9565,7 @@
   )
   (net "IP6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8782,7 +9574,7 @@
   )
   (net "IP7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8791,7 +9583,7 @@
   )
   (net "IP8"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8800,7 +9592,7 @@
   )
   (net "KILL"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8809,7 +9601,7 @@
   )
   (net "M0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8818,7 +9610,7 @@
   )
   (net "M1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8827,7 +9619,7 @@
   )
   (net "M10"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8836,7 +9628,7 @@
   )
   (net "M11"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8845,7 +9637,7 @@
   )
   (net "M12"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8854,7 +9646,7 @@
   )
   (net "M13"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8863,7 +9655,7 @@
   )
   (net "M14"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8872,7 +9664,7 @@
   )
   (net "M15"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8881,7 +9673,7 @@
   )
   (net "M16"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8890,7 +9682,7 @@
   )
   (net "M17"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8899,7 +9691,7 @@
   )
   (net "M19"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8908,7 +9700,7 @@
   )
   (net "M2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8917,7 +9709,7 @@
   )
   (net "M3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8926,7 +9718,7 @@
   )
   (net "M4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8935,7 +9727,7 @@
   )
   (net "M5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8944,7 +9736,7 @@
   )
   (net "M6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8953,7 +9745,7 @@
   )
   (net "M7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8962,7 +9754,7 @@
   )
   (net "M9"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8971,7 +9763,7 @@
   )
   (net "MC0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8980,7 +9772,7 @@
   )
   (net "MC1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8989,7 +9781,7 @@
   )
   (net "MC2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -8998,7 +9790,7 @@
   )
   (net "MC3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9007,7 +9799,7 @@
   )
   (net "MD0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9016,7 +9808,7 @@
   )
   (net "MD1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9025,7 +9817,7 @@
   )
   (net "MD2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9034,7 +9826,7 @@
   )
   (net "MD3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9043,7 +9835,7 @@
   )
   (net "MD4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9052,7 +9844,7 @@
   )
   (net "MD5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9061,7 +9853,7 @@
   )
   (net "MD6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9070,7 +9862,7 @@
   )
   (net "MD7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9079,7 +9871,7 @@
   )
   (net "MHFLIP"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9088,7 +9880,7 @@
   )
   (net "MV0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9097,7 +9889,7 @@
   )
   (net "MV1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9106,7 +9898,7 @@
   )
   (net "MV2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9115,7 +9907,7 @@
   )
   (net "NMION"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9124,7 +9916,7 @@
   )
   (net "O0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9133,7 +9925,7 @@
   )
   (net "O1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9142,7 +9934,7 @@
   )
   (net "O2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9151,7 +9943,7 @@
   )
   (net "O3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9160,7 +9952,7 @@
   )
   (net "O4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9169,7 +9961,7 @@
   )
   (net "O5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9178,7 +9970,7 @@
   )
   (net "O6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9187,7 +9979,7 @@
   )
   (net "O7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9196,7 +9988,7 @@
   )
   (net "OC0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9205,7 +9997,7 @@
   )
   (net "OC1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9214,7 +10006,7 @@
   )
   (net "OC2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9223,7 +10015,7 @@
   )
   (net "OC3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9232,7 +10024,7 @@
   )
   (net "OPX0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9241,7 +10033,7 @@
   )
   (net "OPX1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9250,7 +10042,7 @@
   )
   (net "OPX2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9259,7 +10051,7 @@
   )
   (net "OPX3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9268,7 +10060,7 @@
   )
   (net "OPX4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9277,7 +10069,7 @@
   )
   (net "OPX5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9286,7 +10078,7 @@
   )
   (net "OPX6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9295,7 +10087,7 @@
   )
   (net "OPXB0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9304,7 +10096,7 @@
   )
   (net "OPXB1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9313,7 +10105,7 @@
   )
   (net "OPXB2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9322,7 +10114,7 @@
   )
   (net "OPXB3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9331,7 +10123,7 @@
   )
   (net "OPXG0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9340,7 +10132,7 @@
   )
   (net "OPXG1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9349,7 +10141,7 @@
   )
   (net "OPXG2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9358,7 +10150,7 @@
   )
   (net "OPXG3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9367,7 +10159,7 @@
   )
   (net "OPXR0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9376,7 +10168,7 @@
   )
   (net "OPXR1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9385,7 +10177,7 @@
   )
   (net "OPXR2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9394,7 +10186,7 @@
   )
   (net "OPXR3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9403,7 +10195,7 @@
   )
   (net "OV0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9412,7 +10204,7 @@
   )
   (net "OV1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9421,7 +10213,7 @@
   )
   (net "OV2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9430,7 +10222,7 @@
   )
   (net "R OUT"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9439,7 +10231,7 @@
   )
   (net "RH0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9448,7 +10240,7 @@
   )
   (net "RH1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9457,7 +10249,7 @@
   )
   (net "RH2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9466,7 +10258,7 @@
   )
   (net "RH3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9475,7 +10267,7 @@
   )
   (net "RH4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9484,7 +10276,7 @@
   )
   (net "RH5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9493,7 +10285,7 @@
   )
   (net "RH6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9502,7 +10294,7 @@
   )
   (net "RH7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9511,7 +10303,7 @@
   )
   (net "RH8"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9520,7 +10312,7 @@
   )
   (net "RST"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9529,7 +10321,7 @@
   )
   (net "RV0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9538,7 +10330,7 @@
   )
   (net "RV1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9547,7 +10339,7 @@
   )
   (net "RV2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9556,7 +10348,7 @@
   )
   (net "RV3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9565,7 +10357,7 @@
   )
   (net "RV4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9574,7 +10366,7 @@
   )
   (net "RV5"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9583,7 +10375,7 @@
   )
   (net "RV6"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9592,7 +10384,7 @@
   )
   (net "RV7"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9601,7 +10393,7 @@
   )
   (net "S"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9610,7 +10402,7 @@
   )
   (net "S0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9619,7 +10411,7 @@
   )
   (net "S1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9628,7 +10420,7 @@
   )
   (net "SC0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9637,7 +10429,7 @@
   )
   (net "SC1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9646,7 +10438,7 @@
   )
   (net "SC2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9655,7 +10447,7 @@
   )
   (net "SC3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9664,7 +10456,7 @@
   )
   (net "SLOAD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9673,7 +10465,7 @@
   )
   (net "SS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9682,7 +10474,7 @@
   )
   (net "SV0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9691,7 +10483,7 @@
   )
   (net "SV1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9700,7 +10492,7 @@
   )
   (net "SV2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9709,34 +10501,34 @@
   )
   (net "T0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-9 8H6-9 8K6-9 6P6-10)
+   (pins U29-2 6P6-10 U36-2 U41-2)
   )
   (net "T1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-8 8H6-8 8K6-8 6P6-7)
+   (pins U29-5 6P6-7 U36-5 U41-5)
   )
   (net "T2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6-7 8H6-7 8K6-7 6P6-2)
+   (pins U29-9 6P6-2 U36-9 U41-9)
   )
   (net "TVSYNCOUT"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9745,7 +10537,7 @@
   )
   (net "VBLANK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9754,7 +10546,7 @@
   )
   (net "VCC/VDD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer I1 I3 I4)
     (use_via
      $VIA#0_POWER
     )
@@ -9762,30 +10554,31 @@
     (pins EXPANSIONBUS-16 R104-0 7A2-15 8B2-15 BTN1-0 BTN2-0 R1-0 R2-0 R3-0 R4-0 R5-0
      R6-0 R7-0 R8-0 R9-0 R10-0 R11-0 R12-0 R13-0 R14-0 R15-0 R16-0 4D-17 4C-17 4A-17 4B-17
      4T-15 VIDCLK-7 4P7R-25 4P7R-27 7J-0 7J-26 7J-27 7L-0 7L-26 7L-27 7M-0 7M-26 7M-27
-     8E6-0 8E6-26 8E6-27 8H6-0 8H6-26 8H6-27 8K6-0 8K6-26 8K6-27 8L7R-25 8L7R-27 8N7R-25
-     8N7R-27 8R7R-25 8R7R-27 6LM6-23 U11-10 U11-19 U16-10 U16-19 U18-10 U18-19 U27-10
-     U27-19 2F-19 3L6-19 4L6-0 4L6-19 5E2-19 5H-0 5H-19 5L6-0 5L6-19 6E-0 6E-19 6F-0 6F-19
-     6S7-0 6S7-19 7B2-19 7C2-19 2R6-0 2R6-1 2R6-3 2R6-13 4E-13 4F-13 6H-13 8S-13 U15-13
-     U17-13 3E-17 3F-17 6A2-17 6B2-17 6C2-17 1A-15 2A-0 2A-15 2D-0 2D-15 1B-15 2B-0 2B-15
-     2C-0 2C-15 1C-13 1D-15 2E-15 2S-15 6D2-15 6F2-15 3A-15 3B-15 3C-15 3D-15 3M-15 3M8-0
-     3M8-9 3M8-10 3M8-11 3M8-12 3M8-15 3N-0 3N-2 3N-3 3N-4 3N-15 3P-0 3P-4 3P-5 3P-15
-     3R-4 3R-15 U5-13 3S-8 3S-15 4M-5 4M-15 4M6-0 4M6-15 4S7-0 4S7-15 5E-15 5F-15 5F8-15
-     5H8-15 5J-0 5J-15 5J8-15 5K-0 5K-15 5K8-15 5M8-13 5L-0 5L-15 5M-5 5M-15 5N7-13 5N7-15
-     5R-1 5R-15 5S-1 5S-15 5S7-0 5S7-15 6A-15 6B-6 6B-9 6B-15 6C-6 6C-9 6C-15 6D-15 6F6-13
-     6F6-15 6P6-13 6H6-15 6J-0 6J-15 6J6-15 6K-0 6K-15 6K6-2 6K6-15 6L-0 6L-15 6M-1 6M-15
-     6R-0 6R-15 6S-0 6S-15 6T-9 6T-15 7F-15 7D6-0 7D6-15 7E6-0 7E6-15 7E-0 7E-15 7F6-0
-     7F6-15 7H6-0 7H6-15 7H-15 4H-13 7J6-0 7J6-15 7K6-0 7K6-15 7L7-0 7L7-15 7M7-0 7M7-15
-     7N-0 7N-15 7B-13 7N7-0 7N7-15 7P7-0 7P7-15 7R-15 7R7-0 7R7-15 7S7-0 7S7-15 7S-5 7S-15
-     5P7-13 6N2-13 7T-13 8D2-0 8D2-5 8D2-15 8C2-13 U1-15 U3-15 U12-15 U13-13 U2-15 U4-15
-     U6-15 U7-15 U8-15 U19-15 U20-15 U21-15 U22-15 U10-13 U23-15 U24-15 U25-15 U26-15
-     U9-13 U14-13 1S-13 1T-13 2T-13 2N-13 2P-13 2R-13 5T-13 3H-3 3H-13 3T-0 3T-3 3T-9
-     3T-12 3T-13 4N-13 4P-0 4P-3 4P-12 4P-13 4R-13 4S-3 4S-9 4S-12 4S-13 5A-13 5B-13 5C-13
-     5D-13 7A-13 5P-0 5P-9 5P-12 5P-13 5R7-9 5R7-13 6R7-13 6N6-11 6N6-13 8C6-13 7C-13
-    7D-13)
+     8E6R-25 8E6R-27 8H6R-25 8H6R-27 8K6R-25 8K6R-27 8L7R-25 8L7R-27 8N7R-25 8N7R-27 8R7R-25
+     8R7R-27 6LM6-23 U11-10 U11-19 U16-10 U16-19 U18-10 U18-19 U27-10 U27-19 U28-10 U28-19
+     U35-10 U35-19 U40-10 U40-19 2F-19 3L6-19 4L6-0 4L6-19 5E2-19 5H-0 5H-19 5L6-0 5L6-19
+     6E-0 6E-19 6F-0 6F-19 6S7-0 6S7-19 7B2-19 7C2-19 2R6-0 2R6-1 2R6-3 2R6-13 4E-13 4F-13
+     6H-13 8S-13 U15-13 U17-13 U34-13 3E-17 3F-17 6A2-17 6B2-17 6C2-17 1A-15 2A-0 2A-15
+     2D-0 2D-15 1B-15 2B-0 2B-15 2C-0 2C-15 1C-13 1D-15 2E-15 2S-15 6D2-15 6F2-15 3A-15
+     3B-15 3C-15 3D-15 3M-15 3M8-0 3M8-9 3M8-10 3M8-11 3M8-12 3M8-15 3N-0 3N-2 3N-3 3N-4
+     3N-15 3P-0 3P-4 3P-5 3P-15 3R-4 3R-15 U5-13 3S-8 3S-15 4M-5 4M-15 4M6-0 4M6-15 4S7-0
+     4S7-15 5E-15 5F-15 5F8-15 5H8-15 5J-0 5J-15 5J8-15 5K-0 5K-15 5K8-15 5M8-13 5L-0
+     5L-15 5M-5 5M-15 5N7-13 5N7-15 5R-1 5R-15 5S-1 5S-15 5S7-0 5S7-15 6A-15 6B-6 6B-9
+     6B-15 6C-6 6C-9 6C-15 6D-15 6F6-13 6F6-15 6H6-15 6J-0 6J-15 6J6-15 6K-0 6K-15 6K6-2
+     6K6-15 6L-0 6L-15 6M-1 6M-15 6R-0 6R-15 6S-0 6S-15 6T-9 6T-15 7F-15 7D6-0 7D6-15
+     7E6-0 7E6-15 7E-0 7E-15 7F6-0 7F6-15 7H6-0 7H6-15 7H-15 4H-13 7J6-0 7J6-15 7K6-0
+     7K6-15 7L7-0 7L7-15 7M7-0 7M7-15 7N-0 7N-15 7B-13 7N7-0 7N7-15 7P7-0 7P7-15 7R-15
+     7R7-0 7R7-15 7S7-0 7S7-15 7S-5 7S-15 5P7-13 6N2-13 7T-13 8D2-0 8D2-5 8D2-15 8C2-13
+     U1-15 U3-15 U12-15 U2-15 U4-15 U6-15 U7-15 U8-15 U19-15 U20-15 U21-15 U22-15 U23-15
+     U24-15 U25-15 U26-15 U14-13 U29-15 U30-15 U31-15 U32-15 6P6-13 U9-13 U10-13 U36-15
+     U37-15 U38-15 U39-15 U41-15 U42-15 U43-15 U44-15 U13-13 U33-13 1S-13 1T-13 2N-13
+     2P-13 2R-13 5T-13 2T-13 3H-3 3H-13 3T-0 3T-3 3T-9 3T-12 3T-13 4N-13 4P-0 4P-3 4P-12
+     4P-13 4R-13 4S-3 4S-9 4S-12 4S-13 5A-13 5B-13 5C-13 5D-13 7A-13 5P-0 5P-9 5P-12 5P-13
+    5R7-9 5R7-13 6R7-13 6N6-11 6N6-13 8C6-13 7C-13 7D-13)
   )
   (net "VIDCLK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9794,7 +10587,7 @@
   )
   (net "VT0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9803,7 +10596,7 @@
   )
   (net "VT1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9812,7 +10605,7 @@
   )
   (net "VT2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9821,7 +10614,7 @@
   )
   (net "VT3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9830,7 +10623,7 @@
   )
   (net "VT4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9839,7 +10632,7 @@
   )
   (net "WAIT"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9848,7 +10641,7 @@
   )
   (net "_1V*."
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9857,7 +10650,7 @@
   )
   (net "_256H"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9866,7 +10659,7 @@
   )
   (net "_256H*."
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9875,7 +10668,7 @@
   )
   (net "_6MHZ"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9884,7 +10677,7 @@
   )
   (net "_8800CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9893,7 +10686,7 @@
   )
   (net "_8C00CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9902,7 +10695,7 @@
   )
   (net "_9000CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9911,7 +10704,7 @@
   )
   (net "_9800CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9920,7 +10713,7 @@
   )
   (net "_9A00CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9929,7 +10722,7 @@
   )
   (net "_9C00CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9938,7 +10731,7 @@
   )
   (net "_9C00RD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9947,7 +10740,7 @@
   )
   (net "_9C00WR"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9956,7 +10749,7 @@
   )
   (net "_9C01RD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9965,7 +10758,7 @@
   )
   (net "_9C01WR"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9974,7 +10767,7 @@
   )
   (net "_9E00CS"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9983,7 +10776,7 @@
   )
   (net "_CDL"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -9992,7 +10785,7 @@
   )
   (net "_CMPBLK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10001,7 +10794,7 @@
   )
   (net "_CMPBLK*."
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10010,7 +10803,7 @@
   )
   (net "_CONTRLDA"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10019,7 +10812,7 @@
   )
   (net "_CONTRLDB"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10028,7 +10821,7 @@
   )
   (net "_DISPLAYENABLE"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10037,7 +10830,7 @@
   )
   (net "_HSYNC"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10046,7 +10839,7 @@
   )
   (net "_MDL"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10055,16 +10848,17 @@
   )
   (net "_MEWR"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-19 7R-1 5P7-4 8D2-1 U10-0 U10-3 U14-0 U14-3 3H-9 6N6-0)
+    (pins EXPANSIONBUS-19 7R-1 5P7-4 8D2-1 U14-0 U14-3 U10-0 U10-3 U10-8 U33-0 U33-3 3H-9
+    6N6-0)
   )
   (net "_MREQ"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10073,7 +10867,7 @@
   )
   (net "_RAM0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10082,7 +10876,7 @@
   )
   (net "_RAM1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10091,7 +10885,7 @@
   )
   (net "_ROM0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10100,7 +10894,7 @@
   )
   (net "_ROM1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10109,7 +10903,7 @@
   )
   (net "_ROM2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10118,7 +10912,7 @@
   )
   (net "_ROM3"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10127,7 +10921,7 @@
   )
   (net "_ROM4"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10136,7 +10930,7 @@
   )
   (net "_SL1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10145,7 +10939,7 @@
   )
   (net "_SL2"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10154,7 +10948,7 @@
   )
   (net "_SLOAD"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10163,7 +10957,7 @@
   )
   (net "_SW"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10172,7 +10966,7 @@
   )
   (net "_TVSYNC"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10181,7 +10975,7 @@
   )
   (net "_VBLANK"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10190,7 +10984,7 @@
   )
   (net "_VPL"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10199,7 +10993,7 @@
   )
   (net "_VSYNC"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10208,7 +11002,7 @@
   )
   (net "_WRAM0"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10217,7 +11011,7 @@
   )
   (net "_WRAM1"
    (circuit
-    (use_layer TOP I1 I2 BOT)
+    (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
@@ -10424,126 +11218,98 @@
    "#01751"
    "#01752"
    "#01753"
-   "#01785"
-   "#01786"
-   "#01787"
-   "#01788"
-   "#01789"
-   "#01790"
-   "#01791"
-   "#01792"
    "#01805"
    "#01808"
-   "#01834"
-   "#01835"
-   "#01836"
-   "#01837"
-   "#01838"
-   "#01839"
-   "#01840"
-   "#01841"
    "#01854"
    "#01857"
-   "#01883"
-   "#01884"
-   "#01885"
-   "#01886"
-   "#01887"
-   "#01888"
-   "#01889"
-   "#01890"
    "#01903"
    "#01906"
    "#01921"
    "#01925"
-   "#01985"
-   "#01988"
-   "#02019"
-   "#02022"
+   "#01968"
+   "#01975"
+   "#01978"
+   "#02000"
+   "#02001"
+   "#02002"
+   "#02003"
+   "#02004"
+   "#02005"
+   "#02006"
+   "#02007"
+   "#02008"
+   "#02009"
+   "#02010"
+   "#02011"
+   "#02012"
+   "#02018"
+   "#02025"
+   "#02028"
+   "#02050"
+   "#02051"
+   "#02052"
    "#02053"
+   "#02054"
+   "#02055"
    "#02056"
-   "#02073"
-   "#02074"
-   "#02089"
-   "#02094"
-   "#02099"
-   "#02198"
-   "#02204"
-   "#02242"
-   "#02243"
-   "#02244"
-   "#02245"
-   "#02246"
-   "#02258"
-   "#02259"
-   "#02260"
-   "#02261"
-   "#02273"
-   "#02274"
-   "#02275"
-   "#02276"
-   "#02288"
-   "#02300"
-   "#02303"
-   "#02359"
-   "#02366"
-   "#02369"
-   "#02391"
-   "#02392"
-   "#02393"
-   "#02394"
-   "#02395"
-   "#02396"
-   "#02397"
+   "#02057"
+   "#02058"
+   "#02059"
+   "#02060"
+   "#02061"
+   "#02062"
+   "#02068"
+   "#02075"
+   "#02078"
+   "#02100"
+   "#02101"
+   "#02102"
+   "#02103"
+   "#02104"
+   "#02105"
+   "#02106"
+   "#02107"
+   "#02108"
+   "#02109"
+   "#02110"
+   "#02111"
+   "#02112"
+   "#02294"
+   "#02297"
+   "#02328"
+   "#02331"
+   "#02362"
+   "#02365"
+   "#02382"
+   "#02383"
    "#02398"
-   "#02399"
-   "#02400"
-   "#02401"
-   "#02402"
    "#02403"
-   "#02462"
-   "#02469"
-   "#02472"
-   "#02494"
-   "#02495"
-   "#02496"
-   "#02497"
-   "#02498"
-   "#02499"
-   "#02500"
-   "#02501"
-   "#02502"
-   "#02503"
-   "#02504"
-   "#02505"
-   "#02506"
-   "#02565"
-   "#02572"
-   "#02575"
+   "#02408"
+   "#02507"
+   "#02513"
+   "#02551"
+   "#02552"
+   "#02553"
+   "#02554"
+   "#02555"
+   "#02567"
+   "#02568"
+   "#02569"
+   "#02570"
+   "#02582"
+   "#02583"
+   "#02584"
+   "#02585"
    "#02597"
-   "#02598"
-   "#02599"
-   "#02600"
-   "#02601"
-   "#02602"
-   "#02603"
-   "#02604"
-   "#02605"
-   "#02606"
-   "#02607"
-   "#02608"
    "#02609"
-   "#02662"
-   "#02663"
-   "#02664"
-   "#02665"
-   "#02666"
-   "#02667"
-   "#02670"
-   "#02671"
-   "#02672"
-   "#02673"
-   "#02674"
+   "#02612"
+   "#02668"
+   "#02675"
+   "#02678"
+   "#02700"
+   "#02701"
+   "#02702"
+   "#02703"
    "#02704"
    "#02705"
    "#02706"
@@ -10553,13 +11319,65 @@
    "#02710"
    "#02711"
    "#02712"
-   "#02753"
-   "#02835"
-   "#02898"
-   "#02899"
-   "#02900"
-   "#02902"
-   "#02903"
+   "#02771"
+   "#02778"
+   "#02781"
+   "#02803"
+   "#02804"
+   "#02805"
+   "#02806"
+   "#02807"
+   "#02808"
+   "#02809"
+   "#02810"
+   "#02811"
+   "#02812"
+   "#02813"
+   "#02814"
+   "#02815"
+   "#02874"
+   "#02881"
+   "#02884"
+   "#02906"
+   "#02907"
+   "#02908"
+   "#02909"
+   "#02910"
+   "#02911"
+   "#02912"
+   "#02913"
+   "#02914"
+   "#02915"
+   "#02916"
+   "#02917"
+   "#02918"
+   "#02971"
+   "#02972"
+   "#02973"
+   "#02974"
+   "#02975"
+   "#02976"
+   "#02979"
+   "#02980"
+   "#02981"
+   "#02982"
+   "#02983"
+   "#03013"
+   "#03014"
+   "#03015"
+   "#03016"
+   "#03017"
+   "#03018"
+   "#03019"
+   "#03020"
+   "#03021"
+   "#03062"
+   "#03144"
+   "#03207"
+   "#03208"
+   "#03209"
+   "#03211"
+   "#03212"
    ".6MHZ"
    "128H'"
    "128V'"
@@ -10598,7 +11416,31 @@
    "7PD"
    "7RA"
    "7SD"
+   "8E6D0"
+   "8E6D1"
+   "8E6D2"
+   "8E6D3"
+   "8E6D4"
+   "8E6D5"
+   "8E6D6"
+   "8E6D7"
    "8H'"
+   "8H6D0"
+   "8H6D1"
+   "8H6D2"
+   "8H6D3"
+   "8H6D4"
+   "8H6D5"
+   "8H6D6"
+   "8H6D7"
+   "8K6D0"
+   "8K6D1"
+   "8K6D2"
+   "8K6D3"
+   "8K6D4"
+   "8K6D5"
+   "8K6D6"
+   "8K6D7"
    "8L7D0"
    "8L7D1"
    "8L7D2"
