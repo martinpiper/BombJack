@@ -1,6 +1,8 @@
 # Bomb Jack display hardware
 
-This is a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
+This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
+
+The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability etc.
 
 ## Background
 
@@ -139,7 +141,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $40           | Char screen 8x8 Root sheet 6  | $4000   8KB          | Char data bit plane 0 into 8K6R       |
    | $40           | Char screen 8x8 Root sheet 6  | $8000   8KB          | Char data bit plane 1 into 8H6R       |
    | $20           | Char screen 8x8 Root sheet 6  | $2000   8KB          | Char data bit plane 2 into 8E6R       |
-	
+   | $10           | Sprite data Root sheet 4      | $2000   8KB          | Sprite bit plane 0 into 7JR           |
+   | $10           | Sprite data Root sheet 4      | $4000   8KB          | Sprite bit plane 1 into 7LR           |
+   | $10           | Sprite data Root sheet 4      | $8000   8KB          | Sprite bit plane 2 into 7MR           |
+
 
 
 * Using the pattern file: TestData.txt

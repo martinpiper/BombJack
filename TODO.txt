@@ -186,8 +186,14 @@
 	* Done: Root sheet 6 8H6 using 04_h08t.bin to RAM	EBS6 EA15 ram select	$8000
 	* Done: Root sheet 6 8E6 using 03_e08t.bin to RAM	EBS5 EA13 ram select	$2000
 	
-	* TODO: Sprite data
-		RAMS
+	* Sprite data
+	* Done: Root sheet 4 7J using 14_j07b.bin to RAM	EBS4 EA13 ram select	$2000
+	* Done: Root sheet 4 7L using 15_l07b.bin to RAM	EBS4 EA14 ram select	$4000
+	* Done: Root sheet 4 7M using 16_m07b.bin to RAM	EBS4 EA15 ram select	$8000
+
+
+
+* Group EBS usage for the tile/char/sprite data to EBS6/EBS5/EBS4 so that all three available 8K banks are in the same EBS
 
 		
 
@@ -197,6 +203,7 @@
 
 
 * Remove the vertical flip button and associated logic? Since it's not really needed as I'm not strictly emulating an arcade board any more.
+	The layout complexity can instead be used for pixel level scrolling and the extra timing generation
 
 	
 

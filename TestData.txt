@@ -57,6 +57,20 @@ s$80004000
 s$20002000
 <0,1,2,3,4,5,6,7,<03_e08t.bin
 
+
+; Sprite data
+; Write sprite data from 14_j07b.bin into RAM mapped at $2000 with EBS $10
+s$20001000
+<0,1,2,3,4,5,6,7,<14_j07b.bin
+
+; Write sprite data from 15_l07b.bin into RAM mapped at $4000 with EBS $10
+s$40001000
+<0,1,2,3,4,5,6,7,<15_l07b.bin
+
+; Write sprite data from 16_m07b.bin into RAM mapped at $8000 with EBS $10
+s$80001000
+<0,1,2,3,4,5,6,7,<16_m07b.bin
+
 ; Write palette data into RAM mapped at $9c00 with EBS $01
 s$9c000100
 ; Note the first colour in every palette entry is 000
