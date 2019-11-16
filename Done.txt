@@ -102,3 +102,105 @@
 
 
 * Perhaps move the edge connectors up the board to improve component auto place?
+
+
+
+* Instead of using ROMs, use RAMs and add extra logic to enable their write via the external header.
+	* Will need 74245
+	* To free up the cartridge port, think about perhaps a non-memory mapped interface, so something via the C64 user port?
+		https://www.c64-wiki.com/wiki/User_Port
+			* The edge connectors have 3.96mm pitch (distance between contacts) and accept cards (PCBs) 1.57mm thick.
+		https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
+		https://csdb.dk/forums/?roomid=11&topicid=19759
+			/PC goes low for one cycle after port B access.
+		http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_359.html#User
+			Looks like I can have 8 bits output with PC2 signalling when it's written
+				FLAG2 as input for VSYNC (NMI trigger or poll DD0D bit 4)
+				PA2 as an output bit flag
+			So on PA2 this can reset the state to reading a lo/hi address, then any number of bytes to store without needing the number of bytes
+				C64Docs\C64PRG10_TXT.txt
+					DD00
+					2      RS-232 Data Output (User Port)
+					DD02       56578                 Data Direction Register - Port A
+					PA2 is bit 2 of PORT A of the CIA
+	* Need to find out how much RAM will be needed and decide a memory map
+		All the used *.bin files (mapped into ROMs) total 64K of data.
+		This means a linear 16 bit address bus model won't work as there isn't space for the RAM to be mapped.
+		Instead, the ten!! ROMs can be selected with an explicit chip select register combined with an address, so 24 bits instead.
+		byte:
+			0		Chip select using a 74154 to map up to 16 chip groups
+			1/2		Lo/hi address setup
+			3		Bytes to store, address++
+		Done: UserPortTo24BitAddress
+			Done: U6-U9 needs to load the lo/hi address as needed, when they are selected and on the negative edge of _PC
+					RCO goes to ENP&ENT
+					CLK needs to cause the address to count up on the positive edge of _PC and only when U10 is being populated with CS3 low.
+			* U3, U10, U18 and U19 contain the chip select, data, addr lo/hi with auto increment
+			Done: EMEMWRITE will need to be low for a short tick while after the data/address are stable
+				Perhaps add logic to toggle this based on a delayed flip-flop chain?
+				* Actually just used the after byte tick instead
+				* Added a quick debug selector and RAM, to visually display the memory can be selected and written
+			Done: EXTWANTIRQ, from the _VBLANK negative edge when it starts the VBLANK will need to be sent to FLAG2 (which is negative edge triggered on the C64)
+		* 74154 Obsolete!?
+			74139 used instead
+			74138 is also available
+	* 4T on sheet 3 which creates the 6MHz/.6MHz/_6MHz signals from the input VIDCLK has OE
+		This output enable could be tied to a register line to enable or disable the whole display, which would massively help with writing to any RAMs for the video data.
+		This could be the higher bits of 9e00?
+			Root sheet 7, 4S7 could store the extra bits if it was rewired a bit. Default is low, so no video output?
+			3S+3R could also be reset on low
+			* Added DB5 line for 0 = disable display and 1 = enable (DISPLAYENABLE and _DISPLAYENABLE)
+				This allows large amounts of data to be written to RAM while the display is disabled without fear of contention with the display HW
+	* ROMs will need RAMs, the memory setup timings will need to be honoured.
+		The original RAMs can be selected as per normal and can be the first line, suitable _CSEN+_MREQ can be faked for those.
+			Inverted EBS0 perhaps?
+		The other lines can enable or disable the ROM->RAM segments as needed with perhaps 2-3 8K chunks memory mapped on each line
+			74LS245 plus 74157
+	* Done: User port (write memory) timings, need to honour the expected timings for address and data setup
+		Check with the logic analyser
+			EMEMWRITE might not have the correct setup timing constraints
+			There should be the memory and data setup, then a delayed write pulse (low) where the data and memory is still setup afterwards
+				Might be because _PC is timed wrong on the input simulated data?
+					* Done: Yes, the signals need expanding a bit more to include the leadin and leadout states
+					* Done: Check leadin and leadout states on CIA timing diagram with _PC and data levels
+						* BombJack loads 4S7 (root sheet 7) on the positive edge (trailing edge) of _MEWR with a low _9E00CS and 7432 (OR) output
+							This makes sense since it might be trying to accommodate timing issues where the data might be settling during RAM cycle timing
+						* Done: So update userport design to also accommodate this
+							Memory and data are primed, _MEWR is held low for a short pulse, memory and data still held
+							Verified by logic analyser
+	* Done: Attempt RAM replacement for Root sheet 7. Read only background picture logic
+		4P7 2764 can be replaced with a 6264
+			_CE will need a low to select
+			CS can be high all the time
+			_WE low on _MEWR
+			_OE low on memory read
+			To select address perhaps a 74157 with _A/B based on _ADDRCS? With _ADDRCS OR (7432) _MEWR going to _WE
+			74245 needed for bus tristate?
+				Or maybe a simple 74373 for tri-state outputs since we don't need read logic
+				The 6116 RAM on root sheet 6 has interesting _OE/_WE based on a simple NOT 7404
+		* 4P7R (RAM) replaces 4P7, BusEBS.ptn added to simulate "Root sheet 7 EBS7 EA13 RAM select"
+			There are some logic contentions on BIDxx at the start, but similar CID contentions are also seen on 6LM6 RAM writes from the original schematic
+			* 4P7 has been schematic and placement disabled
+			* 4P7R is obviously enabled
+			* Only memory from 02_p04t.bin $400 to $5ff is included in the pattern file, to reduce the data specific to the sphinx graphics
+				It is $100 bytes of char data, followed by $100 bytes of colour data
+	* Done: Will need a replacement for the Proteus data generators because they have a 1024 byte limit
+		VSMDD2 on root sheet 1 now uses TestData.txt to set all the data needed
+	* Done: Root sheet 7 8R7 using 08_r08t.bin to RAM	EBS6 EA14 RAM select	$2000
+	* Done: Root sheet 7 8N7 using 07_n08t.bin to RAM	EBS6 EA15 RAM select	$4000
+	* Done: Root sheet 7 8L7 using 06_l08t.bin to RAM	EBS6 EA13 RAM select	$8000
+	Note all new logic for the RAMs on root sheet 7. The original ROMs are still present, just disabled from the simulation and layout.
+	
+	* Character data
+	* Done: Root sheet 6 8K6 using 05_k08t.bin to RAM	EBS5 EA14 ram select	$2000
+	* Done: Root sheet 6 8H6 using 04_h08t.bin to RAM	EBS5 EA15 ram select	$4000
+	* Done: Root sheet 6 8E6 using 03_e08t.bin to RAM	EBS5 EA13 ram select	$8000
+	
+	* Sprite data
+	* Done: Root sheet 4 7J using 14_j07b.bin to RAM	EBS4 EA13 ram select	$2000
+	* Done: Root sheet 4 7L using 15_l07b.bin to RAM	EBS4 EA14 ram select	$4000
+	* Done: Root sheet 4 7M using 16_m07b.bin to RAM	EBS4 EA15 ram select	$8000
+
+
+
+* Group EBS usage for the tile/char/sprite data to EBS6/EBS5/EBS4 so that all three available 8K banks are in the same EBS

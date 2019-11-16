@@ -31,30 +31,30 @@ s$25008000
 ;b$42,b$83,b$c4,b$05,b$46,b$87,b$c8,b$09,b$4a,b$8b,b$cc,b$0d,b$4e,b$8f,b$c0,b$01
 
 
-; Write tile data from 08_r08t.bin into RAM mapped at $4000 with EBS $80
-s$40008000
+; Write tile data from 08_r08t.bin into RAM mapped at $2000 with EBS $40
+s$20004000
 <0,1,2,3,4,5,6,7,<08_r08t.bin
 
-; Write tile data from 07_n08t.bin into RAM mapped at $8000 with EBS $80
-s$80008000
+; Write tile data from 07_n08t.bin into RAM mapped at $4000 with EBS $40
+s$40004000
 <0,1,2,3,4,5,6,7,<07_n08t.bin
 
-; Write tile data from 06_l08t.bin into RAM mapped at $2000 with EBS $40
-s$20004000
+; Write tile data from 06_l08t.bin into RAM mapped at $8000 with EBS $40
+s$80004000
 <0,1,2,3,4,5,6,7,<06_l08t.bin
 
 
 ; Character data
-; Write character data from 05_k08t.bin into RAM mapped at $4000 with EBS $40
-s$40004000
+; Write character data from 05_k08t.bin into RAM mapped at $2000 with EBS $20
+s$20002000
 <0,1,2,3,4,5,6,7,<05_k08t.bin
 
-; Write character data from 04_h08t.bin into RAM mapped at $8000 with EBS $40
-s$80004000
+; Write character data from 04_h08t.bin into RAM mapped at $4000 with EBS $20
+s$40002000
 <0,1,2,3,4,5,6,7,<04_h08t.bin
 
-; Write character data from 03_e08t.bin into RAM mapped at $2000 with EBS $20
-s$20002000
+; Write character data from 03_e08t.bin into RAM mapped at $8000 with EBS $20
+s$80002000
 <0,1,2,3,4,5,6,7,<03_e08t.bin
 
 
