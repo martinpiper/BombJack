@@ -1,3 +1,14 @@
+* Need DigitalDisplay frame recording and verification of displayed frame with recorded frame.
+	Pixel by pixel tests. Can display if the current frame as it is being built up matches the recording, or not.
+	Highlight areas that don't match?
+	
+	
+
+* Need the DigitalData model to also verify a recording against what it currently detects.
+	It can also display if what it has received so far matches the recording.
+
+
+
 * Need to update ReadMe to reflect new design
 
 
