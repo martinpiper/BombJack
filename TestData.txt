@@ -12,6 +12,10 @@ d0
 ; Write data from into RAM mapped at $9e00 with EBS $01
 d$9e000112
 
+; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7
+d$9e010177
+
+
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
 

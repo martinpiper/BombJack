@@ -122,7 +122,7 @@
 	Could have an extra register $9e01 (l/h nybbles for x/y) that add values 0-15 to the X/Y pixel clock before addressing the background data?
 		This could in effect generate a pixel scrolled background image?
 		If yes, would need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
-
+	* Signals that need handling: XXH' and XXV' plus 4H, SLOAD and _SLOAD (which trace back from BIS0)
 
 		
 
