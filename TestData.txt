@@ -14,6 +14,7 @@ d$9e000112
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7
 d$9e010177
+d$9e010108
 
 
 ; Address auto-increment using data bits 16-31
