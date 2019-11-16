@@ -125,6 +125,7 @@
 	* Signals that need handling: XXH' and XXV' plus 4H, SLOAD and _SLOAD (which trace back from BIS0)
 		Added new signal prefix BGH for these by copying the logic from root sheet 3
 		Initial tests of the X nybble write seem to indicate success!
+	* TODO: At this point, could do with a DigitalData wait for edge (for _VBLANK) and output new data code
 		
 
 
