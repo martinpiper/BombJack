@@ -111,10 +111,6 @@
 	http://referencedesigner.com/books/si/6-layer-stackup-ch6.php
 
 
-* Remove the vertical flip button and associated logic? Since it's not really needed as I'm not strictly emulating an arcade board any more.
-	The layout complexity can instead be used for pixel level scrolling and the extra timing generation
-
-	
 
 * All the very similar block, for the new RAMs and also the pixel shift outputs, could use a sub-circuit now
 	Since they are RAM addressed and the ROM with its associated data file in the schematic is not important

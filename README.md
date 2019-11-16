@@ -32,7 +32,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 
 1. Logic analyser, virtual video display model, expansion bus header, data generator
 	1. Memory selection logic based on external address bus
-	2. Debug buttons for the video flip and spare background plane selection
+	2. Debug button for the spare background plane selection
 	3. VSMDD2 is a replacement for the Proteus data generators because they have a 1024 byte limit. Proteus VSM project source: https://github.com/martinpiper/DigitalData
 	4. EXPANSIONBUS, EXPANSIONBUS2 and EXPANSIONBUS3 all relate to the C64 user port to 24 bit address logic in the project: UserPortTo24BitAddress.pdsprj
 2. Intentionally left blank, the original schematic has dip switch logic

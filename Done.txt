@@ -204,3 +204,8 @@
 
 
 * Group EBS usage for the tile/char/sprite data to EBS6/EBS5/EBS4 so that all three available 8K banks are in the same EBS
+
+
+
+* Remove the vertical flip button and associated logic? Since it's not really needed as I'm not strictly emulating an arcade board any more.
+	The layout complexity can instead be used for pixel level scrolling and the extra timing generation
