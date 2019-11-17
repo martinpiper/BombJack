@@ -36,16 +36,28 @@ s$25008000
 ;b$42,b$83,b$c4,b$05,b$46,b$87,b$c8,b$09,b$4a,b$8b,b$cc,b$0d,b$4e,b$8f,b$c0,b$01
 
 ; Debug tile data for the sphinx portion of the video RAM
-;s$24008000
-;b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-;b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-;s$24c08000
-;b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-;b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$24008000
+b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
+b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
+s$24c08000
+b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
+b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
+
+; Debug colour data for the sphinx portion
+s$25008000
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+s$25c08000
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
+b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 
 
 ; Write tile data from 08_r08t.bin into RAM mapped at $2000 with EBS $40
@@ -415,6 +427,8 @@ b$27,b$42,b$c0,b$74
 
 ; Background image enable and index
 d$9e000132
+; Background image enable and index, shrink border X and Y
+;d$9e0001f2
 
 d$0
 
