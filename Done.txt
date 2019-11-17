@@ -209,3 +209,14 @@
 
 * Remove the vertical flip button and associated logic? Since it's not really needed as I'm not strictly emulating an arcade board any more.
 	The layout complexity can instead be used for pixel level scrolling and the extra timing generation
+
+	
+	
+* Background layer (root sheet 7) pixel fine scrolling enable?
+	Could have an extra register $9e01 (l/h nybbles for x/y) that add values 0-15 to the X/Y pixel clock before addressing the background data?
+		This could in effect generate a pixel scrolled background image?
+	* Signals that need handling: XXH' and XXV' plus 4H, SLOAD and _SLOAD (which trace back from BIS0)
+		Added new signal prefix BGH for these by copying the logic from root sheet 3
+		Initial tests of the X nybble write seem to indicate success!
+	* TODO: At this point, could do with a DigitalData wait for edge (for _VBLANK) and output new data code
+	* X and Y pixel scroll logic added

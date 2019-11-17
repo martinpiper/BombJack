@@ -2,7 +2,7 @@
 
 This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 
-The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability etc.
+The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability, X and Y pixel scroll logic added etc.
 
 ## Background
 
@@ -126,25 +126,26 @@ As per the original design all writes to the video hardware should be timed to c
 
 The original hardware has been expanded to include RAMs where the ROMs were located. These are addressed by an combination of EXPANSIONBUS3 to select the groups of RAMs and the EXPANSIONBUS group selector. It is entirely possible to write more than one group at a time by enabling multiple output bits in EXPANSIONBUS3.
 
-   | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                             |
-   |---------------|-------------------------------|----------------------|---------------------------------------|
-   | $01           | Original RAMs                 | $9000   $400 bytes   | Screen character index                |
-   | $01           | Original RAMs                 | $9400   $400 bytes   | Screen colour                         |
-   | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                      |
-   | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry       |
-   | $01           | Original RAMs                 | $9e00                | Background image enable and index     |
-   | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only |
-   | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R           |
-   | Note 2 spare  |                               |                      |                                       |
-   | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R           |
-   | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 1 into 8N7R           |
-   | $40           | Background 16x16 Root sheet 7 | $8000   8KB          | Tiles bit plane 2 into 8L7R           |
-   | $20           | Char screen 8x8 Root sheet 6  | $2000   8KB          | Char data bit plane 0 into 8K6R       |
-   | $20           | Char screen 8x8 Root sheet 6  | $4000   8KB          | Char data bit plane 1 into 8H6R       |
-   | $20           | Char screen 8x8 Root sheet 6  | $8000   8KB          | Char data bit plane 2 into 8E6R       |
-   | $10           | Sprite data Root sheet 4      | $2000   8KB          | Sprite bit plane 0 into 7JR           |
-   | $10           | Sprite data Root sheet 4      | $4000   8KB          | Sprite bit plane 1 into 7LR           |
-   | $10           | Sprite data Root sheet 4      | $8000   8KB          | Sprite bit plane 2 into 7MR           |
+   | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
+   |---------------|-------------------------------|----------------------|-----------------------------------------|
+   | $01           | Original RAMs                 | $9000   $400 bytes   | Screen character index                  |
+   | $01           | Original RAMs                 | $9400   $400 bytes   | Screen colour                           |
+   | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
+   | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry         |
+   | $01           | Original RAMs                 | $9e00                | Background image enable, index, borders |
+   | $01           | Original RAMs                 | $9e01                | Background image X/Y pixel scroll       |
+   | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
+   | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
+   | Note 2 spare  |                               |                      |                                         |
+   | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R             |
+   | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 1 into 8N7R             |
+   | $40           | Background 16x16 Root sheet 7 | $8000   8KB          | Tiles bit plane 2 into 8L7R             |
+   | $20           | Char screen 8x8 Root sheet 6  | $2000   8KB          | Char data bit plane 0 into 8K6R         |
+   | $20           | Char screen 8x8 Root sheet 6  | $4000   8KB          | Char data bit plane 1 into 8H6R         |
+   | $20           | Char screen 8x8 Root sheet 6  | $8000   8KB          | Char data bit plane 2 into 8E6R         |
+   | $10           | Sprite data Root sheet 4      | $2000   8KB          | Sprite bit plane 0 into 7JR             |
+   | $10           | Sprite data Root sheet 4      | $4000   8KB          | Sprite bit plane 1 into 7LR             |
+   | $10           | Sprite data Root sheet 4      | $8000   8KB          | Sprite bit plane 2 into 7MR             |
 
 
 

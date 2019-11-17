@@ -118,16 +118,13 @@
 
 
 
-* Background layer (root sheet 7) pixel fine scrolling enable?
-	Could have an extra register $9e01 (l/h nybbles for x/y) that add values 0-15 to the X/Y pixel clock before addressing the background data?
-		This could in effect generate a pixel scrolled background image?
-		If yes, would need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
-	* Signals that need handling: XXH' and XXV' plus 4H, SLOAD and _SLOAD (which trace back from BIS0)
-		Added new signal prefix BGH for these by copying the logic from root sheet 3
-		Initial tests of the X nybble write seem to indicate success!
-	* TODO: At this point, could do with a DigitalData wait for edge (for _VBLANK) and output new data code
-		
+* Need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
+	U65 has sdpare two bits 6/7, if 1 then contract the Fair right and bottom borders respectively
 
+	
+	
+* How about lo/hi registers for tile background char address offset to enable hardware scrolling?
+	
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
