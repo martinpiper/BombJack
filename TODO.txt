@@ -123,6 +123,8 @@
 	Y Border shrink works
 	TODO: X border shrink is having maths logic problems. the trigger is in the right place, but it's only triggering for 8 pixels?!
 		U74 U75 U71:A
+		Shrink is now aligned to the block start, need to move the comparison value over for U71.
+		Also will probably need the _256H value to be ORed in to U67:B
 
 	
 	

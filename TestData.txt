@@ -28,19 +28,19 @@ s$20008000
 
 ; Debug colour data for the sphinx that includes colour variation and also tile flips
 s$25008000
-;b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-;b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00,b$01
-;b$40,b$81,b$c2,b$03,b$44,b$85,b$c6,b$07,b$48,b$89,b$ca,b$0b,b$4c,b$8d,b$ce,b$0f
-;b$41,b$82,b$c3,b$04,b$45,b$86,b$c7,b$08,b$49,b$8a,b$cb,b$0c,b$4d,b$8e,b$cf,b$00
-;b$42,b$83,b$c4,b$05,b$46,b$87,b$c8,b$09,b$4a,b$8b,b$cc,b$0d,b$4e,b$8f,b$c0,b$01
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00,b$01
+b$40,b$81,b$c2,b$03,b$44,b$85,b$c6,b$07,b$48,b$89,b$ca,b$0b,b$4c,b$8d,b$ce,b$0f
+b$41,b$82,b$c3,b$04,b$45,b$86,b$c7,b$08,b$49,b$8a,b$cb,b$0c,b$4d,b$8e,b$cf,b$00
+b$42,b$83,b$c4,b$05,b$46,b$87,b$c8,b$09,b$4a,b$8b,b$cc,b$0d,b$4e,b$8f,b$c0,b$01
 
 ; Debug tile data for the sphinx portion of the video RAM
 s$24008000
-b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
-b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
-b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
+b$01,b$01,b$02,b$00,b$04,b$05,b$06,b$07,b$08,b$00,b$0a,b$0b,b$0c,b$0d,b$0e,b$00
+b$01,b$02,b$03,b$04,b$00,b$06,b$07,b$08,b$00,b$0a,b$00,b$0c,b$0d,b$0e,b$00,b$01
+b$01,b$01,b$02,b$03,b$04,b$00,b$06,b$00,b$08,b$09,b$0a,b$00,b$0c,b$00,b$0e,b$0f
+b$01,b$02,b$03,b$04,b$05,b$06,b$00,b$08,b$09,b$0a,b$0b,b$0c,b$00,b$0e,b$0f,b$01
 s$24c08000
 b$01,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$01
@@ -428,7 +428,7 @@ b$27,b$42,b$c0,b$74
 ; Background image enable and index
 d$9e000132
 ; Background image enable and index, shrink border X and Y
-;d$9e0001f2
+d$9e0001f2
 
 d$0
 
