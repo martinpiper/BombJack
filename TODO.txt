@@ -12,7 +12,8 @@
 		With 50ns address access time the sprites render correctly.
 		(See Root sheet 5 with 6116 RAM for sprite spans for an example)
 	* TODO: Split the 2114 RAMs into two or more, based on their low address, to interleave the bit accesses
-		The CE can be interleaved, the address lines for the low parts will need to be hard wired?
+		Might have to latch the address and data to hold the address and data for longer, have 2 or 4 latches?
+		This latches will need to use the low address lines to decide which chip to enable for read/write
 	
 	
 
