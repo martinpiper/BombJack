@@ -215,6 +215,21 @@
 * Background layer (root sheet 7) pixel fine scrolling enable?
 	Could have an extra register $9e01 (l/h nybbles for x/y) that add values 0-15 to the X/Y pixel clock before addressing the background data?
 		This could in effect generate a pixel scrolled background image?
+	* For 6S7 and 5S7 timing
+				cba9876543210 = Address at 4P7R/4P7
+		_SL2	0010010100111
+		4x6MHz clocks
+		_SLOAD	0010110100111
+		4x6MHz clocks
+		_SL2	0010010101000	*
+		4x6MHz clocks			*
+		_SLOAD	0010110101000	*=
+		4x6MHz clocks			*==	One 16x16 tile being loaded, character/tile index then colour
+		_SL2	0010010101000	*=
+		4x6MHz clocks			*
+		_SLOAD	0010110101000	*
+		4x6MHz clocks			*
+		_SL2	0010010101001
 	* Signals that need handling: XXH' and XXV' plus 4H, SLOAD and _SLOAD (which trace back from BIS0)
 		Added new signal prefix BGH for these by copying the logic from root sheet 3
 		Initial tests of the X nybble write seem to indicate success!

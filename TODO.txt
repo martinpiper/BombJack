@@ -1,3 +1,13 @@
+* When running at 6MHz, the target speed, the sprites fail to render correctly.
+	This is because Root sheet 5 4A/4B/4C/4D/ have by default 200ns address access time.
+	They are 4 bit RAMs, obviously the original hardware was slightly exceeding the 166.6 ns timing from the 6MHz clock
+	Verified that if the default 200ns is changed to be 100ns then the sprites start displaying again
+		* It is interesting to the note 8K replacement 6264 RAMs are all 100ns address access time
+	They only use A0-A7 internally
+	Consider using 8 bit RAMs with lower access times instead
+	
+
+
 * Need DigitalDisplay frame recording and verification of displayed frame with recorded frame.
 	Pixel by pixel tests. Can display if the current frame as it is being built up matches the recording, or not.
 	Highlight areas that don't match?
@@ -87,21 +97,7 @@
 	
 	
 * There is also the possibility to allow the horizontal pixel clock and/or the vertical raster position to be read via a latch and suitable address chip enable logic of an 8 bit latch
-	* For 6S7 and 5S7 timing
-			cba9876543210 = Address at 4P7R/4P7
-	_SL2	0010010100111
-	4x6MHz clocks
-	_SLOAD	0010110100111
-	4x6MHz clocks
-	_SL2	0010010101000	*
-	4x6MHz clocks			*
-	_SLOAD	0010110101000	*=
-	4x6MHz clocks			*==	One 16x16 tile being loaded, character/tile index then colour
-	_SL2	0010010101000	*=
-	4x6MHz clocks			*
-	_SLOAD	0010110101000	*
-	4x6MHz clocks			*
-	_SL2	0010010101001
+
 	
 
 
