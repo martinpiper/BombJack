@@ -1,10 +1,19 @@
-* When running at 6MHz, the target speed, the sprites fail to render correctly.
+* When running at VIDCLK 6MHz, the target speed, the sprites fail to render correctly.
 	This is because Root sheet 5 4A/4B/4C/4D/ have by default 200ns address access time.
 	They are 4 bit RAMs, obviously the original hardware was slightly exceeding the 166.6 ns timing from the 6MHz clock
 	Verified that if the default 200ns is changed to be 100ns then the sprites start displaying again
-		* It is interesting to the note 8K replacement 6264 RAMs are all 100ns address access time
+		* It is interesting to note 8K replacement 6264 RAMs are all 100ns address access time
 	They only use A0-A7 internally
 	Consider using 8 bit RAMs with lower access times instead
+	The next viable RAM would be: https://www.jameco.com/z/6116P-70-Major-Brands-IC-6116P-70-CMOS-SRAM-16-384-Bit-2Kx8-70-ns_242675.html
+		This can be simulated and it is still able to be ordered.
+	Running a 12 MHz VIDCLK with 70ns address access time results in some corrupt sprites at their correct positions
+		Running with 10 MHz VIDCLK (49.2 FPS) means the sprites render correctly.
+		With 50ns address access time the sprites render correctly.
+		(See Root sheet 5 with 6116 RAM for sprite spans for an example)
+	* TODO: Split the 2114 RAMs into two or more, based on their low address, to interleave the bit accesses
+		The CE can be interleaved, the address lines for the low parts will need to be hard wired?
+	
 	
 
 
