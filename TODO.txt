@@ -118,16 +118,6 @@
 
 
 
-* Need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
-	U65 has spare two bits 6/7, if 1 then contract the Fair right and bottom borders respectively
-	Y Border shrink works
-	TODO: X border shrink is having maths logic problems. the trigger is in the right place, but it's only triggering for 8 pixels?!
-		U74 U75 U71:A
-		Shrink is now aligned to the block start, need to move the comparison value over for U71.
-		Also will probably need the _256H value to be ORed in to U67:B
-
-	
-	
 * How about lo/hi registers for tile background char address offset to enable hardware scrolling?
 	
 

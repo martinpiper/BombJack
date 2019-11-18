@@ -220,3 +220,9 @@
 		Initial tests of the X nybble write seem to indicate success!
 	* TODO: At this point, could do with a DigitalData wait for edge (for _VBLANK) and output new data code
 	* X and Y pixel scroll logic added
+
+	
+	
+* Need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
+	U65 has spare two bits 6/7, if 1 then contract the Fair right and bottom borders respectively
+	X & Y Border shrink works
