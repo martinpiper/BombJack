@@ -106,10 +106,16 @@ The original schematic uses a 6MHz clock for all the video hardware, as denoted 
 
 However the Proteus simulation uses 1MHz on this signal line, I kept the naming of the line the same as the original schematic however. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
 
+With VIDCLK = 2M
+
+Logic analyser:
+	Display scale 0.2u
+	Capture Resolution 0.2u
+	
 Remember to use:
 
 	System->Set Animation Options
-		Single Step Time: 83n
+		Single Step Time: 250n
 		500n For debugging full clock cycle and pixel clock
 
 

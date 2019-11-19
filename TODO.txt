@@ -15,8 +15,45 @@
 		Might have to latch the address and data to hold the address and data for longer, have 2 or 4 latches?
 		This latches will need to use the low address lines to decide which chip to enable for read/write
 	http://www.cs.smith.edu/~jfrankli/270s02/datasheets/2114.html 
-		No address setup time
+		Note: No address setup time
 	http://www.ukvac.com/forum/bomb-jack-pcb_topic368665.html
+	* TODO: Study the memory, data and WE access patterns to plan for the best strategy
+		From about 1.33 seconds into the simulation will be the middle of the frame
+		Note: VSMDD3 on root sheet 5 setup to record the:
+			Address
+			Byte
+			D24 _write
+			D30 0 = Output pixel data to the screen and clear to ff, 1 = reading/writing sprites
+			D31 _CE
+		Time 1.33
+		Note: 4C4DRecording.txt
+		d$0 indicates _CE and outputting pixels to the screen (Line 1)
+			So the following:
+				d$0100ff08
+				d$01006f08
+				d$00006f08
+				d$0000ff08
+				d$0100ff09
+				d$01006f09
+				d$00006f09
+				d$0000ff09
+			Note the address counts up, reads, then quickly writes ff, note the data is not stable during the _WE
+		d$4 indicates writing sprite data (Line 518)
+			Using TestData.txt "Top left all the same" it's possible to see the same address range 0-f repeatedly being used
+			4D (ID4-7) starts to get 77...
+			4C (ID0-3) still shows ff...
+			So the following:
+				d$4100ff00
+				d$4000ff00
+				d$40007f00
+				d$41007f01
+				d$4100ff01
+				d$4000ff01
+				d$40007f01
+			Indicates that the RAM will consume the written data even after the 6MHz negative edge, basically when it's low
+				However note that the address is stable
+		Perhaps on _WE, the relevant latching address hold and write hold can hold the WE low for the relevant RAM whilst the new address switches to its read mode
+		Once the address switches to read mode the WE is not held low
 		
 	
 
