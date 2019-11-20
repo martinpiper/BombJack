@@ -25,9 +25,10 @@
 			D24 _write
 			D30 0 = Output pixel data to the screen and clear to ff, 1 = reading/writing sprites
 			D31 _CE
-		Time 1.33
+			Clock start time 1.33
 		Note: 4C4DRecording.txt
-		d$0 indicates _CE and outputting pixels to the screen (Line 7085)
+		Note: The first few thousand lines were trimmed to align with the start of the d$4 phase
+		d$0 indicates _CE and outputting pixels to the screen
 			So the following:
 				d$0100ff08
 				d$01006f08
@@ -38,7 +39,7 @@
 				d$00006f09
 				d$0000ff09
 			Note the address counts up, reads, then quickly writes ff, note the data is not stable during the _WE
-		d$4 indicates writing sprite data (Line 2065)
+		d$4 indicates writing sprite data
 			Using TestData.txt "Top left all the same" it's possible to see the same address range 0-f repeatedly being used
 			4D (ID4-7) starts to get 77...
 			4C (ID0-3) still shows ff...
@@ -54,7 +55,21 @@
 				However note that the address is stable
 		Perhaps on _WE, the relevant latching address hold and write hold can hold the WE low for the relevant RAM whilst the new address switches to its read mode
 		Once the address switches to read mode the WE is not held low
-		
+		* In Test2114 project, using the 10MHz VSMDD3 recording only half of the bytes are visible in the 2114s
+		* Now the VSMDD3 clock is at 100MHz, now the 2114s do show both halves are written to.
+			It shows there is some high-frequency interaction going on that needs study.
+			Which is visible in the recordings:
+				d$0000ff00
+				d$0100ff00
+				d$0100ff01
+				and
+				d$40007f00
+				d$41007f00
+				d$41007f01
+			Note the very quick (<10ns) write address 0, then read address 0, then read address 1
+		* 4C4DRecording output pixels.txt
+			Been created to start with pixel output and clear
+
 	
 
 
