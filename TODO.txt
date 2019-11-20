@@ -27,7 +27,7 @@
 			D31 _CE
 		Time 1.33
 		Note: 4C4DRecording.txt
-		d$0 indicates _CE and outputting pixels to the screen (Line 1)
+		d$0 indicates _CE and outputting pixels to the screen (Line 7085)
 			So the following:
 				d$0100ff08
 				d$01006f08
@@ -38,7 +38,7 @@
 				d$00006f09
 				d$0000ff09
 			Note the address counts up, reads, then quickly writes ff, note the data is not stable during the _WE
-		d$4 indicates writing sprite data (Line 518)
+		d$4 indicates writing sprite data (Line 2065)
 			Using TestData.txt "Top left all the same" it's possible to see the same address range 0-f repeatedly being used
 			4D (ID4-7) starts to get 77...
 			4C (ID0-3) still shows ff...
