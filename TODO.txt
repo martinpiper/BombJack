@@ -14,7 +14,7 @@
 	* TODO: Split the 2114 RAMs into two or more, based on their low address, to interleave the bit accesses
 		Might have to latch the address and data to hold the address and data for longer, have 2 or 4 latches?
 		This latches will need to use the low address lines to decide which chip to enable for read/write
-	http://www.cs.smith.edu/~jfrankli/270s02/datasheets/2114.html 
+	http://www.cs.smith.edu/~jfrankli/270s02/datasheets/2114.html
 		Note: No address setup time
 	http://www.ukvac.com/forum/bomb-jack-pcb_topic368665.html
 	* TODO: Study the memory, data and WE access patterns to plan for the best strategy
@@ -77,7 +77,11 @@
 			Solved by adding U77/U78 74273 that use _VIDCLK for CLK to latch the address inputs a short time after the counters have finished
 			Note the recording now shows a stable address lagging behind 21/22 lines (210/220 ns) plenty of time for the signals to settle
 			Visually the output sprite pixels do seem to be a little bit better formed, more regular
-		
+		https://www.mouser.sg/Semiconductors/Logic-ICs/Logic-Comparators/_/N-cbost?P=1z0y33v&Keyword=74ls688&FS=True
+		* Test2114
+			* Done: If 6MHz (reading) and IDA0 and IDA=C0A then bypass memory and output enable U9
+			* TODO: If 6MHz (reading) and IDA0 and IDA!=C0A then use memory, U2 load address and U9 load data, and output enable U9
+			* TODO: If _6MHz (writing) and IDA0 then use memory, memory _WE needs to be held low for longer than _6MHz, U2 load address and U9 load data, and output enable U9
 
 	
 
