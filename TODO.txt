@@ -69,6 +69,15 @@
 			Note the very quick (<10ns) write address 0, then read address 0, then read address 1
 		* 4C4DRecording output pixels.txt
 			Been created to start with pixel output and clear
+		Note however the high frequency variance in address lines:
+			d$41007f01
+			d$41007f03 <<<
+			d$41007f02
+		Probably due to 6C/6D 74163 counters displaying a non-stable ripple output
+			Solved by adding U77/U78 74273 that use _VIDCLK for CLK to latch the address inputs a short time after the counters have finished
+			Note the recording now shows a stable address lagging behind 21/22 lines (210/220 ns) plenty of time for the signals to settle
+			Visually the output sprite pixels do seem to be a little bit better formed, more regular
+		
 
 	
 
