@@ -79,9 +79,9 @@
 			Visually the output sprite pixels do seem to be a little bit better formed, more regular
 		https://www.mouser.sg/Semiconductors/Logic-ICs/Logic-Comparators/_/N-cbost?P=1z0y33v&Keyword=74ls688&FS=True
 		* Test2114
+			* TODO: If _6MHz (writing) and IDA0 then use memory, memory _WE needs to be held low for longer than _6MHz, enable write latch signal, also latch data to write to memory, also U2 load address and U9 load data, and output enable U9 for cached output
 			* Done: If 6MHz (reading) and IDA0 and IDA=C0A then bypass memory and output enable U9
-			* TODO: If 6MHz (reading) and IDA0 and IDA!=C0A then use memory, U2 load address and U9 load data, and output enable U9
-			* TODO: If _6MHz (writing) and IDA0 then use memory, memory _WE needs to be held low for longer than _6MHz, U2 load address and U9 load data, and output enable U9
+			* TODO: If 6MHz (reading) and IDA0 and IDA!=C0A then use memory, bypass U2 and U9, select raw memory signal 74257, reset any write latch for memory and output enable select memory
 
 	
 
