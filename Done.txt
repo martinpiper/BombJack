@@ -241,3 +241,138 @@
 * Need some extra logic (and control bit) to hide the gaps behind slightly contracted borders (just like the C64)
 	U65 has spare two bits 6/7, if 1 then contract the Fair right and bottom borders respectively
 	X & Y Border shrink works
+
+
+
+
+
+* When running at VIDCLK 6MHz, the target speed, the sprites fail to render correctly.
+	This is because Root sheet 5 4A/4B/4C/4D/ have by default 200ns address access time.
+	They are 4 bit RAMs, obviously the original hardware was slightly exceeding the 166.6 ns timing from the 6MHz clock
+	Verified that if the default 200ns is changed to be 100ns then the sprites start displaying again
+		* It is interesting to note 8K replacement 6264 RAMs are all 100ns address access time
+	They only use A0-A7 internally
+	Consider using 8 bit RAMs with lower access times instead
+	The next viable RAM would be: https://www.jameco.com/z/6116P-70-Major-Brands-IC-6116P-70-CMOS-SRAM-16-384-Bit-2Kx8-70-ns_242675.html
+		This can be simulated and it is still able to be ordered.
+	Running a 12 MHz VIDCLK with 70ns address access time results in some corrupt sprites at their correct positions
+		Running with 10 MHz VIDCLK (49.2 FPS) means the sprites render correctly.
+		With 50ns address access time the sprites render correctly.
+		(See Root sheet 5 with 6116 RAM for sprite spans for an example)
+	* TODO: Split the 2114 RAMs into two or more, based on their low address, to interleave the bit accesses
+		Might have to latch the address and data to hold the address and data for longer, have 2 or 4 latches?
+		This latches will need to use the low address lines to decide which chip to enable for read/write
+	http://www.cs.smith.edu/~jfrankli/270s02/datasheets/2114.html
+		Note: No address setup time
+	http://www.ukvac.com/forum/bomb-jack-pcb_topic368665.html
+	* TODO: Study the memory, data and WE access patterns to plan for the best strategy
+		From about 1.33 seconds into the simulation will be the middle of the frame
+		Note: VSMDD3 on root sheet 5 setup to record the:
+			Address
+			Byte
+			D24 _write
+			D30 0 = Output pixel data to the screen and clear to ff, 1 = reading/writing sprites
+			D31 _CE
+			Clock start time 1.33
+		Note: 4C4DRecording.txt
+		Note: The first few thousand lines were trimmed to align with the start of the d$4 phase
+		d$0 indicates _CE and outputting pixels to the screen
+			So the following:
+				d$0100ff08
+				d$01006f08
+				d$00006f08
+				d$0000ff08
+				d$0100ff09
+				d$01006f09
+				d$00006f09
+				d$0000ff09
+			Note the address counts up, reads, then quickly writes ff, note the data is not stable during the _WE
+		d$4 indicates writing sprite data
+			Using TestData.txt "Top left all the same" it's possible to see the same address range 0-f repeatedly being used
+			4D (ID4-7) starts to get 77...
+			4C (ID0-3) still shows ff...
+			So the following:
+				d$4100ff00
+				d$4000ff00
+				d$40007f00
+				d$41007f01
+				d$4100ff01
+				d$4000ff01
+				d$40007f01
+			Indicates that the RAM will consume the written data even after the 6MHz negative edge, basically when it's low
+				However note that the address is stable
+		Perhaps on _WE, the relevant latching address hold and write hold can hold the WE low for the relevant RAM whilst the new address switches to its read mode
+		Once the address switches to read mode the WE is not held low
+		* In Test2114 project, using the 10MHz VSMDD3 recording only half of the bytes are visible in the 2114s
+		* Now the VSMDD3 clock is at 100MHz, now the 2114s do show both halves are written to.
+			It shows there is some high-frequency interaction going on that needs study.
+			Which is visible in the recordings:
+				d$0000ff00
+				d$0100ff00
+				d$0100ff01
+				and
+				d$40007f00
+				d$41007f00
+				d$41007f01
+			Note the very quick (<10ns) write address 0, then read address 0, then read address 1
+		* 4C4DRecording output pixels.txt
+			Been created to start with pixel output and clear
+		Note however the high frequency variance in address lines:
+			d$41007f01
+			d$41007f03 <<<
+			d$41007f02
+		Probably due to 6C/6D 74163 counters displaying a non-stable ripple output
+			Solved by adding U77/U78 74273 that use _VIDCLK for CLK to latch the address inputs a short time after the counters have finished
+				See StableSpriteScanAddress.png
+			Note the recording now shows a stable address lagging behind 21/22 lines (210/220 ns) plenty of time for the signals to settle
+			Visually the output sprite pixels do seem to be a little bit better formed, more regular
+			Unfortunately, this latch lag means even VIDCLK at 4MHz shows the "purple bars" corruption, due to the late arriving address compared to the data
+			Without the "fix" at 4MHz the sprites display correctly.
+		https://www.mouser.sg/Semiconductors/Logic-ICs/Logic-Comparators/_/N-cbost?P=1z0y33v&Keyword=74ls688&FS=True
+		* Test2114
+			* TODO: If _6MHz (writing) and IDA0 then use memory, memory _WE needs to be held low for longer than _6MHz, enable write latch signal, also latch data to write to memory, also U2 load address and U9 load data, and output enable U9 for cached output
+			* Done: If 6MHz (reading) and IDA0 and IDA=C0A then bypass memory and output enable U9
+			* TODO: If 6MHz (reading) and IDA0 and IDA!=C0A then use memory, bypass U2 and U9, select raw memory signal 74257, reset any write latch for memory and output enable select memory
+		* Going back to testing the 2114 chip access timing profile:
+			With the Proteus defaults then 6M is about the limit, whoever using 2114AL-1 values ( http://www.cs.smith.edu/~jfrankli/270s02/datasheets/2114.html )
+				{TAA=100ns}
+				{TCE=70ns}
+				{TOE=10ns}
+				{TOD=30ns}
+				{TWP=75ns}
+			Then 8M is the limit (with a single pixel vertical line duplicating the background near the right hand edge)
+			With 9MHz no sprite data is visible, then changing to use:
+				{TAA=100ns}
+				{TCE=10ns}
+				{TOE=10ns}
+				{TOD=10ns}
+				{TWP=10ns}
+				There are only some bad pixels, but hardly anything visible.
+				Instead changing to use:
+				{TAA=75ns}
+				{TCE=70ns}
+				{TOE=10ns}
+				{TOD=30ns}
+				{TWP=75ns}
+				All sprites are visible correctly again. It seems as though the TAA access time is what is important.
+				The above takes the VIDCLK up to 10.5M. At 11M there is a purple vertical bar near the top left edge, but most sprites are still visible.
+				At 11M using:
+				{TAA=70ns}
+				{TCE=50ns}
+				{TOE=10ns}
+				{TOD=30ns}
+				{TWP=75ns}
+				All sprites are correct.
+				At 12M some sprites display doubling or missing line corruption.
+				Using this:
+				{TAA=60ns}
+				{TCE=50ns}
+				{TOE=10ns}
+				{TOD=30ns}
+				{TWP=75ns}
+				All sprites are fine at 12M = 59.2 fps
+				10.1M = 49.8 fps
+			Back to 2MHz and all is well. Test2114 indicates that a write through caching version of a 2114 would work as a daughter board to the 2114 socket, if needed.
+			The unstable addresses from the counters could be handled by more than two cached lines. In the real hardware they may cause spurious reads or writes in the RAMs.
+			So for now continue to assume that modern real world 2114s are as fast as those used in the original hardware decades ago.
+			The Proteus 2114 model could do with some checks to see how fast it really can write according to finely controlled timings.
