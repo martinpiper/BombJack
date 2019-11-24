@@ -376,3 +376,7 @@
 			The unstable addresses from the counters could be handled by more than two cached lines. In the real hardware they may cause spurious reads or writes in the RAMs.
 			So for now continue to assume that modern real world 2114s are as fast as those used in the original hardware decades ago.
 			The Proteus 2114 model could do with some checks to see how fast it really can write according to finely controlled timings.
+
+			
+			
+* Use the DigitalData negative edge wait to add a horizontal scroll test

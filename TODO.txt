@@ -1,3 +1,8 @@
+* https://www.romhacking.net/utilities/641/
+	https://opengameart.org/content/rpg-town-pixel-art-assets
+	C:\Users\Martin Piper\Downloads\town_rpg_pack\town_rpg_pack
+	
+
 * Need DigitalDisplay frame recording and verification of displayed frame with recorded frame.
 	Pixel by pixel tests. Can display if the current frame as it is being built up matches the recording, or not.
 	Highlight areas that don't match?
