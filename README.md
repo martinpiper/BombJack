@@ -26,6 +26,10 @@ If you have Proteus setup with the digital display model, you should see a scree
 
 ![Screenshot](Capture.PNG?raw=true "Screenshot")
 
+The new hardware scrolling registers also work well:
+
+![animation](output/debug.gif?raw=true "animation")
+
 ### High level schematic sheets
 
 The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
