@@ -1,3 +1,7 @@
+* Double check the exact input clock rate and logic with the original schematic for running at the required frame rate
+
+
+
 * https://www.romhacking.net/utilities/641/
 	https://opengameart.org/content/rpg-town-pixel-art-assets
 	C:\Users\Martin Piper\Downloads\town_rpg_pack\town_rpg_pack
