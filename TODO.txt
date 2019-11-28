@@ -1,6 +1,15 @@
-* Double check the exact input clock rate and logic with the original schematic for running at the required frame rate
+* With faster sprite RAMs being used, it might be possible to expand the horizontal resolution of the whole screen to be 512 pixels :D
+	Extra bytes would be needed, $9900 or $9a00 and extra 2114 RAMs to load in parallel to the high-X pos value load per sprite
 
 
+		
+		
+* Disable 5F and the screen fills with sprite data, this obviously disables the Y pos range check.
+	This could be easily configured with a sprite Y pos test register bit to allow full height sprites with repeating patterns.
+	3E/3F are the sprite register RAMs, it's possible to read extra data from $9900- and an extra RAM to feed this daft idea cheaply
+
+
+	
 
 * https://www.romhacking.net/utilities/641/
 	https://opengameart.org/content/rpg-town-pixel-art-assets
