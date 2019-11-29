@@ -4,6 +4,14 @@
 	At 24.192MHz then 3E and 3F need to be made faster, replace with 6116 instead?
 	The timing for sprite register colours is quite tight though. Also there is going to be extra memory needed for the char screens.
 	Reverted the change for now, needs more pondering.
+	* First change all references to *256H* to be *512H*
+	* Then create the _512H to 512H circuit
+	* And tackle the HBLANK timing test
+	* Tweak background address lines to reduce the number of screen but increase the horizontal resolution using 256H/512H as appropriate
+	* Add extra sprite scan address line
+	* Add extra sprite registers address lines
+	* Add extra byte for MSB for each sprite from $9900, to be loaded when the sprite X pos is loaded
+	
 
 
 		
