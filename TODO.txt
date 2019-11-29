@@ -1,16 +1,22 @@
 * With faster sprite RAMs being used, it might be possible to expand the horizontal resolution of the whole screen to be 512 pixels :D
 	Extra bytes would be needed, $9900 or $9a00 and extra 2114 RAMs to load in parallel to the high-X pos value load per sprite
+		Maybe use bit 4 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?
 	Initial tests of adding an extra bit to the H values works quite well.
 	At 24.192MHz then 3E and 3F need to be made faster, replace with 6116 instead?
 	The timing for sprite register colours is quite tight though. Also there is going to be extra memory needed for the char screens.
 	Reverted the change for now, needs more pondering.
 	* First change all references to *256H* to be *512H*
+	* Change *ZZZH* to *512H*
 	* Then create the _512H to 512H circuit
 	* And tackle the HBLANK timing test
 	* Tweak background address lines to reduce the number of screen but increase the horizontal resolution using 256H/512H as appropriate
 	* Add extra sprite scan address line
 	* Add extra sprite registers address lines
 	* Add extra byte for MSB for each sprite from $9900, to be loaded when the sprite X pos is loaded
+	* 6LM6 6116 needs to be a 6264 for the AB11 and to use 256H' the lower address bits will need to be shifted up
+	* Test project: Bomb Jack 512x256 test 48 sprites.pdsprj
+	* Sprite and char screen logic done
+	* TODO: Tile screen logic, there will need to be some 256H handling to addresses as it is currently missing
 	
 
 
@@ -19,6 +25,7 @@
 * Disable 5F and the screen fills with sprite data, this obviously disables the Y pos range check.
 	This could be easily configured with a sprite Y pos test register bit to allow full height sprites with repeating patterns.
 	3E/3F are the sprite register RAMs, it's possible to read extra data from $9900- and an extra RAM to feed this daft idea cheaply
+	Maybe use bit 5 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?
 
 
 	

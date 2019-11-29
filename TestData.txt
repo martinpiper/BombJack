@@ -228,6 +228,32 @@ b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 s$97000100
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 
+
+; For the 512x256 test only
+; Write screen data into RAM mapped at $8000 with EBS $01
+s$80800100
+; Screen data
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+s$81500100
+b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
+s$85600100
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+s$86700100
+b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
+
+; Write colour data into RAM mapped at $8800 with EBS $01
+; Colour data
+s$88800100
+; Demonstrating various flips and also the extended character set using hi-nybble 1/2
+b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
+s$89500100
+b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$8d600100
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$8e700100
+b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+
+
 ; Write some debug character set data from the C64
 ; This shows the screen orientation wrt to the pixel data in RAM is as expected.
 ; VSMDD1 then does not need the rotation flag set. Using WIDTH=768 and HEIGHT=384 also helps with the aspect ratio
@@ -330,6 +356,37 @@ b$25,b$42,b$80,b$52
 b$26,b$42,b$c8,b$63
 b$27,b$42,b$c0,b$74
 
+
+; Extra sprite register data, for 48 sprite tests with 512x256 resolution, with proposed MSB bit set (0x10)
+b$1f,b$10,b$10,b$40
+b$1f,b$51,b$21,b$41
+b$1f,b$92,b$32,b$42
+b$1f,b$d3,b$43,b$43
+
+b$1f,b$10,b$20,b$50
+b$1f,b$51,b$31,b$51
+b$1f,b$92,b$42,b$52
+b$1f,b$d3,b$53,b$53
+
+b$1f,b$10,b$30,b$60
+b$1f,b$51,b$41,b$61
+b$1f,b$92,b$52,b$62
+b$1f,b$d3,b$63,b$63
+
+b$1f,b$10,b$40,b$70
+b$1f,b$51,b$51,b$71
+b$1f,b$92,b$62,b$72
+b$1f,b$d3,b$73,b$73
+
+b$1f,b$10,b$50,b$80
+b$1f,b$51,b$61,b$81
+b$1f,b$92,b$72,b$82
+b$1f,b$d3,b$83,b$83
+
+b$1f,b$10,b$60,b$90
+b$1f,b$51,b$71,b$91
+b$1f,b$92,b$82,b$92
+b$1f,b$d3,b$93,b$93
 
 
 ; Top left all the same
