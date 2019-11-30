@@ -1,3 +1,8 @@
+* Using the scope, measure the _VSYNC and _HSYNC timings and compare between the original at 12.096 MHz and the higher resolution version at 24.192 MHz
+
+
+
+
 * With faster sprite RAMs being used, it might be possible to expand the horizontal resolution of the whole screen to be 512 pixels :D
 	Extra bytes would be needed, $9900 or $9a00 and extra 2114 RAMs to load in parallel to the high-X pos value load per sprite
 		Maybe use bit 4 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?
@@ -16,7 +21,8 @@
 	* 6LM6 6116 needs to be a 6264 for the AB11 and to use 256H' the lower address bits will need to be shifted up
 	* Test project: Bomb Jack 512x256 test 48 sprites.pdsprj
 	* Sprite and char screen logic done
-	* TODO: Tile screen logic, there will need to be some 256H handling to addresses as it is currently missing
+	* Done: Tile screen logic, there will need to be some 256H handling to addresses as it is currently missing
+	* TODO: Instead of VIDCLK = 24.192 MHz going tinto the 3T:A 7474, could instead use VIDCLK directly into 4T
 	
 
 

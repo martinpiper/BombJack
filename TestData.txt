@@ -23,15 +23,27 @@ d$9e010100
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
 
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
+;s$20008000
+;<0,1,2,3,4,5,6,7,<02_p04t.bin
+
+; For the higher resolution test, this copies the relevant data into the new positions
 s$20008000
-<0,1,2,3,4,5,6,7,<02_p04t.bin
+<0,1,2,3,4,5,6,7,@$400,>$100,<02_p04t.bin
+s$21008000
+<0,1,2,3,4,5,6,7,@$400,>$100,<02_p04t.bin
+s$22008000
+<0,1,2,3,4,5,6,7,@$500,>$100,<02_p04t.bin
+s$23008000
+<0,1,2,3,4,5,6,7,@$500,>$100,<02_p04t.bin
+
 ; This fills the remaining 4K of RAM
 ;<0,1,2,3,4,5,6,7,<02_p04t.bin
+
 ; This duplicates the sphinx screen, but in the next banks shifted left left one tile each time
-s$26008000
-<0,1,2,3,4,5,6,7,@$401,>$200,<02_p04t.bin
-s$28008000
-<0,1,2,3,4,5,6,7,@$402,>$200,<02_p04t.bin
+;s$26008000
+;<0,1,2,3,4,5,6,7,@$401,>$200,<02_p04t.bin
+;s$28008000
+;<0,1,2,3,4,5,6,7,@$402,>$200,<02_p04t.bin
 
 ; Debug colour data for the sphinx that includes colour variation and also tile flips
 ;s$25008000
@@ -499,6 +511,7 @@ b$1f,b$d3,b$93,b$93
 ; Background image enable and index
 d$9e000132
 ;d$9e000133
+d$9e000130
 
 d$0
 
