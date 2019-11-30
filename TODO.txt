@@ -1,4 +1,24 @@
-* Using the scope, measure the _VSYNC and _HSYNC timings and compare between the original at 12.096 MHz and the higher resolution version at 24.192 MHz
+* Using the logic analyser, measure the _VSYNC and _HSYNC timings and compare between the original at 12.096 MHz and the higher resolution version at 24.192 MHz
+	A2	_HSYNC
+	A3	_VSYNC
+	A5	VBLANK
+	Logic analyser capture on _VSYNC (A3) positive edge
+	Using 2u capture resolution.
+	From the original schematic:
+	First A3 negative edge 16.25 mS
+	Next A3 negative edge 33.02 mS
+	First A5 negative edge 1.02 mS
+	Next A5 positive edge 15.24 mS
+	Next A5 negative edge 17.78 mS
+	A5 positive edge to negative edge 2.54 mS
+	A3 positive edge to A5 negative edge 1.02 mS
+		A2 negative edges between 16
+	A2 negative pulse length 16 us
+	Negative edge A5 to negative edge A2 8 uS
+	A2 positive edge to positive edge 64 uS
+	
+	
+	
 
 
 
