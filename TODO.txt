@@ -1,28 +1,3 @@
-* Using the logic analyser, measure the _VSYNC and _HSYNC timings and compare between the original at 12.096 MHz and the higher resolution version at 24.192 MHz
-	A2	_HSYNC
-	A3	_VSYNC
-	A5	VBLANK
-	Logic analyser capture on _VSYNC (A3) positive edge
-	Using 2u capture resolution.
-	From the original schematic:
-	First A3 negative edge 16.25 mS
-	Next A3 negative edge 33.02 mS
-	First A5 negative edge 1.02 mS
-	Next A5 positive edge 15.24 mS
-	Next A5 negative edge 17.78 mS
-	A5 positive edge to negative edge 2.54 mS
-	A3 positive edge to A5 negative edge 1.02 mS
-		A2 negative edges between 16
-	A2 negative pulse length 16 us
-	Negative edge A5 to negative edge A2 8 uS
-	A2 positive edge to positive edge 64 uS
-	
-	
-	
-
-
-
-
 * With faster sprite RAMs being used, it might be possible to expand the horizontal resolution of the whole screen to be 512 pixels :D
 	Extra bytes would be needed, $9900 or $9a00 and extra 2114 RAMs to load in parallel to the high-X pos value load per sprite
 		Maybe use bit 4 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?
