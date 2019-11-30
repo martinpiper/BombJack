@@ -18,7 +18,8 @@
 	* Sprite and char screen logic done
 	* Done: Tile screen logic, there will need to be some 256H handling to addresses as it is currently missing
 	* TODO: Instead of VIDCLK = 24.192 MHz going tinto the 3T:A 7474, could instead use VIDCLK directly into 4T
-	
+	* Done: Sprite register 3E/3F loading address is different in hires compared to lores?
+		Yes, they start at $9840 not $9820 according to the logic analyser
 
 
 		

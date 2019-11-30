@@ -428,12 +428,51 @@ b$0c,b$0f
 
 ; Write sprite register data into RAM mapped at $9820 with EBS $01
 s$98200100
+; Hires mode sprite registers start at $9840
+s$98400100
+
 
 ; Byte ordering
 ; frame
 ; palette
+; Rotated
 ; x
 ; y
+; Normal
+; y (inverted)
+; x
+
+; Top middle of normal screen, all the same frame, palette and flips
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+;b$14,b$04,b$80,b$00
+
 
 ; Spread out all over the screen
 b$28,b$01,b$38,b$10
@@ -500,7 +539,7 @@ b$1f,b$92,b$82,b$92
 b$1f,b$d3,b$93,b$93
 
 
-; Top left all the same
+; Top left of rotated screen, all the same
 ;b$14,b$40,b$10,b$00
 ;b$15,b$43,b$10,b$00
 ;b$16,b$40,b$10,b$00
@@ -620,168 +659,169 @@ d$0
 d$9e0001f2
 d$0
 
+; 32 frames of animation
 ; This also tests the EBS bus sharing model
 ; Wait for _VBLANK and scroll the screen in the horizontal direction (rotated screen means it looks like a vertical scroll)
 ^-$01
 d$9e010111
-; Also start moving a sprite, the strange palette Bomb Jack character above the three birds near the top left
-d$98220139
+; Also start moving a sprite
+d$98420139
 b$11
 d$0
 ^-$01
 d$9e010122
-d$9822013a
+d$9842013a
 b$12
 d$0
 ^-$01
 d$9e010133
-d$9822013b
+d$9842013b
 b$13
 d$0
 ^-$01
 d$9e010144
-d$9822013c
+d$9842013c
 b$14
 d$0
 ^-$01
 d$9e010155
-d$9822013d
+d$9842013d
 b$15
 d$0
 ^-$01
 d$9e010166
-d$9822013e
+d$9842013e
 b$16
 d$0
 ^-$01
 d$9e010177
-d$9822013f
+d$9842013f
 b$17
 d$0
 ^-$01
 d$9e010188
-d$98220140
+d$98420140
 b$18
 d$0
 ^-$01
 d$9e010199
-d$98220141
+d$98420141
 b$19
 d$0
 ^-$01
 d$9e0101aa
-d$98220142
+d$98420142
 b$1a
 d$0
 ^-$01
 d$9e0101bb
-d$98220143
+d$98420143
 b$1b
 d$0
 ^-$01
 d$9e0101cc
-d$98220144
+d$98420144
 b$1c
 d$0
 ^-$01
 d$9e0101dd
-d$98220145
+d$98420145
 b$1d
 d$0
 ^-$01
 d$9e0101ee
-d$98220146
+d$98420146
 b$1e
 d$0
 ^-$01
 d$9e0101ff
-d$98220147
+d$98420147
 b$1f
 d$0
 ^-$01
 d$9e0001f3	; Next screen bank
 d$9e0101e0
-d$98220148
+d$98420148
 b$20
 d$0
 ^-$01
 d$9e0101d1
-d$98220149
+d$98420149
 b$21
 d$0
 ^-$01
 d$9e0101c2
-d$98220149
+d$98420149
 b$21
 d$0
 ^-$01
 d$9e0101b3
-d$9822014a
+d$9842014a
 b$22
 d$0
 ^-$01
 d$9e0101a4
-d$9822014b
+d$9842014b
 b$21
 d$0
 ^-$01
 d$9e010195
-d$9822014c
+d$9842014c
 b$22
 d$0
 ^-$01
 d$9e010186
-d$9822014d
+d$9842014d
 b$23
 d$0
 ^-$01
 d$9e010177
-d$9822014e
+d$9842014e
 b$24
 d$0
 ^-$01
 d$9e010168
-d$9822014f
+d$9842014f
 b$25
 d$0
 ^-$01
 d$9e010159
-d$98220150
+d$98420150
 b$26
 d$0
 ^-$01
 d$9e01014a
-d$98220151
+d$98420151
 b$27
 d$0
 ^-$01
 d$9e01013b
-d$98220152
+d$98420152
 b$28
 d$0
 ^-$01
 d$9e01012c
-d$98220153
+d$98420153
 b$29
 d$0
 ^-$01
 d$9e01011d
-d$98220154
+d$98420154
 b$2a
 d$0
 ^-$01
 d$9e01010e
-d$98220155
+d$98420155
 b$2b
 d$0
 ^-$01
 d$9e01010f
-d$98220156
+d$98420156
 b$2c
 d$0
 ^-$01
 d$9e0001f4	; Next screen bank
 d$9e010100
-d$98220157
+d$98420157
 b$2d
 d$0
