@@ -17,12 +17,35 @@
 	* Test project: Bomb Jack 512x256 test 48 sprites.pdsprj
 	* Sprite and char screen logic done
 	* Done: Tile screen logic, there will need to be some 256H handling to addresses as it is currently missing
-	* TODO: Instead of VIDCLK = 24.192 MHz going tinto the 3T:A 7474, could instead use VIDCLK directly into 4T
+	* TODO: Instead of VIDCLK = 24.192 MHz going into the 3T:A 7474, could instead use VIDCLK directly into 4T
 	* Done: Sprite register 3E/3F loading address is different in hires compared to lores?
 		Yes, they start at $9840 not $9820 according to the logic analyser
+	* 6264
+		https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D
+		https://www.mouser.sg/datasheet/2/12/Alliance%20Memory_64K_AS6C6264v2.0July2017-1144693.pdf
+		{TAA=55ns}
+		{TCE=55ns}
+		{TOE=30ns}
+		{TOD=20ns}
+		{TWP=45ns}
+	Created 2114FAST, 6116FAST and 6264FAST to reflect timings in datasheets and empirical values for 2114
+	* Done - 3E/3F could use one 6116 instead
+	* TODO: There is a strange sprite colour corruption when running at VIDCLK = 24 MHz
+		Output from 7E and input to 6E matches
+		Output from 6M MV0-3 is sometimes out of sync
+			Tried configuring very fast RAMs 7JR 7LR 7MR did not fix the issue
+			TODO: Signals going into the above RAMs? Use VSMDD5
 
 
-		
+
+* Update the standard resolution schematic to use 2114FAST, 6116FAST and 6264FAST
+	Test with 12.096 MHz VIDCLK
+
+	
+	
+* Standard resolution: 3E/3F could use one 6116 instead
+
+
 		
 * Disable 5F and the screen fills with sprite data, this obviously disables the Y pos range check.
 	This could be easily configured with a sprite Y pos test register bit to allow full height sprites with repeating patterns.
