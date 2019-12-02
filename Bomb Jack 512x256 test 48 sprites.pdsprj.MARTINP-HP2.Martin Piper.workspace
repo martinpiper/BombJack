@@ -327,7 +327,7 @@
      <ITEM name="DispFormat">2</ITEM>
      <ITEM name="ShowChanges">Yes</ITEM>
      <ITEM name="ShowToolTips">Yes</ITEM>
-     <ITEM name="TopLineAddress">00000000</ITEM>
+     <ITEM name="TopLineAddress">00001F00</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="16" x="58" flags="0000000a" y="149" h="16" pid="1" iid="374">
@@ -380,7 +380,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="1336" flags="0000000b" y="427" h="16" pid="1" iid="283">
+   <POPUP w="16" x="1336" flags="0000000a" y="427" h="16" pid="1" iid="283">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
