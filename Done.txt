@@ -488,3 +488,8 @@
 								5R or 5S late/wrong at high speed? Disable and test. Does not seem to fix the issue.
 				C9..12 are sometimes late, but no wrong signals detected
 	* TODO: At the moment it looks like the timing is too tight for 512x256 hires
+
+	
+	
+* Update the standard resolution schematic to use 2114FAST, 6116FAST and 6264FAST
+	Test with 12.096 MHz VIDCLK

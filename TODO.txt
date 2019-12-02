@@ -1,8 +1,3 @@
-* Update the standard resolution schematic to use 2114FAST, 6116FAST and 6264FAST
-	Test with 12.096 MHz VIDCLK
-
-	
-	
 * Standard resolution: 3E/3F could use one 6116 instead
 
 
