@@ -497,3 +497,10 @@
 	
 	
 * Standard resolution: 3E/3F could use one 6116 instead
+
+
+
+* Disable 5F and the screen fills with sprite data, this obviously disables the Y pos range check.
+	This could be easily configured with a sprite Y pos test register bit to allow full height sprites with repeating patterns.
+	3E/3F are the sprite register RAMs, it's possible to read extra data from $9900- and an extra RAM to feed this daft idea cheaply
+	Maybe use bit 5 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?

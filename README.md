@@ -2,7 +2,7 @@
 
 This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 
-The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability, X and Y pixel scroll logic added etc.
+The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability, X and Y pixel scroll logic added, full screen height sprites etc.
 
 ## Background
 
@@ -94,9 +94,10 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 		The tile code for the sprite, used to look up the sprite’s image bitplanes in the tile ROMs
 		(MAME Emu documentation is wrong, bit 7 has nothing to do with selecting double size mode)
 
-	Byte 1: HV..CCCC
+	Byte 1: HVF.CCCC
 		Bit 7: H : If set, the sprite is horizontally flipped
 		Bit 6: V : If set, the sprite is vertically flipped
+		But 5: F : If set, the sprite is full screen height. The sprite data will repeat.
 		Bits 3..0: C : 4 bits to provide the colour value for the tile decoder
 
 	Byte 2: The sprite’s X position on screen
