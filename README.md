@@ -2,7 +2,14 @@
 
 This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 
-The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as addressable RAM instead of ROMs, extra display blanking capability, X and Y pixel scroll logic added, full screen height sprites etc.
+The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as:
+
+	* Addressable RAM instead of ROMs
+	* Extra display blanking capability
+	* Tile X/Y pixel scroll
+	* Tile X/Y offset, useful for fast hardware scrolling
+	* Full screen height sprites
+	* Background colour select (Can be rapidly updated during the frame for plasma effects)
 
 ## Background
 
@@ -36,9 +43,8 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 
 1. Logic analyser, virtual video display model, expansion bus header, data generator
 	1. Memory selection logic based on external address bus
-	2. Debug button for the spare background plane selection
-	3. VSMDD2 is a replacement for the Proteus data generators because they have a 1024 byte limit. Proteus VSM project source: https://github.com/martinpiper/DigitalData
-	4. EXPANSIONBUS, EXPANSIONBUS2 and EXPANSIONBUS3 all relate to the C64 user port to 24 bit address logic in the project: UserPortTo24BitAddress.pdsprj
+	2. VSMDD2 is a replacement for the Proteus data generators because they have a 1024 byte limit. Proteus VSM project source: https://github.com/martinpiper/DigitalData
+	3. EXPANSIONBUS, EXPANSIONBUS2 and EXPANSIONBUS3 all relate to the C64 user port to 24 bit address logic in the project: UserPortTo24BitAddress.pdsprj
 2. Intentionally left blank, the original schematic has dip switch logic
 3. Video timing
 	1. Horizontal video signal generation
@@ -145,6 +151,8 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable, index, borders |
    | $01           | Original RAMs                 | $9e01                | Background image X/Y pixel scroll       |
+   | $01           | Original RAMs                 | $9e02                | Background image X/Y scroll             |
+   | $01           | Original RAMs                 | $9e03                | Background colour select                |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | Note 2 spare  |                               |                      |                                         |

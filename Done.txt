@@ -504,3 +504,15 @@
 	This could be easily configured with a sprite Y pos test register bit to allow full height sprites with repeating patterns.
 	3E/3F are the sprite register RAMs, it's possible to read extra data from $9900- and an extra RAM to feed this daft idea cheaply
 	Maybe use bit 5 from "Byte 1: HV..CCCC" for this? 6E or 7E could latch it?
+
+	
+	
+* Last plane, it's a latch for pixel colour from palette
+	Can up dated during screen time by a copper
+	Use similar for $01 $9e03 to store this?
+	* Added U81 for BBCL0-7
+
+	
+	
+* 4 bit adds for tile plane ($9e02)
+	The demo has been updated to use this instead of duplicating the screen data in different banks with a shift

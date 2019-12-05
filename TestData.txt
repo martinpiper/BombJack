@@ -12,18 +12,23 @@ d0
 ; Write data from into RAM mapped at $9e00 with EBS $01
 d$9e000112
 
-
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010177
 d$9e0101ff
 ; No scroll position
 d$9e010100
 
+; Tile X/Y position offset
+d$9e020100
+
+; Clear background palette choice
+d$9e030100
 
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
 
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
+; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
 s$20008000
 <0,1,2,3,4,5,6,7,<02_p04t.bin
 
@@ -138,12 +143,6 @@ s$20008000
 
 ; This fills the remaining 4K of RAM
 ;<0,1,2,3,4,5,6,7,<02_p04t.bin
-
-; This duplicates the sphinx screen, but in the next banks shifted left left one tile each time
-s$26008000
-<0,1,2,3,4,5,6,7,@$401,>$200,<02_p04t.bin
-s$28008000
-<0,1,2,3,4,5,6,7,@$402,>$200,<02_p04t.bin
 
 ; Debug colour data for the sphinx that includes colour variation and also tile flips
 ;s$25008000
@@ -654,6 +653,24 @@ d$9e000132
 ;d$9e000134
 ;d$9e000130
 
+
+
+; This tests the tile screen disable followed by rapid background colour changes
+; TODO: Need wait for X/Y pos in DigitalData
+;d$9e000120
+;d$9e030102
+;d$9e030103
+;d$9e030104
+;d$9e030105
+;d$9e030106
+;d$9e030107
+;d$9e030108
+;d$9e030109
+
+
+
+
+
 d$0
 
 ; Wait for _VBLANK and shrink borders
@@ -666,25 +683,49 @@ d$98420139
 b$11
 d$0
 
+; Very quick hardware scroll test with BG colour change
+;^-$01
+;d$0
+;d$9e020111
+;d$9e030102
+;d$0
+;^-$01
+;d$0
+;d$9e020188
+;d$9e030103
+;d$0
+;^-$01
+;d$0
+;d$9e0201c4
+;d$9e030104
+;d$0
+;^-$01
+;d$0
+;d$9e0201ff
+;d$9e030105
+;d$0
 
-; Very quick scroll test
+; Very quick sub-tile scroll test
+;^-$01
+;d$0
+;d$9e0001f2
+;d$9e010108
+;d$9e020100
+;d$9e030100
+;d$0
+;^-$01
+;d$0
+;d$9e010100
+;d$9e020101
+;d$0
 ;^-$01
 ;d$0
 ;d$9e010108
 ;d$0
 ;^-$01
 ;d$0
-;d$9e0001f3
 ;d$9e010100
-;d$0
-;^-$01
-;d$0
-;d$9e010108
-;d$0
-;^-$01
-;d$0
-;d$9e0001f4
-;d$9e010100
+;d$9e020102
 ;d$0
 ;^-$01
 ;d$0
@@ -697,11 +738,16 @@ d$0
 ;d$0
 
 
-; 32 frames of animation
+; 48 frames of animation
 ; This also tests the EBS bus sharing model
 ; Wait for _VBLANK and scroll the screen in the horizontal direction (rotated screen means it looks like a vertical scroll)
 ^-$01
 d$0
+d$9e0001f2
+d$9e010108
+d$9e020100
+d$9e030100
+
 d$9e010111
 d$98420139
 b$11
@@ -792,8 +838,9 @@ b$1f
 d$0
 ^-$01
 d$0
-d$9e0001f3	; Next screen bank
+;d$9e0001f3	; Next screen bank
 d$9e0101e0
+d$9e020101	; Next tile over
 d$98420148
 b$20
 d$0
@@ -889,8 +936,9 @@ b$2c
 d$0
 ^-$01
 d$0
-d$9e0001f4	; Next screen bank
+;d$9e0001f4	; Next screen bank
 d$9e010100
+d$9e020102	; Next tile over
 d$98420157
 b$2d
 d$0

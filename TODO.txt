@@ -7,7 +7,7 @@
 		This could be selected by a particular EBS mode, perhaps even the idle 0x00 or maybe the 0x02 mode?
 		Setup of this memory will have to be done during the _VBLANK to avoid visible artefacts, writing takes priority.
 	* To test this, the digital data part can be expanded to accept more inputs for RH and RV, no need for _HSYNC with this remapping model
-
+	* TODO: Need wait for X/Y pos in DigitalData
 
 
 
