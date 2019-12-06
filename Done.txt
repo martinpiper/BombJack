@@ -516,3 +516,11 @@
 	
 * 4 bit adds for tile plane ($9e02)
 	The demo has been updated to use this instead of duplicating the screen data in different banks with a shift
+
+	
+	
+	
+* There is also the possibility to allow the horizontal pixel clock and/or the vertical raster position to be read via a latch and suitable address chip enable logic of an 8 bit latch
+	* Alternatively, have a "copper" mode on the interface logic board?
+	* To test this, the digital data part can be expanded to accept more inputs for RH and RV, no need for _HSYNC with this remapping model
+	* Done: Need wait for X/Y pos in DigitalData, added some test data patterns for copper bars and split sprites
