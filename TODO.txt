@@ -1,4 +1,6 @@
 * Investigate latched writes to the background colour. It's not entirely stable if the copper bars move up and down?!
+	* A double write to "d$9e0301XX" seems to fix the issue? Is this because the address should be maintained, not incremented?
+		Or is it the horizontal timing position that is just right?
 
 
 

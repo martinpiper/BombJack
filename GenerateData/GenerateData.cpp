@@ -89,7 +89,8 @@ int main(int argc, char**argv)
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << (int) (64 + i + (sin(rads2) * 32));
 			file << "00c000" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << i;
+			file << "d$9e0301" << std::hex << std::setw(2) << i << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << i << std::endl;
 			file << std::endl;
 		}
 		file << "d$9e030100" << std::endl;
