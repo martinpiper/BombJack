@@ -1,3 +1,13 @@
+* Investigate latched writes to the background colour. It's not entirely stable if the copper bars move up and down?!
+
+
+
+* To get multiplexed sprites working, the sprite logic seems to need to be disabled to avoid spurious data bus reads
+	Or the data bus writes need to be precisely timed, with a proper copper, to coincide with periods where the sprite registers are not being read
+	See: TODO: While this works, it needs a proper copper
+
+
+
 * Alternatively, have a "copper" mode on the interface logic board?
 	* The mapping of the RH and RH values and CLK to a header could allow RAM to output defined signals to the ED, EA, EBS output.
 		The RH values could be divided down to only trigger during _HSYNC for example
