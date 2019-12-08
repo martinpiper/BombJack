@@ -24,14 +24,13 @@ int main(int argc, char**argv)
 
 	while (frame++ < maxFrames)
 	{
-		int screenXPos = (int)(128 + (sin(rads4) * 120));
-		int screenYPos = (int)(abs((sin(rads5) * 256)));
-
 		file << ";Frame " << frame << std::endl;
 		file << "d$0" << std::endl;
 		file << "^-$01" << std::endl;
 		file << "d$0" << std::endl;
 
+		int screenXPos = (int)(128 + (sin(rads4) * 120));
+		int screenYPos = (int)(abs((sin(rads5) * 256)));
 		int xy = (screenXPos & 15) | ((screenYPos & 15) << 4);
 		file << "d$9e0101" << std::hex << std::setw(2) << xy << std::endl;
 		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
@@ -84,16 +83,35 @@ int main(int argc, char**argv)
 		}
 #endif
 		// Output some copper bars that bounce
+		int colour = 1;
 		for (int i = 0; i < 64; i++)
 		{
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << (int) (64 + i + (sin(rads2) * 32));
-			file << "00c000" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << i << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << i << std::endl;
+			file << "018000" << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour << std::endl;
 			file << std::endl;
+			colour++;
+			if ((colour & 0xf) == 0)
+			{
+				colour++;
+			}
 		}
 		file << "d$9e030100" << std::endl;
+		file << "d$9e030100" << std::endl;
+
+		// Output a screen scroll split
+		file << "d$0" << std::endl;
+		file << "w$ff01ff00,$b0018000" << std::endl;
+		screenXPos = (int)(128 + (sin(rads1 * 2.0f) * 120));
+		screenYPos = (int)(128 + (cos(rads1 * 2.0f) * 120));
+		xy = (screenXPos & 15) | ((screenYPos & 15) << 4);
+		file << "d$9e0101" << std::hex << std::setw(2) << xy << std::endl;
+		file << "d$9e0101" << std::hex << std::setw(2) << xy << std::endl;
+		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
+		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
+		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
 
 		rads1 += rads1Speed;
 		rads2 += rads2Speed;
