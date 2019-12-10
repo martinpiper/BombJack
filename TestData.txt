@@ -696,6 +696,10 @@ d$0
 ;d$9e000120
 ;d$0
 
+; Switch back to normal screen and include the animation data
+; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.
+; This could indicate a limit to the maths at those positions, it also indicates the pixel output is not quite matched with 0x180.
+;d$9e000132
 !GenerateData\AnimationData.txt
 
 ; 48 frames of animation
