@@ -559,76 +559,9 @@ d$9e000132
 ;d$9e000130
 
 
+;!TestTileDisableRapidColours.txt
 
-; This tests the tile screen disable followed by rapid background colour changes
-d$9e000120	; Disable the tile screen
-d0
-; wait for X/Y pos in DigitalData
-w$ff01ff00,$40008000
-d$9e030102
-d$9e030103
-d$9e030104
-d$9e030105
-d$9e030106
-d$9e030107
-d$9e030108
-d$9e030109
-d$9e030102
-d$9e030103
-d$9e030104
-d$9e030105
-d$9e030106
-d$9e030107
-d$9e030108
-d$9e030109
-d$9e030100
-d$0
-w$ff01ff00,$41007f00
-d$9e030102
-d$9e030103
-d$9e030104
-d$9e030105
-d$9e030106
-d$9e030107
-d$9e030108
-d$9e030109
-d$9e030102
-d$9e030103
-d$9e030104
-d$9e030105
-d$9e030106
-d$9e030107
-d$9e030108
-d$9e030109
-d$9e030100
-d$0
-
-; Tests writing to the sprite registers during the off-screen time
-d$0
-w$ff01ff00,$55010000
-d$98430110
-d$0
-w$ff01ff00,$56010000
-d$98430120
-d$0
-w$ff01ff00,$57010000
-d$98430130
-d$0
-w$ff01ff00,$58010000
-d$98430140
-d$0
-w$ff01ff00,$59010000
-d$98430150
-d$0
-w$ff01ff00,$5a010000
-d$98430160
-d$0
-w$ff01ff00,$5b010000
-d$98430170
-d$0
-
-
-
+;!TestSpriteRegisterOffscreen.txt
 
 d$0
 
@@ -642,59 +575,8 @@ d$98420139
 b$11
 d$0
 
-; Very quick hardware scroll test with BG colour change
-;^-$01
-;d$0
-;d$9e020111
-;d$9e030102
-;d$0
-;^-$01
-;d$0
-;d$9e020188
-;d$9e030103
-;d$0
-;^-$01
-;d$0
-;d$9e0201c4
-;d$9e030104
-;d$0
-;^-$01
-;d$0
-;d$9e0201ff
-;d$9e030105
-;d$0
+;!TestTileScrolls.txt
 
-; Very quick sub-tile scroll test
-;^-$01
-;d$0
-;d$9e0001f2
-;d$9e010108
-;d$9e020100
-;d$9e030100
-;d$0
-;^-$01
-;d$0
-;d$9e010100
-;d$9e020101
-;d$0
-;^-$01
-;d$0
-;d$9e010108
-;d$0
-;^-$01
-;d$0
-;d$9e010100
-;d$9e020102
-;d$0
-;^-$01
-;d$0
-;d$9e010108
-;d$0
-;; Tile screen disable
-;^-$01
-;d$0
-;d$9e000120
-;d$0
 
 ; Switch back to normal screen and include the animation data
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.

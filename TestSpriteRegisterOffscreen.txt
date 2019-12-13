@@ -1,0 +1,23 @@
+; Tests writing to the sprite registers during the off-screen time
+d$0
+w$ff01ff00,$55010000
+d$98430110
+d$0
+w$ff01ff00,$56010000
+d$98430120
+d$0
+w$ff01ff00,$57010000
+d$98430130
+d$0
+w$ff01ff00,$58010000
+d$98430140
+d$0
+w$ff01ff00,$59010000
+d$98430150
+d$0
+w$ff01ff00,$5a010000
+d$98430160
+d$0
+w$ff01ff00,$5b010000
+d$98430170
+d$0

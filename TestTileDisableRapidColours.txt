@@ -1,0 +1,42 @@
+; This tests the tile screen disable followed by rapid background colour changes
+d$9e000120	; Disable the tile screen
+d0
+; wait for X/Y pos in DigitalData
+w$ff01ff00,$40008000
+d$9e030102
+d$9e030103
+d$9e030104
+d$9e030105
+d$9e030106
+d$9e030107
+d$9e030108
+d$9e030109
+d$9e030102
+d$9e030103
+d$9e030104
+d$9e030105
+d$9e030106
+d$9e030107
+d$9e030108
+d$9e030109
+d$9e030100
+d$0
+w$ff01ff00,$41007f00
+d$9e030102
+d$9e030103
+d$9e030104
+d$9e030105
+d$9e030106
+d$9e030107
+d$9e030108
+d$9e030109
+d$9e030102
+d$9e030103
+d$9e030104
+d$9e030105
+d$9e030106
+d$9e030107
+d$9e030108
+d$9e030109
+d$9e030100
+d$0

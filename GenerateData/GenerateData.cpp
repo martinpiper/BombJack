@@ -73,6 +73,7 @@ int main(int argc, char**argv)
 
 		// TODO: While this works, it needs a proper copper
 #if 1
+		file << "; Multiplex sprites" << std::endl;
 		// Setup a wait for xpos ff ypos 160++ and transfer in new sprite data
 		double rads3Real = rads3;
 		int yoff = 0;
@@ -100,11 +101,25 @@ int main(int argc, char**argv)
 				rads3Real += rads3Separation;
 			}
 			file << std::endl;
+
+			// Debug colour change
+			file << "d$9e0301" << std::hex << std::setw(2) << (chunk | 1) << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << (chunk | 1) << std::endl;
 		}
 #endif
+		// Idle bus
+		file << "d$0" << std::endl;
+		file << std::endl;
+
+
+		// Reset the background colour
+		file << "d$9e030100" << std::endl;
+		file << "d$9e030100" << std::endl;
+		file << "d$0" << std::endl;
 
 
 		// Output a screen scroll split
+		file << "; Screen split" << std::endl;
 		file << "d$0" << std::endl;
 		file << "w$ff01ff00,$b0018000" << std::endl;
 		screenXPos = (int)(128 + (sin(rads1 * 2.0f) * 120));

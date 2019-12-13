@@ -36,7 +36,7 @@
 			TOHI=0.00000025
 		* Note: At 2M the sprite multiplex split is very small and does not interfere much with the video output
 			* This means it might still be possible to emulate and find safe spots for the sprite register writes, needs experimentation
-		
+			* There are no safe spots, the sprite RAM is constantly read during the scan frame
 
 
 
