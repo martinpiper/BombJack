@@ -89,6 +89,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 Sprite 32x32 size select
 
 	0x9a00 start index of 32x32 sprites
+		Upper nybble: $10 = Enable sprite output (6S SPREN)
 	0x9a01 end index of 32x32 sprites (exclusive)
 		So 0,0 = no 32x32 sprites
 		0,8 means indexes 0 to 7 (inclusive) are 32x32

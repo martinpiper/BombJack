@@ -77,7 +77,8 @@ int main(int argc, char**argv)
 		// Setup a wait for xpos ff ypos 160++ and transfer in new sprite data
 		double rads3Real = rads3;
 		int yoff = 0;
-		const int chunkSize = 24;
+		int debugPal = 0;
+		const int chunkSize = 12;
 		for (int chunk = 0; chunk < 24; chunk += chunkSize)
 		{
 			// Wait for raster and the position in the line
@@ -85,6 +86,15 @@ int main(int argc, char**argv)
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << 160 + yoff;
 			file << "018000" << std::endl;
 			yoff++;
+
+			// Debug colour change
+			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			debugPal = (debugPal + 1) & 0x7;
+
+			// Disable sprites, this is immediate for the next pixel output from the sprite shifts
+			file << "d$9a00010c" << std::endl;
+			file << "d$9a00010c" << std::endl;
 
 			// Output address for sprites
 			file << "s$" << std::hex << std::setw(4) << 0x9820 + (chunk * 4);
@@ -103,8 +113,30 @@ int main(int argc, char**argv)
 			file << std::endl;
 
 			// Debug colour change
-			file << "d$9e0301" << std::hex << std::setw(2) << (chunk | 1) << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << (chunk | 1) << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			debugPal = (debugPal + 1) & 0x7;
+
+			// Enable sprites after a short delay without the sprite RAM bus being busy
+			// This gives enough time for the sprite registers to read new sprite positions and setup the shift buffers (16 pixels)
+			// This depends on the DigitalData output speed, but can be precisely timed with a real copper running at the full clock rate
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			file << "d$0" << std::endl;
+			// Enable sprites and preserve the 32x32 size value
+			// Examining the rendered output the tall stretched sprites not yet updated are visible without artefacts
+			file << "d$9a00011c" << std::endl;
+			file << "d$9a00011c" << std::endl;
+
+			// Debug colour change
+			file << "d$9e030100" << std::endl;
+			file << "d$9e030100" << std::endl;
+			debugPal = (debugPal + 1) & 0x7;
 		}
 #endif
 		// Idle bus

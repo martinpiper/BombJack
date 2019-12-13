@@ -328,8 +328,8 @@ b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 
 ; Start and end (exclusive) of double size 32x32 sprite index
 s$9a000100
-b$0c,b$0f
-;b$00,b$00
+b$1c,b$0f
+;b$10,b$00
 
 ; Write sprite register data into RAM mapped at $9820 with EBS $01
 s$98200100
@@ -559,9 +559,8 @@ d$9e000132
 ;d$9e000130
 
 
-;!TestTileDisableRapidColours.txt
-
-;!TestSpriteRegisterOffscreen.txt
+!TestTileDisableRapidColours.txt
+!TestSpriteRegisterOffscreen.txt
 
 d$0
 
@@ -582,6 +581,7 @@ d$0
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.
 ; This could indicate a limit to the maths at those positions, it also indicates the pixel output is not quite matched with 0x180.
 ;d$9e000132
+;d$9e000120	; Disable the tile screen
 !GenerateData\AnimationData.txt
 
 ; 48 frames of animation

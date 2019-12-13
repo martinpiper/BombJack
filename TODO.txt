@@ -37,6 +37,8 @@
 		* Note: At 2M the sprite multiplex split is very small and does not interfere much with the video output
 			* This means it might still be possible to emulate and find safe spots for the sprite register writes, needs experimentation
 			* There are no safe spots, the sprite RAM is constantly read during the scan frame
+				$9a00 Upper nybble: $10 = Enable sprite output (6S SPREN), works by resetting the contents of the sprite shifts on low
+			* Success! Examining the rendered output the tall stretched sprites not yet updated are visible without artefacts
 
 
 
