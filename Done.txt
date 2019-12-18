@@ -524,3 +524,45 @@
 	* Alternatively, have a "copper" mode on the interface logic board?
 	* To test this, the digital data part can be expanded to accept more inputs for RH and RV, no need for _HSYNC with this remapping model
 	* Done: Need wait for X/Y pos in DigitalData, added some test data patterns for copper bars and split sprites
+
+	
+	
+* To get multiplexed sprites working, the sprite logic seems to need to be disabled to avoid spurious data bus reads
+	Or the data bus writes need to be precisely timed, with a proper copper, to coincide with periods where the sprite registers are not being read
+	See: TODO: While this works, it needs a proper copper
+
+
+
+* Alternatively, have a "copper" mode on the interface logic board?
+	* The mapping of the RH and RH values and CLK to a header could allow RAM to output defined signals to the ED, EA, EBS output.
+		The RH values could be divided down to only trigger during _HSYNC for example
+		Or it should be possible to program a "mapping" memory for RH and RV, that defines when/how the real "copper" memory can be accessed.
+			This could translate into addresses that are logically ORed into a final lookup address into the copper.
+		This could be selected by a particular EBS mode, perhaps even the idle 0x00 or maybe the 0x02 mode?
+		Setup of this memory will have to be done during the _VBLANK to avoid visible artefacts, writing takes priority.
+		* TODO: Idle EBS mode would be good, the user port interface can be tweaked to disable all outputs to DB/AB/EBS etc when EBS == 0
+		* TODO: Digital data would need an output disable mode for certain pins, the copper could then be added as real extra logic from the main board
+			* EBS would obvious need to be maintained as output with 0 to stop the whole board chip groups being selected at once
+			* Or to emulate, the DigitalData could have an extended output value command that accepts override data setup and _MEWR timings
+		Old DigitalData clock=500k
+			TOLOW=0.00000025
+			TOHI=0.0000005
+		Now using clock=2M
+			TOLOW=0.000000125
+			TOHI=0.00000025
+		* Note: At 2M the sprite multiplex split is very small and does not interfere much with the video output
+			* This means it might still be possible to emulate and find safe spots for the sprite register writes, needs experimentation
+			* There are no safe spots, the sprite RAM is constantly read during the scan frame
+				$9a00 Upper nybble: $10 = Enable sprite output (6S SPREN), works by resetting the contents of the sprite shifts on low
+			* Success! Examining the rendered output the tall stretched sprites not yet updated are visible without artefacts
+
+			
+			
+* Investigate latched writes to the background colour. It's not entirely stable if the copper bars move up and down?!
+	* A double write to "d$9e0301XX" seems to fix the issue? Is this because the address should be maintained, not incremented?
+		Or is it the horizontal timing position that is just right?
+	* Perhaps, a second sprite register RAM can be used, while one is being read the other can be written to?
+		Perhaps not, it would need quite a bit of extra logic to isolate the DB and AB
+	* Fixed a bug in DigitalData where waiting for an input value caused the first value to be skipped
+	* Double writes removed from the data generator, the display still renders correctly
+

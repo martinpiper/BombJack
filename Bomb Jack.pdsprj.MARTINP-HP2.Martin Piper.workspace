@@ -1,11 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffc0f8fffffeffffffddfcffff96020000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff380200003900000055060000d1020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="BOM"/>
+  <WINDOW type="VIEW3D" module="VIEW3D">
+   <camera>
+    <position x="125000" y="0" z="41696652"/>
+    <focus x="125000" y="0" z="0"/>
+    <up x="0" y="1000000" z="0"/>
+   </camera>
+  </WINDOW>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
@@ -244,7 +251,7 @@
    <POPUP w="581" x="98" flags="00000020" y="117" h="339" pid="0" iid="144">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="610" x="109" flags="00000000" y="403" h="466" pid="0" iid="20">
+   <POPUP w="610" x="181" flags="00000001" y="529" h="466" pid="0" iid="20">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="581" x="38" flags="00000020" y="129" h="339" pid="0" iid="308">
@@ -369,6 +376,9 @@
      <ITEM name="ShowToolTips">Yes</ITEM>
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
+   </POPUP>
+   <POPUP w="610" x="182" flags="00008001" y="62" h="466" pid="0" iid="265">
+    <PROPERTIES/>
    </POPUP>
   </PWI>
  </MODULE>
