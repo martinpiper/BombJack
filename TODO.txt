@@ -1,3 +1,18 @@
+* Introduce extra colours bars.
+	TODO: Some of the frames show some colour bar sparkles visible on the left of the screen in the blue area of the scrolling top screen?
+		Why? How?
+		Shifting the first colour change on the left over 32 pixels seems to have vastly reduced, but not entirely removed the problem.
+		Might it be one of the colours from the last or first segment? It seems to move with the bars?
+
+
+
+* Copper plans
+	If the hires xpos is used, then consider starting a _MEWR pulse at that point in time and any further writes would be based on that time too.
+	This would allow hires writes to the background colour for example.
+	Any subsequent writes could then be lower resolution to fit with RAM timing constraints.
+
+
+
 * Overscan, disable all pixel blanking from HBL
 
 

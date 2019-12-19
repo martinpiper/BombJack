@@ -6,6 +6,8 @@
 
 int main(int argc, char**argv)
 {
+	int baseColour1 = 1;
+	int baseColour2 = 255;
 	std::ofstream file;
 	file.open(argv[1]);
     
@@ -52,22 +54,64 @@ int main(int argc, char**argv)
 		file << std::endl;
 
 		// Output some copper bars that bounce
-		int colour = 1;
+		int colour1 = baseColour1;
+		int colour2 = baseColour2;
 		for (int i = 0; i < 64; i++)
 		{
+			colour1 &= 0xff;
+			colour2 &= 0xff;
+
+			int ypos = (int)(64 + i + (sin(rads2) * 32));
+
 			file << "d$0" << std::endl;
-			file << "w$ff01ff00,$" << std::hex << std::setw(2) << (int) (64 + i + (sin(rads2) * 32));
-			file << "018000" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << colour << std::endl;
+			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (fabs(sin(i*M_PI / 64.0) * 16))) << "00" << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
-			colour++;
-			if ((colour & 0xf) == 0)
+
+			file << "d$0" << std::endl;
+			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "00" << std::hex << std::setw(2) << (int)(0x50 + (fabs(cos(i*M_PI / 32.0) * 16))) << "00" << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
+			file << std::endl;
+
+			file << "d$0" << std::endl;
+			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "00" << std::hex << std::setw(2) << (int)(0x80 + (fabs(sin(i*M_PI / 32.0) * 16))) << "00" << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
+			file << std::endl;
+
+			file << "d$0" << std::endl;
+			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "00" << std::hex << std::setw(2) << (int)(0xc0 + (fabs(cos(i*M_PI / 64.0) * 16))) << "00" << std::endl;
+			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
+			file << std::endl;
+
+			colour1++;
+			if ((colour1 & 0x7) == 0)
 			{
-				colour++;
+				colour1++;
+			}
+
+			colour2++;
+			if ((colour2 & 0x7) == 0)
+			{
+				colour2++;
 			}
 		}
 		file << "d$9e030100" << std::endl;
 
+		baseColour1++;
+		if ((baseColour1 & 0x7) == 0)
+		{
+			baseColour1++;
+		}
+
+		baseColour2--;
+		if ((baseColour2 & 0x7) == 0)
+		{
+			baseColour2--;
+		}
 
 		// TODO: While this works, it needs a proper copper
 #if 1
