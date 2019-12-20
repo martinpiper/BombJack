@@ -38,6 +38,8 @@ int main(int argc, char**argv)
 		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
 		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
 
+#if 1
+		// Top sprites
 		file << "s$98200100" << std::endl;
 		double rads1Real = rads1, rads2Real = rads2;
 		for(int i = 0; i < 24; i++)
@@ -52,8 +54,11 @@ int main(int argc, char**argv)
 			rads2Real += rads2Separation;
 		}
 		file << std::endl;
+#endif
 
+#if 1
 		// Output some copper bars that bounce
+		file << "++" << std::endl;
 		int colour1 = baseColour1;
 		int colour2 = baseColour2;
 		for (int i = 0; i < 64; i++)
@@ -65,25 +70,25 @@ int main(int argc, char**argv)
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
-			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (fabs(sin(i*M_PI / 64.0) * 16))) << "00" << std::endl;
+			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (sin(i*M_PI / 64.0) * 16)) << "00" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
-			file << "00" << std::hex << std::setw(2) << (int)(0x50 + (fabs(cos(i*M_PI / 32.0) * 16))) << "00" << std::endl;
+			file << "00" << std::hex << std::setw(2) << (int)(0x50 + (cos(i*M_PI / 32.0) * 16)) << "00" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
-			file << "00" << std::hex << std::setw(2) << (int)(0x80 + (fabs(sin(i*M_PI / 32.0) * 16))) << "00" << std::endl;
+			file << "00" << std::hex << std::setw(2) << (int)(0x80 + (sin(i*M_PI / 32.0) * 16)) << "00" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
-			file << "00" << std::hex << std::setw(2) << (int)(0xc0 + (fabs(cos(i*M_PI / 64.0) * 16))) << "00" << std::endl;
+			file << "00" << std::hex << std::setw(2) << (int)(0xc0 + (cos(i*M_PI / 64.0) * 16)) << "00" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
 
@@ -100,6 +105,7 @@ int main(int argc, char**argv)
 			}
 		}
 		file << "d$9e030100" << std::endl;
+		file << "+16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+" << std::endl;
 
 		baseColour1++;
 		if ((baseColour1 & 0x7) == 0)
@@ -112,6 +118,7 @@ int main(int argc, char**argv)
 		{
 			baseColour2--;
 		}
+#endif
 
 		// TODO: While this works, it needs a proper copper
 #if 1

@@ -3,6 +3,7 @@
 		Why? How?
 		Shifting the first colour change on the left over 32 pixels seems to have vastly reduced, but not entirely removed the problem.
 		Might it be one of the colours from the last or first segment? It seems to move with the bars?
+		* Test a full run without auto-increment addresses during the colour bars
 
 
 
