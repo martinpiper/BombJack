@@ -58,7 +58,7 @@ int main(int argc, char**argv)
 
 #if 1
 		// Output some copper bars that bounce
-		file << "++" << std::endl;
+//		file << "++" << std::endl;
 		int colour1 = baseColour1;
 		int colour2 = baseColour2;
 		for (int i = 0; i < 64; i++)
@@ -71,6 +71,7 @@ int main(int argc, char**argv)
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (sin(i*M_PI / 64.0) * 16)) << "00" << std::endl;
+//			file << "001000" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
@@ -82,7 +83,7 @@ int main(int argc, char**argv)
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
-			file << "00" << std::hex << std::setw(2) << (int)(0x80 + (sin(i*M_PI / 32.0) * 16)) << "00" << std::endl;
+			file << "00" << std::hex << std::setw(2) << (int)(0x90 + (sin(i*M_PI / 32.0) * 16)) << "00" << std::endl;
 			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
@@ -105,7 +106,7 @@ int main(int argc, char**argv)
 			}
 		}
 		file << "d$9e030100" << std::endl;
-		file << "+16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+" << std::endl;
+//		file << "+16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+" << std::endl;
 
 		baseColour1++;
 		if ((baseColour1 & 0x7) == 0)
