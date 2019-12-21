@@ -22,5 +22,8 @@
   <ItemGroup>
     <Text Include="..\TestData.txt" />
     <Text Include="AnimationData.txt" />
+    <Text Include="..\TestSpriteRegisterOffscreen.txt" />
+    <Text Include="..\TestTileDisableRapidColours.txt" />
+    <Text Include="..\TestTileScrolls.txt" />
   </ItemGroup>
 </Project>

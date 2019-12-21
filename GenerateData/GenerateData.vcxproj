@@ -159,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\TestData.txt" />
+    <Text Include="..\TestSpriteRegisterOffscreen.txt" />
+    <Text Include="..\TestTileDisableRapidColours.txt" />
+    <Text Include="..\TestTileScrolls.txt" />
     <Text Include="AnimationData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
