@@ -16,6 +16,7 @@
 			Also very useful data for a hardware copper
 		* Try running with this new clock input
 			Up to frame 275 it all looks clear!
+		* TODO: With the sin/cos wave pattern, it seems to clamp to a bad value? Investigate the data driving this pattern...
 
 
 
