@@ -566,3 +566,26 @@
 	* Fixed a bug in DigitalData where waiting for an input value caused the first value to be skipped
 	* Double writes removed from the data generator, the display still renders correctly
 
+
+	
+	
+* Introduce extra colours bars.
+	TODO: Some of the frames show some colour bar sparkles visible on the left of the screen in the blue area of the scrolling top screen?
+		Why? How?
+		Shifting the first colour change on the left over 32 pixels seems to have vastly reduced, but not entirely removed the problem.
+		Might it be one of the colours from the last or first segment? It seems to move with the bars?
+		* Test a full run without auto-increment addresses during the colour bars
+			Sparkles still happen.
+		* Try using this for the first colour bar position: file << "001000" << std::endl;
+			With d$9e000120	; Disable the tile screen
+			With the DigitalData clock input = 2MHz this shows how interaction with the 12.096MHz video clock introduces some timing variance on the left vertical bar
+				Changed the clock to be the Q2 (divide by 8) output from a 74161 and VIDCLK clk input
+				This fixes the timing variance on the left colour bar
+				TestTileDisableRapidColours.txt indicates this equates to colour changes at precisely every 4 pixels, as expected.
+					Useful data for a hardware copper...
+		* Using the Q1 (divide by 4) output from the 74161 and the display demo is stable, and rapid colour writes are now at 2 pixels resolution
+			Also very useful data for a hardware copper
+		* Try running with this new clock input
+			Up to frame 275 it all looks clear!
+			All frames look clear.
+
