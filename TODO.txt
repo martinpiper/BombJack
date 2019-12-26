@@ -7,6 +7,11 @@
 	If the hires xpos is used, then consider starting a _MEWR pulse at that point in time and any further writes would be based on that time too.
 	This would allow hires writes to the background colour for example.
 	Any subsequent writes could then be lower resolution to fit with RAM timing constraints.
+	Could the copper board be built in-between the 24 bit parallel board and the main display board?
+		Input = EBS + EAB + EDB + ROWCOL, output = EBS + EAB + EDB
+			Internally EBS = 2 is used to trigger the copper and ROWCOL checks
+			It could use VIDCLK and 6MHz lines from ROWCOL
+	Note: The selector and RAM are used to show working memory writes in the main display board
 
 
 
