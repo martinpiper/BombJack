@@ -61,6 +61,8 @@
 	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5?P=1z0z819Z1yzbpodZ1yyxf87
 	VGA
 	https://www.mouser.sg/ProductDetail/Gravitech/DB15F-VGA-TERM?qs=%2Fha2pyFadujCKQleo0iutDpWDaGRRxjTkj9IAyF0Np7%252BUoWsr1SFIUxZNLIelf9qWe7mZLtJ2l3bbZy4VSVLAA%3D%3D
+	SIL/DIL connectors
+	https://www.mouser.sg/3M/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1z0xbxoZ1yvsm2aZ1yvgcdjZ1ytkn39Z1yq9ciwZ1ytkls2Z1ytkn06Z1z0z5h6Z1yzxj1jZ1z0z63xZ1z0wxp6Z1yzv7x1Z1z0zp4d
 	Sockets decoupling
 	https://www.digikey.sg/products/en/connectors-interconnects/sockets-for-ics-transistors/409?k=&pkeyword=dip+decoupling&sv=0&pv5=382168&sf=1&FV=589%7C405002%2C-8%7C409&quantity=&ColumnSort=0&page=1&pageSize=25
 	Same decoupling socket, found using manufacturer part number

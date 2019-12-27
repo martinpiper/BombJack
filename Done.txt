@@ -589,3 +589,7 @@
 			Up to frame 275 it all looks clear!
 			All frames look clear.
 
+
+			
+			
+* 7483 no longer made? Change to 74283 with different pinout.
