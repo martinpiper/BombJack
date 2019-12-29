@@ -1,0 +1,281 @@
+Category,References,Value,Stock Code,Unit Cost,Description
+Capacitors,C5,200p,Maplin WX60Q,,220p Ceramic Capacitor
+Resistors,R1,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R2,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R3,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R4,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R5,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R6,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R7,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R8,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R9,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R10,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R11,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R12,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R13,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R14,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R15,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R16,PULLUP,,,Digital Primitive Model Of A Pull-Up Resistor
+Resistors,R21,220,,,Generic resistor symbol
+Resistors,R22,220,,,Generic resistor symbol
+Resistors,R104,100,,,Generic resistor symbol
+Resistors,R105,470,,,Generic resistor symbol
+Integrated Circuits,U1,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U2,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U3,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U4,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U5,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U6,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U7,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U8,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U9,74LS00,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS00NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOjzVWLw0jaeE%3D,S$0.95,Quadruple 2-Input Positive-NAND Gates
+Integrated Circuits,U10,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U11,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U12,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U13,74LS00,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS00NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOjzVWLw0jaeE%3D,S$0.95,Quadruple 2-Input Positive-NAND Gates
+Integrated Circuits,U14,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U15,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U16,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U17,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U18,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U19,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U20,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U21,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U22,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U23,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U24,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U25,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U26,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U27,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U28,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U29,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U30,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U31,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U32,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U33,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U34,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U35,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U36,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U37,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U38,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U39,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U40,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U41,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U42,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U43,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U44,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U45,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U46,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U47,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U48,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U49,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U50,74LS00,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS00NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOjzVWLw0jaeE%3D,S$0.95,Quadruple 2-Input Positive-NAND Gates
+Integrated Circuits,U51,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U52,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U53,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U54,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U55,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U56,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U57,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U58,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
+Integrated Circuits,U59,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U60,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U61,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U62,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Integrated Circuits,U63,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U64,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U65,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Integrated Circuits,U66,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Integrated Circuits,U67,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Integrated Circuits,U68,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U69,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U70,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers
+Integrated Circuits,U71,7485,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS85N?qs=%2Fha2pyFadujWUs9azztjOlpLCPvFTfozqJRbtmiwunU%3D,S$1.87,4-Bit Magnitude Comparator
+Integrated Circuits,U72,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Integrated Circuits,U73,7402,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D,S$0.72,Quadruple 2-Input Positive-NOR Gates
+Integrated Circuits,U74,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U75,74LS283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$2.41,4-Bit Binary Full Adders With Fast Carry
+Integrated Circuits,U76,7485,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS85N?qs=%2Fha2pyFadujWUs9azztjOlpLCPvFTfozqJRbtmiwunU%3D,S$1.87,4-Bit Magnitude Comparator
+Integrated Circuits,U77,6116FAST,https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D,S$7.08,16K (2Kx8) Static RAM (Fast)
+Integrated Circuits,U78,6116FAST,https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D,S$7.08,16K (2Kx8) Static RAM (Fast)
+Integrated Circuits,U79,6116FAST,https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D,S$7.08,16K (2Kx8) Static RAM (Fast)
+Integrated Circuits,U80,74126,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS126AN?qs=%2Fha2pyFadugdvCHOFYeUo9JntWnIZ2YoHaFSsm4H%2FRg%3D,S$0.90,Quadruple Bus Buffer Gate With Tristate Outputs
+Integrated Circuits,U81,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Integrated Circuits,U82,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Integrated Circuits,U83,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,1A,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,1B,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,1C,7427,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D,S$0.81,Triple 3-Input Positive NOR Gates
+Miscellaneous,1D,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,1S,7410,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS10N?qs=sGAEpiMZZMutXGli8Ay4kBELecaPbA6BixFJp4A71TE%3D,S$0.87,Triple 3-Input Positive-NAND Gates
+Miscellaneous,1T,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,2,7410,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS10N?qs=sGAEpiMZZMutXGli8Ay4kBELecaPbA6BixFJp4A71TE%3D,S$0.87,Triple 3-Input Positive-NAND Gates
+Miscellaneous,2A,74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,S$0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,2B,74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,S$0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,2C,74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,S$0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,2D,74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,S$0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,2E,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,2F,74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245NE4?qs=sGAEpiMZZMs9F6aVvY09bhwfQrNqig7qIcn1fgzui%2FY%3D,S$0.89,Octal Bus Transceivers With Tristate Outputs
+Miscellaneous,2R6,7420,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS20N?qs=sGAEpiMZZMtMa9lbYwD6ZOuZLcSXNpUa3nM3MdnqdeQ%3D,S$0.77,Dual 4-Input Positive-NAND Gates
+Miscellaneous,2S,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
+Miscellaneous,2T,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,S$0.72,Hex Inverters
+Miscellaneous,3A,74LS258,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D,S$1.02,Quadruple 2-Line To 1-Line Data Selectors/Multiplexers With Tristate Outputs
+Miscellaneous,3B,74LS258,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D,S$1.02,Quadruple 2-Line To 1-Line Data Selectors/Multiplexers With Tristate Outputs
+Miscellaneous,3C,74LS258,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D,S$1.02,Quadruple 2-Line To 1-Line Data Selectors/Multiplexers With Tristate Outputs
+Miscellaneous,3D,74LS258,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D,S$1.02,Quadruple 2-Line To 1-Line Data Selectors/Multiplexers With Tristate Outputs
+Miscellaneous,3H,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,3L6,74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245NE4?qs=sGAEpiMZZMs9F6aVvY09bhwfQrNqig7qIcn1fgzui%2FY%3D,S$0.89,Octal Bus Transceivers With Tristate Outputs
+Miscellaneous,3M,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
+Miscellaneous,3M8,74148,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS148N?qs=%2Fha2pyFaduh2M99jnePeauqUp%2FrIBfH7vdDEJ7aGS4Q%3D,S$2.46,8-Line To 3-Line Priority Encoders
+Miscellaneous,3N,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,3P,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,3R,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,3S,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,3T,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,4,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,S$0.72,Hex Inverters
+Miscellaneous,4A,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,4B,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,4C,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,4D,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,4E,74126,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS126AN?qs=%2Fha2pyFadugdvCHOFYeUo9JntWnIZ2YoHaFSsm4H%2FRg%3D,S$0.90,Quadruple Bus Buffer Gate With Tristate Outputs
+Miscellaneous,4F,74126,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS126AN?qs=%2Fha2pyFadugdvCHOFYeUo9JntWnIZ2YoHaFSsm4H%2FRg%3D,S$0.90,Quadruple Bus Buffer Gate With Tristate Outputs
+Miscellaneous,4H,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,4L6,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,4M,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers
+Miscellaneous,4M6,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,4N,7410,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS10N?qs=sGAEpiMZZMutXGli8Ay4kBELecaPbA6BixFJp4A71TE%3D,S$0.87,Triple 3-Input Positive-NAND Gates
+Miscellaneous,4P,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,S$0.72,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,4P7,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,4P7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,4R,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,S$0.72,Hex Inverters
+Miscellaneous,4S,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,S$0.72,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,4T,74368,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS368AN?qs=%2Fha2pyFadug6ZOj3cmpD6YwUi6dGmUUQRqKJDT%2FBvsw%3D,,Hex Buffers/Line Drivers with Inverting Tristate Outputs
+Miscellaneous,5,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,5E,74283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$1.30,4-Bit Binary Full Adders With Fast Carry
+Miscellaneous,5E2,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,5F,74283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283NE4?qs=sGAEpiMZZMuV4z%252BhZ4pm1L11UKYaBimF7vh839uxJBE%3D,S$1.30,4-Bit Binary Full Adders With Fast Carry
+Miscellaneous,5F8,74153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153N?qs=%2Fha2pyFaduiKvNoFphi6HlKGeKB98vZDSnL2nsGsGDQ%3D,S$0.98,Dual 1-of-4 Data Selectors/Multiplexers
+Miscellaneous,5H,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,5H8,74153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153N?qs=%2Fha2pyFaduiKvNoFphi6HlKGeKB98vZDSnL2nsGsGDQ%3D,S$0.98,Dual 1-of-4 Data Selectors/Multiplexers
+Miscellaneous,5J,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,5J8,74153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153N?qs=%2Fha2pyFaduiKvNoFphi6HlKGeKB98vZDSnL2nsGsGDQ%3D,S$0.98,Dual 1-of-4 Data Selectors/Multiplexers
+Miscellaneous,5K,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,5K8,74153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153N?qs=%2Fha2pyFaduiKvNoFphi6HlKGeKB98vZDSnL2nsGsGDQ%3D,S$0.98,Dual 1-of-4 Data Selectors/Multiplexers
+Miscellaneous,5L,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,5L6,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,5M,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers
+Miscellaneous,5M8,7427,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D,S$0.81,Triple 3-Input Positive NOR Gates
+Miscellaneous,5N7,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,5P,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,S$0.72,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,5P7,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,5R,7485,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS85N?qs=%2Fha2pyFadujWUs9azztjOlpLCPvFTfozqJRbtmiwunU%3D,S$1.87,4-Bit Magnitude Comparator
+Miscellaneous,5R7,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,5S,7485,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS85N?qs=%2Fha2pyFadujWUs9azztjOlpLCPvFTfozqJRbtmiwunU%3D,S$1.87,4-Bit Magnitude Comparator
+Miscellaneous,5S7,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,5T,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,6A,74163,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS163AN?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6zp2qU1pEmtI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,6A2,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,6B,74163,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS163AN?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6zp2qU1pEmtI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,6B2,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,6C,74163,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS163AN?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6zp2qU1pEmtI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,6C2,2114FAST,https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH,S$5.00,4K Static RAM (1K x 4bit) (Fast)
+Miscellaneous,6D,74163,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS163AN?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6zp2qU1pEmtI%3D,S$0.90,Synchronous 4-Bit Binary Counters
+Miscellaneous,6D2,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6E,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,6F,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,6F2,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6F6,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6H,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,6H6,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6J,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,6J6,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6K,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,6K6,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6L,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,6LM6,6116FAST,https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D,S$7.08,16K (2Kx8) Static RAM (Fast)
+Miscellaneous,6M,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,6N2,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,6N6,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,6P6,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,6R,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,6R7,74LS86,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS86ANE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOhAIPhWJxBPY%3D,S$1.02,Quadruple 2-Input Exclusive-OR Gates
+Miscellaneous,6S,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,6S7,74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,6T,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,7A,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,7A2,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,7B,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,7B2,74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245NE4?qs=sGAEpiMZZMs9F6aVvY09bhwfQrNqig7qIcn1fgzui%2FY%3D,S$0.89,Octal Bus Transceivers With Tristate Outputs
+Miscellaneous,7C,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,7C2,74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245NE4?qs=sGAEpiMZZMs9F6aVvY09bhwfQrNqig7qIcn1fgzui%2FY%3D,S$0.89,Octal Bus Transceivers With Tristate Outputs
+Miscellaneous,7D,74LS21,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOS8GB5LKZP7E%3D,S$0.62,Dual 4-Input Positive-AND Gates
+Miscellaneous,7D6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7E,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,7E6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7F,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,7F6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7H,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
+Miscellaneous,7H6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7J,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,7J6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7JR,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,7K6,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7L,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,7L7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7LR,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,7M,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,7M7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7MR,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,7N,74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlc4u4AUFSUKKQ%3D,S$0.90,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,7N7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7P7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7R,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
+Miscellaneous,7R7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7S,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers
+Miscellaneous,7S7,74194,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS194AN?qs=%2Fha2pyFadujYU8BF2jKu2xc2zlYRxRNCxtAdpWgTaU4%3D,S$1.25,4-Bit Bidirectional Universal Shift Registers
+Miscellaneous,7T,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,8B2,74LS174,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS174N?qs=%2Fha2pyFadugqDRhw3C%2FQ8X6a6hwoxKy6iKJc85BJA4M%3D,S$0.90,Hex D-Type Positive-Edge-Triggered Flip-Flops With Clear
+Miscellaneous,8C2,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,8C6,7408,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D,S$0.72,Quadruple 2-Input Positive-AND Gates
+Miscellaneous,8D2,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers
+Miscellaneous,8E6,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8E6R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8H6,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8H6R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8K6,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8K6R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8L7,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8L7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8N7,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8N7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8R7,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
+Miscellaneous,8R7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
+Miscellaneous,8S,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Miscellaneous,E6P,7402,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D,S$0.72,Quadruple 2-Input Positive-NOR Gates
+Miscellaneous,E7P,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,S$0.72,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset
+Miscellaneous,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
+Miscellaneous,EXPANSIONBUS3,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,J1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$2.53,0.1in pitch DIL connector strip
+Miscellaneous,JP1,JUMPER,,,Animated Jumper
+Miscellaneous,RB1,250,,,Generic resistor symbol
+Miscellaneous,RB2,500,,,Generic resistor symbol
+Miscellaneous,RB3,1k,,,Generic resistor symbol
+Miscellaneous,RB4,2k,,,Generic resistor symbol
+Miscellaneous,RB5,500,,,Generic resistor symbol
+Miscellaneous,RG1,250,,,Generic resistor symbol
+Miscellaneous,RG2,500,,,Generic resistor symbol
+Miscellaneous,RG3,1k,,,Generic resistor symbol
+Miscellaneous,RG4,2k,,,Generic resistor symbol
+Miscellaneous,RG5,500,,,Generic resistor symbol
+Miscellaneous,ROWCOL,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
+Miscellaneous,RR1,250,,,Generic resistor symbol
+Miscellaneous,RR2,500,,,Generic resistor symbol
+Miscellaneous,RR3,1k,,,Generic resistor symbol
+Miscellaneous,RR4,2k,,,Generic resistor symbol
+Miscellaneous,RR5,500,,,Generic resistor symbol
+Miscellaneous,VIDCLK,555,https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D,,Timer/Oscillator
+Miscellaneous,VSMDD1,VSMDIGITALDISPLAY,,,CRT Display with frequency detection
+Miscellaneous,VSMDD2,VSMDIGITALDATA,,,Digital Data Generator (Virtual Instrument)
+Miscellaneous,VSMDD3,VSMDIGITALDATA,,,Digital Data Generator (Virtual Instrument)
+Miscellaneous,X2,CRYSTAL,https://www.mouser.sg/ProductDetail/ECS/ECS-121-S-4X?qs=sGAEpiMZZMsBj6bBr9Q9aQVbz5FLOGxj6PWo6GSXrZU%3D,S$1.04,Quartz crystal
