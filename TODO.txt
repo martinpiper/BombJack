@@ -22,6 +22,8 @@
 * https://www.romhacking.net/utilities/641/
 	https://opengameart.org/content/rpg-town-pixel-art-assets
 	C:\Users\Martin Piper\Downloads\town_rpg_pack\town_rpg_pack
+	* Unfortunately the above uses more than 8 colours per 16x16 tile, look for others?
+
 	
 
 * Need DigitalDisplay frame recording and verification of displayed frame with recorded frame.
@@ -117,7 +119,14 @@
 
 * How many layers? Six?
 	https://www.allpcb.com/6_layer_pcb.html
+		Created template: All PCB Six Layer 1.58532mm.LTF
 	http://referencedesigner.com/books/si/6-layer-stackup-ch6.php
+	
+	
+* Singapore PCB fabrication:
+	https://www.wizlogix.com/
+	http://www.evonix.com.sg/PCBFabrication.php
+	
 
 
 
