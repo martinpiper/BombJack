@@ -1,0 +1,121 @@
+; Blank (address b$0000)
+d0
+
+; Background image enable and index
+; x	Display enable (DB5)
+; x	enable (DB4)
+;  y	index (DB0-3)
+; Write data from into RAM mapped at $9e00 with EBS $01
+d$9e000100
+
+; No scroll position
+d$9e010100
+
+; Tile X/Y position offset
+d$9e020100
+
+; Clear background palette choice
+d$9e030100
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+
+; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
+; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
+s$20008000
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\background_tiles.bin
+
+; Write tile data from 08_r08t.bin into RAM mapped at $2000 with EBS $40
+s$20004000
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\background_plane0.bin
+
+; Write tile data from 07_n08t.bin into RAM mapped at $4000 with EBS $40
+s$40004000
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\background_plane1.bin
+
+; Write tile data from 06_l08t.bin into RAM mapped at $8000 with EBS $40
+s$80004000
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\background_plane2.bin
+
+
+; Character data
+; Write character data from 05_k08t.bin into RAM mapped at $2000 with EBS $20
+s$20002000
+<0,1,2,3,4,5,6,7,<05_k08t.bin
+
+; Write character data from 04_h08t.bin into RAM mapped at $4000 with EBS $20
+s$40002000
+<0,1,2,3,4,5,6,7,<04_h08t.bin
+
+; Write character data from 03_e08t.bin into RAM mapped at $8000 with EBS $20
+s$80002000
+<0,1,2,3,4,5,6,7,<03_e08t.bin
+
+
+; Sprite data
+; Write sprite data from 14_j07b.bin into RAM mapped at $2000 with EBS $10
+s$20001000
+;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane0.bin
+
+; Write sprite data from 15_l07b.bin into RAM mapped at $4000 with EBS $10
+s$40001000
+;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane1.bin
+
+; Write sprite data from 16_m07b.bin into RAM mapped at $8000 with EBS $10
+s$80001000
+;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane2.bin
+
+
+s$9c000100
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\PaletteData.bin
+
+
+; Write screen data into RAM mapped at $9000 with EBS $01
+s$90400100
+; Screen data
+b$00
+
+; Write colour data into RAM mapped at $9400 with EBS $01
+; Colour data
+s$94400100
+b$00
+
+
+; No 32x32 sprites
+s$9a000100
+b$10,b$00
+
+; Write sprite register data into RAM mapped at $9820 with EBS $01
+s$98200100
+
+; Byte ordering
+; frame
+; palette
+; Normal
+; y (inverted)
+; x
+
+; Regular grid positions and sprite frames, no 32x32
+; Top left, moving right
+b$00,b$01,b$d0,b$00
+b$01,b$01,b$d0,b$10
+b$02,b$01,b$d0,b$20
+b$03,b$01,b$d0,b$30
+b$04,b$01,b$d0,b$40
+b$05,b$01,b$d0,b$50
+b$06,b$01,b$d0,b$60
+b$07,b$01,b$d0,b$70
+
+b$08,b$01,b$c0,b$00
+b$09,b$01,b$c0,b$10
+b$0a,b$01,b$c0,b$20
+b$0b,b$01,b$c0,b$30
+b$0c,b$01,b$c0,b$40
+b$0d,b$01,b$c0,b$50
+b$0e,b$01,b$c0,b$60
+b$0f,b$01,b$c0,b$70
+
+
+
+; Background image enable and index
+d$9e000130

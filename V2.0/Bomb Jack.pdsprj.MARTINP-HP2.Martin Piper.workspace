@@ -6,7 +6,6 @@
   <WINDOW type="default" module="ARES"/>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="BOM"/>
-  <WINDOW type="default" module="GVIEW"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
