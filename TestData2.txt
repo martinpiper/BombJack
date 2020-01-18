@@ -55,19 +55,20 @@ s$80002000
 ; Sprite data
 ; Write sprite data from 14_j07b.bin into RAM mapped at $2000 with EBS $10
 s$20001000
-;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane0.bin
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane0.bin
 
 ; Write sprite data from 15_l07b.bin into RAM mapped at $4000 with EBS $10
 s$40001000
-;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane1.bin
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane1.bin
 
 ; Write sprite data from 16_m07b.bin into RAM mapped at $8000 with EBS $10
 s$80001000
-;<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane2.bin
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane2.bin
 
 
 s$9c000100
 <0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\PaletteData.bin
+<0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\PaletteDataSprites.bin
 
 
 ; Write screen data into RAM mapped at $9000 with EBS $01
@@ -95,26 +96,76 @@ s$98200100
 ; y (inverted)
 ; x
 
-; Regular grid positions and sprite frames, no 32x32
-; Top left, moving right
-b$00,b$01,b$d0,b$00
-b$01,b$01,b$d0,b$10
-b$02,b$01,b$d0,b$20
-b$03,b$01,b$d0,b$30
-b$04,b$01,b$d0,b$40
-b$05,b$01,b$d0,b$50
-b$06,b$01,b$d0,b$60
-b$07,b$01,b$d0,b$70
-
-b$08,b$01,b$c0,b$00
-b$09,b$01,b$c0,b$10
-b$0a,b$01,b$c0,b$20
-b$0b,b$01,b$c0,b$30
-b$0c,b$01,b$c0,b$40
-b$0d,b$01,b$c0,b$50
-b$0e,b$01,b$c0,b$60
-b$0f,b$01,b$c0,b$70
-
+;Process x=0 y=0
+b0,b5,b208,b0
+;Process x=16 y=0
+b1,b5,b208,b16
+;Process x=32 y=0
+b2,b6,b208,b32
+;Stacked x=32 y=0
+;Process x=32 y=0
+b3,b7,b208,b32
+;Stacked x=32 y=0
+;Process x=32 y=0
+b4,b5,b208,b32
+;Process x=48 y=0
+b5,b6,b208,b48
+;Stacked x=48 y=0
+;Process x=48 y=0
+b6,b7,b208,b48
+;Stacked x=48 y=0
+;Process x=48 y=0
+b7,b5,b208,b48
+;Process x=64 y=0
+b8,b6,b208,b64
+;Stacked x=64 y=0
+;Process x=64 y=0
+b9,b7,b208,b64
+;Stacked x=64 y=0
+;Process x=64 y=0
+b10,b5,b208,b64
+;Process x=80 y=0
+b11,b8,b208,b80
+;Stacked x=80 y=0
+;Process x=80 y=0
+b12,b9,b208,b80
+;Process x=96 y=0
+b13,b8,b208,b96
+;Stacked x=96 y=0
+;Process x=96 y=0
+b14,b9,b208,b96
+;Process x=112 y=0
+b15,b8,b208,b112
+;Stacked x=112 y=0
+;Process x=112 y=0
+b16,b9,b208,b112
+;Process x=0 y=16
+b17,b5,b192,b0
+;Process x=16 y=16
+b18,b5,b192,b16
+;Process x=32 y=16
+b19,b10,b192,b32
+;Stacked x=32 y=16
+;Process x=32 y=16
+b20,b11,b192,b32
+;Stacked x=32 y=16
+;Process x=32 y=16
+b21,b12,b192,b32
+;Process x=48 y=16
+b22,b10,b192,b48
+;Stacked x=48 y=16
+;Process x=48 y=16
+b23,b11,b192,b48
+;Stacked x=48 y=16
+;Process x=48 y=16
+b24,b12,b192,b48
+;Process x=64 y=16
+b25,b10,b192,b64
+;Stacked x=64 y=16
+;Process x=64 y=16
+b26,b12,b192,b64
+;Process x=80 y=16
+b27,b6,b192,b80
 
 
 ; Background image enable and index
