@@ -1,3 +1,10 @@
+* Board connectors
+	https://sg.rs-online.com/web/c/connectors/pcb-connectors/idc-connectors/
+	https://sg.rs-online.com/web/c/cables-wires/ribbon-flat-cable/flat-ribbon-cable/
+	Perhaps it's going to be better to split the boards into video generation and combination logic, char screen, tiles, sprites and mode 7?
+
+
+
 * Colour bars: With the sin/cos wave pattern, it seems to clamp to a bad value? Investigate the data driving this pattern...
 
 
@@ -12,10 +19,11 @@
 			Internally EBS = 2 is used to trigger the copper and ROWCOL checks
 			It could use VIDCLK and 6MHz lines from ROWCOL
 	Note: The selector and RAM are used to show working memory writes in the main display board
+	* It would be possible to store a 16 bit addition value, to facilitate storage of screen data that is stored in values +16 bytes at a time
 
 
 
-* Overscan, disable all pixel blanking from HBL
+* Overscan, disable all pixel blanking from HBL?
 
 
 
