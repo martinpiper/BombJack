@@ -1,3 +1,7 @@
+* GenerateData2
+	* Is the slight pixel ripple effect observed when moving right (output\debug2.gif) is the hardware or the virtual display adaptor...
+
+
 * Board connectors
 	https://sg.rs-online.com/web/c/connectors/pcb-connectors/idc-connectors/
 	https://sg.rs-online.com/web/c/cables-wires/ribbon-flat-cable/flat-ribbon-cable/
