@@ -1,704 +1,7046 @@
-;Frame 1
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
+s$98200100
+b3,b6,b240,b94
+b4,b7,b240,b94
+b5,b5,b240,b94
+; WaitForRaster
 d$0
-^-$01
+w$ff01ff00,$11018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b220,b18
+b4,b7,b220,b18
+b5,b5,b220,b18
+; EnableSprites
 d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$25018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
 s$98200100
 b9,b6,b200,b64
 b10,b7,b200,b64
 b11,b5,b200,b64
+b6,b$46,b200,b128
+b7,b$47,b200,b128
+b8,b$45,b200,b128
+b3,b6,b200,b128
+b4,b7,b200,b128
+b5,b5,b200,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b180,b64
+b4,b7,b180,b64
+b5,b5,b180,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b64
+b7,b$47,b80,b64
+b8,b$45,b80,b64
+b6,b6,b64,b128
+b7,b7,b64,b128
+b8,b5,b64,b128
+b9,b6,b64,b128
+b10,b7,b64,b128
+b11,b5,b64,b128
+b9,b6,b54,b198
+b10,b7,b54,b198
+b11,b5,b54,b198
+b9,b6,b48,b64
+b10,b7,b48,b64
+b11,b5,b48,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$d1018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b28,b164
+b10,b7,b28,b164
+b11,b5,b28,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 2
+; WaitForVSync 2
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b239,b94
+b4,b7,b239,b94
+b5,b5,b239,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$12018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b219,b18
+b4,b7,b219,b18
+b5,b5,b219,b18
 b9,b6,b201,b64
 b10,b7,b201,b64
 b11,b5,b201,b64
+b6,b$46,b200,b129
+b7,b$47,b200,b129
+b8,b$45,b200,b129
+b3,b6,b199,b128
+b4,b7,b199,b128
+b5,b5,b199,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b179,b64
+b4,b7,b179,b64
+b5,b5,b179,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b65
+b7,b$47,b80,b65
+b8,b$45,b80,b65
+b9,b6,b65,b128
+b10,b7,b65,b128
+b11,b5,b65,b128
+b6,b6,b64,b127
+b7,b7,b64,b127
+b8,b5,b64,b127
+b9,b6,b55,b198
+b10,b7,b55,b198
+b11,b5,b55,b198
+b9,b6,b49,b64
+b10,b7,b49,b64
+b11,b5,b49,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$d0018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b29,b164
+b10,b7,b29,b164
+b11,b5,b29,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 3
+; WaitForVSync 3
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b238,b94
+b4,b7,b238,b94
+b5,b5,b238,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$13018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b218,b18
+b4,b7,b218,b18
+b5,b5,b218,b18
 b9,b6,b202,b64
 b10,b7,b202,b64
 b11,b5,b202,b64
+b6,b$46,b200,b130
+b7,b$47,b200,b130
+b8,b$45,b200,b130
+b3,b6,b198,b128
+b4,b7,b198,b128
+b5,b5,b198,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b178,b64
+b4,b7,b178,b64
+b5,b5,b178,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b66
+b7,b$47,b80,b66
+b8,b$45,b80,b66
+b9,b6,b66,b128
+b10,b7,b66,b128
+b11,b5,b66,b128
+b6,b6,b64,b126
+b7,b7,b64,b126
+b8,b5,b64,b126
+b9,b6,b56,b198
+b10,b7,b56,b198
+b11,b5,b56,b198
+b9,b6,b50,b64
+b10,b7,b50,b64
+b11,b5,b50,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$cf018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b30,b164
+b10,b7,b30,b164
+b11,b5,b30,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 4
+; WaitForVSync 4
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b237,b94
+b4,b7,b237,b94
+b5,b5,b237,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$14018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b217,b18
+b4,b7,b217,b18
+b5,b5,b217,b18
 b9,b6,b203,b64
 b10,b7,b203,b64
 b11,b5,b203,b64
+b6,b$46,b200,b131
+b7,b$47,b200,b131
+b8,b$45,b200,b131
+b3,b6,b197,b128
+b4,b7,b197,b128
+b5,b5,b197,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b177,b64
+b4,b7,b177,b64
+b5,b5,b177,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$50018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b67
+b7,b$47,b80,b67
+b8,b$45,b80,b67
+b9,b6,b67,b128
+b10,b7,b67,b128
+b11,b5,b67,b128
+b6,b6,b64,b125
+b7,b7,b64,b125
+b8,b5,b64,b125
+b9,b6,b57,b198
+b10,b7,b57,b198
+b11,b5,b57,b198
+b9,b6,b51,b64
+b10,b7,b51,b64
+b11,b5,b51,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$ce018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b31,b164
+b10,b7,b31,b164
+b11,b5,b31,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 5
+; WaitForVSync 5
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b236,b94
+b4,b7,b236,b94
+b5,b5,b236,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$15018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b216,b18
+b4,b7,b216,b18
+b5,b5,b216,b18
 b9,b6,b204,b64
 b10,b7,b204,b64
 b11,b5,b204,b64
+b6,b$46,b200,b132
+b7,b$47,b200,b132
+b8,b$45,b200,b132
+b3,b6,b196,b128
+b4,b7,b196,b128
+b5,b5,b196,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b176,b64
+b4,b7,b176,b64
+b5,b5,b176,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$51018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b68
+b7,b$47,b80,b68
+b8,b$45,b80,b68
+b9,b6,b68,b128
+b10,b7,b68,b128
+b11,b5,b68,b128
+b6,b6,b64,b124
+b7,b7,b64,b124
+b8,b5,b64,b124
+b9,b6,b58,b198
+b10,b7,b58,b198
+b11,b5,b58,b198
+b9,b6,b52,b64
+b10,b7,b52,b64
+b11,b5,b52,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$cd018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b32,b164
+b10,b7,b32,b164
+b11,b5,b32,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 6
+; WaitForVSync 6
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b235,b94
+b4,b7,b235,b94
+b5,b5,b235,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$16018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b215,b18
+b4,b7,b215,b18
+b5,b5,b215,b18
 b9,b6,b205,b64
 b10,b7,b205,b64
 b11,b5,b205,b64
+b6,b$46,b200,b133
+b7,b$47,b200,b133
+b8,b$45,b200,b133
+b3,b6,b195,b128
+b4,b7,b195,b128
+b5,b5,b195,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b175,b64
+b4,b7,b175,b64
+b5,b5,b175,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$52018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b69
+b7,b$47,b80,b69
+b8,b$45,b80,b69
+b9,b6,b69,b128
+b10,b7,b69,b128
+b11,b5,b69,b128
+b6,b6,b64,b123
+b7,b7,b64,b123
+b8,b5,b64,b123
+b9,b6,b59,b198
+b10,b7,b59,b198
+b11,b5,b59,b198
+b9,b6,b53,b64
+b10,b7,b53,b64
+b11,b5,b53,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$cc018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b33,b164
+b10,b7,b33,b164
+b11,b5,b33,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 7
+; WaitForVSync 7
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b234,b94
+b4,b7,b234,b94
+b5,b5,b234,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$17018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b214,b18
+b4,b7,b214,b18
+b5,b5,b214,b18
 b9,b6,b206,b64
 b10,b7,b206,b64
 b11,b5,b206,b64
+b6,b$46,b200,b134
+b7,b$47,b200,b134
+b8,b$45,b200,b134
+b3,b6,b194,b128
+b4,b7,b194,b128
+b5,b5,b194,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$3f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b174,b64
+b4,b7,b174,b64
+b5,b5,b174,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$53018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b70
+b7,b$47,b80,b70
+b8,b$45,b80,b70
+b9,b6,b70,b128
+b10,b7,b70,b128
+b11,b5,b70,b128
+b6,b6,b64,b122
+b7,b7,b64,b122
+b8,b5,b64,b122
+b9,b6,b60,b198
+b10,b7,b60,b198
+b11,b5,b60,b198
+b9,b6,b54,b64
+b10,b7,b54,b64
+b11,b5,b54,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$cb018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b34,b164
+b10,b7,b34,b164
+b11,b5,b34,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 8
+; WaitForVSync 8
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b233,b94
+b4,b7,b233,b94
+b5,b5,b233,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$18018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b213,b18
+b4,b7,b213,b18
+b5,b5,b213,b18
 b9,b6,b207,b64
 b10,b7,b207,b64
 b11,b5,b207,b64
+b6,b$46,b200,b135
+b7,b$47,b200,b135
+b8,b$45,b200,b135
+b3,b6,b193,b128
+b4,b7,b193,b128
+b5,b5,b193,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$40018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b173,b64
+b4,b7,b173,b64
+b5,b5,b173,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$54018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b71
+b7,b$47,b80,b71
+b8,b$45,b80,b71
+b9,b6,b71,b128
+b10,b7,b71,b128
+b11,b5,b71,b128
+b6,b6,b64,b121
+b7,b7,b64,b121
+b8,b5,b64,b121
+b9,b6,b61,b198
+b10,b7,b61,b198
+b11,b5,b61,b198
+b9,b6,b55,b64
+b10,b7,b55,b64
+b11,b5,b55,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$ca018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b35,b164
+b10,b7,b35,b164
+b11,b5,b35,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 9
+; WaitForVSync 9
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b232,b94
+b4,b7,b232,b94
+b5,b5,b232,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$19018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b212,b18
+b4,b7,b212,b18
+b5,b5,b212,b18
 b9,b6,b208,b64
 b10,b7,b208,b64
 b11,b5,b208,b64
+b6,b$46,b200,b136
+b7,b$47,b200,b136
+b8,b$45,b200,b136
+b3,b6,b192,b128
+b4,b7,b192,b128
+b5,b5,b192,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$41018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b172,b64
+b4,b7,b172,b64
+b5,b5,b172,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$55018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b72
+b7,b$47,b80,b72
+b8,b$45,b80,b72
+b9,b6,b72,b128
+b10,b7,b72,b128
+b11,b5,b72,b128
+b6,b6,b64,b120
+b7,b7,b64,b120
+b8,b5,b64,b120
+b9,b6,b62,b198
+b10,b7,b62,b198
+b11,b5,b62,b198
+b9,b6,b56,b64
+b10,b7,b56,b64
+b11,b5,b56,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c9018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b36,b164
+b10,b7,b36,b164
+b11,b5,b36,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 10
+; WaitForVSync 10
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b231,b94
+b4,b7,b231,b94
+b5,b5,b231,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$1a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b211,b18
+b4,b7,b211,b18
+b5,b5,b211,b18
 b9,b6,b209,b64
 b10,b7,b209,b64
 b11,b5,b209,b64
+b6,b$46,b200,b137
+b7,b$47,b200,b137
+b8,b$45,b200,b137
+b3,b6,b191,b128
+b4,b7,b191,b128
+b5,b5,b191,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$42018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b171,b64
+b4,b7,b171,b64
+b5,b5,b171,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$56018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b73
+b7,b$47,b80,b73
+b8,b$45,b80,b73
+b9,b6,b73,b128
+b10,b7,b73,b128
+b11,b5,b73,b128
+b6,b6,b64,b119
+b7,b7,b64,b119
+b8,b5,b64,b119
+b9,b6,b63,b198
+b10,b7,b63,b198
+b11,b5,b63,b198
+b9,b6,b57,b64
+b10,b7,b57,b64
+b11,b5,b57,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c8018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b37,b164
+b10,b7,b37,b164
+b11,b5,b37,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 11
+; WaitForVSync 11
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
+s$98200100
+b3,b6,b230,b94
+b4,b7,b230,b94
+b5,b5,b230,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$1b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
 s$98200100
 b9,b6,b210,b64
 b10,b7,b210,b64
 b11,b5,b210,b64
+b3,b6,b210,b18
+b4,b7,b210,b18
+b5,b5,b210,b18
+b6,b$46,b200,b138
+b7,b$47,b200,b138
+b8,b$45,b200,b138
+b3,b6,b190,b128
+b4,b7,b190,b128
+b5,b5,b190,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$43018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b170,b64
+b4,b7,b170,b64
+b5,b5,b170,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$57018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b74
+b7,b$47,b80,b74
+b8,b$45,b80,b74
+b9,b6,b74,b128
+b10,b7,b74,b128
+b11,b5,b74,b128
+b6,b6,b64,b118
+b7,b7,b64,b118
+b8,b5,b64,b118
+b9,b6,b64,b198
+b10,b7,b64,b198
+b11,b5,b64,b198
+b9,b6,b58,b64
+b10,b7,b58,b64
+b11,b5,b58,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c7018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b38,b164
+b10,b7,b38,b164
+b11,b5,b38,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 12
+; WaitForVSync 12
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b229,b94
+b4,b7,b229,b94
+b5,b5,b229,b94
 b9,b6,b211,b64
 b10,b7,b211,b64
 b11,b5,b211,b64
+b3,b6,b209,b18
+b4,b7,b209,b18
+b5,b5,b209,b18
+b6,b$46,b200,b139
+b7,b$47,b200,b139
+b8,b$45,b200,b139
+b3,b6,b189,b128
+b4,b7,b189,b128
+b5,b5,b189,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$44018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b169,b64
+b4,b7,b169,b64
+b5,b5,b169,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$58018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b75
+b7,b$47,b80,b75
+b8,b$45,b80,b75
+b9,b6,b75,b128
+b10,b7,b75,b128
+b11,b5,b75,b128
+b9,b6,b65,b198
+b10,b7,b65,b198
+b11,b5,b65,b198
+b6,b6,b64,b117
+b7,b7,b64,b117
+b8,b5,b64,b117
+b9,b6,b59,b64
+b10,b7,b59,b64
+b11,b5,b59,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c6018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b39,b164
+b10,b7,b39,b164
+b11,b5,b39,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 13
+; WaitForVSync 13
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b228,b94
+b4,b7,b228,b94
+b5,b5,b228,b94
 b9,b6,b212,b64
 b10,b7,b212,b64
 b11,b5,b212,b64
+b3,b6,b208,b18
+b4,b7,b208,b18
+b5,b5,b208,b18
+b6,b$46,b200,b140
+b7,b$47,b200,b140
+b8,b$45,b200,b140
+b3,b6,b188,b128
+b4,b7,b188,b128
+b5,b5,b188,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$45018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b168,b64
+b4,b7,b168,b64
+b5,b5,b168,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$59018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b76
+b7,b$47,b80,b76
+b8,b$45,b80,b76
+b9,b6,b76,b128
+b10,b7,b76,b128
+b11,b5,b76,b128
+b9,b6,b66,b198
+b10,b7,b66,b198
+b11,b5,b66,b198
+b6,b6,b64,b116
+b7,b7,b64,b116
+b8,b5,b64,b116
+b9,b6,b60,b64
+b10,b7,b60,b64
+b11,b5,b60,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c5018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b40,b164
+b10,b7,b40,b164
+b11,b5,b40,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 14
+; WaitForVSync 14
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b227,b94
+b4,b7,b227,b94
+b5,b5,b227,b94
 b9,b6,b213,b64
 b10,b7,b213,b64
 b11,b5,b213,b64
+b3,b6,b207,b18
+b4,b7,b207,b18
+b5,b5,b207,b18
+b6,b$46,b200,b141
+b7,b$47,b200,b141
+b8,b$45,b200,b141
+b3,b6,b187,b128
+b4,b7,b187,b128
+b5,b5,b187,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$46018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b167,b64
+b4,b7,b167,b64
+b5,b5,b167,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b77
+b7,b$47,b80,b77
+b8,b$45,b80,b77
+b9,b6,b77,b128
+b10,b7,b77,b128
+b11,b5,b77,b128
+b9,b6,b67,b198
+b10,b7,b67,b198
+b11,b5,b67,b198
+b6,b6,b64,b115
+b7,b7,b64,b115
+b8,b5,b64,b115
+b9,b6,b61,b64
+b10,b7,b61,b64
+b11,b5,b61,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c4018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b41,b164
+b10,b7,b41,b164
+b11,b5,b41,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 15
+; WaitForVSync 15
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b226,b94
+b4,b7,b226,b94
+b5,b5,b226,b94
 b9,b6,b214,b64
 b10,b7,b214,b64
 b11,b5,b214,b64
+b3,b6,b206,b18
+b4,b7,b206,b18
+b5,b5,b206,b18
+b6,b$46,b200,b142
+b7,b$47,b200,b142
+b8,b$45,b200,b142
+b3,b6,b186,b128
+b4,b7,b186,b128
+b5,b5,b186,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$47018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b166,b64
+b4,b7,b166,b64
+b5,b5,b166,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b78
+b7,b$47,b80,b78
+b8,b$45,b80,b78
+b9,b6,b78,b128
+b10,b7,b78,b128
+b11,b5,b78,b128
+b9,b6,b68,b198
+b10,b7,b68,b198
+b11,b5,b68,b198
+b6,b6,b64,b114
+b7,b7,b64,b114
+b8,b5,b64,b114
+b9,b6,b62,b64
+b10,b7,b62,b64
+b11,b5,b62,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c3018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b42,b164
+b10,b7,b42,b164
+b11,b5,b42,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 16
+; WaitForVSync 16
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b225,b94
+b4,b7,b225,b94
+b5,b5,b225,b94
 b9,b6,b215,b64
 b10,b7,b215,b64
 b11,b5,b215,b64
+b3,b6,b205,b18
+b4,b7,b205,b18
+b5,b5,b205,b18
+b6,b$46,b200,b143
+b7,b$47,b200,b143
+b8,b$45,b200,b143
+b3,b6,b185,b128
+b4,b7,b185,b128
+b5,b5,b185,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$48018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b165,b64
+b4,b7,b165,b64
+b5,b5,b165,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b79
+b7,b$47,b80,b79
+b8,b$45,b80,b79
+b9,b6,b79,b128
+b10,b7,b79,b128
+b11,b5,b79,b128
+b9,b6,b69,b198
+b10,b7,b69,b198
+b11,b5,b69,b198
+b6,b6,b64,b113
+b7,b7,b64,b113
+b8,b5,b64,b113
+b9,b6,b63,b64
+b10,b7,b63,b64
+b11,b5,b63,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c2018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b43,b164
+b10,b7,b43,b164
+b11,b5,b43,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 17
+; WaitForVSync 17
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b224,b94
+b4,b7,b224,b94
+b5,b5,b224,b94
 b6,b$46,b216,b64
 b7,b$47,b216,b64
 b8,b$45,b216,b64
+b3,b6,b204,b18
+b4,b7,b204,b18
+b5,b5,b204,b18
+b6,b$46,b200,b144
+b7,b$47,b200,b144
+b8,b$45,b200,b144
+b3,b6,b184,b128
+b4,b7,b184,b128
+b5,b5,b184,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$49018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b164,b64
+b4,b7,b164,b64
+b5,b5,b164,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b80
+b7,b$47,b80,b80
+b8,b$45,b80,b80
+b9,b6,b80,b128
+b10,b7,b80,b128
+b11,b5,b80,b128
+b9,b6,b70,b198
+b10,b7,b70,b198
+b11,b5,b70,b198
+b6,b6,b64,b112
+b7,b7,b64,b112
+b8,b5,b64,b112
+b9,b6,b64,b64
+b10,b7,b64,b64
+b11,b5,b64,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$c1018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b44,b164
+b10,b7,b44,b164
+b11,b5,b44,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 18
+; WaitForVSync 18
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b223,b94
+b4,b7,b223,b94
+b5,b5,b223,b94
 b6,b$46,b216,b65
 b7,b$47,b216,b65
 b8,b$45,b216,b65
+b3,b6,b203,b18
+b4,b7,b203,b18
+b5,b5,b203,b18
+b6,b$46,b200,b145
+b7,b$47,b200,b145
+b8,b$45,b200,b145
+b3,b6,b183,b128
+b4,b7,b183,b128
+b5,b5,b183,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$4a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b163,b64
+b4,b7,b163,b64
+b5,b5,b163,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b81,b128
+b10,b7,b81,b128
+b11,b5,b81,b128
+b6,b$46,b80,b81
+b7,b$47,b80,b81
+b8,b$45,b80,b81
+b9,b6,b71,b198
+b10,b7,b71,b198
+b11,b5,b71,b198
+b9,b6,b65,b64
+b10,b7,b65,b64
+b11,b5,b65,b64
+b6,b6,b64,b111
+b7,b7,b64,b111
+b8,b5,b64,b111
+b9,b6,b45,b164
+b10,b7,b45,b164
+b11,b5,b45,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 19
+; WaitForVSync 19
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b222,b94
+b4,b7,b222,b94
+b5,b5,b222,b94
 b6,b$46,b216,b66
 b7,b$47,b216,b66
 b8,b$45,b216,b66
+b3,b6,b202,b18
+b4,b7,b202,b18
+b5,b5,b202,b18
+b6,b$46,b200,b146
+b7,b$47,b200,b146
+b8,b$45,b200,b146
+b3,b6,b182,b128
+b4,b7,b182,b128
+b5,b5,b182,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$4b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b162,b64
+b4,b7,b162,b64
+b5,b5,b162,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b82,b128
+b10,b7,b82,b128
+b11,b5,b82,b128
+b6,b$46,b80,b82
+b7,b$47,b80,b82
+b8,b$45,b80,b82
+b9,b6,b72,b198
+b10,b7,b72,b198
+b11,b5,b72,b198
+b9,b6,b66,b64
+b10,b7,b66,b64
+b11,b5,b66,b64
+b6,b6,b64,b110
+b7,b7,b64,b110
+b8,b5,b64,b110
+b9,b6,b46,b164
+b10,b7,b46,b164
+b11,b5,b46,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 20
+; WaitForVSync 20
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b221,b94
+b4,b7,b221,b94
+b5,b5,b221,b94
 b6,b$46,b216,b67
 b7,b$47,b216,b67
 b8,b$45,b216,b67
+b3,b6,b201,b18
+b4,b7,b201,b18
+b5,b5,b201,b18
+b6,b$46,b200,b147
+b7,b$47,b200,b147
+b8,b$45,b200,b147
+b3,b6,b181,b128
+b4,b7,b181,b128
+b5,b5,b181,b128
+; WaitForRaster
+d$0
+w$ff01ff00,$4c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b161,b64
+b4,b7,b161,b64
+b5,b5,b161,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$60018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b83,b128
+b10,b7,b83,b128
+b11,b5,b83,b128
+b6,b$46,b80,b83
+b7,b$47,b80,b83
+b8,b$45,b80,b83
+b9,b6,b73,b198
+b10,b7,b73,b198
+b11,b5,b73,b198
+b9,b6,b67,b64
+b10,b7,b67,b64
+b11,b5,b67,b64
+b6,b6,b64,b109
+b7,b7,b64,b109
+b8,b5,b64,b109
+b9,b6,b47,b164
+b10,b7,b47,b164
+b11,b5,b47,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 21
+; WaitForVSync 21
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b220,b94
+b4,b7,b220,b94
+b5,b5,b220,b94
 b6,b$46,b216,b68
 b7,b$47,b216,b68
 b8,b$45,b216,b68
+b6,b$46,b200,b148
+b7,b$47,b200,b148
+b8,b$45,b200,b148
+b3,b6,b200,b18
+b4,b7,b200,b18
+b5,b5,b200,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b180,b128
+b4,b7,b180,b128
+b5,b5,b180,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b160,b64
+b4,b7,b160,b64
+b5,b5,b160,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$61018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b84,b128
+b10,b7,b84,b128
+b11,b5,b84,b128
+b6,b$46,b80,b84
+b7,b$47,b80,b84
+b8,b$45,b80,b84
+b9,b6,b74,b198
+b10,b7,b74,b198
+b11,b5,b74,b198
+b9,b6,b68,b64
+b10,b7,b68,b64
+b11,b5,b68,b64
+b6,b6,b64,b108
+b7,b7,b64,b108
+b8,b5,b64,b108
+b9,b6,b48,b164
+b10,b7,b48,b164
+b11,b5,b48,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 22
+; WaitForVSync 22
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b219,b94
+b4,b7,b219,b94
+b5,b5,b219,b94
 b6,b$46,b216,b69
 b7,b$47,b216,b69
 b8,b$45,b216,b69
+b6,b$46,b200,b149
+b7,b$47,b200,b149
+b8,b$45,b200,b149
+b3,b6,b199,b18
+b4,b7,b199,b18
+b5,b5,b199,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b179,b128
+b4,b7,b179,b128
+b5,b5,b179,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b159,b64
+b4,b7,b159,b64
+b5,b5,b159,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$62018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b85,b128
+b10,b7,b85,b128
+b11,b5,b85,b128
+b6,b$46,b80,b85
+b7,b$47,b80,b85
+b8,b$45,b80,b85
+b9,b6,b75,b198
+b10,b7,b75,b198
+b11,b5,b75,b198
+b9,b6,b69,b64
+b10,b7,b69,b64
+b11,b5,b69,b64
+b6,b6,b64,b107
+b7,b7,b64,b107
+b8,b5,b64,b107
+b9,b6,b49,b164
+b10,b7,b49,b164
+b11,b5,b49,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 23
+; WaitForVSync 23
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b218,b94
+b4,b7,b218,b94
+b5,b5,b218,b94
 b6,b$46,b216,b70
 b7,b$47,b216,b70
 b8,b$45,b216,b70
+b6,b$46,b200,b150
+b7,b$47,b200,b150
+b8,b$45,b200,b150
+b3,b6,b198,b18
+b4,b7,b198,b18
+b5,b5,b198,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b178,b128
+b4,b7,b178,b128
+b5,b5,b178,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b158,b64
+b4,b7,b158,b64
+b5,b5,b158,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$63018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b86,b128
+b10,b7,b86,b128
+b11,b5,b86,b128
+b6,b$46,b80,b86
+b7,b$47,b80,b86
+b8,b$45,b80,b86
+b9,b6,b76,b198
+b10,b7,b76,b198
+b11,b5,b76,b198
+b9,b6,b70,b64
+b10,b7,b70,b64
+b11,b5,b70,b64
+b6,b6,b64,b106
+b7,b7,b64,b106
+b8,b5,b64,b106
+b9,b6,b50,b164
+b10,b7,b50,b164
+b11,b5,b50,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 24
+; WaitForVSync 24
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
+b3,b6,b217,b94
+b4,b7,b217,b94
+b5,b5,b217,b94
 b6,b$46,b216,b71
 b7,b$47,b216,b71
 b8,b$45,b216,b71
+b6,b$46,b200,b151
+b7,b$47,b200,b151
+b8,b$45,b200,b151
+b3,b6,b197,b18
+b4,b7,b197,b18
+b5,b5,b197,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b177,b128
+b4,b7,b177,b128
+b5,b5,b177,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$50018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b157,b64
+b4,b7,b157,b64
+b5,b5,b157,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$64018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b87,b128
+b10,b7,b87,b128
+b11,b5,b87,b128
+b6,b$46,b80,b87
+b7,b$47,b80,b87
+b8,b$45,b80,b87
+b9,b6,b77,b198
+b10,b7,b77,b198
+b11,b5,b77,b198
+b9,b6,b71,b64
+b10,b7,b71,b64
+b11,b5,b71,b64
+b6,b6,b64,b105
+b7,b7,b64,b105
+b8,b5,b64,b105
+b9,b6,b51,b164
+b10,b7,b51,b164
+b11,b5,b51,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 25
+; WaitForVSync 25
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b72
 b7,b$47,b216,b72
 b8,b$45,b216,b72
+b3,b6,b216,b94
+b4,b7,b216,b94
+b5,b5,b216,b94
+b6,b$46,b200,b152
+b7,b$47,b200,b152
+b8,b$45,b200,b152
+b3,b6,b196,b18
+b4,b7,b196,b18
+b5,b5,b196,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b176,b128
+b4,b7,b176,b128
+b5,b5,b176,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$51018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b156,b64
+b4,b7,b156,b64
+b5,b5,b156,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$65018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b88,b128
+b10,b7,b88,b128
+b11,b5,b88,b128
+b6,b$46,b80,b88
+b7,b$47,b80,b88
+b8,b$45,b80,b88
+b9,b6,b78,b198
+b10,b7,b78,b198
+b11,b5,b78,b198
+b9,b6,b72,b64
+b10,b7,b72,b64
+b11,b5,b72,b64
+b6,b6,b64,b104
+b7,b7,b64,b104
+b8,b5,b64,b104
+b9,b6,b52,b164
+b10,b7,b52,b164
+b11,b5,b52,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 26
+; WaitForVSync 26
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b73
 b7,b$47,b216,b73
 b8,b$45,b216,b73
+b3,b6,b215,b94
+b4,b7,b215,b94
+b5,b5,b215,b94
+b6,b$46,b200,b153
+b7,b$47,b200,b153
+b8,b$45,b200,b153
+b3,b6,b195,b18
+b4,b7,b195,b18
+b5,b5,b195,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b175,b128
+b4,b7,b175,b128
+b5,b5,b175,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$52018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b155,b64
+b4,b7,b155,b64
+b5,b5,b155,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$66018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b89,b128
+b10,b7,b89,b128
+b11,b5,b89,b128
+b6,b$46,b80,b89
+b7,b$47,b80,b89
+b8,b$45,b80,b89
+b9,b6,b79,b198
+b10,b7,b79,b198
+b11,b5,b79,b198
+b9,b6,b73,b64
+b10,b7,b73,b64
+b11,b5,b73,b64
+b6,b6,b64,b103
+b7,b7,b64,b103
+b8,b5,b64,b103
+b9,b6,b53,b164
+b10,b7,b53,b164
+b11,b5,b53,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 27
+; WaitForVSync 27
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b74
 b7,b$47,b216,b74
 b8,b$45,b216,b74
+b3,b6,b214,b94
+b4,b7,b214,b94
+b5,b5,b214,b94
+b6,b$46,b200,b154
+b7,b$47,b200,b154
+b8,b$45,b200,b154
+b3,b6,b194,b18
+b4,b7,b194,b18
+b5,b5,b194,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$3f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b174,b128
+b4,b7,b174,b128
+b5,b5,b174,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$53018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b154,b64
+b4,b7,b154,b64
+b5,b5,b154,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$67018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b90,b128
+b10,b7,b90,b128
+b11,b5,b90,b128
+b6,b$46,b80,b90
+b7,b$47,b80,b90
+b8,b$45,b80,b90
+b9,b6,b80,b198
+b10,b7,b80,b198
+b11,b5,b80,b198
+b9,b6,b74,b64
+b10,b7,b74,b64
+b11,b5,b74,b64
+b6,b6,b64,b102
+b7,b7,b64,b102
+b8,b5,b64,b102
+b9,b6,b54,b164
+b10,b7,b54,b164
+b11,b5,b54,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 28
+; WaitForVSync 28
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b75
 b7,b$47,b216,b75
 b8,b$45,b216,b75
+b3,b6,b213,b94
+b4,b7,b213,b94
+b5,b5,b213,b94
+b6,b$46,b200,b155
+b7,b$47,b200,b155
+b8,b$45,b200,b155
+b3,b6,b193,b18
+b4,b7,b193,b18
+b5,b5,b193,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$40018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b173,b128
+b4,b7,b173,b128
+b5,b5,b173,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$54018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b153,b64
+b4,b7,b153,b64
+b5,b5,b153,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$68018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b91,b128
+b10,b7,b91,b128
+b11,b5,b91,b128
+b9,b6,b81,b198
+b10,b7,b81,b198
+b11,b5,b81,b198
+b6,b$46,b80,b91
+b7,b$47,b80,b91
+b8,b$45,b80,b91
+b9,b6,b75,b64
+b10,b7,b75,b64
+b11,b5,b75,b64
+b6,b6,b64,b101
+b7,b7,b64,b101
+b8,b5,b64,b101
+b9,b6,b55,b164
+b10,b7,b55,b164
+b11,b5,b55,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 29
+; WaitForVSync 29
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b76
 b7,b$47,b216,b76
 b8,b$45,b216,b76
+b3,b6,b212,b94
+b4,b7,b212,b94
+b5,b5,b212,b94
+b6,b$46,b200,b156
+b7,b$47,b200,b156
+b8,b$45,b200,b156
+b3,b6,b192,b18
+b4,b7,b192,b18
+b5,b5,b192,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$41018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b172,b128
+b4,b7,b172,b128
+b5,b5,b172,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$55018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b152,b64
+b4,b7,b152,b64
+b5,b5,b152,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$69018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b92,b128
+b10,b7,b92,b128
+b11,b5,b92,b128
+b9,b6,b82,b198
+b10,b7,b82,b198
+b11,b5,b82,b198
+b6,b$46,b80,b92
+b7,b$47,b80,b92
+b8,b$45,b80,b92
+b9,b6,b76,b64
+b10,b7,b76,b64
+b11,b5,b76,b64
+b6,b6,b64,b100
+b7,b7,b64,b100
+b8,b5,b64,b100
+b9,b6,b56,b164
+b10,b7,b56,b164
+b11,b5,b56,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 30
+; WaitForVSync 30
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b77
 b7,b$47,b216,b77
 b8,b$45,b216,b77
+b3,b6,b211,b94
+b4,b7,b211,b94
+b5,b5,b211,b94
+b6,b$46,b200,b157
+b7,b$47,b200,b157
+b8,b$45,b200,b157
+b3,b6,b191,b18
+b4,b7,b191,b18
+b5,b5,b191,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$42018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b171,b128
+b4,b7,b171,b128
+b5,b5,b171,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$56018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b151,b64
+b4,b7,b151,b64
+b5,b5,b151,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b93,b128
+b10,b7,b93,b128
+b11,b5,b93,b128
+b9,b6,b83,b198
+b10,b7,b83,b198
+b11,b5,b83,b198
+b6,b$46,b80,b93
+b7,b$47,b80,b93
+b8,b$45,b80,b93
+b9,b6,b77,b64
+b10,b7,b77,b64
+b11,b5,b77,b64
+b6,b6,b64,b99
+b7,b7,b64,b99
+b8,b5,b64,b99
+b9,b6,b57,b164
+b10,b7,b57,b164
+b11,b5,b57,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 31
+; WaitForVSync 31
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b78
 b7,b$47,b216,b78
 b8,b$45,b216,b78
+b3,b6,b210,b94
+b4,b7,b210,b94
+b5,b5,b210,b94
+b6,b$46,b200,b158
+b7,b$47,b200,b158
+b8,b$45,b200,b158
+b3,b6,b190,b18
+b4,b7,b190,b18
+b5,b5,b190,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$43018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b170,b128
+b4,b7,b170,b128
+b5,b5,b170,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$57018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b150,b64
+b4,b7,b150,b64
+b5,b5,b150,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b94,b128
+b10,b7,b94,b128
+b11,b5,b94,b128
+b9,b6,b84,b198
+b10,b7,b84,b198
+b11,b5,b84,b198
+b6,b$46,b80,b94
+b7,b$47,b80,b94
+b8,b$45,b80,b94
+b9,b6,b78,b64
+b10,b7,b78,b64
+b11,b5,b78,b64
+b6,b6,b64,b98
+b7,b7,b64,b98
+b8,b5,b64,b98
+b9,b6,b58,b164
+b10,b7,b58,b164
+b11,b5,b58,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 32
+; WaitForVSync 32
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b79
 b7,b$47,b216,b79
 b8,b$45,b216,b79
+b3,b6,b209,b94
+b4,b7,b209,b94
+b5,b5,b209,b94
+b6,b$46,b200,b159
+b7,b$47,b200,b159
+b8,b$45,b200,b159
+b3,b6,b189,b18
+b4,b7,b189,b18
+b5,b5,b189,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$44018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b169,b128
+b4,b7,b169,b128
+b5,b5,b169,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$58018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b149,b64
+b4,b7,b149,b64
+b5,b5,b149,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b95,b128
+b10,b7,b95,b128
+b11,b5,b95,b128
+b9,b6,b85,b198
+b10,b7,b85,b198
+b11,b5,b85,b198
+b6,b$46,b80,b95
+b7,b$47,b80,b95
+b8,b$45,b80,b95
+b9,b6,b79,b64
+b10,b7,b79,b64
+b11,b5,b79,b64
+b6,b6,b64,b97
+b7,b7,b64,b97
+b8,b5,b64,b97
+b9,b6,b59,b164
+b10,b7,b59,b164
+b11,b5,b59,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 33
+; WaitForVSync 33
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b80
 b7,b$47,b216,b80
 b8,b$45,b216,b80
+b3,b6,b208,b94
+b4,b7,b208,b94
+b5,b5,b208,b94
+b6,b$46,b200,b160
+b7,b$47,b200,b160
+b8,b$45,b200,b160
+b3,b6,b188,b18
+b4,b7,b188,b18
+b5,b5,b188,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$45018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b168,b128
+b4,b7,b168,b128
+b5,b5,b168,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$59018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b148,b64
+b4,b7,b148,b64
+b5,b5,b148,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b96,b128
+b10,b7,b96,b128
+b11,b5,b96,b128
+b9,b6,b86,b198
+b10,b7,b86,b198
+b11,b5,b86,b198
+b6,b$46,b80,b96
+b7,b$47,b80,b96
+b8,b$45,b80,b96
+b9,b6,b80,b64
+b10,b7,b80,b64
+b11,b5,b80,b64
+b6,b6,b64,b96
+b7,b7,b64,b96
+b8,b5,b64,b96
+b9,b6,b60,b164
+b10,b7,b60,b164
+b11,b5,b60,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 34
+; WaitForVSync 34
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b81
 b7,b$47,b216,b81
 b8,b$45,b216,b81
+b3,b6,b207,b94
+b4,b7,b207,b94
+b5,b5,b207,b94
+b6,b$46,b200,b161
+b7,b$47,b200,b161
+b8,b$45,b200,b161
+b3,b6,b187,b18
+b4,b7,b187,b18
+b5,b5,b187,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$46018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b167,b128
+b4,b7,b167,b128
+b5,b5,b167,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b147,b64
+b4,b7,b147,b64
+b5,b5,b147,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b97,b128
+b10,b7,b97,b128
+b11,b5,b97,b128
+b9,b6,b87,b198
+b10,b7,b87,b198
+b11,b5,b87,b198
+b9,b6,b81,b64
+b10,b7,b81,b64
+b11,b5,b81,b64
+b6,b$46,b80,b97
+b7,b$47,b80,b97
+b8,b$45,b80,b97
+b6,b6,b64,b95
+b7,b7,b64,b95
+b8,b5,b64,b95
+b9,b6,b61,b164
+b10,b7,b61,b164
+b11,b5,b61,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 35
+; WaitForVSync 35
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b82
 b7,b$47,b216,b82
 b8,b$45,b216,b82
+b3,b6,b206,b94
+b4,b7,b206,b94
+b5,b5,b206,b94
+b6,b$46,b200,b162
+b7,b$47,b200,b162
+b8,b$45,b200,b162
+b3,b6,b186,b18
+b4,b7,b186,b18
+b5,b5,b186,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$47018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b166,b128
+b4,b7,b166,b128
+b5,b5,b166,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b146,b64
+b4,b7,b146,b64
+b5,b5,b146,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b98,b128
+b10,b7,b98,b128
+b11,b5,b98,b128
+b9,b6,b88,b198
+b10,b7,b88,b198
+b11,b5,b88,b198
+b9,b6,b82,b64
+b10,b7,b82,b64
+b11,b5,b82,b64
+b6,b$46,b80,b98
+b7,b$47,b80,b98
+b8,b$45,b80,b98
+b6,b6,b64,b94
+b7,b7,b64,b94
+b8,b5,b64,b94
+b9,b6,b62,b164
+b10,b7,b62,b164
+b11,b5,b62,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 36
+; WaitForVSync 36
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b83
 b7,b$47,b216,b83
 b8,b$45,b216,b83
+b3,b6,b205,b94
+b4,b7,b205,b94
+b5,b5,b205,b94
+b6,b$46,b200,b163
+b7,b$47,b200,b163
+b8,b$45,b200,b163
+b3,b6,b185,b18
+b4,b7,b185,b18
+b5,b5,b185,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$48018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b165,b128
+b4,b7,b165,b128
+b5,b5,b165,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b145,b64
+b4,b7,b145,b64
+b5,b5,b145,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$70018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b99,b128
+b10,b7,b99,b128
+b11,b5,b99,b128
+b9,b6,b89,b198
+b10,b7,b89,b198
+b11,b5,b89,b198
+b9,b6,b83,b64
+b10,b7,b83,b64
+b11,b5,b83,b64
+b6,b$46,b80,b99
+b7,b$47,b80,b99
+b8,b$45,b80,b99
+b6,b6,b64,b93
+b7,b7,b64,b93
+b8,b5,b64,b93
+b9,b6,b63,b164
+b10,b7,b63,b164
+b11,b5,b63,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 37
+; WaitForVSync 37
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b84
 b7,b$47,b216,b84
 b8,b$45,b216,b84
+b3,b6,b204,b94
+b4,b7,b204,b94
+b5,b5,b204,b94
+b6,b$46,b200,b164
+b7,b$47,b200,b164
+b8,b$45,b200,b164
+b3,b6,b184,b18
+b4,b7,b184,b18
+b5,b5,b184,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$49018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b164,b128
+b4,b7,b164,b128
+b5,b5,b164,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b144,b64
+b4,b7,b144,b64
+b5,b5,b144,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$71018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b100,b128
+b10,b7,b100,b128
+b11,b5,b100,b128
+b9,b6,b90,b198
+b10,b7,b90,b198
+b11,b5,b90,b198
+b9,b6,b84,b64
+b10,b7,b84,b64
+b11,b5,b84,b64
+b6,b$46,b80,b100
+b7,b$47,b80,b100
+b8,b$45,b80,b100
+b6,b6,b64,b92
+b7,b7,b64,b92
+b8,b5,b64,b92
+b9,b6,b64,b164
+b10,b7,b64,b164
+b11,b5,b64,b164
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 38
+; WaitForVSync 38
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b85
 b7,b$47,b216,b85
 b8,b$45,b216,b85
+b3,b6,b203,b94
+b4,b7,b203,b94
+b5,b5,b203,b94
+b6,b$46,b200,b165
+b7,b$47,b200,b165
+b8,b$45,b200,b165
+b3,b6,b183,b18
+b4,b7,b183,b18
+b5,b5,b183,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$4a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b163,b128
+b4,b7,b163,b128
+b5,b5,b163,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b143,b64
+b4,b7,b143,b64
+b5,b5,b143,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$72018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b101,b128
+b10,b7,b101,b128
+b11,b5,b101,b128
+b9,b6,b91,b198
+b10,b7,b91,b198
+b11,b5,b91,b198
+b9,b6,b85,b64
+b10,b7,b85,b64
+b11,b5,b85,b64
+b6,b$46,b80,b101
+b7,b$47,b80,b101
+b8,b$45,b80,b101
+b9,b6,b65,b164
+b10,b7,b65,b164
+b11,b5,b65,b164
+b6,b6,b64,b91
+b7,b7,b64,b91
+b8,b5,b64,b91
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 39
+; WaitForVSync 39
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b86
 b7,b$47,b216,b86
 b8,b$45,b216,b86
+b3,b6,b202,b94
+b4,b7,b202,b94
+b5,b5,b202,b94
+b6,b$46,b200,b166
+b7,b$47,b200,b166
+b8,b$45,b200,b166
+b3,b6,b182,b18
+b4,b7,b182,b18
+b5,b5,b182,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$4b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b162,b128
+b4,b7,b162,b128
+b5,b5,b162,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b142,b64
+b4,b7,b142,b64
+b5,b5,b142,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$73018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b102,b128
+b10,b7,b102,b128
+b11,b5,b102,b128
+b9,b6,b92,b198
+b10,b7,b92,b198
+b11,b5,b92,b198
+b9,b6,b86,b64
+b10,b7,b86,b64
+b11,b5,b86,b64
+b6,b$46,b80,b102
+b7,b$47,b80,b102
+b8,b$45,b80,b102
+b9,b6,b66,b164
+b10,b7,b66,b164
+b11,b5,b66,b164
+b6,b6,b64,b90
+b7,b7,b64,b90
+b8,b5,b64,b90
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 40
+; WaitForVSync 40
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b87
 b7,b$47,b216,b87
 b8,b$45,b216,b87
+b3,b6,b201,b94
+b4,b7,b201,b94
+b5,b5,b201,b94
+b6,b$46,b200,b167
+b7,b$47,b200,b167
+b8,b$45,b200,b167
+b3,b6,b181,b18
+b4,b7,b181,b18
+b5,b5,b181,b18
+; WaitForRaster
+d$0
+w$ff01ff00,$4c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b161,b128
+b4,b7,b161,b128
+b5,b5,b161,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$60018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b141,b64
+b4,b7,b141,b64
+b5,b5,b141,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$74018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b103,b128
+b10,b7,b103,b128
+b11,b5,b103,b128
+b9,b6,b93,b198
+b10,b7,b93,b198
+b11,b5,b93,b198
+b9,b6,b87,b64
+b10,b7,b87,b64
+b11,b5,b87,b64
+b6,b$46,b80,b103
+b7,b$47,b80,b103
+b8,b$45,b80,b103
+b9,b6,b67,b164
+b10,b7,b67,b164
+b11,b5,b67,b164
+b6,b6,b64,b89
+b7,b7,b64,b89
+b8,b5,b64,b89
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 41
+; WaitForVSync 41
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b88
 b7,b$47,b216,b88
 b8,b$45,b216,b88
+b6,b$46,b200,b168
+b7,b$47,b200,b168
+b8,b$45,b200,b168
+b3,b6,b200,b94
+b4,b7,b200,b94
+b5,b5,b200,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b180,b18
+b4,b7,b180,b18
+b5,b5,b180,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b160,b128
+b4,b7,b160,b128
+b5,b5,b160,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$61018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b140,b64
+b4,b7,b140,b64
+b5,b5,b140,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$75018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b104,b128
+b10,b7,b104,b128
+b11,b5,b104,b128
+b9,b6,b94,b198
+b10,b7,b94,b198
+b11,b5,b94,b198
+b9,b6,b88,b64
+b10,b7,b88,b64
+b11,b5,b88,b64
+b6,b$46,b80,b104
+b7,b$47,b80,b104
+b8,b$45,b80,b104
+b9,b6,b68,b164
+b10,b7,b68,b164
+b11,b5,b68,b164
+b6,b6,b64,b88
+b7,b7,b64,b88
+b8,b5,b64,b88
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 42
+; WaitForVSync 42
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b89
 b7,b$47,b216,b89
 b8,b$45,b216,b89
+b6,b$46,b200,b169
+b7,b$47,b200,b169
+b8,b$45,b200,b169
+b3,b6,b199,b94
+b4,b7,b199,b94
+b5,b5,b199,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b179,b18
+b4,b7,b179,b18
+b5,b5,b179,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b159,b128
+b4,b7,b159,b128
+b5,b5,b159,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$62018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b139,b64
+b4,b7,b139,b64
+b5,b5,b139,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$76018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b105,b128
+b10,b7,b105,b128
+b11,b5,b105,b128
+b9,b6,b95,b198
+b10,b7,b95,b198
+b11,b5,b95,b198
+b9,b6,b89,b64
+b10,b7,b89,b64
+b11,b5,b89,b64
+b6,b$46,b80,b105
+b7,b$47,b80,b105
+b8,b$45,b80,b105
+b9,b6,b69,b164
+b10,b7,b69,b164
+b11,b5,b69,b164
+b6,b6,b64,b87
+b7,b7,b64,b87
+b8,b5,b64,b87
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 43
+; WaitForVSync 43
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b90
 b7,b$47,b216,b90
 b8,b$45,b216,b90
+b6,b$46,b200,b170
+b7,b$47,b200,b170
+b8,b$45,b200,b170
+b3,b6,b198,b94
+b4,b7,b198,b94
+b5,b5,b198,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b178,b18
+b4,b7,b178,b18
+b5,b5,b178,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b158,b128
+b4,b7,b158,b128
+b5,b5,b158,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$63018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b138,b64
+b4,b7,b138,b64
+b5,b5,b138,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$77018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b106,b128
+b10,b7,b106,b128
+b11,b5,b106,b128
+b9,b6,b96,b198
+b10,b7,b96,b198
+b11,b5,b96,b198
+b9,b6,b90,b64
+b10,b7,b90,b64
+b11,b5,b90,b64
+b6,b$46,b80,b106
+b7,b$47,b80,b106
+b8,b$45,b80,b106
+b9,b6,b70,b164
+b10,b7,b70,b164
+b11,b5,b70,b164
+b6,b6,b64,b86
+b7,b7,b64,b86
+b8,b5,b64,b86
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 44
+; WaitForVSync 44
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b91
 b7,b$47,b216,b91
 b8,b$45,b216,b91
+b6,b$46,b200,b171
+b7,b$47,b200,b171
+b8,b$45,b200,b171
+b3,b6,b197,b94
+b4,b7,b197,b94
+b5,b5,b197,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b177,b18
+b4,b7,b177,b18
+b5,b5,b177,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$50018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b157,b128
+b4,b7,b157,b128
+b5,b5,b157,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$64018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b137,b64
+b4,b7,b137,b64
+b5,b5,b137,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$78018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b107,b128
+b10,b7,b107,b128
+b11,b5,b107,b128
+b9,b6,b97,b198
+b10,b7,b97,b198
+b11,b5,b97,b198
+b9,b6,b91,b64
+b10,b7,b91,b64
+b11,b5,b91,b64
+b6,b$46,b80,b107
+b7,b$47,b80,b107
+b8,b$45,b80,b107
+b9,b6,b71,b164
+b10,b7,b71,b164
+b11,b5,b71,b164
+b6,b6,b64,b85
+b7,b7,b64,b85
+b8,b5,b64,b85
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 45
+; WaitForVSync 45
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b92
 b7,b$47,b216,b92
 b8,b$45,b216,b92
+b6,b$46,b200,b172
+b7,b$47,b200,b172
+b8,b$45,b200,b172
+b3,b6,b196,b94
+b4,b7,b196,b94
+b5,b5,b196,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b176,b18
+b4,b7,b176,b18
+b5,b5,b176,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$51018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b156,b128
+b4,b7,b156,b128
+b5,b5,b156,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$65018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b136,b64
+b4,b7,b136,b64
+b5,b5,b136,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$79018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b108,b128
+b10,b7,b108,b128
+b11,b5,b108,b128
+b9,b6,b98,b198
+b10,b7,b98,b198
+b11,b5,b98,b198
+b9,b6,b92,b64
+b10,b7,b92,b64
+b11,b5,b92,b64
+b6,b$46,b80,b108
+b7,b$47,b80,b108
+b8,b$45,b80,b108
+b9,b6,b72,b164
+b10,b7,b72,b164
+b11,b5,b72,b164
+b6,b6,b64,b84
+b7,b7,b64,b84
+b8,b5,b64,b84
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 46
+; WaitForVSync 46
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b93
 b7,b$47,b216,b93
 b8,b$45,b216,b93
+b6,b$46,b200,b173
+b7,b$47,b200,b173
+b8,b$45,b200,b173
+b3,b6,b195,b94
+b4,b7,b195,b94
+b5,b5,b195,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b175,b18
+b4,b7,b175,b18
+b5,b5,b175,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$52018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b155,b128
+b4,b7,b155,b128
+b5,b5,b155,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$66018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b135,b64
+b4,b7,b135,b64
+b5,b5,b135,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$7a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b109,b128
+b10,b7,b109,b128
+b11,b5,b109,b128
+b9,b6,b99,b198
+b10,b7,b99,b198
+b11,b5,b99,b198
+b9,b6,b93,b64
+b10,b7,b93,b64
+b11,b5,b93,b64
+b6,b$46,b80,b109
+b7,b$47,b80,b109
+b8,b$45,b80,b109
+b9,b6,b73,b164
+b10,b7,b73,b164
+b11,b5,b73,b164
+b6,b6,b64,b83
+b7,b7,b64,b83
+b8,b5,b64,b83
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 47
+; WaitForVSync 47
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b94
 b7,b$47,b216,b94
 b8,b$45,b216,b94
+b6,b$46,b200,b174
+b7,b$47,b200,b174
+b8,b$45,b200,b174
+b3,b6,b194,b94
+b4,b7,b194,b94
+b5,b5,b194,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$3f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b174,b18
+b4,b7,b174,b18
+b5,b5,b174,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$53018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b154,b128
+b4,b7,b154,b128
+b5,b5,b154,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$67018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b134,b64
+b4,b7,b134,b64
+b5,b5,b134,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$7b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b110,b128
+b10,b7,b110,b128
+b11,b5,b110,b128
+b9,b6,b100,b198
+b10,b7,b100,b198
+b11,b5,b100,b198
+b9,b6,b94,b64
+b10,b7,b94,b64
+b11,b5,b94,b64
+b6,b$46,b80,b110
+b7,b$47,b80,b110
+b8,b$45,b80,b110
+b9,b6,b74,b164
+b10,b7,b74,b164
+b11,b5,b74,b164
+b6,b6,b64,b82
+b7,b7,b64,b82
+b8,b5,b64,b82
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 48
+; WaitForVSync 48
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b6,b$46,b216,b95
 b7,b$47,b216,b95
 b8,b$45,b216,b95
+b6,b$46,b200,b175
+b7,b$47,b200,b175
+b8,b$45,b200,b175
+b3,b6,b193,b94
+b4,b7,b193,b94
+b5,b5,b193,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$40018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b173,b18
+b4,b7,b173,b18
+b5,b5,b173,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$54018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b153,b128
+b4,b7,b153,b128
+b5,b5,b153,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$68018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b133,b64
+b4,b7,b133,b64
+b5,b5,b133,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$7c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b111,b128
+b10,b7,b111,b128
+b11,b5,b111,b128
+b9,b6,b101,b198
+b10,b7,b101,b198
+b11,b5,b101,b198
+b9,b6,b95,b64
+b10,b7,b95,b64
+b11,b5,b95,b64
+b6,b$46,b80,b111
+b7,b$47,b80,b111
+b8,b$45,b80,b111
+b9,b6,b75,b164
+b10,b7,b75,b164
+b11,b5,b75,b164
+b6,b6,b64,b81
+b7,b7,b64,b81
+b8,b5,b64,b81
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 49
+; WaitForVSync 49
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b216,b96
 b4,b7,b216,b96
 b5,b5,b216,b96
+b6,b$46,b200,b176
+b7,b$47,b200,b176
+b8,b$45,b200,b176
+b3,b6,b192,b94
+b4,b7,b192,b94
+b5,b5,b192,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$41018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b172,b18
+b4,b7,b172,b18
+b5,b5,b172,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$55018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b152,b128
+b4,b7,b152,b128
+b5,b5,b152,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$69018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b132,b64
+b4,b7,b132,b64
+b5,b5,b132,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$7d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b112,b128
+b10,b7,b112,b128
+b11,b5,b112,b128
+b9,b6,b102,b198
+b10,b7,b102,b198
+b11,b5,b102,b198
+b9,b6,b96,b64
+b10,b7,b96,b64
+b11,b5,b96,b64
+b6,b$46,b80,b112
+b7,b$47,b80,b112
+b8,b$45,b80,b112
+b9,b6,b76,b164
+b10,b7,b76,b164
+b11,b5,b76,b164
+b6,b6,b64,b80
+b7,b7,b64,b80
+b8,b5,b64,b80
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 50
+; WaitForVSync 50
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b215,b96
 b4,b7,b215,b96
 b5,b5,b215,b96
+b6,b$46,b200,b177
+b7,b$47,b200,b177
+b8,b$45,b200,b177
+b3,b6,b191,b94
+b4,b7,b191,b94
+b5,b5,b191,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$42018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b171,b18
+b4,b7,b171,b18
+b5,b5,b171,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$56018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b151,b128
+b4,b7,b151,b128
+b5,b5,b151,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b131,b64
+b4,b7,b131,b64
+b5,b5,b131,b64
+b9,b6,b113,b128
+b10,b7,b113,b128
+b11,b5,b113,b128
+b9,b6,b103,b198
+b10,b7,b103,b198
+b11,b5,b103,b198
+b9,b6,b97,b64
+b10,b7,b97,b64
+b11,b5,b97,b64
+b6,b$46,b80,b113
+b7,b$47,b80,b113
+b8,b$45,b80,b113
+b9,b6,b77,b164
+b10,b7,b77,b164
+b11,b5,b77,b164
+b6,b6,b64,b79
+b7,b7,b64,b79
+b8,b5,b64,b79
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 51
+; WaitForVSync 51
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b214,b96
 b4,b7,b214,b96
 b5,b5,b214,b96
+b6,b$46,b200,b178
+b7,b$47,b200,b178
+b8,b$45,b200,b178
+b3,b6,b190,b94
+b4,b7,b190,b94
+b5,b5,b190,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$43018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b170,b18
+b4,b7,b170,b18
+b5,b5,b170,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$57018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b150,b128
+b4,b7,b150,b128
+b5,b5,b150,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b130,b64
+b4,b7,b130,b64
+b5,b5,b130,b64
+b9,b6,b114,b128
+b10,b7,b114,b128
+b11,b5,b114,b128
+b9,b6,b104,b198
+b10,b7,b104,b198
+b11,b5,b104,b198
+b9,b6,b98,b64
+b10,b7,b98,b64
+b11,b5,b98,b64
+b6,b$46,b80,b114
+b7,b$47,b80,b114
+b8,b$45,b80,b114
+b9,b6,b78,b164
+b10,b7,b78,b164
+b11,b5,b78,b164
+b6,b6,b64,b78
+b7,b7,b64,b78
+b8,b5,b64,b78
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 52
+; WaitForVSync 52
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b213,b96
 b4,b7,b213,b96
 b5,b5,b213,b96
+b6,b$46,b200,b179
+b7,b$47,b200,b179
+b8,b$45,b200,b179
+b3,b6,b189,b94
+b4,b7,b189,b94
+b5,b5,b189,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$44018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b169,b18
+b4,b7,b169,b18
+b5,b5,b169,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$58018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b149,b128
+b4,b7,b149,b128
+b5,b5,b149,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b129,b64
+b4,b7,b129,b64
+b5,b5,b129,b64
+b9,b6,b115,b128
+b10,b7,b115,b128
+b11,b5,b115,b128
+b9,b6,b105,b198
+b10,b7,b105,b198
+b11,b5,b105,b198
+b9,b6,b99,b64
+b10,b7,b99,b64
+b11,b5,b99,b64
+b6,b$46,b80,b115
+b7,b$47,b80,b115
+b8,b$45,b80,b115
+b9,b6,b79,b164
+b10,b7,b79,b164
+b11,b5,b79,b164
+b6,b6,b64,b77
+b7,b7,b64,b77
+b8,b5,b64,b77
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 53
+; WaitForVSync 53
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b212,b96
 b4,b7,b212,b96
 b5,b5,b212,b96
+b6,b$46,b200,b180
+b7,b$47,b200,b180
+b8,b$45,b200,b180
+b3,b6,b188,b94
+b4,b7,b188,b94
+b5,b5,b188,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$45018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b168,b18
+b4,b7,b168,b18
+b5,b5,b168,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$59018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b148,b128
+b4,b7,b148,b128
+b5,b5,b148,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b128,b64
+b4,b7,b128,b64
+b5,b5,b128,b64
+b9,b6,b116,b128
+b10,b7,b116,b128
+b11,b5,b116,b128
+b9,b6,b106,b198
+b10,b7,b106,b198
+b11,b5,b106,b198
+b9,b6,b100,b64
+b10,b7,b100,b64
+b11,b5,b100,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$9d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b6,b$46,b80,b116
+b7,b$47,b80,b116
+b8,b$45,b80,b116
+b9,b6,b80,b164
+b10,b7,b80,b164
+b11,b5,b80,b164
+b6,b6,b64,b76
+b7,b7,b64,b76
+b8,b5,b64,b76
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 54
+; WaitForVSync 54
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b211,b96
 b4,b7,b211,b96
 b5,b5,b211,b96
+b6,b$46,b200,b181
+b7,b$47,b200,b181
+b8,b$45,b200,b181
+b3,b6,b187,b94
+b4,b7,b187,b94
+b5,b5,b187,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$46018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b167,b18
+b4,b7,b167,b18
+b5,b5,b167,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b147,b128
+b4,b7,b147,b128
+b5,b5,b147,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b127,b64
+b4,b7,b127,b64
+b5,b5,b127,b64
+b9,b6,b117,b128
+b10,b7,b117,b128
+b11,b5,b117,b128
+b9,b6,b107,b198
+b10,b7,b107,b198
+b11,b5,b107,b198
+b9,b6,b101,b64
+b10,b7,b101,b64
+b11,b5,b101,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$9c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b81,b164
+b10,b7,b81,b164
+b11,b5,b81,b164
+b6,b$46,b80,b117
+b7,b$47,b80,b117
+b8,b$45,b80,b117
+b6,b6,b64,b75
+b7,b7,b64,b75
+b8,b5,b64,b75
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 55
+; WaitForVSync 55
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b210,b96
 b4,b7,b210,b96
 b5,b5,b210,b96
+b6,b$46,b200,b182
+b7,b$47,b200,b182
+b8,b$45,b200,b182
+b3,b6,b186,b94
+b4,b7,b186,b94
+b5,b5,b186,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$47018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b166,b18
+b4,b7,b166,b18
+b5,b5,b166,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b146,b128
+b4,b7,b146,b128
+b5,b5,b146,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$6f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b126,b64
+b4,b7,b126,b64
+b5,b5,b126,b64
+b9,b6,b118,b128
+b10,b7,b118,b128
+b11,b5,b118,b128
+b9,b6,b108,b198
+b10,b7,b108,b198
+b11,b5,b108,b198
+b9,b6,b102,b64
+b10,b7,b102,b64
+b11,b5,b102,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$9b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b82,b164
+b10,b7,b82,b164
+b11,b5,b82,b164
+b6,b$46,b80,b118
+b7,b$47,b80,b118
+b8,b$45,b80,b118
+b6,b6,b64,b74
+b7,b7,b64,b74
+b8,b5,b64,b74
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 56
+; WaitForVSync 56
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b209,b96
 b4,b7,b209,b96
 b5,b5,b209,b96
+b6,b$46,b200,b183
+b7,b$47,b200,b183
+b8,b$45,b200,b183
+b3,b6,b185,b94
+b4,b7,b185,b94
+b5,b5,b185,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$48018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b165,b18
+b4,b7,b165,b18
+b5,b5,b165,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b145,b128
+b4,b7,b145,b128
+b5,b5,b145,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$70018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b125,b64
+b4,b7,b125,b64
+b5,b5,b125,b64
+b9,b6,b119,b128
+b10,b7,b119,b128
+b11,b5,b119,b128
+b9,b6,b109,b198
+b10,b7,b109,b198
+b11,b5,b109,b198
+b9,b6,b103,b64
+b10,b7,b103,b64
+b11,b5,b103,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$9a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b83,b164
+b10,b7,b83,b164
+b11,b5,b83,b164
+b6,b$46,b80,b119
+b7,b$47,b80,b119
+b8,b$45,b80,b119
+b6,b6,b64,b73
+b7,b7,b64,b73
+b8,b5,b64,b73
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 57
+; WaitForVSync 57
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b208,b96
 b4,b7,b208,b96
 b5,b5,b208,b96
+b6,b$46,b200,b184
+b7,b$47,b200,b184
+b8,b$45,b200,b184
+b3,b6,b184,b94
+b4,b7,b184,b94
+b5,b5,b184,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$49018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b164,b18
+b4,b7,b164,b18
+b5,b5,b164,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b144,b128
+b4,b7,b144,b128
+b5,b5,b144,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$71018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b124,b64
+b4,b7,b124,b64
+b5,b5,b124,b64
+b9,b6,b120,b128
+b10,b7,b120,b128
+b11,b5,b120,b128
+b9,b6,b110,b198
+b10,b7,b110,b198
+b11,b5,b110,b198
+b9,b6,b104,b64
+b10,b7,b104,b64
+b11,b5,b104,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$99018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b84,b164
+b10,b7,b84,b164
+b11,b5,b84,b164
+b6,b$46,b80,b120
+b7,b$47,b80,b120
+b8,b$45,b80,b120
+b6,b6,b64,b72
+b7,b7,b64,b72
+b8,b5,b64,b72
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 58
+; WaitForVSync 58
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b207,b96
 b4,b7,b207,b96
 b5,b5,b207,b96
+b6,b$46,b200,b185
+b7,b$47,b200,b185
+b8,b$45,b200,b185
+b3,b6,b183,b94
+b4,b7,b183,b94
+b5,b5,b183,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$4a018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b163,b18
+b4,b7,b163,b18
+b5,b5,b163,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b143,b128
+b4,b7,b143,b128
+b5,b5,b143,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$72018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b123,b64
+b4,b7,b123,b64
+b5,b5,b123,b64
+b9,b6,b121,b128
+b10,b7,b121,b128
+b11,b5,b121,b128
+b9,b6,b111,b198
+b10,b7,b111,b198
+b11,b5,b111,b198
+b9,b6,b105,b64
+b10,b7,b105,b64
+b11,b5,b105,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$98018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b85,b164
+b10,b7,b85,b164
+b11,b5,b85,b164
+b6,b$46,b80,b121
+b7,b$47,b80,b121
+b8,b$45,b80,b121
+b6,b6,b64,b71
+b7,b7,b64,b71
+b8,b5,b64,b71
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 59
+; WaitForVSync 59
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b206,b96
 b4,b7,b206,b96
 b5,b5,b206,b96
+b6,b$46,b200,b186
+b7,b$47,b200,b186
+b8,b$45,b200,b186
+b3,b6,b182,b94
+b4,b7,b182,b94
+b5,b5,b182,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$4b018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b162,b18
+b4,b7,b162,b18
+b5,b5,b162,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$5f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b142,b128
+b4,b7,b142,b128
+b5,b5,b142,b128
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$73018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b122,b128
+b10,b7,b122,b128
+b11,b5,b122,b128
+b3,b6,b122,b64
+b4,b7,b122,b64
+b5,b5,b122,b64
+b9,b6,b112,b198
+b10,b7,b112,b198
+b11,b5,b112,b198
+b9,b6,b106,b64
+b10,b7,b106,b64
+b11,b5,b106,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$97018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b86,b164
+b10,b7,b86,b164
+b11,b5,b86,b164
+b6,b$46,b80,b122
+b7,b$47,b80,b122
+b8,b$45,b80,b122
+b6,b6,b64,b70
+b7,b7,b64,b70
+b8,b5,b64,b70
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 60
+; WaitForVSync 60
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b205,b96
 b4,b7,b205,b96
 b5,b5,b205,b96
+b6,b$46,b200,b187
+b7,b$47,b200,b187
+b8,b$45,b200,b187
+b3,b6,b181,b94
+b4,b7,b181,b94
+b5,b5,b181,b94
+; WaitForRaster
+d$0
+w$ff01ff00,$4c018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b161,b18
+b4,b7,b161,b18
+b5,b5,b161,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$60018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b141,b128
+b4,b7,b141,b128
+b5,b5,b141,b128
+b9,b6,b123,b128
+b10,b7,b123,b128
+b11,b5,b123,b128
+b3,b6,b121,b64
+b4,b7,b121,b64
+b5,b5,b121,b64
+b9,b6,b113,b198
+b10,b7,b113,b198
+b11,b5,b113,b198
+b9,b6,b107,b64
+b10,b7,b107,b64
+b11,b5,b107,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$96018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b87,b164
+b10,b7,b87,b164
+b11,b5,b87,b164
+b6,b$46,b80,b123
+b7,b$47,b80,b123
+b8,b$45,b80,b123
+b6,b6,b64,b69
+b7,b7,b64,b69
+b8,b5,b64,b69
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 61
+; WaitForVSync 61
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b204,b96
 b4,b7,b204,b96
 b5,b5,b204,b96
+b6,b$46,b200,b188
+b7,b$47,b200,b188
+b8,b$45,b200,b188
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b180,b94
+b4,b7,b180,b94
+b5,b5,b180,b94
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4d018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b160,b18
+b4,b7,b160,b18
+b5,b5,b160,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$61018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b140,b128
+b4,b7,b140,b128
+b5,b5,b140,b128
+b9,b6,b124,b128
+b10,b7,b124,b128
+b11,b5,b124,b128
+b3,b6,b120,b64
+b4,b7,b120,b64
+b5,b5,b120,b64
+b9,b6,b114,b198
+b10,b7,b114,b198
+b11,b5,b114,b198
+b9,b6,b108,b64
+b10,b7,b108,b64
+b11,b5,b108,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$95018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b88,b164
+b10,b7,b88,b164
+b11,b5,b88,b164
+b6,b$46,b80,b124
+b7,b$47,b80,b124
+b8,b$45,b80,b124
+b6,b6,b64,b68
+b7,b7,b64,b68
+b8,b5,b64,b68
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 62
+; WaitForVSync 62
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b203,b96
 b4,b7,b203,b96
 b5,b5,b203,b96
+b6,b$46,b200,b189
+b7,b$47,b200,b189
+b8,b$45,b200,b189
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b179,b94
+b4,b7,b179,b94
+b5,b5,b179,b94
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4e018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b159,b18
+b4,b7,b159,b18
+b5,b5,b159,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$62018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b139,b128
+b4,b7,b139,b128
+b5,b5,b139,b128
+b9,b6,b125,b128
+b10,b7,b125,b128
+b11,b5,b125,b128
+b3,b6,b119,b64
+b4,b7,b119,b64
+b5,b5,b119,b64
+b9,b6,b115,b198
+b10,b7,b115,b198
+b11,b5,b115,b198
+b9,b6,b109,b64
+b10,b7,b109,b64
+b11,b5,b109,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$94018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b89,b164
+b10,b7,b89,b164
+b11,b5,b89,b164
+b6,b$46,b80,b125
+b7,b$47,b80,b125
+b8,b$45,b80,b125
+b6,b6,b64,b67
+b7,b7,b64,b67
+b8,b5,b64,b67
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 63
+; WaitForVSync 63
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b202,b96
 b4,b7,b202,b96
 b5,b5,b202,b96
+b6,b$46,b200,b190
+b7,b$47,b200,b190
+b8,b$45,b200,b190
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b178,b94
+b4,b7,b178,b94
+b5,b5,b178,b94
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$4f018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b158,b18
+b4,b7,b158,b18
+b5,b5,b158,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$63018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b138,b128
+b4,b7,b138,b128
+b5,b5,b138,b128
+b9,b6,b126,b128
+b10,b7,b126,b128
+b11,b5,b126,b128
+b3,b6,b118,b64
+b4,b7,b118,b64
+b5,b5,b118,b64
+b9,b6,b116,b198
+b10,b7,b116,b198
+b11,b5,b116,b198
+b9,b6,b110,b64
+b10,b7,b110,b64
+b11,b5,b110,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$93018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b90,b164
+b10,b7,b90,b164
+b11,b5,b90,b164
+b6,b$46,b80,b126
+b7,b$47,b80,b126
+b8,b$45,b80,b126
+b6,b6,b64,b66
+b7,b7,b64,b66
+b8,b5,b64,b66
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 
-;Frame 64
+; WaitForVSync 64
 d$0
 ^-$01
 d$0
+; EnableSpritesNoWait
+d$9a000110
+; SetSpriteAddress
 s$98200100
 b3,b6,b201,b96
 b4,b7,b201,b96
 b5,b5,b201,b96
+b6,b$46,b200,b191
+b7,b$47,b200,b191
+b8,b$45,b200,b191
+; WaitForRaster
+d$0
+w$ff01ff00,$39018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b177,b94
+b4,b7,b177,b94
+b5,b5,b177,b94
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$50018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b157,b18
+b4,b7,b157,b18
+b5,b5,b157,b18
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$64018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b3,b6,b137,b128
+b4,b7,b137,b128
+b5,b5,b137,b128
+b9,b6,b127,b128
+b10,b7,b127,b128
+b11,b5,b127,b128
+b3,b6,b117,b64
+b4,b7,b117,b64
+b5,b5,b117,b64
+b9,b6,b117,b198
+b10,b7,b117,b198
+b11,b5,b117,b198
+b9,b6,b111,b64
+b10,b7,b111,b64
+b11,b5,b111,b64
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
+; WaitForRaster
+d$0
+w$ff01ff00,$92018000
+; DisableSprites
+d$9a000100
+; SetSpriteAddress
+s$98200100
+b9,b6,b91,b164
+b10,b7,b91,b164
+b11,b5,b91,b164
+b6,b$46,b80,b127
+b7,b$47,b80,b127
+b8,b$45,b80,b127
+b6,b6,b64,b65
+b7,b7,b64,b65
+b8,b5,b64,b65
+d$0
+; EnableSprites
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+; EnableSpritesNoWait
+d$9a000110
 d$0
 
 

@@ -1,15 +1,29 @@
+* VSMDD2 why is "w$ff01ff00,$3f018000" triggering near raster 2f?
+	* The copper (VSMDD2) RV[0..7] input needed an extra latching 74273 (U84 excluded from PCB) to smooth the signal from the counters
+		This kind of buffering logic is going to be needed on the real hardware, and might need to be added to the VSMDD2 inputs from the CLK
+* Below might be related...
+* Colour bars: With the sin/cos wave pattern, it seems to clamp to a bad value? Investigate the data driving this pattern...
+	The horizontal and vertical pixel counters might need to be latched
+
+
+
 * GenerateData2
 	* Is the slight pixel ripple effect observed when moving right (output\debug2.gif) is the hardware or the virtual display adaptor...
+	* Much higher X resolutions (like 1024 pixels) on the virtual display need to be tested...
+		* Higher resolutions do show the grass an other tiles with some very thin vertical colour edge bleeding on perhaps the tile boundary
+			This might be due to the colour RAM fetch not being completely synced with the tile pixel shifting and output mix?
+			Or this might be caused by the horizontal and vertical pixel clocks not being latched from the counters, so the counter ripple is not quite exactly settling all at the same time?
+
+
+* GenerateData2
+	Add a simple (naive) multiplexor test using WaitForRaster() to thenreset the sprite used back to the first if there is enough gap
+
 
 
 * Board connectors
 	https://sg.rs-online.com/web/c/connectors/pcb-connectors/idc-connectors/
 	https://sg.rs-online.com/web/c/cables-wires/ribbon-flat-cable/flat-ribbon-cable/
 	Perhaps it's going to be better to split the boards into video generation and combination logic, char screen, tiles, sprites and mode 7?
-
-
-
-* Colour bars: With the sin/cos wave pattern, it seems to clamp to a bad value? Investigate the data driving this pattern...
 
 
 
