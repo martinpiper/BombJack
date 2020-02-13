@@ -1,6 +1,16 @@
 ; Blank (address b$0000)
 d0
 
+; Testing the _EXTCS8000-B800 lines
+d$80000112
+d$88000112
+d$90000112
+d$98000112
+d$a0000112
+d$a8000112
+d$b0000112
+d$b8000112
+
 ; Background image enable and index
 ; x	Display enable (DB5)
 ; With DBGWRITE ~= 10k then b$12 is needed first, to disable the display and avoid the data writes appearing in the display

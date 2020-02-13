@@ -594,3 +594,8 @@
 			
 			
 * 7483 no longer made? Change to 74283 with different pinout.
+
+
+
+* GenerateData2
+	Add a simple (naive) multiplexor test using WaitForRaster() to then reset the sprite used back to the first if there is enough gap
