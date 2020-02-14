@@ -45,9 +45,12 @@
 		_SW		Root sheet 3, unused. Removed.
 	* Created _EXTCS8000-B800 lines which can be moved to a header from the main "Video gen, pixel clock timing, final mixing output" board
 		Note: _9000CS renamed to _EXTCS9000
-		* TODO: _EXTCS9800 logic that decodes the _9800CS, _9A00CS, _9C00CS, _9E00CS might need to be duplicated on each board that uses these?
-		
-		
+		* _EXTCS9800 logic that decodes the _9800CS, _9A00CS, _9C00CS, _9E00CS duplicated on each board that uses these
+			_9800CS root sheet 40	(Sprites)			U86:A
+			_9A00CS root sheet 30	(Sprite size logic)	U85:A
+			_9C00CS root sheet 80	(Palette)			U87:A
+			_9E00CS root sheet 70	(Tiles)				U88:A
+	* Merge _CSEN and _MREQ and remove
 		
 		
 
