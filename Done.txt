@@ -631,3 +631,4 @@
 			_9C00CS root sheet 80	(Palette)			U87:A
 			_9E00CS root sheet 70	(Tiles)				U88:A
 	* Merge _CSEN and _MREQ and remove
+	* Sprite size logic now moved to root sheet 40

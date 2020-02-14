@@ -31,9 +31,13 @@
 		{GROUP=Sprites}
 		{GROUP=Tiles}
 		{GROUP=Mode7}
-		
-		
-
+	* Figure out how these signals need to be exposed:
+		SLOAD
+		_SLOAD
+		_CMPBLK
+		_MDL
+		_CDL
+		_VPL
 		
 
 
