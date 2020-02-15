@@ -258,14 +258,32 @@ Miscellaneous,8N7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/
 Miscellaneous,8R7,2764,https://www.jameco.com/shop/StoreCatalogDrillDownView?langId=-1&storeId=10001&catalogId=10001&freeText=eprom%202764&search_type=jamecoall,S$5.00,64K (8Kx8) EPROM
 Miscellaneous,8R7R,6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM
 Miscellaneous,8S,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
-Miscellaneous,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
-Miscellaneous,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
-Miscellaneous,EXPANSIONBUS3,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,BANKSEL1,CONN-SIL2,,,0.1in pitch SIL connector strip
+Miscellaneous,BANKSEL2,CONN-SIL2,,,0.1in pitch SIL connector strip
+Miscellaneous,BANKSEL4,CONN-SIL2,,,0.1in pitch SIL connector strip
+Miscellaneous,EXPANSIONBUSA1,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSA2,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSA3,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSA4,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSB1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSB2,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSB3,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSB4,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip
+Miscellaneous,EXPANSIONBUSC1,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
+Miscellaneous,EXPANSIONBUSC2,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
+Miscellaneous,EXPANSIONBUSC3,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
+Miscellaneous,EXPANSIONBUSC4,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip
 Miscellaneous,INRAMSEL1,CONN-SIL8,,,0.1in pitch SIL connector strip
-Miscellaneous,INRAMSEL2,CONN-SIL8,,,0.1in pitch SIL connector strip
-Miscellaneous,INRAMSEL3,CONN-SIL8,,,0.1in pitch SIL connector strip
 Miscellaneous,J1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$2.53,0.1in pitch DIL connector strip
 Miscellaneous,JP1,JUMPER,,,Animated Jumper
+Miscellaneous,LAYER1,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,LAYER2,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,LAYER3,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,LAYER4,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,PIXEL1,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,PIXEL2,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,PIXEL3,CONN-DIL8,,,0.1in pitch DIL connector strip
+Miscellaneous,PIXEL4,CONN-DIL8,,,0.1in pitch DIL connector strip
 Miscellaneous,RB1,250,,,Generic resistor symbol
 Miscellaneous,RB2,500,,,Generic resistor symbol
 Miscellaneous,RB3,1k,,,Generic resistor symbol
@@ -276,13 +294,20 @@ Miscellaneous,RG2,500,,,Generic resistor symbol
 Miscellaneous,RG3,1k,,,Generic resistor symbol
 Miscellaneous,RG4,2k,,,Generic resistor symbol
 Miscellaneous,RG5,500,,,Generic resistor symbol
-Miscellaneous,ROWCOL,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
+Miscellaneous,ROWCOL1,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
+Miscellaneous,ROWCOL2,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
+Miscellaneous,ROWCOL3,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
+Miscellaneous,ROWCOL4,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip
 Miscellaneous,RR1,250,,,Generic resistor symbol
 Miscellaneous,RR2,500,,,Generic resistor symbol
 Miscellaneous,RR3,1k,,,Generic resistor symbol
 Miscellaneous,RR4,2k,,,Generic resistor symbol
 Miscellaneous,RR5,500,,,Generic resistor symbol
 Miscellaneous,VIDCLK,555,https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D,,Timer/Oscillator
+Miscellaneous,VIDEO1,CONN-DIL20,,,0.1in pitch DIL connector strip
+Miscellaneous,VIDEO2,CONN-DIL20,,,0.1in pitch DIL connector strip
+Miscellaneous,VIDEO3,CONN-DIL20,,,0.1in pitch DIL connector strip
+Miscellaneous,VIDEO4,CONN-DIL20,,,0.1in pitch DIL connector strip
 Miscellaneous,VSMDD1,VSMDIGITALDISPLAY,,,CRT Display with frequency detection
 Miscellaneous,VSMDD2,VSMDIGITALDATA,,,Digital Data Generator (Virtual Instrument)
 Miscellaneous,VSMDD3,VSMDIGITALDATA,,,Digital Data Generator (Virtual Instrument)
