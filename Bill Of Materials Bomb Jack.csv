@@ -52,7 +52,6 @@ Integrated Circuits,U29,74157,https://www.mouser.sg/ProductDetail/Texas-Instrume
 Integrated Circuits,U30,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
 Integrated Circuits,U31,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
 Integrated Circuits,U32,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
-Integrated Circuits,U33,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
 Integrated Circuits,U34,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
 Integrated Circuits,U35,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs
 Integrated Circuits,U36,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
@@ -109,6 +108,11 @@ Integrated Circuits,U86,74S139,https://www.mouser.sg/ProductDetail/Texas-Instrum
 Integrated Circuits,U87,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
 Integrated Circuits,U88,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers
 Integrated Circuits,U89,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U90,74LS00,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS00NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOjzVWLw0jaeE%3D,S$0.95,Quadruple 2-Input Positive-NAND Gates
+Integrated Circuits,U91,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U92,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
+Integrated Circuits,U93,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN7404N?qs=sGAEpiMZZMutVWjHE%2FYQw0qCn7H6iZbYr4YOmhJlMg4%3D,S$0.72,Hex Inverters
+Integrated Circuits,U94,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates
 Miscellaneous,1A,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
 Miscellaneous,1B,74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers
 Miscellaneous,1C,7427,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D,S$0.81,Triple 3-Input Positive NOR Gates
