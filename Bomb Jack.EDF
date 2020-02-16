@@ -158,211 +158,212 @@
   (component DIL20_5L6 (place 5L6 199.39000 24.13000 front 270))
   (component DIL14_2R6 (place 2R6 205.74000 54.61000 front 270))
   (component DIL14_U17 (place U17 199.39000 -3.81000 front 270))
-  (component DIL14_U34 (place U34 209.55000 -3.81000 front 270))
-  (component DIL16_4M6 (place 4M6 219.71000 -3.81000 front 270))
-  (component DIL14_6N2 (place 6N2 217.17000 -22.86000 front 180))
+  (component DIL16_4M6 (place 4M6 209.55000 -3.81000 front 270))
+  (component DIL14_6N2 (place 6N2 219.71000 -3.81000 front 270))
   (component DIL16_6F6 (place 6F6 229.87000 -3.81000 front 270))
-  (component DIL16_6H6 (place 6H6 223.52000 -31.75000 front 0))
-  (component DIL16_6J6 (place 6J6 243.84000 -7.62000 front 270))
-  (component DIL16_6K6 (place 6K6 262.89000 -27.94000 front 180))
-  (component DIL16_7D6 (place 7D6 254.00000 -7.62000 front 270))
-  (component DIL16_7E6 (place 7E6 269.24000 24.13000 front 270))
-  (component DIL16_7F6 (place 7F6 279.40000 24.13000 front 270))
-  (component DIL16_7H6 (place 7H6 269.24000 -15.24000 front 270))
-  (component DIL16_7J6 (place 7J6 281.94000 -2.54000 front 180))
-  (component DIL16_7K6 (place 7K6 279.40000 -15.24000 front 270))
-  (component DIL16_U29 (place U29 205.74000 77.47000 front 270))
-  (component DIL16_U30 (place U30 215.90000 90.17000 front 270))
-  (component DIL16_U31 (place U31 205.74000 100.33000 front 270))
-  (component DIL16_U32 (place U32 269.24000 57.15000 front 270))
-  (component DIL14_6P6 (place 6P6 226.06000 91.44000 front 270))
-  (component DIL14_U10 (place U10 236.22000 97.79000 front 270))
-  (component DIL16_U36 (place U36 246.38000 100.33000 front 270))
-  (component DIL16_U37 (place U37 256.54000 97.79000 front 270))
-  (component DIL16_U38 (place U38 266.70000 97.79000 front 270))
-  (component DIL16_U39 (place U39 279.40000 57.15000 front 270))
-  (component DIL16_U41 (place U41 224.79000 101.60000 front 0))
-  (component DIL16_U42 (place U42 276.86000 97.79000 front 270))
-  (component DIL16_U43 (place U43 257.81000 101.60000 front 0))
-  (component DIL16_U44 (place U44 273.05000 69.85000 front 0))
-  (component DIL14_U90 (place U90 220.98000 111.76000 front 0))
-  (component DIL16_U91 (place U91 257.81000 111.76000 front 0))
-  (component DIL14_6N6 (place 6N6 273.05000 29.21000 front 0))
-  (component DIL14_8C6 (place 8C6 203.20000 107.95000 front 180))
-  (component DIL28_7JR (place 7JR -60.96000 -241.30000 front 270))
-  (component DIL28_7LR (place 7LR -78.74000 -241.30000 front 270))
-  (component DIL28_7MR (place 7MR -134.62000 -238.76000 front 270))
-  (component DIL24_U79 (place U79 -27.94000 -274.32000 front 270))
-  (component DIL20_U45 (place U45 -38.10000 -274.32000 front 270))
-  (component DIL20_U53 (place U53 -48.26000 -279.40000 front 270))
-  (component DIL20_U58 (place U58 -58.42000 -279.40000 front 270))
-  (component DIL20_2F (place 2F -71.12000 -279.40000 front 270))
-  (component DIL20_5H (place 5H -81.28000 -279.40000 front 270))
-  (component DIL20_6E (place 6E -88.90000 -248.92000 front 270))
-  (component DIL20_6F (place 6F -99.06000 -248.92000 front 270))
-  (component DIL14_4E (place 4E -92.71000 -279.40000 front 270))
-  (component DIL14_4F (place 4F -109.22000 -248.92000 front 270))
-  (component DIL14_U52 (place U52 -102.87000 -279.40000 front 270))
-  (component DIL16_1A (place 1A -134.62000 -189.23000 front 270))
-  (component DIL16_2A (place 2A -53.34000 -212.09000 front 270))
-  (component DIL16_2D (place 2D -63.50000 -212.09000 front 270))
-  (component DIL16_1B (place 1B -124.46000 -189.23000 front 270))
-  (component DIL16_2B (place 2B -73.66000 -212.09000 front 270))
-  (component DIL16_2C (place 2C -53.34000 -189.23000 front 270))
-  (component DIL16_1C (place 1C -114.30000 -189.23000 front 270))
-  (component DIL16_1D (place 1D -20.32000 -180.34000 front 270))
-  (component DIL16_2E (place 2E -30.48000 -180.34000 front 270))
-  (component DIL16_3A (place 3A -63.50000 -189.23000 front 270))
-  (component DIL16_3B (place 3B -83.82000 -212.09000 front 270))
-  (component DIL16_3C (place 3C -73.66000 -187.96000 front 270))
-  (component DIL16_3D (place 3D -93.98000 -212.09000 front 270))
-  (component DIL16_5E (place 5E -81.28000 -232.41000 front 180))
-  (component DIL16_5F (place 5F -104.14000 -189.23000 front 270))
-  (component DIL16_5J (place 5J -83.82000 -187.96000 front 270))
-  (component DIL16_5K (place 5K -93.98000 -189.23000 front 270))
-  (component DIL16_5L (place 5L -114.30000 -228.60000 front 0))
-  (component DIL16_5R (place 5R -40.64000 -179.07000 front 270))
-  (component DIL16_5S (place 5S -50.80000 -166.37000 front 270))
-  (component DIL16_6A (place 6A -114.30000 -218.44000 front 0))
-  (component DIL16_6B (place 6B -63.50000 -166.37000 front 270))
-  (component DIL16_6C (place 6C -73.66000 -165.10000 front 270))
-  (component DIL16_6D (place 6D -83.82000 -165.10000 front 270))
-  (component DIL16_6J (place 6J -93.98000 -166.37000 front 270))
-  (component DIL16_6K (place 6K -104.14000 -165.10000 front 270))
-  (component DIL16_6L (place 6L -125.73000 -212.09000 front 270))
-  (component DIL16_6M (place 6M -114.30000 -165.10000 front 270))
-  (component DIL16_6R (place 6R -57.15000 -162.56000 front 0))
-  (component DIL16_6S (place 6S -22.86000 -167.64000 front 180))
-  (component DIL16_6T (place 6T -124.46000 -166.37000 front 270))
-  (component DIL16_7S (place 7S -34.29000 -162.56000 front 0))
-  (component DIL14_5T (place 5T -142.24000 -182.88000 front 0))
-  (component DIL16_7E (place 7E -113.03000 -276.86000 front 270))
-  (component DIL16_7F (place 7F -123.19000 -276.86000 front 270))
-  (component DIL16_7H (place 7H -134.62000 -276.86000 front 270))
-  (component DIL14_7A (place 7A -91.44000 -297.18000 front 180))
-  (component DIL14_7B (place 7B -111.76000 -297.18000 front 180))
-  (component DIL16_U46 (place U46 -38.10000 -302.26000 front 270))
-  (component DIL16_U48 (place U48 -27.94000 -307.34000 front 270))
-  (component DIL16_U49 (place U49 -48.26000 -307.34000 front 270))
-  (component DIL14_4H (place 4H -123.19000 -308.61000 front 270))
-  (component DIL14_U13 (place U13 -58.42000 -307.34000 front 270))
-  (component DIL14_U14 (place U14 -68.58000 -307.34000 front 270))
-  (component DIL16_U47 (place U47 -133.35000 -308.61000 front 270))
-  (component DIL14_6H (place 6H -81.28000 -308.61000 front 270))
-  (component DIL16_U51 (place U51 -92.71000 -308.61000 front 270))
-  (component DIL16_U54 (place U54 -54.61000 -335.28000 front 0))
-  (component DIL16_U55 (place U55 -113.03000 -308.61000 front 270))
-  (component DIL16_U56 (place U56 -31.75000 -335.28000 front 0))
-  (component DIL16_U57 (place U57 -102.87000 -308.61000 front 270))
-  (component DIL16_U59 (place U59 -54.61000 -345.44000 front 0))
-  (component DIL16_U60 (place U60 -116.84000 -336.55000 front 0))
-  (component DIL16_U61 (place U61 -31.75000 -345.44000 front 0))
-  (component DIL16_U62 (place U62 -68.58000 -327.66000 front 270))
-  (component DIL14_U50 (place U50 -40.64000 -347.98000 front 180))
-  (component DIL16_U85 (place U85 -31.75000 -355.60000 front 0))
-  (component DIL16_U86 (place U86 -81.28000 -328.93000 front 270))
-  (component DIL16_U89 (place U89 -91.44000 -331.47000 front 270))
-  (component DIL14_3H (place 3H -114.30000 -346.71000 front 0))
-  (component DIL14_7C (place 7C -66.04000 -349.25000 front 180))
-  (component DIL14_7D (place 7D -128.27000 -331.47000 front 270))
-  (component DIL14_U15 (place U15 -96.52000 -349.25000 front 180))
-  (component DIL14_U80 (place U80 -138.43000 -331.47000 front 270))
-  (component DIL28_4P7R (place 4P7R 280.67000 -256.54000 front 270))
-  (component DIL28_8L7R (place 8L7R 280.67000 -218.44000 front 270))
-  (component DIL28_8N7R (place 8N7R 262.89000 -218.44000 front 270))
-  (component DIL28_8R7R (place 8R7R 245.11000 -218.44000 front 270))
-  (component DIL20_U11 (place U11 234.95000 -228.60000 front 270))
-  (component DIL20_U16 (place U16 224.79000 -228.60000 front 270))
-  (component DIL20_U18 (place U18 214.63000 -228.60000 front 270))
-  (component DIL20_U27 (place U27 204.47000 -228.60000 front 270))
-  (component DIL20_6S7 (place 6S7 298.45000 -266.70000 front 270))
-  (component DIL20_U65 (place U65 204.47000 -256.54000 front 270))
-  (component DIL20_U66 (place U66 204.47000 -294.64000 front 270))
-  (component DIL20_U81 (place U81 214.63000 -256.54000 front 270))
-  (component DIL20_U82 (place U82 224.79000 -256.54000 front 270))
-  (component DIL14_U93 (place U93 234.95000 -256.54000 front 270))
-  (component DIL16_5N7 (place 5N7 224.79000 -217.17000 front 180))
-  (component DIL16_5S7 (place 5S7 245.11000 -256.54000 front 270))
-  (component DIL16_7L7 (place 7L7 255.27000 -256.54000 front 270))
-  (component DIL16_7M7 (place 7M7 265.43000 -256.54000 front 270))
-  (component DIL16_7N7 (place 7N7 298.45000 -233.68000 front 270))
-  (component DIL16_7P7 (place 7P7 246.38000 -284.48000 front 0))
-  (component DIL16_7R7 (place 7R7 246.38000 -294.64000 front 0))
-  (component DIL16_7S7 (place 7S7 234.95000 -276.86000 front 270))
-  (component DIL16_U1 (place U1 207.01000 -214.63000 front 0))
-  (component DIL16_U3 (place U3 224.79000 -284.48000 front 270))
-  (component DIL16_U12 (place U12 214.63000 -284.48000 front 270))
-  (component DIL16_U2 (place U2 207.01000 -204.47000 front 0))
-  (component DIL16_U4 (place U4 207.01000 -194.31000 front 0))
-  (component DIL16_U8 (place U8 227.33000 -191.77000 front 270))
-  (component DIL16_U6 (place U6 207.01000 -184.15000 front 0))
-  (component DIL16_U7 (place U7 266.70000 -284.48000 front 270))
-  (component DIL16_U19 (place U19 237.49000 -191.77000 front 270))
-  (component DIL16_U20 (place U20 207.01000 -173.99000 front 0))
-  (component DIL16_U21 (place U21 246.38000 -304.80000 front 0))
-  (component DIL16_U22 (place U22 247.65000 -191.77000 front 270))
-  (component DIL16_U23 (place U23 257.81000 -191.77000 front 270))
-  (component DIL16_U24 (place U24 227.33000 -168.91000 front 270))
-  (component DIL16_U25 (place U25 234.95000 -299.72000 front 270))
-  (component DIL16_U26 (place U26 267.97000 -191.77000 front 270))
-  (component DIL14_U9 (place U9 252.73000 -176.53000 front 180))
-  (component DIL14_U92 (place U92 278.13000 -198.12000 front 270))
-  (component DIL16_U63 (place U63 255.27000 -166.37000 front 180))
-  (component DIL16_U64 (place U64 200.66000 -167.64000 front 180))
-  (component DIL16_U68 (place U68 226.06000 -163.83000 front 0))
-  (component DIL16_U69 (place U69 259.08000 -168.91000 front 270))
-  (component DIL16_U70 (place U70 288.29000 -195.58000 front 270))
-  (component DIL16_U88 (place U88 269.24000 -168.91000 front 270))
-  (component DIL14_2 (place 2 279.40000 -171.45000 front 270))
-  (component DIL14_4 (place 4 289.56000 -171.45000 front 270))
-  (component DIL14_5P7 (place 5P7 298.45000 -213.36000 front 270))
-  (component DIL14_5R7 (place 5R7 298.45000 -193.04000 front 270))
-  (component DIL14_6R7 (place 6R7 299.72000 -171.45000 front 270))
+  (component DIL16_6H6 (place 6H6 205.74000 -31.75000 front 0))
+  (component DIL16_6J6 (place 6J6 228.60000 -31.75000 front 0))
+  (component DIL16_6K6 (place 6K6 240.03000 -3.81000 front 270))
+  (component DIL16_7D6 (place 7D6 270.51000 57.15000 front 270))
+  (component DIL16_7E6 (place 7E6 269.24000 34.29000 front 270))
+  (component DIL16_7F6 (place 7F6 250.19000 -3.81000 front 270))
+  (component DIL16_7H6 (place 7H6 267.97000 -26.67000 front 180))
+  (component DIL16_7J6 (place 7J6 260.35000 -3.81000 front 270))
+  (component DIL16_7K6 (place 7K6 270.51000 -3.81000 front 270))
+  (component DIL16_U29 (place U29 280.67000 -2.54000 front 270))
+  (component DIL16_U30 (place U30 208.28000 59.69000 front 90))
+  (component DIL16_U31 (place U31 210.82000 88.90000 front 270))
+  (component DIL16_U32 (place U32 220.98000 90.17000 front 270))
+  (component DIL14_6P6 (place 6P6 280.67000 31.75000 front 270))
+  (component DIL16_U36 (place U36 271.78000 6.35000 front 0))
+  (component DIL16_U37 (place U37 248.92000 83.82000 front 180))
+  (component DIL16_U38 (place U38 231.14000 104.14000 front 270))
+  (component DIL16_U39 (place U39 241.30000 104.14000 front 270))
+  (component DIL16_U41 (place U41 274.32000 -31.75000 front 0))
+  (component DIL16_U42 (place U42 227.33000 101.60000 front 180))
+  (component DIL16_U43 (place U43 251.46000 104.14000 front 270))
+  (component DIL16_U44 (place U44 261.62000 104.14000 front 270))
+  (component DIL14_U90 (place U90 213.36000 104.14000 front 0))
+  (component DIL16_U91 (place U91 280.67000 57.15000 front 270))
+  (component DIL14_6N6 (place 6N6 271.78000 101.60000 front 270))
+  (component DIL14_8C6 (place 8C6 269.24000 83.82000 front 180))
+  (component DIL14_U10 (place U10 273.05000 77.47000 front 270))
+  (component DIL14_U34 (place U34 283.21000 77.47000 front 270))
+  (component DIL28_7JR (place 7JR -125.73000 -274.32000 front 270))
+  (component DIL28_7LR (place 7LR -107.95000 -274.32000 front 270))
+  (component DIL28_7MR (place 7MR -90.17000 -274.32000 front 270))
+  (component DIL24_U79 (place U79 -72.39000 -279.40000 front 270))
+  (component DIL20_U45 (place U45 -54.61000 -279.40000 front 270))
+  (component DIL20_U53 (place U53 -44.45000 -279.40000 front 270))
+  (component DIL20_U58 (place U58 -34.29000 -279.40000 front 270))
+  (component DIL20_2F (place 2F -24.13000 -279.40000 front 270))
+  (component DIL20_5H (place 5H -135.89000 -274.32000 front 270))
+  (component DIL20_6E (place 6E -24.13000 -307.34000 front 270))
+  (component DIL20_6F (place 6F -34.29000 -307.34000 front 270))
+  (component DIL14_4E (place 4E -44.45000 -307.34000 front 270))
+  (component DIL14_4F (place 4F -54.61000 -307.34000 front 270))
+  (component DIL14_U52 (place U52 -64.77000 -314.96000 front 270))
+  (component DIL16_1A (place 1A -135.89000 -302.26000 front 270))
+  (component DIL16_2A (place 2A -68.58000 -311.15000 front 180))
+  (component DIL16_2D (place 2D -125.73000 -312.42000 front 270))
+  (component DIL16_1B (place 1B -115.57000 -312.42000 front 270))
+  (component DIL16_2B (place 2B -105.41000 -312.42000 front 270))
+  (component DIL16_2C (place 2C -68.58000 -321.31000 front 180))
+  (component DIL16_1C (place 1C -135.89000 -325.12000 front 270))
+  (component DIL16_1D (place 1D -30.48000 -180.34000 front 270))
+  (component DIL16_2E (place 2E -53.34000 -208.28000 front 270))
+  (component DIL16_3A (place 3A -68.58000 -331.47000 front 180))
+  (component DIL16_3B (place 3B -93.98000 -332.74000 front 180))
+  (component DIL16_3C (place 3C -88.90000 -349.25000 front 0))
+  (component DIL16_3D (place 3D -146.05000 -327.66000 front 270))
+  (component DIL16_5E (place 5E -53.34000 -252.73000 front 270))
+  (component DIL16_5F (place 5F -64.77000 -252.73000 front 270))
+  (component DIL16_5J (place 5J -74.93000 -252.73000 front 270))
+  (component DIL16_5K (place 5K -97.79000 -270.51000 front 0))
+  (component DIL16_5L (place 5L -85.09000 -242.57000 front 270))
+  (component DIL16_5R (place 5R -46.99000 -180.34000 front 270))
+  (component DIL16_5S (place 5S -20.32000 -180.34000 front 270))
+  (component DIL16_6A (place 6A -63.50000 -220.98000 front 270))
+  (component DIL16_6B (place 6B -74.93000 -220.98000 front 270))
+  (component DIL16_6C (place 6C -91.44000 -220.98000 front 270))
+  (component DIL16_6D (place 6D -73.66000 -217.17000 front 0))
+  (component DIL16_6J (place 6J -99.06000 -242.57000 front 270))
+  (component DIL16_6K (place 6K -109.22000 -242.57000 front 270))
+  (component DIL16_6L (place 6L -120.65000 -270.51000 front 0))
+  (component DIL16_6M (place 6M -119.38000 -242.57000 front 270))
+  (component DIL16_6R (place 6R -63.50000 -189.23000 front 270))
+  (component DIL16_6S (place 6S -73.66000 -189.23000 front 270))
+  (component DIL16_6T (place 6T -102.87000 -219.71000 front 270))
+  (component DIL16_7S (place 7S -73.66000 -248.92000 front 0))
+  (component DIL14_5T (place 5T -114.30000 -222.25000 front 270))
+  (component DIL16_7E (place 7E -54.61000 -327.66000 front 270))
+  (component DIL16_7F (place 7F -44.45000 -327.66000 front 270))
+  (component DIL16_7H (place 7H -64.77000 -335.28000 front 270))
+  (component DIL16_7N (place 7N -57.15000 -167.64000 front 270))
+  (component DIL14_7A (place 7A -67.31000 -167.64000 front 270))
+  (component DIL14_7B (place 7B -85.09000 -201.93000 front 270))
+  (component DIL16_7T (place 7T -95.25000 -189.23000 front 270))
+  (component DIL16_U46 (place U46 -30.48000 -176.53000 front 0))
+  (component DIL16_U48 (place U48 -129.54000 -242.57000 front 270))
+  (component DIL16_U49 (place U49 -124.46000 -219.71000 front 270))
+  (component DIL14_4H (place 4H -53.34000 -231.14000 front 270))
+  (component DIL14_U13 (place U13 -77.47000 -167.64000 front 270))
+  (component DIL14_U14 (place U14 -87.63000 -167.64000 front 270))
+  (component DIL16_U47 (place U47 -134.62000 -219.71000 front 270))
+  (component DIL14_6H (place 6H -105.41000 -191.77000 front 270))
+  (component DIL16_U51 (place U51 -115.57000 -191.77000 front 270))
+  (component DIL16_U54 (place U54 -30.48000 -166.37000 front 0))
+  (component DIL16_U55 (place U55 -125.73000 -191.77000 front 270))
+  (component DIL16_U56 (place U56 -101.60000 -167.64000 front 270))
+  (component DIL16_U57 (place U57 -114.30000 -165.10000 front 270))
+  (component DIL16_U59 (place U59 -34.29000 -175.26000 front 90))
+  (component DIL16_U60 (place U60 -124.46000 -165.10000 front 270))
+  (component DIL16_U61 (place U61 -69.85000 -163.83000 front 0))
+  (component DIL16_U62 (place U62 -92.71000 -163.83000 front 0))
+  (component DIL14_U50 (place U50 -134.62000 -172.72000 front 270))
+  (component DIL16_U85 (place U85 -34.29000 -335.28000 front 270))
+  (component DIL16_U86 (place U86 -21.59000 -335.28000 front 270))
+  (component DIL16_U89 (place U89 -125.73000 -335.28000 front 270))
+  (component DIL14_3H (place 3H -53.34000 -355.60000 front 0))
+  (component DIL14_7C (place 7C -68.58000 -351.79000 front 180))
+  (component DIL14_7D (place 7D -105.41000 -344.17000 front 270))
+  (component DIL14_U15 (place U15 -115.57000 -344.17000 front 270))
+  (component DIL14_U80 (place U80 -130.81000 -347.98000 front 180))
+  (component DIL28_4P7R (place 4P7R 288.29000 -177.80000 front 270))
+  (component DIL28_8L7R (place 8L7R 270.51000 -177.80000 front 270))
+  (component DIL28_8N7R (place 8N7R 252.73000 -177.80000 front 270))
+  (component DIL28_8R7R (place 8R7R 252.73000 -215.90000 front 270))
+  (component DIL20_U11 (place U11 242.57000 -215.90000 front 270))
+  (component DIL20_U16 (place U16 232.41000 -215.90000 front 270))
+  (component DIL20_U18 (place U18 242.57000 -187.96000 front 270))
+  (component DIL20_U27 (place U27 232.41000 -187.96000 front 270))
+  (component DIL20_6S7 (place 6S7 222.25000 -215.90000 front 270))
+  (component DIL20_U65 (place U65 212.09000 -215.90000 front 270))
+  (component DIL20_U66 (place U66 201.93000 -215.90000 front 270))
+  (component DIL20_U81 (place U81 222.25000 -187.96000 front 270))
+  (component DIL20_U82 (place U82 212.09000 -187.96000 front 270))
+  (component DIL14_U93 (place U93 270.51000 -223.52000 front 270))
+  (component DIL16_5N7 (place 5N7 201.93000 -187.96000 front 270))
+  (component DIL16_5S7 (place 5S7 224.79000 -176.53000 front 180))
+  (component DIL16_7L7 (place 7L7 295.91000 -213.36000 front 180))
+  (component DIL16_7M7 (place 7M7 280.67000 -231.14000 front 270))
+  (component DIL16_7N7 (place 7N7 290.83000 -231.14000 front 270))
+  (component DIL16_7P7 (place 7P7 270.51000 -243.84000 front 270))
+  (component DIL16_7R7 (place 7R7 280.67000 -254.00000 front 270))
+  (component DIL16_7S7 (place 7S7 290.83000 -254.00000 front 270))
+  (component DIL16_U1 (place U1 201.93000 -245.11000 front 270))
+  (component DIL16_U3 (place U3 212.09000 -245.11000 front 270))
+  (component DIL16_U12 (place U12 222.25000 -243.84000 front 270))
+  (component DIL16_U2 (place U2 232.41000 -243.84000 front 270))
+  (component DIL16_U4 (place U4 242.57000 -243.84000 front 270))
+  (component DIL16_U8 (place U8 252.73000 -254.00000 front 270))
+  (component DIL16_U6 (place U6 242.57000 -266.70000 front 270))
+  (component DIL16_U7 (place U7 232.41000 -266.70000 front 270))
+  (component DIL16_U19 (place U19 222.25000 -266.70000 front 270))
+  (component DIL16_U20 (place U20 254.00000 -281.94000 front 0))
+  (component DIL16_U21 (place U21 201.93000 -273.05000 front 0))
+  (component DIL16_U22 (place U22 207.01000 -276.86000 front 270))
+  (component DIL16_U23 (place U23 218.44000 -294.64000 front 0))
+  (component DIL16_U24 (place U24 254.00000 -292.10000 front 0))
+  (component DIL16_U25 (place U25 238.76000 -289.56000 front 270))
+  (component DIL16_U26 (place U26 228.60000 -298.45000 front 270))
+  (component DIL14_U9 (place U9 245.11000 -176.53000 front 180))
+  (component DIL14_U92 (place U92 245.11000 -166.37000 front 180))
+  (component DIL16_U63 (place U63 224.79000 -166.37000 front 180))
+  (component DIL16_U64 (place U64 267.97000 -166.37000 front 180))
+  (component DIL16_U68 (place U68 201.93000 -167.64000 front 180))
+  (component DIL16_U69 (place U69 226.06000 -163.83000 front 0))
+  (component DIL16_U70 (place U70 248.92000 -163.83000 front 0))
+  (component DIL16_U88 (place U88 271.78000 -163.83000 front 0))
+  (component DIL14_2 (place 2 293.37000 -166.37000 front 180))
+  (component DIL14_4 (place 4 274.32000 -275.59000 front 270))
+  (component DIL14_5P7 (place 5P7 285.75000 -281.94000 front 0))
+  (component DIL14_5R7 (place 5R7 270.51000 -294.64000 front 180))
+  (component DIL14_6R7 (place 6R7 218.44000 -298.45000 front 270))
   (component DIL20_5E2 (place 5E2 -110.49000 -16.51000 front 270))
-  (component DIL20_7B2 (place 7B2 -39.37000 16.51000 front 270))
-  (component DIL20_7C2 (place 7C2 -62.23000 16.51000 front 270))
-  (component DIL14_8S (place 8S -100.33000 -16.51000 front 270))
-  (component DIL18_6A2 (place 6A2 -52.07000 6.35000 front 270))
-  (component DIL18_6B2 (place 6B2 -72.39000 13.97000 front 270))
-  (component DIL18_6C2 (place 6C2 -82.55000 13.97000 front 270))
-  (component DIL16_3M (place 3M -90.17000 -16.51000 front 270))
-  (component DIL16_4M (place 4M -80.01000 -16.51000 front 0))
-  (component DIL14_U5 (place U5 -72.39000 -24.13000 front 270))
-  (component DIL16_3M8 (place 3M8 -92.71000 13.97000 front 270))
-  (component DIL16_5F8 (place 5F8 -62.23000 -21.59000 front 270))
-  (component DIL16_5H8 (place 5H8 -64.77000 46.99000 front 270))
-  (component DIL16_5J8 (place 5J8 -74.93000 46.99000 front 270))
-  (component DIL16_5K8 (place 5K8 -52.07000 -21.59000 front 270))
-  (component DIL14_5M8 (place 5M8 -85.09000 44.45000 front 270))
-  (component DIL16_3N (place 3N -39.37000 -21.59000 front 270))
-  (component DIL16_3P (place 3P -62.23000 26.67000 front 180))
-  (component DIL16_3R (place 3R -95.25000 -11.43000 front 90))
-  (component DIL16_3S (place 3S -128.27000 -13.97000 front 0))
-  (component DIL16_6D2 (place 6D2 -113.03000 13.97000 front 270))
-  (component DIL16_6F2 (place 6F2 -123.19000 13.97000 front 270))
-  (component DIL16_U87 (place U87 -133.35000 13.97000 front 270))
-  (component DIL16_7N (place 7N -102.87000 27.94000 front 270))
-  (component DIL16_7R (place 7R -64.77000 69.85000 front 270))
-  (component DIL14_4S (place 4S -41.91000 88.90000 front 270))
-  (component DIL16_7T (place 7T -95.25000 49.53000 front 270))
-  (component DIL16_8D2 (place 8D2 -113.03000 38.10000 front 270))
-  (component DIL14_8C2 (place 8C2 -123.19000 38.10000 front 270))
-  (component DIL16_U71 (place U71 -133.35000 38.10000 front 270))
-  (component DIL16_U74 (place U74 -110.49000 49.53000 front 180))
-  (component DIL16_U75 (place U75 -105.41000 59.69000 front 270))
-  (component DIL16_U76 (place U76 -68.58000 60.96000 front 180))
-  (component DIL14_1S (place 1S -74.93000 78.74000 front 270))
-  (component DIL14_1T (place 1T -64.77000 90.17000 front 270))
-  (component DIL14_2T (place 2T -85.09000 78.74000 front 270))
-  (component DIL14_3T (place 3T -95.25000 78.74000 front 270))
-  (component DIL14_4N (place 4N -123.19000 53.34000 front 0))
-  (component DIL14_4R (place 4R -123.19000 63.50000 front 0))
-  (component DIL14_4P (place 4P -68.58000 90.17000 front 180))
-  (component DIL14_5P (place 5P -54.61000 100.33000 front 270))
-  (component DIL14_U67 (place U67 -105.41000 90.17000 front 270))
-  (component DIL14_U72 (place U72 -115.57000 88.90000 front 270))
-  (component DIL14_U73 (place U73 -68.58000 100.33000 front 180))
-  (component DIL14_U94 (place U94 -64.77000 110.49000 front 270))
+  (component DIL20_7B2 (place 7B2 -101.60000 -5.08000 front 180))
+  (component DIL20_7C2 (place 7C2 -100.33000 -16.51000 front 270))
+  (component DIL14_1S (place 1S -43.18000 17.78000 front 270))
+  (component DIL14_1T (place 1T -62.23000 17.78000 front 270))
+  (component DIL14_8S (place 8S -90.17000 -16.51000 front 270))
+  (component DIL18_6A2 (place 6A2 -80.01000 -11.43000 front 270))
+  (component DIL18_6B2 (place 6B2 -73.66000 17.78000 front 270))
+  (component DIL18_6C2 (place 6C2 -90.17000 17.78000 front 270))
+  (component DIL16_3M (place 3M -100.33000 15.24000 front 270))
+  (component DIL16_4M (place 4M -77.47000 21.59000 front 0))
+  (component DIL14_U5 (place U5 -69.85000 -16.51000 front 270))
+  (component DIL16_3M8 (place 3M8 -110.49000 15.24000 front 270))
+  (component DIL16_5F8 (place 5F8 -59.69000 -13.97000 front 270))
+  (component DIL16_5H8 (place 5H8 -49.53000 -13.97000 front 270))
+  (component DIL16_5J8 (place 5J8 -39.37000 -13.97000 front 270))
+  (component DIL16_5K8 (place 5K8 -120.65000 15.24000 front 270))
+  (component DIL14_5M8 (place 5M8 -48.26000 0.00000 front 180))
+  (component DIL16_3N (place 3N -64.77000 49.53000 front 270))
+  (component DIL16_3P (place 3P -127.00000 -12.70000 front 90))
+  (component DIL16_3R (place 3R -67.31000 33.02000 front 90))
+  (component DIL16_3S (place 3S -92.71000 26.67000 front 180))
+  (component DIL16_6D2 (place 6D2 -88.90000 41.91000 front 270))
+  (component DIL16_6F2 (place 6F2 -92.71000 36.83000 front 180))
+  (component DIL16_U87 (place U87 -134.62000 30.48000 front 270))
+  (component DIL16_7R (place 7R -64.77000 72.39000 front 270))
+  (component DIL14_4S (place 4S -120.65000 39.37000 front 270))
+  (component DIL16_8D2 (place 8D2 -110.49000 39.37000 front 0))
+  (component DIL14_8C2 (place 8C2 -105.41000 69.85000 front 270))
+  (component DIL16_U33 (place U33 -134.62000 53.34000 front 270))
+  (component DIL16_U71 (place U71 -115.57000 69.85000 front 270))
+  (component DIL16_U74 (place U74 -125.73000 74.93000 front 270))
+  (component DIL16_U75 (place U75 -95.25000 72.39000 front 270))
+  (component DIL16_U76 (place U76 -85.09000 69.85000 front 270))
+  (component DIL16_U94 (place U94 -74.93000 72.39000 front 270))
+  (component DIL14_U67 (place U67 -85.09000 90.17000 front 270))
+  (component DIL14_U72 (place U72 -110.49000 74.93000 front 0))
+  (component DIL14_2T (place 2T -43.18000 90.17000 front 270))
+  (component DIL14_3T (place 3T -53.34000 100.33000 front 270))
+  (component DIL14_4N (place 4N -74.93000 92.71000 front 270))
+  (component DIL14_4R (place 4R -64.77000 92.71000 front 270))
+  (component DIL14_4P (place 4P -74.93000 102.87000 front 180))
+  (component DIL14_5P (place 5P -71.12000 113.03000 front 270))
+  (component DIL14_U73 (place U73 -100.33000 100.33000 front 270))
  )
  (library
   (image "CONN-DIL34_EXPANSIONBUSA1" (side front)
@@ -1490,23 +1491,6 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_U34 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL16_4M6 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -1826,23 +1810,6 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_U10 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL16_U36 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -2049,6 +2016,40 @@
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
   (image DIL14_8C6 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U10 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U34 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -3079,6 +3080,25 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
+  (image DIL16_7N (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
   (image DIL14_7A (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -3112,6 +3132,25 @@
    (pin PS3 (rotate 0) 11 5.08000 7.62000)
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL16_7T (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
   (image DIL16_U46 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
@@ -4693,6 +4732,40 @@
    (pin PS3 (rotate 0) 18 2.54000 7.62000)
    (pin PS3 (rotate 0) 19 0.00000 7.62000)
   )
+  (image DIL14_1S (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_1T (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 15.24000 7.62000)
+   (pin PS3 (rotate 0) 8 12.70000 7.62000)
+   (pin PS3 (rotate 0) 9 10.16000 7.62000)
+   (pin PS3 (rotate 0) 10 7.62000 7.62000)
+   (pin PS3 (rotate 0) 11 5.08000 7.62000)
+   (pin PS3 (rotate 0) 12 2.54000 7.62000)
+   (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
   (image DIL14_8S (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -5073,25 +5146,6 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL16_7N (side front)
-   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 17.78000 0.00000)
-   (pin PS3 (rotate 0) 8 17.78000 7.62000)
-   (pin PS3 (rotate 0) 9 15.24000 7.62000)
-   (pin PS3 (rotate 0) 10 12.70000 7.62000)
-   (pin PS3 (rotate 0) 11 10.16000 7.62000)
-   (pin PS3 (rotate 0) 12 7.62000 7.62000)
-   (pin PS3 (rotate 0) 13 5.08000 7.62000)
-   (pin PS3 (rotate 0) 14 2.54000 7.62000)
-   (pin PS3 (rotate 0) 15 0.00000 7.62000)
-  )
   (image DIL16_7R (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -5128,25 +5182,6 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL16_7T (side front)
-   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 17.78000 0.00000)
-   (pin PS3 (rotate 0) 8 17.78000 7.62000)
-   (pin PS3 (rotate 0) 9 15.24000 7.62000)
-   (pin PS3 (rotate 0) 10 12.70000 7.62000)
-   (pin PS3 (rotate 0) 11 10.16000 7.62000)
-   (pin PS3 (rotate 0) 12 7.62000 7.62000)
-   (pin PS3 (rotate 0) 13 5.08000 7.62000)
-   (pin PS3 (rotate 0) 14 2.54000 7.62000)
-   (pin PS3 (rotate 0) 15 0.00000 7.62000)
-  )
   (image DIL16_8D2 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -5182,6 +5217,25 @@
    (pin PS3 (rotate 0) 11 5.08000 7.62000)
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL16_U33 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
   (image DIL16_U71 (side front)
    (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
@@ -5259,7 +5313,26 @@
    (pin PS3 (rotate 0) 14 2.54000 7.62000)
    (pin PS3 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL14_1S (side front)
+  (image DIL16_U94 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS2 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.54000 0.00000)
+   (pin PS3 (rotate 0) 2 5.08000 0.00000)
+   (pin PS3 (rotate 0) 3 7.62000 0.00000)
+   (pin PS3 (rotate 0) 4 10.16000 0.00000)
+   (pin PS3 (rotate 0) 5 12.70000 0.00000)
+   (pin PS3 (rotate 0) 6 15.24000 0.00000)
+   (pin PS3 (rotate 0) 7 17.78000 0.00000)
+   (pin PS3 (rotate 0) 8 17.78000 7.62000)
+   (pin PS3 (rotate 0) 9 15.24000 7.62000)
+   (pin PS3 (rotate 0) 10 12.70000 7.62000)
+   (pin PS3 (rotate 0) 11 10.16000 7.62000)
+   (pin PS3 (rotate 0) 12 7.62000 7.62000)
+   (pin PS3 (rotate 0) 13 5.08000 7.62000)
+   (pin PS3 (rotate 0) 14 2.54000 7.62000)
+   (pin PS3 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL14_U67 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -5276,7 +5349,7 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_1T (side front)
+  (image DIL14_U72 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -5395,58 +5468,7 @@
    (pin PS3 (rotate 0) 12 2.54000 7.62000)
    (pin PS3 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_U67 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
-  (image DIL14_U72 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
   (image DIL14_U73 (side front)
-   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-   (pin PS3 (rotate 0) 2 5.08000 0.00000)
-   (pin PS3 (rotate 0) 3 7.62000 0.00000)
-   (pin PS3 (rotate 0) 4 10.16000 0.00000)
-   (pin PS3 (rotate 0) 5 12.70000 0.00000)
-   (pin PS3 (rotate 0) 6 15.24000 0.00000)
-   (pin PS3 (rotate 0) 7 15.24000 7.62000)
-   (pin PS3 (rotate 0) 8 12.70000 7.62000)
-   (pin PS3 (rotate 0) 9 10.16000 7.62000)
-   (pin PS3 (rotate 0) 10 7.62000 7.62000)
-   (pin PS3 (rotate 0) 11 5.08000 7.62000)
-   (pin PS3 (rotate 0) 12 2.54000 7.62000)
-   (pin PS3 (rotate 0) 13 0.00000 7.62000)
-  )
-  (image DIL14_U94 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 2.54000 0.00000)
@@ -5609,7 +5631,7 @@
    )
    (pins 3M-14 4M-3 U5-5)
   )
-  (net "#00375"
+  (net "#00372"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5717,43 +5739,7 @@
    )
    (pins 4N-7 5P-11)
   )
-  (net "#00830"
-   (circuit
-    (use_layer TOP I1 I2 I3 I4 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 7N-8 7T-7)
-  )
-  (net "#00854"
-   (circuit
-    (use_layer TOP I1 I2 I3 I4 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 1S-0 2T-5)
-  )
-  (net "#00857"
-   (circuit
-    (use_layer TOP I1 I2 I3 I4 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 1S-8 2T-3)
-  )
-  (net "#00862"
-   (circuit
-    (use_layer TOP I1 I2 I3 I4 BOT)
-    (use_via
-     $VIA#0_SIGNAL
-    )
-   )
-   (pins 1S-1 1T-12)
-  )
-  (net "#00879"
+  (net "#00842"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5762,7 +5748,7 @@
    )
    (pins 7R-14 4S-8)
   )
-  (net "#00895"
+  (net "#00858"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5771,7 +5757,7 @@
    )
    (pins 4T-9 4T-11 3T-1 3T-5)
   )
-  (net "#00896"
+  (net "#00859"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5780,7 +5766,7 @@
    )
    (pins 4T-13 3T-4)
   )
-  (net "#00908"
+  (net "#00871"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5789,7 +5775,7 @@
    )
    (pins 4T-5 X2-0 R21-0)
   )
-  (net "#00909"
+  (net "#00872"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5798,7 +5784,7 @@
    )
    (pins 4T-2 4T-3 X2-1 R22-0)
   )
-  (net "#00910"
+  (net "#00873"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5807,7 +5793,7 @@
    )
    (pins 4T-1 R22-1 C5-1)
   )
-  (net "#00911"
+  (net "#00874"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5816,7 +5802,7 @@
    )
    (pins 4T-6 R21-1 C5-0)
   )
-  (net "#00913"
+  (net "#00876"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5825,7 +5811,7 @@
    )
    (pins 4T-4 JP1-1)
   )
-  (net "#00963"
+  (net "#00926"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5834,7 +5820,7 @@
    )
    (pins U79-20 2F-0 3H-7 7C-8 U15-12)
   )
-  (net "#00967"
+  (net "#00930"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5843,7 +5829,7 @@
    )
    (pins 3H-5 7C-9)
   )
-  (net "#00970"
+  (net "#00933"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5852,7 +5838,7 @@
    )
    (pins 2F-18 7C-7)
   )
-  (net "#01042"
+  (net "#01005"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5861,7 +5847,7 @@
    )
    (pins 5E-8 5F-6)
   )
-  (net "#01043"
+  (net "#01006"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5870,7 +5856,7 @@
    )
    (pins 5H-2 5E-3)
   )
-  (net "#01044"
+  (net "#01007"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5879,7 +5865,7 @@
    )
    (pins 5H-12 5E-0)
   )
-  (net "#01045"
+  (net "#01008"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5888,7 +5874,7 @@
    )
    (pins 5H-17 5E-12)
   )
-  (net "#01046"
+  (net "#01009"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5897,7 +5883,7 @@
    )
    (pins 5H-6 5E-9)
   )
-  (net "#01051"
+  (net "#01014"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5906,7 +5892,7 @@
    )
    (pins 5H-3 U80-5)
   )
-  (net "#01052"
+  (net "#01015"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5915,7 +5901,7 @@
    )
    (pins 5H-7 U80-7)
   )
-  (net "#01053"
+  (net "#01016"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5924,7 +5910,7 @@
    )
    (pins 5H-13 U80-2)
   )
-  (net "#01054"
+  (net "#01017"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5933,7 +5919,7 @@
    )
    (pins 5H-16 U80-10)
   )
-  (net "#01055"
+  (net "#01018"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5942,7 +5928,7 @@
    )
    (pins 5H-1 6H-11)
   )
-  (net "#01056"
+  (net "#01019"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5951,7 +5937,7 @@
    )
    (pins 5H-4 7D-3)
   )
-  (net "#01057"
+  (net "#01020"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5960,7 +5946,7 @@
    )
    (pins 5H-5 6H-0)
   )
-  (net "#01058"
+  (net "#01021"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5969,7 +5955,7 @@
    )
    (pins 5H-8 7D-4)
   )
-  (net "#01059"
+  (net "#01022"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5978,7 +5964,7 @@
    )
    (pins 5H-11 6H-3)
   )
-  (net "#01060"
+  (net "#01023"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5987,7 +5973,7 @@
    )
    (pins 5H-14 7D-0)
   )
-  (net "#01062"
+  (net "#01025"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -5996,7 +5982,7 @@
    )
    (pins 5H-18 6H-8)
   )
-  (net "#01077"
+  (net "#01040"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6005,7 +5991,7 @@
    )
    (pins 7E-8 U89-2)
   )
-  (net "#01088"
+  (net "#01051"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6014,7 +6000,7 @@
    )
    (pins 6E-4 7E-3 4H-4 4H-9)
   )
-  (net "#01089"
+  (net "#01052"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6023,7 +6009,7 @@
    )
    (pins 6E-11 7E-5)
   )
-  (net "#01090"
+  (net "#01053"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6032,7 +6018,7 @@
    )
    (pins 6E-18 7E-10)
   )
-  (net "#01091"
+  (net "#01054"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6041,7 +6027,7 @@
    )
    (pins 6E-15 7E-12)
   )
-  (net "#01092"
+  (net "#01055"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6050,7 +6036,7 @@
    )
    (pins 6E-14 7E-13)
   )
-  (net "#01104"
+  (net "#01067"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6059,7 +6045,7 @@
    )
    (pins 6E-1 4H-12 6H-1 6H-4 6H-9 6H-12)
   )
-  (net "#01264"
+  (net "#01227"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6068,7 +6054,7 @@
    )
    (pins 7C-4 7D-5)
   )
-  (net "#01269"
+  (net "#01232"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6077,7 +6063,7 @@
    )
    (pins 6M-2 U51-9 7C-5)
   )
-  (net "#01285"
+  (net "#01248"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6086,7 +6072,7 @@
    )
    (pins 5L-14 6L-6)
   )
-  (net "#01289"
+  (net "#01252"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6095,7 +6081,7 @@
    )
    (pins 5L-1 6L-11)
   )
-  (net "#01294"
+  (net "#01257"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6104,7 +6090,7 @@
    )
    (pins 5K-14 6K-6)
   )
-  (net "#01298"
+  (net "#01261"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6113,7 +6099,7 @@
    )
    (pins 5K-1 6K-11)
   )
-  (net "#01303"
+  (net "#01266"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6122,7 +6108,7 @@
    )
    (pins 5J-14 6J-6)
   )
-  (net "#01307"
+  (net "#01270"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6131,7 +6117,7 @@
    )
    (pins 5J-1 6J-11)
   )
-  (net "#01340"
+  (net "#01303"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6140,7 +6126,7 @@
    )
    (pins U46-0 U48-0 U49-0 U13-10 U14-9 U47-0)
   )
-  (net "#01347"
+  (net "#01310"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6149,7 +6135,7 @@
    )
    (pins 7JR-26 U45-0 U14-7 U15-4)
   )
-  (net "#01350"
+  (net "#01313"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6158,7 +6144,7 @@
    )
    (pins 7JR-21 U15-5)
   )
-  (net "#01372"
+  (net "#01335"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6167,7 +6153,7 @@
    )
    (pins 7JR-9 U46-3)
   )
-  (net "#01373"
+  (net "#01336"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6176,7 +6162,7 @@
    )
    (pins 7JR-8 U46-6)
   )
-  (net "#01374"
+  (net "#01337"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6185,7 +6171,7 @@
    )
    (pins 7JR-7 U46-8)
   )
-  (net "#01375"
+  (net "#01338"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6194,7 +6180,7 @@
    )
    (pins 7JR-6 U46-11)
   )
-  (net "#01376"
+  (net "#01339"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6203,7 +6189,7 @@
    )
    (pins 7JR-5 U47-3)
   )
-  (net "#01377"
+  (net "#01340"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6212,7 +6198,7 @@
    )
    (pins 7JR-4 U47-6)
   )
-  (net "#01378"
+  (net "#01341"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6221,7 +6207,7 @@
    )
    (pins 7JR-3 U47-8)
   )
-  (net "#01379"
+  (net "#01342"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6230,7 +6216,7 @@
    )
    (pins 7JR-2 U47-11)
   )
-  (net "#01380"
+  (net "#01343"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6239,7 +6225,7 @@
    )
    (pins 7JR-24 U48-3)
   )
-  (net "#01381"
+  (net "#01344"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6248,7 +6234,7 @@
    )
    (pins 7JR-23 U48-6)
   )
-  (net "#01382"
+  (net "#01345"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6257,7 +6243,7 @@
    )
    (pins 7JR-20 U48-8)
   )
-  (net "#01383"
+  (net "#01346"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6266,7 +6252,7 @@
    )
    (pins 7JR-22 U48-11)
   )
-  (net "#01384"
+  (net "#01347"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6275,7 +6261,7 @@
    )
    (pins 7JR-1 U49-3)
   )
-  (net "#01443"
+  (net "#01406"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6284,7 +6270,7 @@
    )
    (pins U51-1 U54-0 U55-0 U56-0 U57-0 U50-2)
   )
-  (net "#01450"
+  (net "#01413"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6293,7 +6279,7 @@
    )
    (pins 7LR-26 U53-0 U52-0 U51-2)
   )
-  (net "#01453"
+  (net "#01416"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6302,7 +6288,7 @@
    )
    (pins 7LR-21 U52-1)
   )
-  (net "#01475"
+  (net "#01438"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6311,7 +6297,7 @@
    )
    (pins 7LR-9 U54-3)
   )
-  (net "#01476"
+  (net "#01439"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6320,7 +6306,7 @@
    )
    (pins 7LR-8 U54-6)
   )
-  (net "#01477"
+  (net "#01440"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6329,7 +6315,7 @@
    )
    (pins 7LR-7 U54-8)
   )
-  (net "#01478"
+  (net "#01441"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6338,7 +6324,7 @@
    )
    (pins 7LR-6 U54-11)
   )
-  (net "#01479"
+  (net "#01442"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6347,7 +6333,7 @@
    )
    (pins 7LR-5 U55-3)
   )
-  (net "#01480"
+  (net "#01443"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6356,7 +6342,7 @@
    )
    (pins 7LR-4 U55-6)
   )
-  (net "#01481"
+  (net "#01444"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6365,7 +6351,7 @@
    )
    (pins 7LR-3 U55-8)
   )
-  (net "#01482"
+  (net "#01445"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6374,7 +6360,7 @@
    )
    (pins 7LR-2 U55-11)
   )
-  (net "#01483"
+  (net "#01446"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6383,7 +6369,7 @@
    )
    (pins 7LR-24 U56-3)
   )
-  (net "#01484"
+  (net "#01447"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6392,7 +6378,7 @@
    )
    (pins 7LR-23 U56-6)
   )
-  (net "#01485"
+  (net "#01448"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6401,7 +6387,7 @@
    )
    (pins 7LR-20 U56-8)
   )
-  (net "#01486"
+  (net "#01449"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6410,7 +6396,7 @@
    )
    (pins 7LR-22 U56-11)
   )
-  (net "#01487"
+  (net "#01450"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6419,7 +6405,7 @@
    )
    (pins 7LR-1 U57-3)
   )
-  (net "#01536"
+  (net "#01499"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6428,7 +6414,7 @@
    )
    (pins U51-4 U59-0 U60-0 U61-0 U62-0 U50-5)
   )
-  (net "#01543"
+  (net "#01506"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6437,7 +6423,7 @@
    )
    (pins 7MR-26 U58-0 U52-2 U51-5)
   )
-  (net "#01546"
+  (net "#01509"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6446,7 +6432,7 @@
    )
    (pins 7MR-21 U52-3)
   )
-  (net "#01568"
+  (net "#01531"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6455,7 +6441,7 @@
    )
    (pins 7MR-9 U59-3)
   )
-  (net "#01569"
+  (net "#01532"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6464,7 +6450,7 @@
    )
    (pins 7MR-8 U59-6)
   )
-  (net "#01570"
+  (net "#01533"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6473,7 +6459,7 @@
    )
    (pins 7MR-7 U59-8)
   )
-  (net "#01571"
+  (net "#01534"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6482,7 +6468,7 @@
    )
    (pins 7MR-6 U59-11)
   )
-  (net "#01572"
+  (net "#01535"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6491,7 +6477,7 @@
    )
    (pins 7MR-5 U60-3)
   )
-  (net "#01573"
+  (net "#01536"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6500,7 +6486,7 @@
    )
    (pins 7MR-4 U60-6)
   )
-  (net "#01574"
+  (net "#01537"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6509,7 +6495,7 @@
    )
    (pins 7MR-3 U60-8)
   )
-  (net "#01575"
+  (net "#01538"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6518,7 +6504,7 @@
    )
    (pins 7MR-2 U60-11)
   )
-  (net "#01576"
+  (net "#01539"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6527,7 +6513,7 @@
    )
    (pins 7MR-24 U61-3)
   )
-  (net "#01577"
+  (net "#01540"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6536,7 +6522,7 @@
    )
    (pins 7MR-23 U61-6)
   )
-  (net "#01578"
+  (net "#01541"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6545,7 +6531,7 @@
    )
    (pins 7MR-20 U61-8)
   )
-  (net "#01579"
+  (net "#01542"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6554,7 +6540,7 @@
    )
    (pins 7MR-22 U61-11)
   )
-  (net "#01580"
+  (net "#01543"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6563,7 +6549,7 @@
    )
    (pins 7MR-1 U62-3)
   )
-  (net "#01628"
+  (net "#01591"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6572,7 +6558,7 @@
    )
    (pins 5F-3 U80-11)
   )
-  (net "#01629"
+  (net "#01592"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6581,7 +6567,7 @@
    )
    (pins 5F-0 U80-8)
   )
-  (net "#01630"
+  (net "#01593"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6590,7 +6576,7 @@
    )
    (pins 5F-12 U80-4)
   )
-  (net "#01631"
+  (net "#01594"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6599,7 +6585,7 @@
    )
    (pins 5F-9 U80-1)
   )
-  (net "#01634"
+  (net "#01597"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6608,7 +6594,7 @@
    )
    (pins U79-19 U15-11)
   )
-  (net "#01680"
+  (net "#01643"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6617,7 +6603,7 @@
    )
    (pins 6E-5 U15-10)
   )
-  (net "#01729"
+  (net "#01692"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6626,7 +6612,7 @@
    )
    (pins 5R-8 6R-14)
   )
-  (net "#01730"
+  (net "#01693"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6635,7 +6621,7 @@
    )
    (pins 5R-10 6R-11)
   )
-  (net "#01731"
+  (net "#01694"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6644,7 +6630,7 @@
    )
    (pins 5R-13 6R-9)
   )
-  (net "#01732"
+  (net "#01695"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6653,7 +6639,7 @@
    )
    (pins 5R-0 6R-6)
   )
-  (net "#01733"
+  (net "#01696"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6662,7 +6648,7 @@
    )
    (pins 5R-6 5T-9)
   )
-  (net "#01745"
+  (net "#01708"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6671,7 +6657,7 @@
    )
    (pins 6S-8 U85-3)
   )
-  (net "#01747"
+  (net "#01710"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6680,7 +6666,7 @@
    )
    (pins 6R-8 U85-5)
   )
-  (net "#01762"
+  (net "#01725"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6689,7 +6675,7 @@
    )
    (pins 5S-8 6S-14)
   )
-  (net "#01763"
+  (net "#01726"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6698,7 +6684,7 @@
    )
    (pins 5S-10 6S-11)
   )
-  (net "#01764"
+  (net "#01727"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6707,7 +6693,7 @@
    )
    (pins 5S-13 6S-9)
   )
-  (net "#01765"
+  (net "#01728"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6716,7 +6702,7 @@
    )
    (pins 5S-0 6S-6)
   )
-  (net "#01766"
+  (net "#01729"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6725,7 +6711,7 @@
    )
    (pins 5S-6 5T-8)
   )
-  (net "#01797"
+  (net "#01760"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6734,7 +6720,7 @@
    )
    (pins 6T-3 7S-1)
   )
-  (net "#01831"
+  (net "#01794"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6743,7 +6729,7 @@
    )
    (pins 3C-14 3D-14 7B-5)
   )
-  (net "#01895"
+  (net "#01858"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6752,7 +6738,7 @@
    )
    (pins 6C-14 6D-6 6D-9)
   )
-  (net "#01896"
+  (net "#01859"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6761,7 +6747,7 @@
    )
    (pins 6C-0 6D-0 7B-2)
   )
-  (net "#01976"
+  (net "#01939"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6770,7 +6756,7 @@
    )
    (pins 3A-14 3B-14 7B-7)
   )
-  (net "#02028"
+  (net "#01991"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6779,7 +6765,7 @@
    )
    (pins 6A-6 6A-9 6B-14)
   )
-  (net "#02029"
+  (net "#01992"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6788,7 +6774,7 @@
    )
    (pins 6A-0 6B-0 7B-10)
   )
-  (net "#02044"
+  (net "#02007"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6797,7 +6783,16 @@
    )
    (pins U78-17 7A-7)
   )
-  (net "#02261"
+  (net "#02206"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 7N-8 7T-7)
+  )
+  (net "#02244"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6806,7 +6801,7 @@
    )
    (pins 6K6-1 6N6-2)
   )
-  (net "#02265"
+  (net "#02248"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6815,16 +6810,16 @@
    )
    (pins 6N6-10 8C6-4)
   )
-  (net "#02274"
+  (net "#02257"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 6LM6-20 2R6-4 U34-4 6K6-3 8C6-3)
+   (pins 6LM6-20 2R6-4 6K6-3 8C6-3 U34-4)
   )
-  (net "#02275"
+  (net "#02258"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6833,7 +6828,7 @@
    )
    (pins 6LM6-7 6K6-6)
   )
-  (net "#02276"
+  (net "#02259"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6842,7 +6837,7 @@
    )
    (pins 6LM6-6 6K6-8)
   )
-  (net "#02277"
+  (net "#02260"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6851,7 +6846,7 @@
    )
    (pins 6LM6-5 6K6-11)
   )
-  (net "#02281"
+  (net "#02264"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6860,7 +6855,7 @@
    )
    (pins 6LM6-4 6J6-3)
   )
-  (net "#02282"
+  (net "#02265"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6869,7 +6864,7 @@
    )
    (pins 6LM6-3 6J6-6)
   )
-  (net "#02283"
+  (net "#02266"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6878,7 +6873,7 @@
    )
    (pins 6LM6-2 6J6-8)
   )
-  (net "#02284"
+  (net "#02267"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6887,7 +6882,7 @@
    )
    (pins 6LM6-1 6J6-11)
   )
-  (net "#02291"
+  (net "#02274"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6896,7 +6891,7 @@
    )
    (pins 6LM6-0 6H6-3)
   )
-  (net "#02292"
+  (net "#02275"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6905,7 +6900,7 @@
    )
    (pins 6LM6-22 6H6-6)
   )
-  (net "#02293"
+  (net "#02276"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6914,7 +6909,7 @@
    )
    (pins 6LM6-21 6H6-8)
   )
-  (net "#02294"
+  (net "#02277"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6923,7 +6918,7 @@
    )
    (pins 6LM6-18 6H6-11)
   )
-  (net "#02298"
+  (net "#02281"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6932,7 +6927,7 @@
    )
    (pins 3L6-18 8C6-5)
   )
-  (net "#02309"
+  (net "#02292"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6941,7 +6936,7 @@
    )
    (pins 6LM6-19 U34-5)
   )
-  (net "#02363"
+  (net "#02346"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6950,7 +6945,7 @@
    )
    (pins 3L6-0 2R6-5)
   )
-  (net "#02407"
+  (net "#02390"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6959,7 +6954,7 @@
    )
    (pins 4M6-8 6N2-5)
   )
-  (net "#02423"
+  (net "#02406"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6968,7 +6963,7 @@
    )
    (pins 4L6-1 6P6-1 6P6-9 6P6-12)
   )
-  (net "#02424"
+  (net "#02407"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6977,7 +6972,7 @@
    )
    (pins 4L6-4 4M6-12)
   )
-  (net "#02425"
+  (net "#02408"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6986,7 +6981,7 @@
    )
    (pins 4L6-11 4M6-10)
   )
-  (net "#02426"
+  (net "#02409"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -6995,7 +6990,7 @@
    )
    (pins 4L6-14 4M6-3)
   )
-  (net "#02427"
+  (net "#02410"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7004,7 +6999,7 @@
    )
    (pins 4L6-15 4M6-2)
   )
-  (net "#02428"
+  (net "#02411"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7013,7 +7008,7 @@
    )
    (pins 4L6-18 4M6-13)
   )
-  (net "#02480"
+  (net "#02463"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7022,7 +7017,7 @@
    )
    (pins 7J6-6 7K6-14)
   )
-  (net "#02483"
+  (net "#02466"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7031,7 +7026,7 @@
    )
    (pins 7J6-11 7K6-1)
   )
-  (net "#02529"
+  (net "#02512"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7040,7 +7035,7 @@
    )
    (pins 7F6-6 7H6-14)
   )
-  (net "#02532"
+  (net "#02515"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7049,7 +7044,7 @@
    )
    (pins 7F6-11 7H6-1)
   )
-  (net "#02578"
+  (net "#02561"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7058,7 +7053,7 @@
    )
    (pins 7D6-6 7E6-14)
   )
-  (net "#02581"
+  (net "#02564"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7067,7 +7062,7 @@
    )
    (pins 7D6-11 7E6-1)
   )
-  (net "#02596"
+  (net "#02579"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7076,25 +7071,25 @@
    )
    (pins 4M6-11 6F6-0 6N6-9)
   )
-  (net "#02639"
+  (net "#02622"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U29-0 U30-0 U31-0 U32-0 U10-9 U90-2)
+   (pins U29-0 U30-0 U31-0 U32-0 U90-2 U91-9)
   )
-  (net "#02646"
+  (net "#02629"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8K6R-26 U28-0 U17-2 U10-7)
+   (pins 8K6R-26 U28-0 U17-2 U91-7)
   )
-  (net "#02649"
+  (net "#02632"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7103,7 +7098,7 @@
    )
    (pins 8K6R-21 U17-3)
   )
-  (net "#02671"
+  (net "#02654"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7112,7 +7107,7 @@
    )
    (pins 8K6R-9 U29-3)
   )
-  (net "#02672"
+  (net "#02655"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7121,7 +7116,7 @@
    )
    (pins 8K6R-8 U29-6)
   )
-  (net "#02673"
+  (net "#02656"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7130,7 +7125,7 @@
    )
    (pins 8K6R-7 U29-8)
   )
-  (net "#02674"
+  (net "#02657"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7139,7 +7134,7 @@
    )
    (pins 8K6R-6 U29-11)
   )
-  (net "#02675"
+  (net "#02658"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7148,7 +7143,7 @@
    )
    (pins 8K6R-5 U30-3)
   )
-  (net "#02676"
+  (net "#02659"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7157,7 +7152,7 @@
    )
    (pins 8K6R-4 U30-6)
   )
-  (net "#02677"
+  (net "#02660"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7166,7 +7161,7 @@
    )
    (pins 8K6R-3 U30-8)
   )
-  (net "#02678"
+  (net "#02661"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7175,7 +7170,7 @@
    )
    (pins 8K6R-2 U30-11)
   )
-  (net "#02679"
+  (net "#02662"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7184,7 +7179,7 @@
    )
    (pins 8K6R-24 U31-3)
   )
-  (net "#02680"
+  (net "#02663"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7193,7 +7188,7 @@
    )
    (pins 8K6R-23 U31-6)
   )
-  (net "#02681"
+  (net "#02664"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7202,7 +7197,7 @@
    )
    (pins 8K6R-20 U31-8)
   )
-  (net "#02682"
+  (net "#02665"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7211,7 +7206,7 @@
    )
    (pins 8K6R-22 U31-11)
   )
-  (net "#02683"
+  (net "#02666"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7220,7 +7215,7 @@
    )
    (pins 8K6R-1 U32-3)
   )
-  (net "#02689"
+  (net "#02672"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7229,16 +7224,16 @@
    )
    (pins U36-0 U37-0 U38-0 U39-0 U90-5 U91-4)
   )
-  (net "#02696"
+  (net "#02679"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8H6R-26 U35-0 U34-0 U91-5)
+   (pins 8H6R-26 U35-0 U91-5 U34-0)
   )
-  (net "#02699"
+  (net "#02682"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7247,7 +7242,7 @@
    )
    (pins 8H6R-21 U34-1)
   )
-  (net "#02721"
+  (net "#02704"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7256,7 +7251,7 @@
    )
    (pins 8H6R-9 U36-3)
   )
-  (net "#02722"
+  (net "#02705"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7265,7 +7260,7 @@
    )
    (pins 8H6R-8 U36-6)
   )
-  (net "#02723"
+  (net "#02706"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7274,7 +7269,7 @@
    )
    (pins 8H6R-7 U36-8)
   )
-  (net "#02724"
+  (net "#02707"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7283,7 +7278,7 @@
    )
    (pins 8H6R-6 U36-11)
   )
-  (net "#02725"
+  (net "#02708"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7292,7 +7287,7 @@
    )
    (pins 8H6R-5 U37-3)
   )
-  (net "#02726"
+  (net "#02709"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7301,7 +7296,7 @@
    )
    (pins 8H6R-4 U37-6)
   )
-  (net "#02727"
+  (net "#02710"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7310,7 +7305,7 @@
    )
    (pins 8H6R-3 U37-8)
   )
-  (net "#02728"
+  (net "#02711"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7319,7 +7314,7 @@
    )
    (pins 8H6R-2 U37-11)
   )
-  (net "#02729"
+  (net "#02712"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7328,7 +7323,7 @@
    )
    (pins 8H6R-24 U38-3)
   )
-  (net "#02730"
+  (net "#02713"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7337,7 +7332,7 @@
    )
    (pins 8H6R-23 U38-6)
   )
-  (net "#02731"
+  (net "#02714"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7346,7 +7341,7 @@
    )
    (pins 8H6R-20 U38-8)
   )
-  (net "#02732"
+  (net "#02715"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7355,7 +7350,7 @@
    )
    (pins 8H6R-22 U38-11)
   )
-  (net "#02733"
+  (net "#02716"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7364,7 +7359,7 @@
    )
    (pins 8H6R-1 U39-3)
   )
-  (net "#02739"
+  (net "#02722"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7373,16 +7368,16 @@
    )
    (pins U41-0 U42-0 U43-0 U44-0 U90-7 U91-1)
   )
-  (net "#02746"
+  (net "#02729"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins 8E6R-26 U40-0 U34-2 U91-2)
+   (pins 8E6R-26 U40-0 U91-2 U34-2)
   )
-  (net "#02749"
+  (net "#02732"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7391,7 +7386,7 @@
    )
    (pins 8E6R-21 U34-3)
   )
-  (net "#02771"
+  (net "#02754"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7400,7 +7395,7 @@
    )
    (pins 8E6R-9 U41-3)
   )
-  (net "#02772"
+  (net "#02755"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7409,7 +7404,7 @@
    )
    (pins 8E6R-8 U41-6)
   )
-  (net "#02773"
+  (net "#02756"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7418,7 +7413,7 @@
    )
    (pins 8E6R-7 U41-8)
   )
-  (net "#02774"
+  (net "#02757"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7427,7 +7422,7 @@
    )
    (pins 8E6R-6 U41-11)
   )
-  (net "#02775"
+  (net "#02758"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7436,7 +7431,7 @@
    )
    (pins 8E6R-5 U42-3)
   )
-  (net "#02776"
+  (net "#02759"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7445,7 +7440,7 @@
    )
    (pins 8E6R-4 U42-6)
   )
-  (net "#02777"
+  (net "#02760"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7454,7 +7449,7 @@
    )
    (pins 8E6R-3 U42-8)
   )
-  (net "#02778"
+  (net "#02761"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7463,7 +7458,7 @@
    )
    (pins 8E6R-2 U42-11)
   )
-  (net "#02779"
+  (net "#02762"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7472,7 +7467,7 @@
    )
    (pins 8E6R-24 U43-3)
   )
-  (net "#02780"
+  (net "#02763"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7481,7 +7476,7 @@
    )
    (pins 8E6R-23 U43-6)
   )
-  (net "#02781"
+  (net "#02764"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7490,7 +7485,7 @@
    )
    (pins 8E6R-20 U43-8)
   )
-  (net "#02782"
+  (net "#02765"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7499,7 +7494,7 @@
    )
    (pins 8E6R-22 U43-11)
   )
-  (net "#02783"
+  (net "#02766"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7508,7 +7503,25 @@
    )
    (pins 8E6R-1 U44-3)
   )
-  (net "#02974"
+  (net "#02921"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U10-0 U34-11)
+  )
+  (net "#02924"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins 8C6-1 U10-1 U10-2 U34-9)
+  )
+  (net "#02976"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7517,7 +7530,7 @@
    )
    (pins 7R7-6 7S7-14)
   )
-  (net "#02977"
+  (net "#02979"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7526,7 +7539,7 @@
    )
    (pins 7R7-11 7S7-1)
   )
-  (net "#03008"
+  (net "#03010"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7535,7 +7548,7 @@
    )
    (pins 7N7-6 7P7-14)
   )
-  (net "#03011"
+  (net "#03013"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7544,7 +7557,7 @@
    )
    (pins 7N7-11 7P7-1)
   )
-  (net "#03042"
+  (net "#03044"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7553,7 +7566,7 @@
    )
    (pins 7L7-6 7M7-14)
   )
-  (net "#03045"
+  (net "#03047"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7562,7 +7575,7 @@
    )
    (pins 7L7-11 7M7-1)
   )
-  (net "#03066"
+  (net "#03068"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7571,7 +7584,7 @@
    )
    (pins 5N7-0 5S7-14 5P7-0)
   )
-  (net "#03074"
+  (net "#03076"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7580,7 +7593,7 @@
    )
    (pins 5S7-8 5P7-7)
   )
-  (net "#03079"
+  (net "#03081"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7589,7 +7602,7 @@
    )
    (pins 5R7-10 6R7-1 6R7-4 6R7-9 6R7-12)
   )
-  (net "#03084"
+  (net "#03086"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7598,7 +7611,7 @@
    )
    (pins 5S7-13 5P7-10 5R7-3)
   )
-  (net "#03183"
+  (net "#03185"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7607,7 +7620,7 @@
    )
    (pins U65-14 5R7-8)
   )
-  (net "#03214"
+  (net "#03216"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7616,7 +7629,7 @@
    )
    (pins 4P7R-9 U4-3)
   )
-  (net "#03215"
+  (net "#03217"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7625,7 +7638,7 @@
    )
    (pins 4P7R-8 U4-6)
   )
-  (net "#03216"
+  (net "#03218"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7634,7 +7647,7 @@
    )
    (pins 4P7R-7 U4-8)
   )
-  (net "#03217"
+  (net "#03219"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7643,7 +7656,7 @@
    )
    (pins 4P7R-6 U4-11)
   )
-  (net "#03218"
+  (net "#03220"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7652,7 +7665,7 @@
    )
    (pins U4-0 U8-0 U6-0 U7-0 U9-2 5P7-4)
   )
-  (net "#03230"
+  (net "#03232"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7661,7 +7674,7 @@
    )
    (pins 4P7R-5 U6-3)
   )
-  (net "#03231"
+  (net "#03233"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7670,7 +7683,7 @@
    )
    (pins 4P7R-4 U6-6)
   )
-  (net "#03232"
+  (net "#03234"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7679,7 +7692,7 @@
    )
    (pins 4P7R-3 U6-8)
   )
-  (net "#03233"
+  (net "#03235"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7688,7 +7701,7 @@
    )
    (pins 4P7R-2 U6-11)
   )
-  (net "#03245"
+  (net "#03247"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7697,7 +7710,7 @@
    )
    (pins 4P7R-24 U7-3)
   )
-  (net "#03246"
+  (net "#03248"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7706,7 +7719,7 @@
    )
    (pins 4P7R-23 U7-6)
   )
-  (net "#03247"
+  (net "#03249"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7715,7 +7728,7 @@
    )
    (pins 4P7R-20 U7-8)
   )
-  (net "#03248"
+  (net "#03250"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7724,7 +7737,7 @@
    )
    (pins 4P7R-22 U7-11)
   )
-  (net "#03260"
+  (net "#03262"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7733,7 +7746,7 @@
    )
    (pins 4P7R-1 U8-3)
   )
-  (net "#03272"
+  (net "#03274"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7742,7 +7755,7 @@
    )
    (pins 4P7R-26 U11-0 U93-10 5P7-5)
   )
-  (net "#03275"
+  (net "#03277"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7751,7 +7764,7 @@
    )
    (pins 4P7R-21 U93-9)
   )
-  (net "#03331"
+  (net "#03333"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7760,7 +7773,7 @@
    )
    (pins U1-0 U3-0 U12-0 U2-0 U9-10 U92-1)
   )
-  (net "#03338"
+  (net "#03340"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7769,7 +7782,7 @@
    )
    (pins 8R7R-26 U16-0 U93-4 U92-2)
   )
-  (net "#03341"
+  (net "#03343"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7778,7 +7791,7 @@
    )
    (pins 8R7R-21 U93-5)
   )
-  (net "#03363"
+  (net "#03365"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7787,7 +7800,7 @@
    )
    (pins 8R7R-9 U1-3)
   )
-  (net "#03364"
+  (net "#03366"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7796,7 +7809,7 @@
    )
    (pins 8R7R-8 U1-6)
   )
-  (net "#03365"
+  (net "#03367"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7805,7 +7818,7 @@
    )
    (pins 8R7R-7 U1-8)
   )
-  (net "#03366"
+  (net "#03368"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7814,7 +7827,7 @@
    )
    (pins 8R7R-6 U1-11)
   )
-  (net "#03367"
+  (net "#03369"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7823,7 +7836,7 @@
    )
    (pins 8R7R-5 U2-3)
   )
-  (net "#03368"
+  (net "#03370"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7832,7 +7845,7 @@
    )
    (pins 8R7R-4 U2-6)
   )
-  (net "#03369"
+  (net "#03371"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7841,7 +7854,7 @@
    )
    (pins 8R7R-3 U2-8)
   )
-  (net "#03370"
+  (net "#03372"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7850,7 +7863,7 @@
    )
    (pins 8R7R-2 U2-11)
   )
-  (net "#03371"
+  (net "#03373"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7859,7 +7872,7 @@
    )
    (pins 8R7R-24 U3-3)
   )
-  (net "#03372"
+  (net "#03374"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7868,7 +7881,7 @@
    )
    (pins 8R7R-23 U3-6)
   )
-  (net "#03373"
+  (net "#03375"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7877,7 +7890,7 @@
    )
    (pins 8R7R-20 U3-8)
   )
-  (net "#03374"
+  (net "#03376"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7886,7 +7899,7 @@
    )
    (pins 8R7R-22 U3-11)
   )
-  (net "#03375"
+  (net "#03377"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7895,7 +7908,7 @@
    )
    (pins 8R7R-1 U12-3)
   )
-  (net "#03434"
+  (net "#03436"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7904,7 +7917,7 @@
    )
    (pins U19-0 U20-0 U21-0 U22-0 U9-5 U92-4)
   )
-  (net "#03441"
+  (net "#03443"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7913,7 +7926,7 @@
    )
    (pins 8N7R-26 U18-0 U93-2 U92-5)
   )
-  (net "#03444"
+  (net "#03446"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7922,7 +7935,7 @@
    )
    (pins 8N7R-21 U93-3)
   )
-  (net "#03466"
+  (net "#03468"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7931,7 +7944,7 @@
    )
    (pins 8N7R-9 U19-3)
   )
-  (net "#03467"
+  (net "#03469"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7940,7 +7953,7 @@
    )
    (pins 8N7R-8 U19-6)
   )
-  (net "#03468"
+  (net "#03470"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7949,7 +7962,7 @@
    )
    (pins 8N7R-7 U19-8)
   )
-  (net "#03469"
+  (net "#03471"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7958,7 +7971,7 @@
    )
    (pins 8N7R-6 U19-11)
   )
-  (net "#03470"
+  (net "#03472"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7967,7 +7980,7 @@
    )
    (pins 8N7R-5 U20-3)
   )
-  (net "#03471"
+  (net "#03473"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7976,7 +7989,7 @@
    )
    (pins 8N7R-4 U20-6)
   )
-  (net "#03472"
+  (net "#03474"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7985,7 +7998,7 @@
    )
    (pins 8N7R-3 U20-8)
   )
-  (net "#03473"
+  (net "#03475"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -7994,7 +8007,7 @@
    )
    (pins 8N7R-2 U20-11)
   )
-  (net "#03474"
+  (net "#03476"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8003,7 +8016,7 @@
    )
    (pins 8N7R-24 U21-3)
   )
-  (net "#03475"
+  (net "#03477"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8012,7 +8025,7 @@
    )
    (pins 8N7R-23 U21-6)
   )
-  (net "#03476"
+  (net "#03478"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8021,7 +8034,7 @@
    )
    (pins 8N7R-20 U21-8)
   )
-  (net "#03477"
+  (net "#03479"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8030,7 +8043,7 @@
    )
    (pins 8N7R-22 U21-11)
   )
-  (net "#03478"
+  (net "#03480"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8039,7 +8052,7 @@
    )
    (pins 8N7R-1 U22-3)
   )
-  (net "#03537"
+  (net "#03539"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8048,7 +8061,7 @@
    )
    (pins U23-0 U24-0 U25-0 U26-0 U9-7 U92-9)
   )
-  (net "#03544"
+  (net "#03546"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8057,7 +8070,7 @@
    )
    (pins 8L7R-26 U27-0 U93-12 U92-7)
   )
-  (net "#03547"
+  (net "#03549"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8066,7 +8079,7 @@
    )
    (pins 8L7R-21 U93-11)
   )
-  (net "#03569"
+  (net "#03571"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8075,7 +8088,7 @@
    )
    (pins 8L7R-9 U23-3)
   )
-  (net "#03570"
+  (net "#03572"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8084,7 +8097,7 @@
    )
    (pins 8L7R-8 U23-6)
   )
-  (net "#03571"
+  (net "#03573"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8093,7 +8106,7 @@
    )
    (pins 8L7R-7 U23-8)
   )
-  (net "#03572"
+  (net "#03574"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8102,7 +8115,7 @@
    )
    (pins 8L7R-6 U23-11)
   )
-  (net "#03573"
+  (net "#03575"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8111,7 +8124,7 @@
    )
    (pins 8L7R-5 U24-3)
   )
-  (net "#03574"
+  (net "#03576"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8120,7 +8133,7 @@
    )
    (pins 8L7R-4 U24-6)
   )
-  (net "#03575"
+  (net "#03577"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8129,7 +8142,7 @@
    )
    (pins 8L7R-3 U24-8)
   )
-  (net "#03576"
+  (net "#03578"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8138,7 +8151,7 @@
    )
    (pins 8L7R-2 U24-11)
   )
-  (net "#03577"
+  (net "#03579"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8147,7 +8160,7 @@
    )
    (pins 8L7R-24 U25-3)
   )
-  (net "#03578"
+  (net "#03580"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8156,7 +8169,7 @@
    )
    (pins 8L7R-23 U25-6)
   )
-  (net "#03579"
+  (net "#03581"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8165,7 +8178,7 @@
    )
    (pins 8L7R-20 U25-8)
   )
-  (net "#03580"
+  (net "#03582"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8174,7 +8187,7 @@
    )
    (pins 8L7R-22 U25-11)
   )
-  (net "#03581"
+  (net "#03583"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8183,7 +8196,7 @@
    )
    (pins 8L7R-1 U26-3)
   )
-  (net "#03643"
+  (net "#03645"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8192,7 +8205,7 @@
    )
    (pins 2-8 4-3)
   )
-  (net "#03731"
+  (net "#03733"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8201,7 +8214,7 @@
    )
    (pins U63-8 U64-6)
   )
-  (net "#03761"
+  (net "#03763"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8210,7 +8223,7 @@
    )
    (pins U68-8 U69-6)
   )
-  (net "#03867"
+  (net "#03869"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8219,7 +8232,7 @@
    )
    (pins 5E2-0 8S-5)
   )
-  (net "#03868"
+  (net "#03870"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8228,7 +8241,7 @@
    )
    (pins 5E2-1 8S-3)
   )
-  (net "#03869"
+  (net "#03871"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8237,7 +8250,7 @@
    )
    (pins 5E2-4 6F2-2)
   )
-  (net "#03870"
+  (net "#03872"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8246,7 +8259,7 @@
    )
    (pins 5E2-5 6F2-5)
   )
-  (net "#03871"
+  (net "#03873"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8255,7 +8268,7 @@
    )
    (pins 5E2-8 6F2-12)
   )
-  (net "#03872"
+  (net "#03874"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8264,7 +8277,7 @@
    )
    (pins 5E2-11 6D2-12)
   )
-  (net "#03873"
+  (net "#03875"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8273,7 +8286,7 @@
    )
    (pins 5E2-14 6D2-2)
   )
-  (net "#03874"
+  (net "#03876"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8282,7 +8295,7 @@
    )
    (pins 5E2-15 6D2-5)
   )
-  (net "#03875"
+  (net "#03877"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8291,7 +8304,7 @@
    )
    (pins 5E2-18 6F2-9)
   )
-  (net "#03916"
+  (net "#03918"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8300,7 +8313,7 @@
    )
    (pins 7B2-18 8C2-10)
   )
-  (net "#03998"
+  (net "#04000"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8309,7 +8322,7 @@
    )
    (pins 7C2-18 8C2-7)
   )
-  (net "#04056"
+  (net "#04058"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8318,7 +8331,7 @@
    )
    (pins 3M8-1 5M8-5)
   )
-  (net "#04057"
+  (net "#04059"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8327,7 +8340,7 @@
    )
    (pins 3M8-2 5M8-11)
   )
-  (net "#04058"
+  (net "#04060"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8336,7 +8349,7 @@
    )
    (pins 3M8-3 5M8-7)
   )
-  (net "#04060"
+  (net "#04062"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8345,7 +8358,7 @@
    )
    (pins 3M8-8 5F8-13 5H8-13 5J8-13 5K8-13)
   )
-  (net "#04061"
+  (net "#04063"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8354,25 +8367,25 @@
    )
    (pins 3M8-6 5F8-1 5H8-1 5J8-1 5K8-1)
   )
-  (net "#04132"
+  (net "#04134"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U67-3 U94-5)
+   (pins U94-5 U67-3)
   )
-  (net "#04133"
+  (net "#04135"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U67-5 U94-0)
+   (pins U94-0 U67-5)
   )
-  (net "#04137"
+  (net "#04139"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8381,25 +8394,25 @@
    )
    (pins U76-4 U72-0)
   )
-  (net "#04138"
+  (net "#04140"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U72-2 U94-1)
+   (pins U94-1 U72-2)
   )
-  (net "#04141"
+  (net "#04143"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
      $VIA#0_SIGNAL
     )
    )
-   (pins U73-1 U94-2)
+   (pins U94-2 U73-1)
   )
-  (net "#04171"
+  (net "#04173"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8408,7 +8421,7 @@
    )
    (pins U71-5 U94-4)
   )
-  (net "#04185"
+  (net "#04187"
    (circuit
     (use_layer TOP I1 I2 I3 I4 BOT)
     (use_via
@@ -8416,6 +8429,15 @@
     )
    )
    (pins U74-8 U75-6)
+  )
+  (net "#04248"
+   (circuit
+    (use_layer TOP I1 I2 I3 I4 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U33-8 U94-7)
   )
   (net ".6MHZ"
    (circuit
@@ -8498,7 +8520,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 6P6-11 5E-4 7S-2 U68-5 3P-6 3P-9 7N-3 4P-4)
+   (pins 6P6-11 5E-4 7S-2 7N-3 U68-5 3P-6 3P-9 4P-4)
   )
   (net "1V*."
    (circuit
@@ -8507,7 +8529,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 1A-0 1B-0 7A-9 7B-8 7N-1)
+   (pins 1A-0 1B-0 7N-1 7A-9 7B-8)
   )
   (net "256H"
    (circuit
@@ -8516,7 +8538,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins ROWCOL1-8 ROWCOL2-8 ROWCOL3-8 ROWCOL4-8 3N-1 3P-1 4R-5 4P-2 4P-9 U94-3)
+   (pins ROWCOL1-8 ROWCOL2-8 ROWCOL3-8 ROWCOL4-8 3N-1 3P-1 U94-3 4R-5 4P-2 4P-9)
   )
   (net "256H*."
    (circuit
@@ -8525,7 +8547,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 7A-8 7A-11 7N-5)
+   (pins 7N-5 7A-8 7A-11)
   )
   (net "2V"
    (circuit
@@ -8562,8 +8584,8 @@
      $VIA#0_SIGNAL
     )
    )
-    (pins ROWCOL1-2 ROWCOL2-2 ROWCOL3-2 ROWCOL4-2 2E-5 U63-14 3S-12 7R-12 U74-4 1S-2 2T-2
-   )
+    (pins ROWCOL1-2 ROWCOL2-2 ROWCOL3-2 ROWCOL4-2 U34-10 2E-5 U63-14 1S-2 3S-12 7R-12
+    U74-4)
   )
   (net "4V"
    (circuit
@@ -8674,8 +8696,8 @@
    )
     (pins 7A2-8 8B2-8 4T-8 U77-20 U78-20 VIDEO1-19 VIDEO2-19 VIDEO3-19 VIDEO4-19 7D6-10
      7E6-10 7F6-10 7H6-10 7J6-10 7K6-10 5J-10 5K-10 5L-10 6A-1 6B-1 6C-1 6D-1 6J-10 6K-10
-     6L-10 7B-4 7B-9 U89-0 7L7-10 7M7-10 7N7-10 7P7-10 7R7-10 7S7-10 5P7-8 5E2-10 3R-1
-    3S-1 7T-8 3T-10)
+     6L-10 7B-4 7B-9 7T-8 U89-0 7L7-10 7M7-10 7N7-10 7P7-10 7R7-10 7S7-10 5P7-8 5E2-10
+    3R-1 3S-1 U94-8 3T-10)
   )
   (net "7DA"
    (circuit
@@ -9575,7 +9597,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U65-15 U67-4)
+   (pins VIDEO1-15 VIDEO2-15 VIDEO3-15 VIDEO4-15 U65-15 U67-4)
   )
   (net "BGBORDERY"
    (circuit
@@ -9584,7 +9606,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U65-18 U72-1)
+   (pins VIDEO1-14 VIDEO2-14 VIDEO3-14 VIDEO4-14 U65-18 U72-1)
   )
   (net "BGH1"
    (circuit
@@ -10412,7 +10434,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U65-1 U93-0 3R-0 3S-0)
+   (pins VIDEO1-13 VIDEO2-13 VIDEO3-13 VIDEO4-13 U65-1 U93-0 3R-0 3S-0)
   )
   (net "EA0"
    (circuit
@@ -10901,31 +10923,31 @@
     (pins EXPANSIONBUSA1-17 J1-4 RB5-1 RG5-1 RR5-1 7A2-7 8B2-7 4T-7 VIDCLK-3 U77-11 U77-18
      U77-21 U77-22 U78-11 U78-18 U78-21 U78-22 EXPANSIONBUSA2-17 EXPANSIONBUSA3-17 EXPANSIONBUSA4-17
      8E6R-13 8E6R-19 8H6R-13 8H6R-19 8K6R-13 8K6R-19 6LM6-11 6LM6-17 U28-9 U35-9 U40-9
-     3L6-9 4L6-9 5L6-9 2R6-6 U17-6 U34-6 4M6-7 6N2-6 6F6-7 6F6-14 6H6-7 6H6-14 6J6-7 6J6-14
+     3L6-9 4L6-9 5L6-9 2R6-6 U17-6 4M6-7 6N2-6 6F6-7 6F6-14 6H6-7 6H6-14 6J6-7 6J6-14
      6K6-7 6K6-14 7D6-1 7D6-7 7E6-6 7E6-7 7F6-1 7F6-7 7H6-6 7H6-7 7J6-1 7J6-7 7K6-6 7K6-7
-     U29-7 U29-14 U30-7 U30-14 U31-7 U31-14 U32-7 U32-14 6P6-6 U10-6 U36-7 U36-14 U37-7
-     U37-14 U38-7 U38-14 U39-7 U39-14 U41-7 U41-14 U42-7 U42-14 U43-7 U43-14 U44-7 U44-14
-     U90-6 U91-6 6N6-6 8C6-6 7JR-13 7JR-19 7LR-13 7LR-19 7MR-13 7MR-19 U79-11 U79-17 U79-18
-     U79-21 U79-22 U45-9 U53-9 U58-9 2F-9 5H-9 6E-9 6F-9 4E-6 4F-6 U52-6 1A-7 1A-14 2A-7
-     2D-7 1B-7 1B-14 2B-7 2C-7 1C-6 1D-7 1D-14 2E-7 2E-14 3A-7 3B-7 3C-7 3D-7 5E-6 5E-7
-     5F-7 5J-6 5J-7 5K-6 5K-7 5L-6 5L-7 5R-2 5R-3 5R-7 5S-2 5S-3 5S-7 6A-7 6B-7 6C-7 6D-7
-     6J-1 6J-7 6K-1 6K-7 6L-1 6L-7 6M-7 6M-14 6R-7 6S-7 6T-1 6T-5 6T-7 6T-14 7S-3 7S-7
-     5T-6 7E-7 7F-7 7F-14 7H-7 7H-14 7A-6 7B-6 U46-7 U46-14 U48-7 U48-14 U49-7 U49-14
-     4H-6 U13-6 U14-6 U47-7 U47-14 6H-6 U51-6 U54-7 U54-14 U55-7 U55-14 U56-7 U56-14 U57-7
-     U57-14 U59-7 U59-14 U60-7 U60-14 U61-7 U61-14 U62-7 U62-14 U50-6 U85-7 U86-7 U89-6
-     3H-6 7C-6 7D-6 U15-6 U80-6 4P7R-13 4P7R-19 8L7R-13 8L7R-19 8N7R-13 8N7R-19 8R7R-13
-     8R7R-19 U11-9 U16-9 U18-9 U27-9 6S7-9 U65-9 U66-9 U81-9 U82-9 U93-6 5N7-7 5S7-7 7L7-1
-     7L7-7 7M7-6 7M7-7 7N7-1 7N7-7 7P7-6 7P7-7 7R7-1 7R7-7 7S7-6 7S7-7 U1-7 U1-14 U3-7
-     U3-14 U12-7 U12-14 U2-7 U2-14 U4-7 U4-14 U8-7 U8-14 U6-7 U6-14 U7-7 U7-14 U19-7 U19-14
-     U20-7 U20-14 U21-7 U21-14 U22-7 U22-14 U23-7 U23-14 U24-7 U24-14 U25-7 U25-14 U26-7
-     U26-14 U9-6 U92-6 U63-6 U63-7 U64-7 U68-6 U68-7 U69-7 U70-7 U88-7 2-6 4-6 5P7-6 5P7-11
-     5R7-6 5R7-11 6R7-6 5E2-9 7B2-9 7C2-9 8S-6 6A2-4 6A2-7 6A2-8 6A2-14 6B2-4 6B2-7 6B2-8
-     6B2-14 6C2-4 6C2-7 6C2-8 6C2-14 3M-7 4M-7 U5-6 3M8-4 3M8-7 5F8-0 5F8-7 5F8-14 5H8-0
-     5H8-7 5H8-14 5J8-0 5J8-7 5J8-14 5K8-0 5K8-7 5K8-14 5M8-6 3N-5 3N-7 3P-2 3P-3 3P-7
-     3R-2 3R-3 3R-5 3R-7 3S-2 3S-3 3S-4 3S-5 3S-7 6D2-7 6D2-9 6D2-14 6F2-7 6F2-14 U87-7
-     7N-7 7R-7 4S-6 7T-6 8D2-7 8C2-6 U71-1 U71-3 U71-7 U74-5 U74-6 U74-7 U75-7 U75-11
-     U76-1 U76-2 U76-7 U76-8 1S-6 1T-6 2T-6 3T-6 4N-6 4R-6 4P-6 5P-6 U67-6 U72-6 U73-6
-    U94-6)
+     U29-7 U29-14 U30-7 U30-14 U31-7 U31-14 U32-7 U32-14 6P6-6 U36-7 U36-14 U37-7 U37-14
+     U38-7 U38-14 U39-7 U39-14 U41-7 U41-14 U42-7 U42-14 U43-7 U43-14 U44-7 U44-14 U90-6
+     U91-6 6N6-6 8C6-6 U10-6 U34-6 7JR-13 7JR-19 7LR-13 7LR-19 7MR-13 7MR-19 U79-11 U79-17
+     U79-18 U79-21 U79-22 U45-9 U53-9 U58-9 2F-9 5H-9 6E-9 6F-9 4E-6 4F-6 U52-6 1A-7 1A-14
+     2A-7 2D-7 1B-7 1B-14 2B-7 2C-7 1C-6 1D-7 1D-14 2E-7 2E-14 3A-7 3B-7 3C-7 3D-7 5E-6
+     5E-7 5F-7 5J-6 5J-7 5K-6 5K-7 5L-6 5L-7 5R-2 5R-3 5R-7 5S-2 5S-3 5S-7 6A-7 6B-7 6C-7
+     6D-7 6J-1 6J-7 6K-1 6K-7 6L-1 6L-7 6M-7 6M-14 6R-7 6S-7 6T-1 6T-5 6T-7 6T-14 7S-3
+     7S-7 5T-6 7E-7 7F-7 7F-14 7H-7 7H-14 7N-7 7A-6 7B-6 7T-6 U46-7 U46-14 U48-7 U48-14
+     U49-7 U49-14 4H-6 U13-6 U14-6 U47-7 U47-14 6H-6 U51-6 U54-7 U54-14 U55-7 U55-14 U56-7
+     U56-14 U57-7 U57-14 U59-7 U59-14 U60-7 U60-14 U61-7 U61-14 U62-7 U62-14 U50-6 U85-7
+     U86-7 U89-6 3H-6 7C-6 7D-6 U15-6 U80-6 4P7R-13 4P7R-19 8L7R-13 8L7R-19 8N7R-13 8N7R-19
+     8R7R-13 8R7R-19 U11-9 U16-9 U18-9 U27-9 6S7-9 U65-9 U66-9 U81-9 U82-9 U93-6 5N7-7
+     5S7-7 7L7-1 7L7-7 7M7-6 7M7-7 7N7-1 7N7-7 7P7-6 7P7-7 7R7-1 7R7-7 7S7-6 7S7-7 U1-7
+     U1-14 U3-7 U3-14 U12-7 U12-14 U2-7 U2-14 U4-7 U4-14 U8-7 U8-14 U6-7 U6-14 U7-7 U7-14
+     U19-7 U19-14 U20-7 U20-14 U21-7 U21-14 U22-7 U22-14 U23-7 U23-14 U24-7 U24-14 U25-7
+     U25-14 U26-7 U26-14 U9-6 U92-6 U63-6 U63-7 U64-7 U68-6 U68-7 U69-7 U70-7 U88-7 2-6
+     4-6 5P7-6 5P7-11 5R7-6 5R7-11 6R7-6 5E2-9 7B2-9 7C2-9 1S-6 1T-6 8S-6 6A2-4 6A2-7
+     6A2-8 6A2-14 6B2-4 6B2-7 6B2-8 6B2-14 6C2-4 6C2-7 6C2-8 6C2-14 3M-7 4M-7 U5-6 3M8-4
+     3M8-7 5F8-0 5F8-7 5F8-14 5H8-0 5H8-7 5H8-14 5J8-0 5J8-7 5J8-14 5K8-0 5K8-7 5K8-14
+     5M8-6 3N-5 3N-7 3P-2 3P-3 3P-7 3R-2 3R-3 3R-5 3R-7 3S-2 3S-3 3S-4 3S-5 3S-7 6D2-7
+     6D2-9 6D2-14 6F2-7 6F2-14 U87-7 7R-7 4S-6 8D2-7 8C2-6 U33-7 U71-1 U71-3 U71-7 U74-5
+     U74-6 U74-7 U75-7 U75-11 U76-1 U76-2 U76-7 U76-8 U94-6 U67-6 U72-6 2T-6 3T-6 4N-6
+    4R-6 4P-6 5P-6 U73-6)
   )
   (net "IAP10"
    (circuit
@@ -12149,7 +12171,7 @@
      $VIA#0_SIGNAL
     )
    )
-    (pins ROWCOL1-0 ROWCOL2-0 ROWCOL3-0 ROWCOL4-0 U63-5 3S-6 3S-9 4S-11 1S-3 1S-10 1S-12
+    (pins ROWCOL1-0 ROWCOL2-0 ROWCOL3-0 ROWCOL4-0 U10-4 U10-12 U63-5 1S-3 3S-6 3S-9 4S-11
     3T-8)
   )
   (net "RH1"
@@ -12159,8 +12181,8 @@
      $VIA#0_SIGNAL
     )
    )
-    (pins ROWCOL1-1 ROWCOL2-1 ROWCOL3-1 ROWCOL4-1 6H6-12 2E-9 U63-1 3S-13 7R-13 1S-4 1S-9
-    2T-4)
+    (pins ROWCOL1-1 ROWCOL2-1 ROWCOL3-1 ROWCOL4-1 6H6-12 U10-3 U34-12 2E-9 U63-1 1S-4
+    3S-13 7R-13)
   )
   (net "ROX128"
    (circuit
@@ -12376,7 +12398,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 6H6-0 6J6-0 6K6-0 1T-10)
+   (pins 6H6-0 6J6-0 6K6-0 8C6-2)
   )
   (net "SV0"
    (circuit
@@ -12461,31 +12483,31 @@
      R9-0 R10-0 R11-0 R12-0 R13-0 R14-0 R15-0 R16-0 4T-15 VIDCLK-7 U77-23 U78-23 EXPANSIONBUSA2-16
      EXPANSIONBUSA3-16 EXPANSIONBUSA4-16 8E6R-25 8E6R-27 8H6R-25 8H6R-27 8K6R-25 8K6R-27
      6LM6-23 U28-10 U28-19 U35-10 U35-19 U40-10 U40-19 3L6-19 4L6-0 4L6-19 5L6-0 5L6-19
-     2R6-0 2R6-1 2R6-3 2R6-13 U17-13 U34-13 4M6-0 4M6-15 6N2-13 6F6-13 6F6-15 6H6-15 6J6-15
-     6K6-2 6K6-15 7D6-0 7D6-15 7E6-0 7E6-15 7F6-0 7F6-15 7H6-0 7H6-15 7J6-0 7J6-15 7K6-0
-     7K6-15 U29-15 U30-15 U31-15 U32-15 6P6-13 U10-13 U36-15 U37-15 U38-15 U39-15 U41-15
-     U42-15 U43-15 U44-15 U90-13 U91-13 6N6-11 6N6-13 8C6-13 7JR-25 7JR-27 7LR-25 7LR-27
+     2R6-0 2R6-1 2R6-3 2R6-13 U17-13 4M6-0 4M6-15 6N2-13 6F6-13 6F6-15 6H6-15 6J6-15 6K6-2
+     6K6-15 7D6-0 7D6-15 7E6-0 7E6-15 7F6-0 7F6-15 7H6-0 7H6-15 7J6-0 7J6-15 7K6-0 7K6-15
+     U29-15 U30-15 U31-15 U32-15 6P6-13 U36-15 U37-15 U38-15 U39-15 U41-15 U42-15 U43-15
+     U44-15 U90-13 U91-13 6N6-11 6N6-13 8C6-13 U10-13 U34-13 7JR-25 7JR-27 7LR-25 7LR-27
      7MR-25 7MR-27 U79-23 U45-10 U45-19 U53-10 U53-19 U58-10 U58-19 2F-19 5H-0 5H-19 6E-0
      6E-19 6F-0 6F-19 4E-0 4E-3 4E-9 4E-12 4E-13 4F-0 4F-3 4F-9 4F-12 4F-13 U52-13 1A-15
      2A-0 2A-15 2D-0 2D-15 1B-15 2B-0 2B-15 2C-0 2C-15 1C-13 1D-15 2E-15 3A-15 3B-15 3C-15
      3D-15 5E-15 5F-15 5J-15 5K-15 5L-15 5R-1 5R-15 5S-1 5S-15 6A-15 6B-6 6B-9 6B-15 6C-6
      6C-9 6C-15 6D-15 6J-15 6K-15 6L-15 6M-1 6M-15 6R-0 6R-15 6S-0 6S-15 6T-9 6T-15 7S-5
-     7S-15 5T-13 7E-0 7E-15 7F-15 7H-15 7A-13 7B-13 U46-15 U48-15 U49-15 4H-13 U13-13
-     U14-13 U47-15 6H-13 U51-13 U54-15 U55-15 U56-15 U57-15 U59-15 U60-15 U61-15 U62-15
-     U50-13 U85-15 U86-15 U89-13 3H-3 3H-13 7C-13 7D-13 U15-13 U80-13 4P7R-25 4P7R-27
-     8L7R-25 8L7R-27 8N7R-25 8N7R-27 8R7R-25 8R7R-27 U11-10 U11-19 U16-10 U16-19 U18-10
-     U18-19 U27-10 U27-19 6S7-0 6S7-19 U65-0 U65-19 U66-0 U66-19 U81-0 U81-19 U82-0 U82-19
-     U93-13 5N7-13 5N7-15 5S7-0 5S7-15 7L7-0 7L7-15 7M7-0 7M7-15 7N7-0 7N7-15 7P7-0 7P7-15
-     7R7-0 7R7-15 7S7-0 7S7-15 U1-15 U3-15 U12-15 U2-15 U4-15 U8-15 U6-15 U7-15 U19-15
-     U20-15 U21-15 U22-15 U23-15 U24-15 U25-15 U26-15 U9-13 U92-13 U63-15 U64-15 U68-15
-     U69-15 U70-5 U70-15 U88-15 2-13 4-13 5P7-13 5R7-9 5R7-13 6R7-13 5E2-19 7B2-19 7C2-19
-     8S-13 6A2-17 6B2-17 6C2-17 3M-15 4M-5 4M-15 U5-13 3M8-0 3M8-9 3M8-10 3M8-11 3M8-12
-     3M8-15 5F8-15 5H8-15 5J8-15 5K8-15 5M8-13 3N-0 3N-2 3N-3 3N-4 3N-15 3P-0 3P-4 3P-5
-     3P-15 3R-4 3R-15 3S-8 3S-15 6D2-15 6F2-15 U87-15 7N-0 7N-15 7R-15 4S-9 4S-12 4S-13
-     7T-13 8D2-0 8D2-5 8D2-15 8C2-13 U71-0 U71-2 U71-8 U71-10 U71-13 U71-15 U74-1 U74-10
-     U74-14 U74-15 U75-1 U75-5 U75-14 U75-15 U76-0 U76-3 U76-10 U76-13 U76-15 1S-13 1T-13
-     2T-13 3T-0 3T-3 3T-9 3T-12 3T-13 4N-13 4R-13 4P-0 4P-3 4P-12 4P-13 5P-9 5P-12 5P-13
-    U67-13 U72-13 U73-13 U94-13)
+     7S-15 5T-13 7E-0 7E-15 7F-15 7H-15 7N-0 7N-15 7A-13 7B-13 7T-13 U46-15 U48-15 U49-15
+     4H-13 U13-13 U14-13 U47-15 6H-13 U51-13 U54-15 U55-15 U56-15 U57-15 U59-15 U60-15
+     U61-15 U62-15 U50-13 U85-15 U86-15 U89-13 3H-3 3H-13 7C-13 7D-13 U15-13 U80-13 4P7R-25
+     4P7R-27 8L7R-25 8L7R-27 8N7R-25 8N7R-27 8R7R-25 8R7R-27 U11-10 U11-19 U16-10 U16-19
+     U18-10 U18-19 U27-10 U27-19 6S7-0 6S7-19 U65-0 U65-19 U66-0 U66-19 U81-0 U81-19 U82-0
+     U82-19 U93-13 5N7-13 5N7-15 5S7-0 5S7-15 7L7-0 7L7-15 7M7-0 7M7-15 7N7-0 7N7-15 7P7-0
+     7P7-15 7R7-0 7R7-15 7S7-0 7S7-15 U1-15 U3-15 U12-15 U2-15 U4-15 U8-15 U6-15 U7-15
+     U19-15 U20-15 U21-15 U22-15 U23-15 U24-15 U25-15 U26-15 U9-13 U92-13 U63-15 U64-15
+     U68-15 U69-15 U70-5 U70-15 U88-15 2-13 4-13 5P7-13 5R7-9 5R7-13 6R7-13 5E2-19 7B2-19
+     7C2-19 1S-13 1T-13 8S-13 6A2-17 6B2-17 6C2-17 3M-15 4M-5 4M-15 U5-13 3M8-0 3M8-9
+     3M8-10 3M8-11 3M8-12 3M8-15 5F8-15 5H8-15 5J8-15 5K8-15 5M8-13 3N-0 3N-2 3N-3 3N-4
+     3N-15 3P-0 3P-4 3P-5 3P-15 3R-4 3R-15 3S-8 3S-15 6D2-15 6F2-15 U87-15 7R-15 4S-9
+     4S-12 4S-13 8D2-0 8D2-5 8D2-15 8C2-13 U33-0 U33-15 U71-0 U71-2 U71-8 U71-10 U71-13
+     U71-15 U74-1 U74-10 U74-14 U74-15 U75-1 U75-5 U75-14 U75-15 U76-0 U76-3 U76-10 U76-13
+     U76-15 U94-13 U67-13 U72-13 2T-13 3T-0 3T-3 3T-9 3T-12 3T-13 4N-13 4R-13 4P-0 4P-3
+    4P-12 4P-13 5P-9 5P-12 5P-13 U73-13)
   )
   (net "VIDCLK"
    (circuit
@@ -12548,7 +12570,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 7A-12 7B-3 7N-2)
+   (pins 7N-2 7A-12 7B-3)
   )
   (net "_256H"
    (circuit
@@ -12557,7 +12579,8 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 1D-2 5R-14 5S-14 3R-10 7N-4 U75-13 1T-4 4R-4)
+    (pins ROWCOL1-9 ROWCOL2-9 ROWCOL3-9 ROWCOL4-9 1D-2 5R-14 5S-14 7N-4 1T-4 3R-10 U75-13
+    4R-4)
   )
   (net "_256H*."
    (circuit
@@ -12566,7 +12589,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 7B-1 7B-12 7N-6)
+   (pins 7N-6 7B-1 7B-12)
   )
   (net "_6MHZ"
    (circuit
@@ -12684,7 +12707,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins VIDEO1-2 VIDEO2-2 VIDEO3-2 VIDEO4-2 7N-11 1T-5 1T-11 2T-10)
+   (pins VIDEO1-2 VIDEO2-2 VIDEO3-2 VIDEO4-2 8C6-0 1T-5 U33-11 2T-10)
   )
   (net "_CMPBLK*."
    (circuit
@@ -12693,7 +12716,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 5E2-2 8S-4 7N-9)
+   (pins 5E2-2 8S-4 U33-9)
   )
   (net "_CONTRLDA"
    (circuit
@@ -12720,7 +12743,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 4T-0 4T-14 U93-1)
+   (pins 4T-0 4T-14 VIDEO1-12 VIDEO2-12 VIDEO3-12 VIDEO4-12 U93-1)
   )
   (net "_EXTCS8000"
    (circuit
@@ -12820,8 +12843,8 @@
      $VIA#0_SIGNAL
     )
    )
-    (pins EXPANSIONBUSA1-19 EXPANSIONBUSA2-19 EXPANSIONBUSA3-19 EXPANSIONBUSA4-19 U10-8
-     U91-0 U91-3 6N6-0 U14-8 U51-0 U51-3 U85-1 3H-9 U92-0 U92-3 U92-8 U70-0 5P7-3 8D2-1
+    (pins EXPANSIONBUSA1-19 EXPANSIONBUSA2-19 EXPANSIONBUSA3-19 EXPANSIONBUSA4-19 U91-0
+     U91-3 U91-8 6N6-0 U14-8 U51-0 U51-3 U85-1 3H-9 U92-0 U92-3 U92-8 U70-0 5P7-3 8D2-1
    )
   )
   (net "_SL1"
@@ -12831,7 +12854,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 5L6-10 1S-11)
+   (pins 5L6-10 U10-11)
   )
   (net "_SL2"
    (circuit
@@ -12840,7 +12863,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins 4L6-10 1S-7)
+   (pins 4L6-10 U10-5)
   )
   (net "_SLOAD"
    (circuit
@@ -12849,7 +12872,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins VIDEO1-1 VIDEO2-1 VIDEO3-1 VIDEO4-1 6N2-3 7S-4 U89-1 7T-9 1S-5 2T-8)
+   (pins VIDEO1-1 VIDEO2-1 VIDEO3-1 VIDEO4-1 6N2-3 7S-4 7T-9 U89-1 1S-5 U94-9 2T-8)
   )
   (net "_TVSYNC"
    (circuit
@@ -12877,8 +12900,7 @@
      $VIA#0_SIGNAL
     )
    )
-    (pins VIDEO1-5 VIDEO1-6 VIDEO2-5 VIDEO2-6 VIDEO3-5 VIDEO3-6 VIDEO4-5 VIDEO4-6 5H-10
-    7R-9)
+   (pins VIDEO1-5 VIDEO2-5 VIDEO3-5 VIDEO4-5 5H-10 7R-9)
   )
   (net "_VSYNC"
    (circuit
@@ -12887,7 +12909,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-1 3N-10 1T-9)
+   (pins J1-1 1T-9 3N-10)
   )
   (class POWER
    "GND"
@@ -12907,7 +12929,7 @@
   (class SIGNAL
    "#00004"
    "#00005"
-   "#00375"
+   "#00372"
    "#00711"
    "#00723"
    "#00734"
@@ -12919,237 +12941,234 @@
    "#00772"
    "#00782"
    "#00791"
-   "#00830"
-   "#00854"
-   "#00857"
-   "#00862"
-   "#00879"
-   "#00895"
-   "#00896"
-   "#00908"
-   "#00909"
-   "#00910"
-   "#00911"
-   "#00913"
-   "#00963"
-   "#00967"
-   "#00970"
-   "#01042"
-   "#01043"
-   "#01044"
-   "#01045"
-   "#01046"
+   "#00842"
+   "#00858"
+   "#00859"
+   "#00871"
+   "#00872"
+   "#00873"
+   "#00874"
+   "#00876"
+   "#00926"
+   "#00930"
+   "#00933"
+   "#01005"
+   "#01006"
+   "#01007"
+   "#01008"
+   "#01009"
+   "#01014"
+   "#01015"
+   "#01016"
+   "#01017"
+   "#01018"
+   "#01019"
+   "#01020"
+   "#01021"
+   "#01022"
+   "#01023"
+   "#01025"
+   "#01040"
    "#01051"
    "#01052"
    "#01053"
    "#01054"
    "#01055"
-   "#01056"
-   "#01057"
-   "#01058"
-   "#01059"
-   "#01060"
-   "#01062"
-   "#01077"
-   "#01088"
-   "#01089"
-   "#01090"
-   "#01091"
-   "#01092"
-   "#01104"
-   "#01264"
-   "#01269"
-   "#01285"
-   "#01289"
-   "#01294"
-   "#01298"
+   "#01067"
+   "#01227"
+   "#01232"
+   "#01248"
+   "#01252"
+   "#01257"
+   "#01261"
+   "#01266"
+   "#01270"
    "#01303"
-   "#01307"
+   "#01310"
+   "#01313"
+   "#01335"
+   "#01336"
+   "#01337"
+   "#01338"
+   "#01339"
    "#01340"
+   "#01341"
+   "#01342"
+   "#01343"
+   "#01344"
+   "#01345"
+   "#01346"
    "#01347"
-   "#01350"
-   "#01372"
-   "#01373"
-   "#01374"
-   "#01375"
-   "#01376"
-   "#01377"
-   "#01378"
-   "#01379"
-   "#01380"
-   "#01381"
-   "#01382"
-   "#01383"
-   "#01384"
+   "#01406"
+   "#01413"
+   "#01416"
+   "#01438"
+   "#01439"
+   "#01440"
+   "#01441"
+   "#01442"
    "#01443"
+   "#01444"
+   "#01445"
+   "#01446"
+   "#01447"
+   "#01448"
+   "#01449"
    "#01450"
-   "#01453"
-   "#01475"
-   "#01476"
-   "#01477"
-   "#01478"
-   "#01479"
-   "#01480"
-   "#01481"
-   "#01482"
-   "#01483"
-   "#01484"
-   "#01485"
-   "#01486"
-   "#01487"
+   "#01499"
+   "#01506"
+   "#01509"
+   "#01531"
+   "#01532"
+   "#01533"
+   "#01534"
+   "#01535"
    "#01536"
+   "#01537"
+   "#01538"
+   "#01539"
+   "#01540"
+   "#01541"
+   "#01542"
    "#01543"
-   "#01546"
-   "#01568"
-   "#01569"
-   "#01570"
-   "#01571"
-   "#01572"
-   "#01573"
-   "#01574"
-   "#01575"
-   "#01576"
-   "#01577"
-   "#01578"
-   "#01579"
-   "#01580"
-   "#01628"
-   "#01629"
-   "#01630"
-   "#01631"
-   "#01634"
-   "#01680"
+   "#01591"
+   "#01592"
+   "#01593"
+   "#01594"
+   "#01597"
+   "#01643"
+   "#01692"
+   "#01693"
+   "#01694"
+   "#01695"
+   "#01696"
+   "#01708"
+   "#01710"
+   "#01725"
+   "#01726"
+   "#01727"
+   "#01728"
    "#01729"
-   "#01730"
-   "#01731"
-   "#01732"
-   "#01733"
-   "#01745"
-   "#01747"
-   "#01762"
-   "#01763"
-   "#01764"
-   "#01765"
-   "#01766"
-   "#01797"
-   "#01831"
-   "#01895"
-   "#01896"
-   "#01976"
-   "#02028"
-   "#02029"
-   "#02044"
-   "#02261"
+   "#01760"
+   "#01794"
+   "#01858"
+   "#01859"
+   "#01939"
+   "#01991"
+   "#01992"
+   "#02007"
+   "#02206"
+   "#02244"
+   "#02248"
+   "#02257"
+   "#02258"
+   "#02259"
+   "#02260"
+   "#02264"
    "#02265"
+   "#02266"
+   "#02267"
    "#02274"
    "#02275"
    "#02276"
    "#02277"
    "#02281"
-   "#02282"
-   "#02283"
-   "#02284"
-   "#02291"
    "#02292"
-   "#02293"
-   "#02294"
-   "#02298"
-   "#02309"
-   "#02363"
+   "#02346"
+   "#02390"
+   "#02406"
    "#02407"
-   "#02423"
-   "#02424"
-   "#02425"
-   "#02426"
-   "#02427"
-   "#02428"
-   "#02480"
-   "#02483"
-   "#02529"
-   "#02532"
-   "#02578"
-   "#02581"
-   "#02596"
-   "#02639"
-   "#02646"
-   "#02649"
-   "#02671"
+   "#02408"
+   "#02409"
+   "#02410"
+   "#02411"
+   "#02463"
+   "#02466"
+   "#02512"
+   "#02515"
+   "#02561"
+   "#02564"
+   "#02579"
+   "#02622"
+   "#02629"
+   "#02632"
+   "#02654"
+   "#02655"
+   "#02656"
+   "#02657"
+   "#02658"
+   "#02659"
+   "#02660"
+   "#02661"
+   "#02662"
+   "#02663"
+   "#02664"
+   "#02665"
+   "#02666"
    "#02672"
-   "#02673"
-   "#02674"
-   "#02675"
-   "#02676"
-   "#02677"
-   "#02678"
    "#02679"
-   "#02680"
-   "#02681"
    "#02682"
-   "#02683"
-   "#02689"
-   "#02696"
-   "#02699"
-   "#02721"
+   "#02704"
+   "#02705"
+   "#02706"
+   "#02707"
+   "#02708"
+   "#02709"
+   "#02710"
+   "#02711"
+   "#02712"
+   "#02713"
+   "#02714"
+   "#02715"
+   "#02716"
    "#02722"
-   "#02723"
-   "#02724"
-   "#02725"
-   "#02726"
-   "#02727"
-   "#02728"
    "#02729"
-   "#02730"
-   "#02731"
    "#02732"
-   "#02733"
-   "#02739"
-   "#02746"
-   "#02749"
-   "#02771"
-   "#02772"
-   "#02773"
-   "#02774"
-   "#02775"
-   "#02776"
-   "#02777"
-   "#02778"
-   "#02779"
-   "#02780"
-   "#02781"
-   "#02782"
-   "#02783"
-   "#02974"
-   "#02977"
-   "#03008"
-   "#03011"
-   "#03042"
-   "#03045"
-   "#03066"
-   "#03074"
-   "#03079"
-   "#03084"
-   "#03183"
-   "#03214"
-   "#03215"
+   "#02754"
+   "#02755"
+   "#02756"
+   "#02757"
+   "#02758"
+   "#02759"
+   "#02760"
+   "#02761"
+   "#02762"
+   "#02763"
+   "#02764"
+   "#02765"
+   "#02766"
+   "#02921"
+   "#02924"
+   "#02976"
+   "#02979"
+   "#03010"
+   "#03013"
+   "#03044"
+   "#03047"
+   "#03068"
+   "#03076"
+   "#03081"
+   "#03086"
+   "#03185"
    "#03216"
    "#03217"
    "#03218"
-   "#03230"
-   "#03231"
+   "#03219"
+   "#03220"
    "#03232"
    "#03233"
-   "#03245"
-   "#03246"
+   "#03234"
+   "#03235"
    "#03247"
    "#03248"
-   "#03260"
-   "#03272"
-   "#03275"
-   "#03331"
-   "#03338"
-   "#03341"
-   "#03363"
-   "#03364"
+   "#03249"
+   "#03250"
+   "#03262"
+   "#03274"
+   "#03277"
+   "#03333"
+   "#03340"
+   "#03343"
    "#03365"
    "#03366"
    "#03367"
@@ -13161,11 +13180,11 @@
    "#03373"
    "#03374"
    "#03375"
-   "#03434"
-   "#03441"
-   "#03444"
-   "#03466"
-   "#03467"
+   "#03376"
+   "#03377"
+   "#03436"
+   "#03443"
+   "#03446"
    "#03468"
    "#03469"
    "#03470"
@@ -13177,11 +13196,11 @@
    "#03476"
    "#03477"
    "#03478"
-   "#03537"
-   "#03544"
-   "#03547"
-   "#03569"
-   "#03570"
+   "#03479"
+   "#03480"
+   "#03539"
+   "#03546"
+   "#03549"
    "#03571"
    "#03572"
    "#03573"
@@ -13193,11 +13212,11 @@
    "#03579"
    "#03580"
    "#03581"
-   "#03643"
-   "#03731"
-   "#03761"
-   "#03867"
-   "#03868"
+   "#03582"
+   "#03583"
+   "#03645"
+   "#03733"
+   "#03763"
    "#03869"
    "#03870"
    "#03871"
@@ -13205,20 +13224,23 @@
    "#03873"
    "#03874"
    "#03875"
-   "#03916"
-   "#03998"
-   "#04056"
-   "#04057"
+   "#03876"
+   "#03877"
+   "#03918"
+   "#04000"
    "#04058"
+   "#04059"
    "#04060"
-   "#04061"
-   "#04132"
-   "#04133"
-   "#04137"
-   "#04138"
-   "#04141"
-   "#04171"
-   "#04185"
+   "#04062"
+   "#04063"
+   "#04134"
+   "#04135"
+   "#04139"
+   "#04140"
+   "#04143"
+   "#04173"
+   "#04187"
+   "#04248"
    ".6MHZ"
    "128H"
    "128V"

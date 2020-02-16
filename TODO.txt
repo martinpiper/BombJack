@@ -15,41 +15,7 @@
 			Or this might be caused by the horizontal and vertical pixel clocks not being latched from the counters, so the counter ripple is not quite exactly settling all at the same time?
 
 
-* Board connectors
-	https://sg.rs-online.com/web/c/connectors/pcb-connectors/idc-connectors/
-	https://sg.rs-online.com/web/c/cables-wires/ribbon-flat-cable/flat-ribbon-cable/
-	Perhaps it's going to be better to split the boards into video generation and combination logic, char screen, tiles, sprites and mode 7?
-		Video gen, pixel clock timing, final mixing output
-			This needs a header for each pixel for the mixer
-		Chars
-		Sprites
-		Tiles
-		Mode7
-	* Use the following properties, which can also be set as "Group" in the Design Explorer
-		{GROUP=Video}
-		{GROUP=Chars}
-		{GROUP=Sprites}
-		{GROUP=Tiles}
-		{GROUP=Mode7}
-	* Figure out how these signals need to be exposed:
-		Done
-			SLOAD
-			_SLOAD
-			_CMPBLK
-			_MDL
-			_CDL
-			_VPL
-			_256H
-			BGBORDERX
-			BGBORDERY
-			DISPLAYENABLE
-			_DISPLAYENABLE
-		TODO
-		No need (internal to a single board, or all on headers already)
-			_VBLANK
-			_MEWR
-			16HSPR
-		
+
 
 
 * Copper plans
