@@ -40,11 +40,11 @@
 			_CDL
 			_VPL
 			_256H
-		TODO
-			BGBORDERY
 			BGBORDERX
+			BGBORDERY
 			DISPLAYENABLE
 			_DISPLAYENABLE
+		TODO
 		No need (internal to a single board, or all on headers already)
 			_VBLANK
 			_MEWR
