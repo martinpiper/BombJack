@@ -39,7 +39,19 @@
 		_CDL
 		_VPL
 
-
+		RH0
+		RH1
+		BGBORDERY
+		BGBORDERX
+		DISPLAYENABLE
+		_DISPLAYENABLE
+		_256H*.
+		_1V*.
+		1V*.
+		_VBLANK
+		_MEWR
+		SS
+		
 
 
 
