@@ -45,13 +45,10 @@
 			BGBORDERX
 			DISPLAYENABLE
 			_DISPLAYENABLE
-			SS
-			16HSPR
-			_SL1
-			_SL2
 		No need (internal to a single board, or all on headers already)
 			_VBLANK
 			_MEWR
+			16HSPR
 		
 
 

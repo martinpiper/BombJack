@@ -635,7 +635,7 @@
 
 	
 	
-* Part 7N Outputs... Duplicated and split to sheet 50 and 80
+* Part 7N Outputs... Moved to sheet 50 and and split to sheet 80 (U33)
 		_256H*.		Sheet 50
 		256H*.		Sheet 50
 		1V*.		Sheet 50
@@ -643,3 +643,6 @@
 		_CMPBLK*.	Sheet 80
 
 * SS from sheet 3 1T output 11 was wrong, the 1T 13 input was only connected to 1S 2 input and not connected to 2T 4 output
+	SS			Moved to Chars board sheet 60
+	_SL1		Moved to Chars board sheet 60
+	_SL2		Moved to Chars board sheet 60
