@@ -632,3 +632,14 @@
 			_9E00CS root sheet 70	(Tiles)				U88:A
 	* Merge _CSEN and _MREQ and remove
 	* Sprite size logic now moved to root sheet 40
+
+	
+	
+* Part 7N Outputs... Duplicated and split to sheet 50 and 80
+		_256H*.		Sheet 50
+		256H*.		Sheet 50
+		1V*.		Sheet 50
+		_1V*.		Sheet 50
+		_CMPBLK*.	Sheet 80
+
+* SS from sheet 3 1T output 11 was wrong, the 1T 13 input was only connected to 1S 2 input and not connected to 2T 4 output

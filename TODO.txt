@@ -32,27 +32,27 @@
 		{GROUP=Tiles}
 		{GROUP=Mode7}
 	* Figure out how these signals need to be exposed:
-		SLOAD
-		_SLOAD
-		_CMPBLK
-		_MDL
-		_CDL
-		_VPL
-
-		RH0
-		RH1
-		BGBORDERY
-		BGBORDERX
-		DISPLAYENABLE
-		_DISPLAYENABLE
-		_256H*.
-		_1V*.
-		1V*.
-		_VBLANK
-		_MEWR
-		SS
+		Done
+			SLOAD
+			_SLOAD
+			_CMPBLK
+			_MDL
+			_CDL
+			_VPL
+			_256H
+		TODO
+			BGBORDERY
+			BGBORDERX
+			DISPLAYENABLE
+			_DISPLAYENABLE
+			SS
+			16HSPR
+			_SL1
+			_SL2
+		No need (internal to a single board, or all on headers already)
+			_VBLANK
+			_MEWR
 		
-
 
 
 * Copper plans
