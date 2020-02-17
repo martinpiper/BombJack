@@ -241,11 +241,19 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 
 ### PCB Layout
 
-There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pull-up resistors are also placed near the middle of the board.
+There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pull-up resistors are also placed near the edge of the sprites board. The sprite resistors and RAMs are placed to maintain an aesthetic symmetry to the board.
 
-The board edge is set with a four layer standard signal and power plane setup. The board will correctly populate with the auto-placer and default placement options, choose all then schedule before starting. It will then correctly route, again using the default router options. This is so placement of the board can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement. The placement areas are to encourage areas of the board with high placement density to leave space for signals.
+There are four boards in the layout:
+	Video generation
+	Character screen
+	Sprites
+	Tiles
 
-An entire place and route on a decent machine will take approximately 20 minutes and result in an output image like:
+Previous versions used one large board, but this turned out to be expensive to produce and difficult to get quotations for. Apparently the companies I contacted were not that happy to produce large boards in small numbers. The design was changed to use four smaller boards, this reduces cost if someone wanted to just fabricate the video and character screen. Another benefit is that the layers can be changed and connected in different orders. This allows customisations, for example by having three sprites boards (layers 1 to 3) and one tile board (layer 4), giving a total of 72 sprites and tiles.
+
+The layout is configured with a six layer standard signal and power plane setup, using the technology template "All PCB Six Layer 1.58532mm.LTF" file. The layout will correctly populate with the auto-placer and default placement options, choose all then schedule before starting. It will then correctly route, again using the default router options. This is so placement can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement.
+
+An entire place and route on a decent machine will take approximately 30 minutes and result in an output image like:
 ![Layout](Layout.PNG?raw=true "Layout")
 
 This board has not yet been built and tested, but it should work. A common cause of failure is probably going to be finding RAMs that have fast enough write timings. Some of these components are old and hard to find.

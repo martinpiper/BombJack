@@ -669,6 +669,7 @@
 		Done
 			SLOAD
 			_SLOAD
+			CMPBLK
 			_CMPBLK
 			_MDL
 			_CDL

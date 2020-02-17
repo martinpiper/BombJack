@@ -1,3 +1,11 @@
+* Auto-routing tests
+	With default options, it takes ~15 minutes: https://support.labcenter.com/forums/viewtopic.php?f=5&t=7693
+	Are there quicker options?
+		Yes, changing the grid does help but sometimes the boards are not populated fully as they run out of space.
+
+
+
+
 * VSMDD2 why is "w$ff01ff00,$3f018000" triggering near raster 2f?
 	* The copper (VSMDD2) RV[0..7] input needed an extra latching 74273 (U84 excluded from PCB) to smooth the signal from the counters
 		This kind of buffering logic is going to be needed on the real hardware, and might need to be added to the VSMDD2 inputs from the CLK
