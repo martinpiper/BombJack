@@ -5,6 +5,22 @@
 
 
 
+* Automatic detection of missing routing across board boundaries and filtering with a known list of header points
+	It should be possible to parse the IPC file and the Pre-Production Check output
+	IPC example lines:
+		P  NNAME00002 D0.00002
+		P  NNAME00035 D0.00035
+		317NNAME00002       U1    -2   MD0762PA00X-090170Y+007620X1270          S0
+		317NNAME00035       U2    -2   MD0762PA00X+012700Y-001270X1270          S0
+	Pre-Production Check lines:
+		Missing connection: U1:2, U2:2
+	Steps:
+		Parse the NNAME00002 and NNAME00035 from "U1:2", "U2:2" mapping to "U1    -2" and "U2    -2"
+		Resolve the NNAME00002 and NNAME00035 to "D0.00002" and "D0.00035", note common prefix
+
+	
+
+
 
 * VSMDD2 why is "w$ff01ff00,$3f018000" triggering near raster 2f?
 	* The copper (VSMDD2) RV[0..7] input needed an extra latching 74273 (U84 excluded from PCB) to smooth the signal from the counters
