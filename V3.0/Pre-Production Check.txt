@@ -1,6 +1,6 @@
 Pre-production check start.
 File: C:\Work\BombJack\V3.0\Bomb Jack.pdsprj
-Date: 18 February 2020, 22:46:25
+Date: 21 February 2020, 22:52:04
 TEST: Connectivity.
 Missing connection: 4T:11, VIDEO2:17
 Missing connection: VIDEO3:17, VIDEO4:17
@@ -188,6 +188,7 @@ Missing connection: U45:17, EXPANSIONBUSA4:28
 Missing connection: 3L6:9, U82:18
 Missing connection: 7B2:11, EXPANSIONBUSA2:27
 Missing connection: U45:18, EXPANSIONBUSA4:27
+Missing connection: U99:1, U98:6
 Missing connection: EXPANSIONBUSA1:21, EXPANSIONBUSA2:21
 Missing connection: EXPANSIONBUSA3:21, EXPANSIONBUSA4:21
 Missing connection: EXPANSIONBUSA3:21, EXPANSIONBUSA1:21
@@ -230,8 +231,8 @@ Missing connection: JP1:1, VIDEO2:19
 Missing connection: VIDEO3:19, VIDEO4:19
 Missing connection: VIDEO3:19, VIDEO1:19
 Missing connection: 3R:11, 5R:15
-Missing connection: 4R:5, ROWCOL2:10
 Missing connection: U75:14, ROWCOL4:10
+Missing connection: 4R:5, ROWCOL2:10
 Missing connection: 4S:11, VIDEO2:18
 Missing connection: U78:20, VIDEO4:18
 Missing connection: 2A:9, VIDEO2:18
@@ -262,7 +263,7 @@ Missing connection: EXPANSIONBUSC3:1, EXPANSIONBUSC1:1
 Missing connection: 7R:10, VIDEO2:7
 Missing connection: VIDEO1:7, 5H:11
 Missing connection: 5H:11, VIDEO4:7
-FAIL: Connectivity 260 missings.
+FAIL: Connectivity 261 missings.
 For more information, run the connectivity checker.
 TEST: Object validity.
 PASS: Objects valid.
@@ -294,6 +295,10 @@ PASS: All components placed.
 TEST: Board edge.
 PASS: Board edge complete.
 TEST: Components outside board edge.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U99'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U98'.
 FAIL: Component outside of board edge.
 Component outside the board edge: '1S'.
 FAIL: Component outside of board edge.
@@ -694,4 +699,4 @@ PASS: DRC room rules.
 TEST: Via overlaps and drill ranges.
 PASS: Via overlaps and drill ranges.
 Pre-production check end:
-0 errors, 191 failed, 0 warnings, 15 passed.
+0 errors, 193 failed, 0 warnings, 15 passed.

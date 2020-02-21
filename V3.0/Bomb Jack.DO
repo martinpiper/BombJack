@@ -1,9 +1,9 @@
 set pad_wire_necking on
 bus diagonal
 fanout 5
-route 50
+route 15
 clean 2
-route 50 16
+route 15 16
 clean 2
 filter 5
 recorner diagonal
