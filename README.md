@@ -37,6 +37,14 @@ The new hardware scrolling registers also work well:
 
 ![animation](output/debug.gif?raw=true "animation")
 
+The hardware supports sprite multiplexing and stacking, giving the option of having more than eight colours in sprites:
+
+![animation](output/debug2.gif?raw=true "animation2")
+
+Many thanks to https://opengameart.org/content/rpg-town-pixel-art-assets and https://opengameart.org/content/colored-16x16-fantasy-tileset for the game art.
+
+
+
 ### High level schematic sheets
 
 The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
