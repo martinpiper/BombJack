@@ -29,7 +29,7 @@ int main(int argc, char**argv)
 		kNPCTypeBoy
 	};
 
-	const int kNumNPCs = 12;
+	const int kNumNPCs = 14;
 	// MPi: TODO: Move to class
 	int npcXPos[kNumNPCs];
 	int npcYPos[kNumNPCs];
@@ -136,9 +136,25 @@ int main(int argc, char**argv)
 	npcType[npcIndex] = kNPCTypeMan;
 	npcIndex++;
 
+	npcXPos[npcIndex] = 192;
+	npcYPos[npcIndex] = 32;
+	npcFrame[npcIndex] = kFramePersonRight;
+	npcVelX[npcIndex] = 1;
+	npcVelY[npcIndex] = 0;
+	npcType[npcIndex] = kNPCTypeGirl;
+	npcIndex++;
+
+	npcXPos[npcIndex] = 128;
+	npcYPos[npcIndex] = 16;
+	npcFrame[npcIndex] = kFramePersonLeft;
+	npcVelX[npcIndex] = -1;
+	npcVelY[npcIndex] = 0;
+	npcType[npcIndex] = kNPCTypeGirl;
+	npcIndex++;
+
 	assert(npcIndex == kNumNPCs);
 
-	int switchDir = 32;
+	int switchDir = 16;
 
 	while (frame++ < maxFrames)
 	{
@@ -379,7 +395,7 @@ int main(int argc, char**argv)
 
 		if (switchDir-- <= 0)
 		{
-			switchDir = 16 + (rand() & 3) * 16;
+			switchDir = 16 + (rand() & 1) * 16;
 
 			int i = rand() % kNumNPCs;
 			switch (rand() & 3)
