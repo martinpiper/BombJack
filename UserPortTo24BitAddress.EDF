@@ -1,7 +1,7 @@
 (PCB UserPortTo24BitAddress
  (parser
   (host_cad ARES)
-  (host_version 8.9 SP2)
+  (host_version 8.10 SP0)
  )
  (resolution mm 100000)
  (unit mm)

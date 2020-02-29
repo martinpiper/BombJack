@@ -390,7 +390,7 @@
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp debug.gif && debug.gif
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp debug2.gif && debug2.gif
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp -resize 384x264! debug2.gif && debug2.gif
-		Using this option is good with 3072x264 in the VSMDD digital display
+		Using this option is good with 3072 x 264 in the VSMDD digital display
 	For the hires schematic: c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp -resize 768x528! debug.gif
 	This demonstrates horizontal and vertical pixel scrolling, using a variation on the original Bomb Jack hardware. Extra screen banks are updated into the new graphics RAM to update the tile positions. One sprite is updated too.
 
