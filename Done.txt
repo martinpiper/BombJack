@@ -709,3 +709,14 @@
 		EEK                  From: U99:1,U98:6
 	So it works well, even the component pins are correct.
 
+
+	
+	
+* Move the "background colour" logic and latch to the video generator layer?
+	This might allow the mode 7 layer to be added as well?
+	* An extra layer can use the LAYER 4 header, which is pixel 4 (background colour) from the tiles board.
+	
+	
+* Check the layer memory select logic, mostly layers should not need a full header but instead have select lines for their video RAM etc.
+	* For now, the full headers can be retained, they supply a good consistent connection point that can be stacked, or ribbon cable connected
+	* If needed for extra flexibility the EBS[0..7] lines can be connected with individual wires to allow other layers to be added at different addresses.
