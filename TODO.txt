@@ -8,7 +8,22 @@
 			Note, the tiles are rendered using incorrect memory locations
 			This is used when the border shrink X/Y bits are not enabled.
 		* TODO: Investigate if the _CMPBLK*. logic can instead feed into ENABLEPIXELS, freeing 5E2 pin 3 (D0)
+			_CMPBLK*. goes high at HV$8 and low at HV$188 indicating (again) the pixel output logic is shifted 8 pixels
+			* U67:A now combines the VBLANK, border shrinks and _CMPBLK*. and frees the line on the 5E2
+
+
 		
+		
+* Investigate the "display enable" being used to still output video timings, just disable the pixel output
+	This would allow memory updates to be enabled, without seeing bad video output and while maintaining video sync
+
+
+
+
+* C64 userport references
+	Nice looking breakout board with reset button: https://www.tindie.com/products/syzygy_systems/c64-user-port-breakout-board-v11-syzygy-phobos/
+	Just the connector: https://www.thefuturewas8bit.com/userport-connector.html
+	Simple flashing LEDs example with code: https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
 		
 		
 
