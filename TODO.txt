@@ -9,8 +9,8 @@
 			This is used when the border shrink X/Y bits are not enabled.
 		* TODO: Investigate if the _CMPBLK*. logic can instead feed into ENABLEPIXELS, freeing 5E2 pin 3 (D0)
 		
-	
-	
+		
+		
 
 
 
