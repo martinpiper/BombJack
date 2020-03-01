@@ -22,5 +22,6 @@
   <ItemGroup>
     <Text Include="..\Done.txt" />
     <Text Include="..\TODO.txt" />
+    <Text Include="..\HeaderNets.txt" />
   </ItemGroup>
 </Project>

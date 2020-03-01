@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Done.txt" />
+    <Text Include="..\HeaderNets.txt" />
     <Text Include="..\TODO.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

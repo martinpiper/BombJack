@@ -720,3 +720,22 @@
 * Check the layer memory select logic, mostly layers should not need a full header but instead have select lines for their video RAM etc.
 	* For now, the full headers can be retained, they supply a good consistent connection point that can be stacked, or ribbon cable connected
 	* If needed for extra flexibility the EBS[0..7] lines can be connected with individual wires to allow other layers to be added at different addresses.
+
+	
+	
+	
+	
+* Connect the last palette line giving more colours?
+	6A2, 6B2, 6C2 do have A9 free, so it can be used for an expanded palette
+	5E2 has some interesting logic with pin 3 (D0) being _CMPBLK*. and then the D0 output going to MR, but why is this needed?
+		It seems overly complex to me, perhaps it's related to edge of screen pixel clearing logic?
+		But we already have 7A2 8B2 using ENABLEPIXELS as MR?
+			This does however only kick in when the borders have been shrunk, for scrolling for example
+		* The _CMPBLK*. logic is there to turn off pixels at the screen edges, otherwise we get horizontal overscan screen tiles being rendered.
+			Note, the tiles are rendered using incorrect memory locations
+			This is used when the border shrink X/Y bits are not enabled.
+		* TODO: Investigate if the _CMPBLK*. logic can instead feed into ENABLEPIXELS, freeing 5E2 pin 3 (D0)
+			_CMPBLK*. goes high at HV$8 and low at HV$188 indicating (again) the pixel output logic is shifted 8 pixels
+			* U67:A now combines the VBLANK, border shrinks and _CMPBLK*. and frees the line on the 5E2
+			* Extra colour logic all connected
+			* Tools updated to handle 32 palettes of 8 colours each

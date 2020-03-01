@@ -94,3 +94,21 @@ b$00,b$00,b$44,b$04,b$66,b$06,b$88,b$08,b$aa,b$0a,b$ff,b$0f,b$cc,b$0c,b$00,b$00
 b$00,b$00,b$9f,b$00,b$ff,b$0f,b$08,b$00,b$0c,b$00,b$0f,b$00,b$00,b$00,b$ff,b$0f
 b$00,b$00,b$0f,b$04,b$0f,b$02,b$0f,b$00,b$2f,b$00,b$4f,b$00,b$6f,b$00,b$8f,b$00
 b$00,b$00,b$ff,b$0a,b$ff,b$0c,b$ff,b$0f,b$cc,b$0f,b$aa,b$0f,b$88,b$0f,b$0f,b$0f
+
+; Extra palette entries accessible by the tiles and sprites
+b$00,b$00,b$00,b$02,b$00,b$04,b$00,b$06,b$00,b$08,b$00,b$0a,b$00,b$0c,b$00,b$0f
+b$10,b$10,b$10,b$12,b$10,b$14,b$10,b$16,b$10,b$18,b$10,b$1a,b$10,b$1c,b$10,b$1f
+b$20,b$20,b$20,b$22,b$20,b$24,b$20,b$26,b$20,b$28,b$20,b$2a,b$20,b$2c,b$20,b$2f
+b$30,b$30,b$30,b$32,b$30,b$34,b$30,b$36,b$30,b$38,b$30,b$3a,b$30,b$3c,b$30,b$3f
+b$40,b$40,b$40,b$42,b$40,b$44,b$40,b$46,b$40,b$48,b$40,b$4a,b$40,b$4c,b$40,b$4f
+b$50,b$50,b$50,b$52,b$50,b$54,b$50,b$56,b$50,b$58,b$50,b$5a,b$50,b$5c,b$50,b$5f
+b$60,b$60,b$60,b$62,b$60,b$64,b$60,b$66,b$60,b$68,b$60,b$6a,b$60,b$6c,b$60,b$6f
+b$70,b$70,b$70,b$72,b$70,b$74,b$70,b$76,b$70,b$78,b$70,b$7a,b$70,b$7c,b$70,b$7f
+b$80,b$80,b$80,b$82,b$80,b$84,b$80,b$86,b$80,b$88,b$80,b$8a,b$80,b$8c,b$80,b$8f
+b$90,b$90,b$90,b$92,b$90,b$94,b$90,b$96,b$90,b$98,b$90,b$9a,b$90,b$9c,b$90,b$9f
+b$a0,b$a0,b$a0,b$a2,b$a0,b$a4,b$a0,b$a6,b$a0,b$a8,b$a0,b$aa,b$a0,b$ac,b$a0,b$af
+b$b0,b$b0,b$b0,b$b2,b$b0,b$b4,b$b0,b$b6,b$b0,b$b8,b$b0,b$ba,b$b0,b$bc,b$b0,b$bf
+b$c0,b$c0,b$c0,b$c2,b$c0,b$c4,b$c0,b$c6,b$c0,b$c8,b$c0,b$ca,b$c0,b$cc,b$c0,b$cf
+b$d0,b$d0,b$d0,b$d2,b$d0,b$d4,b$d0,b$d6,b$d0,b$d8,b$d0,b$da,b$d0,b$dc,b$d0,b$df
+b$e0,b$e0,b$e0,b$e2,b$e0,b$e4,b$e0,b$e6,b$e0,b$e8,b$e0,b$ea,b$e0,b$ec,b$e0,b$ef
+b$f0,b$f0,b$f0,b$f2,b$f0,b$f4,b$f0,b$f6,b$f0,b$f8,b$f0,b$fa,b$f0,b$fc,b$f0,b$ff

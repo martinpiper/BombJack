@@ -2,7 +2,6 @@
 #include <math.h>
 #include <iomanip>
 #include "Common.h"
-#include "GenerateData.h"
 
 int main(int argc, char**argv)
 {
@@ -22,7 +21,7 @@ int main(int argc, char**argv)
 	const double radius1x = 70, radius2x = 30, radius3x = 100;
 	const double radius1y = 50, radius2y = 20;
 
-	const char *paletteHiNybbles = "00000000244428882ccc2000";
+	const char *paletteHiNybbles = "00000000245438983cdc2010";
 
 	while (frame++ < maxFrames)
 	{
@@ -145,7 +144,7 @@ int main(int argc, char**argv)
 			for (int i = 0; i < chunkSize; i++)
 			{
 				file << "b$" << std::hex << std::setw(2) << 0x10 + (i + chunk) + frame;
-				file << ",b$" << std::hex << std::setw(2) << (((i + chunk) / 8) & 0xf);
+				file << ",b$" << std::hex << std::setw(2) << (((i + chunk)*2) & 0x1f);
 				file << ",b$" << std::hex << std::setw(2) << 32 + (i + chunk);
 				file << ",b$" << std::hex << std::setw(2) << (int)(105 + (sin(rads3Real) * radius3x));
 				file << std::endl;
