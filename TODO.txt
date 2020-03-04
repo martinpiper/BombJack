@@ -1,3 +1,9 @@
+* Need a simple bottom left |_ tile, then position this in the four corners with suitable H/V flips to allow the maximum pixel extent to be validated
+	Then validate the border shrinks
+
+
+
+
 * Investigate the "display enable" being used to still output video timings, just disable the pixel output
 	This would allow memory updates to be enabled, without seeing bad video output and while maintaining video sync
 
