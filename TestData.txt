@@ -36,6 +36,42 @@ d$9e0301ff
 
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Write Mode7 registers
+s$a0000100
+; Rotated and flipped screen with different X and Y scale
+;; dx l/h
+;b$b5,b$01
+;; dxy l/h
+;b$b5,b$00
+;
+;; dy l/h
+;b$b5,b$00
+;; dyx l/h
+;b$3c,b$ff
+;
+;; x org
+;b$00,b$00
+;; y org
+;b$00,b$00
+
+; Standard orientation screen, no sheer/rotation or scale
+; dx l/h
+b$00,b$01
+; dxy l/h
+b$00,b$00
+
+; dy l/h
+b$00,b$01
+; dyx l/h
+b$00,b$00
+
+; x org
+b$00,b$00
+; y org
+b$00,b$00
+
 
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
 ; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
