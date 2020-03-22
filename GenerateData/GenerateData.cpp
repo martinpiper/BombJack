@@ -16,8 +16,10 @@ int main(int argc, char**argv)
 	const int maxFrames = 512;
 
 	double rads1 = 0, rads2 = 0, rads3 = 0, rads4 = 0, rads5 = 0;
+	double mode7Rot = 0;
 	const double rads1Speed = M_PI / 100 , rads2Speed = M_PI / 173, rads3Speed = M_PI / 123, rads4Speed = M_PI / 200, rads5Speed = M_PI / 240;
 	const double rads1Separation = M_PI / 20, rads2Separation = M_PI / 30, rads3Separation = M_PI / 15;
+	const double mode7RotSpeed = M_PI / 100;
 	const double radius1x = 70, radius2x = 30, radius3x = 100;
 	const double radius1y = 50, radius2y = 20;
 
@@ -34,6 +36,18 @@ int main(int argc, char**argv)
 		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
 		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
 
+		SetMode7Address(file);
+		int mode7dx = (int)(sin(mode7Rot) * 256);
+		file << "b$00,b$01" << std::hex;
+		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		file << std::endl;
+		mode7dx = -mode7dx;
+		file << "b$00,b$01" << std::hex;
+		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		file << std::endl;
+		file << "d$0" << std::endl;
 #if 1
 		// Top sprites
 		SetSpriteAddress(file);
@@ -188,6 +202,8 @@ int main(int argc, char**argv)
 		rads3 += rads3Speed;
 		rads4 += rads4Speed;
 		rads5 += rads5Speed;
+
+		mode7Rot += mode7RotSpeed;
 
 		file << "d$0" << std::endl;
 		file << std::endl;

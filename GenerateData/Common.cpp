@@ -55,3 +55,9 @@ void EnableSpritesNoWait(std::ofstream &file, char spr32)
 	// Examining the rendered output the tall stretched sprites not yet updated are visible without artefacts
 	file << "d$9a00011" << spr32 << std::endl;
 }
+
+void SetMode7Address(std::ofstream &file)
+{
+	file << "; SetMode7Address" << std::endl;
+	file << "s$a0000100" << std::endl;
+}

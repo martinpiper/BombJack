@@ -3,10 +3,11 @@
 	As long as the data is read on a positive edge
 	* Perhaps the background colour logic can feed into the combination board?
 	* Initial logic and test data with ROMs added, it seems to be working quite well
+	* TODO: Added some generated dx and dy delta values, it doesn't quite rotate all the way around, probably to do with the wrong dy being used. Check the animation...
 	* TODO: Need to test for empty pixel $00 and replace it with the background colour
 		Use the same address as the tile? This will need slightly more logic, but will retain compatibility with existing data
 		Or just use a new address? The generated data will need updating.
-	* Choose between 32 16x16 or 128 8x8 tiles?
+		* Choose between 32 16x16 or 128 8x8 tiles?
 	* Need to add pixel output header and common pixels/signals/address/data bus inputs headers
 	* Add extra map select coordinates, extra 4 or perhaps 8 bits, make the map wider
 	* Add offset l/h/hh loads for x/y origin values
