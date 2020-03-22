@@ -42,7 +42,7 @@ int main(int argc, char**argv)
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
-		mode7dx = -mode7dx;
+		mode7dx = (int)(sin(mode7Rot + (M_PI)) * 256);
 		file << "b$00,b$01" << std::hex;
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
