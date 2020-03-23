@@ -37,19 +37,20 @@ int main(int argc, char**argv)
 		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
 
 		// Calculate suitable mode7 values
+		double scaleValue = 256 + 32 + (sin(mode7Rot * 5.0f) * 256);
 		SetMode7Address(file);
-		int mode7dx = (int)(sin(mode7Rot + M_PI_2) * 256);
+		int mode7dx = (int)(sin(mode7Rot + M_PI_2) * scaleValue);
 		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		mode7dx = (int)(sin(mode7Rot) * 256);
+		mode7dx = (int)(sin(mode7Rot) * scaleValue);
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
 
-		mode7dx = (int)(-sin(mode7Rot + M_PI_2 + M_PI_2 + M_PI_2) * 256);
+		mode7dx = (int)(-sin(mode7Rot + M_PI_2 + M_PI_2 + M_PI_2) * scaleValue);
 		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		mode7dx = (int)(sin(mode7Rot + M_PI_2 + M_PI_2) * 256);
+		mode7dx = (int)(sin(mode7Rot + M_PI_2 + M_PI_2) * scaleValue);
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
