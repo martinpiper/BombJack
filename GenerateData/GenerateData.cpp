@@ -19,7 +19,7 @@ int main(int argc, char**argv)
 	double mode7Rot = 0;
 	const double rads1Speed = M_PI / 100 , rads2Speed = M_PI / 173, rads3Speed = M_PI / 123, rads4Speed = M_PI / 200, rads5Speed = M_PI / 240;
 	const double rads1Separation = M_PI / 20, rads2Separation = M_PI / 30, rads3Separation = M_PI / 15;
-	const double mode7RotSpeed = M_PI / 100;
+	const double mode7RotSpeed = M_PI / 150;
 	const double radius1x = 70, radius2x = 30, radius3x = 100;
 	const double radius1y = 50, radius2y = 20;
 
@@ -36,14 +36,20 @@ int main(int argc, char**argv)
 		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
 		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
 
+		// Calculate suitable mode7 values
 		SetMode7Address(file);
-		int mode7dx = (int)(sin(mode7Rot) * 256);
-		file << "b$00,b$01" << std::hex;
+		int mode7dx = (int)(sin(mode7Rot + M_PI_2) * 256);
+		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		mode7dx = (int)(sin(mode7Rot) * 256);
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
-		mode7dx = (int)(sin(mode7Rot + (M_PI)) * 256);
-		file << "b$00,b$01" << std::hex;
+
+		mode7dx = (int)(-sin(mode7Rot + M_PI_2 + M_PI_2 + M_PI_2) * 256);
+		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		mode7dx = (int)(sin(mode7Rot + M_PI_2 + M_PI_2) * 256);
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
