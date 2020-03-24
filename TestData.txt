@@ -11,6 +11,12 @@ d$a8000112
 d$b0000112
 d$b8000112
 
+; Old tile background colour
+d$9e03017f
+; Testing background colour from mode7 layer
+d$a00f017f
+
+
 ; Background image enable and index
 ; x	Display enable (DB5)
 ; With DBGWRITE ~= 10k then b$12 is needed first, to disable the display and avoid the data writes appearing in the display
@@ -32,7 +38,7 @@ d$9e010100
 d$9e020100
 
 ; Clear background palette choice to 1f (high palette)
-d$9e0301ff
+d$a00f01ff
 
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
@@ -675,7 +681,7 @@ d$0
 
 
 ; Clear background palette choice
-d$9e030100
+d$a00f0100
 
 ; Switch back to normal screen and include the animation data
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.
@@ -693,7 +699,7 @@ d$0
 d$9e0001f2
 d$9e010108
 d$9e020100
-d$9e030100
+d$a00f0100
 
 d$9e010111
 d$98420139

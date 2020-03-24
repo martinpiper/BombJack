@@ -89,25 +89,25 @@ int main(int argc, char**argv)
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (sin(i*M_PI / 64.0) * 16)) << "00" << std::endl;
 //			file << "001000" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x50 + (cos(i*M_PI / 32.0) * 16)) << "00" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x90 + (sin(i*M_PI / 32.0) * 16)) << "00" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << colour1 << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
 			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0xc0 + (cos(i*M_PI / 64.0) * 16)) << "00" << std::endl;
-			file << "d$9e0301" << std::hex << std::setw(2) << colour2 << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
 
 			colour1++;
@@ -122,7 +122,7 @@ int main(int argc, char**argv)
 				colour2++;
 			}
 		}
-		file << "d$9e030100" << std::endl;
+		file << "d$a00f0100" << std::endl;
 //		file << "+16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+" << std::endl;
 
 		baseColour1++;
@@ -153,7 +153,7 @@ int main(int argc, char**argv)
 			yoff++;
 
 			// Debug colour change
-			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 
 			DisableSprites(file , 'c');
@@ -175,13 +175,13 @@ int main(int argc, char**argv)
 			file << std::endl;
 
 			// Debug colour change
-			file << "d$9e0301" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
+			file << "d$a00f01" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 
 			EnableSprites(file, 'c');
 
 			// Debug colour change
-			file << "d$9e030100" << std::endl;
+			file << "d$a00f0100" << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 		}
 #endif
@@ -191,7 +191,7 @@ int main(int argc, char**argv)
 
 
 		// Reset the background colour
-		file << "d$9e030100" << std::endl;
+		file << "d$a00f0100" << std::endl;
 		file << "d$0" << std::endl;
 
 

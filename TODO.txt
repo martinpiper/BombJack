@@ -7,10 +7,12 @@
 		Note: "; Trying rotates" in BombJack\TestData.txt which demonstrates the four quadrants
 			At least I've figured out what register values result in 0/90/180/270 rotations now
 			Note working calculations for mode7dx in BombJack\GenerateData\GenerateData.cpp
-	* TODO: Need to test for empty pixel $00 and replace it with the background colour
+	* Done: Need to test for empty pixel $00 and replace it with the background colour
 		Use the same address as the tile? This will need slightly more logic, but will retain compatibility with existing data
 		Or just use a new address? The generated data will need updating.
-		* Choose between 32 16x16 or 128 8x8 tiles?
+		* Used new address $a00f01
+	* Choose between 32 16x16 or 128 8x8 tiles?
+		Depending on logic constraints, it might be possible to select the relevant RAMs simply
 	* Need to add pixel output header and common pixels/signals/address/data bus inputs headers
 	* Add extra map select coordinates, extra 4 or perhaps 8 bits, make the map wider
 	* Add offset l/h/hh loads for x/y origin values

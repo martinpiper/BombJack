@@ -15,7 +15,11 @@ d$9e010100
 d$9e020100
 
 ; Clear background palette choice
+; Old tile background
 d$9e030100
+; Mode7 background
+d$a00f0100
+
 
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
