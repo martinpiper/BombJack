@@ -54,6 +54,16 @@ int main(int argc, char**argv)
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
+
+		// xpos/ypos org
+		mode7dx = (int)(256.0f * sin(mode7Rot) * scaleValue);
+		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		mode7dx = (int)(256.0f * cos(mode7Rot) * scaleValue);
+		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
+		file << std::endl;
+
 		file << "d$0" << std::endl;
 #if 1
 		// Top sprites

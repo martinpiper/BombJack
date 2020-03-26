@@ -17,6 +17,7 @@
 	* Add extra map select coordinates, extra 4 or perhaps 8 bits, make the map wider
 	* Add offset l/h/hh loads for x/y origin values
 		Added "LDXORGL/H" note "; Trying mode7 xorg writes" seems to work
+		Added "LDYORGL/H" note "; Trying mode7 yorg writes" seems to work
 	* Add extra logic to use RAMs not ROMs
 	* Using the same x/y flip inverter trick for the tile lookup, it might be possible to add support for these in the map
 

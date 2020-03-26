@@ -618,67 +618,7 @@ d$9e000132
 d$0
 
 
-; Trying mode7 xorg writes
-d$0
-^-$01
-d$a0080180
-d$0
-^-$01
-d$a0080100
-d$a0090101
-d$0
-^-$01
-d$a0080180
-d$a0090101
-d$0
-^-$01
-d$a0080100
-d$a0090102
-d$0
-^-$01
-d$a0080100
-d$a00901ff
-d$0
-^-$01
-d$a0080100
-d$a00901fe
-
-; Trying rotates
-; Right
-d$0
-^-$01
-s$a0000100
-b$00,b$00
-b$00,b$01
-b$00,b$00
-b$ff,b$fe
-d$0
-
-; Down
-d$0
-^-$01
-s$a0000100
-b$ff,b$fe
-b$00,b$00
-b$ff,b$fe
-b$00,b$00
-d$0
-
-; Left
-d$0
-^-$01
-s$a0000100
-b$00,b$00
-b$ff,b$fe
-b$00,b$00
-b$00,b$01
-d$0
-
-d$0
-^-$01
-
-
-
+;!TestMode7Registers.txt
 
 
 ; Wait for _VBLANK and shrink borders
