@@ -38,6 +38,8 @@ int main(int argc, char**argv)
 
 		// Calculate suitable mode7 values
 		double scaleValue = 256 + 32 + (sin(mode7Rot * 5.0f) * 256);
+//		scaleValue = 256.0f;
+//		mode7Rot = 0;
 		SetMode7Address(file);
 		double dx = sin(mode7Rot + M_PI_2) * scaleValue;
 		int mode7dx = (int) dx;
@@ -61,11 +63,12 @@ int main(int argc, char**argv)
 
 		// xpos/ypos org calculation, note how the coordinates project back along the deltas calculated above
 		// xorg neg dx + yorg neg dxy
-		mode7dx = (int)(192.5f * -dx) + (64.5f * -dxy);
+		mode7dx = (int)(((frame * 256.0f) / 4.0f) + (192.5f * -dx) + (64.5f * -dxy));
+//		mode7dx = (int)((192.5f * -dx) + (64.5f * -dxy));
 		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		// xorg neg dyx + yorg neg dy
-		mode7dx = (int)(192.5f * -dyx) + (64.5f * -dy);
+		mode7dx = (int)((192.5f * -dyx) + (64.5f * -dy));
 		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
 		file << std::endl;
