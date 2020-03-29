@@ -20,6 +20,8 @@
 		Added "LDYORGL/H" note "; Trying mode7 yorg writes" seems to work
 		74HC138 used
 			Addresses spaced out allowing HH value to be used later
+			Now allows a 128x64 tile screen, uses 8192 bytes
+		* TODO: Sheet 10 needs three more interleaved graphics fetches
 	* Add extra logic to use RAMs not ROMs
 	* Using the same x/y flip inverter trick for the tile lookup, it might be possible to add support for these in the map
 

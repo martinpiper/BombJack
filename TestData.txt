@@ -82,7 +82,7 @@ b$00,b$00,b$00
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
 ; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
 s$20008000
-<0,1,2,3,4,5,6,7,<02_p04t.bin
+;<0,1,2,3,4,5,6,7,<02_p04t.bin
 
 ; For the higher resolution test, this copies the relevant data into the new positions
 ;s$28008000
@@ -618,7 +618,7 @@ d$9e000132
 d$0
 
 
-;!TestMode7Registers.txt
+!TestMode7Registers.txt
 
 
 ; Wait for _VBLANK and shrink borders
