@@ -10,7 +10,7 @@
 	* Done: Need to test for empty pixel $00 and replace it with the background colour
 		Use the same address as the tile? This will need slightly more logic, but will retain compatibility with existing data
 		Or just use a new address? The generated data will need updating.
-		* Used new address $a00f01
+		* Used new address $a01401
 	* Choose between 32 16x16 or 128 8x8 tiles?
 		Depending on logic constraints, it might be possible to select the relevant RAMs simply
 	* Need to add pixel output header and common pixels/signals/address/data bus inputs headers
@@ -18,6 +18,8 @@
 	* Add offset l/h/hh loads for x/y origin values
 		Added "LDXORGL/H" note "; Trying mode7 xorg writes" seems to work
 		Added "LDYORGL/H" note "; Trying mode7 yorg writes" seems to work
+		74HC138 used
+			Addresses spaced out allowing HH value to be used later
 	* Add extra logic to use RAMs not ROMs
 	* Using the same x/y flip inverter trick for the tile lookup, it might be possible to add support for these in the map
 

@@ -197,7 +197,7 @@ int main(int argc, char**argv)
 						{
 							EnableSprites(file, '0');
 							// Debug colour change
-//							file << "d$a00f0100" << std::endl;
+//							file << "d$a0140100" << std::endl;
 						}
 						// TODO: MPi: Investigate if the -14 here and -16 for "New lowest sprite Y pos" can be eliminated completely for 16x16 and 32x32 sprites
 						// Perhaps the sprites are ending at the Y position, not starting from it?
@@ -206,7 +206,7 @@ int main(int argc, char**argv)
 						spritesDisabled = true;
 					}
 					// Debug colour change
-//					file << "d$a00f0107" << std::endl;
+//					file << "d$a0140107" << std::endl;
 
 					SetSpriteAddress(file);
 					numSprites = 0;
@@ -361,7 +361,7 @@ int main(int argc, char**argv)
 
 			EnableSprites(file, '0');
 			// Debug colour change
-//			file << "d$a00f0100" << std::endl;
+//			file << "d$a0140100" << std::endl;
 		}
 #endif
 
