@@ -174,7 +174,8 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $10           | Sprite data Root sheet 4      | $2000   8KB          | Sprite bit plane 0 into 7JR             |
    | $10           | Sprite data Root sheet 4      | $4000   8KB          | Sprite bit plane 1 into 7LR             |
    | $10           | Sprite data Root sheet 4      | $8000   8KB          | Sprite bit plane 2 into 7MR             |
-
+   | $08           | Mode7 Root sheet 10           | $2000   8KB          | Mode7 map data 128x64 tile index        |
+   | $08           | Mode7 Root sheet 10           | $4000   8KB          | Mode7 tile data 32 of 16x16 tiles       |
 
 
 * Using the pattern file: TestData.txt
