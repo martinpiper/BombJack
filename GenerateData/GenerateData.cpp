@@ -67,7 +67,7 @@ int main(int argc, char**argv)
 
 		// xpos/ypos org calculation, note how the coordinates project back along the deltas calculated above
 		// xorg neg dx + yorg neg dxy
-		mode7dx = (int)(((frame * 256.0f) / 4.0f) + (192.5f * -dx) + (64.5f * -dxy));
+		mode7dx = (int)((frame * 256.0f) + (192.5f * -dx) + (64.5f * -dxy));
 //		mode7dx = (int)((192.5f * -dx) + (64.5f * -dxy));
 		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
 		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);

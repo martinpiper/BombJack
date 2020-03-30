@@ -618,7 +618,7 @@ d$9e000132
 d$0
 
 
-!TestMode7Registers.txt
+;!TestMode7Registers.txt
 
 
 ; Wait for _VBLANK and shrink borders
