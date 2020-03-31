@@ -766,3 +766,8 @@
 			Now allows a 128x64 tile screen, uses 8192 bytes
 		* Done: Sheet 10 needs three more interleaved graphics fetches
 	* Done: Add extra logic to use RAMs not ROMs
+
+	
+	
+* Mode7 pixel calculate and output was reduced from 4 to 2 stages. Significantly reducing the complexity.
+
