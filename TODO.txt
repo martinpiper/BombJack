@@ -1,5 +1,5 @@
 * Using the same x/y flip inverter trick for the mode7 tile lookup, it might be possible to add support for these in the map
-
+	Especially now since the output pixel complexity has been reduced and there are 32 tiles
 
 
 
