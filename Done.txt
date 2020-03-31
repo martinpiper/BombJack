@@ -771,3 +771,6 @@
 	
 * Mode7 pixel calculate and output was reduced from 4 to 2 stages. Significantly reducing the complexity.
 
+
+
+* Mode7, root sheet 10: Need to add pixel output header and common pixels/signals/address/data bus inputs headers

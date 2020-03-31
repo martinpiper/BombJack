@@ -1,7 +1,3 @@
-* Mode7, root sheet 10: Need to add pixel output header and common pixels/signals/address/data bus inputs headers
-
-
-	
 * Using the same x/y flip inverter trick for the mode7 tile lookup, it might be possible to add support for these in the map
 
 
