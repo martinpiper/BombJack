@@ -779,3 +779,10 @@
 
 
 * Make boards top silk text V3.0
+
+
+
+* Connectivity check shows missing:
+	_HSYNC               From: J1:1,U181:1
+	_VSYNC               From: J1:2,U120:1
+	* Add to video headers
