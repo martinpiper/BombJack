@@ -774,3 +774,8 @@
 
 
 * Mode7, root sheet 10: Need to add pixel output header and common pixels/signals/address/data bus inputs headers
+
+
+
+
+* Make boards top silk text V3.0
