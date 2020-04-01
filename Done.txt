@@ -786,3 +786,8 @@
 	_HSYNC               From: J1:1,U181:1
 	_VSYNC               From: J1:2,U120:1
 	* Add to video headers
+
+	
+	
+* Using the same x/y flip inverter trick for the mode7 tile lookup, it might be possible to add support for these in the map
+	Especially now since the output pixel complexity has been reduced and there are 32 tiles
