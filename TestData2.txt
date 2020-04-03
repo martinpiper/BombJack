@@ -69,9 +69,59 @@ s$40001000
 s$80001000
 <0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\sprite_plane2.bin
 
-
 s$9c000100
 <0,1,2,3,4,5,6,7,<C:\work\ImageToBitplane\target\PaletteData.bin
+
+
+
+;; Write Mode7 registers
+;s$a0000100
+;b$00,b$01,b$00
+;b$00,b$00,b$00
+;b$00,b$01,b$00
+;b$00,b$00,b$00
+;b$00,b$00,b$00
+;b$00,b$00,b$00
+;
+;; Write mode7 map data to RAM mapped at $2000 with EBS $08
+;s$20000800
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;b$00
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_screen.bin
+;
+;; Write mode7 tile data to RAM mapped at $4000 with EBS $08
+;s$40000800
+;<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\mode7_tiles.bin
+
+
 
 
 ; Write screen data into RAM mapped at $9000 with EBS $01
