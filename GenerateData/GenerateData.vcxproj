@@ -232,6 +232,7 @@
   <ItemGroup>
     <Text Include="..\Done.txt" />
     <Text Include="..\TestData.txt" />
+    <Text Include="..\TestData2.txt" />
     <Text Include="..\TestMode7Registers.txt" />
     <Text Include="..\TestSpriteRegisterOffscreen.txt" />
     <Text Include="..\TestTileDisableRapidColours.txt" />

@@ -262,7 +262,21 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	** Comment: Y pos group
 		
 		This regularly spaces the sprites with the same Y pos +/-4 pixels. Useful for debugging.
-	
+
+
+
+* Using the pattern file: TestData2.txt
+
+	Using the ImageToBitplane tool Run/Debug Configuration: Main all conv
+	Using GenerateData configuration: Debug2
+
+	This demonstrates stacked multiplexed sprites over a 16x16 tiled background.
+
+	Using the ImageToBitplane tool Run/Debug Configuration: Main old bridge RGB 0 0 0 palette opt rgbfactor 32
+
+	This demonstrates a detailed background picture with 32 palettes of 8 entries each.
+
+
 
 ### Raster line schedule
 
