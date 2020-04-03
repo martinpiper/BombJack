@@ -51,41 +51,47 @@ Many thanks to https://opengameart.org/content/rpg-town-pixel-art-assets and htt
 
 The Proteus sheet numbers correspond to the original schematic page numbers as written in the bottom right hand corner of each page. The layout of this schematic roughly matches the layout of the original schematic. So for example the analog RGB resistor ladders are on "Root sheet 8" in the top right of the sheet, as in the original schematic page 8 layout.
 
-1. Logic analyser, virtual video display model, expansion bus header, data generator
+1.	Logic analyser, virtual video display model, expansion bus header, data generator
 	1. Memory selection logic based on external address bus
 	2. VSMDD2 is a replacement for the Proteus data generators because they have a 1024 byte limit. Proteus VSM project source: https://github.com/martinpiper/DigitalData
 	3. EXPANSIONBUS, EXPANSIONBUS2 and EXPANSIONBUS3 all relate to the C64 user port to 24 bit address logic in the project: UserPortTo24BitAddress.pdsprj
-2. Intentionally left blank, the original schematic has dip switch logic
-3. Video timing
+2.	Headers, the original schematic has dip switch logic
+3.	Video timing
 	1. Horizontal video signal generation
 	2. Vertical video signal generation
 	3. HBLANK and VBLANK signal generation
 	4. 32x32 sprite selection registers and comparison
 	5. Various signal timings generated for sprite loading, tile and colour fetch etc
-4. Sprite logic - Part 1
+4.	Sprite logic - Part 1
 	1. Sprite RAM register access logic, timing with the external address/data bus and video internal timings
 	2. Temporary storage for sprite position, palette and frame
 	3. Bit plane access and bit shifters for output pixels to scan RAM
-5. Sprite logic - Part 2
+5.	Sprite logic - Part 2
 	1. Dual scan line RAM buffers
 	2. Transparent pixel test logic based on inverted pixel temporary storage and selection with NOR check
 	3. Pixel writing to RAM based on 16 pixel chunks and position register contents
 	4. Logic for timing of pixel reads for possible video display, plus clearing of data just read
-6. Character screen RAM with associated colour screen
+6.	Character screen RAM with associated colour screen
 	1. Associated external bus interface logic
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display
-7. Read only background picture logic
+7.	Read only background picture logic
 	1. Logic for selection of appropriate picture, based on high address lines
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display, or disable background logic
-8. Output pixel pipeline and palette lookup
+8.	Output pixel pipeline and palette lookup
 	1. Pixel transparency test from background, character screen and sprites
 	2. Palette RAMs with external bus logic
 	3. Final pixel latching logic and palette RAM lookup
 	4. Output digital to analog conversion using resistor ladders
 	5. Analog RGB and associated sync signal output header
-	
+9.	Mode7 calculation
+	1. Register addressing and latches
+	2. dx, dxy, dy, dyx calculation
+	3. xorg, yorg addition
+10.	Mode7 pixel logic
+	1. Background colour latch, transparent pixel detection
+	2. Interleved blocks (for RAM timing) mode7 screen access, feeding into tile access, H & V flip logic
 
 ### Memory map
 
@@ -121,12 +127,64 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 	Byte 3: The sprite’s Y position on screen
 
 
+### Mode7 registers
+
+Mode7 borrows its name from the graphics mode on the Super NES video game console. https://en.wikipedia.org/wiki/Mode_7
+
+0xa000 - 0xa011	: Sets of 24 bit (8 byte) registers in l/h/hh order. There are 8 bits of accuracy, i.e. numbers are multiplied by 256.0f
+	
+	dx
+	dxy
+	dy
+	dyx
+	xorg
+	yorg
+
+Each pixel on the layer is accessed using the accumulated results of these registers, this means it is possible to have per-pixel transformations combining translation, scaling, reflection, rotation, and shearing.
+It is possible to update these registers per scanline, or per pixel, and generate even more complex results. Register values are latched and used immediately, so timing the update of the three bytes must be considered.
+
+Note: The internal accumlated values, x/xy/y/yx are not accessible via registers and are reset only by _HSYNC and _VSYNC
+
+For each horizontal pixel (on +ve 6MHz):
+
+	x += dx
+	yx += dyx
+
+	xo = x + xy + xorg
+	yo = y + yx + yorg
+
+For each scanline (on +ve _HSYNC):
+
+	xy += dxy
+	y += dy
+
+For each scanline (on _HSYNC):
+
+	yx = 0
+	x = 0
+
+For each frame (on _VSYNC):
+
+	y = 0
+	xy = 0
+
+All of the above is one way to progressively calculate xo,yo using addition. In other words:
+
+	xo = (dx*x) + (dxy*y) + xorg
+	yo = (dy*y) + (dyx*x) + yorg
+
+During the coordinate (xo,yo) to screen transformation: bits 8-11 are used to lookup the tile pixel, bits 12-18 for the x screen tile index position, bits 12-17 for the y screen tile index position.
+
+Note: The full, but hidden by borders, screen resolution is 384x264 pixels.
+
+0xa014	: Background colour, any pixel index of zero in the mode7 tile data will show the background colour
+
 	
 ### Clock speeds
 
 The original schematic uses a 6MHz clock for all the video hardware, as denoted by the "6MHz" signal line. The clocking can be found on "Root sheet 1" just about the logic analyser.
 
-However the Proteus simulation uses 1MHz on this signal line, I kept the naming of the line the same as the original schematic however. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
+To help debug timing issues, especially with RAMs, the schematic should be simulated at 6MHz. However the Proteus simulation can use 1MHz on this signal line, I kept the naming of the line the same as the original schematic however. This is due to the default RAM write timings for ICs 4A/4B/4C/4D being too tight. This means the digital display driver will detect ~10fps, not ~60fps as per the original design. It does however make the debug single step time easier to think about since it's not divided by 6MHz...
 
 With VIDCLK = 2M
 
@@ -148,9 +206,9 @@ The Z80 CPU from the original schematic is not included, it was clocked independ
 
 ### Input data setup
 
-The Z80 data write signals are mocked using a simulator pattern generator VSMDD2, this is separate to the main video schematic and the generator is are excluded from the PCB layout.
+The Z80 data write signals are mocked using a simulator pattern generator VSMDD2, this is separate to the main video schematic and the generator is excluded from the PCB layout.
 
-As per the original design all writes to the video hardware should be timed to coincide with the VBLANK. This is because the video hardware is almost always reading the RAM during the visible portion of the frame. Writing to the sprite registers outside the VBLANK will especially produce nasty looking effects on the screen. This RAM sharing model is quite common is old arcade and console hardware.
+As per the original design all writes to the video hardware should be carefully timed to coincide with the VBLANK or other safe write blanking periods. This is because the video hardware is almost always reading the RAM during the visible portion of the frame. Writing to the sprite registers outside the VBLANK will especially produce nasty looking effects on the screen. This RAM sharing model is quite common is old arcade and console hardware.
 
 The original hardware has been expanded to include RAMs where the ROMs were located. These are addressed by an combination of EXPANSIONBUS3 to select the groups of RAMs and the EXPANSIONBUS group selector. It is entirely possible to write more than one group at a time by enabling multiple output bits in EXPANSIONBUS3.
 
@@ -165,6 +223,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9e02                | Background image X/Y scroll             |
    | $01           | Original RAMs                 | $9e03                | Background colour select                |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
+   | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | Note 2 spare  |                               |                      |                                         |
    | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R             |
@@ -176,7 +235,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $10           | Sprite data Root sheet 4      | $2000   8KB          | Sprite bit plane 0 into 7JR             |
    | $10           | Sprite data Root sheet 4      | $4000   8KB          | Sprite bit plane 1 into 7LR             |
    | $10           | Sprite data Root sheet 4      | $8000   8KB          | Sprite bit plane 2 into 7MR             |
-   | $08           | Mode7 Root sheet 10           | $2000   8KB          | Mode7 map data 128x64 tile index        |
+   | $08           | Mode7 Root sheet 10           | $2000   8KB          | Mode7 screen data 128x64 tile index     |
    | $08           | Mode7 Root sheet 10           | $4000   8KB          | Mode7 tile data 32 of 16x16 tiles       |
 
 

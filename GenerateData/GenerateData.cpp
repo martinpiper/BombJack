@@ -42,41 +42,41 @@ int main(int argc, char**argv)
 //		mode7Rot = 0;
 		SetMode7Address(file);
 		double dx = sin(mode7Rot + M_PI_2) * scaleValue;
-		int mode7dx = (int) dx;
-		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		int intValue = (int) dx;
+		file << "b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		double dxy = sin(mode7Rot) * scaleValue;
-		mode7dx = (int) dxy;
-		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		intValue = (int) dxy;
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		file << std::endl;
 
 		double dy = -sin(mode7Rot + M_PI_2 + M_PI_2 + M_PI_2) * scaleValue;
-		mode7dx = (int) dy;
-		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		intValue = (int) dy;
+		file << "b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		double dyx = sin(mode7Rot + M_PI_2 + M_PI_2) * scaleValue;
-		mode7dx = (int) dyx;
-		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		intValue = (int) dyx;
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		file << std::endl;
 
 		// xpos/ypos org calculation, note how the coordinates project back along the deltas calculated above
 		// xorg neg dx + yorg neg dxy
-		mode7dx = (int)((frame * 256.0f) + (192.5f * -dx) + (64.5f * -dxy));
-//		mode7dx = (int)((192.5f * -dx) + (64.5f * -dxy));
-		file << "b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		intValue = (int)((frame * 256.0f) + (192.5f * -dx) + (64.5f * -dxy));
+//		intValue = (int)((192.5f * -dx) + (64.5f * -dxy));
+		file << "b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		// xorg neg dyx + yorg neg dy
-		mode7dx = (int)((192.5f * -dyx) + (64.5f * -dy));
-		file << ",b$" << std::hex << std::setw(2) << (mode7dx & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 8) & 0xff);
-		file << ",b$" << std::hex << std::setw(2) << ((mode7dx >> 16) & 0xff);
+		intValue = (int)((192.5f * -dyx) + (64.5f * -dy));
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 8) & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << ((intValue >> 16) & 0xff);
 		file << std::endl;
 
 		file << "d$0" << std::endl;

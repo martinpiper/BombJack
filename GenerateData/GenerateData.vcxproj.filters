@@ -33,6 +33,7 @@
     <Text Include="..\TestTileScrolls.txt" />
     <Text Include="..\Done.txt" />
     <Text Include="..\TODO.txt" />
+    <Text Include="..\TestMode7Registers.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
