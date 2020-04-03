@@ -266,7 +266,7 @@ Previous versions used one large board, but this turned out to be expensive to p
 The layout is configured with a six layer standard signal and power plane setup, using the technology template "All PCB Six Layer 1.58532mm.LTF" file. The layout will correctly populate with the auto-placer and default placement options, choose all then schedule before starting. It will then correctly route, again using the default router options. This is so placement can be mostly left to the optimiser while maintaining output video signal lines via the resistor placement.
 
 An entire place and route on a decent machine will take approximately 2 hours and result in an output image like:
-![Layout1A](Layout1A.PNG?raw=true "Layout")[Layout1B](Layout1B.PNG?raw=true "Layout")
+![Layout](Layout1.PNG?raw=true "Layout")
 
 This board has not yet been built and tested, but it should work. A common cause of failure is probably going to be finding RAMs that have fast enough write timings. Some of these components are old and hard to find.
 	
