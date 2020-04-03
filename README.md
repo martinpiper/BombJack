@@ -267,6 +267,7 @@ The layout is configured with a six layer standard signal and power plane setup,
 
 An entire place and route on a decent machine will take approximately 2 hours and result in an output image like:
 ![Layout](Layout1.PNG?raw=true "Layout")
+![Tracks](Layout2.PNG?raw=true "Layout")
 
 This board has not yet been built and tested, but it should work. A common cause of failure is probably going to be finding RAMs that have fast enough write timings. Some of these components are old and hard to find.
 	
