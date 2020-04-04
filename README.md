@@ -117,11 +117,11 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 		The tile code for the sprite, used to look up the sprite’s image bitplanes in the tile ROMs
 		(MAME Emu documentation is wrong, bit 7 has nothing to do with selecting double size mode)
 
-	Byte 1: HVF.CCCC
+	Byte 1: HVFCCCCC
 		Bit 7: H : If set, the sprite is horizontally flipped
 		Bit 6: V : If set, the sprite is vertically flipped
 		But 5: F : If set, the sprite is full screen height. The sprite data will repeat.
-		Bits 3..0: C : 4 bits to provide the colour value for the tile decoder
+		Bits 4..0: C : 5 bits to provide the colour value for the tile decoder
 
 	Byte 2: The sprite’s X position on screen
 	Byte 3: The sprite’s Y position on screen
@@ -275,6 +275,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	Using the ImageToBitplane tool Run/Debug Configuration: Main old bridge RGB 0 0 0 palette opt rgbfactor 32
 
 	This demonstrates a detailed background picture with 32 palettes of 8 entries each.
+	
+	Using the ImageToBitplane tool Run/Debug Configuration: Main mode7 "map_9 - mode7 test.png"
+		And enabling the data load at: ; Write Mode7 registers
+		This will demonstrate how the mode7 export with flipped tile detection works
 
 
 
