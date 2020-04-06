@@ -791,3 +791,73 @@
 	
 * Using the same x/y flip inverter trick for the mode7 tile lookup, it might be possible to add support for these in the map
 	Especially now since the output pixel complexity has been reduced and there are 32 tiles
+
+	
+	
+* Where 6264FAST is used, the _OE = NOT _WE is not good. the _OE should be a NOT of the NAND EBD, EA instead
+	Very strange timing contention issue when two 6264FAST are on the same output regarding _OE
+	* Update 6264FAST _OE _WE logic to improve write stability timing
+
+	
+	
+* Also check 6116FAST _WE _OE timing
+	Simplified _MERD logic, by removing it entirely. We do not want to read any internal RAMs, only writing is needed.
+	Far fewer logic contentions now
+
+	
+	
+	
+* Logic contentions remaining:
+	Caused by the palette RAM read/write switch
+	Contention state CSF on net ED0.
+	$ILOGIC ANALYSER#0109(B20) =>  FF
+	2F_U2(B7) =>  FF
+	3L6_U2(A0) =>  FF
+	7B2_U2(B0) =>  SH
+	7C2_U2(B0) =>  FF
+	VSMDD2(D0) =>  SL
+	Contention state CSF on net ED1.
+	$ILOGIC ANALYSER#0109(B21) =>  FF
+	2F_U2(B6) =>  FF
+	3L6_U2(A1) =>  FF
+	7B2_U2(B1) =>  SH
+	7C2_U2(B1) =>  FF
+	VSMDD2(D1) =>  SL
+	Contention state CSF on net ED2.
+	$ILOGIC ANALYSER#0109(B22) =>  FF
+	2F_U2(B5) =>  FF
+	3L6_U2(A2) =>  FF
+	7B2_U2(B2) =>  SH
+	7C2_U2(B2) =>  FF
+	VSMDD2(D2) =>  SL
+	Contention state CSF on net ED3.
+	$ILOGIC ANALYSER#0109(B23) =>  FF
+	2F_U2(B4) =>  FF
+	3L6_U2(A3) =>  FF
+	7B2_U2(B3) =>  SH
+	7C2_U2(B3) =>  FF
+	VSMDD2(D3) =>  SL
+	Contention state CSF on net ED4.
+	$ILOGIC ANALYSER#0109(B24) =>  FF
+	2F_U2(B3) =>  FF
+	3L6_U2(A4) =>  FF
+	7B2_U2(B4) =>  SH
+	VSMDD2(D4) =>  SL
+	Contention state CSF on net ED5.
+	$ILOGIC ANALYSER#0109(B25) =>  FF
+	2F_U2(B2) =>  FF
+	3L6_U2(A5) =>  FF
+	7B2_U2(B5) =>  SH
+	VSMDD2(D5) =>  SL
+	Contention state CSF on net ED6.
+	$ILOGIC ANALYSER#0109(B26) =>  FF
+	2F_U2(B1) =>  FF
+	3L6_U2(A6) =>  FF
+	7B2_U2(B6) =>  SH
+	VSMDD2(D6) =>  SL
+	Contention state CSF on net ED7.
+	$ILOGIC ANALYSER#0109(B27) =>  FF
+	2F_U2(B0) =>  FF
+	3L6_U2(A7) =>  FF
+	7B2_U2(B7) =>  SH
+	VSMDD2(D7) =>  SL
