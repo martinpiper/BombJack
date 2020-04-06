@@ -11,7 +11,9 @@ The version 1.0 of this work was approximately interface pin and chip compatible
 	* Tile X/Y pixel scroll
 	* Tile X/Y offset, useful for fast hardware scrolling
 	* Full screen height sprites
+	* Background "mode7" screen that allows per-pixel affine transformation
 	* Background colour select (Can be rapidly updated during the frame for plasma effects)
+
 
 ## Background
 
