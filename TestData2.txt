@@ -16,7 +16,7 @@ d$9e020100
 
 ; Clear background palette choice
 ; Old tile background
-d$9e030100
+d$9e070100
 ; Mode7 background
 d$a00f0100
 

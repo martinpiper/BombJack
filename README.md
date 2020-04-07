@@ -9,7 +9,7 @@ The version 1.0 of this work was approximately interface pin and chip compatible
 	* Addressable RAM instead of ROMs
 	* Extra display blanking capability
 	* Tile X/Y pixel scroll
-	* Tile X/Y offset, useful for fast hardware scrolling
+	* 64x64 Tile X/Y offset, useful for fast hardware scrolling
 	* Full screen height sprites
 	* Background "mode7" screen that allows per-pixel affine transformation
 	* Background colour select (Can be rapidly updated during the frame for plasma effects)
@@ -220,10 +220,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9400   $400 bytes   | Screen colour                           |
    | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
    | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry         |
-   | $01           | Original RAMs                 | $9e00                | Background image enable, index, borders |
-   | $01           | Original RAMs                 | $9e01                | Background image X/Y pixel scroll       |
-   | $01           | Original RAMs                 | $9e02                | Background image X/Y scroll             |
-   | $01           | Original RAMs                 | $9e03                | Background colour select                |
+   | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |
+   | $01           | Original RAMs                 | $9e01/2              | Background image XL/XH pixel scroll     |
+   | $01           | Original RAMs                 | $9e03/4              | Background image YL/YH pixel scroll     |
+   | $01           | Original RAMs                 | $9e07                | Background colour select                |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
