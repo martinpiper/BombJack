@@ -1,3 +1,6 @@
+* Can the right border be pushed out by 4 pixels?
+
+
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
 	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so registersthe added value will be partially updated and used.
 
@@ -187,10 +190,6 @@
 	Since they are RAM addressed and the ROM with its associated data file in the schematic is not important
 	If the RAM/ROM names are still important, then have them outside of the sub-circuit
 
-
-
-* How about lo/hi registers for tile background char address offset to enable hardware scrolling?
-	
 
 
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.

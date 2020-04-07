@@ -31,8 +31,8 @@ int main(int argc, char**argv)
 
 		int screenXPos = (int)abs(128 + (sin(rads4) * 120) + (sin(rads4 / 3) * 768));
 		int screenYPos = (int)abs((sin(rads5) * 256) + (sin(rads5 / 3) * 768));
-		screenXPos = frame + 35;
-		screenYPos = 0;
+//		screenXPos = frame + 35;
+//		screenYPos = 0;
 		file << "d$9e0101" << std::hex << std::setw(2) << (screenXPos & 0xff) << std::endl;
 		file << "d$9e0201" << std::hex << std::setw(2) << ((screenXPos>>8) & 0xff) << std::endl;
 		file << "d$9e0301" << std::hex << std::setw(2) << (screenYPos & 0xff) << std::endl;
