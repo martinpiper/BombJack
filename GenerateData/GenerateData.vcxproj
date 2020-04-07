@@ -239,6 +239,7 @@
     <Text Include="..\TestTileScrolls.txt" />
     <Text Include="..\TODO.txt" />
     <Text Include="AnimationData.txt" />
+    <Text Include="AnimationData2.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

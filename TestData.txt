@@ -12,7 +12,7 @@ d$b0000112
 d$b8000112
 
 ; Old tile background colour
-d$9e03017f
+d$9e07017f
 ; Testing background colour from mode7 layer
 d$a014017f
 
@@ -26,16 +26,21 @@ d$a014017f
 ; x	enable (DB4)
 ;  y	index (DB0-3)
 ; Write data from into RAM mapped at $9e00 with EBS $01
+; Disable the display
 d$9e000112
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
-d$9e010177
-d$9e0101ff
+d$9e010107
+d$9e010307
+d$9e01010f
+d$9e01030f
 ; No scroll position
 d$9e010100
+d$9e010300
 
-; Tile X/Y position offset
-d$9e020100
+; Tile XH/YH position offset
+d$9e020201
+d$9e020401
 
 ; Clear background palette choice to 1f (high palette)
 d$a01401ff
@@ -89,45 +94,20 @@ s$80000800
 
 
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
-; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
-s$20008000
-<0,1,2,3,4,5,6,7,<02_p04t.bin
+; Standard resolution test uses the tile hardware scroll registers at $9e01/2/3/4 to shift the screen around
 
-; For the higher resolution test, this copies the relevant data into the new positions
-;s$28008000
-;<0,1,2,3,4,5,6,7,@$400,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$410,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$420,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$430,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$440,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$450,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$460,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$470,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$480,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$490,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4a0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4b0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4c0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4d0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4e0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$4f0,>$20,<02_p04t.bin
-;s$2a008000
-;<0,1,2,3,4,5,6,7,@$500,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$510,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$520,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$530,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$540,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$550,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$560,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$570,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$580,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$590,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5a0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5b0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5c0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5d0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5e0,>$20,<02_p04t.bin
-;<0,1,2,3,4,5,6,7,@$5f0,>$20,<02_p04t.bin
+s$20008000
+!TilesScreenRow.txt
+!TilesScreenRow.txt
+!TilesScreenRow.txt
+!TilesScreenRow.txt
+
+s$30008000
+!TilesColourRow.txt
+!TilesColourRow.txt
+!TilesColourRow.txt
+!TilesColourRow.txt
+
 
 ; For the higher resolution test, this copies the relevant data into the new positions
 ; Shifted left, next bank
@@ -286,6 +266,7 @@ s$80001000
 s$90400100
 ; Screen data
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 s$91000100
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 s$92000100
@@ -297,6 +278,7 @@ b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 ; Colour data
 s$94400100
 ; Demonstrating various flips and also the extended character set using hi-nybble 1/2
+b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 s$95000100
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
@@ -614,11 +596,8 @@ b$27,b$52,b$c0,b$74
 ; Background image enable and index, shrink bottom border
 ;d$9e0001b2
 
-; Background image enable and index
+; Background image disable, enable display
 d$9e000132
-;d$9e000133
-;d$9e000134
-;d$9e000130
 
 
 !TestTileDisableRapidColours.txt
@@ -645,6 +624,7 @@ d$0
 
 ; Clear background palette choice
 d$a0140100
+d$a01401ff
 
 ; Switch back to normal screen and include the animation data
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.
@@ -652,270 +632,3 @@ d$a0140100
 ;d$9e000132
 ;d$9e000120	; Disable the tile screen
 !GenerateData\AnimationData.txt
-
-; 48 frames of animation
-; This also tests the EBS bus sharing model
-; Wait for _VBLANK and scroll the screen in the horizontal direction (rotated screen means it looks like a vertical scroll)
-d$0
-^-$01
-d$0
-d$9e0001f2
-d$9e010108
-d$9e020100
-d$a0140100
-
-d$9e010111
-d$98420139
-b$11
-d$0
-^-$01
-d$0
-d$9e010122
-d$9842013a
-b$12
-d$0
-^-$01
-d$0
-d$9e010133
-d$9842013b
-b$13
-d$0
-^-$01
-d$0
-d$9e010144
-d$9842013c
-b$14
-d$0
-^-$01
-d$0
-d$9e010155
-d$9842013d
-b$15
-d$0
-^-$01
-d$0
-d$9e010166
-d$9842013e
-b$16
-d$0
-^-$01
-d$0
-d$9e010177
-d$9842013f
-b$17
-d$0
-^-$01
-d$0
-d$9e010188
-d$98420140
-b$18
-d$0
-^-$01
-d$0
-d$9e010199
-d$98420141
-b$19
-d$0
-^-$01
-d$0
-d$9e0101aa
-d$98420142
-b$1a
-d$0
-^-$01
-d$0
-d$9e0101bb
-d$98420143
-b$1b
-d$0
-^-$01
-d$0
-d$9e0101cc
-d$98420144
-b$1c
-d$0
-^-$01
-d$0
-d$9e0101dd
-d$98420145
-b$1d
-d$0
-^-$01
-d$0
-d$9e0101ee
-d$98420146
-b$1e
-d$0
-^-$01
-d$0
-d$9e0101ff
-d$98420147
-b$1f
-d$0
-^-$01
-d$0
-;d$9e0001f3	; Next screen bank
-d$9e0101e0
-d$9e020101	; Next tile over
-d$98420148
-b$20
-d$0
-^-$01
-d$0
-d$9e0101d1
-d$98420149
-b$21
-d$0
-^-$01
-d$0
-d$9e0101c2
-d$98420149
-b$21
-d$0
-^-$01
-d$0
-d$9e0101b3
-d$9842014a
-b$22
-d$0
-^-$01
-d$0
-d$9e0101a4
-d$9842014b
-b$21
-d$0
-^-$01
-d$0
-d$9e010195
-d$9842014c
-b$22
-d$0
-^-$01
-d$0
-d$9e010186
-d$9842014d
-b$23
-d$0
-^-$01
-d$0
-d$9e010177
-d$9842014e
-b$24
-d$0
-^-$01
-d$0
-d$9e010168
-d$9842014f
-b$25
-d$0
-^-$01
-d$0
-d$9e010159
-d$98420150
-b$26
-d$0
-^-$01
-d$0
-d$9e01014a
-d$98420151
-b$27
-d$0
-^-$01
-d$0
-d$9e01013b
-d$98420152
-b$28
-d$0
-^-$01
-d$0
-d$9e01012c
-d$98420153
-b$29
-d$0
-^-$01
-d$0
-d$9e01011d
-d$98420154
-b$2a
-d$0
-^-$01
-d$0
-d$9e01010e
-d$98420155
-b$2b
-d$0
-^-$01
-d$0
-d$9e01010f
-d$98420156
-b$2c
-d$0
-^-$01
-d$0
-;d$9e0001f4	; Next screen bank
-d$9e010100
-d$9e020102	; Next tile over
-d$98420157
-b$2d
-d$0
-
-^-$01
-d$0
-d$9e010101
-d$0
-^-$01
-d$0
-d$9e010102
-d$0
-^-$01
-d$0
-d$9e010103
-d$0
-^-$01
-d$0
-d$9e010104
-d$0
-^-$01
-d$0
-d$9e010105
-d$0
-^-$01
-d$0
-d$9e010106
-d$0
-^-$01
-d$0
-d$9e010107
-d$0
-^-$01
-d$0
-d$9e010108
-d$0
-^-$01
-d$0
-d$9e010109
-d$0
-^-$01
-d$0
-d$9e01010a
-d$0
-^-$01
-d$0
-d$9e01010b
-d$0
-^-$01
-d$0
-d$9e01010c
-d$0
-^-$01
-d$0
-d$9e01010d
-d$0
-^-$01
-d$0
-d$9e01010e
-d$0
-^-$01
-d$0
-d$9e01010f
-d$0

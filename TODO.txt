@@ -189,9 +189,5 @@
 
 
 
-* How about lo/hi registers for tile background char address offset to enable hardware scrolling?
-	
-
-
 * Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
 	The final combination logic can then take the output pixels and combine the final result via the pallet lookups

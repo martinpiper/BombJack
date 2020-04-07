@@ -29,15 +29,18 @@ int main(int argc, char**argv)
 	{
 		WaitForVSync(file, frame);
 
-		int screenXPos = (int)(128 + (sin(rads4) * 120));
-		int screenYPos = (int)(abs((sin(rads5) * 256)));
-		int xy = (screenXPos & 15) | ((screenYPos & 15) << 4);
-		file << "d$9e0101" << std::hex << std::setw(2) << xy << std::endl;
-		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
-		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
+		int screenXPos = (int)abs(128 + (sin(rads4) * 120) + (sin(rads4 / 3) * 768));
+		int screenYPos = (int)abs((sin(rads5) * 256) + (sin(rads5 / 3) * 768));
+//		screenXPos = frame + 35;
+//		screenYPos = 0;
+		file << "d$9e0101" << std::hex << std::setw(2) << (screenXPos & 0xff) << std::endl;
+		file << "d$9e0201" << std::hex << std::setw(2) << ((screenXPos>>8) & 0xff) << std::endl;
+		file << "d$9e0301" << std::hex << std::setw(2) << (screenYPos & 0xff) << std::endl;
+		file << "d$9e0401" << std::hex << std::setw(2) << ((screenYPos >> 8) & 0xff) << std::endl;
 
 		// Calculate suitable mode7 values
 		double scaleValue = 256 + 32 + (sin(mode7Rot * 5.0f) * 256);
+
 //		scaleValue = 256.0f;
 //		mode7Rot = 0;
 		SetMode7Address(file);
@@ -224,10 +227,10 @@ int main(int argc, char**argv)
 		WaitForRaster(file, 0xb0);
 		screenXPos = (int)(128 + (sin(rads1 * 2.0f) * 120));
 		screenYPos = (int)(128 + (cos(rads1 * 2.0f) * 120));
-		xy = (screenXPos & 15) | ((screenYPos & 15) << 4);
-		file << "d$9e0101" << std::hex << std::setw(2) << xy << std::endl;
-		xy = ((screenXPos / 16) & 15) | (((screenYPos / 16) & 15) << 4);
-		file << "d$9e0201" << std::hex << std::setw(2) << xy << std::endl;
+		file << "d$9e0101" << std::hex << std::setw(2) << (screenXPos & 0xff) << std::endl;
+		file << "d$9e0201" << std::hex << std::setw(2) << ((screenXPos >> 8) & 0xff) << std::endl;
+		file << "d$9e0301" << std::hex << std::setw(2) << (screenYPos & 0xff) << std::endl;
+		file << "d$9e0401" << std::hex << std::setw(2) << ((screenYPos >> 8) & 0xff) << std::endl;
 
 		rads1 += rads1Speed;
 		rads2 += rads2Speed;

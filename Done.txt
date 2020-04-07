@@ -861,3 +861,16 @@
 	3L6_U2(A7) =>  FF
 	7B2_U2(B7) =>  SH
 	VSMDD2(D7) =>  SL
+
+
+
+* How about lo/hi registers for tile background char address offset to enable hardware scrolling?
+	Added, but the left border needed to be brought in by 4 pixels
+
+	
+* Can the right border be pushed out by 4 pixels?
+	Yes!
+
+	
+	
+* Removed old redundant ROMs
