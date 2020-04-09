@@ -388,6 +388,7 @@
 	TestData.txt updated to include display register updates for each frame
 	cd /d C:\Work\BombJack\output
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp debug.gif && debug.gif
+	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp -resize 384x264! debug.gif && debug.gif
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp debug2.gif && debug2.gif
 	c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -loop 0 -delay 5 debug*.bmp -resize 384x264! debug2.gif && debug2.gif
 		Using this option is good with 3072 x 264 in the VSMDD digital display

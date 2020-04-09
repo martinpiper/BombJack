@@ -1,80 +1,75 @@
 Pre-production check start.
 File: C:\Work\BombJack\V3.0\Bomb Jack.pdsprj
-Date: 02 April 2020, 19:34:12
+Date: 08 April 2020, 22:29:05
 TEST: Connectivity.
-Missing connection: U112:14, U113:13
 Missing connection: VIDEO4:17, VIDEO5:17
 Missing connection: 4T:11, VIDEO2:17
 Missing connection: VIDEO3:17, VIDEO4:17
 Missing connection: VIDEO3:17, VIDEO1:17
-Missing connection: U75:3, 1D:6
-Missing connection: 6J6:6, U64:11
+Missing connection: 5S:13, ROWCOL4:8
 Missing connection: U64:11, ROWCOL5:8
-Missing connection: 1D:6, ROWCOL4:8
+Missing connection: 3R:12, 5R:13
+Missing connection: U237:1, ROWCOL2:8
 Missing connection: U69:11, ROWCOL5:13
-Missing connection: 4N:9, 5F:12
+Missing connection: 3N:12, ROWCOL2:13
 Missing connection: 6H6:10, U69:11
 Missing connection: 5F:12, ROWCOL4:13
-Missing connection: 6K6:10, U64:6
+Missing connection: U236:12, ROWCOL2:5
+Missing connection: 3S:11, 6T:5
 Missing connection: U64:6, ROWCOL5:5
-Missing connection: 4P:11, ROWCOL2:5
-Missing connection: U74:14, 6T:3
+Missing connection: 6K6:10, U64:6
 Missing connection: U69:6, ROWCOL5:16
-Missing connection: U76:10, 5F:5
-Missing connection: 5P:11, ROWCOL2:16
+Missing connection: U76:10, ROWCOL2:16
+Missing connection: 3P:11, 5F:5
 Missing connection: 5F:5, ROWCOL4:16
-Missing connection: 4S:12, ROWCOL2:1
 Missing connection: U63:6, ROWCOL5:1
-Missing connection: 3T:9, ROWCOL4:1
-Missing connection: 3T:9, ROWCOL3:1
+Missing connection: 1S:4, ROWCOL2:1
+Missing connection: 3S:10, ROWCOL4:1
+Missing connection: 3S:7, ROWCOL3:1
 Missing connection: U68:6, ROWCOL5:20
-Missing connection: 6P6:12, U68:6
+Missing connection: 3P:7, 5E:5
 Missing connection: 4P:5, ROWCOL2:20
-Missing connection: 4P:5, 5E:5
-Missing connection: 4P:10, ROWCOL2:9
-Missing connection: 4R:6, ROWCOL4:9
-Missing connection: U94:4, ROWCOL3:9
+Missing connection: 6P6:12, U68:6
+Missing connection: 4R:6, ROWCOL2:9
+Missing connection: 3P:2, ROWCOL3:9
+Missing connection: 3P:2, ROWCOL4:9
 Missing connection: ROWCOL4:9, ROWCOL5:9
 Missing connection: U68:2, ROWCOL5:19
 Missing connection: 6P6:9, U68:2
+Missing connection: 3P:14, 5E:3
 Missing connection: 3P:14, ROWCOL2:19
-Missing connection: 5E:3, ROWCOL4:19
-Missing connection: U74:12, 5R:10
-Missing connection: 6K6:13, U64:2
+Missing connection: 5S:10, ROWCOL4:6
+Missing connection: U236:13, ROWCOL2:6
+Missing connection: 3R:14, 5R:10
 Missing connection: U64:2, ROWCOL5:6
-Missing connection: 1D:13, ROWCOL4:6
 Missing connection: U69:2, ROWCOL5:15
-Missing connection: U76:12, 5F:3
+Missing connection: 3N:14, ROWCOL2:15
 Missing connection: 6H6:3, U69:2
 Missing connection: 5F:3, ROWCOL4:15
+Missing connection: U236:10, ROWCOL2:3
+Missing connection: 3S:13, 2E:6
 Missing connection: 2E:6, ROWCOL4:3
-Missing connection: U74:5, 2E:6
 Missing connection: U63:15, ROWCOL5:3
-Missing connection: 7R:13, ROWCOL2:3
 Missing connection: U68:15, ROWCOL5:18
-Missing connection: U68:15, 6P6:1
-Missing connection: 3P:13, ROWCOL2:18
 Missing connection: 3P:13, 5E:14
-Missing connection: U75:5, 5R:12
-Missing connection: 6J6:3, U64:15
+Missing connection: 6P6:1, U68:15
+Missing connection: 3P:13, ROWCOL2:18
+Missing connection: 5S:12, ROWCOL4:7
 Missing connection: U64:15, ROWCOL5:7
-Missing connection: 1D:10, ROWCOL4:7
+Missing connection: U236:15, ROWCOL2:7
+Missing connection: 3R:13, 5R:12
 Missing connection: U69:15, ROWCOL5:14
-Missing connection: U76:13, 5F:14
+Missing connection: 3N:13, ROWCOL2:14
 Missing connection: 6H6:6, U69:15
 Missing connection: 5F:14, ROWCOL4:14
-Missing connection: 5L:11, VIDEO4:20
-Missing connection: 5P7:9, U157:11
-Missing connection: 3T:11, VIDEO2:20
-Missing connection: 3T:11, U77:21
-Missing connection: 6K6:6, U63:11
-Missing connection: U63:11, ROWCOL5:4
-Missing connection: U74:3, ROWCOL3:4
-Missing connection: 3S:12, ROWCOL2:4
+Missing connection: 6J:11, VIDEO4:20
+Missing connection: 3R:2, 6D:2
+Missing connection: 3S:2, VIDEO2:20
+Missing connection: 5P7:9, VIDEO5:20
 Missing connection: U68:11, ROWCOL5:17
-Missing connection: 3P:12, ROWCOL2:17
-Missing connection: 6J6:10, U68:11
 Missing connection: 3P:12, 5E:12
+Missing connection: 3P:12, ROWCOL2:17
+Missing connection: 5E:12, ROWCOL4:17
 Missing connection: U82:2, PIXEL5:1
 Missing connection: PIXEL4:1, 5K8:13
 Missing connection: U82:5, PIXEL5:2
@@ -96,14 +91,14 @@ Missing connection: PIXEL3:2, 5H8:12
 Missing connection: PIXEL3:3, 5F8:4
 Missing connection: PIXEL3:4, 5F8:12
 Missing connection: PIXEL3:5, 5K8:4
-Missing connection: VIDEO2:16, U65:16
-Missing connection: VIDEO4:16, VIDEO5:16
-Missing connection: U67:5, VIDEO2:16
+Missing connection: U65:16, VIDEO5:16
+Missing connection: U67:10, VIDEO2:16
 Missing connection: VIDEO3:16, VIDEO4:16
+Missing connection: VIDEO2:16, U65:16
+Missing connection: U65:19, VIDEO5:15
 Missing connection: U72:2, VIDEO2:15
-Missing connection: VIDEO2:15, U65:19
-Missing connection: VIDEO4:15, VIDEO5:15
 Missing connection: VIDEO3:15, VIDEO4:15
+Missing connection: VIDEO3:15, VIDEO1:15
 Missing connection: EXPANSIONBUSA4:26, EXPANSIONBUSA5:26
 Missing connection: EXPANSIONBUSA1:26, EXPANSIONBUSA2:26
 Missing connection: EXPANSIONBUSA3:26, EXPANSIONBUSA4:26
@@ -124,77 +119,77 @@ Missing connection: EXPANSIONBUSA1:24, EXPANSIONBUSA2:24
 Missing connection: EXPANSIONBUSA3:24, EXPANSIONBUSA4:24
 Missing connection: EXPANSIONBUSA3:24, EXPANSIONBUSA1:24
 Missing connection: 3S:1, VIDEO2:14
-Missing connection: VIDEO2:14, U65:2
 Missing connection: U93:1, VIDEO5:14
+Missing connection: VIDEO2:14, U93:1
 Missing connection: VIDEO3:14, VIDEO4:14
-Missing connection: U70:2, EXPANSIONBUSA5:1
-Missing connection: U46:2, EXPANSIONBUSA4:1
-Missing connection: 8D2:3, 2E:11
-Missing connection: EXPANSIONBUSA2:1, 2E:11
-Missing connection: U70:3, EXPANSIONBUSA5:2
-Missing connection: U46:5, EXPANSIONBUSA4:2
-Missing connection: 6K6:11, U1:5
+Missing connection: U23:2, EXPANSIONBUSA5:1
+Missing connection: U54:2, EXPANSIONBUSA4:1
+Missing connection: 6K6:5, U1:2
+Missing connection: EXPANSIONBUSA1:1, 2E:11
+Missing connection: U23:5, EXPANSIONBUSA5:2
+Missing connection: U54:5, EXPANSIONBUSA4:2
+Missing connection: 6F2:2, EXPANSIONBUSA2:2
 Missing connection: 6F2:2, 2E:5
-Missing connection: U31:11, U88:3
+Missing connection: 6H6:14, U21:11
 Missing connection: U88:3, EXPANSIONBUSA5:11
-Missing connection: U61:11, EXPANSIONBUSA4:11
 Missing connection: U87:3, EXPANSIONBUSA2:11
-Missing connection: U31:14, U25:14
+Missing connection: U61:11, EXPANSIONBUSA4:11
 Missing connection: U25:14, EXPANSIONBUSA5:12
 Missing connection: U61:14, EXPANSIONBUSA4:12
 Missing connection: 4M:1, EXPANSIONBUSA2:12
-Missing connection: U26:2, EXPANSIONBUSA5:13
-Missing connection: U49:2, U12:2
+Missing connection: EXPANSIONBUSA2:12, U3:14
+Missing connection: U22:2, EXPANSIONBUSA5:13
+Missing connection: U62:2, EXPANSIONBUSA4:13
 Missing connection: 4M:2, EXPANSIONBUSA2:13
-Missing connection: EXPANSIONBUSA3:13, EXPANSIONBUSA1:13
+Missing connection: EXPANSIONBUSA2:13, U12:2
 Missing connection: U13:13, EXPANSIONBUSA4:14
-Missing connection: EXPANSIONBUSA2:14, U9:1
-Missing connection: EXPANSIONBUSA4:14, EXPANSIONBUSA5:14
+Missing connection: U90:1, U9:1
+Missing connection: U90:1, U213:1
 Missing connection: 4M:3, EXPANSIONBUSA2:14
+Missing connection: U90:4, U9:4
+Missing connection: U90:4, U213:4
 Missing connection: EXPANSIONBUSA4:15, U50:1
-Missing connection: EXPANSIONBUSA2:15, U9:4
-Missing connection: 3M:14, EXPANSIONBUSA2:15
-Missing connection: EXPANSIONBUSA4:15, EXPANSIONBUSA5:15
+Missing connection: 3M:14, EXPANSIONBUSA3:15
 Missing connection: EXPANSIONBUSA3:15, U50:1
+Missing connection: U90:10, U9:10
 Missing connection: EXPANSIONBUSA4:16, U50:4
-Missing connection: EXPANSIONBUSA2:16, U9:10
-Missing connection: 3M:13, EXPANSIONBUSA2:16
-Missing connection: EXPANSIONBUSA4:16, EXPANSIONBUSA5:16
+Missing connection: U90:10, EXPANSIONBUSA5:16
+Missing connection: 3M:13, EXPANSIONBUSA3:16
 Missing connection: EXPANSIONBUSA3:16, U50:4
 Missing connection: U23:11, EXPANSIONBUSA5:3
-Missing connection: U46:11, EXPANSIONBUSA4:3
+Missing connection: U54:11, EXPANSIONBUSA4:3
+Missing connection: 6F2:5, EXPANSIONBUSA2:3
 Missing connection: 6F2:5, 2E:2
-Missing connection: EXPANSIONBUSA2:3, 2E:2
 Missing connection: U23:14, EXPANSIONBUSA5:4
-Missing connection: U46:14, EXPANSIONBUSA4:4
+Missing connection: U54:14, EXPANSIONBUSA4:4
+Missing connection: 6F2:14, EXPANSIONBUSA2:4
 Missing connection: 6F2:14, 1D:14
-Missing connection: 6J6:2, U1:14
-Missing connection: U20:2, EXPANSIONBUSA5:5
-Missing connection: 6J6:5, U2:2
+Missing connection: 6F2:11, EXPANSIONBUSA2:5
+Missing connection: U230:3, EXPANSIONBUSA5:5
+Missing connection: 1D:11, EXPANSIONBUSA4:5
 Missing connection: 6F2:11, 1D:11
-Missing connection: U47:2, EXPANSIONBUSA4:5
-Missing connection: U20:5, EXPANSIONBUSA5:6
-Missing connection: 6J6:11, U2:5
-Missing connection: 6D2:2, 1D:5
+Missing connection: U24:5, EXPANSIONBUSA5:6
 Missing connection: 6D2:2, EXPANSIONBUSA2:6
-Missing connection: U20:11, EXPANSIONBUSA5:7
-Missing connection: 6J6:14, U2:11
-Missing connection: 1D:2, U2:11
+Missing connection: 6D2:2, 1D:5
+Missing connection: 1D:5, EXPANSIONBUSA4:6
+Missing connection: U24:11, EXPANSIONBUSA5:7
 Missing connection: 6D2:5, 1D:2
-Missing connection: U20:14, EXPANSIONBUSA5:8
+Missing connection: 6D2:5, EXPANSIONBUSA2:7
+Missing connection: U55:11, EXPANSIONBUSA4:7
+Missing connection: U24:14, EXPANSIONBUSA5:8
 Missing connection: 6H6:2, U2:14
 Missing connection: 6D2:14, EXPANSIONBUSA2:8
-Missing connection: U47:14, EXPANSIONBUSA4:8
-Missing connection: 6H6:5, U25:2
-Missing connection: U61:2, EXPANSIONBUSA4:9
-Missing connection: U7:2, EXPANSIONBUSA5:9
+Missing connection: U55:14, EXPANSIONBUSA4:8
+Missing connection: 6H6:5, U21:2
+Missing connection: U25:2, EXPANSIONBUSA5:9
 Missing connection: 6D2:11, EXPANSIONBUSA2:9
-Missing connection: 6H6:11, U88:2
+Missing connection: U61:2, EXPANSIONBUSA4:9
+Missing connection: 6H6:11, U21:5
 Missing connection: U88:2, EXPANSIONBUSA5:10
-Missing connection: U61:5, EXPANSIONBUSA4:10
 Missing connection: U87:2, EXPANSIONBUSA2:10
-Missing connection: EXPANSIONBUSB4:1, EXPANSIONBUSB5:1
+Missing connection: U61:5, EXPANSIONBUSA4:10
 Missing connection: U5:5, EXPANSIONBUSB2:1
+Missing connection: EXPANSIONBUSB4:1, EXPANSIONBUSB5:1
 Missing connection: U5:5, EXPANSIONBUSB3:1
 Missing connection: EXPANSIONBUSB3:1, EXPANSIONBUSB4:1
 Missing connection: EXPANSIONBUSB4:2, EXPANSIONBUSB5:2
@@ -213,54 +208,54 @@ Missing connection: U13:12, EXPANSIONBUSB4:5
 Missing connection: EXPANSIONBUSB4:5, EXPANSIONBUSB5:5
 Missing connection: EXPANSIONBUSB1:5, EXPANSIONBUSB2:5
 Missing connection: EXPANSIONBUSB3:5, EXPANSIONBUSB1:5
-Missing connection: EXPANSIONBUSB4:6, EXPANSIONBUSB5:6
+Missing connection: U90:9, EXPANSIONBUSB5:6
+Missing connection: U90:5, EXPANSIONBUSB4:6
 Missing connection: EXPANSIONBUSB1:6, EXPANSIONBUSB2:6
 Missing connection: EXPANSIONBUSB3:6, EXPANSIONBUSB4:6
-Missing connection: EXPANSIONBUSB3:6, EXPANSIONBUSB1:6
-Missing connection: EXPANSIONBUSB2:7, U9:5
-Missing connection: EXPANSIONBUSB4:7, EXPANSIONBUSB5:7
+Missing connection: U9:5, EXPANSIONBUSB5:7
+Missing connection: EXPANSIONBUSB2:7, U9:9
 Missing connection: EXPANSIONBUSB1:7, EXPANSIONBUSB2:7
 Missing connection: EXPANSIONBUSB3:7, EXPANSIONBUSB4:7
+Missing connection: U9:2, EXPANSIONBUSB5:8
 Missing connection: EXPANSIONBUSB2:8, U9:2
-Missing connection: EXPANSIONBUSB4:8, EXPANSIONBUSB5:8
 Missing connection: EXPANSIONBUSB1:8, EXPANSIONBUSB2:8
 Missing connection: EXPANSIONBUSB3:8, EXPANSIONBUSB4:8
 Missing connection: EXPANSIONBUSA4:25, EXPANSIONBUSA5:25
 Missing connection: EXPANSIONBUSA1:25, EXPANSIONBUSA2:25
 Missing connection: EXPANSIONBUSA3:25, EXPANSIONBUSA4:25
 Missing connection: EXPANSIONBUSA3:25, EXPANSIONBUSA1:25
-Missing connection: U45:3, U81:3
-Missing connection: 3L6:2, U81:3
-Missing connection: U11:3, EXPANSIONBUSA5:34
-Missing connection: 7C2:18, EXPANSIONBUSA2:34
-Missing connection: U45:4, U81:4
-Missing connection: 3L6:3, U82:4
-Missing connection: U11:4, EXPANSIONBUSA5:33
-Missing connection: 7C2:17, EXPANSIONBUSA2:33
-Missing connection: U45:7, U81:7
-Missing connection: 3L6:4, U82:7
-Missing connection: U11:7, EXPANSIONBUSA5:32
-Missing connection: 7C2:16, EXPANSIONBUSA2:32
-Missing connection: U45:8, U81:8
-Missing connection: U82:8, 3L6:5
-Missing connection: U11:8, EXPANSIONBUSA5:31
-Missing connection: 7C2:15, EXPANSIONBUSA2:31
-Missing connection: U45:13, U81:13
-Missing connection: 3L6:6, U82:13
-Missing connection: U11:13, EXPANSIONBUSA5:30
-Missing connection: 7B2:14, EXPANSIONBUSA2:30
-Missing connection: U45:14, U65:3
-Missing connection: 3L6:7, U82:14
-Missing connection: U11:14, EXPANSIONBUSA5:29
-Missing connection: 7B2:13, EXPANSIONBUSA2:29
-Missing connection: U45:17, U81:17
-Missing connection: U82:17, 3L6:8
-Missing connection: U11:17, EXPANSIONBUSA5:28
-Missing connection: 7B2:12, EXPANSIONBUSA2:28
-Missing connection: U45:18, U81:18
-Missing connection: 3L6:9, U82:18
-Missing connection: U11:18, EXPANSIONBUSA5:27
-Missing connection: 7B2:11, EXPANSIONBUSA2:27
+Missing connection: U40:3, U82:3
+Missing connection: 7C2:18, 6S:14
+Missing connection: 6R:14, U81:3
+Missing connection: U27:3, EXPANSIONBUSA5:34
+Missing connection: U35:4, U82:4
+Missing connection: 7C2:17, 6S:13
+Missing connection: 6R:13, U81:4
+Missing connection: U27:4, EXPANSIONBUSA5:33
+Missing connection: 7C2:16, 6S:11
+Missing connection: U35:7, U82:7
+Missing connection: 6R:11, U81:7
+Missing connection: U27:7, EXPANSIONBUSA5:32
+Missing connection: 7C2:15, 6R:6
+Missing connection: U35:8, U82:8
+Missing connection: 6S:6, U81:8
+Missing connection: U27:8, EXPANSIONBUSA5:31
+Missing connection: U35:13, U82:13
+Missing connection: 7B2:14, 6S:4
+Missing connection: U27:13, EXPANSIONBUSA5:30
+Missing connection: 6S:4, U81:13
+Missing connection: U35:14, U82:14
+Missing connection: 7B2:13, 6S:3
+Missing connection: U27:14, EXPANSIONBUSA5:29
+Missing connection: 6S:3, U81:14
+Missing connection: U35:17, U82:17
+Missing connection: U27:17, EXPANSIONBUSA5:28
+Missing connection: 7B2:12, 2F:17
+Missing connection: U53:17, EXPANSIONBUSA4:28
+Missing connection: U35:18, U82:18
+Missing connection: U27:18, EXPANSIONBUSA5:27
+Missing connection: 7B2:11, 2F:18
+Missing connection: U53:18, EXPANSIONBUSA4:27
 Missing connection: EXPANSIONBUSA4:21, EXPANSIONBUSA5:21
 Missing connection: EXPANSIONBUSA1:21, EXPANSIONBUSA2:21
 Missing connection: EXPANSIONBUSA3:21, EXPANSIONBUSA4:21
@@ -269,22 +264,27 @@ Missing connection: EXPANSIONBUSA4:23, EXPANSIONBUSA5:23
 Missing connection: EXPANSIONBUSA1:23, EXPANSIONBUSA2:23
 Missing connection: EXPANSIONBUSA3:23, EXPANSIONBUSA4:23
 Missing connection: EXPANSIONBUSA3:23, EXPANSIONBUSA1:23
-Missing connection: 4P7R:20, EXPANSIONBUSA5:18
-Missing connection: U31:8, 5R7:12
-Missing connection: 4N:7, 2E:15
-Missing connection: 2E:8, U9:7
+Missing connection: 4P7R:20, U163:1
+Missing connection: 3R:8, 6T:15
+Missing connection: 7E6:8, 6R7:7
+Missing connection: U78:23, EXPANSIONBUSA4:18
 Missing connection: PIXEL1:1, 5H8:6
 Missing connection: PIXEL1:2, 5H8:10
 Missing connection: PIXEL1:3, 5F8:6
 Missing connection: PIXEL1:4, 5F8:10
 Missing connection: PIXEL1:5, 5K8:6
-Missing connection: PIXEL1:8, 5K8:10
-Missing connection: PIXEL1:7, 5J8:6
-Missing connection: PIXEL1:6, 5J8:10
+Missing connection: PIXEL1:8, 5M8:9
+Missing connection: PIXEL1:7, 5M8:10
+Missing connection: PIXEL1:6, 5M8:11
 Missing connection: 6H6:13, U63:2
 Missing connection: 2E:10, ROWCOL4:2
-Missing connection: 7R:14, 2E:10
+Missing connection: 3S:14, 2E:10
 Missing connection: U63:2, ROWCOL5:2
+Missing connection: U63:11, 6K6:6
+Missing connection: U63:11, ROWCOL5:4
+Missing connection: 7S:1, 3S:12
+Missing connection: ROWCOL4:4, 3S:12
+Missing connection: ROWCOL1:4, 3S:12
 Missing connection: EXPANSIONBUSA4:22, EXPANSIONBUSA5:22
 Missing connection: EXPANSIONBUSA1:22, EXPANSIONBUSA2:22
 Missing connection: EXPANSIONBUSA3:22, EXPANSIONBUSA4:22
@@ -292,69 +292,69 @@ Missing connection: EXPANSIONBUSA3:22, EXPANSIONBUSA1:22
 Missing connection: PIXEL2:1, 5H8:5
 Missing connection: 4M6:5, 5H8:11
 Missing connection: 4M6:2, 5F8:5
-Missing connection: 5F8:11, 4M6:15
+Missing connection: 4M6:15, 5F8:11
 Missing connection: 2T:8, VIDEO2:1
-Missing connection: VIDEO4:1, VIDEO5:1
 Missing connection: 7C:4, VIDEO4:1
+Missing connection: VIDEO4:1, VIDEO5:1
 Missing connection: VIDEO3:1, VIDEO1:1
-Missing connection: 6F6:7, 5M8:1
+Missing connection: PIXEL2:8, 5K8:11
 Missing connection: PIXEL2:7, 5J8:5
-Missing connection: 6F6:9, 5J8:11
-Missing connection: 4P7R:28, EXPANSIONBUSA5:17
-Missing connection: U71:9, 5F:16
-Missing connection: U45:20, U9:14
-Missing connection: 2R6:4, U64:16
-Missing connection: 3T:3, VIDEO2:19
+Missing connection: PIXEL2:6, 5J8:11
+Missing connection: 4:14, EXPANSIONBUSA5:17
+Missing connection: 3S:9, 6S:16
+Missing connection: U35:20, U63:16
+Missing connection: 2D:16, U81:1
+Missing connection: JP1:”;$, VIDEO2:19
 Missing connection: VIDEO4:19, VIDEO5:19
 Missing connection: VIDEO3:19, VIDEO4:19
 Missing connection: VIDEO3:19, VIDEO1:19
-Missing connection: 4R:5, 1D:3
-Missing connection: 1D:3, ROWCOL4:10
+Missing connection: 3R:11, 5R:15
+Missing connection: 5S:15, ROWCOL4:10
 Missing connection: 4R:5, ROWCOL2:10
 Missing connection: ROWCOL4:10, ROWCOL5:10
-Missing connection: 2A:9, VIDEO4:18
-Missing connection: 4S:11, VIDEO2:18
-Missing connection: 4T:13, 2D:9
+Missing connection: U78:20, VIDEO4:18
+Missing connection: 2D:9, VIDEO2:18
+Missing connection: VIDEO1:18, 2A:9
 Missing connection: VIDEO4:18, VIDEO5:18
-Missing connection: 7R:11, VIDEO2:6
-Missing connection: VIDEO1:6, 6E:11
 Missing connection: 6E:11, VIDEO4:6
 Missing connection: VIDEO4:6, VIDEO5:6
+Missing connection: 7R:11, VIDEO2:6
+Missing connection: VIDEO1:6, 6E:11
 Missing connection: 2T:11, VIDEO2:4
 Missing connection: VIDEO4:4, VIDEO5:4
 Missing connection: VIDEO3:4, VIDEO4:4
 Missing connection: VIDEO3:4, VIDEO1:4
-Missing connection: VIDEO2:13, U93:2
 Missing connection: U93:2, VIDEO5:13
+Missing connection: VIDEO2:13, U93:2
 Missing connection: 4T:15, VIDEO2:13
 Missing connection: VIDEO3:13, VIDEO4:13
 Missing connection: 4M:13, BANKSEL4:2
-Missing connection: U87:1, BANKSEL1:1
-Missing connection: U87:1, BANKSEL2:1
-Missing connection: 4M:11, BANKSEL5:1
-Missing connection: 4P:9, VIDEO2:12
+Missing connection: U87:1, BANKSEL1:”;$
+Missing connection: U87:1, BANKSEL2:”;$
+Missing connection: 4M:11, BANKSEL5:”;$
+Missing connection: J1:1, VIDEO2:12
 Missing connection: VIDEO4:12, VIDEO5:12
 Missing connection: VIDEO3:12, VIDEO4:12
-Missing connection: VIDEO3:12, VIDEO1:12
-Missing connection: 7R:12, VIDEO2:5
+Missing connection: VIDEO2:12, U181:1
 Missing connection: 6F:11, VIDEO4:5
 Missing connection: VIDEO4:5, VIDEO5:5
+Missing connection: 7R:12, VIDEO2:5
 Missing connection: VIDEO1:5, 6F:11
-Missing connection: U70:1, EXPANSIONBUSA5:20
-Missing connection: U14:1, EXPANSIONBUSA4:20
+Missing connection: 5P7:4, EXPANSIONBUSA5:20
+Missing connection: 3H:10, EXPANSIONBUSA4:20
 Missing connection: 8D2:2, EXPANSIONBUSA2:20
-Missing connection: EXPANSIONBUSA2:20, U92:1
-Missing connection: U14:5, VIDEO4:2
-Missing connection: U94:10, VIDEO2:2
-Missing connection: VIDEO4:2, VIDEO5:2
+Missing connection: U91:9, U160:1
 Missing connection: VIDEO1:2, 7S:5
-Missing connection: 5P:9, EXPANSIONBUSC2:1
-Missing connection: EXPANSIONBUSC4:1, EXPANSIONBUSC5:1
-Missing connection: EXPANSIONBUSC3:1, EXPANSIONBUSC4:1
-Missing connection: EXPANSIONBUSC3:1, EXPANSIONBUSC1:1
-Missing connection: 7R:10, VIDEO2:7
+Missing connection: 3H:2, VIDEO4:2
+Missing connection: 2T:9, VIDEO2:2
+Missing connection: VIDEO4:2, VIDEO5:2
+Missing connection: 1T:4, EXPANSIONBUSC2:”;$
+Missing connection: EXPANSIONBUSC4:”;$, EXPANSIONBUSC5:”;$
+Missing connection: EXPANSIONBUSC3:”;$, EXPANSIONBUSC4:”;$
+Missing connection: 1T:4, EXPANSIONBUSC3:”;$
 Missing connection: 5H:11, VIDEO4:7
 Missing connection: VIDEO1:7, 5H:11
+Missing connection: 7R:10, VIDEO2:7
 Missing connection: VIDEO4:7, VIDEO5:7
 Missing connection: J1:2, VIDEO2:11
 Missing connection: VIDEO4:11, VIDEO5:11
@@ -418,8 +418,6 @@ FAIL: Component outside of board edge.
 Component outside the board edge: '2E'.
 FAIL: Component outside of board edge.
 Component outside the board edge: '2F'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '2R6'.
 FAIL: Component outside of board edge.
 Component outside the board edge: '2T'.
 FAIL: Component outside of board edge.
@@ -635,8 +633,6 @@ Component outside the board edge: '7T'.
 FAIL: Component outside of board edge.
 Component outside the board edge: '8B2'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '8C2'.
-FAIL: Component outside of board edge.
 Component outside the board edge: '8C6'.
 FAIL: Component outside of board edge.
 Component outside the board edge: '8D2'.
@@ -794,7 +790,14 @@ FAIL: Component outside of board edge.
 Component outside the board edge: 'U4'.
 FAIL: Component outside of board edge.
 Component outside the board edge: 'U5'.
-FAIL: Component outside of boa0 errors, 295 failed, 0 warnings, 15 passed.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U8'.
+FAIL: Component outside of board edge.
+Component outside 0 errors, 298 failed, 0 warnings, 15 passed.
 Pre-production check end:
 Via overlaps and drill ranges.PASS: 
 Via overlaps and drill ranges.TEST: 
@@ -826,6 +829,22 @@ Component outside of board edge.FAIL:
 .'VIDEO1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'VIDCLK'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U237'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U236'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U235'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U234'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U233'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U232'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U231'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'U230'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'U95'Component outside the board edge: 
 Component outside of board edge.FAIL: 
@@ -861,15 +880,9 @@ Component outside of board edge.FAIL:
 Component outside of board edge.FAIL: 
 .'U76'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U75'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U74'Component outside the board edge: 
-Component outside of board edge.FAIL: 
 .'U73'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'U72'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U71'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'U70'Component outside the board edge: 
 Component outside of board edge.FAIL: 
@@ -993,11 +1006,4 @@ Component outside of board edge.FAIL:
 Component outside of board edge.FAIL: 
 .'U10'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U9'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U8'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U7'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U6'Component outside the board edge: 
-rd edge.
+.'U9'the board edge: 

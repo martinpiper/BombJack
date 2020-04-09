@@ -1,7 +1,23 @@
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
-	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so registersthe added value will be partially updated and used.
+	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so the added value will be partially updated and used.
 
 
+
+* Mode7 tiles to 64 instead of 32? Would need more RAMs
+
+
+
+* Perhaps a layer combination board, which does the zero 3-bit or 8 bit pixel test and allows multiple expansion planes to be used?
+
+
+
+* Idea for new layer, scaled rotated sprites
+	Setup sprite data x/y/dx/dxy/dy/dyx like mode7, plus a screen top left x/y plus width/height bounding box to iterate.
+	It spits out pixels into the screen buffer and signals when it's done
+	And could optionally hop into the next item in a link list... and signal the end of the link list
+		the mode7 render got me thinking, because the circuitry only really differs in the "fetch a tile index from the screen memory" side of things
+		So basically rendering a rotated quad outside the edges test becomes "is the X and Y tile position = 0" instead of "fetch tile index"
+		If it's outside the edges then don't plot pixels
 
 
 * Need a simple bottom left |_ tile, then position this in the four corners with suitable H/V flips to allow the maximum pixel extent to be validated
