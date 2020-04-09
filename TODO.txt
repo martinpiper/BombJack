@@ -1,13 +1,18 @@
+* Mode7 tiles to 64 instead of 32? Would need more RAMs
+	The write logic works, but the output logic has contentions. Going to need a 2 to 1 selector 74157... Tried 6MHz strobing the _OE, no better.
+	* Is this causing the output pixel corruption visible when the line has >= 32 tile index present?
+	* Hmm no, a selector 74157 on >=32 tile index, did not work either. So it doesn't look like an output from RAM data hold issue?
+	So what could it be? Mathematical?
+	
+
+
+
 * It springs to mind that I should perhaps hook this up to a 6502 emulator with a "realtime" emulated display to help prototype games/demos.
 
 
 
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
 	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so the added value will be partially updated and used.
-
-
-
-* Mode7 tiles to 64 instead of 32? Would need more RAMs
 
 
 

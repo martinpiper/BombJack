@@ -87,10 +87,10 @@ b$00,b$00,b$00
 s$20000800
 <0,1,2,3,4,5,6,7,<map.bin
 ; Write mode7 tile data to RAM mapped at $4000 with EBS $08
-s$40000800
-<0,1,2,3,4,5,6,7,<Mode7.bin
 s$80000800
 <0,1,2,3,4,5,6,7,<Mode7B.bin
+s$40000800
+<0,1,2,3,4,5,6,7,<Mode7.bin
 
 
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
