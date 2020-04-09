@@ -1,3 +1,7 @@
+* It springs to mind that I should perhaps hook this up to a 6502 emulator with a "realtime" emulated display to help prototype games/demos.
+
+
+
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
 	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so the added value will be partially updated and used.
 
