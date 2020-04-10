@@ -7,10 +7,6 @@
 
 
 
-* Mode7 tiles to 64 instead of 32? Would need more RAMs
-
-
-
 * Perhaps a layer combination board, which does the zero 3-bit or 8 bit pixel test and allows multiple expansion planes to be used?
 
 
