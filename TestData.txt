@@ -97,10 +97,10 @@ s$40000800
 ; Standard resolution test uses the tile hardware scroll registers at $9e01/2/3/4 to shift the screen around
 
 s$20008000
-!TilesScreenRow.txt
-!TilesScreenRow.txt
-!TilesScreenRow.txt
-!TilesScreenRow.txt
+;!TilesScreenRow.txt
+;!TilesScreenRow.txt
+;!TilesScreenRow.txt
+;!TilesScreenRow.txt
 
 s$30008000
 !TilesColourRow.txt
