@@ -287,6 +287,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 ### Raster line schedule
 
 	RV = vertical raster line number
+		$f8-$ff	lo _VSYNC
+		$00-$ff	hi _VSYNC
+			$10		lo VBLANK
+			$f0		hi VBLANK
 	RH = horizontal pixel clock
 		Full line starts at $180 to $1ff then $000 to $0ff
 		Giving 384 pixel clocks per line
@@ -300,6 +304,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 			1V*. H
 			Note 4A/B are $ff blank
 			Note 4C/D have pixel data in the first 8 bytes (16 pixels) then 0xff blank
+			hi _HSYNC
 	$182	SREAD $21
 	$184	SREAD $22
 	$186	SREAD $23
@@ -320,9 +325,12 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	$199H	Begin sprite 1 pixel writes
 			Pixel $67 written (0 offset LSB byte in the window)
 			This is transparent .111 with palette .1100
+	$1b0	lo _HSYNC
+	$1d0	hi _HSYNC
 	$000	SREAD $40 same 4x2 pattern as above
 	$008L	Pixel data arrives at 5E2
 	$009H	Pixel data is latched into 5E2
+	$00a	Pixels start arriving at the real video output, resistor ladders
 			Pixel also cleared in 4C/D
 			This clears the pixel just output to the final video palette check since it's obviously not needed
 	$0fe	SREAD $7f
