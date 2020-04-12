@@ -887,3 +887,7 @@
 		Not mathematical, one of the tile RAMs on the second pixel phase was in contention with the other tile RAM, even though _CE is exclusive
 		The contention value was being read by the output latch
 		So separated the two input ED0..7 bus inputs with an extra 74373
+
+		
+		
+* Align the 3 bus headers in the video cards with UserPortTo24BitAddress.pdsprj
