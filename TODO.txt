@@ -1,4 +1,13 @@
 * It springs to mind that I should perhaps hook this up to a 6502 emulator with a "realtime" emulated display to help prototype games/demos.
+	* Display container
+	* Write data method, calls write data events in layers
+	* Calculate pixel method, at current H/V position, advances to each pixel
+		* Takes VBLANK and border shrink into account
+	* Maintains the image X/Y, which are different to H/V
+	* Add layers
+		* Write data event
+			* Can set a bus contention timer (in pixels) to allow simulation of display artefacts
+		* Get pixel index event includes H/V display registers
 
 
 
