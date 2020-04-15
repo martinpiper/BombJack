@@ -219,7 +219,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9000   $400 bytes   | Screen character index                  |
    | $01           | Original RAMs                 | $9400   $400 bytes   | Screen colour                           |
    | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
-   | $01           | Original RAMs                 | $9c00   $100 bytes   | Palette GR XB 2 bytes per entry         |
+   | $01           | Original RAMs                 | $9c00   $200 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |
    | $01           | Original RAMs                 | $9e01/2              | Background image XL/XH pixel scroll     |
    | $01           | Original RAMs                 | $9e03/4              | Background image YL/YH pixel scroll     |
