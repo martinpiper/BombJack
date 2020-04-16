@@ -290,6 +290,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 		$f8-$ff	lo _VSYNC
 		$00-$ff	hi _VSYNC
 			$10		lo VBLANK
+			$e0		lo ENABLEPIXELS with bordery flag
 			$f0		hi VBLANK
 	RH = horizontal pixel clock
 		Full line starts at $180 to $1ff then $000 to $0ff

@@ -78,6 +78,7 @@ s$9c000100
 ;b$00,b$00,b$ff,b$0f,b$dd,b$0d,b$bb,b$0b,b$99,b$09,b$77,b$07,b$55,b$05,b$33,b$03
 
 ;During the sphinx level
+;Also saved as PaletteData.bin
 b$00,b$00,b$00,b$00,b$ff,b$0f,b$ce,b$08,b$ff,b$0f,b$0f,b$00,b$a0,b$0f,b$ff,b$00
 b$00,b$00,b$2a,b$00,b$50,b$00,b$a0,b$00,b$88,b$08,b$66,b$06,b$44,b$04,b$f0,b$00
 b$00,b$00,b$0f,b$00,b$00,b$00,b$44,b$04,b$88,b$08,b$cc,b$0c,b$ff,b$0f,b$0f,b$00
