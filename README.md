@@ -305,6 +305,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 			Note 4A/B are $ff blank
 			Note 4C/D have pixel data in the first 8 bytes (16 pixels) then 0xff blank
 			hi _HSYNC
+	$181	lo ENABLEPIXELS (with borderx flag)
 	$182	SREAD $21
 	$184	SREAD $22
 	$186	SREAD $23
@@ -316,6 +317,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 			4A/B First pixel written $7f (0 offset LSB byte in the window)
 			Note 7 written into 4B since it is the high nybble, 4A looks unchanged
 			This is transparent .111 with palette .1111
+			lo ENABLEPIXELS (with no border flags)
 	$18aH	4A/B Second pixel written $7b (0 offset MSB byte in the window)
 			This is not transparent .011 with palette .1111
 	$190	SREAD $24 same 4x2 repeating pattern every 2 pixels
@@ -330,9 +332,11 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	$000	SREAD $40 same 4x2 pattern as above
 	$008L	Pixel data arrives at 5E2
 	$009H	Pixel data is latched into 5E2
+			hi ENABLEPIXELS (with no border flags)
 	$00a	Pixels start arriving at the real video output, resistor ladders
 			Pixel also cleared in 4C/D
 			This clears the pixel just output to the final video palette check since it's obviously not needed
+	$00d	hi ENABLEPIXELS (with borderx flag)
 	$0fe	SREAD $7f
 	Loops back to $180 again and RV increment
 
