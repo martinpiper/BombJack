@@ -101,7 +101,11 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 0x9400-0x97ff	Colour RAM
 0x9c00-0x9cff	Palette RAM
 
-0x9e00 xy		Background screen image enable (x) and index (y)
+0x9e00	0x10	Enable tiles
+		0x20	Enable display
+		0x40	BorderX shrink
+		0x80	BorderY shrink
+
 
 
 Sprite 32x32 size select
@@ -285,6 +289,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 
 
 ### Raster line schedule
+
+	_HSYNC continues its pulses on every line, even when _VSYNC is low
+	Positive edge of _HSYNC indicates start of the line
+	Negative edge of _VSYNC indicates start of the frame
 
 	RV = vertical raster line number
 		$f8-$ff	lo _VSYNC

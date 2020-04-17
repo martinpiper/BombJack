@@ -27,20 +27,24 @@ d$a014017f
 ;  y	index (DB0-3)
 ; Write data from into RAM mapped at $9e00 with EBS $01
 ; Disable the display
-d$9e000112
+d$9e000110
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010107
-d$9e010307
+d$9e030107
 d$9e01010f
-d$9e01030f
+d$9e03010f
 ; No scroll position
 d$9e010100
-d$9e010300
+d$9e030100
 
 ; Tile XH/YH position offset
-d$9e020201
-d$9e020401
+; The castle (towers pointing to the left)
+d$9e020103
+d$9e040103
+; The sphinx
+d$9e020100
+d$9e040100
 
 ; Clear background palette choice to 1f (high palette)
 d$a01401ff
@@ -600,8 +604,10 @@ b$27,b$52,b$c0,b$74
 ; Background image enable and index, shrink bottom border
 ;d$9e0001b2
 
-; Background image disable, enable display
-d$9e000132
+; Background tile disable, enable display
+d$9e000120
+; Background tile enable, enable display
+d$9e000130
 
 
 !TestTileDisableRapidColours.txt
