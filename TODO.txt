@@ -8,6 +8,8 @@
 		* Write data event
 			* Can set a bus contention timer (in pixels) to allow simulation of display artefacts
 		* Get pixel index event includes H/V display registers
+	* Mode7, tiles and chars tests work well: https://twitter.com/MartinPiper/status/1251190688173027328
+		Code: https://github.com/martinpiper/BDD6502/commit/061eaa68c0dedacdcd5d0586308e5bffdee34ec8
 
 
 
