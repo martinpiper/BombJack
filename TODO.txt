@@ -12,6 +12,10 @@
 		Code: https://github.com/martinpiper/BDD6502/commit/061eaa68c0dedacdcd5d0586308e5bffdee34ec8
 
 
+* UserPort: On reset of the state clear all output values to zero instead of needing to send 0 bytes to clear them all. See reset24BitBus
+	Use bus write pulse to zero output when not active
+
+
 
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
 	This would allow updates at any point in the scanline, with the copper. At the moment a write to the l/h/hh registers cannot happen in one pixel clock so the added value will be partially updated and used.
