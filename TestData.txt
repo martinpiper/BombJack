@@ -431,8 +431,8 @@ s$98200100
 
 
 ; Spread out all over the screen
-b$28,b$01,b$38,b$10
-b$29,b$01,b$3a,b$20
+b$28,b$01,b$c8,b$e0
+b$28,b$01,b$c8,b$f0
 ; Hi bit palette set
 b$2a,b$11,b$3c,b$30
 b$2b,b$11,b$3e,b$40
@@ -619,11 +619,11 @@ d$0
 ;!TestMode7Registers.txt
 
 
-; Wait for _VBLANK and shrink borders
+; Wait for _VBLANK and shrink borders (borderx and bordery)
 ^-$01
 ; Note the zero data after the wait, this helps with timings of the following memory writes as the display finally releases the bus
 d$0
-d$9e0001f2
+d$9e0001f0
 ; Also start moving a sprite
 d$98420139
 b$11

@@ -106,7 +106,14 @@
 	* Unfortunately the above uses more than 8 colours per 16x16 tile, look for others?
 	https://opengameart.org/content/colored-16x16-fantasy-tileset
 	Tests worked quite well: https://twitter.com/MartinPiper/status/1218539634847711232
-
+	Other open game art assets:
+		https://opengameart.org/content/gradius-clone-sprites
+		https://opengameart.org/content/mediumtanks
+		https://opengameart.org/users/chabull
+		https://opengameart.org/content/16x16-overworld-tiles
+		https://opengameart.org/content/forest-tiles
+		
+	
 	
 
 * Need DigitalDisplay frame recording and verification of displayed frame with recorded frame.
