@@ -117,6 +117,15 @@
 		C:\Users\Martin Piper\Downloads\tiled-windows-64bit-snapshot
 		Supports flips, allows export as large image
 	https://ogmoeditor.itch.io/editor
+	
+	A thought, why not use the RPG assets? Those demonstrated by TestData2.txt
+		The conversion is already setup, they do not use that many palettes
+		Could include all the other graphics, especially for the chars and score panel
+			Char screen can overlay shops
+		The mode7 layer could be used to draw clouds, or other effects like wipe transitions (zooming circle?), over the sprites and tiles
+			https://opengameart.org/content/cloud-set
+
+		
 		
 	
 	
