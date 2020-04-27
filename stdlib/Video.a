@@ -1,0 +1,76 @@
+!zn
+; Waits for vsync to be triggered from the video
+Bus24Bit_WaitVSync
+	lda #%10000
+.l2
+	bit CIA2InterruptControl
+	beq .l2
+	rts
+
+
+Bus24Bit_DisableDisplay
+	jsr Bus24Bit_SetAddressVideoControlRegisters
+	lda #$00
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_EnableDisplay
+	pha
+	jsr Bus24Bit_SetAddressVideoControlRegisters
+	pla
+	sta CIA2PortBRS232
+	rts
+
+	
+; A/X = lo/hi address
+; Y = length
+Bus24Bit_SpriteDataCopy
+	pha
+	jsr Bus24Bit_SetAddressSprites
+	pla
+	jmp Bus24Bit_CopySmallData
+
+
+Bus24Bit_SetAddressVideoControlRegisters
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$9e
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressPalette
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$9c
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressSprites
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$20
+	sta CIA2PortBRS232
+	lda #$98
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressSpritesControl
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$9a
+	sta CIA2PortBRS232
+	rts

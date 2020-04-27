@@ -1,0 +1,58 @@
+!zn
+; Initialise the bus
+Bus24Bit_Init
+	; Setup PA2 for writing
+	lda #%100
+	sta CIA2PortADDR
+
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+	
+	jsr Bus24Bit_Reset
+	; Send zero bytes for the bus and data
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	jsr Bus24Bit_Reset
+	rts
+
+
+; Resets the 24 bit bus
+Bus24Bit_Reset
+	; Reset the state input again
+	lda #%000
+	sta CIA2PortASerialBusVICBank
+	lda #%100
+	sta CIA2PortASerialBusVICBank
+	rts
+
+
+; A/X = lo/hi address
+; Y = length
+Bus24Bit_CopySmallData
+	sta .sm1+1
+	stx .sm1+2
+	sty .sm2+1
+	ldy #0
+.l1
+.sm1	lda $1234,y
+	sta CIA2PortBRS232
+	iny
+.sm2	cpy #0
+	bne .sm1
+	rts
+
+
+; A = EBBS
+; X/Y = lo/hi address
+Bus24Bit_SetAddressBus
+	pha
+	jsr Bus24Bit_Reset
+	pla
+	sta CIA2PortBRS232
+	stx CIA2PortBRS232
+	sty CIA2PortBRS232
+	rts
