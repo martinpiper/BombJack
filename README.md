@@ -149,7 +149,7 @@ Mode7 borrows its name from the graphics mode on the Super NES video game consol
 Each pixel on the layer is accessed using the accumulated results of these registers, this means it is possible to have per-pixel transformations combining translation, scaling, reflection, rotation, and shearing.
 It is possible to update these registers per scanline, or per pixel, and generate even more complex results. Register values are latched and used immediately, so timing the update of the three bytes must be considered.
 
-Note: The internal accumlated values, x/xy/y/yx are not accessible via registers and are reset only by _HSYNC and _VSYNC
+Note: The internal accumulated values, x/xy/y/yx are not accessible via registers and are reset only by _HSYNC and _VSYNC
 
 For each horizontal pixel (on +ve 6MHz):
 

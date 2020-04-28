@@ -1,10 +1,15 @@
 !zn
-; Waits for vsync to be triggered from the video
+; Waits for the start of the vsync to be triggered from the video, which is a negative edge on the vsync line
 Bus24Bit_WaitVSync
+	lda #%10000
+.l1
+	bit CIA2InterruptControl
+	beq .l1
+
 	lda #%10000
 .l2
 	bit CIA2InterruptControl
-	beq .l2
+	bne .l2
 	rts
 
 
@@ -15,6 +20,7 @@ Bus24Bit_DisableDisplay
 	rts
 
 
+; A = Value to use for the video initialisation
 Bus24Bit_EnableDisplay
 	pha
 	jsr Bus24Bit_SetAddressVideoControlRegisters
