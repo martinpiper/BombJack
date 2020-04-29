@@ -119,15 +119,15 @@ s$98200100
 ; y (inverted)
 ; x
 
-;!C:\Work\ImageToBitplane\target\spriteSheet.txt
+!C:\Work\ImageToBitplane\target\spriteSheet.txt
 
 
 ; Background image enable and index
 d$9e000130
 
-;d$0
-;^-$01
-;d$0
+d$0
+^-$01
+d$0
 ;
 ;s$98200100
 ;!C:\Work\ImageToBitplane\target\spriteSheet2.txt
