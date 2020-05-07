@@ -294,6 +294,8 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	_HSYNC continues its pulses on every line, even when _VSYNC is low
 	Positive edge of _HSYNC indicates start of the line
 	Negative edge of _VSYNC indicates start of the frame
+	
+	Positive edge of VBLANK indicates the bottom of the visible screen edge
 
 	RV = vertical raster line number
 		$f8-$ff	lo _VSYNC

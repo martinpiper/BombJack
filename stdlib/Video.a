@@ -1,6 +1,6 @@
 !zn
-; Waits for the start of the vsync to be triggered from the video, which is a negative edge on the vsync line
-Bus24Bit_WaitVSync
+; Waits for the start of the _VBLANK to be triggered from the video, which is a negative edge on the _VBLANK line
+Bus24Bit_WaitVBlank
 	lda #%10000
 .l1
 	bit CIA2InterruptControl
