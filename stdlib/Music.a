@@ -2,14 +2,16 @@
 ; This expects the following labels to be defined:
 ; MusicDataStart
 ; MusicDataStart_afterHeader = MusicDataStart + 4
-; 	!bin "testdata/exportedMusicEvents.bin"
+; 	!bin "testdata/exportedMusicEvents.cmp"
 ; MusicDataEnd
 
 ; Use: jsr MusicInit
-; Then every frame: jsr MusicPlay
+; Then every frame: jsr MusicPoll
 
 ; When using BDD6502
 ; Given a new audio expansion
+; And audio refresh window every 0 instructions
+; And audio refresh is independent
 ; Given write data from file "testdata/exportedMusicSamples.bin" to 24bit bus at '0x0000' and addressEx '0x04'
 
 !zn
@@ -115,7 +117,8 @@ DecompressMusic_escapeByte = * + 1
 
 .kMusicCommandWaitFrames			= 0;
 .kMusicCommandSetSampleData			= 1;
-.kMusicCommandPlayNote				= 2;
+.kMusicCommandStop					= 2;
+.kMusicCommandPlayNote				= 3;
 
 .numVoices				= 4
 .voiceSize				= 11
@@ -138,6 +141,7 @@ DecompressMusic_escapeByte = * + 1
 .sampleLoopLengthsHi	!fill 32 , 0
 .sampleLoopLengthsFlag	!fill 32 , 0
 
+.playFlag			!by 0
 .currentFrame		!by 0,0
 .waitUntil			!by 0,0
 .channelPlayingMask	!by 0
@@ -158,6 +162,10 @@ MusicInit
 	jsr GetNextByte_raw
 	jsr GetNextByte_raw
 	sta DecompressMusic_escapeByte
+	
+	lda #1
+	sta .playFlag
+	
 	rts
 
 MusicDecompressTest
@@ -182,6 +190,10 @@ MusicDecompressTest
 	rts
 
 MusicPoll
+	lda .playFlag
+	bne .isPlaying
+	rts
+.isPlaying
 	lda .waitUntil
 	cmp .currentFrame
 	beq .maybeTime
@@ -236,6 +248,14 @@ MusicPoll
 	jmp .getNextCommand
 
 .notkMusicCommandSetSampleData
+	cmp #.kMusicCommandStop
+	bne .notkMusicCommandStop
+
+	lda #0
+	sta .playFlag
+	rts
+	
+.notkMusicCommandStop
 	cmp #.kMusicCommandPlayNote
 	beq .iskMusicCommandPlayNote
 
