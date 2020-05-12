@@ -916,3 +916,18 @@
 		* Get pixel index event includes H/V display registers
 	* Mode7, tiles and chars tests work well: https://twitter.com/MartinPiper/status/1251190688173027328
 		Code: https://github.com/martinpiper/BDD6502/commit/061eaa68c0dedacdcd5d0586308e5bffdee34ec8
+
+		
+		
+* Spot common section in the output music events file and add a new command to "gosub" to a start/end offset section
+	First test run: saving=41620
+	This is based on byte stream data compression, it isn't taking into account the command lengths
+		This means the buffer will need shuffling around when a match is found to enable the next searches to use real in memory data including the new compressed chunked
+		The buffer will also need to be pre-scanned to find a suitable escape byte
+		* With all the above: saving=37059
+			The reduced saving is expected due to some of the duplicated existing data being detected has been removed
+			There are 5 levels of recursion here
+		* With escapeByte handling: saving=36898
+	* Single pass savings: saving=24686
+		Multiple pass decompression is going to be hard in 6502 with limited RAM
+		With escapeByte detection: saving=24693
