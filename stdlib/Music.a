@@ -251,8 +251,19 @@ MusicPoll
 	cmp #.kMusicCommandStop
 	bne .notkMusicCommandStop
 
+	jsr Bus24Bit_Reset
+	lda #.regBaseEx
+	sta CIA2PortBRS232
+	lda #<.regActiveControl
+	sta CIA2PortBRS232
+	lda #>.regActiveControl
+	sta CIA2PortBRS232
+	lda .channelPlayingMask
 	lda #0
+	; Kill voices and the play flag
+	sta CIA2PortBRS232
 	sta .playFlag
+
 	rts
 	
 .notkMusicCommandStop
