@@ -6,6 +6,7 @@
 	The 8K sample RAM can be populated using the output from C64\VideoHardware\target\debugData.txt
 		* Done - Needs expansion to the full 64K
 	* Audio registers, latches, are needed
+		Starting to connect voice 0, the latches so far read the correct values
 	
 	
 
