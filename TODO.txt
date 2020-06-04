@@ -4,7 +4,7 @@
 	* BDD6502\src\main\java\com\bdd6502\AudioExpansion.java
 	* Target 4 voices, for one channel output, 
 	The 8K sample RAM can be populated using the output from C64\VideoHardware\target\debugData.txt
-		* Needs expansion to the full 64K
+		* Done - Needs expansion to the full 64K
 	* Audio registers, latches, are needed
 	
 	
