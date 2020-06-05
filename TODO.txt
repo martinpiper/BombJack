@@ -7,6 +7,7 @@
 		* Done - Needs expansion to the full 64K
 	* Audio registers, latches, are needed
 		Starting to connect voice 0, the latches so far read the correct values
+		All voice 0 latches work, loop mask and active mask also work
 	
 	
 
