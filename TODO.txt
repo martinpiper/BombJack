@@ -8,6 +8,11 @@
 	* Audio registers, latches, are needed
 		Starting to connect voice 0, the latches so far read the correct values
 		All voice 0 latches work, loop mask and active mask also work
+	* voiceInternalCounter[voice] += voiceRate[voice];
+		with V0ST_ADDCOUNTER phase
+	* voiceInternalCounter clear on voice inactive
+	* TODO - voiceInternalChooseLoop will need the result of length comparison
+	* HW: Note selective reset of only some adders when length is reached
 	
 	
 
