@@ -13,6 +13,11 @@
 	* voiceInternalCounter clear on voice inactive
 	* TODO - voiceInternalChooseLoop will need the result of length comparison
 	* HW: Note selective reset of only some adders when length is reached
+	* Can use data: ..\C64\VideoHardware\target\debugData.txt
+	* Or TestAudio1.txt
+	* For comparison: http://www.ti.com/lit/ds/symlink/sn54s85.pdf?ts=1591365901295
+		Comparison output works
+		Now needs to process the result comparison at the appropriate time, after the output has a chance to be stable
 	
 	
 

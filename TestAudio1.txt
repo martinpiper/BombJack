@@ -1,0 +1,49 @@
+d0
+
+; Some sample data
+d$00000401
+d$00010412
+d$00020423
+d$000304c0
+d$000404ff
+
+; Test each sample data 8K bank
+d$00010401
+d$20020402
+d$40030403
+d$60040404
+d$80040405
+d$a0040406
+d$c0040407
+d$e0040408
+
+
+; Audio registers
+; Loop and active = 0
+d$802c0100
+d$802d0100
+
+; Voice 0
+; Volume
+d$800001ff
+; Address
+d$80010102
+d$80020100
+; Length
+d$80030104
+d$80040100
+; Rate
+d$80050100
+d$80060110
+; Loop address
+d$80070120
+d$80080140
+; Loop length
+d$80090103
+d$800a0100
+
+; Turn on looping and voice 0
+d$802c0101
+d$802d0101
+
+d0
