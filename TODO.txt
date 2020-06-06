@@ -18,7 +18,24 @@
 	* For comparison: http://www.ti.com/lit/ds/symlink/sn54s85.pdf?ts=1591365901295
 		Comparison output works
 		Now needs to process the result comparison at the appropriate time, after the output has a chance to be stable
-	
+			V0INTCOMPARELOOP latch works
+			Need a suitable input to the counter latches
+				V0ST_COMPARELENGTH	| VOICEACTIVEMASK0	| V0COMPISGE	| output
+				0					| 0					| 0				| 0
+				0					| 0					| 1				| 0
+				0					| 1					| 0				| 1
+				0					| 1					| 1				| 1
+				1					| 0					| 0				| 0
+				1					| 0					| 1				| 0
+				1					| 1					| 0				| 1
+				1					| 1					| 1				| 0
+			https://www.dcode.fr/boolean-expressions-calculator
+				Using: (!a && b && !c) || (!a && b && c) || (a && b && !c)
+				Gives: (NOT a AND b) OR (b AND NOT c)
+			Using the result in: https://www.dcode.fr/boolean-truth-table
+				Matches my intended truth table
+			Using digital data recording mode, output\DebugAudio.txt, with read on RAM read state, shows the counter values correctly counting
+			
 	
 
 

@@ -5,3 +5,4 @@ Bomb Jack.log
 VSMDigitalDisplay.dll
 VSMDigitalData.dll
 *.bmp
+output/DebugAudio.txt
