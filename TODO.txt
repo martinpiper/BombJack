@@ -50,7 +50,17 @@
 			NOT a OR b OR c
 
 		Need address or loop address add to counter and memory read states
+			V0ST_OUTPUTADDR
+			V0ST_READRAM
+			Created common adders for:
+				COMMONADDRESS0..15
+				COMMONPOSITION0..15
+				COMMONREADADDRESS0..15
 		And if not voice active then just output 0x80
+		And latch output of sample once for all four voices?
+			Cascade adders for sample?
+			Then final output latch or 0xff read on carry detection for values > 0xff
+
 	
 
 
