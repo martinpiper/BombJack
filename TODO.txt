@@ -35,7 +35,22 @@
 			Using the result in: https://www.dcode.fr/boolean-truth-table
 				Matches my intended truth table
 			Using digital data recording mode, output\DebugAudio.txt, with read on RAM read state, shows the counter values correctly counting
-			
+
+		Done - Need voicesActiveMask reset logic based on not looping
+				V0ST_COMPARELENGTH	| _V0RESETCOUNTER	| VOICELOOPMASK0	| output
+				0					| 0					| 0					| 1
+				0					| 0					| 1					| 1
+				0					| 1					| 0					| 1
+				0					| 1					| 1					| 1
+				1					| 0					| 0					| 0
+				1					| 0					| 1					| 1
+				1					| 1					| 0					| 1
+				1					| 1					| 1					| 1
+			(!a && !b && !c) || (!a && !b && c) || (!a && b && !c) || (!a && b && c) || (a && !b && c) || (a && b && !c) || (a && b && c)
+			NOT a OR b OR c
+
+		Need address or loop address add to counter and memory read states
+		And if not voice active then just output 0x80
 	
 
 
