@@ -6,3 +6,4 @@ VSMDigitalDisplay.dll
 VSMDigitalData.dll
 *.bmp
 output/DebugAudio.txt
+output/DebugAudioCounter.txt

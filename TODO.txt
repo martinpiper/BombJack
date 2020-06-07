@@ -67,6 +67,9 @@
 			Why? With SAMP8 enabled in the simulation the RAM fails to write and read properly
 				74245 is needed to isolate each RAM, it fixes the incorrect read
 				The _OE,_WE, _CE is connected, just like all other RAMs for their respective banks
+				_OE period has been reduced to only the time for address setup and read result
+				_CE period has been reduced to only the time for address setup and read result, or EBS2 request time
+				* This has fixed SAMP8 write issues and SAMPD read issues
 
 
 		And if not voice active then just output 0x80
