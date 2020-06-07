@@ -70,6 +70,16 @@
 				_OE period has been reduced to only the time for address setup and read result
 				_CE period has been reduced to only the time for address setup and read result, or EBS2 request time
 				* This has fixed SAMP8 write issues and SAMPD read issues
+					d$01230002
+					d$01c00003
+					d$01ff0004
+					d$01730005
+					d$01014020
+					d$01024021
+					d$01034022
+					d$01014020
+					d$01024021
+					d$01034022
 
 
 		And if not voice active then just output 0x80
