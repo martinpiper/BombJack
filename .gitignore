@@ -7,3 +7,7 @@ VSMDigitalData.dll
 *.bmp
 output/DebugAudio.txt
 output/DebugAudioCounter.txt
+Audio.log
+Audio.DO
+Audio.EDF
+Audio.sts

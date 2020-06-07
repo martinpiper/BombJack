@@ -82,6 +82,7 @@
 					d$01034022
 
 
+		Need volume calculation, could be part of the common sample read module with a large EPROM
 		And if not voice active then just output 0x80
 		And latch output of sample once for all four voices?
 			Cascade adders for sample?
