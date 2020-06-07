@@ -56,7 +56,7 @@
 				COMMONADDRESS0..15
 				COMMONPOSITION0..15
 				COMMONREADADDRESS0..15
-			TODO: Read debug and logic analyser indicates a spurious value read for AUDA=4
+			TODO: Read debug and logic analyser indicates an incorrect value read for AUDA=4
 				Perhaps the setup address time is not long enough?
 				But reducing AUDCLK results in the RAMs not being written?!!
 				d$00230002
@@ -64,6 +64,10 @@
 			>>>>	d$01080004	Should be 0xff but reading 0x08???
 				d$01730005
 				d$01004020
+			Why? With SAMP8 enabled in the simulation the RAM fails to write and read properly
+				74245 is needed to isolate each RAM, it fixes the incorrect read
+				The _OE,_WE, _CE is connected, just like all other RAMs for their respective banks
+
 
 		And if not voice active then just output 0x80
 		And latch output of sample once for all four voices?
