@@ -49,7 +49,7 @@
 			(!a && !b && !c) || (!a && !b && c) || (!a && b && !c) || (!a && b && c) || (a && !b && c) || (a && b && !c) || (a && b && c)
 			NOT a OR b OR c
 
-		Need address or loop address add to counter and memory read states
+		Done - Need address or loop address add to counter and memory read states
 			V0ST_OUTPUTADDR
 			V0ST_READRAM
 			Created common adders for:
@@ -81,15 +81,18 @@
 					d$01024021
 					d$01034022
 
+		* Done - Need to remove all unique voice internal terminals and group all unique voice input/output terminals for easier update
 
 		Need volume calculation, could be part of the common sample read module with a large EPROM
 		And if not voice active then just output 0x80
+		
+		* Need to create other voices
+
 		And latch output of sample once for all four voices?
 			Cascade adders for sample?
 			Then final output latch or 0xff read on carry detection for values > 0xff
 		* At the end of a sample, without loop, does the MOD file player output a 0x80 or the last sample read?
 
-	
 
 
 
