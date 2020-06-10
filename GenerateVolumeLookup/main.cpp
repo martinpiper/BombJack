@@ -40,7 +40,7 @@ int main(int argc, char** argv)
 			// Convert from u8 to s8 sample
 			int sampA = a - 0x80;
 			int sampB = b - 0x80;
-			int output = a + b;
+			int output = sampA + sampB;
 			// Convert from s8 to u8 sample
 			output = output + 0x80;
 

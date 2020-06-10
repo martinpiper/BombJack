@@ -94,14 +94,25 @@
 				This uses AUDOE to combine detection for the sample RAM being written to and mutes the output when this happens
 
 		
-		* Need to create other voices
+		* Done - Need to create other voices
 
 		Done - And latch output of sample once for all four voices?
 			Added extra step V0ST_OUTPUTADDR2 to allow V0ST_READRAM to be used for +ve edge trigger
 			Cascade adders for sample?
 			Then final output latch or 0xff read on carry detection for values > 0xff
 			* At the end of a sample, without loop, does the MOD file player output a 0x80 or the last sample read?
+			
+		
+		* VOICELOOPMASK0 all of them, need to be moved to the left and connected
+		
 
+		* Check output data by using VideoHardware demo file and decoding the result for left and right channels
+			* Use ffplay with u8 raw sample input
+
+		
+		* The final output frequency from the hardware needs to be calculated and adjusted in the MOD converter
+			The input clock rate for the crystal/oscillator will play a part here
+			As will the final position of LOADOUTPUT which also resets the counters
 
 
 

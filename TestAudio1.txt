@@ -58,8 +58,69 @@ d$80080140
 d$80090103
 d$800a0100
 
-; Turn on looping and voice 0
-d$802c0101
-d$802d0101
+
+; Voice 1
+; Volume
+d$80000180
+; Address
+d$80010102
+d$80020100
+; Length
+d$80030104
+d$80040100
+; Rate
+d$80050180
+d$80060101
+; Loop address
+d$80070120
+d$80080140
+; Loop length
+d$80090103
+d$800a0100
+
+
+; Voice 2
+; Volume
+d$80000180
+; Address
+d$80010102
+d$80020100
+; Length
+d$80030104
+d$80040100
+; Rate
+d$80050110
+d$80060101
+; Loop address
+d$80070120
+d$80080140
+; Loop length
+d$80090103
+d$800a0100
+
+
+; Voice 3
+; Volume
+d$80000180
+; Address
+d$80010102
+d$80020100
+; Length
+d$80030104
+d$80040100
+; Rate
+d$800501f0
+d$80060100
+; Loop address
+d$80070120
+d$80080140
+; Loop length
+d$80090103
+d$800a0100
+
+
+; Turn on voice 0/2 looping and voice 0/1/2/3
+d$802c0105
+d$802d010f
 
 d0
