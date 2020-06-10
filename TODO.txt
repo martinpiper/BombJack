@@ -85,6 +85,7 @@
 
 		Need volume calculation, could be part of the common sample read module with a large EPROM
 			This can simply cascade into the final output
+			COMMONVOLUME0..7 created
 		
 		And if not voice active then just output 0x80
 			This could use the common logic from _VO_ADDRCNTOUT, when there is no RAM chip enabled at U1 (connected to _VO_ADDRCNTOUT and U52:C)
