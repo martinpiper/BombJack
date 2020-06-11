@@ -1,5 +1,14 @@
 ** V3.0 needs to be regenerated
 
+
+* Video - Changing from 12.096MHz to 15MHz to enable a 320 pixel (480 scan) wide display
+	output\12.096M compared to output\15M shows sprite colour issues with 15M.
+		Similar was seen when attempting hires mode Done.txt: "There is a strange sprite colour corruption when running at VIDCLK = 24 MHz"
+	* Perhaps this is due to ripple from the pixel counters?
+		* Try adding a latch for the counter outputs
+
+	
+
 * Audio board - Audio.pdsprj
 	* BDD6502\src\main\java\com\bdd6502\AudioExpansion.java
 	* Target 4 voices, for one channel output, 
