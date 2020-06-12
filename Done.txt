@@ -931,3 +931,175 @@
 	* Single pass savings: saving=24686
 		Multiple pass decompression is going to be hard in 6502 with limited RAM
 		With escapeByte detection: saving=24693
+
+		
+		
+		
+* Audio board - Audio.pdsprj
+	* BDD6502\src\main\java\com\bdd6502\AudioExpansion.java
+	* Target 4 voices, for one channel output, 
+	The 8K sample RAM can be populated using the output from C64\VideoHardware\target\debugData.txt
+		* Done - Needs expansion to the full 64K
+	* Audio registers, latches, are needed
+		Starting to connect voice 0, the latches so far read the correct values
+		All voice 0 latches work, loop mask and active mask also work
+	* voiceInternalCounter[voice] += voiceRate[voice];
+		with V0ST_ADDCOUNTER phase
+	* voiceInternalCounter clear on voice inactive
+	* TODO - voiceInternalChooseLoop will need the result of length comparison
+	* HW: Note selective reset of only some adders when length is reached
+	* Can use data: ..\C64\VideoHardware\target\debugData.txt
+	* Or TestAudio1.txt
+	* For comparison: http://www.ti.com/lit/ds/symlink/sn54s85.pdf?ts=1591365901295
+		Comparison output works
+		Now needs to process the result comparison at the appropriate time, after the output has a chance to be stable
+			V0INTCOMPARELOOP latch works
+			Need a suitable input to the counter latches
+				V0ST_COMPARELENGTH	| VOICEACTIVEMASK0	| V0COMPISGE	| output
+				0					| 0					| 0				| 0
+				0					| 0					| 1				| 0
+				0					| 1					| 0				| 1
+				0					| 1					| 1				| 1
+				1					| 0					| 0				| 0
+				1					| 0					| 1				| 0
+				1					| 1					| 0				| 1
+				1					| 1					| 1				| 0
+			https://www.dcode.fr/boolean-expressions-calculator
+				Using: (!a && b && !c) || (!a && b && c) || (a && b && !c)
+				Gives: (NOT a AND b) OR (b AND NOT c)
+			Using the result in: https://www.dcode.fr/boolean-truth-table
+				Matches my intended truth table
+			Using digital data recording mode, output\DebugAudio.txt, with read on RAM read state, shows the counter values correctly counting
+
+		Done - Need voicesActiveMask reset logic based on not looping
+				V0ST_COMPARELENGTH	| _V0RESETCOUNTER	| VOICELOOPMASK0	| output
+				0					| 0					| 0					| 1
+				0					| 0					| 1					| 1
+				0					| 1					| 0					| 1
+				0					| 1					| 1					| 1
+				1					| 0					| 0					| 0
+				1					| 0					| 1					| 1
+				1					| 1					| 0					| 1
+				1					| 1					| 1					| 1
+			(!a && !b && !c) || (!a && !b && c) || (!a && b && !c) || (!a && b && c) || (a && !b && c) || (a && b && !c) || (a && b && c)
+			NOT a OR b OR c
+
+		Done - Need address or loop address add to counter and memory read states
+			V0ST_OUTPUTADDR
+			V0ST_READRAM
+			Created common adders for:
+				COMMONADDRESS0..15
+				COMMONPOSITION0..15
+				COMMONREADADDRESS0..15
+			TODO: Read debug and logic analyser indicates an incorrect value read for AUDA=4
+				Perhaps the setup address time is not long enough?
+				But reducing AUDCLK results in the RAMs not being written?!!
+				d$00230002
+				d$01c00003
+			>>>>	d$01080004	Should be 0xff but reading 0x08???
+				d$01730005
+				d$01004020
+			Why? With SAMP8 enabled in the simulation the RAM fails to write and read properly
+				74245 is needed to isolate each RAM, it fixes the incorrect read
+				The _OE,_WE, _CE is connected, just like all other RAMs for their respective banks
+				_OE period has been reduced to only the time for address setup and read result
+				_CE period has been reduced to only the time for address setup and read result, or EBS2 request time
+				* This has fixed SAMP8 write issues and SAMPD read issues
+					d$01230002
+					d$01c00003
+					d$01ff0004
+					d$01730005
+					d$01014020
+					d$01024021
+					d$01034022
+					d$01014020
+					d$01024021
+					d$01034022
+
+		* Done - Need to remove all unique voice internal terminals and group all unique voice input/output terminals for easier update
+
+		Done - Need volume calculation, could be part of the common sample read module with a large EPROM
+			This can simply cascade into the final output
+			COMMONVOLUME0..7 created
+			
+		
+		Done - And if not voice active then just output 0x80
+			This could use the common logic from _VO_ADDRCNTOUT, when there is no RAM chip enabled at U1 (connected to _VO_ADDRCNTOUT and U52:C)
+				This enables uses a latch and selector for the value to load into the final output after the volume calculation
+				This uses AUDOE to combine detection for the sample RAM being written to and mutes the output when this happens
+
+		
+		* Done - Need to create other voices
+
+		Done - And latch output of sample once for all four voices?
+			Added extra step V0ST_OUTPUTADDR2 to allow V0ST_READRAM to be used for +ve edge trigger
+			Cascade adders for sample?
+			Then final output latch or 0xff read on carry detection for values > 0xff
+			* At the end of a sample, without loop, does the MOD file player output a 0x80 or the last sample read?
+			
+		
+		* Done - VOICELOOPMASK0 all of them, need to be moved to the left and connected
+		
+
+		* Check output data by using VideoHardware demo file and decoding the result for left and right channels
+			* Use ffplay with u8 raw sample input
+			c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 3 4
+			c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 0 4
+			"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 31250 c:\temp\t.bin
+				Initial check seems to be OK, the pitch might be off, need to adjust for the final frequency
+
+
+		
+		* Done - The final output frequency from the hardware needs to be calculated and adjusted in the MOD converter
+			The input clock rate for the crystal/oscillator will play a part here
+			As will the final position of LOADOUTPUT which also resets the counters
+				https://www.unitjuggler.com/convert-frequency-from-%C2%B5s(p)-to-Hz.html?val=40
+				25000 Hz
+					C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\ffmpeg.exe -i "C:\Users\Martin Piper\Downloads\Digital Leisure\Dragon's Lair\VIDEO_TS\VTS_06_1.VOB" -y -acodec pcm_u8 -ar 25000 -ac 1 c:\temp\sample.wav
+					Then trim the WAV header and make it 65536 bytes long for testdata\sample.pcmu8
+				IntelliJ run config "TestRunner --exportmod (2)" used and "target\" music data files copied to testdata
+				C64\VideoHardware\BuiltIt.bat also works
+
+
+* When listening to the audio simulation output
+	Simulation to use: C:\Work\C64\VideoHardware\target\debugData.txt
+		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 3 4
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 c:\temp\t.bin
+	Compared to the emulation debug output:
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 c:\work\C64\VideoHardware\target\debugchannel.pcmu8
+
+	The pitch seems to be off, perhaps there is a fault with the looping?
+		Try one voice in simulation first
+		
+	* Or perhaps test the output from run configuration: TestRunner TestVideoHardware.feature
+		Simulation to use: C:\Work\BDD6502\target\debugData.txt
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 C:\Work\BDD6502\target\debugchannel.pcmu8
+		After editing: C:\Work\BDD6502\target\debugData.txt
+			To find d$802c0100 and remove previous video writes, leaving the data writes intact
+		The simulation pitch seems to be OK, but the audio is not entirely clean as expected
+		Listening to the debug data from the channel pre-combination stage:
+			c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudio.txt c:\temp\t.bin 3 4
+			The audio also seems to not be clean, but of the correct pitch
+	Indeed the DebugAudio.txt indicates incorrect memory address reads that are not entirely in sequence:
+		d$00ff7d7d
+		d$01008080
+		>>> d$08017474
+		d$01028383
+		>>> d$08037171
+		d$01048282
+	AUDA breakpoint on 0x100
+		Found: U34->U41 are inverted, whoops
+		DebugAudio.txt indicates correct sequence now
+		Correct audio plays now, sounds clean
+	VideoHardware demo smoke test feature was also missing: And enable video display bus debug output
+		So the debug output was a month old, not using the new rate->frequency conversion
+	Need to test with new data
+		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 0 4
+		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 3 4
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 c:\temp\t.bin
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 C:\Work\C64\VideoHardware\target\debugchannel.pcmu8
+	Sounds cleaner, but the pitch/address/loop still seems to be off still?
+		Higher rates sound worse?
+		* It looks like the "COMMONPOSITION" comparison lines are slightly wrong going into the comparators 7485s
+			Sounds better now
+
