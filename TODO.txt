@@ -171,6 +171,8 @@
 		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 C:\Work\C64\VideoHardware\target\debugchannel.pcmu8
 	Sounds cleaner, but the pitch/address/loop still seems to be off still?
 		Higher rates sound worse?
+		* It looks like the "COMMONPOSITION" comparison lines are slightly wrong going into the comparators 7485s
+			Sounds better now
 
 
 * For the mode7 register latches, it might be better to only latch on the HH byte write, but this would use an additional 3*6 latches, which would be too much.
