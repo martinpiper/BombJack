@@ -14,3 +14,4 @@ Audio.DO
 Audio.EDF
 Audio.sts
 *.opensdf
+output/DebugAudioOutput.txt
