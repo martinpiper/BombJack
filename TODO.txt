@@ -168,6 +168,9 @@
 	VideoHardware demo smoke test feature was also missing: And enable video display bus debug output
 		So the debug output was a month old, not using the new rate->frequency conversion
 	Need to test with new data
+		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 0 4
+		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 3 4
+		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 c:\temp\t.bin
 		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -ar 25000 C:\Work\C64\VideoHardware\target\debugchannel.pcmu8
 	Sounds cleaner, but the pitch/address/loop still seems to be off still?
 		Higher rates sound worse?
