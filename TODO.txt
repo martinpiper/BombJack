@@ -1,5 +1,11 @@
 ** V3.0 needs to be regenerated
 
+* Master latch for mode7 regs?
+	Plus independent x y counter reset? Which could actually be used to hold the counter low for interesting effects
+	This would allow the copper to update in one pixel all the parameters and allow interesting effects where sections of the screen can be changed independently
+	Try in emulation first
+
+	
 
 * Video - Changing from 12.096MHz to 15MHz to enable a 320 pixel (480 scan) wide display
 	output\12.096M compared to output\15M shows sprite colour issues with 15M.
