@@ -1,3 +1,6 @@
+; EnableMode7
+d$a015011f
+d$0
 ; EnableSpritesNoWait
 d$9a000110
 ; SetSpriteAddress

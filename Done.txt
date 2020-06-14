@@ -1103,3 +1103,26 @@
 		* It looks like the "COMMONPOSITION" comparison lines are slightly wrong going into the comparators 7485s
 			Sounds better now
 
+
+			
+			
+			
+* Master latch for mode7 regs?
+	Plus independent x y counter reset? Which could actually be used to hold the counter low for interesting effects
+	This would allow the copper to update in one pixel all the parameters and allow interesting effects where sections of the screen can be changed independently
+	Try in emulation first
+		Emulation looks good
+	* Done - Extend to make all the MR lines independent, do not affect the clock lines
+		reg	MR		tick
+		x	_HSYNC	6MHz
+		xy	_VSYNC	_HSYNC
+		y	_VSYNC	_HSYNC
+		yx	_HSYNC	6MHz
+		Added handleRegisterFlags();
+	* Done - Generate data (both of them) needs updating write: 0xa015=0x1f
+	* Done - Hardware schematic needs to include extra logic for _HSYNC and _VSYNC based on flags
+		Checked with test data
+	* Done - Check extra AND gate IC usage and board group in Mode7
+	* Check auto-place and route board size
+	* Done - 6502 driver code needs write: 0xa015=0x07
+	* Done - Feature files need updating too

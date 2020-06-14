@@ -152,6 +152,8 @@ int main(int argc, char**argv)
 	npcType[npcIndex] = kNPCTypeGirl;
 	npcIndex++;
 
+	EnableMode7(file);
+
 	assert(npcIndex == kNumNPCs);
 
 	int switchDir = 16;

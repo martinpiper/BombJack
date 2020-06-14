@@ -1,23 +1,5 @@
 ** V3.0 needs to be regenerated
 
-* Master latch for mode7 regs?
-	Plus independent x y counter reset? Which could actually be used to hold the counter low for interesting effects
-	This would allow the copper to update in one pixel all the parameters and allow interesting effects where sections of the screen can be changed independently
-	Try in emulation first
-		Emulation looks good
-	* Extend to make all the MR lines independent
-	* Generate data (both of them) needs updating write: 0xa015=0x07
-	* Hardware schematic needs to include extra logic for _HSYNC and _VSYNC based on bits:
-		flagDisplayEnable sheet 10 COLCHOOSE
-		flagXCounter to alter an internal _HSYNC that goes low when flagXCounter is low
-		flagYCounter to alter an internal _VSYNC that goes low when flagYCounter is low
-	* 6502 driver code needs write: 0xa015=0x07
-	* Feature files need updating too
-	
-	
-
-	
-
 * Video - Changing from 12.096MHz to 15MHz to enable a 320 pixel (480 scan) wide display
 	output\12.096M compared to output\15M shows sprite colour issues with 15M.
 		Similar was seen when attempting hires mode Done.txt: "There is a strange sprite colour corruption when running at VIDCLK = 24 MHz"

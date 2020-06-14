@@ -15,3 +15,5 @@ void EnableSprites(std::ofstream &file, char spr32);
 void EnableSpritesNoWait(std::ofstream &file, char spr32);
 
 void SetMode7Address(std::ofstream &file);
+
+void EnableMode7(std::ofstream &file);

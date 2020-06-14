@@ -15,6 +15,9 @@ d$b8000112
 d$9e07017f
 ; Testing background colour from mode7 layer
 d$a014017f
+; EnableMode7
+d$a015011f
+d$0
 
 
 ; Background image enable and index

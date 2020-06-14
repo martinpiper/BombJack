@@ -19,6 +19,9 @@ d$9e020100
 d$9e070100
 ; Mode7 background
 d$a00f0100
+; EnableMode7
+d$a015011f
+d$0
 
 
 ; Address auto-increment using data bits 16-31

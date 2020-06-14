@@ -61,3 +61,10 @@ void SetMode7Address(std::ofstream &file)
 	file << "; SetMode7Address" << std::endl;
 	file << "s$a0000100" << std::endl;
 }
+
+void EnableMode7(std::ofstream &file)
+{
+	file << "; EnableMode7" << std::endl;
+	file << "d$a015011f" << std::endl;
+	file << "d$0" << std::endl;
+}
