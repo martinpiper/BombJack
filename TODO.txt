@@ -5,6 +5,7 @@
 	This would allow the copper to update in one pixel all the parameters and allow interesting effects where sections of the screen can be changed independently
 	Try in emulation first
 		Emulation looks good
+	* Extend to make all the MR lines independent
 	* Generate data (both of them) needs updating write: 0xa015=0x07
 	* Hardware schematic needs to include extra logic for _HSYNC and _VSYNC based on bits:
 		flagDisplayEnable sheet 10 COLCHOOSE
