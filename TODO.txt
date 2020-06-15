@@ -5,6 +5,8 @@
 		Similar was seen when attempting hires mode Done.txt: "There is a strange sprite colour corruption when running at VIDCLK = 24 MHz"
 	* Perhaps this is due to ripple from the pixel counters?
 		* Try adding a latch for the counter outputs
+			No improvement
+
 
 	
 
