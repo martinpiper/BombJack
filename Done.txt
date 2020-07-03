@@ -1132,3 +1132,11 @@
 	c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 1 2
 	"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -channels 2 -ar 25000 c:\temp\t.bin
 	
+	
+	
+* Audio - Consider sub-circuit mode for all other voices
+	voice 0 starts, then at 7.7+ seconds voice 2 is active
+	Root sheet 4 (voice0) schematic note:
+		Copy this entire schematic to the first sub-circuit sheet.
+		The sub-circuits are located on the next sheet.
+	The sub-circuits are connected using voice 0 labels, the four channel output has been checked.
