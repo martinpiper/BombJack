@@ -1140,3 +1140,5 @@
 		Copy this entire schematic to the first sub-circuit sheet.
 		The sub-circuits are located on the next sheet.
 	The sub-circuits are connected using voice 0 labels, the four channel output has been checked.
+		Auto place and auto route checked
+		
