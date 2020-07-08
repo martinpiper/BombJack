@@ -10,6 +10,7 @@
 	https://en.wikipedia.org/wiki/SCART SCART lines are 75 ohms
 	https://www.epanorama.net/faq/vga2rgb/scart.html also useful reference
 	* Note example: TTL to SCART resistor ladder.pdsprj
+	* Audio layout done
 
 
 
