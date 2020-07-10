@@ -1,19 +1,6 @@
 ** V3.0 needs to be regenerated
 
 
-* At the moment the video and audio output uses a 2N-net resistor arrangement, but this can be inaccurate.
-	Consider using a 2N-net arrangement: https://elinux.org/images/e/eb/Howtocolor.pdf
-		Page 16 gives a good example
-		Page 20 advises a pot for the audio volume
-		Page 21 discusses SCART, but a composite signal, we want RGB
-	https://www.retrorgb.com/csync.html discusses TTL sync and 330-450 ohm resistor
-	https://en.wikipedia.org/wiki/SCART SCART lines are 75 ohms
-	https://www.epanorama.net/faq/vga2rgb/scart.html also useful reference
-	* Note example: TTL to SCART resistor ladder.pdsprj
-	* Audio layout done
-
-
-
 
 * Video - Changing from 12.096MHz to 15MHz to enable a 320 pixel (480 scan) wide display
 	output\12.096M compared to output\15M shows sprite colour issues with 15M.
