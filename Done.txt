@@ -1155,5 +1155,6 @@
 	https://www.epanorama.net/faq/vga2rgb/scart.html also useful reference
 	* Note example: TTL to SCART resistor ladder.pdsprj
 	* Audio layout done
-	* Video layout done, added proper output connectors. Analogue components are disabled in the simulation
+	* Video layout done, added proper output connectors
+	* Analogue components are disabled in the simulations
 	
