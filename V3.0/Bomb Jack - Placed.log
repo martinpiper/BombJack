@@ -1,8 +1,0 @@
-# Writing all output to: C:\Work\BombJack\V3.0\Bomb Jack - Placed.log
-set pad_wire_necking on
-bus diagonal
-fanout 5
-route 50
-clean 2
-route 50 16
-Process stopped!
