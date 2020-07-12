@@ -1,104 +1,106 @@
 Pre-production check start.
-File: C:\Work\BombJack\V3.0\Bomb Jack.pdsprj
-Date: 08 April 2020, 22:29:05
+File: C:\Work\BombJack\V3.0\Bomb Jack - Placed Routed.pdsprj
+Date: 12 July 2020, 03:35:37
 TEST: Connectivity.
+Missing connection: U139:9, U143:13
+Missing connection: U243:2, U239:2
 Missing connection: VIDEO4:17, VIDEO5:17
-Missing connection: 4T:11, VIDEO2:17
 Missing connection: VIDEO3:17, VIDEO4:17
 Missing connection: VIDEO3:17, VIDEO1:17
-Missing connection: 5S:13, ROWCOL4:8
-Missing connection: U64:11, ROWCOL5:8
-Missing connection: 3R:12, 5R:13
-Missing connection: U237:1, ROWCOL2:8
-Missing connection: U69:11, ROWCOL5:13
-Missing connection: 3N:12, ROWCOL2:13
-Missing connection: 6H6:10, U69:11
-Missing connection: 5F:12, ROWCOL4:13
-Missing connection: U236:12, ROWCOL2:5
-Missing connection: 3S:11, 6T:5
-Missing connection: U64:6, ROWCOL5:5
-Missing connection: 6K6:10, U64:6
-Missing connection: U69:6, ROWCOL5:16
-Missing connection: U76:10, ROWCOL2:16
-Missing connection: 3P:11, 5F:5
-Missing connection: 5F:5, ROWCOL4:16
-Missing connection: U63:6, ROWCOL5:1
-Missing connection: 1S:4, ROWCOL2:1
-Missing connection: 3S:10, ROWCOL4:1
-Missing connection: 3S:7, ROWCOL3:1
-Missing connection: U68:6, ROWCOL5:20
-Missing connection: 3P:7, 5E:5
-Missing connection: 4P:5, ROWCOL2:20
-Missing connection: 6P6:12, U68:6
-Missing connection: 4R:6, ROWCOL2:9
-Missing connection: 3P:2, ROWCOL3:9
-Missing connection: 3P:2, ROWCOL4:9
+Missing connection: 4T:11, VIDEO2:17
+Missing connection: ROWCOL4:8, 5S:13
+Missing connection: ROWCOL5:8, U64:11
+Missing connection: ROWCOL4:8, 6J6:6
+Missing connection: ROWCOL2:8, 3R:12
+Missing connection: ROWCOL5:13, 6H6:10
+Missing connection: ROWCOL4:13, 6H6:10
+Missing connection: 5F:12, 3N:12
+Missing connection: ROWCOL2:13, U76:15
+Missing connection: ROWCOL5:5, U64:6
+Missing connection: ROWCOL5:5, 6K6:10
+Missing connection: ROWCOL4:5, 6T:3
+Missing connection: ROWCOL2:5, 3S:11
+Missing connection: ROWCOL4:16, 6J6:13
+Missing connection: ROWCOL4:16, ROWCOL5:16
+Missing connection: 5F:5, 3P:11
+Missing connection: ROWCOL2:16, U76:10
+Missing connection: ROWCOL5:1, U63:6
+Missing connection: U10:5, U138:2
+Missing connection: ROWCOL2:1, 3S:10
+Missing connection: ROWCOL3:1, 1S:4
+Missing connection: ROWCOL5:20, U68:6
+Missing connection: ROWCOL5:20, 6P6:12
+Missing connection: ROWCOL4:20, 5E:5
+Missing connection: 5E:5, 3P:7
 Missing connection: ROWCOL4:9, ROWCOL5:9
-Missing connection: U68:2, ROWCOL5:19
-Missing connection: 6P6:9, U68:2
-Missing connection: 3P:14, 5E:3
-Missing connection: 3P:14, ROWCOL2:19
-Missing connection: 5S:10, ROWCOL4:6
-Missing connection: U236:13, ROWCOL2:6
-Missing connection: 3R:14, 5R:10
-Missing connection: U64:2, ROWCOL5:6
-Missing connection: U69:2, ROWCOL5:15
-Missing connection: 3N:14, ROWCOL2:15
-Missing connection: 6H6:3, U69:2
-Missing connection: 5F:3, ROWCOL4:15
-Missing connection: U236:10, ROWCOL2:3
-Missing connection: 3S:13, 2E:6
-Missing connection: 2E:6, ROWCOL4:3
-Missing connection: U63:15, ROWCOL5:3
-Missing connection: U68:15, ROWCOL5:18
-Missing connection: 3P:13, 5E:14
-Missing connection: 6P6:1, U68:15
-Missing connection: 3P:13, ROWCOL2:18
-Missing connection: 5S:12, ROWCOL4:7
-Missing connection: U64:15, ROWCOL5:7
-Missing connection: U236:15, ROWCOL2:7
-Missing connection: 3R:13, 5R:12
-Missing connection: U69:15, ROWCOL5:14
-Missing connection: 3N:13, ROWCOL2:14
-Missing connection: 6H6:6, U69:15
-Missing connection: 5F:14, ROWCOL4:14
-Missing connection: 6J:11, VIDEO4:20
-Missing connection: 3R:2, 6D:2
-Missing connection: 3S:2, VIDEO2:20
-Missing connection: 5P7:9, VIDEO5:20
-Missing connection: U68:11, ROWCOL5:17
-Missing connection: 3P:12, 5E:12
-Missing connection: 3P:12, ROWCOL2:17
-Missing connection: 5E:12, ROWCOL4:17
-Missing connection: U82:2, PIXEL5:1
+Missing connection: ROWCOL2:9, 3N:2
+Missing connection: ROWCOL4:9, 3N:2
+Missing connection: ROWCOL3:9, 3P:2
+Missing connection: ROWCOL5:19, U68:2
+Missing connection: ROWCOL5:19, 6P6:9
+Missing connection: ROWCOL2:19, 3P:14
+Missing connection: 5E:3, 3P:14
+Missing connection: ROWCOL4:6, 5S:10
+Missing connection: ROWCOL5:6, U64:2
+Missing connection: ROWCOL5:6, 6K6:13
+Missing connection: ROWCOL2:6, 4N:1
+Missing connection: ROWCOL5:15, 6H6:3
+Missing connection: ROWCOL4:15, 6H6:3
+Missing connection: ROWCOL2:15, 4N:11
+Missing connection: 5F:3, 3N:14
+Missing connection: ROWCOL5:3, U63:15
+Missing connection: ROWCOL4:3, 2E:6
+Missing connection: 2E:6, 1S:3
+Missing connection: ROWCOL2:3, 3S:13
+Missing connection: ROWCOL5:18, U68:15
+Missing connection: ROWCOL5:18, 6P6:1
+Missing connection: 5E:14, 3P:13
+Missing connection: ROWCOL2:18, 3P:13
+Missing connection: ROWCOL4:7, 5S:12
+Missing connection: ROWCOL5:7, U64:15
+Missing connection: ROWCOL4:7, 6J6:3
+Missing connection: ROWCOL2:7, 3R:13
+Missing connection: ROWCOL5:14, 6H6:6
+Missing connection: ROWCOL4:14, 6H6:6
+Missing connection: ROWCOL2:14, U76:13
+Missing connection: 5F:14, 3N:13
+Missing connection: VIDEO2:20, 6D:2
+Missing connection: VIDEO4:20, 7B:5
+Missing connection: U157:11, 7M7:11
+Missing connection: 4T:9, 6C:2
+Missing connection: ROWCOL5:17, U68:11
+Missing connection: 5E:12, 3P:12
+Missing connection: ROWCOL4:17, 5E:12
+Missing connection: ROWCOL2:17, 3P:12
+Missing connection: PIXEL5:1, U82:2
 Missing connection: PIXEL4:1, 5K8:13
-Missing connection: U82:5, PIXEL5:2
+Missing connection: PIXEL5:2, U82:5
 Missing connection: PIXEL4:2, 5J8:3
-Missing connection: PIXEL4:3, PIXEL5:3
+Missing connection: PIXEL5:3, U82:6
 Missing connection: PIXEL4:3, 5J8:13
-Missing connection: PIXEL4:4, PIXEL5:4
+Missing connection: U157:9, U82:9
 Missing connection: PIXEL4:4, 5H8:3
-Missing connection: U82:12, PIXEL5:8
+Missing connection: PIXEL5:8, U82:12
 Missing connection: PIXEL4:8, 5H8:13
-Missing connection: U82:15, PIXEL5:7
+Missing connection: PIXEL5:7, U82:15
 Missing connection: PIXEL4:7, 5F8:3
-Missing connection: U82:16, PIXEL5:6
+Missing connection: PIXEL5:6, U82:16
 Missing connection: PIXEL4:6, 5F8:13
-Missing connection: U82:19, PIXEL5:5
+Missing connection: PIXEL5:5, U82:19
 Missing connection: PIXEL4:5, 5K8:3
 Missing connection: PIXEL3:1, 5H8:4
 Missing connection: PIXEL3:2, 5H8:12
 Missing connection: PIXEL3:3, 5F8:4
 Missing connection: PIXEL3:4, 5F8:12
 Missing connection: PIXEL3:5, 5K8:4
-Missing connection: U65:16, VIDEO5:16
-Missing connection: U67:10, VIDEO2:16
+Missing connection: VIDEO5:16, U65:16
 Missing connection: VIDEO3:16, VIDEO4:16
+Missing connection: VIDEO2:16, U67:10
 Missing connection: VIDEO2:16, U65:16
-Missing connection: U65:19, VIDEO5:15
-Missing connection: U72:2, VIDEO2:15
+Missing connection: VIDEO5:15, U65:19
+Missing connection: VIDEO2:15, U65:19
 Missing connection: VIDEO3:15, VIDEO4:15
-Missing connection: VIDEO3:15, VIDEO1:15
+Missing connection: VIDEO1:15, VIDEO2:15
 Missing connection: EXPANSIONBUSA4:26, EXPANSIONBUSA5:26
 Missing connection: EXPANSIONBUSA1:26, EXPANSIONBUSA2:26
 Missing connection: EXPANSIONBUSA3:26, EXPANSIONBUSA4:26
@@ -110,88 +112,86 @@ Missing connection: EXPANSIONBUSA4:19, EXPANSIONBUSA5:19
 Missing connection: EXPANSIONBUSA1:19, EXPANSIONBUSA2:19
 Missing connection: EXPANSIONBUSA3:19, EXPANSIONBUSA4:19
 Missing connection: EXPANSIONBUSA3:19, EXPANSIONBUSA1:19
-Missing connection: 2T:10, VIDEO2:3
 Missing connection: VIDEO4:3, VIDEO5:3
 Missing connection: VIDEO3:3, VIDEO4:3
+Missing connection: VIDEO2:3, 2T:10
 Missing connection: VIDEO3:3, VIDEO1:3
 Missing connection: EXPANSIONBUSA4:24, EXPANSIONBUSA5:24
 Missing connection: EXPANSIONBUSA1:24, EXPANSIONBUSA2:24
 Missing connection: EXPANSIONBUSA3:24, EXPANSIONBUSA4:24
 Missing connection: EXPANSIONBUSA3:24, EXPANSIONBUSA1:24
-Missing connection: 3S:1, VIDEO2:14
-Missing connection: U93:1, VIDEO5:14
-Missing connection: VIDEO2:14, U93:1
+Missing connection: VIDEO5:14, U93:1
 Missing connection: VIDEO3:14, VIDEO4:14
-Missing connection: U23:2, EXPANSIONBUSA5:1
-Missing connection: U54:2, EXPANSIONBUSA4:1
-Missing connection: 6K6:5, U1:2
-Missing connection: EXPANSIONBUSA1:1, 2E:11
-Missing connection: U23:5, EXPANSIONBUSA5:2
-Missing connection: U54:5, EXPANSIONBUSA4:2
-Missing connection: 6F2:2, EXPANSIONBUSA2:2
-Missing connection: 6F2:2, 2E:5
-Missing connection: 6H6:14, U21:11
-Missing connection: U88:3, EXPANSIONBUSA5:11
-Missing connection: U87:3, EXPANSIONBUSA2:11
-Missing connection: U61:11, EXPANSIONBUSA4:11
-Missing connection: U25:14, EXPANSIONBUSA5:12
-Missing connection: U61:14, EXPANSIONBUSA4:12
-Missing connection: 4M:1, EXPANSIONBUSA2:12
-Missing connection: EXPANSIONBUSA2:12, U3:14
-Missing connection: U22:2, EXPANSIONBUSA5:13
-Missing connection: U62:2, EXPANSIONBUSA4:13
-Missing connection: 4M:2, EXPANSIONBUSA2:13
-Missing connection: EXPANSIONBUSA2:13, U12:2
-Missing connection: U13:13, EXPANSIONBUSA4:14
+Missing connection: VIDEO2:14, 3R:1
+Missing connection: VIDEO2:14, U65:2
+Missing connection: EXPANSIONBUSA5:1, U70:2
+Missing connection: EXPANSIONBUSA4:1, U59:2
+Missing connection: 2E:11, 8D2:3
+Missing connection: EXPANSIONBUSA2:1, 2E:11
+Missing connection: EXPANSIONBUSA5:2, U70:3
+Missing connection: EXPANSIONBUSA4:2, U59:5
+Missing connection: 2E:5, 6F2:2
+Missing connection: EXPANSIONBUSA2:2, 6F2:2
+Missing connection: 6H6:14, U7:11
+Missing connection: U145:11, U25:11
+Missing connection: U48:11, U88:3
+Missing connection: EXPANSIONBUSA2:11, U87:3
+Missing connection: EXPANSIONBUSA4:12, U48:14
+Missing connection: U145:14, U25:14
+Missing connection: EXPANSIONBUSA2:12, U7:14
+Missing connection: EXPANSIONBUSA2:12, 4M:1
+Missing connection: EXPANSIONBUSA5:13, U26:2
+Missing connection: EXPANSIONBUSA4:13, U49:2
+Missing connection: EXPANSIONBUSA2:13, 4M:2
+Missing connection: EXPANSIONBUSA2:13, U8:2
 Missing connection: U90:1, U9:1
-Missing connection: U90:1, U213:1
-Missing connection: 4M:3, EXPANSIONBUSA2:14
-Missing connection: U90:4, U9:4
-Missing connection: U90:4, U213:4
+Missing connection: EXPANSIONBUSA4:14, U13:13
+Missing connection: U90:1, U147:1
+Missing connection: EXPANSIONBUSA2:14, 4M:3
+Missing connection: EXPANSIONBUSA2:15, 3M:14
+Missing connection: U9:4, 3M:14
+Missing connection: EXPANSIONBUSA5:15, U90:4
 Missing connection: EXPANSIONBUSA4:15, U50:1
-Missing connection: 3M:14, EXPANSIONBUSA3:15
-Missing connection: EXPANSIONBUSA3:15, U50:1
-Missing connection: U90:10, U9:10
+Missing connection: EXPANSIONBUSA5:16, U90:10
+Missing connection: EXPANSIONBUSA2:16, 3M:13
+Missing connection: U9:10, 3M:13
 Missing connection: EXPANSIONBUSA4:16, U50:4
-Missing connection: U90:10, EXPANSIONBUSA5:16
-Missing connection: 3M:13, EXPANSIONBUSA3:16
-Missing connection: EXPANSIONBUSA3:16, U50:4
-Missing connection: U23:11, EXPANSIONBUSA5:3
-Missing connection: U54:11, EXPANSIONBUSA4:3
-Missing connection: 6F2:5, EXPANSIONBUSA2:3
-Missing connection: 6F2:5, 2E:2
-Missing connection: U23:14, EXPANSIONBUSA5:4
-Missing connection: U54:14, EXPANSIONBUSA4:4
-Missing connection: 6F2:14, EXPANSIONBUSA2:4
-Missing connection: 6F2:14, 1D:14
-Missing connection: 6F2:11, EXPANSIONBUSA2:5
-Missing connection: U230:3, EXPANSIONBUSA5:5
-Missing connection: 1D:11, EXPANSIONBUSA4:5
-Missing connection: 6F2:11, 1D:11
-Missing connection: U24:5, EXPANSIONBUSA5:6
-Missing connection: 6D2:2, EXPANSIONBUSA2:6
-Missing connection: 6D2:2, 1D:5
-Missing connection: 1D:5, EXPANSIONBUSA4:6
-Missing connection: U24:11, EXPANSIONBUSA5:7
-Missing connection: 6D2:5, 1D:2
-Missing connection: 6D2:5, EXPANSIONBUSA2:7
-Missing connection: U55:11, EXPANSIONBUSA4:7
-Missing connection: U24:14, EXPANSIONBUSA5:8
+Missing connection: EXPANSIONBUSA5:3, U4:11
+Missing connection: EXPANSIONBUSA4:3, U46:11
+Missing connection: 2E:2, 6F2:5
+Missing connection: EXPANSIONBUSA2:3, 6F2:5
+Missing connection: EXPANSIONBUSA5:4, U4:14
+Missing connection: EXPANSIONBUSA4:4, U59:14
+Missing connection: EXPANSIONBUSA2:4, 6F2:14
+Missing connection: 1D:14, 6F2:14
+Missing connection: EXPANSIONBUSA5:5, U24:2
+Missing connection: 6J6:5, U144:2
+Missing connection: EXPANSIONBUSA4:5, U55:2
+Missing connection: 1D:11, 6F2:11
+Missing connection: EXPANSIONBUSA5:6, U24:5
+Missing connection: EXPANSIONBUSA4:6, U55:5
+Missing connection: EXPANSIONBUSA2:6, 6D2:2
+Missing connection: EXPANSIONBUSA1:6, 1D:5
+Missing connection: EXPANSIONBUSA5:7, U24:11
+Missing connection: EXPANSIONBUSA4:7, U55:11
+Missing connection: 6J6:14, U2:11
+Missing connection: EXPANSIONBUSA2:7, 6D2:5
+Missing connection: EXPANSIONBUSA5:8, U24:14
+Missing connection: EXPANSIONBUSA4:8, U55:14
 Missing connection: 6H6:2, U2:14
-Missing connection: 6D2:14, EXPANSIONBUSA2:8
-Missing connection: U55:14, EXPANSIONBUSA4:8
-Missing connection: 6H6:5, U21:2
-Missing connection: U25:2, EXPANSIONBUSA5:9
-Missing connection: 6D2:11, EXPANSIONBUSA2:9
-Missing connection: U61:2, EXPANSIONBUSA4:9
-Missing connection: 6H6:11, U21:5
-Missing connection: U88:2, EXPANSIONBUSA5:10
-Missing connection: U87:2, EXPANSIONBUSA2:10
-Missing connection: U61:5, EXPANSIONBUSA4:10
-Missing connection: U5:5, EXPANSIONBUSB2:1
+Missing connection: EXPANSIONBUSA2:8, 6D2:14
+Missing connection: EXPANSIONBUSA4:9, U48:2
+Missing connection: 6H6:5, U7:2
+Missing connection: U145:2, U25:2
+Missing connection: EXPANSIONBUSA2:9, 6D2:11
+Missing connection: 6H6:11, U7:5
+Missing connection: U145:5, U25:5
+Missing connection: U48:5, U88:2
+Missing connection: EXPANSIONBUSA2:10, U87:2
+Missing connection: EXPANSIONBUSB2:1, U5:5
+Missing connection: EXPANSIONBUSB3:1, U5:5
+Missing connection: EXPANSIONBUSB4:1, U5:5
 Missing connection: EXPANSIONBUSB4:1, EXPANSIONBUSB5:1
-Missing connection: U5:5, EXPANSIONBUSB3:1
-Missing connection: EXPANSIONBUSB3:1, EXPANSIONBUSB4:1
 Missing connection: EXPANSIONBUSB4:2, EXPANSIONBUSB5:2
 Missing connection: EXPANSIONBUSB1:2, EXPANSIONBUSB2:2
 Missing connection: EXPANSIONBUSB3:2, EXPANSIONBUSB4:2
@@ -200,62 +200,62 @@ Missing connection: EXPANSIONBUSB4:3, EXPANSIONBUSB5:3
 Missing connection: EXPANSIONBUSB1:3, EXPANSIONBUSB2:3
 Missing connection: EXPANSIONBUSB3:3, EXPANSIONBUSB4:3
 Missing connection: EXPANSIONBUSB3:3, EXPANSIONBUSB1:3
-Missing connection: EXPANSIONBUSB4:4, EXPANSIONBUSB5:4
 Missing connection: EXPANSIONBUSB1:4, EXPANSIONBUSB2:4
 Missing connection: EXPANSIONBUSB3:4, EXPANSIONBUSB4:4
 Missing connection: EXPANSIONBUSB3:4, EXPANSIONBUSB1:4
-Missing connection: U13:12, EXPANSIONBUSB4:5
-Missing connection: EXPANSIONBUSB4:5, EXPANSIONBUSB5:5
+Missing connection: EXPANSIONBUSB4:4, EXPANSIONBUSB5:4
 Missing connection: EXPANSIONBUSB1:5, EXPANSIONBUSB2:5
+Missing connection: EXPANSIONBUSB4:5, EXPANSIONBUSB5:5
+Missing connection: EXPANSIONBUSB4:5, U13:12
 Missing connection: EXPANSIONBUSB3:5, EXPANSIONBUSB1:5
-Missing connection: U90:9, EXPANSIONBUSB5:6
-Missing connection: U90:5, EXPANSIONBUSB4:6
+Missing connection: EXPANSIONBUSB3:6, EXPANSIONBUSB1:6
+Missing connection: EXPANSIONBUSB5:6, U90:9
+Missing connection: EXPANSIONBUSB4:6, U90:5
 Missing connection: EXPANSIONBUSB1:6, EXPANSIONBUSB2:6
-Missing connection: EXPANSIONBUSB3:6, EXPANSIONBUSB4:6
-Missing connection: U9:5, EXPANSIONBUSB5:7
-Missing connection: EXPANSIONBUSB2:7, U9:9
+Missing connection: EXPANSIONBUSB2:7, U9:5
+Missing connection: EXPANSIONBUSB4:7, EXPANSIONBUSB5:7
 Missing connection: EXPANSIONBUSB1:7, EXPANSIONBUSB2:7
 Missing connection: EXPANSIONBUSB3:7, EXPANSIONBUSB4:7
-Missing connection: U9:2, EXPANSIONBUSB5:8
 Missing connection: EXPANSIONBUSB2:8, U9:2
+Missing connection: EXPANSIONBUSB4:8, EXPANSIONBUSB5:8
 Missing connection: EXPANSIONBUSB1:8, EXPANSIONBUSB2:8
 Missing connection: EXPANSIONBUSB3:8, EXPANSIONBUSB4:8
 Missing connection: EXPANSIONBUSA4:25, EXPANSIONBUSA5:25
 Missing connection: EXPANSIONBUSA1:25, EXPANSIONBUSA2:25
 Missing connection: EXPANSIONBUSA3:25, EXPANSIONBUSA4:25
 Missing connection: EXPANSIONBUSA3:25, EXPANSIONBUSA1:25
-Missing connection: U40:3, U82:3
-Missing connection: 7C2:18, 6S:14
+Missing connection: U40:3, U66:3
+Missing connection: U173:3, U11:3
+Missing connection: 6R:14, 7B2:18
 Missing connection: 6R:14, U81:3
-Missing connection: U27:3, EXPANSIONBUSA5:34
-Missing connection: U35:4, U82:4
-Missing connection: 7C2:17, 6S:13
+Missing connection: U40:4, U66:4
+Missing connection: U173:4, U11:4
+Missing connection: 6R:13, 7C2:17
 Missing connection: 6R:13, U81:4
-Missing connection: U27:4, EXPANSIONBUSA5:33
-Missing connection: 7C2:16, 6S:11
-Missing connection: U35:7, U82:7
+Missing connection: U40:7, U66:7
+Missing connection: U173:7, U11:7
+Missing connection: 6R:11, 7C2:16
 Missing connection: 6R:11, U81:7
-Missing connection: U27:7, EXPANSIONBUSA5:32
-Missing connection: 7C2:15, 6R:6
-Missing connection: U35:8, U82:8
-Missing connection: 6S:6, U81:8
-Missing connection: U27:8, EXPANSIONBUSA5:31
-Missing connection: U35:13, U82:13
-Missing connection: 7B2:14, 6S:4
-Missing connection: U27:13, EXPANSIONBUSA5:30
-Missing connection: 6S:4, U81:13
-Missing connection: U35:14, U82:14
-Missing connection: 7B2:13, 6S:3
-Missing connection: U27:14, EXPANSIONBUSA5:29
-Missing connection: 6S:3, U81:14
-Missing connection: U35:17, U82:17
-Missing connection: U27:17, EXPANSIONBUSA5:28
-Missing connection: 7B2:12, 2F:17
-Missing connection: U53:17, EXPANSIONBUSA4:28
-Missing connection: U35:18, U82:18
-Missing connection: U27:18, EXPANSIONBUSA5:27
-Missing connection: 7B2:11, 2F:18
-Missing connection: U53:18, EXPANSIONBUSA4:27
+Missing connection: U40:8, U66:8
+Missing connection: U173:8, U11:8
+Missing connection: 6S:6, 7B2:15
+Missing connection: 6R:6, U81:8
+Missing connection: U35:13, U66:13
+Missing connection: U173:13, U11:13
+Missing connection: EXPANSIONBUSA4:30, U53:13
+Missing connection: 6S:4, 7B2:14
+Missing connection: U35:14, U66:14
+Missing connection: U173:14, U11:14
+Missing connection: EXPANSIONBUSA4:29, U53:14
+Missing connection: 6S:3, 7B2:13
+Missing connection: U35:17, U66:17
+Missing connection: U173:17, U11:17
+Missing connection: EXPANSIONBUSA4:28, U53:17
+Missing connection: 2F:17, 7B2:12
+Missing connection: U35:18, U66:18
+Missing connection: U173:18, U11:18
+Missing connection: EXPANSIONBUSA4:27, U53:18
+Missing connection: 2F:18, 7B2:11
 Missing connection: EXPANSIONBUSA4:21, EXPANSIONBUSA5:21
 Missing connection: EXPANSIONBUSA1:21, EXPANSIONBUSA2:21
 Missing connection: EXPANSIONBUSA3:21, EXPANSIONBUSA4:21
@@ -264,102 +264,102 @@ Missing connection: EXPANSIONBUSA4:23, EXPANSIONBUSA5:23
 Missing connection: EXPANSIONBUSA1:23, EXPANSIONBUSA2:23
 Missing connection: EXPANSIONBUSA3:23, EXPANSIONBUSA4:23
 Missing connection: EXPANSIONBUSA3:23, EXPANSIONBUSA1:23
-Missing connection: 4P7R:20, U163:1
-Missing connection: 3R:8, 6T:15
-Missing connection: 7E6:8, 6R7:7
-Missing connection: U78:23, EXPANSIONBUSA4:18
+Missing connection: U173:10, U25:8
+Missing connection: U90:7, U26:15
+Missing connection: U48:15, U232:10
+Missing connection: 6C:8, 1T:7
 Missing connection: PIXEL1:1, 5H8:6
 Missing connection: PIXEL1:2, 5H8:10
 Missing connection: PIXEL1:3, 5F8:6
 Missing connection: PIXEL1:4, 5F8:10
 Missing connection: PIXEL1:5, 5K8:6
-Missing connection: PIXEL1:8, 5M8:9
+Missing connection: PIXEL1:8, 5K8:10
 Missing connection: PIXEL1:7, 5M8:10
-Missing connection: PIXEL1:6, 5M8:11
-Missing connection: 6H6:13, U63:2
-Missing connection: 2E:10, ROWCOL4:2
-Missing connection: 3S:14, 2E:10
-Missing connection: U63:2, ROWCOL5:2
-Missing connection: U63:11, 6K6:6
-Missing connection: U63:11, ROWCOL5:4
-Missing connection: 7S:1, 3S:12
-Missing connection: ROWCOL4:4, 3S:12
-Missing connection: ROWCOL1:4, 3S:12
+Missing connection: PIXEL1:6, 5J8:10
+Missing connection: ROWCOL4:2, 2E:10
+Missing connection: ROWCOL5:2, U63:2
+Missing connection: ROWCOL4:2, 6H6:13
+Missing connection: 2E:10, 1S:5
+Missing connection: ROWCOL5:4, U63:11
+Missing connection: ROWCOL4:4, 6K6:6
+Missing connection: ROWCOL4:4, 7S:1
+Missing connection: ROWCOL2:4, 3S:12
 Missing connection: EXPANSIONBUSA4:22, EXPANSIONBUSA5:22
 Missing connection: EXPANSIONBUSA1:22, EXPANSIONBUSA2:22
 Missing connection: EXPANSIONBUSA3:22, EXPANSIONBUSA4:22
 Missing connection: EXPANSIONBUSA3:22, EXPANSIONBUSA1:22
 Missing connection: PIXEL2:1, 5H8:5
-Missing connection: 4M6:5, 5H8:11
-Missing connection: 4M6:2, 5F8:5
-Missing connection: 4M6:15, 5F8:11
-Missing connection: 2T:8, VIDEO2:1
-Missing connection: 7C:4, VIDEO4:1
+Missing connection: PIXEL2:2, 5H8:11
+Missing connection: PIXEL2:3, 5F8:5
+Missing connection: PIXEL2:4, 5F8:11
+Missing connection: VIDEO4:1, 7C:4
 Missing connection: VIDEO4:1, VIDEO5:1
+Missing connection: VIDEO2:1, 2T:8
 Missing connection: VIDEO3:1, VIDEO1:1
-Missing connection: PIXEL2:8, 5K8:11
+Missing connection: PIXEL2:8, LAYER2:8
 Missing connection: PIXEL2:7, 5J8:5
 Missing connection: PIXEL2:6, 5J8:11
-Missing connection: 4:14, EXPANSIONBUSA5:17
-Missing connection: 3S:9, 6S:16
-Missing connection: U35:20, U63:16
-Missing connection: 2D:16, U81:1
-Missing connection: JP1:”;$, VIDEO2:19
+Missing connection: U35:20, U7:16
+Missing connection: EXPANSIONBUSA5:17, U92:14
+Missing connection: 6M:16, U232:1
+Missing connection: 5R:16, 7B2:20
 Missing connection: VIDEO4:19, VIDEO5:19
 Missing connection: VIDEO3:19, VIDEO4:19
+Missing connection: JP1:1, VIDEO2:19
 Missing connection: VIDEO3:19, VIDEO1:19
-Missing connection: 3R:11, 5R:15
-Missing connection: 5S:15, ROWCOL4:10
-Missing connection: 4R:5, ROWCOL2:10
+Missing connection: 5R:15, 1T:5
+Missing connection: ROWCOL4:10, 1D:3
 Missing connection: ROWCOL4:10, ROWCOL5:10
+Missing connection: ROWCOL2:10, 3R:11
 Missing connection: U78:20, VIDEO4:18
-Missing connection: 2D:9, VIDEO2:18
-Missing connection: VIDEO1:18, 2A:9
+Missing connection: VIDEO2:18, 2D:9
 Missing connection: VIDEO4:18, VIDEO5:18
-Missing connection: 6E:11, VIDEO4:6
+Missing connection: VIDEO1:18, 2A:9
+Missing connection: VIDEO4:6, 6E:11
 Missing connection: VIDEO4:6, VIDEO5:6
-Missing connection: 7R:11, VIDEO2:6
+Missing connection: VIDEO2:6, 7R:11
 Missing connection: VIDEO1:6, 6E:11
-Missing connection: 2T:11, VIDEO2:4
 Missing connection: VIDEO4:4, VIDEO5:4
 Missing connection: VIDEO3:4, VIDEO4:4
+Missing connection: VIDEO2:4, 2T:11
 Missing connection: VIDEO3:4, VIDEO1:4
-Missing connection: U93:2, VIDEO5:13
-Missing connection: VIDEO2:13, U93:2
 Missing connection: 4T:15, VIDEO2:13
+Missing connection: VIDEO3:13, VIDEO1:13
+Missing connection: VIDEO5:13, U93:2
 Missing connection: VIDEO3:13, VIDEO4:13
-Missing connection: 4M:13, BANKSEL4:2
-Missing connection: U87:1, BANKSEL1:”;$
-Missing connection: U87:1, BANKSEL2:”;$
-Missing connection: 4M:11, BANKSEL5:”;$
-Missing connection: J1:1, VIDEO2:12
-Missing connection: VIDEO4:12, VIDEO5:12
+Missing connection: BANKSEL4:2, 4M:13
+Missing connection: U86:1, U88:1
+Missing connection: BANKSEL1:1, U87:1
+Missing connection: BANKSEL2:1, U87:1
+Missing connection: BANKSEL5:1, 4M:11
 Missing connection: VIDEO3:12, VIDEO4:12
-Missing connection: VIDEO2:12, U181:1
-Missing connection: 6F:11, VIDEO4:5
+Missing connection: VIDEO4:12, VIDEO5:12
+Missing connection: J1:1, VIDEO2:12
+Missing connection: VIDEO3:12, 1T:9
+Missing connection: VIDEO4:5, 6F:11
 Missing connection: VIDEO4:5, VIDEO5:5
-Missing connection: 7R:12, VIDEO2:5
+Missing connection: VIDEO2:5, 7R:12
 Missing connection: VIDEO1:5, 6F:11
-Missing connection: 5P7:4, EXPANSIONBUSA5:20
-Missing connection: 3H:10, EXPANSIONBUSA4:20
-Missing connection: 8D2:2, EXPANSIONBUSA2:20
-Missing connection: U91:9, U160:1
-Missing connection: VIDEO1:2, 7S:5
-Missing connection: 3H:2, VIDEO4:2
-Missing connection: 2T:9, VIDEO2:2
+Missing connection: EXPANSIONBUSA5:20, U92:9
+Missing connection: EXPANSIONBUSA4:20, 3H:10
+Missing connection: EXPANSIONBUSA2:20, 8D2:2
+Missing connection: EXPANSIONBUSA3:20, 8D2:2
+Missing connection: VIDEO4:2, 3H:2
 Missing connection: VIDEO4:2, VIDEO5:2
-Missing connection: 1T:4, EXPANSIONBUSC2:”;$
-Missing connection: EXPANSIONBUSC4:”;$, EXPANSIONBUSC5:”;$
-Missing connection: EXPANSIONBUSC3:”;$, EXPANSIONBUSC4:”;$
-Missing connection: 1T:4, EXPANSIONBUSC3:”;$
-Missing connection: 5H:11, VIDEO4:7
-Missing connection: VIDEO1:7, 5H:11
-Missing connection: 7R:10, VIDEO2:7
+Missing connection: VIDEO2:2, 2T:9
+Missing connection: 7S:5, 1S:6
+Missing connection: EXPANSIONBUSC4:1, EXPANSIONBUSC5:1
+Missing connection: EXPANSIONBUSC3:1, EXPANSIONBUSC4:1
+Missing connection: EXPANSIONBUSC2:1, 1T:4
+Missing connection: EXPANSIONBUSC3:1, 1T:4
+Missing connection: VIDEO4:7, 5H:11
 Missing connection: VIDEO4:7, VIDEO5:7
-Missing connection: J1:2, VIDEO2:11
-Missing connection: VIDEO4:11, VIDEO5:11
+Missing connection: VIDEO2:7, 7R:10
+Missing connection: VIDEO1:7, 5H:11
 Missing connection: VIDEO3:11, VIDEO4:11
-Missing connection: VIDEO3:11, VIDEO1:11
+Missing connection: VIDEO4:11, VIDEO5:11
+Missing connection: J1:2, VIDEO2:11
+Missing connection: VIDEO3:11, 1T:10
 FAIL: Connectivity 358 missings.
 For more information, run the connectivity checker.
 TEST: Object validity.
@@ -393,411 +393,417 @@ TEST: Board edge.
 PASS: Board edge complete.
 TEST: Components outside board edge.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1A'.
+Component outside the board edge: 'U247'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1B'.
+Component outside the board edge: 'U237'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1C'.
+Component outside the board edge: 'U236'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1D'.
+Component outside the board edge: 'U235'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1S'.
+Component outside the board edge: 'U234'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '1T'.
+Component outside the board edge: 'U233'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2'.
+Component outside the board edge: 'U232'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2A'.
+Component outside the board edge: 'U231'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2B'.
+Component outside the board edge: 'U230'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2C'.
+Component outside the board edge: 'U95'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2D'.
+Component outside the board edge: 'U94'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2E'.
+Component outside the board edge: 'U93'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2F'.
+Component outside the board edge: 'U92'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '2T'.
+Component outside the board edge: 'U91'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3A'.
+Component outside the board edge: 'U90'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3B'.
+Component outside the board edge: 'U88'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3C'.
+Component outside the board edge: 'U87'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3D'.
+Component outside the board edge: 'U86'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3H'.
+Component outside the board edge: 'U85'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3L6'.
+Component outside the board edge: 'U82'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3M'.
+Component outside the board edge: 'U81'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3M8'.
+Component outside the board edge: 'U80'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3N'.
+Component outside the board edge: 'U79'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3P'.
+Component outside the board edge: 'U76'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3R'.
+Component outside the board edge: 'U73'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3S'.
+Component outside the board edge: 'U70'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '3T'.
+Component outside the board edge: 'U69'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4'.
+Component outside the board edge: 'U68'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4E'.
+Component outside the board edge: 'U67'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4F'.
+Component outside the board edge: 'U66'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4H'.
+Component outside the board edge: 'U65'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4L6'.
+Component outside the board edge: 'U64'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4M'.
+Component outside the board edge: 'U63'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4M6'.
+Component outside the board edge: 'U62'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4N'.
+Component outside the board edge: 'U61'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4P'.
+Component outside the board edge: 'U60'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4P7R'.
+Component outside the board edge: 'U59'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4R'.
+Component outside the board edge: 'U58'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4S'.
+Component outside the board edge: 'U57'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '4T'.
+Component outside the board edge: 'U56'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5E'.
+Component outside the board edge: 'U55'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5E2'.
+Component outside the board edge: 'U54'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5F'.
+Component outside the board edge: 'U53'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5F8'.
+Component outside the board edge: 'U52'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5H'.
+Component outside the board edge: 'U51'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5H8'.
+Component outside the board edge: 'U50'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5J'.
+Component outside the board edge: 'U49'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5J8'.
+Component outside the board edge: 'U48'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5K'.
+Component outside the board edge: 'U47'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5K8'.
+Component outside the board edge: 'U46'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5L'.
+Component outside the board edge: 'U45'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5L6'.
+Component outside the board edge: 'U44'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5M8'.
+Component outside the board edge: 'U43'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5N7'.
+Component outside the board edge: 'U42'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5P'.
+Component outside the board edge: 'U41'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5P7'.
+Component outside the board edge: 'U40'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5R'.
+Component outside the board edge: 'U39'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5R7'.
+Component outside the board edge: 'U38'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5S'.
+Component outside the board edge: 'U37'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5S7'.
+Component outside the board edge: 'U36'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '5T'.
+Component outside the board edge: 'U35'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6A'.
+Component outside the board edge: 'U34'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6A2'.
+Component outside the board edge: 'U33'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6B'.
+Component outside the board edge: 'U32'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6B2'.
+Component outside the board edge: 'U31'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6C'.
+Component outside the board edge: 'U30'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6C2'.
+Component outside the board edge: 'U29'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6D'.
+Component outside the board edge: 'U28'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6D2'.
+Component outside the board edge: 'U27'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6E'.
+Component outside the board edge: 'U26'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6F'.
+Component outside the board edge: 'U25'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6F2'.
+Component outside the board edge: 'U24'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6F6'.
+Component outside the board edge: 'U23'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6H'.
+Component outside the board edge: 'U22'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6H6'.
+Component outside the board edge: 'U21'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6J'.
+Component outside the board edge: 'U20'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6J6'.
+Component outside the board edge: 'U19'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6K'.
+Component outside the board edge: 'U18'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6K6'.
+Component outside the board edge: 'U17'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6L'.
+Component outside the board edge: 'U16'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6LM6'.
+Component outside the board edge: 'U15'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6M'.
+Component outside the board edge: 'U13'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6N2'.
+Component outside the board edge: 'U12'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6N6'.
+Component outside the board edge: 'U11'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6P6'.
+Component outside the board edge: 'U10'.
 FAIL: Component outside of board edge.
-Component outside the board edge: '6R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '6R7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '6S'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '6S7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '6T'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7A'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7A2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7B'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7B2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7C'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7C2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7D'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7D6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7E'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7E6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7F'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7F6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7H'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7H6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7J6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7JR'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7K6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7L7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7LR'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7M7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7MR'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7N'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7N7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7P7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7R7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7S'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7S7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '7T'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8B2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8C6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8D2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8E6R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8H6R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8K6R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8L7R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8N7R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: '8R7R'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'BANKSEL1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'BANKSEL2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'BANKSEL4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'C5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSA1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSA2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSA3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSA4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSB1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSB2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSB3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSB4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSC1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSC2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSC3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'EXPANSIONBUSC4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'INRAMSEL1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'J1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'JP1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'LAYER1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'LAYER2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'LAYER3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'LAYER4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'PIXEL1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'PIXEL2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'PIXEL3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'PIXEL4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R7'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R8'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R9'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R10'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R11'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R12'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R13'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R14'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R15'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R16'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R21'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R22'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R104'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'R105'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RB1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RB2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RB3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RB4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RB5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RG1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RG2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RG3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RG4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RG5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'ROWCOL1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'ROWCOL2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'ROWCOL3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'ROWCOL4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RR1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RR2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RR3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RR4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'RR5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U1'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U2'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U3'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U4'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U5'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U6'.
-FAIL: Component outside of board edge.
-Component outside the board edge: 'U7'.
+Component outside the board edge: 'U9'.
 FAIL: Component outside of board edge.
 Component outside the board edge: 'U8'.
 FAIL: Component outside of board edge.
-Component outside 0 errors, 298 failed, 0 warnings, 15 passed.
+Component outside the board edge: 'U7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U5'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U4'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U3'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'U1'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'R105'.
+FAIL: Component outside of board edge.
+Component outside the board edge: 'R104'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8R7R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8N7R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8L7R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8K6R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8H6R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8E6R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8D2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '8C6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7T'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7S7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7S'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7R7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7P7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7N7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7N'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7MR'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7M7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7LR'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7L7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7K6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7JR'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7J6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7H6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7H'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7F6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7F'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7E6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7E'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7D6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7D'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7C2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7C'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7B2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7B'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '7A'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6T'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6S7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6S'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6R7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6P6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6N6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6N2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6M'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6LM6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6L'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6K6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6K'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6J6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6J'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6H6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6H'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6F6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6F2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6F'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6E'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6D2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6D'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6C2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6C'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6B2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6B'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6A2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '6A'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5T'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5S7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5S'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5R7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5P7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5P'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5N7'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5M8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5L6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5L'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5K8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5K'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5J8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5J'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5H8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5H'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5F8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5F'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5E2'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '5E'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4S'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4P7R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4P'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4N'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4M6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4M'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4L6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4H'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4F'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4E'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '4'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3T'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3S'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3R'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3P'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3N'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3M8'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3M'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3L6'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3H'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3D'.
+FAIL: Component outside of board edge.
+Component outside the board edge: '3C'.
+FAIL: Component outside of board edge.
+Component outside the 0 errors, 316 failed, 0 warnings, 15 passed.
 Pre-production check end:
 Via overlaps and drill ranges.PASS: 
 Via overlaps and drill ranges.TEST: 
@@ -820,6 +826,8 @@ General validation.PASS:
 General object validation tests.TEST: 
 .'X2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
+.'VSYNC1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
 .'VIDEO4'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'VIDEO3'Component outside the board edge: 
@@ -830,180 +838,208 @@ Component outside of board edge.FAIL:
 Component outside of board edge.FAIL: 
 .'VIDCLK'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U237'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U236'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U235'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U234'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U233'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U232'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U231'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U230'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U95'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U94'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U93'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U92'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U91'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U90'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U88'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U87'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U86'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U85'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U82'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U81'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U80'Component outside the board edge: 
-Component outside of board edge.FAIL: 
-.'U79'Component outside the board edge: 
-Component outside of board edge.FAIL: 
 .'U78'Component outside the board edge: 
 Component outside of board edge.FAIL: 
 .'U77'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U76'Component outside the board edge: 
+.'TVSYNC1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U73'Component outside the board edge: 
+.'RV3'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U72'Component outside the board edge: 
+.'RV2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U70'Component outside the board edge: 
+.'RV1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U69'Component outside the board edge: 
+.'ROWCOL4'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U68'Component outside the board edge: 
+.'ROWCOL3'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U67'Component outside the board edge: 
+.'ROWCOL2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U66'Component outside the board edge: 
+.'ROWCOL1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U65'Component outside the board edge: 
+.'R77'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U64'Component outside the board edge: 
+.'R76'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U63'Component outside the board edge: 
+.'R75'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U62'Component outside the board edge: 
+.'R74'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U61'Component outside the board edge: 
+.'R73'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U60'Component outside the board edge: 
+.'R72'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U59'Component outside the board edge: 
+.'R71'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U58'Component outside the board edge: 
+.'R70'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U57'Component outside the board edge: 
+.'R67'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U56'Component outside the board edge: 
+.'R66'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U55'Component outside the board edge: 
+.'R65'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U54'Component outside the board edge: 
+.'R64'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U53'Component outside the board edge: 
+.'R63'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U52'Component outside the board edge: 
+.'R62'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U51'Component outside the board edge: 
+.'R61'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U50'Component outside the board edge: 
+.'R60'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U49'Component outside the board edge: 
+.'R57'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U48'Component outside the board edge: 
+.'R56'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U47'Component outside the board edge: 
+.'R55'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U46'Component outside the board edge: 
+.'R54'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U45'Component outside the board edge: 
+.'R53'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U44'Component outside the board edge: 
+.'R52'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U43'Component outside the board edge: 
+.'R51'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U42'Component outside the board edge: 
+.'R50'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U41'Component outside the board edge: 
+.'R22'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U40'Component outside the board edge: 
+.'R21'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U39'Component outside the board edge: 
+.'R16'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U38'Component outside the board edge: 
+.'R15'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U37'Component outside the board edge: 
+.'R14'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U36'Component outside the board edge: 
+.'R13'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U35'Component outside the board edge: 
+.'R12'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U34'Component outside the board edge: 
+.'R11'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U33'Component outside the board edge: 
+.'R10'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U32'Component outside the board edge: 
+.'R9'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U31'Component outside the board edge: 
+.'R8'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U30'Component outside the board edge: 
+.'R7'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U29'Component outside the board edge: 
+.'R6'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U28'Component outside the board edge: 
+.'R5'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U27'Component outside the board edge: 
+.'R4'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U26'Component outside the board edge: 
+.'R3'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U25'Component outside the board edge: 
+.'R2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U24'Component outside the board edge: 
+.'R1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U23'Component outside the board edge: 
+.'PIXEL4'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U22'Component outside the board edge: 
+.'PIXEL3'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U21'Component outside the board edge: 
+.'PIXEL2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U20'Component outside the board edge: 
+.'PIXEL1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U19'Component outside the board edge: 
+.'LAYER4'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U18'Component outside the board edge: 
+.'LAYER3'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U17'Component outside the board edge: 
+.'LAYER2'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U16'Component outside the board edge: 
+.'LAYER1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U15'Component outside the board edge: 
+.'JR1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U14'Component outside the board edge: 
+.'JP1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U13'Component outside the board edge: 
+.'JG1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U12'Component outside the board edge: 
+.'JB1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U11'Component outside the board edge: 
+.'J1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U10'Component outside the board edge: 
+.'INRAMSEL1'Component outside the board edge: 
 Component outside of board edge.FAIL: 
-.'U9'the board edge: 
+.'HSYNC1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSC4'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSC3'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSC2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSC1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSB4'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSB3'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSB2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSB1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSA4'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSA3'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSA2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'EXPANSIONBUSA1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'CSYNC1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'C5'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'BANKSEL4'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'BANKSEL2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'BANKSEL1'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'8B2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'7A2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'4T'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1A'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1B'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1C'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1D'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1S'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'1T'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2A'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2B'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2C'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2D'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2E'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2F'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'2T'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'3A'Component outside the board edge: 
+Component outside of board edge.FAIL: 
+.'3B'board edge: 

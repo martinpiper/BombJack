@@ -1,4 +1,6 @@
 ** V3.0 needs to be regenerated
+	Connectivity check passes
+
 
 
 
