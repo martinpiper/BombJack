@@ -1,5 +1,14 @@
 ** V3.0 needs to be regenerated
 	Connectivity check passes
+	These ICs were auto-placed, then horizontally and vertically gaps were added and added to the board. This promoted better auto-placement for other ICs and helped auto-routing.
+		U136
+		U71
+		U207
+		U215
+		U229
+		U224
+	Added feature request: https://support.labcenter.com/forums/viewtopic.php?f=10&t=7821
+
 
 
 
