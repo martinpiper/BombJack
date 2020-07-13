@@ -12,7 +12,7 @@
 		Why? could be that when auto-placing all boards the layout is not as optiminal.
 			Comparing the force vectors between the "all board" and "single board" place shows major differences.
 				Some components are pointing off board, when they should all be self contained to the group. This affects the placement.
-	Note: Place by group, in PCB, components mode, use the drop-down filter, menu, "Place Group By Room"
+	Note: Each board needs to be saved individually, with the other boards removed. Then place ICs by group: In PCB, components mode, use the drop-down filter, menu, "Place Group By Room"
 		Then route each separate board
 
 
