@@ -41,10 +41,15 @@
 * Idea for new layer, scaled rotated sprites
 	Setup sprite data x/y/dx/dxy/dy/dyx like mode7, plus a screen top left x/y plus width/height bounding box to iterate.
 	It spits out pixels into the screen buffer and signals when it's done
+		* This signal would need the ability to read values over the user port interface
 	And could optionally hop into the next item in a link list... and signal the end of the link list
 		the mode7 render got me thinking, because the circuitry only really differs in the "fetch a tile index from the screen memory" side of things
 		So basically rendering a rotated quad outside the edges test becomes "is the X and Y tile position = 0" instead of "fetch tile index"
 		If it's outside the edges then don't plot pixels
+	* Could have one pixel push pipeline, that ends up writing to two RAMs, where the address is selected as the screen display (in read mode) or the write address from the calculation (in write mode)
+		So 2 input 1 output selectors for the address.
+
+
 
 
 * Need a simple bottom left |_ tile, then position this in the four corners with suitable H/V flips to allow the maximum pixel extent to be validated
