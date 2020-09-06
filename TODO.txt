@@ -12,9 +12,15 @@
 		Why? could be that when auto-placing all boards the layout is not as optimal.
 			Comparing the force vectors between the "all board" and "single board" place shows major differences.
 				Some components are pointing off board, when they should all be self contained to the group. This affects the placement.
-	Note: Each board needs to be saved individually, with the other boards removed. Then place ICs by group: In PCB, components mode, use the drop-down filter, menu, "Place Group By Room"
+	Note: Each board needs to be saved individually, with the other boards removed. Then place ICs by group: In PCB, components mode, use the drop-down filter, right click first component in list -> menu, "Place Group By Room"
 		Then route each separate board
 
+
+
+
+* https://www.mythtv.org/wiki/RGB_Scart
+	Generating CSYNC from HSYNC+VSYNC
+	https://en.wikipedia.org/wiki/Component_video_sync
 
 
 
