@@ -1,3 +1,36 @@
+* Order replacements:
+	74HC138
+	https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=SL3LIuy2dWx0lDDFWb%252BGZQ%3D%3D
+
+	CONN-DIL34
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-RA?qs=VCIs6OJqWMkB6xFyOZZSxA%3D%3D
+		
+	CONN-DIL20
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929975-01-10-RK?qs=4V84emjyG36NmJ6%252BaqUY8g%3D%3D
+	
+	CONN-SIL2
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-RA?qs=s3by4FhMkp0TJ2ZYzpYr%252Bg%3D%3D
+	
+	CONN-SIL8
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929974-01-08-RK?qs=neFkstNq%252B6G7LvVslYqF6A%3D%3D
+	
+	DIL decoupling
+	DIL08 no cap
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
+	DIL14
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj
+	DIL16
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-316-41-801000?qs=WZeyYeqMOWd122xzWNZKKg%3D%3D
+	DIL18
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-318-41-801000?qs=WZeyYeqMOWcusVdSCp10bQ%3D%3D
+	DIL20
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-320-41-801000?qs=RC2ne4458IKe5rHuueYA%2FA%3D%3D
+	DIL24
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-324-41-801000?qs=2mZjssE3HVXiFvwLlnaxRQ%3D%3D
+	DIL28 No cap
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-328-41-001000?qs=IGgAdOvCTsQUPmob89wrvw%3D%3D
+	
+
 ** V3.0 needs to be regenerated
 	Connectivity check passes
 	These ICs were auto-placed, then horizontally and vertically gaps were added and added to the board. This promoted better auto-placement for other ICs and helped auto-routing.
