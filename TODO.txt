@@ -1,3 +1,7 @@
+* Any way to use the connectivity report to assert for fan out limits for LS and HCT part inputs?
+
+
+
 * Order replacements:
 	74HC138
 	https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=SL3LIuy2dWx0lDDFWb%252BGZQ%3D%3D
@@ -47,6 +51,19 @@
 				Some components are pointing off board, when they should all be self contained to the group. This affects the placement.
 	Note: Each board needs to be saved individually, with the other boards removed. Then place ICs by group: In PCB, components mode, use the drop-down filter, right click first component in list -> menu, "Place Group By Room"
 		Then route each separate board
+
+
+
+* Clock/video lines may need some buffering / extension with 74ls240 or similar for some of the larger boards due to the LS limit of 10 fan-out
+	Design Explorer
+	Main menu->View->Netlist view
+		Then move up/down the netlist entries for each root sheet checking the size
+		Sort the netlist table view by "Type" and monitor the number of inputs
+	Potential problems:
+		6MHz
+		_MEWR
+		EA*
+		ED*
 
 
 
