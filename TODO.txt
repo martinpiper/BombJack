@@ -1,4 +1,18 @@
+* Consider higher current output than a normal 7805 regulator.
+	https://www.mouser.sg/Semiconductors/Power-Management-ICs/Voltage-Regulators-Voltage-Controllers/Linear-Voltage-Regulators/_/N-5cg9g?P=1z0z63xZ1z0wadv&Keyword=7805&FS=True
+	https://www.mouser.sg/ProductDetail/Texas-Instruments/UA7805CKCS?qs=IEl3ej0IqwDTl9fhEpiFdQ%3D%3D
+	https://www.mouser.sg/ProductDetail/STMicroelectronics/LD1085V50?qs=%2Fha2pyFadugp3TsIEWjKyT083J8Jn3o2iWNBXzYOghY%3D
+	Or buck regulator?
+		https://fr.aliexpress.com/item/32726124435.html?ws_ab_test=searchweb0_0,searchweb201602_4_10065_10068_433_10000509_10000656_10136_10060_10062_10056_10055_10054_302_10059_10000636_10099_10103_10102_10096_10052_10053_10107_10050_10106_10051_10000090_10000729_10084_10083_10080_10082_10081_10110_10000375_10111_10112_10000377_10113_10114_10000349_10078_10079_10073_10000519_10070_10122_10123_10126_10000511_10124_10000514,searchweb201603_2,afswitch_1,ppcSwitch_5,single_sort_0_default&btsid=ba1207db-29e6-4f78-a993-ea479fd99bc0&algo_expid=179a1c71-1922-45a6-97fc-93dabe2447d3-0&algo_pvid=179a1c71-1922-45a6-97fc-93dabe2447d3
+		https://fr.aliexpress.com/item/32689938167.html?ws_ab_test=searchweb0_0,searchweb201602_4_10065_10068_433_10000509_10000656_10136_10060_10062_10056_10055_10054_302_10059_10000636_10099_10103_10102_10096_10052_10053_10107_10050_10106_10051_10000090_10000729_10084_10083_10080_10082_10081_10110_10000375_10111_10112_10000377_10113_10114_10000349_10078_10079_10073_10000519_10070_10122_10123_10126_10000511_10124_10000514-10050,searchweb201603_2,afswitch_1,ppcSwitch_5,single_sort_0_default&btsid=466a6ab4-ecc2-442d-8954-e0821251912f&algo_expid=aa25a339-5e7a-4652-bdd2-e70b3f6ef4f2-2&algo_pvid=aa25a339-5e7a-4652-bdd2-e70b3f6ef4f2
+		
+	* It would help to estimate the total current used by by each board
+		
+		
 
+
+
+* IC Sockets should ideally have flat pin spring connections, not round sockets.
 
 
 

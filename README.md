@@ -79,7 +79,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 	1. Associated external bus interface logic
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display
-7.	Read only background picture logic
+7.	16x16 tile background picture logic
 	1. Logic for selection of appropriate picture, based on high address lines
 	2. Bit plane reads and pixel shifters
 	3. Output pixel logic for possible video display, or disable background logic
@@ -95,7 +95,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 	3. xorg, yorg addition
 10.	Mode7 pixel logic
 	1. Background colour latch, transparent pixel detection
-	2. Interleved blocks (for RAM timing) mode7 screen access, feeding into tile access, H & V flip logic
+	2. Interleaved blocks (for RAM timing) mode7 screen access, feeding into tile access, H & V flip logic
 
 ### Memory map
 
@@ -186,6 +186,12 @@ During the coordinate (xo,yo) to screen transformation: bits 8-11 are used to lo
 Note: The full, but hidden by borders, screen resolution is 384x264 pixels.
 
 0xa014	: Background colour, any pixel index of zero in the mode7 tile data will show the background colour
+0xa015	: Flags	:	0 : Enable display
+					1 : Enable X update, or reset to 0
+					2 : Enable XY update, or reset to 0
+					3 : Enable Y update, or reset to 0
+					4 : Enable YX update, or reset to 0
+
 
 	
 ### Clock speeds

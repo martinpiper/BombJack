@@ -27,6 +27,7 @@ d$0
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
 
+; For these files refer to "* Using the pattern file: TestData2.txt" in README.md
 ; Write background data from 02_p04t.bin into RAM mapped at $2000 with EBS $80
 ; Standard resolution test uses the tile hardware scroll registers at $9e02 to shift the screen around
 s$20008000
