@@ -1158,3 +1158,17 @@
 	* Video layout done, added proper output connectors
 	* Analogue components are disabled in the simulations
 	
+
+
+
+* Building V3.0 video and char screen boards
+	3 October 2020
+
+
+
+
+* Are sheet 4 sprites 4E/4F really needed?
+	They do bolster signals going to the internals of the sprite board: 5E 5F 6E 6F
+	As well as somewhat isolating flow of sprite RAM read/write logic side of the board
+	* Temporarily disabled 4E 4F and removed from placement. Wires connecting input to output added.
+		TestData.txt and TestData2.txt seems to generate correct sprite animations
