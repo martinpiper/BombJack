@@ -360,6 +360,22 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	$0fe	SREAD $7f
 	Loops back to $180 again and RV increment
 
+#### Sprite scan RAM logic
+
+	Assume the sprite scan line RAM has been cleared by a previous scan rendering all the pixels and clearing the values of $ff.
+		The weak pull-up resisters connected to the RAM output help to clear the RAM values to $ff
+			These are overidden by any pull down logic 0 from the RAM or the input 74258 demultiplexors
+	For each sprite the index, colour, X and Y pos are read
+		After a successful Y pos test with the vertical raster position...
+			The sprite data counter is set with the X position of the sprite, then for 16 (or 32) pixels
+			The data in the scan line RAM is read on _6MHz = 0
+			On +ve edge _6MHz this read value is latched by 2C/2D 2B/2A, and inverted for output
+			The value is then tested for transparency with 1C:B or 1C:C 3-input NOR gates
+			If it is transparent, the value from the input pixel from the current sprite is output by 3C/3D 3B/3A by the 74258 demultiplexors, which inverts the information. This could be a transparent pixel with its colour, or an opaque pixel with its colour.
+			If it is not transparent, an opaque sprite pixel exists for this position, then the value just read from the RAM is selected by the 74258 demultiplexors, inverted and written back to the RAM
+			In effect, the first opaque (non-transparent) pixel from the sprite written to the scan line RAM has priority and the rest of the pixels from sprites are ignored
+		
+
 
 ### PCB Layout
 

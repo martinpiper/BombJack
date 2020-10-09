@@ -1,3 +1,10 @@
+* For the sprite scan RAMs, while leaving the 2114s disabled in the simulation, add them back into the PCB layout
+	This gives the option of using the single 6116 RAM, or two 2114s instead simply by populating the relevant sockets
+	Also verify the value of the pullup resistors
+
+
+
+
 * Consider higher current output than a normal 7805 regulator.
 	https://www.mouser.sg/Semiconductors/Power-Management-ICs/Voltage-Regulators-Voltage-Controllers/Linear-Voltage-Regulators/_/N-5cg9g?P=1z0z63xZ1z0wadv&Keyword=7805&FS=True
 	https://www.mouser.sg/ProductDetail/Texas-Instruments/UA7805CKCS?qs=IEl3ej0IqwDTl9fhEpiFdQ%3D%3D
