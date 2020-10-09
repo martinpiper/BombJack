@@ -1,6 +1,8 @@
 * For the sprite scan RAMs, while leaving the 2114s disabled in the simulation, add them back into the PCB layout
 	This gives the option of using the single 6116 RAM, or two 2114s instead simply by populating the relevant sockets
 	Also verify the value of the pull-up resistors
+	Added 4A 4B 4C 4D with {GROUP=Sprites} to the sprites board
+	** Auto place and route needs testing
 	
 	
 	
