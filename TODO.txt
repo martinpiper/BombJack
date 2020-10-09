@@ -1,6 +1,13 @@
 * For the sprite scan RAMs, while leaving the 2114s disabled in the simulation, add them back into the PCB layout
 	This gives the option of using the single 6116 RAM, or two 2114s instead simply by populating the relevant sockets
-	Also verify the value of the pullup resistors
+	Also verify the value of the pull-up resistors
+	
+	
+	
+* The "Sprite scan RAM logic" reads scan RAM, tests for transparency, writes sprite pixels in transparent or writes back existing value
+	Perhaps change the logic so that the input sprite pixel is tested for transparency and only written if opaque?
+		This would reduce the constant read, test, write back cycle to only test and optional write
+		* This would mean the last sprite has priority instead of the first sprite however, i.e. the priority of sprites is reversed
 
 
 
