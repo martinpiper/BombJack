@@ -1172,3 +1172,13 @@
 	As well as somewhat isolating flow of sprite RAM read/write logic side of the board
 	* Temporarily disabled 4E 4F and removed from placement. Wires connecting input to output added.
 		TestData.txt and TestData2.txt seems to generate correct sprite animations
+
+
+
+
+* For the sprite scan RAMs, while leaving the 2114s disabled in the simulation, add them back into the PCB layout
+	This gives the option of using the single 6116 RAM, or two 2114s instead simply by populating the relevant sockets
+	Also verify the value of the pull-up resistors
+	Added 4A 4B 4C 4D with {GROUP=Sprites} to the sprites board
+	** Done - Auto place and route needs testing
+		Sprite board generated in V3.0 folder
