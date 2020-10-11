@@ -1182,3 +1182,7 @@
 	Added 4A 4B 4C 4D with {GROUP=Sprites} to the sprites board
 	** Done - Auto place and route needs testing
 		Sprite board generated in V3.0 folder
+
+
+
+* Rotated the memory bus and video headers in the schematic to match the PCB orientation
