@@ -1186,3 +1186,10 @@
 
 
 * Rotated the memory bus and video headers in the schematic to match the PCB orientation
+
+
+
+* Some of the 7432 components were using the wrong size package, don't know how that happened.
+	Checked all other components for inconsistent sized packages
+	U91 on the chars board was wrong, for example.
+	Also the 6116FAST (chosen in the mouser.sg link) uses a narrow IC package, not a wide package. *Sigh*
