@@ -1146,6 +1146,7 @@
 		
 		
 * At the moment the video and audio output uses a 2N-net resistor arrangement, but this can be inaccurate.
+	https://hackaday.com/2015/11/05/logic-noise-digital-to-analog-with-an-r-2r-dac/
 	Consider using a 2N-net arrangement: https://elinux.org/images/e/eb/Howtocolor.pdf
 		Page 16 gives a good example
 		Page 20 advises a pot for the audio volume
