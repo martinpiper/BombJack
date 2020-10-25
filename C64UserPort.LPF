@@ -1,0 +1,868 @@
+Version2.172371 CAUTION: Do not change the contents of this file. File corruption is probable!
+DebugData496561016
+SampleData347595401391854013918
+{
+   D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,CLK1,CLK2,Count
+   1,0,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,387777
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,10
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,32
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,940806
+   1,0,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   0,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,766994
+   0,1,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819574
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,10
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,32
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,922842
+   0,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,758875
+   1,1,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,832058
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,40
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,901723
+   1,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,780087
+   0,0,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,841294
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,11
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,31
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,879300
+   0,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819568
+   1,0,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,771363
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,7
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,3
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,944962
+   1,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,762629
+   0,1,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,824039
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,37
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,917964
+   0,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,763238
+   1,1,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,836422
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,5
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,892688
+   1,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,784147
+   0,0,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,837031
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,10
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,28
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,2
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,883868
+   0,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819770
+   1,0,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,766999
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,38
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,953388
+   1,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,753798
+   0,1,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,832870
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,9
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,4
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,909742
+   0,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,771966
+   1,1,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,832261
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,4
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,48
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,2
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,888319
+   1,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,792874
+   0,0,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,828302
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,36
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,888227
+   0,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819362
+   1,0,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,766999
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,7
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,953990
+   1,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,749639
+   0,1,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,836929
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,7
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,905575
+   0,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,776026
+   1,1,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,832261
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,62
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,2
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,884246
+   1,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,1,0,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   0,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797341
+   0,0,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,824040
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,13
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,20
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,896868
+   0,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,810435
+   1,0,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,775727
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,27
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,949534
+   1,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   0,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,99
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,745174
+   0,1,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,841091
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,901020
+   0,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,780593
+   1,1,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,832058
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,40
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,888429
+   1,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,793077
+   0,0,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819574
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,11
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,31
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,901223
+   0,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,806576
+   1,0,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,779990
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,9
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,2
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,953895
+   1,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,736646
+   0,1,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,850022
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,42
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,892385
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,93
+   1,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,784856
+   1,1,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,836422
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,884264
+   1,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797441
+   0,0,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,811048
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,10
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,33
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,905485
+   0,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,802312
+   1,0,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,784254
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,40
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,953386
+   1,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,732281
+   0,1,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,854387
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,9
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,36
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,2
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,888225
+   0,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,793382
+   1,1,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,827896
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,44
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,888626
+   1,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797137
+   0,0,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,806480
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,35
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,909439
+   0,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797949
+   1,0,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,788821
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,953686
+   1,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,727917
+   0,1,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,858142
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,44
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,883758
+   0,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,798048
+   1,1,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,823227
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,3
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,56
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,2
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,897142
+   1,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,1,0,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,793079
+   0,0,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,801913
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,10
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,28
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,918279
+   0,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,789322
+   1,0,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797042
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,945168
+   1,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,736545
+   0,1,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,853980
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,38
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,879498
+   0,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,802211
+   1,1,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,819168
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,8
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,44
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,2
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,901717
+   1,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,792872
+   0,0,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797955
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,9
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,922940
+   0,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,784853
+   1,0,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,801711
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,940796
+   1,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,101
+   0,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,99
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,741008
+   0,1,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,858953
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,7
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,44
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,870563
+   0,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,3
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,810937
+   1,1,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,810643
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,3
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,58
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,905771
+   1,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,1,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,0,0,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,99
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,3
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,797236
+   0,0,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,789226
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,9
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,34
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,927307
+   0,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,780390
+   1,0,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,805973
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,5
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,46
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,936531
+   1,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,0,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,745375
+   0,1,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,858649
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,6
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,44
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,2
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,866399
+   0,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,815201
+   1,1,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,0,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,806074
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,3
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,62
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,910437
+   1,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   1,1,0,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,1,0,1,1,0,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,100
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,201887
+   0,0,1,1,1,1,0,1,1,1,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,0,0,1
+}
+ShowGraticuleTrue
+ShowTriggerTrue
+ShowCursorsTrue
+LastVisibleCursor1
+UnitsTimeTrue
+ColumnsVisibleTrue
+ScaleRelativeToReferenceTrue
+ScaleFactor0.1
+ReferenceOffset0
+ReferencePosition1
+StatesOnlyTrue
+CursorSnapTrue
+SaveOnAcqFalse
+SaveOnAcqAction0
+SaveOnAcqMaxFiles1
+SaveOnAcqHoldoff0
+USB_ErrorCount4
+InvertedChannelListFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalse
+ExportFormat2
+ExportRadix1
+ExportFile
+CursorOffsetSamples-16165082115148
+CursorOffsetTime-0.0000001650.0000001650.0000004950.0000008250.0000011550.000001485
+CursorInterlock-1-1-1-1-1-1
+ControlSelections032445674567
+ControlValues1515501.432301
+SignalsData0Data1Data2Data3Data4Data5Data6Data7M_PA28_PC2Data10Data11Data12Data13Data14Data15Data16Data17Data18Data19Data20Data21Data22Data23Data24Data25Data26Data27Data28Data29Data30Data31Clock1Clock2
+GroupData[3..0]121-1True0,1,2,3False0-1
+GroupData[7..0]121-1True0,1,2,3,4,5,6,7False0-1
+GroupData[15..0]121-1True0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15False0-1
+GroupData[31..0]1213True0,1,2,3,4,5,6,7False0-1
+GroupI2C Example121-1True0,1False00022True00
+GroupSPI Example121-1True0,1,2False0108True0False0.00000100.0000102200FalseFalseFalseTrue
+GroupQuad SPI Example121-1True4,5False0502True0False0.00000100.0000102500FalseFalseFalseTrue0False
+GroupRS232 Example121-1True0False028False009600True12False00
+GroupCAN Example121-1True0False04125000012True0.750True0.25
+Group1-Wire Example121-1True0False06False200
+GroupSmart Card Example121-1True0False038False219600True02False00
+Row32False-12850False1True-1
+Row33False-12850False1True-1
+Row3True-1285-1False2True-1
+Row0False32850False1True-1
+Row1False32850False1True-1
+Row2False32850False1True-1
+Row3False32850False1True-1
+Row4False32850False1True-1
+Row5False32850False1True-1
+Row6False32850False1True-1
+Row7False32850False1True-1
+Row8False-12850False1True-1
+Row9False-12852False1True-1
+Column40650 
+Column50650 
+Column10650 
+Column20650 
+Column306500
+Pattern00000000000000000000000000000000000
+Pattern10000000000000000000000000000000000
+Edge00000000002000000000000000000000000
+Edge10000000000000000000000000000000000
+IsDemoDataFalse
+AcquiredSampleMode1
+AcquiredSamplePeriod0.00000001
+AcquiredChannelListTrueTrueTrueTrueTrueTrueTrueTrueTrueTrueFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseTrueTrue
+PrintCaptionTrue
+PrintDateTrue
+PrintMeasurementsTrue
+PrintCaptionType2
+PrintCaptionStringCaption
+CombineMode1
+PrequalifyFalseFalse
+EdgeTerm11
+EdgeCount11
+EdgeCountMode00
+PatternTerm10
+PatternMode00
+PatternCount22
+PatternCountMode00
+RangeTerm00
+RangeGroup21
+RangeMode04
+RangeLeft50h80h
+RangeRight60h100h
+DurationTerm00
+DurationMode12
+DurationLeft1E-61E-6
+DurationRight2E-62E-6
+DurationUnits00
+TimingModeTrue
+StateClockDelay1
+StateClockPolarity0
+StateClockSelect0
+StateClockRate1.000000E+3
+StateClockUnits1
+UseCompression1
+PrefillTimeout2
+PostfillTimeout2
+QualifyStateSamplingFalse
+QualifierPolarity1
+MeasurementType0124
+MeasurementLeftTerm0202
+MeasurementRightTerm1343
+NotesString//

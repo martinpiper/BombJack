@@ -164,7 +164,19 @@
 	Nice looking breakout board with reset button: https://www.tindie.com/products/syzygy_systems/c64-user-port-breakout-board-v11-syzygy-phobos/
 	Just the connector: https://www.thefuturewas8bit.com/userport-connector.html
 	Simple flashing LEDs example with code: https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
-		
+
+	* Using logic analyser
+	** C64UserPort.lpf shows 8_PC2 going low one cycle before data is output, then high one cycle after the data is output.
+		** Checked : Check memory bus schematic expects this
+	Also shows M_PA2 is able to be strobed by poke 56576,0 : poke 56576,4
+		10 poke 56578,4
+		20 poke 56579,255
+		30 for i = 0 to 255
+		40 poke 56577,i
+		50 poke 56576,0 : poke 56576,4
+		60 next i
+		70 goto 30
+
 		
 
 
