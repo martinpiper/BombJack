@@ -1,3 +1,15 @@
+* Videos\BombJack\20201030_223915.mp4 shows the simple C64 memory bus interace working
+	* BASIC test code needs a simple 8x8 character conversion routine, perhaps converting a string into bit planes sequentially line by line:
+		a$="  123  4":gosub xxx
+		a$="  1 3  3":gosub xxx
+		... etc ...
+	Where space (or 0) is transparent, and the numbers correspond to pixel colours 1-7
+	* Try an assembly language wait for NMI to be read test. Should be possible to read the memory address and simply write the value to the border in a tight loop to test.
+		Oh I so love not having even a simple assembler on the real C64. Since the 1541 drive is very ill and won't read my disks.
+
+
+
+
 * The pixel header rotations need to be consistent across the boards
 
 
