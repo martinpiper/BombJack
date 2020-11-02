@@ -6,6 +6,12 @@
 	Where space (or 0) is transparent, and the numbers correspond to pixel colours 1-7
 	* Try an assembly language wait for NMI to be read test. Should be possible to read the memory address and simply write the value to the border in a tight loop to test.
 		Oh I so love not having even a simple assembler on the real C64. Since the 1541 drive is very ill and won't read my disks.
+	Better demo: https://youtu.be/PXDLMjCwmgw
+	* Daft idea, get the BASIC to write machine code for all of the memory writes it does, basically "compile" the output of the BASIC code. This will let me test how fast the simple memory bus is.
+
+
+
+* USB logic analyser and data generator: https://www.linkinstruments.com/logana32.html
 
 
 
