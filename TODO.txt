@@ -1,4 +1,10 @@
-* Videos\BombJack\20201030_223915.mp4 shows the simple C64 memory bus interace working
+* Check "user port" orientation for UserPortBreakout.pdsprj and UserPortTo24BitAddress.pdsprj
+	Avoid cable twists, remember component side is facing away from the computer *towards* the expansion board
+
+
+	
+
+* Videos\BombJack\20201030_223915.mp4 shows the simple C64 memory bus interface working
 	* BASIC test code needs a simple 8x8 character conversion routine, perhaps converting a string into bit planes sequentially line by line:
 		a$="  123  4":gosub xxx
 		a$="  1 3  3":gosub xxx
@@ -182,6 +188,7 @@
 	Nice looking breakout board with reset button: https://www.tindie.com/products/syzygy_systems/c64-user-port-breakout-board-v11-syzygy-phobos/
 	Just the connector: https://www.thefuturewas8bit.com/userport-connector.html
 	Simple flashing LEDs example with code: https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
+	Many edge connectors, need to verify board thickness and pitch: https://www.mouser.sg/Connectors/Card-Edge-Connectors/Standard-Card-Edge-Connectors/_/N-axj7dZ1yzvvqx?P=1ytcyi4Z1z0wxnn
 
 	* Using logic analyser
 	** C64UserPort.lpf shows 8_PC2 going low one cycle before data is output, then high one cycle after the data is output.
@@ -200,7 +207,15 @@
 	* UserPortDataSimple.ptn and UserPortSignalsSimple.ptn demonstrate the input protocol and eventual memory writes
 	It does however use very few ICs and allows the C64 to precisely control (slow) write timings rather than relying on a clock and other more complex logic
 		Only 8x 74LS273 and 1x 74LS138
-
+		
+		
+		
+* UserPortBreakout.pdsprj
+	Simple breakout board for user port
+	Cables and connectors:
+	https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkree?P=1yny8w4Z1yny8w3Z1yyu1hy&Keyword=idc&FS=True
+	https://www.mouser.sg/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1ytkn1nZ1z0wxp6Z1z0z63x&Keyword=idc&FS=True
+	Same plug manufacturer as for the the cable: https://www.mouser.sg/Samtec/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1ytkn1nZ1z0z63xZ1z0wxp6Z1z0sq61&Keyword=idc&FS=True
 
 
 

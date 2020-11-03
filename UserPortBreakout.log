@@ -1,4 +1,4 @@
-# Writing all output to: C:\Work\BombJack\UserPortTo24BitAddress.log
+# Writing all output to: C:\Work\BombJack\UserPortBreakout.log
 set pad_wire_necking on
 bus diagonal
 fanout 5
