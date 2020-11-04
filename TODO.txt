@@ -1,4 +1,4 @@
-* Check "user port" orientation for UserPortBreakout.pdsprj and UserPortTo24BitAddress.pdsprj
+* Done - Check "user port" orientation for UserPortBreakout.pdsprj and UserPortTo24BitAddress.pdsprj
 	Avoid cable twists, remember component side is facing away from the computer *towards* the expansion board
 
 

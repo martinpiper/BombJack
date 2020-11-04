@@ -6,7 +6,7 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -35.73660 -27.62700 61.47400 62.62700))
+  (boundary (rect pcb -35.73660 -27.62700 60.73660 62.62700))
   (boundary (path signal 0.20320 -35.60960 -27.50000 60.60960 -27.50000 60.60960 62.50000
    -35.60960 62.50000 -35.60960 -27.50000))
   (flip_style mirror_first)
@@ -51,14 +51,38 @@
   )
  )
  (placement
-  (component "CONN-DIL34_EXPANSIONBUS" (place EXPANSIONBUS -24.96000 -5.36000 front 90
+  (component "CONN-DIL34_EXPANSIONBUS" (place EXPANSIONBUS -23.69000 -5.36000 front 90
   ))
-  (component "CONN-SIL2_EXPANSIONBUS2" (place EXPANSIONBUS2 -27.46000 -15.12000 front 90
+  (component "CONN-SIL2_EXPANSIONBUS2" (place EXPANSIONBUS2 -26.19000 -15.12000 front 90
   ))
-  (component "CONN-DIL8_EXPANSIONBUS3" (place EXPANSIONBUS3 -24.96000 42.90000 front 90
+  (component "CONN-DIL8_EXPANSIONBUS3" (place EXPANSIONBUS3 -23.69000 42.90000 front 90
   ))
-  (component "TST-107-XX-Y-D_USERPORT" (place USERPORT 2.50000 -22.50000 front 0))
-  (component 163179PHEX_$NONAME0 (place $NONAME0 53.64000 52.65000 front -90))
+  (component "TST-107-XX-Y-D_USER BUS" (place "USER BUS" 17.50000 -18.73000 front -180
+  ))
+  (component "163179PHEX_POWER 5V" (place "POWER 5V" 50.07000 52.59000 front -180))
+  (component DIL20_U3 (place U3 20.32000 17.78000 front 270))
+  (component DIL20_U10 (place U10 30.48000 17.78000 front 270))
+  (component DIL20_U15 (place U15 40.64000 17.78000 front 270))
+  (component DIL20_U16 (place U16 10.16000 17.78000 front 270))
+  (component DIL20_U18 (place U18 50.80000 17.78000 front 270))
+  (component DIL20_U19 (place U19 0.00000 17.78000 front 270))
+  (component DIL20_U23 (place U23 1.27000 21.59000 front 0))
+  (component DIL20_U25 (place U25 -10.16000 17.78000 front 270))
+  (component DIL20_U26 (place U26 -20.32000 17.78000 front 270))
+  (component DIL16_U1 (place U1 30.48000 40.64000 front 270))
+  (component DIL16_U6 (place U6 40.64000 40.64000 front 270))
+  (component DIL16_U7 (place U7 50.80000 40.64000 front 270))
+  (component DIL16_U8 (place U8 26.67000 39.37000 front 180))
+  (component DIL16_U9 (place U9 44.45000 -7.62000 front 180))
+  (component DIL14_U17 (place U17 -10.16000 38.10000 front 270))
+  (component DIL16_U22 (place U22 36.83000 52.07000 front 180))
+  (component DIL14_U5 (place U5 0.00000 44.45000 front 0))
+  (component DIL14_U4 (place U4 -20.32000 38.10000 front 270))
+  (component DIL14_U14 (place U14 -19.05000 50.80000 front 0))
+  (component DIL14_U11 (place U11 41.91000 -17.78000 front 180))
+  (component DIL14_U12 (place U12 -6.35000 -7.62000 front 180))
+  (component DIL14_U13 (place U13 -7.62000 -17.78000 front 180))
+  (component DIL08_OSCCLK (place OSCCLK 50.80000 -12.70000 front 270))
  )
  (library
   (image "CONN-DIL34_EXPANSIONBUS" (side front)
@@ -114,7 +138,7 @@
    (pin PS0 (rotate 0) 6 2.54000 2.54000)
    (pin PS0 (rotate 0) 7 0.00000 2.54000)
   )
-  (image "TST-107-XX-Y-D_USERPORT" (side front)
+  (image "TST-107-XX-Y-D_USER BUS" (side front)
    (outline (rect TOP -6.30500 -4.87500 21.54500 7.12500))
    (pin PS1 (rotate 0) 0 0.00000 0.00000)
    (pin PS1 (rotate 0) 1 0.00000 2.54000)
@@ -131,11 +155,462 @@
    (pin PS1 (rotate 0) 12 15.24000 0.00000)
    (pin PS1 (rotate 0) 13 15.24000 2.54000)
   )
-  (image 163179PHEX_$NONAME0 (side front)
+  (image "163179PHEX_POWER 5V" (side front)
    (outline (rect TOP -9.60000 -7.31000 9.60000 7.31000))
    (pin PS2 (rotate 0) 0 5.15000 1.36000)
    (pin PS2 (rotate 0) 1 2.20000 -3.54000)
    (pin PS2 (rotate 0) 2 -0.85000 1.36000)
+  )
+  (image DIL20_U3 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U10 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U15 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U16 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U18 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U19 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U23 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U25 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL20_U26 (side front)
+   (outline (rect TOP -1.37160 -0.63500 24.23160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 20.32000 0.00000)
+   (pin PS4 (rotate 0) 9 22.86000 0.00000)
+   (pin PS4 (rotate 0) 10 22.86000 7.62000)
+   (pin PS4 (rotate 0) 11 20.32000 7.62000)
+   (pin PS4 (rotate 0) 12 17.78000 7.62000)
+   (pin PS4 (rotate 0) 13 15.24000 7.62000)
+   (pin PS4 (rotate 0) 14 12.70000 7.62000)
+   (pin PS4 (rotate 0) 15 10.16000 7.62000)
+   (pin PS4 (rotate 0) 16 7.62000 7.62000)
+   (pin PS4 (rotate 0) 17 5.08000 7.62000)
+   (pin PS4 (rotate 0) 18 2.54000 7.62000)
+   (pin PS4 (rotate 0) 19 0.00000 7.62000)
+  )
+  (image DIL16_U1 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U6 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U7 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U8 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL16_U9 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL14_U17 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL16_U22 (side front)
+   (outline (rect TOP -1.37160 -0.63500 19.15160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 17.78000 0.00000)
+   (pin PS4 (rotate 0) 8 17.78000 7.62000)
+   (pin PS4 (rotate 0) 9 15.24000 7.62000)
+   (pin PS4 (rotate 0) 10 12.70000 7.62000)
+   (pin PS4 (rotate 0) 11 10.16000 7.62000)
+   (pin PS4 (rotate 0) 12 7.62000 7.62000)
+   (pin PS4 (rotate 0) 13 5.08000 7.62000)
+   (pin PS4 (rotate 0) 14 2.54000 7.62000)
+   (pin PS4 (rotate 0) 15 0.00000 7.62000)
+  )
+  (image DIL14_U5 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U4 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U14 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U11 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U12 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U13 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 10.16000 0.00000)
+   (pin PS4 (rotate 0) 5 12.70000 0.00000)
+   (pin PS4 (rotate 0) 6 15.24000 0.00000)
+   (pin PS4 (rotate 0) 7 15.24000 7.62000)
+   (pin PS4 (rotate 0) 8 12.70000 7.62000)
+   (pin PS4 (rotate 0) 9 10.16000 7.62000)
+   (pin PS4 (rotate 0) 10 7.62000 7.62000)
+   (pin PS4 (rotate 0) 11 5.08000 7.62000)
+   (pin PS4 (rotate 0) 12 2.54000 7.62000)
+   (pin PS4 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL08_OSCCLK (side front)
+   (outline (rect TOP -1.37160 -0.63500 8.99160 8.25500))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 2.54000 0.00000)
+   (pin PS4 (rotate 0) 2 5.08000 0.00000)
+   (pin PS4 (rotate 0) 3 7.62000 0.00000)
+   (pin PS4 (rotate 0) 4 7.62000 7.62000)
+   (pin PS4 (rotate 0) 5 5.08000 7.62000)
+   (pin PS4 (rotate 0) 6 2.54000 7.62000)
+   (pin PS4 (rotate 0) 7 0.00000 7.62000)
   )
   (padstack PS0 (absolute on)
    (shape (rect TOP -1.01600 -1.01600 1.01600 1.01600))
@@ -191,6 +666,42 @@
    (shape (circle I14 5.46000 0 0))
    (shape (circle BOT 5.46000 0 0))
   )
+  (padstack PS3 (absolute on)
+   (shape (rect TOP -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I1 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I2 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I3 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I4 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I5 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I6 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I7 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I8 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I9 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I10 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I11 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I12 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I13 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect I14 -0.63500 -0.63500 0.63500 0.63500))
+   (shape (rect BOT -0.63500 -0.63500 0.63500 0.63500))
+  )
+  (padstack PS4 (absolute on)
+   (shape (circle TOP 1.27000 0 0))
+   (shape (circle I1 1.27000 0 0))
+   (shape (circle I2 1.27000 0 0))
+   (shape (circle I3 1.27000 0 0))
+   (shape (circle I4 1.27000 0 0))
+   (shape (circle I5 1.27000 0 0))
+   (shape (circle I6 1.27000 0 0))
+   (shape (circle I7 1.27000 0 0))
+   (shape (circle I8 1.27000 0 0))
+   (shape (circle I9 1.27000 0 0))
+   (shape (circle I10 1.27000 0 0))
+   (shape (circle I11 1.27000 0 0))
+   (shape (circle I12 1.27000 0 0))
+   (shape (circle I13 1.27000 0 0))
+   (shape (circle I14 1.27000 0 0))
+   (shape (circle BOT 1.27000 0 0))
+  )
   (padstack $VIA#0_SIGNAL (absolute on)
    (shape (circle TOP 0.76200 0 0))
    (shape (circle I1 0.76200 0 0))
@@ -236,7 +747,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-10 U4-0)
   )
   (net "#00028"
    (circuit
@@ -245,7 +756,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U1-1 U5-2)
   )
   (net "#00066"
    (circuit
@@ -254,7 +765,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-2 U6-13)
   )
   (net "#00067"
    (circuit
@@ -263,7 +774,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-3 U6-12)
   )
   (net "#00068"
    (circuit
@@ -272,7 +783,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-6 U6-11)
   )
   (net "#00069"
    (circuit
@@ -281,7 +792,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-7 U6-10)
   )
   (net "#00070"
    (circuit
@@ -290,7 +801,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U6-14 U7-6 U7-9)
   )
   (net "#00072"
    (circuit
@@ -299,7 +810,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U6-1 U7-1 U12-2 U13-2)
   )
   (net "#00076"
    (circuit
@@ -308,7 +819,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-12 U7-13)
   )
   (net "#00077"
    (circuit
@@ -317,7 +828,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-13 U7-12)
   )
   (net "#00078"
    (circuit
@@ -326,7 +837,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-16 U7-11)
   )
   (net "#00079"
    (circuit
@@ -335,7 +846,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-17 U7-10)
   )
   (net "#00080"
    (circuit
@@ -344,7 +855,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U7-14 U8-6 U8-9)
   )
   (net "#00084"
    (circuit
@@ -353,7 +864,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-2 U8-13)
   )
   (net "#00085"
    (circuit
@@ -362,7 +873,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-3 U8-12)
   )
   (net "#00086"
    (circuit
@@ -371,7 +882,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-6 U8-11)
   )
   (net "#00087"
    (circuit
@@ -380,7 +891,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-7 U8-10)
   )
   (net "#00088"
    (circuit
@@ -389,7 +900,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U8-14 U9-6 U9-9)
   )
   (net "#00089"
    (circuit
@@ -398,7 +909,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U8-1 U9-1 U17-0 U14-2)
   )
   (net "#00093"
    (circuit
@@ -407,7 +918,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-12 U9-13)
   )
   (net "#00094"
    (circuit
@@ -416,7 +927,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-13 U9-12)
   )
   (net "#00095"
    (circuit
@@ -425,7 +936,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-16 U9-11)
   )
   (net "#00096"
    (circuit
@@ -434,7 +945,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-17 U9-10)
   )
   (net "#00102"
    (circuit
@@ -443,7 +954,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U11-3 U13-0)
   )
   (net "#00107"
    (circuit
@@ -452,7 +963,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U11-9 U13-1)
   )
   (net "#00117"
    (circuit
@@ -461,7 +972,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U4-9 U14-0)
   )
   (net "#00122"
    (circuit
@@ -470,7 +981,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U4-12 U14-1)
   )
   (net "#00128"
    (circuit
@@ -479,7 +990,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-10 U12-3)
   )
   (net "#00132"
    (circuit
@@ -488,7 +999,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-10 U17-1)
   )
   (net "#00135"
    (circuit
@@ -497,7 +1008,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-1 U18-2)
   )
   (net "#00136"
    (circuit
@@ -506,7 +1017,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-4 U18-3)
   )
   (net "#00137"
    (circuit
@@ -515,7 +1026,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-5 U18-6)
   )
   (net "#00138"
    (circuit
@@ -524,7 +1035,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-8 U18-7)
   )
   (net "#00139"
    (circuit
@@ -533,7 +1044,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-11 U18-12)
   )
   (net "#00140"
    (circuit
@@ -542,7 +1053,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-14 U18-13)
   )
   (net "#00141"
    (circuit
@@ -551,7 +1062,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-15 U18-16)
   )
   (net "#00142"
    (circuit
@@ -560,7 +1071,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U15-18 U18-17)
   )
   (net "#00145"
    (circuit
@@ -569,7 +1080,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-1 U19-2)
   )
   (net "#00146"
    (circuit
@@ -578,7 +1089,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-4 U19-3)
   )
   (net "#00147"
    (circuit
@@ -587,7 +1098,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-5 U19-6)
   )
   (net "#00148"
    (circuit
@@ -596,7 +1107,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-8 U19-7)
   )
   (net "#00149"
    (circuit
@@ -605,7 +1116,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-11 U19-12)
   )
   (net "#00150"
    (circuit
@@ -614,7 +1125,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-14 U19-13)
   )
   (net "#00151"
    (circuit
@@ -623,7 +1134,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-15 U19-16)
   )
   (net "#00152"
    (circuit
@@ -632,7 +1143,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U16-18 U19-17)
   )
   (net "#00208"
    (circuit
@@ -650,7 +1161,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-1 U25-2)
   )
   (net "#00223"
    (circuit
@@ -659,7 +1170,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-4 U25-3)
   )
   (net "#00224"
    (circuit
@@ -668,7 +1179,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-5 U25-6)
   )
   (net "#00225"
    (circuit
@@ -677,7 +1188,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-8 U25-7)
   )
   (net "#00226"
    (circuit
@@ -686,7 +1197,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-11 U25-12)
   )
   (net "#00227"
    (circuit
@@ -695,7 +1206,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-14 U25-13)
   )
   (net "#00228"
    (circuit
@@ -704,7 +1215,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-15 U25-16)
   )
   (net "#00229"
    (circuit
@@ -713,7 +1224,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U18-18 U25-17)
   )
   (net "#00232"
    (circuit
@@ -722,7 +1233,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-1 U26-2)
   )
   (net "#00233"
    (circuit
@@ -731,7 +1242,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-4 U26-3)
   )
   (net "#00234"
    (circuit
@@ -740,7 +1251,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-5 U26-6)
   )
   (net "#00235"
    (circuit
@@ -749,7 +1260,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-8 U26-7)
   )
   (net "#00236"
    (circuit
@@ -758,7 +1269,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-11 U26-12)
   )
   (net "#00237"
    (circuit
@@ -767,7 +1278,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-14 U26-13)
   )
   (net "#00238"
    (circuit
@@ -776,7 +1287,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-15 U26-16)
   )
   (net "#00239"
    (circuit
@@ -785,7 +1296,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U19-18 U26-17)
   )
   (net "#00253"
    (circuit
@@ -794,7 +1305,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-1 U23-2)
   )
   (net "#00254"
    (circuit
@@ -803,7 +1314,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-4 U23-3)
   )
   (net "#00255"
    (circuit
@@ -812,7 +1323,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-5 U23-6)
   )
   (net "#00256"
    (circuit
@@ -821,7 +1332,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-8 U23-7)
   )
   (net "#00257"
    (circuit
@@ -830,7 +1341,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-11 U23-12)
   )
   (net "#00258"
    (circuit
@@ -839,7 +1350,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-14 U23-13)
   )
   (net "#00259"
    (circuit
@@ -848,7 +1359,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-15 U23-16)
   )
   (net "#00260"
    (circuit
@@ -857,7 +1368,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U3-18 U23-17)
   )
   (net "#00292"
    (circuit
@@ -866,7 +1377,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U1-13 U22-1)
   )
   (net "#00294"
    (circuit
@@ -875,7 +1386,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U1-12 U22-2)
   )
   (net "#00344"
    (circuit
@@ -902,7 +1413,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U12-4 U13-4)
   )
   (net "#00353"
    (circuit
@@ -911,7 +1422,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U13-5)
   )
   (net "ADDROUTLOAD"
    (circuit
@@ -920,7 +1431,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U10-10 U18-10 U19-10 U4-3 U12-0)
   )
   (net "AFTERBYTE"
    (circuit
@@ -929,7 +1440,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U4-11 U11-8 U12-1)
   )
   (net "BUSDDR"
    (circuit
@@ -947,7 +1458,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U23-0 U25-0 U26-0 U12-5)
   )
   (net "CLK"
    (circuit
@@ -974,7 +1485,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U22-3 U4-1)
   )
   (net "CS1"
    (circuit
@@ -983,7 +1494,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U6-8 U7-8 U22-4 U11-4)
   )
   (net "CS2"
    (circuit
@@ -992,7 +1503,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U8-8 U9-8 U22-5 U4-7)
   )
   (net "CS3"
    (circuit
@@ -1001,7 +1512,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U22-6 U5-1 U4-4 U4-10 U11-7 U13-8)
   )
   (net "DBUNLATCH"
    (circuit
@@ -1010,7 +1521,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U13-7)
   )
   (net "EA0"
    (circuit
@@ -1019,7 +1530,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-0)
+   (pins EXPANSIONBUS-0 U25-1)
   )
   (net "EA1"
    (circuit
@@ -1028,7 +1539,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-1)
+   (pins EXPANSIONBUS-1 U25-4)
   )
   (net "EA10"
    (circuit
@@ -1037,7 +1548,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-10)
+   (pins EXPANSIONBUS-10 U26-5)
   )
   (net "EA11"
    (circuit
@@ -1046,7 +1557,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-11)
+   (pins EXPANSIONBUS-11 U26-8)
   )
   (net "EA12"
    (circuit
@@ -1055,7 +1566,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-12)
+   (pins EXPANSIONBUS-12 U26-11)
   )
   (net "EA13"
    (circuit
@@ -1064,7 +1575,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-13)
+   (pins EXPANSIONBUS-13 U26-14)
   )
   (net "EA14"
    (circuit
@@ -1073,7 +1584,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-14)
+   (pins EXPANSIONBUS-14 U26-15)
   )
   (net "EA15"
    (circuit
@@ -1082,7 +1593,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-15)
+   (pins EXPANSIONBUS-15 U26-18)
   )
   (net "EA2"
    (circuit
@@ -1091,7 +1602,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-2)
+   (pins EXPANSIONBUS-2 U25-5)
   )
   (net "EA3"
    (circuit
@@ -1100,7 +1611,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-3)
+   (pins EXPANSIONBUS-3 U25-8)
   )
   (net "EA4"
    (circuit
@@ -1109,7 +1620,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-4)
+   (pins EXPANSIONBUS-4 U25-11)
   )
   (net "EA5"
    (circuit
@@ -1118,7 +1629,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-5)
+   (pins EXPANSIONBUS-5 U25-14)
   )
   (net "EA6"
    (circuit
@@ -1127,7 +1638,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-6)
+   (pins EXPANSIONBUS-6 U25-15)
   )
   (net "EA7"
    (circuit
@@ -1136,7 +1647,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-7)
+   (pins EXPANSIONBUS-7 U25-18)
   )
   (net "EA8"
    (circuit
@@ -1145,7 +1656,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-8)
+   (pins EXPANSIONBUS-8 U26-1)
   )
   (net "EA9"
    (circuit
@@ -1154,7 +1665,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-9)
+   (pins EXPANSIONBUS-9 U26-4)
   )
   (net "EBS0"
    (circuit
@@ -1163,7 +1674,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-0)
+   (pins EXPANSIONBUS3-0 U23-1)
   )
   (net "EBS1"
    (circuit
@@ -1172,7 +1683,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-1)
+   (pins EXPANSIONBUS3-1 U23-4)
   )
   (net "EBS2"
    (circuit
@@ -1181,7 +1692,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-2)
+   (pins EXPANSIONBUS3-2 U23-5)
   )
   (net "EBS3"
    (circuit
@@ -1190,7 +1701,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-3)
+   (pins EXPANSIONBUS3-3 U23-8)
   )
   (net "EBS4"
    (circuit
@@ -1199,7 +1710,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-4)
+   (pins EXPANSIONBUS3-4 U23-11)
   )
   (net "EBS5"
    (circuit
@@ -1208,7 +1719,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-5)
+   (pins EXPANSIONBUS3-5 U23-14)
   )
   (net "EBS6"
    (circuit
@@ -1217,7 +1728,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-6)
+   (pins EXPANSIONBUS3-6 U23-15)
   )
   (net "EBS7"
    (circuit
@@ -1226,7 +1737,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS3-7)
+   (pins EXPANSIONBUS3-7 U23-18)
   )
   (net "ECPUHASBUS"
    (circuit
@@ -1244,7 +1755,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-33)
+   (pins EXPANSIONBUS-33 U10-1)
   )
   (net "ED1"
    (circuit
@@ -1253,7 +1764,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-32)
+   (pins EXPANSIONBUS-32 U10-4)
   )
   (net "ED2"
    (circuit
@@ -1262,7 +1773,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-31)
+   (pins EXPANSIONBUS-31 U10-5)
   )
   (net "ED3"
    (circuit
@@ -1271,7 +1782,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-30)
+   (pins EXPANSIONBUS-30 U10-8)
   )
   (net "ED4"
    (circuit
@@ -1280,7 +1791,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-29)
+   (pins EXPANSIONBUS-29 U10-11)
   )
   (net "ED5"
    (circuit
@@ -1289,7 +1800,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-28)
+   (pins EXPANSIONBUS-28 U10-14)
   )
   (net "ED6"
    (circuit
@@ -1298,7 +1809,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-27)
+   (pins EXPANSIONBUS-27 U10-15)
   )
   (net "ED7"
    (circuit
@@ -1307,7 +1818,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS-26)
+   (pins EXPANSIONBUS-26 U10-18)
   )
   (net "EMEMREAD"
    (circuit
@@ -1334,7 +1845,9 @@
      $VIA#0_POWER
     )
    )
-   (pins EXPANSIONBUS-17 USERPORT-13)
+    (pins EXPANSIONBUS-17 "USER BUS"-13 "POWER 5V"-1 "POWER 5V"-2 U3-0 U3-9 U10-0 U10-9
+     U15-0 U15-9 U16-0 U16-9 U18-0 U18-9 U19-0 U19-9 U23-9 U25-9 U26-9 U1-7 U6-7 U7-7
+    U8-7 U9-7 U17-6 U22-0 U22-7 U5-6 U4-6 U14-6 U11-6 U12-6 U13-6 OSCCLK-3)
   )
   (net "LOADTICK"
    (circuit
@@ -1343,7 +1856,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins)
+   (pins U23-10 U25-10 U26-10 U13-3 OSCCLK-4)
   )
   (net "PA2"
    (circuit
@@ -1352,7 +1865,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-2)
+   (pins "USER BUS"-2 U1-0)
   )
   (net "RST"
    (circuit
@@ -1370,7 +1883,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-6)
+   (pins "USER BUS"-6 U3-2 U10-2 U6-2 U8-2)
   )
   (net "UD1"
    (circuit
@@ -1379,7 +1892,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-8)
+   (pins "USER BUS"-8 U3-3 U10-3 U6-3 U8-3)
   )
   (net "UD2"
    (circuit
@@ -1388,7 +1901,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-10)
+   (pins "USER BUS"-10 U3-6 U10-6 U6-4 U8-4)
   )
   (net "UD3"
    (circuit
@@ -1397,7 +1910,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-12)
+   (pins "USER BUS"-12 U3-7 U10-7 U6-5 U8-5)
   )
   (net "UD4"
    (circuit
@@ -1406,7 +1919,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-1)
+   (pins "USER BUS"-1 U3-12 U10-12 U7-2 U9-2)
   )
   (net "UD5"
    (circuit
@@ -1415,7 +1928,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-3)
+   (pins "USER BUS"-3 U3-13 U10-13 U7-3 U9-3)
   )
   (net "UD6"
    (circuit
@@ -1424,7 +1937,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-5)
+   (pins "USER BUS"-5 U3-16 U10-16 U7-4 U9-4)
   )
   (net "UD7"
    (circuit
@@ -1433,7 +1946,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-7)
+   (pins "USER BUS"-7 U3-17 U10-17 U7-5 U9-5)
   )
   (net "VCC/VDD"
    (circuit
@@ -1442,7 +1955,9 @@
      $VIA#0_POWER
     )
    )
-   (pins EXPANSIONBUS-16)
+    (pins EXPANSIONBUS-16 "POWER 5V"-0 U3-19 U10-19 U15-19 U16-19 U18-19 U19-19 U23-19
+     U25-19 U26-19 U1-6 U1-8 U1-9 U1-15 U6-0 U6-6 U6-9 U6-15 U7-0 U7-15 U8-0 U8-15 U9-0
+    U9-15 U17-13 U22-15 U5-13 U4-13 U14-13 U11-13 U12-13 U13-13 OSCCLK-7)
   )
   (net "_FLAG2"
    (circuit
@@ -1451,7 +1966,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins EXPANSIONBUS2-0 USERPORT-0)
+   (pins EXPANSIONBUS2-0 "USER BUS"-0)
   )
   (net "_MEWR"
    (circuit
@@ -1469,7 +1984,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins USERPORT-4)
+   (pins "USER BUS"-4 U5-0 U4-2 U4-5 U4-8 U11-5 U13-9)
   )
   (class POWER
    "GND"
