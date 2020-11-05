@@ -1,0 +1,142 @@
+!zn
+; Initialise the bus
+Bus24Bit_Init
+	; Setup PA2 for writing
+	lda #%100
+	sta CIA2PortADDR
+
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+	
+	jsr Bus24Bit_Reset
+	rts
+
+
+; Resets the 24 bit bus
+Bus24Bit_Reset
+	lda #0
+	tax
+	tay
+	jsr Bus24Bit_SetAddressBus
+	; No write pulse
+	lda #%100
+	sta CIA2PortASerialBusVICBank
+	; No latch lo clock
+	lda #%1000
+	sta CIA2PortBRS232
+	rts
+
+!macro MBus24Bit_SetLatch .latch {
+!if .latch > 7 {
+	!error "Latch value > 7"
+}
+!if .latch < 0 {
+	!error "Latch value < 0"
+}
+
+	pha
+	asl
+	asl
+	asl
+	asl
+!if .latch != 0 {
+	ora #.latch
+}
+	sta CIA2PortBRS232
+	ora #%1000
+	sta CIA2PortBRS232
+	pla
+	and #$f0
+	ora #.latch + 1
+	sta CIA2PortBRS232
+	ora #%1000
+	sta CIA2PortBRS232
+}
+
+; A = EBBS
+Bus24Bit_SetEBBS
+	sta Bus24Bit_EBBS
+	+MBus24Bit_SetLatch 0
+	rts
+
+; A = AddressLo
+Bus24Bit_SetAddrLo
+	sta Bus24Bit_AddrLo
+	+MBus24Bit_SetLatch 2
+	rts
+
+; A = AddressHi
+Bus24Bit_SetAddrHi
+	sta Bus24Bit_AddrHi
+	+MBus24Bit_SetLatch 4
+	rts
+
+; A = Data
+Bus24Bit_SetData
+	+MBus24Bit_SetLatch 6
+	rts
+
+Bus24Bit_EBBS	!by 0
+Bus24Bit_AddrLo	!by 0
+Bus24Bit_AddrHi	!by 0
+
+; A/X = lo/hi address
+; Y = length
+Bus24Bit_CopySmallData
+	sta .sm1+1
+	stx .sm1+2
+Bus24Bit_CopySmallDataAgainWithSize
+	sty .sm2+1
+Bus24Bit_CopySmallDataAgain
+	ldy #0
+.l1
+.sm1	lda $1234
+	inc .sm1+1
+	bne .l3
+	inc .sm1+2
+.l3
+	jsr Bus24Bit_SetData
+	jsr Bus24Bit_Write
+	jsr Bus24Bit_AddressIncrement
+	iny
+.sm2	cpy #0
+	bne .sm1
+	rts
+	
+Bus24Bit_CopySmallDataRepeatForX
+	jsr Bus24Bit_CopySmallDataAgain
+	dex
+	bne Bus24Bit_CopySmallDataRepeatForX
+	rts
+
+
+; A = EBBS
+; X/Y = lo/hi address
+Bus24Bit_SetAddressBus
+	jsr Bus24Bit_SetEBBS
+	txa
+	jsr Bus24Bit_SetAddrLo
+	tya
+	jsr Bus24Bit_SetAddrHi
+	rts
+
+
+Bus24Bit_AddressIncrement
+	inc Bus24Bit_AddrLo
+	bne .l2
+	inc Bus24Bit_AddrHi
+.l2
+	lda Bus24Bit_AddrLo
+	jsr Bus24Bit_SetAddrLo
+	lda Bus24Bit_AddrHi
+	jsr Bus24Bit_SetAddrHi
+	rts
+
+
+Bus24Bit_Write
+	lda #%000
+	sta CIA2PortASerialBusVICBank
+	lda #%100
+	sta CIA2PortASerialBusVICBank
+	rts

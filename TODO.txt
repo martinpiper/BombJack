@@ -14,6 +14,8 @@
 		Oh I so love not having even a simple assembler on the real C64. Since the 1541 drive is very ill and won't read my disks.
 	Better demo: https://youtu.be/PXDLMjCwmgw
 	* Daft idea, get the BASIC to write machine code for all of the memory writes it does, basically "compile" the output of the BASIC code. This will let me test how fast the simple memory bus is.
+	* Created "BDD6502\features\TestVideoHardware Chars.a" and "BDD6502\features\TestVideoHardware Chars.feature" which uses a simple address bus and displays a static char screen using real 6502 code
+
 
 
 
