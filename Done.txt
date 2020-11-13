@@ -37,6 +37,8 @@
 	
 	
 * Add page 6 character screen logic
+	Original schematic bug?
+	2R-6 should not connect to 8C-4
 
 
 
@@ -1194,3 +1196,18 @@
 	Checked all other components for inconsistent sized packages
 	U91 on the chars board was wrong, for example.
 	Also the 6116FAST (chosen in the mouser.sg link) uses a narrow IC package, not a wide package. *Sigh*
+
+
+
+* C:\Users\Martin Piper\Videos\BombJack\BombJack with Proteus.osp
+	Is the OpenShot Video Editor project file for: C:\Users\Martin Piper\Videos\BombJack\BombJack with Proteus final.mp4
+		https://www.openshot.org/download/
+	the file looks like json format.
+	To be honest, it's a little slow while using the editor. But it eventually let me assemble the various input files and produce a single video.
+		However I noticed that during video export, around the 8 minute mark, it would produce corrupt video files *sigh*
+	This can be used to increase the volume of a whole video file: "C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffmpeg.exe" -i "C:\Users\Martin Piper\Videos\BombJack\BombJack with Proteus final.mp4" -filter:a "volume=2.0" "C:\Users\Martin Piper\Videos\BombJack\BombJack with Proteus final louder.mp4"
+	
+	Links:
+		The main project page with dev logs and downloads: https://martin-piper.itch.io/bomb-jack-display-hardware
+		Proteus simulation and PCB design: https://www.labcenter.com/
+		Xinweike PCB manufacture: http://www.xinweikedz.com/
