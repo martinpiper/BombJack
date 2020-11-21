@@ -1,15 +1,14 @@
 !zn
 ; Waits for the start of the _VBLANK to be triggered from the video, which is a negative edge on the _VBLANK line
 Bus24Bit_WaitVBlank
+	; ACK Any previous VBLANK
+	lda CIA2InterruptControl
+
+	; Wait for VBLANK event
 	lda #%10000
 .l1
 	bit CIA2InterruptControl
 	beq .l1
-
-	lda #%10000
-.l2
-	bit CIA2InterruptControl
-	bne .l2
 	rts
 
 
