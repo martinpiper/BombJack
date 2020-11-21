@@ -5,6 +5,16 @@
 
 
 
+* 5 RCA male to VGA Male is uncommon:
+	https://www.cs1.net/products/canare/V5-1p5C_RGBHV_VGA_breakout.htm
+	https://www.elecbee.com/en/d-sub-cable-assemblies/3035-vga-to-rgbhv-rca-connector-cable-hd15-male-to-5-rca-male-connectors-12-feet-long.html
+	5 BNC male to male VGA is a lot more common:
+		https://www.amazon.com/C2G-02572-Premium-Rgbhv-Meters/dp/B0073DP4BC
+		https://search.c2g.com/uk?category=1%7CVGA&it=item&keyword=rgbhv
+	So consider BNC female for the next generation board
+
+
+
 
 * Programmable Macro Logic Device PMLD
 	The end result would be to accelerate 3D polygon drawing, for example.
