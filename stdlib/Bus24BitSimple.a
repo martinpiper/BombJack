@@ -57,6 +57,7 @@ Bus24Bit_Reset
 ; A = EBBS
 Bus24Bit_SetEBBS
 	sta Bus24Bit_EBBS
+Bus24Bit_EBBSNoSet
 	+MBus24Bit_SetLatch 0
 	rts
 
@@ -134,7 +135,22 @@ Bus24Bit_AddressIncrement
 	rts
 
 
+Bus24Bit_WriteMakeSafe !by 0
+Bus24Bit_WriteMakeSafeReset !by 0
 Bus24Bit_Write
+	lda Bus24Bit_WriteMakeSafeReset
+	beq .skipWait
+	lda Bus24Bit_WriteMakeSafe
+	bne .skipWait
+	lda #0
+	jsr Bus24Bit_EBBSNoSet
+	jsr Bus24Bit_WaitVBlank
+	lda Bus24Bit_EBBS
+	jsr Bus24Bit_EBBSNoSet
+	lda Bus24Bit_WriteMakeSafeReset
+	sta Bus24Bit_WriteMakeSafe
+.skipWait
+	dec Bus24Bit_WriteMakeSafe
 	lda #%000
 	sta CIA2PortASerialBusVICBank
 	lda #%100

@@ -304,6 +304,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	Negative edge of _VSYNC indicates start of the frame
 	
 	Positive edge of VBLANK indicates the bottom of the visible screen edge
+	Note: EXTWANTIRQ = _VBLANK which triggers on the negative edge at raster $f0
 
 	RV = vertical raster line number
 		$f8-$ff	lo _VSYNC

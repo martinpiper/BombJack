@@ -8,4 +8,6 @@ Xinweike PCB manufacture: http://www.xinweikedz.com/
 https://twitter.com/hashtag/RetroTTLVideoCard
 https://twitter.com/hashtag/RetroTTL
 
-#RetroTTL #RetroTTLVideoCard #C64 #Commodore64 #electronics #electronicsproject 
+#RetroTTL #RetroTTLVideoCard #C64 #Commodore64 #electronics #electronicsproject
+
+RetroTTL,RetroTTLVideoCard,C64,Commodore64,electronics,electronicsproject
