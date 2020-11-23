@@ -35,14 +35,27 @@ Bus24Bit_Reset
 Bus24Bit_CopySmallData
 	sta .sm1+1
 	stx .sm1+2
+Bus24Bit_CopySmallDataAgainWithSize
 	sty .sm2+1
+Bus24Bit_CopySmallDataAgain
 	ldy #0
 .l1
-.sm1	lda $1234,y
+.sm1	lda $1234
 	sta CIA2PortBRS232
+	; We do this instead of indexing the above LDA with Y so that repeated requests will continue on from where the last position was
+	inc .sm1+1
+	bne .l3
+	inc .sm1+2
+.l3
 	iny
 .sm2	cpy #0
 	bne .sm1
+	rts
+
+Bus24Bit_CopySmallDataRepeatForX
+	jsr Bus24Bit_CopySmallDataAgain
+	dex
+	bne Bus24Bit_CopySmallDataRepeatForX
 	rts
 
 
