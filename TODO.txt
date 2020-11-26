@@ -7,6 +7,13 @@
 		Then re-design the board such that the data setup time is definitely maintained
 		* TODO: Perhaps OSCCLK could be used with a single flip-flop to buffer, and delay by one clock, the _PC signal
 			Since the _PC -ve to +ve edge is 1us (1MHz) then a OSCCLK of 10MHz would be adequate. Currently the board uses 4MHz.
+		These measurements explain that perhaps the introduced logic gate latency between data signal and latch is just long enough to reliably work...
+			Measured from the C64 data arriving at the user port board (at 500 MHz): C:\temp\User port breakout capture 2.LPF
+			The data signal is set 8ns before the -ve edge on _PC
+			Measured propagation delay of the NOR _PC2 (-ve _PC to +ve CLK of U10) is 12ns
+			Measured time from data signal to +ve CLK edge is 18ns
+		The simulation also has 10ns propagation delay for the NOR
+			
 
 
 
