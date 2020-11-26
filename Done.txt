@@ -1229,3 +1229,32 @@
 		Done, improved logic to reflect hardware - Check emulated logic around device.extEXTWANTIRQ() that it reflects a one shot strobe
 		Done - Bus24Bit_WaitVBlank might need to be simplified to do an initial read, then wait for the single strobe, to align with the hardware
 		Checked, setting EBBS = 0, waiting for VBLANK, setting EBBS=1, using some time, then setting EBBS = 0, does display expected raster line in hardware - Also Check the timing of the negative transition from the hardware with respect to the raster position
+
+
+
+
+* Videos\BombJack\20201030_223915.mp4 shows the simple C64 memory bus interface working
+	* BASIC test code needs a simple 8x8 character conversion routine, perhaps converting a string into bit planes sequentially line by line:
+		a$="  123  4":gosub xxx
+		a$="  1 3  3":gosub xxx
+		... etc ...
+	Where space (or 0) is transparent, and the numbers correspond to pixel colours 1-7
+	* Try an assembly language wait for NMI to be read test. Should be possible to read the memory address and simply write the value to the border in a tight loop to test.
+		Oh I so love not having even a simple assembler on the real C64. Since the 1541 drive is very ill and won't read my disks.
+	Better demo: https://youtu.be/PXDLMjCwmgw
+	* Daft idea, get the BASIC to write machine code for all of the memory writes it does, basically "compile" the output of the BASIC code. This will let me test how fast the simple memory bus is.
+	* Created "BDD6502\features\TestVideoHardware Chars.a" and "BDD6502\features\TestVideoHardware Chars.feature" which uses a simple address bus and displays a static char screen using real 6502 code
+
+
+
+
+* User port board is missing U2 and U24 because they are not part of the placement. These must have been unmistakably block copied with the option disabled.
+	For now the following ICs will need to be moved to breadboard and their signals connected back. *Sigh*
+		U13
+		U12
+		from pin 5 _MEWR of U24 will need to go to the top of the bus header
+	* The hacky breadboard fix worked (see videos).
+
+
+
+* Need user port board power LED

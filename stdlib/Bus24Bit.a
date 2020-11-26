@@ -30,6 +30,8 @@ Bus24Bit_Reset
 	rts
 
 
+Bus24Bit_WriteMakeSafe !by 0
+Bus24Bit_WriteMakeSafeReset !by 0
 ; A/X = lo/hi address
 ; Y = length
 Bus24Bit_CopySmallData
@@ -40,6 +42,17 @@ Bus24Bit_CopySmallDataAgainWithSize
 Bus24Bit_CopySmallDataAgain
 	ldy #0
 .l1
+	lda Bus24Bit_WriteMakeSafeReset
+	beq .sm1
+
+	lda Bus24Bit_WriteMakeSafe
+	bne .skipWait
+	jsr Bus24Bit_WaitVBlank
+	lda Bus24Bit_WriteMakeSafeReset
+	sta Bus24Bit_WriteMakeSafe
+.skipWait
+	dec Bus24Bit_WriteMakeSafe
+
 .sm1	lda $1234
 	sta CIA2PortBRS232
 	; We do this instead of indexing the above LDA with Y so that repeated requests will continue on from where the last position was
@@ -49,7 +62,7 @@ Bus24Bit_CopySmallDataAgain
 .l3
 	iny
 .sm2	cpy #0
-	bne .sm1
+	bne .l1
 	rts
 
 Bus24Bit_CopySmallDataRepeatForX

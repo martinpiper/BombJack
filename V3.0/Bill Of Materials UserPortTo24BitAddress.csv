@@ -1,29 +1,35 @@
 Category,References,Value,Stock Code,Unit Cost,Description,Group Layer,PCB Package
-Miscellaneous,POWER 5V,163-179PH-EX,https://www.mouser.sg/ProductDetail/163-179PH-EX,,DC Power Connectors PCB 2.1MM,,163179PHEX
-Miscellaneous,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,,0.1in pitch SIL connector strip,,CONN-SIL2
-Miscellaneous,USER BUS,TST-107-01-G-D,https://www.mouser.sg/ProductDetail/Samtec/TST-107-01-G-D?qs=FESYatJ8odJB1y56XqI29Q%3D%3D,,"14 Position, Shrouded PCB Headers, 0.100&quot; pitch",,TST-107-XX-Y-D
-Miscellaneous,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/TE-Connectivity/1658525-2?qs=sGAEpiMZZMs%252BGHln7q6pm4Fqf7MuBHLT6rOqfDeotQQ%3D,S$8.89,0.1in pitch DIL connector strip,,CONN-DIL34
-Integrated Circuits,U4,74LS02,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D ,,Quadruple 2-Input Positive-NOR Gates,,DIL14
-Integrated Circuits,U11,74LS02,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D ,,Quadruple 2-Input Positive-NOR Gates,,DIL14
-Integrated Circuits,U12,74LS04,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters,,DIL14
-Integrated Circuits,U17,74LS04,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters,,DIL14
-Integrated Circuits,U5,74LS08,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D ,,Quadruple 2-Input Positive-AND Gates,,DIL14
-Integrated Circuits,U22,74LS139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139ANE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cZH8zZWkorLQ%3D,,Dual 2-Line to 4-Line Decoders/Demultiplexers,,DIL16
+Resistors,R208,200,,,Generic resistor symbol,,RES40
 Integrated Circuits,U1,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D ,,Synchronous 4-Bit Binary Counters,,DIL16
+Integrated Circuits,U2,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D,,Synchronous 4-Bit Binary Counters,,DIL16
+Integrated Circuits,U3,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
+Integrated Circuits,U4,74LS02,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D ,,Quadruple 2-Input Positive-NOR Gates,,DIL14
+Integrated Circuits,U5,74LS08,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOfW4A%252BAFGoNk%3D ,,Quadruple 2-Input Positive-AND Gates,,DIL14
 Integrated Circuits,U6,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D ,,Synchronous 4-Bit Binary Counters,,DIL16
 Integrated Circuits,U7,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D ,,Synchronous 4-Bit Binary Counters,,DIL16
 Integrated Circuits,U8,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D ,,Synchronous 4-Bit Binary Counters,,DIL16
 Integrated Circuits,U9,74161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161AN?qs=sGAEpiMZZMtdY2G%252BSI3N4ULNIy7IUD05%2FJSW%252B139gsI%3D ,,Synchronous 4-Bit Binary Counters,,DIL16
-Integrated Circuits,U23,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
-Integrated Circuits,U25,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
-Integrated Circuits,U26,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
-Integrated Circuits,U14,74LS32,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,,Quad 2-input positive-OR gates,,DIL14
-Integrated Circuits,U3,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
 Integrated Circuits,U10,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
+Integrated Circuits,U11,74LS02,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS02NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOw9uqInhsB60%3D ,,Quadruple 2-Input Positive-NOR Gates,,DIL14
+Integrated Circuits,U12,74LS04,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters,,DIL14
+Integrated Circuits,U13,74LS32,,,Quad 2-input positive-OR gates,,DIL14
+Integrated Circuits,U14,74LS32,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,,Quad 2-input positive-OR gates,,DIL14
 Integrated Circuits,U15,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
 Integrated Circuits,U16,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
+Integrated Circuits,U17,74LS04,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters,,DIL14
 Integrated Circuits,U18,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
 Integrated Circuits,U19,74LS374,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcRt%252BQ%252B9gVRsA%3D,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,,DIL20
+Integrated Circuits,U20,6264,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,,64K (8Kx8) Static RAM,,NULL
+Integrated Circuits,U21,74154,,,4-to-16 Line Decoder/Demultiplexer,,NULL
+Integrated Circuits,U22,74LS139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139ANE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cZH8zZWkorLQ%3D,,Dual 2-Line to 4-Line Decoders/Demultiplexers,,DIL16
+Integrated Circuits,U23,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
+Integrated Circuits,U24,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,,Dual 2-Line to 4-Line Decoders/Demultiplexers,,DIL16
+Integrated Circuits,U25,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
+Integrated Circuits,U26,74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,DIL20
+Diodes,D204,LED-RED,,,Animated LED model (Red),,LED
+Miscellaneous,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/TE-Connectivity/1658525-2?qs=sGAEpiMZZMs%252BGHln7q6pm4Fqf7MuBHLT6rOqfDeotQQ%3D,S$8.89,0.1in pitch DIL connector strip,,CONN-DIL34
+Miscellaneous,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,,0.1in pitch SIL connector strip,,CONN-SIL2
 Miscellaneous,EXPANSIONBUS3,CONN-DIL8,,,0.1in pitch DIL connector strip,,CONN-DIL8
 Miscellaneous,OSCCLK,555,,,Timer/Oscillator,,DIL08
-Integrated Circuits,U13,74LS32,,,Quad 2-input positive-OR gates,,DIL14
+Miscellaneous,POWER 5V,163-179PH-EX,https://www.mouser.sg/ProductDetail/163-179PH-EX,,DC Power Connectors PCB 2.1MM,,163179PHEX
+Miscellaneous,USER BUS,TST-107-01-G-D,https://www.mouser.sg/ProductDetail/Samtec/TST-107-01-G-D?qs=FESYatJ8odJB1y56XqI29Q%3D%3D,,"14 Position, Shrouded PCB Headers, 0.100&quot; pitch",,TST-107-XX-Y-D
