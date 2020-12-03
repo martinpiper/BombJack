@@ -6,9 +6,9 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -35.73660 -37.62700 60.73660 62.62700))
-  (boundary (path signal 0.20320 -35.60960 -37.50000 60.60960 -37.50000 60.60960 62.50000
-   -35.60960 62.50000 -35.60960 -37.50000))
+  (boundary (rect pcb -35.73660 -45.12700 60.73660 62.62700))
+  (boundary (path signal 0.20320 -35.60960 -45.00000 60.60960 -45.00000 60.60960 62.50000
+   -35.60960 62.50000 -35.60960 -45.00000))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction horizontal))
   (layer I1 (type signal) (direction horizontal))
@@ -57,36 +57,37 @@
   ))
   (component "CONN-DIL8_EXPANSIONBUS3" (place EXPANSIONBUS3 -23.69000 42.90000 front 90
   ))
-  (component "TST-107-XX-Y-D_USER BUS" (place "USER BUS" 17.58000 -27.50000 front -180
+  (component "TST-107-XX-Y-D_USER BUS" (place "USER BUS" 17.58000 -35.00000 front -180
   ))
   (component "163179PHEX_POWER 5V" (place "POWER 5V" 50.07000 52.59000 front -180))
   (component LED_D204 (place D204 55.00000 42.50000 front -90))
   (component RES40_R208 (place R208 50.16000 42.50000 front -180))
-  (component DIL20_U3 (place U3 0.00000 2.54000 front 270))
-  (component DIL20_U10 (place U10 10.16000 2.54000 front 270))
-  (component DIL20_U15 (place U15 20.32000 2.54000 front 270))
-  (component DIL20_U16 (place U16 0.00000 30.48000 front 270))
-  (component DIL20_U18 (place U18 30.48000 2.54000 front 270))
-  (component DIL20_U19 (place U19 10.16000 30.48000 front 270))
-  (component DIL20_U23 (place U23 -10.16000 22.86000 front 270))
-  (component DIL20_U25 (place U25 -20.32000 22.86000 front 270))
-  (component DIL20_U26 (place U26 20.32000 30.48000 front 270))
-  (component DIL16_U1 (place U1 30.48000 25.40000 front 270))
-  (component DIL16_U2 (place U2 40.64000 25.40000 front 270))
-  (component DIL16_U24 (place U24 40.64000 2.54000 front 270))
-  (component DIL16_U6 (place U6 -12.70000 -5.08000 front 270))
-  (component DIL16_U7 (place U7 43.18000 -22.86000 front 180))
-  (component DIL16_U8 (place U8 -22.86000 -8.89000 front 270))
-  (component DIL16_U9 (place U9 50.80000 2.54000 front 270))
-  (component DIL14_U17 (place U17 30.48000 45.72000 front 270))
-  (component DIL16_U22 (place U22 50.80000 25.40000 front 270))
-  (component DIL14_U5 (place U5 17.78000 50.80000 front 270))
-  (component DIL14_U4 (place U4 41.91000 29.21000 front 0))
-  (component DIL14_U12 (place U12 -1.27000 35.56000 front 0))
-  (component DIL14_U14 (place U14 -5.08000 35.56000 front 180))
-  (component DIL14_U11 (place U11 -1.27000 45.72000 front 0))
-  (component DIL14_U13 (place U13 -5.08000 39.37000 front 90))
-  (component DIL08_OSCCLK (place OSCCLK 50.80000 -20.32000 front 270))
+  (component DIL20_U3 (place U3 5.08000 3.81000 front 270))
+  (component DIL20_U10 (place U10 15.24000 3.81000 front 270))
+  (component DIL20_U15 (place U15 0.00000 33.02000 front 270))
+  (component DIL20_U16 (place U16 25.40000 3.81000 front 270))
+  (component DIL20_U18 (place U18 -10.16000 33.02000 front 270))
+  (component DIL20_U19 (place U19 35.56000 3.81000 front 270))
+  (component DIL20_U23 (place U23 11.43000 33.02000 front 270))
+  (component DIL20_U25 (place U25 -20.32000 33.02000 front 270))
+  (component DIL20_U26 (place U26 21.59000 33.02000 front 270))
+  (component DIL16_U1 (place U1 35.56000 27.94000 front 270))
+  (component DIL16_U2 (place U2 45.72000 27.94000 front 270))
+  (component DIL16_U24 (place U24 45.72000 3.81000 front 270))
+  (component DIL16_U6 (place U6 -5.08000 3.81000 front 270))
+  (component DIL16_U7 (place U7 6.35000 -29.21000 front 0))
+  (component DIL16_U8 (place U8 -15.24000 3.81000 front 270))
+  (component DIL16_U9 (place U9 1.27000 -16.51000 front 180))
+  (component DIL14_U17 (place U17 29.21000 -29.21000 front 0))
+  (component DIL16_U22 (place U22 46.99000 -19.05000 front 270))
+  (component DIL14_U4 (place U4 40.64000 -31.75000 front 180))
+  (component DIL14_U5 (place U5 48.26000 39.37000 front 180))
+  (component DIL14_U12 (place U12 13.97000 36.83000 front 0))
+  (component DIL14_U14 (place U14 -7.62000 -31.75000 front 180))
+  (component DIL14_U27 (place U27 -10.16000 36.83000 front 0))
+  (component DIL14_U11 (place U11 13.97000 46.99000 front 0))
+  (component DIL14_U13 (place U13 -10.16000 46.99000 front 0))
+  (component DIL08_OSCCLK (place OSCCLK 31.75000 54.61000 front 270))
  )
  (library
   (image "CONN-DIL34_EXPANSIONBUS" (side front)
@@ -551,7 +552,7 @@
    (pin PS5 (rotate 0) 14 2.54000 7.62000)
    (pin PS5 (rotate 0) 15 0.00000 7.62000)
   )
-  (image DIL14_U5 (side front)
+  (image DIL14_U4 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS4 (rotate 0) 0 0.00000 0.00000)
    (pin PS5 (rotate 0) 1 2.54000 0.00000)
@@ -568,7 +569,7 @@
    (pin PS5 (rotate 0) 12 2.54000 7.62000)
    (pin PS5 (rotate 0) 13 0.00000 7.62000)
   )
-  (image DIL14_U4 (side front)
+  (image DIL14_U5 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS4 (rotate 0) 0 0.00000 0.00000)
    (pin PS5 (rotate 0) 1 2.54000 0.00000)
@@ -603,6 +604,23 @@
    (pin PS5 (rotate 0) 13 0.00000 7.62000)
   )
   (image DIL14_U14 (side front)
+   (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
+   (pin PS4 (rotate 0) 0 0.00000 0.00000)
+   (pin PS5 (rotate 0) 1 2.54000 0.00000)
+   (pin PS5 (rotate 0) 2 5.08000 0.00000)
+   (pin PS5 (rotate 0) 3 7.62000 0.00000)
+   (pin PS5 (rotate 0) 4 10.16000 0.00000)
+   (pin PS5 (rotate 0) 5 12.70000 0.00000)
+   (pin PS5 (rotate 0) 6 15.24000 0.00000)
+   (pin PS5 (rotate 0) 7 15.24000 7.62000)
+   (pin PS5 (rotate 0) 8 12.70000 7.62000)
+   (pin PS5 (rotate 0) 9 10.16000 7.62000)
+   (pin PS5 (rotate 0) 10 7.62000 7.62000)
+   (pin PS5 (rotate 0) 11 5.08000 7.62000)
+   (pin PS5 (rotate 0) 12 2.54000 7.62000)
+   (pin PS5 (rotate 0) 13 0.00000 7.62000)
+  )
+  (image DIL14_U27 (side front)
    (outline (rect TOP -1.37160 -0.63500 16.61160 8.25500))
    (pin PS4 (rotate 0) 0 0.00000 0.00000)
    (pin PS5 (rotate 0) 1 2.54000 0.00000)
@@ -1494,7 +1512,7 @@
    )
    (pins U2-1 U13-5)
   )
-  (net "#00479"
+  (net "#00447"
    (circuit
     (use_layer TOP I1 I2 BOT)
     (use_via
@@ -1591,7 +1609,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U22-6 U5-1 U4-4 U4-10 U11-7 U13-8)
+   (pins U22-6 U4-4 U4-10 U5-1 U11-7 U13-8)
   )
   (net "DBUNLATCH"
    (circuit
@@ -1926,8 +1944,8 @@
    )
     (pins EXPANSIONBUS-17 "USER BUS"-13 "POWER 5V"-1 "POWER 5V"-2 D204-1 U3-0 U3-9 U10-0
      U10-9 U15-0 U15-9 U16-0 U16-9 U18-0 U18-9 U19-0 U19-9 U23-9 U25-9 U26-9 U1-7 U2-7
-     U24-0 U24-7 U6-7 U7-7 U8-7 U9-7 U17-6 U22-0 U22-7 U5-6 U4-6 U12-6 U14-6 U11-6 U13-6
-    OSCCLK-3)
+     U24-0 U24-7 U6-7 U7-7 U8-7 U9-7 U17-6 U22-0 U22-7 U4-6 U5-6 U12-6 U14-6 U27-6 U11-6
+    U13-6 OSCCLK-3)
   )
   (net "LOADTICK"
    (circuit
@@ -1936,7 +1954,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U23-10 U25-10 U26-10 U13-3 OSCCLK-4)
+   (pins U23-10 U25-10 U26-10 U27-2 U13-3 OSCCLK-4)
   )
   (net "PA2"
    (circuit
@@ -2037,8 +2055,8 @@
    )
     (pins EXPANSIONBUS-16 "POWER 5V"-0 R208-0 U3-19 U10-19 U15-19 U16-19 U18-19 U19-19
      U23-19 U25-19 U26-19 U1-6 U1-8 U1-9 U1-15 U2-6 U2-8 U2-9 U2-15 U24-15 U6-0 U6-6 U6-9
-     U6-15 U7-0 U7-15 U8-0 U8-15 U9-0 U9-15 U17-13 U22-15 U5-13 U4-13 U12-13 U14-13 U11-13
-    U13-13 OSCCLK-7)
+     U6-15 U7-0 U7-15 U8-0 U8-15 U9-0 U9-15 U17-13 U22-15 U4-13 U5-13 U12-13 U14-13 U27-0
+    U27-3 U27-13 U11-13 U13-13 OSCCLK-7)
   )
   (net "_FLAG2"
    (circuit
@@ -2065,7 +2083,16 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins "USER BUS"-4 U5-0 U4-2 U4-5 U4-8 U11-5 U13-9)
+   (pins U4-2 U4-5 U4-8 U5-0 U27-4 U11-5 U13-9)
+  )
+  (net "_PC2"
+   (circuit
+    (use_layer TOP I1 I2 BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "USER BUS"-4 U27-1)
   )
   (class POWER
    "GND"
@@ -2159,7 +2186,7 @@
    "#00346"
    "#00348"
    "#00353"
-   "#00479"
+   "#00447"
    "ADDROUTLOAD"
    "AFTERBYTE"
    "BUSDDR"
@@ -2220,6 +2247,7 @@
    "_FLAG2"
    "_MEWR"
    "_PC"
+   "_PC2"
    "{NC}"
    "{VOID}"
    (rule

@@ -1258,3 +1258,25 @@
 
 
 * Need user port board power LED
+
+
+
+
+
+* Observed from the C64 user port, the byte output change and _PC goes low at the "same time".
+	For the user port interface, U3 (the first EBBS latch) loads the byte value on the negative edge of _PC
+	The positive edge of _PC is used is used to increment the state counter U1 and U22:A demux output
+	But the U3 latch needs a data setup time of 20ns, which would indicate it does not fit the "at the same time" byte and _PC behaviour, so the U4:A NOR which has a 10-18 ns propagation time seems to be luckily giving just enough data setup time
+	* Note: This is tested working on the C64, but it is slightly dodgy.
+	* Alter the simulation data to reflect the "same time" change of the byte and the _PC signal.
+		Then re-design the board such that the data setup time is definitely maintained
+		* TODO: Perhaps OSCCLK could be used with a single flip-flop to buffer, and delay by one clock, the _PC signal
+			Since the _PC -ve to +ve edge is 1us (1MHz) then a OSCCLK of 10MHz would be adequate. Currently the board uses 4MHz.
+		These measurements explain that perhaps the introduced logic gate latency between data signal and latch is just long enough to reliably work...
+			Measured from the C64 data arriving at the user port board (at 500 MHz): C:\temp\User port breakout capture 2.LPF
+			The data signal is set 8ns before the -ve edge on _PC
+			Measured propagation delay of the NOR _PC2 (-ve _PC to +ve CLK of U10) is 12ns
+			Measured time from data signal to +ve CLK edge is 18ns
+		The simulation also has 10ns propagation delay for the NOR
+		* Done: The new 7474 U27 uses the user port _PC2 line (which in the renamed _PC) and outputs the real _PC. This gives a measured 130ns delay on the _PC2 to _PC transition.
+			Board name now: C64 userport to 24 bit addr auto++ V1.2

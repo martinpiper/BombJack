@@ -1,23 +1,3 @@
-* Observed from the C64 user port, the byte output change and _PC goes low at the "same time".
-	For the user port interface, U3 (the first EBBS latch) loads the byte value on the negative edge of _PC
-	The positive edge of _PC is used is used to increment the state counter U1 and U22:A demux output
-	But the U3 latch needs a data setup time of 20ns, which would indicate it does not fit the "at the same time" byte and _PC behaviour, so the U4:A NOR which has a 10-18 ns propagation time seems to be luckily giving just enough data setup time
-	* Note: This is tested working on the C64, but it is slightly dodgy.
-	* Alter the simulation data to reflect the "same time" change of the byte and the _PC signal.
-		Then re-design the board such that the data setup time is definitely maintained
-		* TODO: Perhaps OSCCLK could be used with a single flip-flop to buffer, and delay by one clock, the _PC signal
-			Since the _PC -ve to +ve edge is 1us (1MHz) then a OSCCLK of 10MHz would be adequate. Currently the board uses 4MHz.
-		These measurements explain that perhaps the introduced logic gate latency between data signal and latch is just long enough to reliably work...
-			Measured from the C64 data arriving at the user port board (at 500 MHz): C:\temp\User port breakout capture 2.LPF
-			The data signal is set 8ns before the -ve edge on _PC
-			Measured propagation delay of the NOR _PC2 (-ve _PC to +ve CLK of U10) is 12ns
-			Measured time from data signal to +ve CLK edge is 18ns
-		The simulation also has 10ns propagation delay for the NOR
-			
-
-
-
-
 * Instead of having 4 pixel headers in the video board, have one pixel input header. Then every board can have an input pixel and output pixel header instead.
 	Each board can then do its own transparent pixel test and choose to pass-through the pixel or replace the pixel to its output pixel header
 		The mode7 board can do an 8-bit pixel is transparent test, the other layers can use their 3-bit pixel test logic
@@ -32,6 +12,9 @@
 		https://www.amazon.com/C2G-02572-Premium-Rgbhv-Meters/dp/B0073DP4BC
 		https://search.c2g.com/uk?category=1%7CVGA&it=item&keyword=rgbhv
 	So consider BNC female for the next generation board
+		https://www.mouser.sg/ProductDetail/TE-Connectivity/5227677-1?qs=GSeC4G%252BEqEX0oAnTcsRqKg%3D%3D
+			The 3D model orientation is wrong for this part, when it gets imported from the extended search
+		** Remember some spacing between connectors is good
 
 
 
