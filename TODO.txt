@@ -42,6 +42,8 @@
 
 
 * The pixel header rotations need to be consistent across the boards
+	LAYER4 especially does not have the pixel and palette lines arriving in the same order as the other layers
+
 
 
 
