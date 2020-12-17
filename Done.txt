@@ -1280,3 +1280,10 @@
 		The simulation also has 10ns propagation delay for the NOR
 		* Done: The new 7474 U27 uses the user port _PC2 line (which in the renamed _PC) and outputs the real _PC. This gives a measured 130ns delay on the _PC2 to _PC transition.
 			Board name now: C64 userport to 24 bit addr auto++ V1.2
+
+
+
+* Hardware tests https://youtu.be/23YtiLoUx7U?t=850 indicated left hand pixel edge flickering issues for full screen height sprites: https://positronic-processing.slack.com/archives/C8GP4S84Q/p1608180015000600
+	The SPRFULL signal makes U80 tri-state, ignoring the high nybble of the screen Y position, forcing the sprite to always be in range for output, thus making it full screen height
+	The tri-state nature of the logic means it was not floating high quickly enough.
+	Weak pull-up resistors (5.6k) we added to the outputs of U80, this fixed this left hand edge flickering issue. This is the same logic as the pull-up to $ff for the sprite scan RAMs

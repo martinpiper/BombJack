@@ -1,3 +1,20 @@
+* Consider reinstating 4E/4F?
+
+
+
+* PCB connectivity options:
+	Backplane:
+		https://www.ti.com/lit/an/szza016b/szza016b.pdf
+		https://resources.altium.com/p/signal-integrity-simulations-backplane-bus-connectors
+	Ribbon cable + IDC:
+		https://electronics.stackexchange.com/questions/206133/ribbon-cable-noise-susceptibility
+		https://www.machinedesign.com/archive/article/21818753/tricks-of-the-trade-for-lownoise-design
+		https://forum.allaboutcircuits.com/threads/ribbon-problems-there-has-to-be-a-better-way.17214/
+		https://www.avrfreaks.net/forum/shielding-ribbon-cable
+
+	
+
+
 * Instead of having 4 pixel headers in the video board, have one pixel input header. Then every board can have an input pixel and output pixel header instead.
 	Each board can then do its own transparent pixel test and choose to pass-through the pixel or replace the pixel to its output pixel header
 		The mode7 board can do an 8-bit pixel is transparent test, the other layers can use their 3-bit pixel test logic
