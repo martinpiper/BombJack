@@ -58,12 +58,6 @@
 
 
 
-* The pixel header rotations need to be consistent across the boards
-	LAYER4 especially does not have the pixel and palette lines arriving in the same order as the other layers
-
-
-
-
 * The "Sprite scan RAM logic" reads scan RAM, tests for transparency, writes sprite pixels in transparent or writes back existing value
 	Perhaps change the logic so that the input sprite pixel is tested for transparency and only written if opaque?
 		This would reduce the constant read, test, write back cycle to only test and optional write

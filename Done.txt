@@ -1287,3 +1287,9 @@
 	The SPRFULL signal makes U80 tri-state, ignoring the high nybble of the screen Y position, forcing the sprite to always be in range for output, thus making it full screen height
 	The tri-state nature of the logic means it was not floating high quickly enough.
 	Weak pull-up resistors (5.6k) we added to the outputs of U80, this fixed this left hand edge flickering issue. This is the same logic as the pull-up to $ff for the sprite scan RAMs
+
+
+
+
+* The pixel header rotations need to be consistent across the boards
+	LAYER4 especially does not have the pixel and palette lines arriving in the same order as the other layers
