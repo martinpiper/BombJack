@@ -1291,5 +1291,14 @@
 
 
 
+All layouts now use V3.1
+
 * The pixel header rotations need to be consistent across the boards
 	LAYER4 especially does not have the pixel and palette lines arriving in the same order as the other layers
+
+
+
+* Char screen uses two extra lines for more chars. So only the bottom 16 palette entries can be used.
+	However this SC4 allows the upper or lower palette to be used by the char screen instead.
+	Current design has 0x9000 - 0x901f latching into U250, of which the lower bit is used for the lower or upper char palette bank select
+		However this can be $9000 only in the future, if other character screen registers are needed

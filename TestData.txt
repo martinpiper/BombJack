@@ -3,13 +3,16 @@ d0
 
 ; Testing the _EXTCS8000-B800 lines
 d$80000112
-d$88000112
-d$90000112
-d$98000112
-d$a0000112
-d$a8000112
-d$b0000112
-d$b8000112
+d$88000113
+; Char screen uses high palette bank
+d$90000115
+; Char screen uses lower palette bank
+d$90000114
+d$98000115
+d$a0000116
+d$a8000117
+d$b0000118
+d$b8000119
 
 ; Old tile background colour
 d$9e07017f
