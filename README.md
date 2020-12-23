@@ -99,8 +99,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 
 ### Memory map
 
-0x9000-0x93ff	Video RAM
-0x9400-0x97ff	Colour RAM
+0x9000			Chars control register
 0x9c00-0x9cff	Palette RAM
 
 0x9e00	0x10	Enable tiles
@@ -118,6 +117,8 @@ Sprite 32x32 size select
 		So 0,0 = no 32x32 sprites
 		0,8 means indexes 0 to 7 (inclusive) are 32x32
 		Maximum number in both is is 0xf
+
+
 
 At 0x9820 - 0x987f each sprite is described by 4 bytes:
 
@@ -240,6 +241,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
+   | $80           | Char screen banks 0-3         | $4000   8KB          | Chars and colours into U258             |
    | Note 2 spare  |                               |                      |                                         |
    | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R             |
    | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 1 into 8N7R             |

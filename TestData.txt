@@ -4,10 +4,19 @@ d0
 ; Testing the _EXTCS8000-B800 lines
 d$80000112
 d$88000113
+; Char screen disable
+d$90000102
 ; Char screen uses high palette bank
-d$90000115
+;d$90000101
 ; Char screen uses lower palette bank
-d$90000114
+;d$90000100
+; Char screen uses bank 1
+;d$90000140
+; Char screen uses bank 2
+d$90000180
+; Char screen uses bank 3
+d$900001c0
+
 d$98000115
 d$a0000116
 d$a8000117
@@ -272,59 +281,78 @@ s$80001000
 !PaletteData.txt
 
 
-; Write screen data into RAM mapped at $9000 with EBS $01
-s$90400100
+; Write char screen bank 0 data into RAM mapped at $4000 with EBS $80
+s$40408000
 ; Screen data
 b$40,b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
-s$91000100
+s$41008000
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
-s$92000100
+s$42008000
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
-s$93000100
+s$43008000
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 
-; Write colour data into RAM mapped at $9400 with EBS $01
+; Write char colour bank 0 data into RAM mapped at $4400 with EBS $80
 ; Colour data
-s$94400100
+s$44408000
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 ; Demonstrating various flips and also the extended character set using hi-nybble 1/2
 b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0,b$c1
 b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
-s$95000100
+s$45008000
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-s$96000100
+s$46008000
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-s$97000100
+s$47008000
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 
 
-; For the 512x256 test only
-; Write screen data into RAM mapped at $8000 with EBS $01
-s$80800100
+
+
+; Write char screen bank 1 data into RAM mapped at $4800 with EBS $80
+s$48c08000
 ; Screen data
-b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
-s$81500100
-b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
-s$85600100
-b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
-s$86700100
-b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
+b$80,b$81,b$82,b$83,b$84,b$85,b$86,b$87,b$88,b$89,b$8a,b$8b,b$8c,b$8d,b$8e,b$8f
 
-; Write colour data into RAM mapped at $8800 with EBS $01
+; Write char colour bank 1 data into RAM mapped at $4c00 with EBS $80
 ; Colour data
-s$88800100
-; Demonstrating various flips and also the extended character set using hi-nybble 1/2
-b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
-s$89500100
-b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-s$8d600100
-b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
-s$8e700100
-b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
+s$4cc08000
+b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$82
+
+
+
+
+; Write char screen bank 2 data into RAM mapped at $5000 with EBS $80
+s$50c08000
+; Screen data
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+
+; Write char colour bank 2 data into RAM mapped at $5400 with EBS $80
+; Colour data
+s$54c08000
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+
+
+
+
+; Write char screen bank 3 data into RAM mapped at $5800 with EBS $80
+s$59c08000
+; Screen data
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+
+; Write char colour bank 3 data into RAM mapped at $5c00 with EBS $80
+; Colour data
+s$5dc08000
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+
+
+
+
+
 
 
 ; Write some debug character set data from the C64
@@ -337,7 +365,7 @@ b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 ;s$80002000
 ;<0,1,2,3,4,5,6,7,<C:\VICE\C64\chargen
 
-;s$94400100
+;s$44408000
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
@@ -358,7 +386,7 @@ b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 
-;s$90400100
+;s$40408000
 ;b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$00
 ;b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01,b$01
 ;b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02,b$02
@@ -641,6 +669,10 @@ d$0
 ; Clear background palette choice
 d$a0140100
 d$a01401ff
+
+; Char screen bank 0 and uses lower palette bank
+d$90000100
+
 
 ; Switch back to normal screen and include the animation data
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.

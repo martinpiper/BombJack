@@ -98,14 +98,14 @@ s$9c000100
 
 
 
-; Write screen data into RAM mapped at $9000 with EBS $01
-s$90400100
+; Write screen data into RAM mapped at $4000 with EBS $80
+s$40408000
 ; Screen data
 b$00
 
-; Write colour data into RAM mapped at $9400 with EBS $01
+; Write colour data into RAM mapped at $4400 with EBS $80
 ; Colour data
-s$94400100
+s$44408000
 b$00
 
 

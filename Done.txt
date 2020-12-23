@@ -1302,3 +1302,63 @@ All layouts now use V3.1
 	However this SC4 allows the upper or lower palette to be used by the char screen instead.
 	Current design has 0x9000 - 0x901f latching into U250, of which the lower bit is used for the lower or upper char palette bank select
 		However this can be $9000 only in the future, if other character screen registers are needed
+
+
+
+
+
+* C64 userport references
+	Nice looking breakout board with reset button: https://www.tindie.com/products/syzygy_systems/c64-user-port-breakout-board-v11-syzygy-phobos/
+	Just the connector: https://www.thefuturewas8bit.com/userport-connector.html
+	Simple flashing LEDs example with code: https://coronax.wordpress.com/2012/08/11/the-commodore-64-user-port/
+	Many edge connectors, need to verify board thickness and pitch: https://www.mouser.sg/Connectors/Card-Edge-Connectors/Standard-Card-Edge-Connectors/_/N-axj7dZ1yzvvqx?P=1ytcyi4Z1z0wxnn
+
+	* Using logic analyser
+	** C64UserPort.lpf shows 8_PC2 going low one cycle before data is output, then high one cycle after the data is output.
+		** Checked : Check memory bus schematic expects this
+	Also shows M_PA2 is able to be strobed by poke 56576,0 : poke 56576,4
+		10 poke 56578,4
+		20 poke 56579,255
+		30 for i = 0 to 255
+		40 poke 56577,i
+		50 poke 56576,0 : poke 56576,4
+		60 next i
+		70 goto 30
+	* Bus24Bit_WaitVBlank hardware signals tested
+	
+* UserPortTo24BitAddressSimple.pdsprj is a simple user port interface, not optimal at all as it uses a 4 bit data and 4 bit control protocol just using the bottom row of the user port
+	* UserPortDataSimple.ptn and UserPortSignalsSimple.ptn demonstrate the input protocol and eventual memory writes
+	It does however use very few ICs and allows the C64 to precisely control (slow) write timings rather than relying on a clock and other more complex logic
+		Only 8x 74LS273 and 1x 74LS138
+		
+		
+		
+* UserPortBreakout.pdsprj
+	Simple breakout board for user port
+	Cables and connectors:
+	https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkree?P=1yny8w4Z1yny8w3Z1yyu1hy&Keyword=idc&FS=True
+	Reduced lengths search: https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkreeZ1yzvvqx?P=1yyu1hyZ1yny8w4Z1yny8w3Z1z0wxp6&Keyword=idc&FS=True
+	https://www.mouser.sg/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1ytkn1nZ1z0wxp6Z1z0z63x&Keyword=idc&FS=True
+	Same plug manufacturer as for the the cable: https://www.mouser.sg/Samtec/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1ytkn1nZ1z0z63xZ1z0wxp6Z1z0sq61&Keyword=idc&FS=True
+
+
+
+
+* Move the layer output pixel headers up (or the bus interface downwards) to avoid the upper video generation board top edge. This will make it easier to access the lower board pixel and select headers.
+	Version 4.0 PCBs
+
+
+
+* Chars layer can have an enable / disable output flag using the new latch (U250), which goes to Enable on 6F6. This logic is roughly what the tiles layer does with 5N7
+	EBBS $80 and Address $4000 is now used for char screen display data, writing memory now has priority, so no need to exactly time with the vblank to get guaranteed writes
+		Older hardware prioritised video reads from the RAM, instead of prioritising video writes
+	EBBS $01 Address $9000 bits:
+		0		Palette bank
+		1		Display output: 0 = Enable  / 1 = Disable
+		7-8		Screen bank 0 - 3
+	TestData*.txt updated, emulation code will need to be updated with new syntax
+		Version 4.0 PCB
+		
+		
+
+* Chars layer extra banks, can use the U250 latch of the high address bits? Use a 6264 like the tiles layer
