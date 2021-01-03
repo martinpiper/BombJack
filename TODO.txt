@@ -1,3 +1,12 @@
+* Pixel header connectivity
+	PCB female header to male right angled: https://www.mouser.sg/ProductDetail/Molex/90122-0764/?qs=kEwmkoUtv7R5aSrMIeNWYw%3D%3D
+	Then to socket: https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/3868-6600/?qs=8XPjJVwSY9BFfS5andYLaA%3D%3D
+		Or: https://www.mouser.sg/ProductDetail/Wurth-Elektronik/61200823021/?qs=PhR8RmCirEZvQm5v3EiYrA%3D%3D
+	Cable: https://www.mouser.sg/Wire-Cable/Flat-Cables/_/N-5ggmZ1yzvvqx?P=1ytitytZ1z0vl9dZ1yzu8m9
+	
+
+
+
 * Consider reinstating 4E/4F?
 
 
@@ -131,8 +140,9 @@
 	DIL20
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-320-41-801000?qs=RC2ne4458IKe5rHuueYA%2FA%3D%3D
 	DIL24
-	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-324-41-801000?qs=2mZjssE3HVXiFvwLlnaxRQ%3D%3D
 	Need narrow and wide (7.62 mm and 15.24 mm)
+	Narrow: https://www.mouser.sg/ProductDetail/Mill-Max/110-93-324-41-801000?qs=2mZjssE3HVXiFvwLlnaxRQ%3D%3D
+	Wide: https://www.mouser.sg/ProductDetail/Mill-Max/110-13-624-41-801000/?qs=WZeyYeqMOWcY1RNZipzOSA%3D%3D
 	DIL28 No cap
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-328-41-001000?qs=IGgAdOvCTsQUPmob89wrvw%3D%3D
 	DIL28

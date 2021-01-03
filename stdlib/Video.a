@@ -48,6 +48,17 @@ Bus24Bit_SetAddressVideoControlRegisters
 	rts
 
 
+Bus24Bit_SetAddressTileScrollRegisters
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$01
+	sta CIA2PortBRS232
+	lda #$9e
+	sta CIA2PortBRS232
+	rts
+
+
 Bus24Bit_SetAddressPalette
 	jsr Bus24Bit_Reset
 	lda #$01; EBBS
