@@ -1,0 +1,3 @@
+!macro MBus24Bit_WaitUntilRasterY .raster {
+	+MWaitValueToMemoryCC .raster , CIA1TimerBLo
+}

@@ -1,3 +1,8 @@
+* TestSpriteTimings.txt
+	Some sprite register timing tests, to help check multiplexor ideas with respect to writing certain registers outside of their update slots in the raster line
+	
+	
+	
 * Pixel header connectivity
 	PCB female header to male right angled: https://www.mouser.sg/ProductDetail/Molex/90122-0764/?qs=kEwmkoUtv7R5aSrMIeNWYw%3D%3D
 	Then to socket: https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/3868-6600/?qs=8XPjJVwSY9BFfS5andYLaA%3D%3D
@@ -28,6 +33,7 @@
 		https://www.machinedesign.com/archive/article/21818753/tricks-of-the-trade-for-lownoise-design
 		https://forum.allaboutcircuits.com/threads/ribbon-problems-there-has-to-be-a-better-way.17214/
 		https://www.avrfreaks.net/forum/shielding-ribbon-cable
+	* Perhaps a terminating header row, with a parallel row of headers at ground/power, allowing an easy bridge by any resistor/capacitor as needed
 
 	
 
@@ -66,6 +72,11 @@
 				This would allow the C64 to control writes to the memory bus during the VBLANK and then the board can optionally takeover the memory bus when it needs
 			Asserting the PMLD board EBS (to write its RAMs) will halt (not reset) the microcode PC clocking and processing
 			It would need to pass back the VBLANK signal
+	* APU.pdsprj
+		DB0..7	from the user port board eventually goes to ED0..7
+		AB0..15	from the user port board eventually goes to EA0..15
+		AEBS0..7 from the user port board eventually goes to AEBS0..7
+	* Optional clock dividing and sync with either VIDCLK, 6MHz
 
 
 

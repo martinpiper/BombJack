@@ -59,6 +59,17 @@ Bus24Bit_SetAddressTileScrollRegisters
 	rts
 
 
+Bus24Bit_SetAddressTileBackgroundRegister
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$07
+	sta CIA2PortBRS232
+	lda #$9e
+	sta CIA2PortBRS232
+	rts
+
+
 Bus24Bit_SetAddressPalette
 	jsr Bus24Bit_Reset
 	lda #$01; EBBS
@@ -89,4 +100,21 @@ Bus24Bit_SetAddressSpritesControl
 	sta CIA2PortBRS232
 	lda #$9a
 	sta CIA2PortBRS232
+	rts
+
+
+; Usually call this immediately after using Bus24Bit_WaitVBlank
+Bus24Bit_StartRasterTimers
+	; Start two timers, which should count raster position
+	lda #0
+	sta CIA1TimerAControl
+	sta CIA1TimerBControl
+
+	+MWordValueToAddress_A CyclesPerSecondPALC64 / 15750 , CIA1TimerALo
+	+MWordValueToAddress_A 256+6 , CIA1TimerBLo	; Note the tweak value here uses 9 bits
+
+	lda #%01011011
+	sta CIA1TimerBControl
+	lda #%00010111
+	sta CIA1TimerAControl
 	rts
