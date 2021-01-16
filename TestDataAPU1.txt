@@ -1,0 +1,11 @@
+; Blank (address b$0000)
+d0
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Write control registers
+d$20000403
+d$20000400
+d$20000401

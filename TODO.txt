@@ -89,6 +89,9 @@
 	** Need a recording of _VBLANK, RH0..8, RV0..7 for the signal generator that will emulate the video hardware signals
 		Using VIDCLK timing
 		Also perhaps the signals from VIDEO1 since they will be useful
+	APU registers need to sit in EBS2 to allow an effective reset of internal state to be executed.
+		If the APU is in pass through state, then all is good.
+		If the APU is not in pass through state, then this will still allow the registers to be updated.
 		
 
 

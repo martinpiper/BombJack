@@ -244,6 +244,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $02           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $04           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
    | $04           | APU                           | $4000   8KB          | APU memory bank 1 data                  |
+   | $04           | APU                           | $2000   8KB          | APU bank 2 registers                    |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | $80           | Char screen banks 0-3         | $4000   8KB          | Chars and colours into U258             |
    | Note 1 spare  |                               |                      |                                         |
