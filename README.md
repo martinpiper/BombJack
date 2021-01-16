@@ -229,6 +229,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 
    | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
    |---------------|-------------------------------|----------------------|-----------------------------------------|
+   | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
    | $01           | Original RAMs                 | $9040   $380 bytes   | Screen character index                  |
    | $01           | Original RAMs                 | $9000                | Screen low/high palette bank            |
    | $01           | Original RAMs                 | $9440   $380 bytes   | Screen colour + flips                   |
@@ -240,6 +241,9 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9e07                | Background colour select                |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
+   | $02           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
+   | $04           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
+   | $04           | APU                           | $4000   8KB          | APU memory bank 1 data                  |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | $80           | Char screen banks 0-3         | $4000   8KB          | Chars and colours into U258             |
    | Note 1 spare  |                               |                      |                                         |

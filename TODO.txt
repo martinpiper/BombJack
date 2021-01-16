@@ -73,10 +73,20 @@
 			Asserting the PMLD board EBS (to write its RAMs) will halt (not reset) the microcode PC clocking and processing
 			It would need to pass back the VBLANK signal
 	* APU.pdsprj
-		DB0..7	from the user port board eventually goes to ED0..7
-		AB0..15	from the user port board eventually goes to EA0..15
-		AEBS0..7 from the user port board eventually goes to AEBS0..7
-	* Optional clock dividing and sync with either VIDCLK, 6MHz
+		On sheet 2 - EXPANSIONBUSA2, EXPANSIONBUSB2, EXPANSIONBUSC2 are all from the user port board
+		All signals to be intercepted from the user port board are renamed to be prefixed with I
+		Some signals can just pass straight through, so they are not renamed
+		IED0..7	from the user port board eventually goes to ED0..7
+		IEA0..15	from the user port board eventually goes to EA0..15
+		IEBS0..7 from the user port board eventually goes to EBS0..7
+		IEMEMWRITE from the user port board eventually goes to _MEWR
+	* Need optional clock dividing and sync with either VIDCLK, 6MHz
+	* Sheet 3
+		Data bus selection logic, either pass through or intercept values
+		Instruction and data memory logic
+		APUPC0..12 = APU PC instruction counter
+		APUDA0..12 = Current data address, also a counter but independent of the PC
+		
 
 
 
