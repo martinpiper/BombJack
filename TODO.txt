@@ -92,7 +92,9 @@
 	APU registers need to sit in EBS2 to allow an effective reset of internal state to be executed.
 		If the APU is in pass through state, then all is good.
 		If the APU is not in pass through state, then this will still allow the registers to be updated.
-		
+	** Perhaps instead of 8KB of 8 bit values, convert it into 1024 x (up to) 64 bit instructions from a bunch of parallel 2114s?
+		This would allow the parallel microcode model instead of trying to decode quite a large instruction set
+		Going to need assembler macros for this work I think
 
 
 
