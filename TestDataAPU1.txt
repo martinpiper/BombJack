@@ -24,8 +24,8 @@ b$0a
 
 ; Setup APUEBS and APUEADDR
 ; Load A from ADDRB1
-b$00
-b$02
+b$00,b$10
+b$02,b$20
 ; APUEBS = A
 b$0c
 ; Increment ADDRB1

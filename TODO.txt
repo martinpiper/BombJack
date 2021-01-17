@@ -95,6 +95,7 @@
 	** Perhaps instead of 8KB of 8 bit values, convert it into 1024 x (up to) 64 bit instructions from a bunch of parallel 2114s?
 		This would allow the parallel microcode model instead of trying to decode quite a large instruction set
 		Going to need assembler macros for this work I think
+		Added 2114 RAM instead, to give INSTR0..15
 
 
 
