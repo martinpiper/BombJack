@@ -15,3 +15,4 @@ Audio.EDF
 Audio.sts
 *.opensdf
 output/DebugAudioOutput.txt
+TestAPU1.bin

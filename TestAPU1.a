@@ -1,0 +1,20 @@
+; ..\c64\acme.exe -v4 --msvc "TestAPU1.a"
+
+; Instructions, can be combined
+kAPU_Reset_ADDRB1	= %0000000000000001
+kAPU_Reset_PC		= %0000000000000010
+
+!macro MAPU .i {
+	!by <(.i)
+	!by <(.i >> 8)
+}
+!macro MAPU {
+	+MAPU 0
+}
+
+!to "TestAPU1.bin" , plain
+
+*=0
+	+MAPU
+	+MAPU kAPU_Reset_ADDRB1 | kAPU_Reset_PC
+	+MAPU

@@ -6,11 +6,11 @@ d0
 <0,1,2,3,4,5,6,7,<
 
 ; Write control registers
-d$20000401
+; Reset APU
 d$20000400
 d$20000401
 
-; PC		12 bits of APU PC (the other hald of the 8 KB RAM is used for potential decision points, conditional branching instructions)
+; PC		12 bits of APU PC (the other half of the 8 KB RAM is used for potential decision points, conditional branching instructions)
 ; A			8 bit register
 ; WAIT		32 bit value to wait for when comparing RHRV (and other signals)
 ; ADDRB1	16 bit current address for APU memory bank 1 data
@@ -18,92 +18,7 @@ d$20000401
 ; APUEADDR	16 bit value for the external memory bus
 
 s$80000400
-
-; RESET ADDRB1
-b$0a
-
-; Setup APUEBS and APUEADDR
-; Load A from ADDRB1
-b$00,b$10
-b$02,b$20
-; APUEBS = A
-b$0c
-; Increment ADDRB1
-b$03
-; Load A from ADDRB1
-b$00
-b$02
-; APUEADDR lo = A
-b$0d
-; Increment ADDRB1
-b$03
-; Load A from ADDRB1
-b$00
-b$02
-; APUEADDR hi = A
-b$0e
-; Increment ADDRB1
-b$03
-
-
-; Wait for RHRV == WAIT ($00000000)
-b$01
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-
-; Present APUEBS/APUEADDR and A to the external memory bus
-b$04
-; Increment APUEADDR
-b$0b
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-; WAIT24..31 = A
-b$08
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-; WAIT12..23 = A
-b$07
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-; WAIT8..11 = A
-b$06
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-; WAIT0..7 = A
-b$05
-
-; Wait for RHRV == WAIT ($f8018100)
-b$01
-
-; Load A from ADDRB1
-b$02
-; Increment ADDRB1
-b$03
-
-; Present APUEBS/APUEADDR and A to the external memory bus
-b$04
-; Increment APUEADDR
-b$0b
-
-
-
-; Reset PC to 0
-b$09
+<0,1,2,3,4,5,6,7,<TestAPU1.bin
 
 
 ; Store data into APU memory bank 1 data
@@ -121,6 +36,11 @@ b$f8,b$01,b$81,b$00
 ; Value to store in $9821
 b$12
 
+
+
+
+; Enable APU after writing memory
+d$20000403
 
 d$0
 
