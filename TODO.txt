@@ -96,6 +96,7 @@
 		This would allow the parallel microcode model instead of trying to decode quite a large instruction set
 		Going to need assembler macros for this work I think
 		Added 2114 RAM instead, to give INSTR0..15
+		** Use the narrow 6116 instead, gives more memory for less board space. Also it's working in the sprites board scan RAMs
 
 
 

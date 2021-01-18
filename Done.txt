@@ -1362,3 +1362,8 @@ All layouts now use V3.1
 		
 
 * Chars layer extra banks, can use the U250 latch of the high address bits? Use a 6264 like the tiles layer
+
+
+
+* Components should be placed in imperial mode
+	Tidied the layout of all the boards, including some passives
