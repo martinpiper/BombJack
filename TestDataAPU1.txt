@@ -32,7 +32,7 @@ b$98
 ; Value to store in $9820
 b$11
 ; Next RHRV to wait for
-b$f8,b$01,b$81,b$00
+b$f8,b$01,b$81
 ; Value to store in $9821
 b$12
 

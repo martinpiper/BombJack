@@ -104,7 +104,9 @@
 		WaitForEqualsHV logic seems to be working
 	* For the RAMs need to use the external bus, so the APU can write its own memory? Probably not needed, too much complexity
 	* Read from ADDRB1 RAM and store write to external bus seems to be working
-	** Need wait to include X position, not just Y
+	** Done - Need wait to include X position, not just Y
+	*** TestAPU1.a works so far!!! ***
+	
 
 
 
