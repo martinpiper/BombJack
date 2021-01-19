@@ -3,6 +3,7 @@
 ; Instructions, can be combined
 kAPU_Reset_ADDRB1	= %0000000000000001
 kAPU_Reset_PC		= %0000000000000010
+kAPU_InterceptBus	= %0000000000000100
 
 !macro MAPU .i {
 	!by <(.i)
@@ -16,5 +17,7 @@ kAPU_Reset_PC		= %0000000000000010
 
 *=0
 	+MAPU
+	+MAPU kAPU_Reset_ADDRB1
+	+MAPU kAPU_InterceptBus
 	+MAPU kAPU_Reset_ADDRB1 | kAPU_Reset_PC
 	+MAPU

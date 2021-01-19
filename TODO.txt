@@ -98,8 +98,10 @@
 		Added 2114 RAM instead, to give INSTR0..15
 		** Use the narrow 6116 instead, gives more memory for less board space. Also it's working in the sprites board scan RAMs
 	* Very simple program with small loop is working: TestAPU1.a
+	* Intercept bus logic
 	Next need a simple wait instruction, this could reset a latch (that is usually set) pausing the the PC clock until the matching condition triggers a set latch condition
 		On reset the latch needs to be set, allowing the PC clock to progress
+	* For the RAMs need to use the external bus, so the APU can write its own memory? Probably not needed, too much complexity
 	
 
 
