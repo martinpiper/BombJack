@@ -106,7 +106,8 @@
 	* Read from ADDRB1 RAM and store write to external bus seems to be working
 	** Done - Need wait to include X position, not just Y
 	*** TestAPU1.a works so far!!! ***
-	* Need to check the bus sharing for RAM writes coming from an external source
+	* Done - Need to check the bus sharing for RAM writes coming from an external source
+		Seems to work, the initial write on $00000000 is being delayed until H$6d after the digital data debugger writes
 
 
 

@@ -42,5 +42,37 @@ b$12
 ; Enable APU after writing memory
 d$20000403
 
+; Now try waiting for a pixel before the APU trigger and using memory writes to test the APU delay processing logic
 d$0
+w$ff01ff00,$0001ff00
 
+d$41000401
+d$41000402
+d$41000403
+d$41000404
+d$41000405
+d$41000406
+d$41000407
+d$41000401
+d$41000402
+d$41000403
+d$41000404
+d$41000405
+d$41000406
+d$41000407
+d$41000401
+d$41000402
+d$41000403
+d$41000404
+d$41000405
+d$41000406
+d$41000407
+d$41000401
+d$41000402
+d$41000403
+d$41000404
+d$41000405
+d$41000406
+d$41000407
+
+d$0
