@@ -1,6 +1,8 @@
 * V4.0 Real hardware When Tiles X scroll & 7 = 7 then the tile fetch timing goes from and corrupt data is fetch for the tile index
 	Why? Colour timing clash fetch?
 	Not seen in simulation
+	** Prime suspect is the tiles X pos adder delay for U63/U64/U234
+		* Probably best to latch the X and Y added output for safety
 
 
 
