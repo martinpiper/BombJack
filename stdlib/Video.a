@@ -19,12 +19,34 @@ Bus24Bit_DisableDisplay
 	rts
 
 
+kBus24Bit_EnableDisplay_Tiles_Enable		= $10
+kBus24Bit_EnableDisplay_Enable				= $20
+kBus24Bit_EnableDisplay_Tiles_BorderXShrink	= $40
+kBus24Bit_EnableDisplay_Tiles_BorderYShrink	= $80
+
 ; A = Value to use for the video initialisation
 Bus24Bit_EnableDisplay
 	pha
 	jsr Bus24Bit_SetAddressVideoControlRegisters
 	pla
 	sta CIA2PortBRS232
+	rts
+
+
+; Clears sprite registers, turns off sprites, no 32x32 sprites
+Bus24Bit_SpritesDisable
+	jsr Bus24Bit_SetAddressSpritesControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+
+	jsr Bus24Bit_SetAddressSprites
+	lda #0
+	ldx #24*4
+.cs1
+	sta CIA2PortBRS232
+	dex
+	bne .cs1
 	rts
 
 	

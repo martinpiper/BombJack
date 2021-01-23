@@ -1,3 +1,10 @@
+* V4.0 Real hardware When Tiles X scroll & 7 = 7 then the tile fetch timing goes from and corrupt data is fetch for the tile index
+	Why? Colour timing clash fetch?
+	Not seen in simulation
+
+
+
+
 * TestSpriteTimings.txt
 	Some sprite register timing tests, to help check multiplexor ideas with respect to writing certain registers outside of their update slots in the raster line
 	
