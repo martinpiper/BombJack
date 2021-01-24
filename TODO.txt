@@ -3,6 +3,7 @@
 	Not seen in simulation
 	** Prime suspect is the tiles X pos adder delay for U63/U64/U234
 		* Probably best to latch the X and Y added output for safety
+		A latched value will probably mean 1 pixel delay, the border shrink will need to take this into account
 
 
 
