@@ -100,6 +100,10 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 ### Memory map
 
 0x9000			Chars control register
+		0x01	Palette bank lo/hi control
+		0x02	Chars screen disable
+		0x40	Bank select 0x01 with below
+		0x80	Bank select 0x02 with above
 0x9c00-0x9cff	Palette RAM
 
 0x9e00	0x10	Enable tiles
@@ -230,9 +234,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
    |---------------|-------------------------------|----------------------|-----------------------------------------|
    | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
-   | $01           | Original RAMs                 | $9040   $380 bytes   | Screen character index                  |
    | $01           | Original RAMs                 | $9000                | Screen low/high palette bank            |
-   | $01           | Original RAMs                 | $9440   $380 bytes   | Screen colour + flips                   |
    | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
    | $01           | Original RAMs                 | $9c00   $200 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |

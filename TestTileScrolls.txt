@@ -1,3 +1,20 @@
+; Disable sprites, chars, mode7
+d$9a000100
+d$90000102
+d$a0150100
+; Ensure tiles enabled
+d$9e000130
+
+d$0
+^-$01
+d$0
+
+^-$01
+d$0
+d$9e010107
+d$0
+
+
 ; Very quick hardware scroll test with BG colour change
 ^-$01
 d$0
