@@ -21,7 +21,9 @@
 		It's also possible that the tiles board was not connected properly, but not that likely since the problem scroll position was 7 which is %111 (all three bits)
 		** Fixed!
 	*** Will need version increment for chars and tiles
+		V4.1 for both now
 	*** Check component layers
+		Checked
 	
 
 
