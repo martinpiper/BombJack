@@ -1,34 +1,3 @@
-* V4.0 Real hardware When Tiles X scroll & 7 = 7 then the tile fetch timing goes from and corrupt data is fetch for the tile index
-	Why? Colour timing clash fetch?
-	Not seen in simulation
-	** Prime suspect is the tiles X pos adder delay for U63/U64/U234
-		* Probably best to latch the X and Y added output for safety
-		A latched value will probably mean 1 pixel delay, the border shrink will need to take this into account
-	** Or maybe 6S7 with _BGHSL2 CLK load, needs to have similar logic to that seen in 5S7 with 6MHz and OR added? This should time the read pulse better?
-		This is also a simpler change than latching the entire adder value
-	* Use TestTileScrolls.txt to test the pixel scroll values from 0 - 63 and verify output video before and after changes
-	** Chars layers also updated to add 6N2:C 6N2:D to time the _SL1 _SL2 pulses using 6MHz, which times the +ve pulse to happen about 5ns - 20ns before to 2H or BGH4 changing state
-		VIDCLK could be used to bring this sooner, but it should be fine
-	* Running a test, disable the new signals on chars and tiles with a bypass. Generate lots of output frames with "debugold"
-		Then add the new signals back again, generate more debug frames with "debug"
-		** Then use the picture comparison to check, the pixels should be the same or better
-			c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -quiet -metric AE debugold00000000.bmp debug00000000.bmp -compare -format "%[distortion]" info:
-			Or use this to compare the first 78 images: compareimages 78
-				Which shows all zeros (followed by the file number compared)
-	*** Need to test on the real hardware, remove 6S7, move to bread board, add a 7432 using 6MHz (pin 20 bottom left of Video header)
-		It worked, with the code xpos&7==7 check removed. But the problem is that is same code works with the 74ls273 placed back into the socket but the boards are connected with ribbon cables. The 74273 is the same batch.
-		The length of the ribbon cables might be causing the timings to "fix" themselves. The tiles video quality is noticeably reduced with vertical banding in scroll positions, with the socketed 74273, and the "fix breadboard" installed.
-		It's also possible that the tiles board was not connected properly, but not that likely since the problem scroll position was 7 which is %111 (all three bits)
-		** Fixed!
-	*** Will need version increment for chars and tiles
-		V4.1 for both now
-	*** Check component layers
-		Checked
-	
-
-
-
-
 * TestSpriteTimings.txt
 	Some sprite register timing tests, to help check multiplexor ideas with respect to writing certain registers outside of their update slots in the raster line
 	
