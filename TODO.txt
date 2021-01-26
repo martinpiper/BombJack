@@ -16,6 +16,10 @@
 			Or use this to compare the first 78 images: compareimages 78
 				Which shows all zeros (followed by the file number compared)
 	*** Need to test on the real hardware, remove 6S7, move to bread board, add a 7432 using 6MHz (pin 20 bottom left of Video header)
+		It worked, with the code xpos&7==7 check removed. But the problem is that is same code works with the 74ls273 placed back into the socket but the boards are connected with ribbon cables. The 74273 is the same batch.
+		The length of the ribbon cables might be causing the timings to "fix" themselves. The tiles video quality is noticeably reduced with vertical banding in scroll positions, with the socketed 74273, and the "fix breadboard" installed.
+		It's also possible that the tiles board was not connected properly, but not that likely since the problem scroll position was 7 which is %111 (all three bits)
+		** Fixed!
 	*** Will need version increment for chars and tiles
 	*** Check component layers
 	
