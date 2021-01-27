@@ -1,6 +1,10 @@
 ; Blank (address b$0000)
 d0
 
+; Video generator input priorities register
+; Binary for 11 10 01 00 = choose plane input 3 , 2 , 1 , 0 in that order
+d$980001e4
+
 ; Testing the _EXTCS8000-B800 lines
 d$80000112
 d$88000113
@@ -17,7 +21,7 @@ d$90000180
 ; Char screen uses bank 3
 d$900001c0
 
-d$98000115
+d$98010115
 d$a0000116
 d$a8000117
 d$b0000118

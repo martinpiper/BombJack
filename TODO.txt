@@ -1,3 +1,15 @@
+* With the video circuitry tweaks, try a higher clock speed, note sprites
+	Sprites still get that weird black drop shadow effect to the right hand edge
+
+
+
+* Programmable layer order selection
+	Can use a few latches on the video board and selector 4-1 demuxes
+	Added U263 latch and the rest of the memory address select logic
+	Need to wire in the demux
+
+
+
 * Bit plane decoding logic, could remove the need for duplicate decoders/demultiplexers by moving the specific RAM _MEWR test and having a common test for the bit plane external RAM write test
 	This would remove 6 quite large dexmux ICs for each board
 
