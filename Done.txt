@@ -1405,3 +1405,8 @@ All layouts now use V3.1
 	Perhaps the video board output needs to be properly latched to present a consistent stable source of RH and RV
 	* Added, tested, validated sprite positions etc with emulation
 	** V4.1 Video
+
+
+
+* With the video circuitry tweaks, try a higher clock speed, note sprites
+	Sprites still get that weird black drop shadow effect to the right hand edge
