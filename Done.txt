@@ -1397,3 +1397,11 @@ All layouts now use V3.1
 		V4.1 for both now
 	*** Check component layers
 		Checked
+
+
+
+
+* Tiles board, is there some weird timing issue when X flipped different tile indexes are adjacent? I'm seeing some wobbly pixels
+	Perhaps the video board output needs to be properly latched to present a consistent stable source of RH and RV
+	* Added, tested, validated sprite positions etc with emulation
+	** V4.1 Video

@@ -1,3 +1,13 @@
+* Bit plane decoding logic, could remove the need for duplicate decoders/demultiplexers by moving the specific RAM _MEWR test and having a common test for the bit plane external RAM write test
+	This would remove 6 quite large dexmux ICs for each board
+
+
+
+* For board EA/EBS/EXTSEL config - Need to use jumpers (in the schematic it is closed to use the defaults) to connect the external bus to the internally used signals
+	The routing will then not automatically connect the gap
+
+
+
 * TestSpriteTimings.txt
 	Some sprite register timing tests, to help check multiplexor ideas with respect to writing certain registers outside of their update slots in the raster line
 	
