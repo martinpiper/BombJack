@@ -3,9 +3,28 @@
 	Added U263 latch and the rest of the memory address select logic
 	Need to wire in the demux
 	** 9900 is not a good choice, since it causes the sprite RAMs to be asserted
-		Perhaps $9e08+ would be better, like the U230 in the Tiles layer, perhaps starting with _TEN9E08. Adda note to the tiles to say it has been taken by the video board.
+		Perhaps $9e08+ would be better, like the U230 in the Tiles layer, perhaps starting with _TEN9E08. Add a note to the tiles to say it has been taken by the video board.
 		This has the benefit of not impacting any RAMs
 
+
+
+* With the video circuitry tweaks, try a higher clock speed, note sprites
+	Sprites still get that weird black drop shadow effect to the right hand edge
+	Using TestData.txt with "Top left of non-rotated screen, all the same"
+	The sprite scan line RAM indicates the calculated output pixels are the same, (f8 ff ... seen) which indicates the problem may be in the read or eventual output of those pixels
+	Use: TestData_DebugSprites.txt
+	Even the 32x32 sprites show the drop shadow effect, so the problem exists for all sprites regardless of their size
+	It's not really a "drop shadow" it is actually the last trailing output pixel, when viewed from left to right in the scan line, that is black (or the wrong colour)
+		The pixels are not displaced, or shifted
+	At 12.096MHz execution: Breakpoint at RV=0x18 and then timed breakpoint execution for 21.5u
+	Single Step Time was: 50n
+		Now: 25n
+	At faster MHz, use 14u timed breakpoint
+	1V*. is low when RH=0x0008 and RV=0x18
+	Tried a shorter scan line write pulse and longer read pulse, but this did not fix the issue The output pixel latch from the scan line RAM is still reading garbage.
+	
+	
+	
 
 
 

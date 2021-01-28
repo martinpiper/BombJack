@@ -1,0 +1,106 @@
+; Blank (address b$0000)
+d0
+
+; Char screen disable
+d$90000102
+; Clear background palette choice to 1f (high palette)
+d$a01401ff
+; Disable mode7
+d$a0150100
+
+; Background tile disable, enable display
+d$9e000120
+
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+
+; Sprite data, single pixel active in each of the 8 pixel strips
+s$20001000
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+
+; Write sprite data from 15_l07b.bin into RAM mapped at $4000 with EBS $10
+s$40001000
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+
+; Write sprite data from 16_m07b.bin into RAM mapped at $8000 with EBS $10
+s$80001000
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80,b$80
+
+!PaletteData.txt
+
+; Start and end (exclusive) of double size 32x32 sprite index
+s$9a000100
+b$1f,b$00
+
+; Write sprite register data into RAM mapped at $9820 with EBS $01
+s$98200100
+
+; Byte ordering
+; frame
+; palette
+; Rotated
+; x
+; y
+; Normal
+; y (inverted)
+; x
+
+; Top left of non-rotated screen, all the same
+; Digital breakpoint for RV=0x18
+; Clear start/end index for "32x32 sprite index"
+; "Disable mode7"
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+b$00,b$00,b$e0,b$00
+
+d$0

@@ -1408,5 +1408,3 @@ All layouts now use V3.1
 
 
 
-* With the video circuitry tweaks, try a higher clock speed, note sprites
-	Sprites still get that weird black drop shadow effect to the right hand edge
