@@ -1,6 +1,10 @@
 ; Blank (address b$0000)
 d0
 
+; Video generator input priorities register
+; Binary for 11 10 01 00 = choose plane input 3 , 2 , 1 , 0 in that order
+d$9e0801e4
+
 ; Background image enable and index
 ; x	Display enable (DB5)
 ; x	enable (DB4)

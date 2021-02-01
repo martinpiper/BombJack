@@ -13,6 +13,11 @@ Bus24Bit_WaitVBlank
 
 
 Bus24Bit_DisableDisplay
+	; Reset priority to default
+	jsr Bus24Bit_SetAddressVideoPriorityRegister
+	lda #%11100100
+	sta CIA2PortBRS232
+	; Disable display entirely
 	jsr Bus24Bit_SetAddressVideoControlRegisters
 	lda #$00
 	sta CIA2PortBRS232
@@ -64,6 +69,18 @@ Bus24Bit_SetAddressVideoControlRegisters
 	lda #$01; EBBS
 	sta CIA2PortBRS232
 	lda #$00
+	sta CIA2PortBRS232
+	lda #$9e
+	sta CIA2PortBRS232
+	rts
+
+
+
+Bus24Bit_SetAddressVideoPriorityRegister
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$08
 	sta CIA2PortBRS232
 	lda #$9e
 	sta CIA2PortBRS232
