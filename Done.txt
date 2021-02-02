@@ -1408,3 +1408,17 @@ All layouts now use V3.1
 
 
 
+* Why when using the 2MHz clock input to the digital data device, does ..\C64\VideoHardware\target\debugData.txt with RPG demo output fail to draw sprites on frame 33?
+	compareimages.bat 34
+		... all OK ...
+		0         00000031
+		0         00000032
+		706         00000033
+		744         00000034
+	At 1MHz, errors fewer, but still:
+		0         00000011
+		91         00000012
+		0         00000013
+	Solved. The to low pulse was too soon after the start of the EBS asertion. This meant there wasn't enough OE cool down time before switching to WE and a logic contention was generated
+	Now an external 2MHz clock and TOLOW=0.00000030 TOHI=0.00000039 can be used
+	This means the APU could be setup to use a variable external clock, completely separate to the VIDCLK if needed
