@@ -1423,6 +1423,9 @@ All layouts now use V3.1
 	Now an external 2MHz clock and TOLOW=0.00000030 TOHI=0.00000039 can be used
 	This means the APU could be setup to use a variable external clock, completely separate to the VIDCLK if needed
 	* Sigh. Longer test with TestData.txt shows it's not solved, still getting sprite glitches and logic contentions
-		Old VIDCLK dervied values were: TOLOW=0.000000125 TOHI=0.00000025 for Q1
+		Old VIDCLK derived values were: TOLOW=0.000000125 TOHI=0.00000025 for Q1
 			But these now result in an "early trigger ignored" message from the improved data generator
 			So trying slightly reduced values TOLOW=0.000000125 TOHI=0.000000225
+	* Expanded the digital data model to include force hi/lo timings, as well as guard timings
+		Setup to be the same as the old model, it validates exactly the same for 100 frames with TestData.txt
+		Also RPG debug data up to 220 frames
