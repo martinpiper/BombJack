@@ -18,9 +18,8 @@
 
 
 
-* Bit plane decoding logic, could remove the need for duplicate decoders/demultiplexers by moving the specific RAM _MEWR test and having a common test for the bit plane external RAM write test
-	This would remove 6 quite large dexmux ICs for each board
-	* Add extra bit plane for each layer, change to using 16 colours for each CLUT
+
+* Add extra bit plane for each layer, change to using 16 colours for each CLUT
 	The 0 bank can be detected with a triple NAND from EA15/EA14/EA13
 	The RPG demo will particularly benefit from more colours
 	BDD6502 will need to be updated to support extra colours

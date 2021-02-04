@@ -1448,3 +1448,13 @@ All layouts now use V3.1
 	** BDD6502 needs updating to use this extra register in its layer combination logic
 		The border and display enable flag detection can be moved out of the tiles layer
 	* Need group check and version bumps on all layers
+
+
+
+
+* Bit plane decoding logic, could remove the need for duplicate decoders/demultiplexers by moving the specific RAM _MEWR test and having a common test for the bit plane external RAM write test
+	This would remove 6 quite large dexmux ICs for each board
+	* Sprite logic works well
+	* Chars logic also works
+	* Tiles logic works
+	* Update emulation memory address selection logic
