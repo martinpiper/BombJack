@@ -99,6 +99,8 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 
 ### Memory map
 
+Note: Most control registers can be updated at any point during the frame and the next pixel will reflect the change.
+
 0x9000			Chars control register
 		0x01	Palette bank lo/hi control
 		0x02	Chars screen disable
@@ -106,10 +108,18 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 		0x80	Bank select 0x02 with above
 0x9c00-0x9cff	Palette RAM
 
+
 0x9e00	0x10	Enable tiles
 		0x20	Enable display
 		0x40	BorderX shrink
 		0x80	BorderY shrink
+
+0x9e08	Layer priority select, for each layer select the input header pixel input
+		Default should be: %11100100 = 0xe4
+		i.e. Back most layer	= %11 (3)
+		Next layer closer		= %10 (2)
+		Then next closest		= %01 (1)
+		Then front most layer	= %00 (0)
 
 
 

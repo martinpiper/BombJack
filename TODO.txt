@@ -1,22 +1,3 @@
-* Programmable layer order selection
-	Can use a few latches on the video board and selector 4-1 demuxes
-	Added U263 latch and the rest of the memory address select logic
-	Need to wire in the demux
-	** 9900 is not a good choice, since it causes the sprite RAMs to be asserted
-		Perhaps $9e08+ would be better, like the U230 in the Tiles layer, perhaps starting with _TEN9E08. Add a note to the tiles to say it has been taken by the video board.
-		This has the benefit of not impacting any RAMs
-	* Video layer now controls DISPLAYENABLE,_DISPLAYENABLE,BGBORDERX,BGBORDERY instead of the tiles layer. The signals are still passed through to all boards.
-	* Due to the much longer path for output pixels, for the priority output select, all layers now need an extra output pixel latch on 6MHz. This means _EHSYNC, _EVSYNC, _ETVSYNC and ENABLEPIXELS are also latch delayed to compensate
-	** The RPG demo can utilise this register to flip the cloud layer priority without changing the schematic
-		Then in simulation - Tested
-	** The bat ball demo can use this to shift the sprites behind the scrolling ship tile layer for some twinkling stars
-	** BDD6502 needs updating to use this extra register in its layer combination logic
-		The border and display enable flag detection can be moved out of the tiles layer
-	* Need group check and version bumps on all layers
-
-
-
-
 * With the video circuitry tweaks, try a higher clock speed, note sprites
 	Sprites still get that weird black drop shadow effect to the right hand edge
 	Using TestData.txt with "Top left of non-rotated screen, all the same"
