@@ -1458,3 +1458,15 @@ All layouts now use V3.1
 	* Chars logic also works
 	* Tiles logic works
 	* Update emulation memory address selection logic
+
+
+
+
+* Add extra bit plane for each layer, change to using 16 colours for each CLUT
+	The RPG demo will particularly benefit from more colours
+	* The freed signal for the chars layer can then be used to address all 256 colours, not just the lower 128
+	The 0 bank can be detected with a triple NAND from EA15/EA14/EA13
+	* Done: BDD6502 will need to be updated to support extra colours (Turrican data test)
+	* Extra pixel bitplane lines will need shifters
+	* Video layer will need to to a 4 bit transparency check, not 3 bit check
+	* Sprite transparency check will also need 4 input NOT and AND

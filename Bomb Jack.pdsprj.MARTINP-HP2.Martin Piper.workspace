@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
+ <FRAME activewindow="1">
   <PLACEMENT>2c0000000200000003000000fffffffffffffffffffffffffffffffff400000088000000f90500003a030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
@@ -8,7 +8,7 @@
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="40" flags="00000003" y="511" h="505" pid="0" iid="-1">
+   <POPUP w="800" x="40" flags="00008003" y="511" h="505" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">542</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -37,7 +37,7 @@
    <POPUP w="610" x="100" flags="00000000" y="558" h="466" pid="0" iid="20">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="610" x="247" flags="00008001" y="40" h="466" pid="0" iid="265">
+   <POPUP w="610" x="247" flags="00000000" y="40" h="466" pid="0" iid="265">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="118" flags="0000000a" y="0" h="0" pid="1" iid="310">
@@ -317,6 +317,36 @@
     </PROPERTIES>
    </POPUP>
    <POPUP w="16" x="98" flags="0000000a" y="189" h="16" pid="1" iid="134">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="16" x="38" flags="0000000a" y="129" h="16" pid="1" iid="322">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="16" x="58" flags="0000000a" y="149" h="16" pid="1" iid="376">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="16" x="78" flags="0000000a" y="169" h="16" pid="1" iid="652">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
