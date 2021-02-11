@@ -1,3 +1,8 @@
+kBus24Bit_EnableDisplay_Tiles_Enable		= $10
+kBus24Bit_EnableDisplay_Enable				= $20
+kBus24Bit_EnableDisplay_Tiles_BorderXShrink	= $40
+kBus24Bit_EnableDisplay_Tiles_BorderYShrink	= $80
+
 !macro MBus24Bit_WaitUntilRasterY .raster {
 !if .raster <= 255 {
 .l1
@@ -6,3 +11,7 @@
 }
 	+MWaitValueToMemoryCC .raster , CIA1TimerBLo
 }
+
+
+kBus24Bit_Video_FlipH = $40
+kBus24Bit_Video_FlipV = $80

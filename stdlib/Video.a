@@ -24,11 +24,6 @@ Bus24Bit_DisableDisplay
 	rts
 
 
-kBus24Bit_EnableDisplay_Tiles_Enable		= $10
-kBus24Bit_EnableDisplay_Enable				= $20
-kBus24Bit_EnableDisplay_Tiles_BorderXShrink	= $40
-kBus24Bit_EnableDisplay_Tiles_BorderYShrink	= $80
-
 ; A = Value to use for the video initialisation
 Bus24Bit_EnableDisplay
 	pha
@@ -138,6 +133,17 @@ Bus24Bit_SetAddressSpritesControl
 	lda #$00
 	sta CIA2PortBRS232
 	lda #$9a
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressMode7
+	jsr Bus24Bit_Reset
+	lda #$01; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$a0
 	sta CIA2PortBRS232
 	rts
 
