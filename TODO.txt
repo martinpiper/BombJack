@@ -65,13 +65,6 @@
 	
 
 
-* Instead of having 4 pixel headers in the video board, have one pixel input header. Then every board can have an input pixel and output pixel header instead.
-	Each board can then do its own transparent pixel test and choose to pass-through the pixel or replace the pixel to its output pixel header
-		The mode7 board can do an 8-bit pixel is transparent test, the other layers can use their 3-bit pixel test logic
-	This would allow many more combinations of boards to be created and reduce the video board size.
-
-
-
 * 5 RCA male to VGA Male is uncommon:
 	https://www.cs1.net/products/canare/V5-1p5C_RGBHV_VGA_breakout.htm
 	https://www.elecbee.com/en/d-sub-cable-assemblies/3035-vga-to-rgbhv-rca-connector-cable-hd15-male-to-5-rca-male-connectors-12-feet-long.html

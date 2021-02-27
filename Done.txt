@@ -1470,3 +1470,11 @@ All layouts now use V3.1
 	* Extra pixel bitplane lines will need shifters
 	* Video layer will need to to a 4 bit transparency check, not 3 bit check
 	* Sprite transparency check will also need 4 input NOT and AND
+
+
+
+* Instead of having 4 pixel headers in the video board, have one pixel input header. Then every board can have an input pixel and output pixel header instead.
+	Each board can then do its own transparent pixel test and choose to pass-through the pixel or replace the pixel to its output pixel header
+		The mode7 board can do an 8-bit pixel is transparent test, the other layers can use their 3-bit pixel test logic
+	This would allow many more combinations of boards to be created and reduce the video board size.
+	* Bad idea, the delays would kill the ability to process pixels fast enough.
