@@ -138,6 +138,10 @@
 
 
 
+* APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
+
+
+
 
 * USB logic analyser and data generator: https://www.linkinstruments.com/logana32.html
 
