@@ -1,3 +1,9 @@
+* APU try merging the APU with the main schematic to real bus signals?
+	The headers and output signals might need some renaming
+
+
+
+
 * With the video circuitry tweaks, try a higher clock speed, note sprites
 	Sprites still get that weird black drop shadow effect to the right hand edge
 	Using TestData.txt with "Top left of non-rotated screen, all the same"
