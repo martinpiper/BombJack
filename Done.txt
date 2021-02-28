@@ -1488,3 +1488,11 @@ All layouts now use V3.1
 	* Actually, the U29 instruction latch is latching $ff for some reason?!
 		Reason: While on LATCHINSTR state, the _INSTRSEL is hit, which resets the instructions
 		Add an extra instruction latch, that only progresses the instruction if the first read was entirely OK
+
+
+
+
+* APU Test that "kAPU_InterceptBus" is not needed before "kAPU_InterceptBus | kAPU_ExternalMEWR" due to the kAPU_ExternalMEWR being shifted later in the PCINCR cycle
+	From: First rewrite 01 to MEWR breakpoint: 2.3148us	(RH 0x199 0x1a7 = 14 pixels)
+	Also using "kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR" instead of two instructions
+	To: 1.1574us and still rewrites the correct data (RH 0x196 0x19d = 7 pixels)

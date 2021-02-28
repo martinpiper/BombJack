@@ -32,7 +32,7 @@ b$98
 ; Value to store in $9820
 b$11
 ; Next RHRV to wait for
-b$f8,b$01,b$81
+b$f8,b$01,b$a1
 ; Value to store in $9821
 b$12
 
@@ -47,7 +47,7 @@ b$01
 ; Enable APU after writing memory
 d$20000403
 
-; Test memory access APU delay
+; Test memory access APU delay straight after APU enable
 s$82000400
 b$01
 b$01,b$02,b$03,b$04,b$05,b$06,b$07
@@ -57,12 +57,12 @@ d$0
 
 ; Now try waiting for a pixel before the APU trigger and using memory writes to test the APU delay processing logic
 d$0
-w$ff01ff00,$0001ff00
+w$ff01ff00,$f8019000
 d$0
 
 ; Test memory access APU delay during scan
-;s$82100400
-;b$01,b$02,b$03,b$04,b$05,b$06,b$07
-;s$41100400
-;b$11,b$12,b$13,b$14,b$15,b$16,b$17
+s$82100400
+b$01,b$02,b$03,b$04,b$05,b$06,b$07
+s$41100400
+b$11,b$12,b$13,b$14,b$15,b$16,b$17
 d$0
