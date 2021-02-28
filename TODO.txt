@@ -131,13 +131,6 @@
 
 
 
-* APU Bug. If a memory write to the instruction or data occures, this causes the whole execution to pause until the next WaitForEqualsHV
-	The APU, should resume instructions as soon as the writes finish (as long as it's not waiting of course)
-	This is reproducible with "; Test memory access APU delay", note the RH and RV values for the first write if the memory writes are enabled
-	
-
-
-
 * Need ADDRB1 lo/hi logic read, at the moment it's just reset
 	Internal RAM read address
 

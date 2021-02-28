@@ -1478,3 +1478,13 @@ All layouts now use V3.1
 		The mode7 board can do an 8-bit pixel is transparent test, the other layers can use their 3-bit pixel test logic
 	This would allow many more combinations of boards to be created and reduce the video board size.
 	* Bad idea, the delays would kill the ability to process pixels fast enough.
+
+
+
+
+* APU Bug. If a memory write to the instruction or data occurs, this causes the whole execution to pause until the next WaitForEqualsHV
+	The APU, should resume instructions as soon as the writes finish (as long as it's not waiting of course)
+	This is reproducible with "; Test memory access APU delay", note the RH and RV values for the first write if the memory writes are enabled
+	* Actually, the U29 instruction latch is latching $ff for some reason?!
+		Reason: While on LATCHINSTR state, the _INSTRSEL is hit, which resets the instructions
+		Add an extra instruction latch, that only progresses the instruction if the first read was entirely OK
