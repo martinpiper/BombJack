@@ -1488,6 +1488,7 @@ All layouts now use V3.1
 	* Actually, the U29 instruction latch is latching $ff for some reason?!
 		Reason: While on LATCHINSTR state, the _INSTRSEL is hit, which resets the instructions
 		Add an extra instruction latch, that only progresses the instruction if the first read was entirely OK
+		Added extra latch for instruction bits 8-15
 
 
 
