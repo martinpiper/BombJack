@@ -1,0 +1,50 @@
+!zn
+
+APU_ResetDisable
+	jsr Bus24Bit_SetAddressAPURegisters
+	lda #%00
+	sta CIA2PortBRS232
+	lda #%01
+	sta CIA2PortBRS232
+	rts
+
+
+APU_Enable
+	jsr Bus24Bit_SetAddressAPURegisters
+	lda #%11
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressAPURegisters
+	jsr Bus24Bit_Reset
+	lda #$02; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$20
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressAPUInstructions
+	jsr Bus24Bit_Reset
+	lda #$02; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$80
+	sta CIA2PortBRS232
+	rts
+
+
+Bus24Bit_SetAddressAPUData
+	jsr Bus24Bit_Reset
+	lda #$02; EBBS
+	sta CIA2PortBRS232
+	lda #$00
+	sta CIA2PortBRS232
+	lda #$40
+	sta CIA2PortBRS232
+	rts
+

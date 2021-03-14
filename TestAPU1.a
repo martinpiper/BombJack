@@ -2,29 +2,7 @@
 
 ; This test is bare minimal functionality for a copper, where values can be read from ADDRB1 RAM, HV waits, then external memory writes, and a final PC reset
 
-; Instructions, can be combined
-kAPU_Reset_ADDRB1		= %0000000000000001
-kAPU_Reset_PC			= %0000000000000010
-kAPU_InterceptBus		= %0000000000000100
-kAPU_WaitForEqualsHV	= %0000000000001000
-kAPU_Reset_EBSEADDR		= %0000000000010000
-kAPU_Incr_ADDRB1		= %0000000000100000
-kAPU_Incr_EADDR			= %0000000001000000
-kAPU_ExternalMEWR		= %0000000010000000		; This is timed to pulse low on the PCINCR (cycle 3)
-kAPU_Load_EBS			= %0000000100000000
-kAPU_Load_EADDRLo		= %0000001000000000
-kAPU_Load_EADDRHi		= %0000010000000000
-kAPU_Load_Wait24		= %0000100000000000
-kAPU_Load_Wait16		= %0001000000000000
-kAPU_Load_Wait8			= %0010000000000000
-
-!macro MAPU .i {
-	!by <(.i)
-	!by <(.i >> 8)
-}
-!macro MAPU {
-	+MAPU 0
-}
+!source "stdlib/APU_Macros.a"
 
 !to "TestAPU1.bin" , plain
 
@@ -78,3 +56,4 @@ kAPU_Load_Wait8			= %0010000000000000
 
 	+MAPU kAPU_Reset_ADDRB1 | kAPU_Reset_PC
 	+MAPU
+
