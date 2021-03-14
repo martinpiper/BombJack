@@ -7,8 +7,8 @@ d0
 
 ; Write control registers
 ; Reset APU
-d$20000400
-d$20000401
+d$20000200
+d$20000201
 
 ; PC		12 bits of APU PC (the other half of the 8 KB RAM is used for potential decision points, conditional branching instructions)
 ; A			8 bit register
@@ -17,12 +17,12 @@ d$20000401
 ; APUEBS	8 bit value containing the EBS
 ; APUEADDR	16 bit value for the external memory bus
 
-s$80000400
+s$80000200
 <0,1,2,3,4,5,6,7,<TestAPU1.bin
 
 
 ; Store data into APU memory bank 1 data
-s$40000400
+s$40000200
 
 ; Sprite register EBS+address
 b$01
@@ -45,13 +45,13 @@ b$01
 
 
 ; Enable APU after writing memory
-d$20000403
+d$20000203
 
 ; Test memory access APU delay straight after APU enable
-s$82000400
+s$82000200
 b$01
 b$01,b$02,b$03,b$04,b$05,b$06,b$07
-s$41000400
+s$41000200
 b$11,b$12,b$13,b$14,b$15,b$16,b$17
 d$0
 
@@ -61,8 +61,8 @@ w$ff01ff00,$f8019000
 d$0
 
 ; Test memory access APU delay during scan
-s$82100400
+s$82100200
 b$01,b$02,b$03,b$04,b$05,b$06,b$07
-s$41100400
+s$41100200
 b$11,b$12,b$13,b$14,b$15,b$16,b$17
 d$0

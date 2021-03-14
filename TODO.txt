@@ -1,5 +1,8 @@
 * APU try merging the APU with the main schematic to real bus signals?
 	The headers and output signals might need some renaming
+	Done - APU in schematic and test data needs EBBS changed from 0x04 to 0x02 (since the audio layer already uses 0x04 for sample data)
+		Changed in readme already
+
 
 
 

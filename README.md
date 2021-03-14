@@ -253,10 +253,10 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9e07                | Background colour select                |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
-   | $02           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
-   | $04           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
-   | $04           | APU                           | $4000   8KB          | APU memory bank 1 data                  |
-   | $04           | APU                           | $2000   8KB          | APU bank 2 registers                    |
+   | $02           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
+   | $02           | APU                           | $4000   8KB          | APU memory bank 1 data                  |
+   | $02           | APU                           | $2000   8KB          | APU bank 2 registers                    |
+   | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | $80           | Char screen banks 0-3         | $4000   8KB          | Chars and colours into U258             |
    | Note 1 spare  |                               |                      |                                         |
