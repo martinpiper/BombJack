@@ -63,6 +63,9 @@ Bus24Bit_CopySmallDataAgain
 	iny
 .sm2	cpy #0
 	bne .l1
+	; Prepare any subsequent copies to copy a 256 byte chunk
+	lda #0
+	sta .sm2+1
 	rts
 
 Bus24Bit_CopySmallDataRepeatForX

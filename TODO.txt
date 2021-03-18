@@ -2,6 +2,7 @@
 	The headers and output signals might need some renaming
 	Done - APU in schematic and test data needs EBBS changed from 0x04 to 0x02 (since the audio layer already uses 0x04 for sample data)
 		Changed in readme already
+	Done - Created C64\VideoHardware\asm\main3MultiplexAPU.a which exercises the expected sprite timing behaviour
 	TODO - Emulation - For the clock edge related state signals, there needs to be a test for a previous inactive condition to allow for the edge to be activated
 		Perhaps a debug warning when the condition is not met
 

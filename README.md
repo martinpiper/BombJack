@@ -146,8 +146,8 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 		But 5: F : If set, the sprite is full screen height. The sprite data will repeat.
 		Bits 4..0: C : 5 bits to provide the colour value for the tile decoder
 
-	Byte 2: The sprite’s X position on screen
-	Byte 3: The sprite’s Y position on screen
+	Byte 2: The sprite’s Y position on screen
+	Byte 3: The sprite’s X position on screen
 
 
 ### Mode7 registers
