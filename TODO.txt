@@ -5,6 +5,23 @@
 	Done - Created C64\VideoHardware\asm\main3MultiplexAPU.a which exercises the expected sprite timing behaviour
 	TODO - Emulation - For the clock edge related state signals, there needs to be a test for a previous inactive condition to allow for the edge to be activated
 		Perhaps a debug warning when the condition is not met
+	TODO - Consider another two bytes for the instruction and adding a few extra internal and external address latches, with a demux selector, and increment flags
+		This would make sprites effects easier to code by having contiguous blocks of sprite registers in RAM
+		However at the moment there is no "load" mechanism for the ADDRB1, it only has reset and increment
+			To fully use this, there would need to be some generic read/write temporary registers as well the RAM for loads of the address
+		It would also reduce the amount of reloading for the external EBS/EADDR
+			1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
+			3 bits for load EBS2, EADDR2lo/EADDR2hi
+			1 bit for increment EADDR2lo/hi
+		IDATA could have a 4 to 1 de-mux, giving RAM and 3 output 8 bit latches
+			The 2 latches could also be wired for simultaneous 16 bit ADDRB1 lo/hi and perhaps PC load
+			2 bits for output de-mux select of RAM or DATAREG0/1/2
+			3 bits for latch loads of DATAREG0/1/2
+		Extra ADDRB1 as ADDRB2
+			1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
+			1 bit for increment ADDRB2
+			2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
+		
 
 
 
