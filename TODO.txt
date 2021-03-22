@@ -15,6 +15,7 @@
 			1 bit for increment EADDR2lo/hi
 		IDATA could have a 4 to 1 de-mux, giving RAM and 3 output 8 bit latches
 			The 2 latches could also be wired for simultaneous 16 bit ADDRB1 lo/hi and perhaps PC load
+				PC Load would allow for some kind of comparison and jump instruction
 			2 bits for output de-mux select of RAM or DATAREG0/1/2
 			3 bits for latch loads of DATAREG0/1/2
 		Extra ADDRB1 as ADDRB2
