@@ -17,6 +17,8 @@ kAPU_Load_Wait8			= %0010000000000000
 !macro MAPU .i {
 	!by <(.i)
 	!by <(.i >> 8)
+	!by <(.i >> 16)
+	!by <(.i >> 24)
 }
 !macro MAPU {
 	+MAPU 0
