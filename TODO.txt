@@ -10,18 +10,18 @@
 		However at the moment there is no "load" mechanism for the ADDRB1, it only has reset and increment
 			To fully use this, there would need to be some generic read/write temporary registers as well the RAM for loads of the address
 		It would also reduce the amount of reloading for the external EBS/EADDR
-			1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
-			3 bits for load EBS2, EADDR2lo/EADDR2hi
-			1 bit for increment EADDR2lo/hi
+			kAPU_SelectEBS2EADDR2 - 1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
+			kAPU_Load_EBS2, kAPU_Load_EADDR2Lo, kAPU_Load_EADDR2Hi - 3 bits for load EBS2, EADDR2lo/EADDR2hi
+			kAPU_Incr_EADDR2 - 1 bit for increment EADDR2lo/hi
 		IDATA could have a 4 to 1 de-mux, giving RAM and 3 output 8 bit latches
 			The 2 latches could also be wired for simultaneous 16 bit ADDRB1 lo/hi and perhaps PC load
 				PC Load would allow for some kind of comparison and jump instruction
-			2 bits for output de-mux select of RAM or DATAREG0/1/2
-			3 bits for latch loads of DATAREG0/1/2
+			kAPU_IDataSelectRAM, kAPU_IDataSelectReg0/1/2 - 2 bits for output de-mux select of RAM or DATAREG0/1/2
+			kAPU_IDataRegLoad0/1/2 - 3 bits for latch loads of DATAREG0/1/2
 		Extra ADDRB1 as ADDRB2
-			1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
-			1 bit for increment ADDRB2
-			2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
+			kAPU_ADDRB2Select - 1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
+			kAPU_Incr_ADDRB2 - 1 bit for increment ADDRB2
+			kAPU_ADDRB1/2Load16 - 2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
 		
 
 
