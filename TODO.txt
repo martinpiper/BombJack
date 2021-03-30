@@ -22,7 +22,7 @@
 			kAPU_ADDRB2Select - 1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
 			kAPU_Incr_ADDRB2 - 1 bit for increment ADDRB2
 			kAPU_ADDRB1/2Load16 - 2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
-		
+	* Emulation works, now need schematic updates
 
 
 
