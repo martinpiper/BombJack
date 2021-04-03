@@ -360,7 +360,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="740" flags="0000800b" y="40" h="33" pid="1" iid="53">
+   <POPUP w="16" x="740" flags="0000000b" y="40" h="33" pid="1" iid="53">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -385,6 +385,26 @@
    </POPUP>
    <POPUP w="610" x="695" flags="00000000" y="541" h="466" pid="0" iid="114">
     <PROPERTIES/>
+   </POPUP>
+   <POPUP w="16" x="171" flags="0000000b" y="454" h="16" pid="1" iid="124">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
+   </POPUP>
+   <POPUP w="16" x="738" flags="0000000b" y="450" h="16" pid="1" iid="126">
+    <PROPERTIES>
+     <ITEM name="DataType">2</ITEM>
+     <ITEM name="DispChars">Yes</ITEM>
+     <ITEM name="DispFormat">2</ITEM>
+     <ITEM name="ShowChanges">Yes</ITEM>
+     <ITEM name="ShowToolTips">Yes</ITEM>
+     <ITEM name="TopLineAddress">00000000</ITEM>
+    </PROPERTIES>
    </POPUP>
   </PWI>
  </MODULE>

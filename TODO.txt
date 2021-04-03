@@ -23,7 +23,16 @@
 			kAPU_Incr_ADDRB2 - 1 bit for increment ADDRB2
 			kAPU_ADDRB1/2Load16 - 2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
 	* Emulation works, now need to test the new instructions with the APU multiplexor test
+		Done
 	* Then schematic updates
+		32 bit instruction read works, with latch
+		Output still validates OK output\DebugAPUOutput.txt
+	Why am I seeing spurious zero memory writes at the recording digital data?
+		d$00010000
+		d$00010000
+		d$00010000
+
+		
 
 
 
