@@ -27,10 +27,12 @@
 	* Then schematic updates
 		32 bit instruction read works, with latch
 		Output still validates OK output\DebugAPUOutput.txt
-	Why am I seeing spurious zero memory writes at the recording digital data?
+	* Solved - Why am I seeing spurious zero memory writes at the recording digital data?
 		d$00010000
 		d$00010000
 		d$00010000
+		* The DigitalData model was interrupting with a spurious write to the last state very often. Oops!
+
 
 		
 
