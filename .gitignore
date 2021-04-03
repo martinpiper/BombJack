@@ -17,3 +17,4 @@ Audio.sts
 output/DebugAudioOutput.txt
 TestAPU1.bin
 Project Backups/
+output/DebugAPUOutput.txt
