@@ -1,3 +1,7 @@
+* Bombjack board layer 3 is missing its power plane?
+
+
+
 * APU try merging the APU with the main schematic to real bus signals?
 	The headers and output signals might need some renaming
 	Done - APU in schematic and test data needs EBBS changed from 0x04 to 0x02 (since the audio layer already uses 0x04 for sample data)
@@ -10,18 +14,30 @@
 		However at the moment there is no "load" mechanism for the ADDRB1, it only has reset and increment
 			To fully use this, there would need to be some generic read/write temporary registers as well the RAM for loads of the address
 		It would also reduce the amount of reloading for the external EBS/EADDR
-			1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
-			3 bits for load EBS2, EADDR2lo/EADDR2hi
-			1 bit for increment EADDR2lo/hi
+			kAPU_SelectEBS2EADDR2 - 1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
+			kAPU_Load_EBS2, kAPU_Load_EADDR2Lo, kAPU_Load_EADDR2Hi - 3 bits for load EBS2, EADDR2lo/EADDR2hi
+			kAPU_Incr_EADDR2 - 1 bit for increment EADDR2lo/hi
 		IDATA could have a 4 to 1 de-mux, giving RAM and 3 output 8 bit latches
 			The 2 latches could also be wired for simultaneous 16 bit ADDRB1 lo/hi and perhaps PC load
 				PC Load would allow for some kind of comparison and jump instruction
-			2 bits for output de-mux select of RAM or DATAREG0/1/2
-			3 bits for latch loads of DATAREG0/1/2
+			kAPU_IDataSelectRAM, kAPU_IDataSelectReg0/1/2 - 2 bits for output de-mux select of RAM or DATAREG0/1/2
+			kAPU_IDataRegLoad0/1/2 - 3 bits for latch loads of DATAREG0/1/2
 		Extra ADDRB1 as ADDRB2
-			1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
-			1 bit for increment ADDRB2
-			2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
+			kAPU_ADDRB2Select - 1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
+			kAPU_Incr_ADDRB2 - 1 bit for increment ADDRB2
+			kAPU_ADDRB1/2Load16 - 2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
+	* Emulation works, now need to test the new instructions with the APU multiplexor test
+		Done
+	* Then schematic updates
+		32 bit instruction read works, with latch
+		Output still validates OK output\DebugAPUOutput.txt
+	* Solved - Why am I seeing spurious zero memory writes at the recording digital data?
+		d$00010000
+		d$00010000
+		d$00010000
+		* The DigitalData model was interrupting with a spurious write to the last state very often. Oops!
+
+
 		
 
 
@@ -66,6 +82,12 @@
 		Or: https://www.mouser.sg/ProductDetail/Wurth-Elektronik/61200823021/?qs=PhR8RmCirEZvQm5v3EiYrA%3D%3D
 	Cable: https://www.mouser.sg/Wire-Cable/Flat-Cables/_/N-5ggmZ1yzvvqx?P=1ytitytZ1z0vl9dZ1yzu8m9
 	
+	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
+	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
+	Right angled: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1yzs9vmZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1z0xbud&Ns=Number+of+Positions%7c0&FS=True
+	10 way cables: https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkreeZ1yzvvqx?P=1yyu1hyZ1z0wxp6Z1yny8waZ1yny8w9&Keyword=idc&FS=True
+	
+	
 
 
 
@@ -82,6 +104,36 @@
 
 
 * PCB connectivity options:
+	DIN 41612:
+	https://en.wikipedia.org/wiki/DIN_41612
+	https://www.hirose.com/en/product/series/PCN13#
+	Backplane straight receptacles 50 way 2 rows:
+		https://www.mouser.sg/Hirose-Electric/Connectors/Backplane-Connectors/DIN-41612-Connectors/PCN10-Series/_/N-axj5jZ1yzvvqx?P=1ytkn9pZ1yzve1gZ1z0z5h6Z1z0jmg3Z1z0j1prZ1z0xbxo
+	Right angled board edge connector 50 way 2 rows:
+		https://www.mouser.sg/Hirose-Electric/Connectors/Backplane-Connectors/DIN-41612-Connectors/PCN10-Series/_/N-axj5jZ1yzvvqx?P=1ytkn9pZ1z0spqhZ1yzve1gZ1z0z5h6Z1z0jmg3Z1z0xbyw
+
+	Or perhaps Harting connectors. But these a press-in, which look more complicated to solder:
+		https://www.mouser.sg/HARTING/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1z0z5h6Z1z0wxp6Z1z0zl89&Keyword=41612&FS=True
+		https://www.mouser.sg/ProductDetail/HARTING/09282486804791?qs=%2Fha2pyFadujf%2FON5mzZXH%252BmRzB7nM%2FaLl9OChyBxONU%3D
+		
+	>>**<< These are 64 way and have solder pins plus Proteus parts:
+		https://www.mouser.sg/ProductDetail/HARTING/09021646921?qs=gIpPgrDBK%2FiWr6s0yE4P1A%3D%3D
+		https://www.mouser.sg/ProductDetail/?qs=gIpPgrDBK%2Fj7cjNJs9Ij%252BQ%3D%3D
+	These are >=48 way, suitable for the video connectors:
+		Receptacles: https://www.mouser.sg/TE-Connectivity/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1z0xby7Z1ytf3jyZ1ytkn9pZ1ysmvawZ1z0z63vZ1z0z5h6Z1yzvwjmZ1z0wxp6Z1yzs6iiZ1z0j1pr
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/5535091-5?qs=U4pz39agNJApG5vcI2Ocug%3D%3D
+		Connectors right:
+		https://www.mouser.sg/TE-Connectivity/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1ytf3jyZ1ytkn9pZ1ysmvawZ1z0z63vZ1z0z5h6Z1yzvwjmZ1z0wxp6Z1yzs6iiZ1z0vlpq
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/5650478-5?qs=xrnNvQC1SKQL0IHY3tGLpg%3D%3D
+		
+		
+		
+		
+		
+	
+	
+
+
 	Backplane:
 		https://www.ti.com/lit/an/szza016b/szza016b.pdf
 		https://resources.altium.com/p/signal-integrity-simulations-backplane-bus-connectors
