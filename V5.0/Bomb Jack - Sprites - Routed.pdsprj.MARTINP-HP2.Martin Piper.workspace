@@ -1,21 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="1">
-  <PLACEMENT>2c0000000200000003000000fffffffffffffffffffffffffffffffff400000088000000f90500003a030000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000fffffffffffffffffffffffffffffffff5000000820000004e040000da020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
   <WINDOW type="default" module="DXP"/>
-  <WINDOW type="VIEW3D" module="VIEW3D">
-   <camera>
-    <position x="29111000" y="-40489916" z="21239918"/>
-    <focus x="29111000" y="-19250000" z="0"/>
-    <up x="0" y="707106" z="707106"/>
-   </camera>
-  </WINDOW>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="40" flags="00008003" y="511" h="505" pid="0" iid="-1">
+   <POPUP w="800" x="-1915" flags="00000002" y="90" h="505" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">542</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -287,10 +280,10 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="93" flags="00000001" y="90" h="466" pid="0" iid="227">
+   <POPUP w="610" x="171" flags="00008001" y="62" h="466" pid="0" iid="227">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="610" x="222" flags="00000001" y="130" h="466" pid="0" iid="629">
+   <POPUP w="610" x="99" flags="00000001" y="547" h="466" pid="0" iid="629">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="38" flags="0000000a" y="129" h="16" pid="1" iid="175">

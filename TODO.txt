@@ -1,4 +1,16 @@
-* Bombjack board layer 3 is missing its power plane?
+* For improved electrical performance
+	Menu->Technology->Set Layer Stackup
+		Inner 1 + 2 = Plane
+		Other copper layers = Signal
+		Create appropriate power planes on inner 1 , 2 , 4 using "Create Power Plane"
+	Menu->Technology->Design Rule Manager
+		Net Classes
+			Power : Trace Style : POWER1
+				Top/bottom + inner 4 at priority 3
+			Signal : Trace Style : DEFAULT
+				Top/bottom + inner4 + inner 3 + 4 at priority 1
+	However, this does cause complex layers, like Mode7, to not route
+
 
 
 
@@ -307,6 +319,21 @@
 	* Perhaps this is due to ripple from the pixel counters?
 		* Try adding a latch for the counter outputs
 			No improvement
+	* Perhaps it's the whole long pathway from U79?
+		Note: Even at 15Mhz the data generator needs to use the next slower clock pulse, which kills the picture comparison test
+		The sprites don't start drawing until 8 pixels delay from the first register read...
+		So... Try latching the outputs from the RAMs to the internal values only when 8H is low
+		However frame 1 is showing no change, since it is full frame without raster effects
+			115         00000000
+			0 	        00000001	<<<<<<****!!
+			127         00000002
+		* Fix at 15MHz! : For 7R which outputs _MDL _CDL _ VPL which latches the results of the frame, colour, vertical position
+			The enable input uses 8H OR (Q output of 4S:B below)
+			Visual verification of the sprites and other layers looks OK
+			* Now to decide if I want the horizontal resolution to be increased...
+		* A big change would be: Try adding 3 extra RAMs that consistently read the values and latch them with more time than trying to select all the values from the same RAM
+		
+
 
 
 	
