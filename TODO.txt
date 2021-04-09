@@ -330,7 +330,12 @@
 		* Fix at 15MHz! : For 7R which outputs _MDL _CDL _ VPL which latches the results of the frame, colour, vertical position
 			The enable input uses 8H OR (Q output of 4S:B below)
 			Visual verification of the sprites and other layers looks OK
-			* Now to decide if I want the horizontal resolution to be increased...
+		* TODO: Now to decide if I want the horizontal resolution to be increased...
+		* TODO: Using a OR gate with both inputs tied together, check the timing on this, also test with a large number of frames at the same clock speed to decide if the improvement can be in the next revision regardless of the screen resolution
+		* With original design, using TestData_DebugSprites2.txt, at 12.096M compared to 15.1M, the 15.1M clock using video with 768 as the horizontal resolution, the sprites have a gap at the right screen edge.
+			The OR gate modification does not fix this issue.
+			However the OR gate does not change the output at 12.096 rate when comparing 17 frames from TestData_DebugSprites2.txt
+		
 		* A big change would be: Try adding 3 extra RAMs that consistently read the values and latch them with more time than trying to select all the values from the same RAM
 		
 
