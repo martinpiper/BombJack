@@ -1550,3 +1550,312 @@ All layouts now use V3.1
 	*** TestAPU1.a works so far!!! ***
 	* Done - Need to check the bus sharing for RAM writes coming from an external source
 		Seems to work, the initial write on $00000000 is being delayed until H$6d after the digital data debugger writes
+
+
+
+
+
+
+* Video - Changing from 12.096MHz to 15MHz to enable a 320 pixel (480 scan) wide display
+	output\12.096M compared to output\15M shows sprite colour issues with 15M.
+		Similar was seen when attempting hires mode Done.txt: "There is a strange sprite colour corruption when running at VIDCLK = 24 MHz"
+	* Perhaps this is due to ripple from the pixel counters?
+		* Try adding a latch for the counter outputs
+			No improvement
+	* Perhaps it's the whole long pathway from U79?
+		Note: Even at 15Mhz the data generator needs to use the next slower clock pulse, which kills the picture comparison test
+		The sprites don't start drawing until 8 pixels delay from the first register read...
+		So... Try latching the outputs from the RAMs to the internal values only when 8H is low
+		However frame 1 is showing no change, since it is full frame without raster effects
+			115         00000000
+			0 	        00000001	<<<<<<****!!
+			127         00000002
+		* Fix at 15MHz! : For 7R which outputs _MDL _CDL _ VPL which latches the results of the frame, colour, vertical position
+			The enable input uses 8H OR (Q output of 4S:B below)
+			Visual verification of the sprites and other layers looks OK
+		* TODO: Now to decide if I want the horizontal resolution to be increased...
+		* TODO: Using a OR gate with both inputs tied together, check the timing on this, also test with a large number of frames at the same clock speed to decide if the improvement can be in the next revision regardless of the screen resolution
+		* With original design, using TestData_DebugSprites2.txt, at 12.096M compared to 15.1M, the 15.1M clock using video with 768 as the horizontal resolution, the sprites have a gap at the right screen edge.
+			The OR gate modification does not fix this issue.
+			However the OR gate does not change the output at 12.096 rate when comparing 17 frames from TestData_DebugSprites2.txt
+		* Using TestData.txt with 768 screen width at 12.096MHz original and with the OR gate improvement
+			Frame 1 shows a small improvement in the "tall" sprite where in the original frame there is a corruption on a couple of lines where the sprite registers are updated.
+				In the OR gate improved frame the corruption is removed, indicating the sprite register values are better latched in this scenario.
+				Most of the frames are entirely the same however.
+		* Added U54:C 7432 extra OR gate to help the sprite register load signals
+		* A big change would be: Try adding 3 extra RAMs that consistently read the values and latch them with more time than trying to select all the values from the same RAM
+
+
+
+
+
+* With the video circuitry tweaks, try a higher clock speed, note sprites
+	Sprites still get that weird black drop shadow effect to the right hand edge
+	Using TestData.txt with "Top left of non-rotated screen, all the same"
+	The sprite scan line RAM indicates the calculated output pixels are the same, (f8 ff ... seen) which indicates the problem may be in the read or eventual output of those pixels
+	Use: TestData_DebugSprites.txt
+	Even the 32x32 sprites show the drop shadow effect, so the problem exists for all sprites regardless of their size
+	It's not really a "drop shadow" it is actually the last trailing output pixel, when viewed from left to right in the scan line, that is black (or the wrong colour)
+		The pixels are not displaced, or shifted
+	At 12.096MHz execution: Breakpoint at RV=0x18 and then timed breakpoint execution for 21.5u
+	Single Step Time was: 50n
+		Now: 25n
+	At faster MHz, use 14u timed breakpoint
+	1V*. is low when RH=0x0008 and RV=0x18
+	Tried a shorter scan line write pulse and longer read pulse, but this did not fix the issue The output pixel latch from the scan line RAM is still reading garbage.
+
+
+
+
+* Split design into layers, use common bus for internal communications
+	* Renumber component refs depending on their layer, 1xx main, 2xx screen... etc.
+	* Main: Clocking, video timing, pixel combination and palette lookups
+	* Screen + colour RAM
+	* Sprites
+	* Background picture
+
+
+
+* TestSpriteTimings.txt
+	Some sprite register timing tests, to help check multiplexor ideas with respect to writing certain registers outside of their update slots in the raster line
+
+
+
+
+
+
+* APU try merging the APU with the main schematic to real bus signals?
+	The headers and output signals might need some renaming
+	Done - APU in schematic and test data needs EBBS changed from 0x04 to 0x02 (since the audio layer already uses 0x04 for sample data)
+		Changed in readme already
+	Done - Created C64\VideoHardware\asm\main3MultiplexAPU.a which exercises the expected sprite timing behaviour
+	TODO - Emulation - For the clock edge related state signals, there needs to be a test for a previous inactive condition to allow for the edge to be activated
+		Perhaps a debug warning when the condition is not met
+	TODO - Consider another two bytes for the instruction and adding a few extra internal and external address latches, with a demux selector, and increment flags
+		This would make sprites effects easier to code by having contiguous blocks of sprite registers in RAM
+		However at the moment there is no "load" mechanism for the ADDRB1, it only has reset and increment
+			To fully use this, there would need to be some generic read/write temporary registers as well the RAM for loads of the address
+		It would also reduce the amount of reloading for the external EBS/EADDR
+			kAPU_SelectEBS2EADDR2 - 1 bit for 74157 2 to 1 de-mux selecting the output of EBS/EADDR or another EBS2/EADDR2
+			kAPU_Load_EBS2, kAPU_Load_EADDR2Lo, kAPU_Load_EADDR2Hi - 3 bits for load EBS2, EADDR2lo/EADDR2hi
+			kAPU_Incr_EADDR2 - 1 bit for increment EADDR2lo/hi
+		IDATA could have a 4 to 1 de-mux, giving RAM and 3 output 8 bit latches
+			The 2 latches could also be wired for simultaneous 16 bit ADDRB1 lo/hi and perhaps PC load
+				PC Load would allow for some kind of comparison and jump instruction
+			kAPU_IDataSelectRAM, kAPU_IDataSelectReg0/1/2 - 2 bits for output de-mux select of RAM or DATAREG0/1/2
+			kAPU_IDataRegLoad0/1/2 - 3 bits for latch loads of DATAREG0/1/2
+		Extra ADDRB1 as ADDRB2
+			kAPU_ADDRB2Select - 1 bit for 74157 2 to 1 de-mux selecting the output of ADDRB1 or another ADDRB2
+			kAPU_Incr_ADDRB2 - 1 bit for increment ADDRB2
+			kAPU_ADDRB1/2Load16 - 2 bits for ADDRB1 or ADDRB2 16 bit load from DATAREG0/1
+	* Emulation works, now need to test the new instructions with the APU multiplexor test
+		Done
+	* Then schematic updates
+		32 bit instruction read works, with latch
+		Output still validates OK output\DebugAPUOutput.txt
+	* Solved - Why am I seeing spurious zero memory writes at the recording digital data?
+		d$00010000
+		d$00010000
+		d$00010000
+		* The DigitalData model was interrupting with a spurious write to the last state very often. Oops!
+
+
+
+
+* Need ADDRB1 lo/hi logic read, at the moment it's just reset
+	Internal RAM read address
+
+
+
+
+
+* For improved electrical performance
+	Menu->Technology->Set Layer Stackup
+		Inner 1 + 2 = Plane
+		Other copper layers = Signal
+		Create appropriate power planes on inner 1 , 2 , 4 using "Create Power Plane"
+	Menu->Technology->Design Rule Manager
+		Net Classes
+			Power : Trace Style : POWER1
+				Top/bottom + inner 4 at priority 3
+			Signal : Trace Style : DEFAULT
+				Top/bottom + inner4 + inner 3 + 4 at priority 1
+	However, this does cause complex layers, like Mode7, to not route
+
+
+
+
+
+* Consider reinstating 4E/4F?
+
+
+
+
+* The "Sprite scan RAM logic" reads scan RAM, tests for transparency, writes sprite pixels in transparent or writes back existing value
+	Perhaps change the logic so that the input sprite pixel is tested for transparency and only written if opaque?
+		This would reduce the constant read, test, write back cycle to only test and optional write
+		* This would mean the last sprite has priority instead of the first sprite however, i.e. the priority of sprites is reversed
+
+
+
+
+
+
+
+* Consider higher current output than a normal 7805 regulator.
+	https://www.mouser.sg/Semiconductors/Power-Management-ICs/Voltage-Regulators-Voltage-Controllers/Linear-Voltage-Regulators/_/N-5cg9g?P=1z0z63xZ1z0wadv&Keyword=7805&FS=True
+	https://www.mouser.sg/ProductDetail/Texas-Instruments/UA7805CKCS?qs=IEl3ej0IqwDTl9fhEpiFdQ%3D%3D
+	https://www.mouser.sg/ProductDetail/STMicroelectronics/LD1085V50?qs=%2Fha2pyFadugp3TsIEWjKyT083J8Jn3o2iWNBXzYOghY%3D
+	Or buck regulator?
+		https://fr.aliexpress.com/item/32726124435.html?ws_ab_test=searchweb0_0,searchweb201602_4_10065_10068_433_10000509_10000656_10136_10060_10062_10056_10055_10054_302_10059_10000636_10099_10103_10102_10096_10052_10053_10107_10050_10106_10051_10000090_10000729_10084_10083_10080_10082_10081_10110_10000375_10111_10112_10000377_10113_10114_10000349_10078_10079_10073_10000519_10070_10122_10123_10126_10000511_10124_10000514,searchweb201603_2,afswitch_1,ppcSwitch_5,single_sort_0_default&btsid=ba1207db-29e6-4f78-a993-ea479fd99bc0&algo_expid=179a1c71-1922-45a6-97fc-93dabe2447d3-0&algo_pvid=179a1c71-1922-45a6-97fc-93dabe2447d3
+		https://fr.aliexpress.com/item/32689938167.html?ws_ab_test=searchweb0_0,searchweb201602_4_10065_10068_433_10000509_10000656_10136_10060_10062_10056_10055_10054_302_10059_10000636_10099_10103_10102_10096_10052_10053_10107_10050_10106_10051_10000090_10000729_10084_10083_10080_10082_10081_10110_10000375_10111_10112_10000377_10113_10114_10000349_10078_10079_10073_10000519_10070_10122_10123_10126_10000511_10124_10000514-10050,searchweb201603_2,afswitch_1,ppcSwitch_5,single_sort_0_default&btsid=466a6ab4-ecc2-442d-8954-e0821251912f&algo_expid=aa25a339-5e7a-4652-bdd2-e70b3f6ef4f2-2&algo_pvid=aa25a339-5e7a-4652-bdd2-e70b3f6ef4f2
+		
+	* It would help to estimate the total current used by by each board
+
+
+
+
+
+* IC Sockets should ideally have flat pin spring connections, not round sockets.
+
+
+
+
+
+** V3.0 needs to be regenerated
+	Connectivity check passes
+	These ICs were auto-placed, then horizontally and vertically gaps were added and added to the board. This promoted better auto-placement for other ICs and helped auto-routing.
+		U136
+		U71
+		U207
+		U215
+		U229
+		U224
+	Added feature request: https://support.labcenter.com/forums/viewtopic.php?f=10&t=7821
+	Note: Auto-route seems much easier when one board/group is auto-placed and routed instead of placing all the boards, then routing separately.
+		Why? could be that when auto-placing all boards the layout is not as optimal.
+			Comparing the force vectors between the "all board" and "single board" place shows major differences.
+				Some components are pointing off board, when they should all be self contained to the group. This affects the placement.
+	Note: Each board needs to be saved individually, with the other boards removed. Then place ICs by group: In PCB, components mode, use the drop-down filter, right click first component in list -> menu, "Place Group By Room"
+		Then route each separate board
+
+
+
+
+* Perhaps a layer combination board, which does the zero 3-bit or 8 bit pixel test and allows multiple expansion planes to be used?
+
+
+
+
+* Investigate the "display enable" being used to still output video timings, just disable the pixel output
+	This would allow memory updates to be enabled, without seeing bad video output and while maintaining video sync
+
+
+
+
+* Auto-routing tests
+	With default options, it takes ~15 minutes: https://support.labcenter.com/forums/viewtopic.php?f=5&t=7693
+	Are there quicker options?
+		Yes, changing the grid does help but sometimes the boards are not populated fully as they run out of space.
+
+
+
+
+* VSMDD2 why is "w$ff01ff00,$3f018000" triggering near raster 2f?
+	* The copper (VSMDD2) RV[0..7] input needed an extra latching 74273 (U84 excluded from PCB) to smooth the signal from the counters
+		This kind of buffering logic is going to be needed on the real hardware, and might need to be added to the VSMDD2 inputs from the CLK
+* Below might be related...
+* Colour bars: With the sin/cos wave pattern, it seems to clamp to a bad value? Investigate the data driving this pattern...
+	The horizontal and vertical pixel counters might need to be latched
+
+
+
+
+* GenerateData2
+	* Is the slight pixel ripple effect observed when moving right (output\debug2.gif) is the hardware or the virtual display adaptor...
+	* Much higher X resolutions (like 1024 pixels) on the virtual display need to be tested...
+		* Higher resolutions do show the grass an other tiles with some very thin vertical colour edge bleeding on perhaps the tile boundary
+			This might be due to the colour RAM fetch not being completely synced with the tile pixel shifting and output mix?
+			Or this might be caused by the horizontal and vertical pixel clocks not being latched from the counters, so the counter ripple is not quite exactly settling all at the same time?
+
+
+
+
+* Copper plans
+	If the hires xpos is used, then consider starting a _MEWR pulse at that point in time and any further writes would be based on that time too.
+	This would allow hires writes to the background colour for example.
+	Any subsequent writes could then be lower resolution to fit with RAM timing constraints.
+	Could the copper board be built in-between the 24 bit parallel board and the main display board?
+		Input = EBS + EAB + EDB + ROWCOL, output = EBS + EAB + EDB
+			Internally EBS = 2 is used to trigger the copper and ROWCOL checks
+			It could use VIDCLK and 6MHz lines from ROWCOL
+	Note: The selector and RAM are used to show working memory writes in the main display board
+	* It would be possible to store a 16 bit addition value, to facilitate storage of screen data that is stored in values +16 bytes at a time
+
+
+
+
+* Note C5 200P capacitor, check it is a ceramic disc on the board
+
+
+
+
+* Reorganise the memory map detection logic, remove 3M:A for ROMs, 3M:B 4M 5M 2S:B 1C:A
+	Add new memory block detection for _9800CS, _9A00CS, _9C00CS, _9E00CS
+	Use a memory block that is not used by the expansion RAM, perhaps the BASIC ROM area
+	Check the CPU memory expansion, BUSDDR or CPUHASBUS can also be used to improve the memory block chip detection
+
+
+
+
+* For integration with the TTL 8 bit CPU the VSYNC signal could be exposed to EXPANSIONBUS:EXTWANTIRQ
+	Remove extra unused logic E7P:A E7P:B E6P:C 5P:A
+	This will need a latch arrangement similar to the CPU latch, no use holding EXTWANTIRQ low for so long without being acked
+	CPU->Root sheet 8->U250:A
+		CIA1 read ACK U201:A
+
+
+
+
+* Allow the _HSYNC and _VSYNC to be read via the external header, as memory mapped IO. Probably reuse the number of sprite register see _9A00CS
+	This would need _MERD to be added to the external header. Also the BUSDDR would need to be used to enable the correct tri-state output
+* Allow RH AND RV to be accessed via memory mapped IO
+
+
+
+
+* The expansion bus and the memory write signals will need to be translated to the internal memory write signals
+
+
+
+
+	
+* 4C/4D when run at 6MHz will generate "sub optimal write pulses" errors with default values. Running at 1MHz fixes these issues.
+	* The output pixel data seems to be better when the timing is reduced.
+	* Investigate the output for read/write timings of these memory ICs for 6MHz operation.
+
+
+
+
+* How many layers? Six?
+	https://www.allpcb.com/6_layer_pcb.html
+		Created template: All PCB Six Layer 1.58532mm.LTF
+	http://referencedesigner.com/books/si/6-layer-stackup-ch6.php
+	
+	
+* Singapore PCB fabrication:
+	https://www.wizlogix.com/
+	http://www.evonix.com.sg/PCBFabrication.php
+	http://www.kentronicsengineering.com/
+	
+
+
+
+* All the very similar block, for the new RAMs and also the pixel shift outputs, could use a sub-circuit now
+	Since they are RAM addressed and the ROM with its associated data file in the schematic is not important
+	If the RAM/ROM names are still important, then have them outside of the sub-circuit
+
+
+
+* Split this layout so that different output planes can be added or removed via internal headers, daisy-chained probably.
+	The final combination logic can then take the output pixels and combine the final result via the pallet lookups
