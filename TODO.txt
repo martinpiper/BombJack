@@ -335,7 +335,11 @@
 		* With original design, using TestData_DebugSprites2.txt, at 12.096M compared to 15.1M, the 15.1M clock using video with 768 as the horizontal resolution, the sprites have a gap at the right screen edge.
 			The OR gate modification does not fix this issue.
 			However the OR gate does not change the output at 12.096 rate when comparing 17 frames from TestData_DebugSprites2.txt
-		
+		* Using TestData.txt with 768 screen width at 12.096MHz original and with the OR gate improvement
+			Frame 1 shows a small improvement in the "tall" sprite where in the original frame there is a corruption on a couple of lines where the sprite registers are updated.
+				In the OR gate improved frame the corruption is removed, indicating the sprite register values are better latched in this scenario.
+				Most of the frames are entirely the same however.
+		* Added U54:C 7432 extra OR gate to help the sprite register load signals
 		* A big change would be: Try adding 3 extra RAMs that consistently read the values and latch them with more time than trying to select all the values from the same RAM
 		
 
