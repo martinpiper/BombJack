@@ -1,3 +1,19 @@
+* When using TestData_DebugSprites2.txt and display width 1536, debug00000000.bmp will show at xpos 1536 for the column
+	* A very slightly different incorrect red colour 240,48,48 instead of 240,0,0
+		Interesting to note that the bad colour is on the leading left hand edge of the top right sprite vertical red column.
+		But on the trailing right hand edge on the sprite underneath the top right sprite.
+	* Larger widths show the pixel line is increasingly thin, so it is a very short signal
+	* Use: TestData_DebugSignalSkew.txt
+		Interesting, with "Setup grey background colour in the palette" the incorrect colour pixel is at x=1330 y=17, fire first correct red pixel is at x=1331
+		Using the first correct red pixel is at x=1331 and the x=1330 pixel is 240,128,128, so the colour has changed
+		* Added logic analyser to the FPR/G/B0-3 pixel outputs, it looks like the simulation software is emulating a "random" signal variation in the two output pixel hex latches 74LS174
+			Changing to three separate latches and the pattern is the same
+			Maybe it is simulating the time taken to transition from lo to hi or hi to lo
+		
+		
+
+
+
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
 

@@ -1,0 +1,98 @@
+; Tests potential signal skew in the output circuitry.
+; This should output a single red pixel near the top right hand corner of the screen, with a background of colour 0 (grey)
+
+; Blank (address b$0000)
+d0
+
+; Char screen disable
+d$90000102
+; Clear background palette choice
+d$a0140100
+; Disable mode7
+d$a0150100
+
+; Background tile disable, enable display
+d$9e000120
+
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+
+; Sprite data, single pixel active in each of the 8 pixel strips
+s$20001000
+b$80
+
+; Write sprite data from 15_l07b.bin into RAM mapped at $4000 with EBS $10
+;s$40001000
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+;b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00,b$ff,b$00,b$00,b$00,b$00,b$00,b$00,b$00
+
+; Write sprite data from 16_m07b.bin into RAM mapped at $8000 with EBS $10
+s$80001000
+b$80
+
+!PaletteData.txt
+
+s$9c000100
+; Setup grey background colour in the palette
+b$33,b$33
+; Setup lighter grey background colour in the palette
+;b$88,b$88
+
+
+; Start and end (exclusive) of double size 32x32 sprite index
+s$9a000100
+b$10,b$00
+
+; Write sprite register data into RAM mapped at $9820 with EBS $01
+s$98200100
+
+; Byte ordering
+; frame
+; palette
+; Rotated
+; x
+; y
+; Normal
+; y (inverted)
+; x
+
+b$ff,b$00,b$11,b$00
+b$00,b$00,b$e1,b$f7
+b$ff,b$00,b$11,b$00
+b$ff,b$00,b$11,b$ef
+
+b$ff,b$80,b$11,b$00
+b$ff,b$40,b$c1,b$ef
+b$ff,b$c0,b$11,b$00
+b$ff,b$00,b$11,b$ef
+
+b$ff,b$80,b$10,b$40
+b$ff,b$80,b$10,b$40
+b$ff,b$40,b$10,b$80
+b$ff,b$40,b$10,b$80
+
+b$ff,b$00,b$10,b$a0
+b$ff,b$00,b$10,b$a0
+b$ff,b$00,b$10,b$a0
+b$ff,b$00,b$10,b$a0
+
+b$ff,b$00,b$10,b$c0
+b$ff,b$00,b$10,b$c0
+b$ff,b$00,b$10,b$c0
+b$ff,b$00,b$10,b$c0
+
+b$ff,b$00,b$18,b$80
+b$ff,b$00,b$17,b$60
+b$ff,b$00,b$16,b$40
+b$ff,b$00,b$15,b$20
+
+d$0
