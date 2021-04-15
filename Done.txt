@@ -1883,3 +1883,8 @@ All layouts now use V3.1
 * Added backplane, memory, and video right-angled connectors and headers. Removed the old vertical headers.
 	Added VGA female D-sub connector VID2 which uses TVSYNCout for the HSYNC, which gives RGBS or RGBHV option in the conversion box
 	Pixel headers as RA enclosed
+
+
+
+* Remove the extra headers on the video layer
+	Moved to backplane as they form the remaining compatibility header
