@@ -1,9 +1,3 @@
-* Added backplane, memory, and video right-angled connectors and headers. Removed the old vertical headers.
-	Added VGA female D-sub connector VID2 which uses TVSYNCout for the HSYNC, which gives RGBS or RGBHV option in the conversion box
-	* TODO - Pixel headers as RA enclosed
-
-
-
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
 
@@ -23,8 +17,8 @@
 	
 	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
 	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
-	Right angled: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1yzs9vmZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1z0xbud&Ns=Number+of+Positions%7c0&FS=True
-	10 way cables: https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkreeZ1yzvvqx?P=1yyu1hyZ1z0wxp6Z1yny8waZ1yny8w9&Keyword=idc&FS=True
+	>> Right angled: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1yzs9vmZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1z0xbud&Ns=Number+of+Positions%7c0&FS=True
+	>> 10 way cables: https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkreeZ1yzvvqx?P=1yyu1hyZ1z0wxp6Z1yny8waZ1yny8w9&Keyword=idc&FS=True
 	
 	
 

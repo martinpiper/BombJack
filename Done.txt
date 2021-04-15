@@ -1877,3 +1877,9 @@ All layouts now use V3.1
 			Maybe it is simulating the time taken to transition from lo to hi or hi to lo
 			* Since the time to really show the complete transition is ~4ns, this means for some pixel positions the incorrect and correct values can be in two adjacent pixels from the display
 				Add a new display "filter signals shorter than" option to the digital display: 5ns should be good enough, or 0.000000005 seconds.
+
+
+
+* Added backplane, memory, and video right-angled connectors and headers. Removed the old vertical headers.
+	Added VGA female D-sub connector VID2 which uses TVSYNCout for the HSYNC, which gives RGBS or RGBHV option in the conversion box
+	Pixel headers as RA enclosed
