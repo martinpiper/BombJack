@@ -1,3 +1,9 @@
+* Added backplane, memory, and video right-angled connectors and headers. Removed the old vertical headers.
+	Added VGA female D-sub connector VID2 which uses TVSYNCout for the HSYNC, which gives RGBS or RGBHV option in the conversion box
+	* TODO - Pixel headers as RA enclosed
+
+
+
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
 
@@ -87,7 +93,9 @@
 		https://www.mouser.sg/ProductDetail/TE-Connectivity/5227677-1?qs=GSeC4G%252BEqEX0oAnTcsRqKg%3D%3D
 			The 3D model orientation is wrong for this part, when it gets imported from the extended search
 		** Remember some spacing between connectors is good
-
+	VGA female 15 way 3 row:
+		https://www.mouser.sg/Connectors/D-Sub-Connectors/D-Sub-High-Density-Connectors/_/N-9gy6qZ1yzvvqx?P=1z0yy6bZ1yzsf9eZ1z0xbywZ1z0xbudZ1ytmhdpZ1ysmvaw
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/2311586-4?qs=rrS6PyfT74fCtSRxG4pC6w%3D%3D
 
 
 
