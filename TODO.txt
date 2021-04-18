@@ -1,6 +1,7 @@
 * For the video combination layer, for each pixel input, perhaps add a pixel XOR value that can be used to introduce fast changing palette effects?
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with differ palette for the second.
+	https://www.spriters-resource.com/arcade/outrun/
 
 
 
