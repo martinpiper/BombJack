@@ -1891,3 +1891,10 @@ All layouts now use V3.1
 
 * Remove the extra headers on the video layer
 	Moved to backplane as they form the remaining compatibility header
+
+
+
+* Back plane headers are 1,000 mil, ~23mm apart, wide enough to accommodate the ICs with decoupling sockets.
+	Added to the backplane headers: UNUSEDEXPANSION*, UNUSEDVIDEO*
+		This is so the same backplane can be used if the video layers need unexpected signals
+		
