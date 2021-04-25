@@ -9,6 +9,19 @@
 
 
 
+* APU. Consider a game with double buffered screens, as is fairly common.
+	Need a way for the APU to jump back to a PC and render the screen again using the current screen, or progress onto the second screen.
+	* Perhaps have a new instruction kAPU_PCLoad16 which loads from reg0+1
+		Also have a kAPU_SkipIfEQ which skips the instruction, by zeroing the instruction latches, if the current IDATA0 (IDATA bit 0) is zero
+			It will be a good idea to have a stabilise instruction to make the chosen IDATA stable before using IfEQ
+		This would allow the game code to have a memory location as a flag.
+			Data registers could also be used if they are selected into IDATA, however since they are mostly used by non-trivial code then the extra complexity of allowing the user to independently reset them has little return.
+
+		
+
+
+
+
 * For board EA/EBS/EXTSEL config - Need to use jumpers (in the schematic it is closed to use the defaults) to connect the external bus to the internally used signals
 	The routing will then not automatically connect the gap
 	Jumpers should be placed on the edge of the board away from the interconnects
