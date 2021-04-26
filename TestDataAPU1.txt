@@ -27,6 +27,9 @@ s$40000200
 ; kAPU_PCLoad16 address $0010
 b$10,b$00
 
+; For kAPU_SkipIfEQ check
+b$00
+
 ; Sprite register EBS+address
 b$01
 b$20
@@ -70,3 +73,43 @@ s$41100200
 b$11,b$12,b$13,b$14,b$15,b$16,b$17
 
 d$0
+
+
+; For kAPU_SkipIfEQ check
+d$0
+w$ff01ff00,$f8019000
+d$0
+
+; Causes the PC to reset and loop around with kAPU_SkipIfEQ check
+d$40020201
+
+d$0
+
+; For kAPU_SkipIfEQ check
+d$0
+w$ff01ff00,$f8019000
+d$0
+
+; Cause a known value, still NE, to be written to the debug output
+d$400202ff
+
+; For kAPU_SkipIfEQ check
+d$0
+w$ff01ff00,$f8019000
+d$0
+
+; Should not see any sprite writes between these two frames
+d$40020201
+
+d$0
+
+; For kAPU_SkipIfEQ check
+d$0
+w$ff01ff00,$f8019000
+d$0
+
+; Causes the PC to reset and loop around with kAPU_SkipIfEQ check
+d$40020200
+
+d$0
+
