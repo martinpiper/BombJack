@@ -24,6 +24,9 @@ s$80000200
 ; Store data into APU memory bank 1 data
 s$40000200
 
+; kAPU_PCLoad16 address $0010
+b$10,b$00
+
 ; Sprite register EBS+address
 b$01
 b$20
