@@ -43,7 +43,7 @@ kAPU_ADDRB2Load16		= %00001000000000000000000000000000
 kAPU_PCLoad16			= %00010000000000000000000000000000
 kAPU_SkipIfEQ			= %00100000000000000000000000000000
 
-
+kAPU_InstructionSize	= 4
 !macro MAPU .i {
 	!by <(.i)
 	!by <(.i >> 8)
@@ -52,4 +52,8 @@ kAPU_SkipIfEQ			= %00100000000000000000000000000000
 }
 !macro MAPU {
 	+MAPU 0
+}
+
+!macro MAPU_EmitPC .address {
+	!by <(.address/kAPU_InstructionSize) , >(.address/kAPU_InstructionSize)
 }

@@ -1898,3 +1898,18 @@ All layouts now use V3.1
 	Added to the backplane headers: UNUSEDEXPANSION*, UNUSEDVIDEO*
 		This is so the same backplane can be used if the video layers need unexpected signals
 		
+		
+		
+		
+* APU. Consider a game with double buffered screens, as is fairly common.
+	Need a way for the APU to jump back to a PC and render the screen again using the current screen, or progress onto the second screen.
+	* Perhaps have a new instruction kAPU_PCLoad16 which loads from reg0+1
+		Done - Schematic kAPU_PCLoad16
+		Also have a kAPU_SkipIfEQ which skips the instruction, by zeroing the instruction latches, if the current IDATA0 (IDATA bit 0) is zero
+			It will be a good idea to have a stabilise instruction to make the chosen IDATA stable before using IfEQ
+		This would allow the game code to have a memory location as a flag.
+			Data registers could also be used if they are selected into IDATA, however since they are mostly used by non-trivial code then the extra complexity of allowing the user to independently reset them has little return.
+		Done - Schematic kAPU_SkipIfEQ
+		** Done - Emulation kAPU_PCLoad16
+		** Done - Emulation kAPU_SkipIfEQ
+		Schematic behaviour matches emulation
