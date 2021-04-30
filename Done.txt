@@ -1913,3 +1913,10 @@ All layouts now use V3.1
 		** Done - Emulation kAPU_PCLoad16
 		** Done - Emulation kAPU_SkipIfEQ
 		Schematic behaviour matches emulation
+
+
+
+
+
+* Mode7 7483 is hard to find, needs to use 74283 instead
+	Need to check using compareimages.bat
