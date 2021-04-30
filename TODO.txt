@@ -1,3 +1,8 @@
+* Mode7 7483 is hard to find, needs to use 74283 instead
+
+
+
+
 * For the video combination layer, for each pixel input, perhaps add a pixel XOR value that can be used to introduce fast changing palette effects?
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with differ palette for the second.
@@ -136,6 +141,7 @@
 	https://www.mouser.sg/ProductDetail/437-8038301653001101
 	
 	DIL decoupling
+	These can be in the component "Supplier" property, add using View->Property Columns the "CODE" (stock code) and "Supplier"
 	DIL08 no cap
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
 	DIL14
