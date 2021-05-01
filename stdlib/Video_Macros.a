@@ -20,3 +20,7 @@ kBus24Bit_TileScreen_EBBS			= $01
 kBus24Bit_TileScreen_EnableBorders	= $9e00
 kBus24Bit_TileScreen_ScrollX16		= $9e01
 kBus24Bit_TileScreen_ScrollY16		= $9e03
+
+!macro MBus24Bit_MakePaletteRGB .r , .g , .b {
+	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
+}

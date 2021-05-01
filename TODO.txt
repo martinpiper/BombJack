@@ -4,6 +4,12 @@
 	https://www.spriters-resource.com/arcade/outrun/
 
 
+* Shadow of the Beast
+	https://codetapper.com/amiga/sprite-tricks/shadow-of-the-beast/
+	https://www.oldgames.sk/docs/sotb/index.html
+
+
+
 
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
