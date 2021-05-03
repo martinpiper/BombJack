@@ -61,11 +61,11 @@ Bus24Bit_SpriteDataCopy
 
 Bus24Bit_SetAddressVideoControlRegisters
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
-	lda #$00
+	lda #<kBus24Bit_TileScreen_EnableBorders
 	sta CIA2PortBRS232
-	lda #$9e
+	lda #>kBus24Bit_TileScreen_EnableBorders
 	sta CIA2PortBRS232
 	rts
 
@@ -73,77 +73,77 @@ Bus24Bit_SetAddressVideoControlRegisters
 
 Bus24Bit_SetAddressVideoPriorityRegister
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
-	lda #$08
+	lda #<kBus24Bit_VideoLayer_Priority
 	sta CIA2PortBRS232
-	lda #$9e
+	lda #>kBus24Bit_VideoLayer_Priority
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressTileScrollRegisters
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
-	lda #$01
+	lda #<kBus24Bit_TileScreen_ScrollX16
 	sta CIA2PortBRS232
-	lda #$9e
+	lda #>kBus24Bit_TileScreen_ScrollX16
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressTileBackgroundRegister
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
-	lda #$07
+	lda #<kBus24Bit_TileScreen_Background
 	sta CIA2PortBRS232
-	lda #$9e
+	lda #>kBus24Bit_TileScreen_Background
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressPalette
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
-	lda #$00
+	lda #<kBus24Bit_VideoLayer_Palette
 	sta CIA2PortBRS232
-	lda #$9c
+	lda #>kBus24Bit_VideoLayer_Palette
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressSprites
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_Sprites_EBBS
 	sta CIA2PortBRS232
-	lda #$20
+	lda #<kBus24Bit_Sprites
 	sta CIA2PortBRS232
-	lda #$98
+	lda #>kBus24Bit_Sprites
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressSpritesControl
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_Sprites_EBBS
 	sta CIA2PortBRS232
-	lda #$00
+	lda #<kBus24Bit_SpritesControlLo
 	sta CIA2PortBRS232
-	lda #$9a
+	lda #>kBus24Bit_SpritesControlLo
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressMode7
 	jsr Bus24Bit_Reset
-	lda #$01; EBBS
+	lda #kBus24Bit_Mode7Screen_EBBS
 	sta CIA2PortBRS232
-	lda #$00
+	lda #<kBus24Bit_Mode7Screen_Registers
 	sta CIA2PortBRS232
-	lda #$a0
+	lda #>kBus24Bit_Mode7Screen_Registers
 	sta CIA2PortBRS232
 	rts
 

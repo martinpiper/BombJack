@@ -1,13 +1,22 @@
+* APU: If I do add an extra register and some adders, I can use that as a free comparison function
+	* In combination with a full 8 bit EQ check
+	* 74LS251 could be used to select various results and the extra register
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS251NE4?qs=SL3LIuy2dWxH4pHshllfNQ%3D%3D
+		* _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
+			** Add DataReg3/4
+		** IDataSelect extra results
+			Data + DataReg3
+			Data + DataReg4
+			DataReg3
+			DataReg4
+
+
+
+
 * For the video combination layer, for each pixel input, perhaps add a pixel XOR value that can be used to introduce fast changing palette effects?
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with differ palette for the second.
 	https://www.spriters-resource.com/arcade/outrun/
-
-
-* Shadow of the Beast
-	https://codetapper.com/amiga/sprite-tricks/shadow-of-the-beast/
-	https://www.oldgames.sk/docs/sotb/index.html
-
 
 
 

@@ -57,3 +57,11 @@ kAPU_InstructionSize	= 4
 !macro MAPU_EmitPC .address {
 	!by <(.address/kAPU_InstructionSize) , >(.address/kAPU_InstructionSize)
 }
+
+
+!macro MAPU_LoadEADDRFromB1 {
+	+MAPU kAPU_Load_EADDRLo
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_Load_EADDRHi
+	+MAPU kAPU_Incr_ADDRB1
+}

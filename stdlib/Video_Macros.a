@@ -12,6 +12,17 @@ kBus24Bit_EnableDisplay_Tiles_BorderYShrink	= $80
 	+MWaitValueToMemoryCC .raster , CIA1TimerBLo
 }
 
+kBus24Bit_VideoLayer_EBBS			= $01
+kBus24Bit_VideoLayer_Priority		= $9e08
+kBus24Bit_VideoLayer_Palette		= $9c00
+
+kBus24Bit_Sprites_EBBS				= $01
+kBus24Bit_Sprites					= $9820
+kBus24Bit_SpritesControlLo			= $9a00
+kBus24Bit_SpritesControlLoEnable	= $10
+kBus24Bit_SpritesControlHi			= $9a01
+
+
 
 kBus24Bit_Video_FlipH = $40
 kBus24Bit_Video_FlipV = $80
@@ -20,6 +31,12 @@ kBus24Bit_TileScreen_EBBS			= $01
 kBus24Bit_TileScreen_EnableBorders	= $9e00
 kBus24Bit_TileScreen_ScrollX16		= $9e01
 kBus24Bit_TileScreen_ScrollY16		= $9e03
+kBus24Bit_TileScreen_Background		= $9e07
+
+
+
+kBus24Bit_Mode7Screen_EBBS			= $01
+kBus24Bit_Mode7Screen_Registers		= $a000
 
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
