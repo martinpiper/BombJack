@@ -1,10 +1,10 @@
 * APU: If I do add an extra register and some adders, I can use that as a free comparison function
-	* In combination with a full 8 bit EQ check
+	* Done: Emulation and schematic: kAPU_SkipIfEQ: In combination with a full 8 bit EQ check
 	* 74LS251 could be used to select various results and the extra register
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS251NE4?qs=SL3LIuy2dWxH4pHshllfNQ%3D%3D
-		* _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
-			** Add DataReg3/4
-		** IDataSelect extra results
+		* TODO: _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
+			** TODO: Add DataReg3/4
+		** TODO: IDataSelect extra results
 			Data + DataReg3
 			Data + DataReg4
 			DataReg3
