@@ -1,3 +1,26 @@
+* To order and also place into the stock code for the schematic
+	https://www.mouser.sg/ProductDetail/Vishay-Cera-Mite/562R10TST20?qs=1Vd4QiMLiWEhnW3IqIibiA%3D%3D
+	https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55100R00FHEK?qs=E1R6yEsG10vYngbhrGJpcw%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55220R00FHEK?qs=UEmB0FaNOjg2TC4qgSAJvQ%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55221R00FKEB?qs=gQ87q99%2FLGLtVGUX15QkBw%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55442R00FHEB?qs=gQQ%2FpDEpiRKHk7nNPbIyfA%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/SFR25H0004700FR500?qs=58bml8Dt%2FllkS%252Ba6658qMg%3D%3D
+	Misc:
+	https://www.mouser.sg/ProductDetail/161-0097-E
+	https://www.mouser.sg/ProductDetail/517-929975-01-10-RK
+	https://www.mouser.sg/ProductDetail/575-8034700810001000
+	https://www.mouser.sg/ProductDetail/520-HCU1209-SX
+	https://www.mouser.sg/ProductDetail/661-E-630L100ME11D
+	https://www.mouser.sg/ProductDetail/932-MIKROE-513
+	https://www.mouser.sg/ProductDetail/932-MIKROE-512
+	https://www.mouser.sg/ProductDetail/932-MIKROE-511
+	https://www.mouser.sg/ProductDetail/163-179PH-EX
+	https://www.mouser.sg/ProductDetail/587-305-52-024
+
+
+
+
 * APU: If I do add an extra register and some adders, I can use that as a free comparison function
 	* Done: Emulation and schematic: kAPU_SkipIfEQ: In combination with a full 8 bit EQ check
 	* 74LS251 could be used to select various results and the extra register
@@ -260,6 +283,8 @@
 	Resistors
 	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5
 	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5?P=1z0z819Z1yzbpodZ1yyxf87
+	Multiple resistance values: https://www.mouser.sg/Passive-Components/Resistors/Film-Resistors/Metal-Film-Resistors-Through-Hole/_/N-7gz41Z1yzvvqx?Ns=Resistance%7c0&No=25&P=1yzbppyZ1z0x8ahZ1z0x8beZ1z0wnmfZ1z0wngkZ1z0x8b3Z1z0vpm5Z1z0we4uZ1z0wljo
+	
 	VGA
 	https://www.mouser.sg/ProductDetail/Gravitech/DB15F-VGA-TERM?qs=%2Fha2pyFadujCKQleo0iutDpWDaGRRxjTkj9IAyF0Np7%252BUoWsr1SFIUxZNLIelf9qWe7mZLtJ2l3bbZy4VSVLAA%3D%3D
 	SIL/DIL connectors
