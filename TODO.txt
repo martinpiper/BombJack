@@ -23,6 +23,7 @@
 
 * APU: If I do add an extra register and some adders, I can use that as a free comparison function
 	* Done: Emulation and schematic: kAPU_SkipIfEQ: In combination with a full 8 bit EQ check
+	* TODO: Remove intercept bus, it's always and only used with the external memory write. It could be used for an internal memory write instead.
 	* 74LS251 could be used to select various results and the extra register
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS251NE4?qs=SL3LIuy2dWxH4pHshllfNQ%3D%3D
 		* TODO: _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
@@ -31,7 +32,8 @@
 			Data + DataReg3
 			Data + DataReg4
 			DataReg3
-			DataReg4
+			DataReg3 + 4
+
 
 
 
