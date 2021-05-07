@@ -47,7 +47,7 @@
 
 ;	+MAPU kAPU_WaitForEqualsHV
 	
-	+MAPU kAPU_InterceptBus | kAPU_ExternalMEWR
+	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1
 
 	+MAPU kAPU_Incr_EADDR
@@ -63,7 +63,7 @@
 
 	+MAPU kAPU_WaitForEqualsHV
 
-	+MAPU kAPU_InterceptBus | kAPU_ExternalMEWR
+	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1
 
 	+MAPU kAPU_Incr_EADDR
@@ -72,10 +72,10 @@
 	+MAPU kAPU_Load_EADDRLo
 	+MAPU kAPU_Incr_ADDRB1
 
-	+MAPU kAPU_InterceptBus | kAPU_ExternalMEWR
+	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 
-	+MAPU kAPU_InterceptBus | kAPU_ExternalMEWR
+	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 
 
