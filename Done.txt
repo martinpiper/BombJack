@@ -1920,3 +1920,27 @@ All layouts now use V3.1
 
 * Mode7 7483 is hard to find, needs to use 74283 instead
 	Need to check using compareimages.bat
+
+
+
+
+
+* APU: If I do add an extra register and some adders, I can use that as a free comparison function
+	* Done: Emulation and schematic: kAPU_SkipIfEQ: In combination with a full 8 bit EQ check
+	* Done: Remove kAPU_InterceptBus it's always and only used with the external memory write. It could be used for internal memory write instead.
+	* 74LS251 could be used to select various results and the extra register
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS251NE4?qs=SL3LIuy2dWxH4pHshllfNQ%3D%3D
+		* Done: kAPU_Reset_EBSEADDR / _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
+		* Now 4 signals free
+		** Done: Add load DataReg3/4
+		** TODO: IDataSelect extra results
+			Memory
+			DataReg0
+			DataReg1
+			DataReg2
+			DataReg3
+			Memory + DataReg3
+			DataReg3 + DataReg4
+			DataReg3 - DataReg4
+			* Schematic and code changes done for extra data select logic
+				*Needs unit tests - Unit tests done - Schematic validated
