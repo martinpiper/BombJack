@@ -9,7 +9,6 @@
 *=0
 	+MAPU
 	+MAPU kAPU_Reset_ADDRB1
-	+MAPU kAPU_Reset_EBSEADDR
 
 	; Test PC load
 	+MAPU kAPU_IDataRegLoad0
