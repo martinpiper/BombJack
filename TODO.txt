@@ -1,3 +1,11 @@
+* APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
+
+
+
+* Use new APU add/sub instruction to move sprites in SotB demo
+
+
+
 * To order and also place into the stock code for the schematic
 	https://www.mouser.sg/ProductDetail/Vishay-Cera-Mite/562R10TST20?qs=1Vd4QiMLiWEhnW3IqIibiA%3D%3D
 	https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601
@@ -25,10 +33,6 @@
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with differ palette for the second.
 	https://www.spriters-resource.com/arcade/outrun/
-
-
-
-* APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
 
 
