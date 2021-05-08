@@ -28,7 +28,7 @@
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS251NE4?qs=SL3LIuy2dWxH4pHshllfNQ%3D%3D
 		* Done: kAPU_Reset_EBSEADDR / _Reset_EBSEADDR and _Reset_EBSEADDR2 (undefined input to U37:B) seems to be little use, reclaim it for extra internal register?
 		* Now 4 signals free
-		** TODO: Add load DataReg3/4
+		** Done: Add load DataReg3/4
 		** TODO: IDataSelect extra results
 			Memory
 			DataReg0
@@ -38,7 +38,8 @@
 			Memory + DataReg3
 			DataReg3 + DataReg4
 			DataReg3 - DataReg4
-
+			* Schematic and code changes done for extra data select logic
+				*Needs unit tests
 
 
 
