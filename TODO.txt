@@ -2,10 +2,6 @@
 
 
 
-* Use new APU add/sub instruction to move sprites in SotB demo
-
-
-
 * To order and also place into the stock code for the schematic
 	https://www.mouser.sg/ProductDetail/Vishay-Cera-Mite/562R10TST20?qs=1Vd4QiMLiWEhnW3IqIibiA%3D%3D
 	https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601

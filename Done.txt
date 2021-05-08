@@ -1944,3 +1944,8 @@ All layouts now use V3.1
 			DataReg3 - DataReg4
 			* Schematic and code changes done for extra data select logic
 				*Needs unit tests - Unit tests done - Schematic validated
+
+
+
+
+* Use new APU add/sub instruction to move sprites in SotB demo
