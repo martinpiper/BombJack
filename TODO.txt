@@ -32,12 +32,6 @@
 
 
 
-* For board EA/EBS/EXTSEL config - Need to use jumpers (in the schematic it is closed to use the defaults) to connect the external bus to the internally used signals
-	The routing will then not automatically connect the gap
-	Jumpers should be placed on the edge of the board away from the interconnects
-
-
-
 
 * Pixel header connectivity
 	PCB female header to male right angled: https://www.mouser.sg/ProductDetail/Molex/90122-0764/?qs=kEwmkoUtv7R5aSrMIeNWYw%3D%3D

@@ -1949,3 +1949,11 @@ All layouts now use V3.1
 
 
 * Use new APU add/sub instruction to move sprites in SotB demo
+
+
+
+
+* For board EA/EBS/EXTSEL config - Need to use jumpers (in the schematic it is closed to use the defaults) to connect the external bus to the internally used signals
+	The routing will then not automatically connect the gap
+	Jumpers should be placed on the edge of the board away from the interconnects
+	* Added jumpers for EBS on main video boards
