@@ -659,7 +659,7 @@ b$11
 d$0
 
 ;!TestTileScrolls.txt
-!TestCharScrolls.txt
+;!TestCharScrolls.txt
 
 
 ; Clear background palette choice
