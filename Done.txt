@@ -1957,3 +1957,23 @@ All layouts now use V3.1
 	The routing will then not automatically connect the gap
 	Jumpers should be placed on the edge of the board away from the interconnects
 	* Added jumpers for EBS on main video boards
+
+
+
+
+* Consider again char screen scrolling with large virtual screen, like the tiles
+	Use case is the SotB demo title screen for the scrolling logos
+		Some of the logic for the timing signals already exists on the layer.
+		Perhaps the X and Y pos can use 8 bit latches, since the virtual screen will be 2x2 screens of 32x32 chars each
+	* Using Bomb Jack - Chars scroll.pdsprj
+		When BGXP = 2 or 3 then the char read into 5L6 seems to be wrong on the left and right edges?
+			Tested by setting the palette read to be constant 0 colour (disable the colour load clock)
+			The problem still happens, therefore the char seems to be wrong during that load
+	* Moving the SL1 timing to after the SL2 time seems to fix the issue. Evidently the address is not quite right at the start of the character
+		Need to check with more data
+	* Done: Might need a MSB for the X and Y scroll registers!
+	Simulation checks out with more generated data for X/Y char screen scrolls with wraparound checks
+	* Done: Emulation needed
+	* Done: Test with simulation from emulation output
+	* Done: Update SotB demo to use the hardware chars scroll with a screen split, not APU updated char screen data
+		Check with simulation
