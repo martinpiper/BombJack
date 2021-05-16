@@ -1,3 +1,12 @@
+* Find out where TST-105-04-T-D-RA and TST-105-04-L-D-RA orders came from. One is gold, the other is tin. Just need one type.
+	Also Harting 09021646921 is missing, need to order
+	The Mill-Max 380-10-108-10-003000 is not quite right, it has a solder cup, ooops
+		Should have been something like this with longer mating post length:
+		https://www.mouser.sg/ProductDetail/Molex/90121-0128?qs=PvP5v7EimsmfZ8WDsc6%252BuA%3D%3D
+		https://www.mouser.sg/ProductDetail/TE-Connectivity/826631-8?qs=6Tj7fpyCzVoXtZFhyBL3bg%3D%3D
+		
+
+
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 
 
