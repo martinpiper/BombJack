@@ -41,3 +41,11 @@ kBus24Bit_Mode7Screen_Registers		= $a000
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
 }
+
+
+
+kBus24Bit_CharScreen_EBBS			= $01
+kBus24Bit_CharScreen_Control		= $9000
+kBus24Bit_CharScreen_ScrollX16		= $9001
+kBus24Bit_CharScreen_ScrollY16		= $9003
+
