@@ -120,6 +120,7 @@ DecompressMusic_escapeByte = * + 1
 .kMusicCommandStop					= 2;
 .kMusicCommandPlayNote				= 3;
 .kMusicCommandAdjustNote			= 4;
+.kMusicCommandAdjustVolume			= 5;
 
 .numVoices				= 4
 .voiceSize				= 11
@@ -307,6 +308,28 @@ MusicPoll
 	jmp .getNextCommand
 
 .notkMusicCommandAdjustNote
+	cmp #.kMusicCommandAdjustVolume
+	bne .notkMusicCommandAdjustVolume
+
+	jsr DecompressMusic_GetNextByte
+	tax
+
+	; Setup the voice reg writes
+	; Volume
+	jsr Bus24Bit_Reset
+	lda #.regBaseEx
+	sta CIA2PortBRS232
+	lda .channelToVoiceRegLo,x
+	sta CIA2PortBRS232
+	lda .channelToVoiceRegHi,x
+	sta CIA2PortBRS232
+
+	jsr DecompressMusic_GetNextByte
+	sta CIA2PortBRS232
+
+	jmp .getNextCommand
+
+.notkMusicCommandAdjustVolume
 	cmp #.kMusicCommandPlayNote
 	beq .iskMusicCommandPlayNote
 
