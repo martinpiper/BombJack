@@ -115,12 +115,14 @@ DecompressMusic_escapeByte = * + 1
 
 !zn
 
-.kMusicCommandWaitFrames			= 0;
-.kMusicCommandSetSampleData			= 1;
-.kMusicCommandStop					= 2;
-.kMusicCommandPlayNote				= 3;
-.kMusicCommandAdjustNote			= 4;
-.kMusicCommandAdjustVolume			= 5;
+.kMusicCommandMask					= $f0
+.kMusicCommandChannelMask			= $0f
+.kMusicCommandWaitFrames			= $00
+.kMusicCommandSetSampleData			= $10
+.kMusicCommandStop					= $20
+.kMusicCommandPlayNote				= $30
+.kMusicCommandAdjustNote			= $40
+.kMusicCommandAdjustVolume			= $50
 
 .numVoices				= 4
 .voiceSize				= 11
@@ -193,6 +195,7 @@ MusicDecompressTest
 	inc .currentFrame+1
 	rts
 
+.currentCommand !by 0
 MusicPoll
 	lda .playFlag
 	bne .isPlaying
@@ -212,6 +215,8 @@ MusicPoll
 .getNextCommand
 
 	jsr DecompressMusic_GetNextByte
+	sta .currentCommand
+	and #.kMusicCommandMask
 	cmp #.kMusicCommandWaitFrames
 	bne .notkMusicCommandWaitFrames
 
@@ -275,7 +280,8 @@ MusicPoll
 	cmp #.kMusicCommandAdjustNote
 	bne .notkMusicCommandAdjustNote
 
-	jsr DecompressMusic_GetNextByte
+	lda .currentCommand
+	and #.kMusicCommandChannelMask
 	tax
 
 	; Setup the voice reg writes
@@ -311,7 +317,8 @@ MusicPoll
 	cmp #.kMusicCommandAdjustVolume
 	bne .notkMusicCommandAdjustVolume
 
-	jsr DecompressMusic_GetNextByte
+	lda .currentCommand
+	and #.kMusicCommandChannelMask
 	tax
 
 	; Setup the voice reg writes
@@ -337,7 +344,8 @@ MusicPoll
 	rts
 
 .iskMusicCommandPlayNote
-	jsr DecompressMusic_GetNextByte
+	lda .currentCommand
+	and #.kMusicCommandChannelMask
 	tax
 
 	lda .channelPlayingMask

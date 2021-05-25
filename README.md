@@ -244,7 +244,9 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
    |---------------|-------------------------------|----------------------|-----------------------------------------|
    | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
-   | $01           | Original RAMs                 | $9000                | Screen low/high palette bank            |
+   | $01           | Original RAMs                 | $9000                | Char screen control                     |
+   | $01           | Original RAMs                 | $9001/2              | Char screen X scroll                    |
+   | $01           | Original RAMs                 | $9003/4              | Char screen Y scroll                    |
    | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
    | $01           | Original RAMs                 | $9c00   $200 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |
