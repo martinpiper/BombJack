@@ -46,6 +46,7 @@ kBus24Bit_Mode7Screen_Registers		= $a000
 
 kBus24Bit_CharScreen_EBBS			= $01
 kBus24Bit_CharScreen_Control		= $9000
+kBus24Bit_CharScreen_Control_DisableChars	= $02
 kBus24Bit_CharScreen_ScrollX16		= $9001
 kBus24Bit_CharScreen_ScrollY16		= $9003
 
