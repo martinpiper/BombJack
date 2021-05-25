@@ -6,7 +6,7 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb 167.57000 -68.59660 295.37659 144.67500))
+  (boundary (rect pcb 164.46500 -71.12000 295.37659 144.67500))
   (boundary (path signal 0.20320 174.01040 -68.46960 295.24959 -68.46960 295.24959 138.10960
    174.01040 138.10960 174.01040 -68.46960))
   (flip_style mirror_first)
