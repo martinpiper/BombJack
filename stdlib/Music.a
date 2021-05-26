@@ -27,6 +27,7 @@ smGetNextByte_addr = * + 1
 .incHi
 	inc+1 smGetNextByte_addr + 1
 	rts
+zeroPageCode_realEnd
 }
 zeroPageCode_end
 
