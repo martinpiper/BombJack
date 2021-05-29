@@ -419,7 +419,7 @@ An entire place and route on a decent machine will take approximately 2 hours an
 ![Layout](Layout1.PNG?raw=true "Layout")
 ![Tracks](Layout2.PNG?raw=true "Tracks")
 
-This board has not yet been built and tested, but it should work. A common cause of failure is probably going to be finding RAMs that have fast enough write timings. Some of these components are old and hard to find.
+The protoype boards have been built and documented here: https://www.youtube.com/playlist?list=PLAAYJEX1JbCPFzQDl8KOoVQR9_Us1lB46 or this project page: https://martin-piper.itch.io/bomb-jack-display-hardware
 	
 ## References
 

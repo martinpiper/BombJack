@@ -1,0 +1,49 @@
+Category,Quantity,References,Value,Stock Code,Unit Cost,Description,Group Layer,PCB Package,Supplier,Placed
+Capacitors,1,C5,200p,Maplin WX60Q,,220p Ceramic Capacitor,Audio,CAP20,,Top Copper
+Resistors,18,"R1,R2,R4,R6,R8,R10,R12,R14,R16,R18,R19,R21,R23,R25,R27,R29,R31,R33",442,,,Generic resistor symbol,Audio,RES40,,Top Copper
+Resistors,14,"R3,R5,R7,R9,R11,R13,R15,R20,R22,R24,R26,R28,R30,R32",221,,,Generic resistor symbol,Audio,RES40,,Top Copper
+Resistors,2,"R40,R41",220,,,Generic resistor symbol,Audio,RES40,,Top Copper
+Integrated Circuits,1,U1,74HC138,,,3-Line to 8-Line Decoders/Demultiplexers,Audio,DIL16,,Not placed
+Integrated Circuits,2,"U2,U85",74S374,,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,Audio,DIL20,,Top Copper
+Integrated Circuits,4,"U3,U125,U166,U207",7404,,,Hex Inverters,Audio,DIL14,,Not placed
+Integrated Circuits,24,"U4,U6,U9,U14,U15,U77,U78,U79,U80,U116,U117,U118,U119,U122,U157,U158,U159,U160,U163,U198,U199,U200,U201,U204",74S374,,,Octal D-Type Edge Triggered Flip-Flops with Tristate Outputs,Audio,DIL20,,Not placed
+Integrated Circuits,1,U7,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,,3-Line to 8-Line Decoders/Demultiplexers,Audio,DIL16,,Not placed
+Integrated Circuits,5,"U8,U19,U20,U26,U72",74154,,,4-to-16 Line Decoder/Demultiplexer,Audio,DIL24,,Not placed
+Integrated Circuits,25,"U10,U11,U12,U13,U16,U18,U21,U89,U90,U99,U100,U101,U102,U131,U132,U140,U141,U142,U143,U172,U173,U181,U182,U183,U184",74273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NE4?qs=sGAEpiMZZMvxP%252Bvr8KwMwF73%2FSEETFlcw32YC66%252Bjxg%3D,S$0.90,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,Audio,DIL20,,Not placed
+Integrated Circuits,1,U17,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,S$0.72,Hex Inverters,Audio,DIL14,,Not placed
+Integrated Circuits,20,"U22,U48,U49,U50,U51,U107,U108,U109,U110,U112,U148,U149,U150,U151,U153,U189,U190,U191,U192,U194",7485,,,4-Bit Magnitude Comparator,Audio,DIL16,,Not placed
+Integrated Circuits,3,"U23,U24,U25",74161,,,Synchronous 4-Bit Binary Counters,Audio,DIL16,,Not placed
+Integrated Circuits,16,"U27,U33,U34,U35,U83,U84,U86,U87,U126,U127,U128,U129,U167,U168,U169,U170",74273,,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,Audio,DIL20,,Not placed
+Integrated Circuits,1,U28,74LS373,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS373NE4?qs=sGAEpiMZZMu2QtOrmdJ1%2FRPDYI7IXkrB2H7gdWq7qaw%3D,S$1.40,Octal D-Type Transparent Latches with 3-state Outputs,Audio,DIL20,,Not placed
+Integrated Circuits,4,"U29,U30,U31,U32",74157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0cMjAQzUGo2HI%3D,S$0.90,Quadruple 1-of-2 Data Selectors/Multiplexers,Audio,DIL16,,Not placed
+Integrated Circuits,28,"U36,U37,U38,U39,U40,U41,U42,U88,U92,U93,U94,U95,U96,U97,U130,U133,U134,U135,U136,U137,U138,U171,U174,U175,U176,U177,U178,U179",7483,,,4-Bit Binary Full Adder With Fast Carry,Audio,DIL16,,Not placed
+Integrated Circuits,4,"U43,U98,U139,U180",7474,,,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset,Audio,DIL14,,Not placed
+Integrated Circuits,18,"U44,U45,U46,U47,U74,U75,U103,U104,U105,U106,U144,U145,U146,U147,U185,U186,U187,U188",74157,,,Quadruple 1-of-2 Data Selectors/Multiplexers,Audio,DIL16,,Not placed
+Integrated Circuits,4,"U52,U113,U154,U195",7408,,,Quadruple 2-Input Positive-AND Gates,Audio,DIL14,,Not placed
+Integrated Circuits,4,"U53,U111,U152,U193",7413,,,Dual 4-Input NAND Gate With Schmitt-Trigger Inputs,Audio,DIL14,,Not placed
+Integrated Circuits,8,"U54,U71,U114,U123,U155,U164,U196,U205",7432,,,Quad 2-input positive-OR gates,Audio,DIL14,,Not placed
+Integrated Circuits,4,"U55,U115,U156,U197",4075,,,Triple 3-Input OR Gate,Audio,DIL14,,Not placed
+Integrated Circuits,4,"U56,U124,U165,U206",7427,,,Triple 3-Input Positive NOR Gates,Audio,DIL14,,Not placed
+Integrated Circuits,8,"U57,U58,U120,U121,U161,U162,U202,U203",74LS373,,,Octal D-Type Transparent Latches with 3-state Outputs,Audio,DIL20,,Not placed
+Integrated Circuits,4,"U59,U60,U61,U62",74LS283,,,4-Bit Binary Full Adders With Fast Carry,Audio,DIL16,,Not placed
+Integrated Circuits,8,"U63,U64,U65,U66,U67,U68,U69,U70",74LS245,,,Octal Bus Transceivers With Tristate Outputs,Audio,DIL20,,Not placed
+Integrated Circuits,1,U73,27C512,,,CMOS 512kbit (64KB X 8) UV EPROM,Audio,DIL28,,Not placed
+Integrated Circuits,1,U76,74S139,,,Dual 2-Line to 4-Line Decoders/Demultiplexers,Audio,DIL16,,Not placed
+Integrated Circuits,2,"U81,U82",27C512,,,CMOS 512kbit (64KB X 8) UV EPROM,Audio,DIL28,,Top Copper
+Integrated Circuits,1,U91,7432,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmO7x4PfQeTHF4%3D,S$0.87,Quad 2-input positive-OR gates,Audio,DIL16,,Not placed
+Integrated Circuits,1,U208,4082,,,Dual 4-Input AND Gate,Audio,DIL14,,Not placed
+Diodes,1,D3M,74S139,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS139AN?qs=sGAEpiMZZMtxONTBFIcRfpKvrGTByBdi%2FBZhV6RAyCA%3D,S$0.93,Dual 2-Line to 4-Line Decoders/Demultiplexers,Video,NULL,,Not placed
+Diodes,1,D4M,74HC138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D,S$0.72,3-Line to 8-Line Decoders/Demultiplexers,Video,NULL,,Not placed
+Miscellaneous,1,3T,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ANE4?qs=%2Fha2pyFaduisezm8rmvWidBAnd8e%2F0Kj57shzdZeHHc%3D,,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset,Audio,DIL14,,Not placed
+Miscellaneous,1,4T,74368,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS368AN?qs=%2Fha2pyFadug6ZOj3cmpD6YwUi6dGmUUQRqKJDT%2FBvsw%3D,,Hex Buffers/Line Drivers with Inverting Tristate Outputs,Audio,DIL16,,Not placed
+Miscellaneous,1,AUDCLK,555,https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-2C-12M0000?qs=sGAEpiMZZMt8zWNA7msRCvpTgpVI8f3UwUWPm0GFK9s%3D,,Timer/Oscillator,Audio,DIL08,,Top Copper
+Miscellaneous,1,BANKSEL4,CONN-SIL2,,,0.1in pitch SIL connector strip,Audio,CONN-SIL2,,Top Copper
+Miscellaneous,2,"DR17,DR34",75,,,Generic resistor symbol,,NULL,,Not placed
+Miscellaneous,1,DU5,7404,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04NE4?qs=sGAEpiMZZMutVWjHE%2FYQw8FcJMyir0Lqzet%252BOgibJRs%3D,,Hex Inverters,Video,NULL,,Not placed
+Miscellaneous,2,"EXPANSIONBUSP1,VIDEOP1",MY_09021646921,https://www.mouser.sg/ProductDetail/HARTING/09021646921?qs=gIpPgrDBK%2FiWr6s0yE4P1A%3D%3D,,DIN 41612 Connectors 64P 2A MALE R/A SLDR,Audio,09021646921,,Top Copper
+Miscellaneous,2,"J1,J2",161-0098-E,https://www.mouser.sg/ProductDetail/Kobiconn/161-0097-E?qs=XvXsANjzvCPrZr5AKzRXng%3D%3D,,RCA Phono Connectors PHONO PCB WHITE,Audio,1610098E,,Top Copper
+Miscellaneous,1,JP1,JUMPER,,,Animated Jumper,Audio,CONN-SIL2,,Top Copper
+Miscellaneous,2,"RV1,RV2",100,Digikey 3005P-101-ND,,POT 100 OHM 3/4 inch RECT WW SL MT,Audio,PRE-MT0.75,,Top Copper
+Miscellaneous,8,"SAMP1,SAMP2,SAMP3,SAMP4,SAMP5,SAMP6,SAMP7,SAMP8",6264FAST,https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D,S$4.01,64K (8Kx8) Static RAM,Audio,DIL28,,Top Copper
+Miscellaneous,3,"VSMDD1,VSMDD2,VSMDD3",VSMDIGITALDATA,,,Digital Data Generator (Virtual Instrument),,NULL,,Not placed
+Miscellaneous,1,X2,CRYSTAL,https://www.mouser.sg/ProductDetail/ECS/ECS-121-S-4X?qs=sGAEpiMZZMsBj6bBr9Q9aQVbz5FLOGxj6PWo6GSXrZU%3D,S$1.04,Quartz crystal,Audio,XTAL18,,Top Copper
