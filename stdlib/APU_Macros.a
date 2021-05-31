@@ -48,6 +48,13 @@ kAPU_SkipIfEQ			= %00100000000000000000000000000000
 kAPU_IDataRegLoad3		= %01000000000000000000000000000000
 kAPU_IDataRegLoad4		= %10000000000000000000000000000000
 
+
+kBus24Bit_APU_EBBS			= $02
+kBus24Bit_APU_Control		= $2000
+kBus24Bit_APU_Data			= $4000
+kBus24Bit_APU_Instructions	= $8000
+
+
 kAPU_InstructionSize	= 4
 !macro MAPU .i {
 	!by <(.i)
@@ -59,14 +66,90 @@ kAPU_InstructionSize	= 4
 	+MAPU 0
 }
 
-!macro MAPU_EmitPC .address {
-	!by <(.address/kAPU_InstructionSize) , >(.address/kAPU_InstructionSize)
-}
-
-
 !macro MAPU_LoadEADDRFromB1 {
 	+MAPU kAPU_Load_EADDRLo
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_Load_EADDRHi
 	+MAPU kAPU_Incr_ADDRB1
+}
+
+!macro MAPU_LoadDoWait {
+	+MAPU kAPU_Load_Wait8
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_Load_Wait16
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_Load_Wait24
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_WaitForEqualsHV
+}
+
+!macro MAPU_TestAndJump {
+	+MAPU kAPU_IDataRegLoad0
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad1
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_SkipIfEQ | kAPU_PCLoad16
+	+MAPU kAPU_Incr_ADDRB1
+}
+
+!macro MAPU_ProcessRasterWord {
+	+MAPU_LoadEADDRFromB1
+	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1
+}
+
+!macro MAPU_ProcessRasterByte {
+	+MAPU_LoadEADDRFromB1
+	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1
+}
+
+
+!macro APU_SetDataUpdateBus .label {
+	lda #kBus24Bit_APU_EBBS
+	+MWordValueTo_XY kBus24Bit_APU_Data + .label - APUData_Start
+	jsr Bus24Bit_SetAddressBus
+}
+
+!macro APU_DataUpdate16Bits .label {
+	+APU_SetDataUpdateBus .label
+	lda .label
+	sta CIA2PortBRS232
+	lda .label+1
+	sta CIA2PortBRS232
+}
+!macro APU_DataUpdateNumBytes .label , .num {
+	+APU_SetDataUpdateBus .label
+	!for .i , .num {
+		lda .label + .i -1
+		sta CIA2PortBRS232
+	}
+}
+
+
+
+!macro MAPU_EmitPC .address {
+	+MLittleEndian16Bit .address/kAPU_InstructionSize
+}
+
+!macro MAPU_EmitWait .xpos , .ypos {
+	+MLittleEndian16Bit .xpos
+	!by .ypos
+}
+
+!macro APUEmitChangePalette .r , .g , .b {
+	+MLittleEndian16Bit kBus24Bit_VideoLayer_Palette
+	+MBus24Bit_MakePaletteRGB .r , .g , .b
+}
+!macro APUEmitChangeXScroll ~.addr {
+	+MLittleEndian16Bit kBus24Bit_TileScreen_ScrollX16
+.addr = *
+	+MLittleEndian16Bit 0
+}
+!macro APUEmitChangeXScrollChars ~.addr {
+	+MLittleEndian16Bit kBus24Bit_CharScreen_ScrollX16
+.addr = *
+	+MLittleEndian16Bit 0
 }

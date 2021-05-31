@@ -18,33 +18,33 @@ APU_Enable
 
 Bus24Bit_SetAddressAPURegisters
 	jsr Bus24Bit_Reset
-	lda #$02; EBBS
+	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232
 	lda #$00
 	sta CIA2PortBRS232
-	lda #$20
+	lda #>kBus24Bit_APU_Control
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressAPUInstructions
 	jsr Bus24Bit_Reset
-	lda #$02; EBBS
+	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232
 	lda #$00
 	sta CIA2PortBRS232
-	lda #$80
+	lda #>kBus24Bit_APU_Instructions
 	sta CIA2PortBRS232
 	rts
 
 
 Bus24Bit_SetAddressAPUData
 	jsr Bus24Bit_Reset
-	lda #$02; EBBS
+	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232
 	lda #$00
 	sta CIA2PortBRS232
-	lda #$40
+	lda #>kBus24Bit_APU_Data
 	sta CIA2PortBRS232
 	rts
 
