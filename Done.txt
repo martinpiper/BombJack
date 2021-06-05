@@ -1977,3 +1977,9 @@ All layouts now use V3.1
 	* Done: Test with simulation from emulation output
 	* Done: Update SotB demo to use the hardware chars scroll with a screen split, not APU updated char screen data
 		Check with simulation
+
+
+
+* Adjusted the left hand board edges to match the edge locating lip for the plugs
+	Also adjusted the VGA output header position to sit further inside the edge
+	
