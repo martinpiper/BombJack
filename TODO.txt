@@ -1,4 +1,20 @@
+* Flux
+
+
+
 * Rename IC names like "5E2" because they are being interpreted as as a numeric value "500" (i.e. 5x10^2) and not the text value when reading the CSV
+
+
+
+* PCB Smoke test procedures
+	Populate timer crystal, resistors, capacitor
+	Populate 3T and 4T
+	Connect jumper
+	4T pin 1 input needs to be driven low (display enable)
+	Connect power
+	Measure 4T output pin 9, remember to connect GND (grey wire) on the logic analyser
+	Logic analyser logic threshold 2V
+
 
 
 
