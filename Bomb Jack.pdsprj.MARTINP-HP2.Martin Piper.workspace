@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
+ <FRAME activewindow="4">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff01000000f8ffffff8807000018040000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
@@ -8,9 +8,9 @@
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="29141150" y="-40489916" z="21239918"/>
-    <focus x="29141150" y="-19250000" z="0"/>
-    <up x="0" y="707106" z="707106"/>
+    <position x="22893348" y="6882622" z="30037780"/>
+    <focus x="22893348" y="6882622" z="0"/>
+    <up x="0" y="1000000" z="0"/>
    </camera>
   </WINDOW>
  </FRAME>

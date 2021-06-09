@@ -1983,3 +1983,12 @@ All layouts now use V3.1
 * Adjusted the left hand board edges to match the edge locating lip for the plugs
 	Also adjusted the VGA output header position to sit further inside the edge
 	
+	
+	
+	
+* Rename IC names like "5E2" because they are being interpreted as as a numeric value "500" (i.e. 5x10^2) and not the text value when reading the CSV
+	Now prefixed with "L"
+
+
+
+* Moved the labels on the board edge plugs
