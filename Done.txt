@@ -1992,3 +1992,10 @@ All layouts now use V3.1
 
 
 * Moved the labels on the board edge plugs
+
+
+
+* The edge jumpers are marked with the default choice to close
+
+
+* Board _EXTCS default connections now have labels
