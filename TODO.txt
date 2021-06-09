@@ -18,6 +18,13 @@
 
 
 
+* When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
+	Menu->Technology->Set Layer Stackup
+		Gradually reduce each type "Plane" to "Signal" starting with the lowest plane first.
+
+
+
+
 * Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
 	Need correct mouser links.
 
