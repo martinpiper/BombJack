@@ -1999,3 +1999,7 @@ All layouts now use V3.1
 
 
 * Board _EXTCS default connections now have labels
+
+
+
+* Audio and APU boards, with EBS selection jumpers and plane layers, are aligned with the main boards
