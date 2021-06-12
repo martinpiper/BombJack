@@ -21,8 +21,55 @@
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
 	Menu->Technology->Set Layer Stackup
 		Gradually reduce each type "Plane" to "Signal" starting with the lowest plane first.
+* For PCBWay export and quote
+	Menu->Output->Generate Gerber
+		Choose: RS274X
+	Menu->Output->Generate Pick and Place File
+		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
+		File format: CSV
+		Export, append "- PNP" suffix
+	Toolbar->Bill of Materials ($ icon)
+		Use columns
+			Stock Code
+			Supplier
+			Placed
+		Choose: Full CSV
+		Press CSV button ("a" document icon)
+		Text Import window
+			Click top left grid, to select all cells
+			Drop down: Column type: Text
+			Press: OK
+			Menu->Data->Auto filter
+			Group Layer
+				Choose "Group Layer" filter (e.g. Chars)
+				Choose "Placed" filter "Top Copper"
+			Ctrl+A - Select all
+			Ctrl+C - Copy
+			Ctrl+N - New sheet
+			Ctrl+V - Paste
+			Menu->Data-Auto Filter
+			Ctrl+A then double click column separator to resize all columns to fit the data
+			For PCBWay BOM choose to merge suitable component sockets and any other intended components
+				The "Supplier" column has IC sockets, for assembly. The actual ICs from the "Stock Code" column are then socketed.
+				For example:
+					Sort by "Supplier"
+						Then copy from "Stock Code" into the empty supplied cells all those components PCBWay can order and assemble.
+				Delete columns:
+					Category
+					Value
+					Stock Code
+					Unit Cost
+					Description
+					Group Layer
+					PCB Package
+				Save as XLSX file using "- BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
+	Order note: Your standard 1.6mm +/- 10% 1oz stackup is OK. Please assemble 1 board, leave the other boards bare. The BOM file "Supplier" column contains the component ordering links.
+		
+			
 
-
+			
+			
+			
 
 
 * Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
