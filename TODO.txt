@@ -20,7 +20,10 @@
 
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
 	Menu->Technology->Set Layer Stackup
-		Gradually reduce each type "Plane" to "Signal" starting with the lowest plane first.
+		Gradually reduce each type "Plane" to "Signal" starting with the top most plane first.
+		** Remember to check the Menu->Technology-Design Rule Manager
+			Tab: Net Classes
+				That Net Class: "Signal" is enabled for the required layers
 * For PCBWay export and quote
 	Menu->Output->Generate Gerber
 		Choose: RS274X
