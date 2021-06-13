@@ -1130,7 +1130,7 @@
 	* Done - Feature files need updating too
 
 	
-* For audio playback of the audio simulation output:
+* Test: For audio playback of the audio simulation output:
 	Run C:\Work\C64\VideoHardware\BuildIt.bat
 		The digital data input uses the output debug bus data from the above demo
 	Then use:
@@ -2008,3 +2008,5 @@ All layouts now use V3.1
 
 
 * Audio: 4082 to be replaced by 74LS21 https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOS8GB5LKZP7E%3D
+* Audio: 4075 to be replaced by 74 series logic. 7427 + 7404
+	Tested
