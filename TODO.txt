@@ -1,3 +1,7 @@
+* Audio: 4075 to be replaced by 74 series logic
+
+
+
 * Flux
 * Power meter
 * Solder sucker https://www.electronicshub.org/best-desoldering-stations/

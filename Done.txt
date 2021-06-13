@@ -2003,3 +2003,8 @@ All layouts now use V3.1
 
 
 * Audio and APU boards, with EBS selection jumpers and plane layers, are aligned with the main boards
+
+
+
+
+* Audio: 4082 to be replaced by 74LS21 https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOS8GB5LKZP7E%3D
