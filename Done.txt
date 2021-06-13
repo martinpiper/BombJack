@@ -2009,4 +2009,5 @@ All layouts now use V3.1
 
 * Audio: 4082 to be replaced by 74LS21 https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21NE4?qs=sGAEpiMZZMtMa9lbYwD6ZGuuqVaqkGmOS8GB5LKZP7E%3D
 * Audio: 4075 to be replaced by 74 series logic. 7427 + 7404
+* Audio: 7413 to be replaced by 7420 https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS20NE4?qs=SL3LIuy2dWy4R7Pu4ZGI8g%3D%3D
 	Tested
