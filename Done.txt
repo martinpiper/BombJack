@@ -2013,3 +2013,7 @@ All layouts now use V3.1
 * Audio: 7483 to be replaced by 74283
 * Audio: 74154 to be replaced by 74 series logic... A few more 74HC138 for example, which really uses this LS variant... https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=sGAEpiMZZMtxONTBFIcRfk9GpaUoLd0ck0Ao35GjMhY%3D
 	Tested
+
+
+
+* Audio: Stock code and Supplier updated
