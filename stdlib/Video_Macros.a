@@ -41,6 +41,12 @@ kBus24Bit_Mode7Screen_Registers		= $a000
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
 }
+!macro MBus24Bit_SendPaletteRGB .r , .g , .b {
+	lda #< ((.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8))
+	sta CIA2PortBRS232
+	lda #> ((.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8))
+	sta CIA2PortBRS232
+}
 
 
 

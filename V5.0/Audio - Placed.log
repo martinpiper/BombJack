@@ -1,0 +1,6 @@
+# Writing all output to: C:\Work\BombJack\V5.0\Audio - Placed.log
+set pad_wire_necking on
+bus diagonal
+fanout 5
+route 50
+Process stopped!
