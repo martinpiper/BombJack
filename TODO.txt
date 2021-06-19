@@ -1,11 +1,11 @@
-* 2114 SRAM might be unreliable to find. Consider using the same workaround from the sprite layer scan lines
-
-
-
 * Flux
 * Power meter
 * Solder sucker https://www.electronicshub.org/best-desoldering-stations/
 	https://www.amazon.com/YIHUA-Desoldering-Station-Soldering-Iron/dp/B07RTXCHGV/ref=sr_1_5?dchild=1&keywords=YIHUA+948+ESD+Safe+2+in+1+80W+Desoldering+Station+and+60W+Soldering+Iron-+Desoldering+Gun+and+Soldering+Station&qid=1623224018&sr=8-5
+
+
+
+* Check the trimming resistors produce a good tweak range
 
 
 

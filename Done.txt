@@ -2024,3 +2024,10 @@ All layouts now use V3.1
 	Shows MN2114-2 at row 6 (check the right hand edge numbering)
 		http://www.science.smith.edu/~jfrankli/270s02/datasheets/2114.html
 		Which means similar to: 2114AL-2 - 120ns Max (40ma Max) ???
+
+
+
+* V6.0
+
+* 2114 SRAM might be unreliable to find. Consider using the same workaround from the sprite layer scan lines
+	Two 6116 SRAM have been added, the original 2114 SRAMs have been disabled from the simulation, but left in the layout to allow for both chip types to be used.
