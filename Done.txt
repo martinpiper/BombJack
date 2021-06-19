@@ -2031,3 +2031,9 @@ All layouts now use V3.1
 
 * 2114 SRAM might be unreliable to find. Consider using the same workaround from the sprite layer scan lines
 	Two 6116 SRAM have been added, the original 2114 SRAMs have been disabled from the simulation, but left in the layout to allow for both chip types to be used.
+
+
+
+
+* Check the trimming resistors produce a good tweak range
+	They do. the colour channels can be made very dim or very bright.

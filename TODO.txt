@@ -5,11 +5,6 @@
 
 
 
-* Check the trimming resistors produce a good tweak range
-
-
-
-
 * PCB Smoke test procedures
 	Populate timer crystal, resistors, capacitor
 	Populate 3T and 4T
