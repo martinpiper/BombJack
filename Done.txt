@@ -2017,3 +2017,10 @@ All layouts now use V3.1
 
 
 * Audio: Stock code and Supplier updated
+
+
+
+* Hires original PCB: https://live.staticflickr.com/6079/6106060384_34ad2ad34d_k.jpg
+	Shows MN2114-2 at row 6 (check the right hand edge numbering)
+		http://www.science.smith.edu/~jfrankli/270s02/datasheets/2114.html
+		Which means similar to: 2114AL-2 - 120ns Max (40ma Max) ???

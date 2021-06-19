@@ -1,3 +1,7 @@
+* 2114 SRAM might be unreliable to find. Consider using the same workaround from the sprite layer scan lines
+
+
+
 * Flux
 * Power meter
 * Solder sucker https://www.electronicshub.org/best-desoldering-stations/

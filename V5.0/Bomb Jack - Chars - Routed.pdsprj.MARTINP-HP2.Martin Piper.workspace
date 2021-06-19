@@ -7,6 +7,13 @@
   <WINDOW type="default" module="PROJNOTES"/>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="BOM"/>
+  <WINDOW type="VIEW3D" module="VIEW3D">
+   <camera>
+    <position x="20066258" y="13819062" z="4602598"/>
+    <focus x="20066258" y="13340922" z="-862544"/>
+    <up x="0" y="996195" z="-87155"/>
+   </camera>
+  </WINDOW>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
