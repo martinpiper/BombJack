@@ -2027,6 +2027,210 @@ All layouts now use V3.1
 
 
 
+
+
+
+
+
+* PCB connectivity options:
+	DIN 41612:
+	https://en.wikipedia.org/wiki/DIN_41612
+	https://www.hirose.com/en/product/series/PCN13#
+	Backplane straight receptacles 50 way 2 rows:
+		https://www.mouser.sg/Hirose-Electric/Connectors/Backplane-Connectors/DIN-41612-Connectors/PCN10-Series/_/N-axj5jZ1yzvvqx?P=1ytkn9pZ1yzve1gZ1z0z5h6Z1z0jmg3Z1z0j1prZ1z0xbxo
+	Right angled board edge connector 50 way 2 rows:
+		https://www.mouser.sg/Hirose-Electric/Connectors/Backplane-Connectors/DIN-41612-Connectors/PCN10-Series/_/N-axj5jZ1yzvvqx?P=1ytkn9pZ1z0spqhZ1yzve1gZ1z0z5h6Z1z0jmg3Z1z0xbyw
+
+	Or perhaps Harting connectors. But these a press-in, which look more complicated to solder:
+		https://www.mouser.sg/HARTING/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1z0z5h6Z1z0wxp6Z1z0zl89&Keyword=41612&FS=True
+		https://www.mouser.sg/ProductDetail/HARTING/09282486804791?qs=%2Fha2pyFadujf%2FON5mzZXH%252BmRzB7nM%2FaLl9OChyBxONU%3D
+		
+	>>**<< These are 64 way and have solder pins plus Proteus parts:
+		https://www.mouser.sg/ProductDetail/HARTING/09021646921?qs=gIpPgrDBK%2FiWr6s0yE4P1A%3D%3D
+		https://www.mouser.sg/ProductDetail/?qs=gIpPgrDBK%2Fj7cjNJs9Ij%252BQ%3D%3D
+	These are >=48 way, suitable for the video connectors:
+		Receptacles: https://www.mouser.sg/TE-Connectivity/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1z0xby7Z1ytf3jyZ1ytkn9pZ1ysmvawZ1z0z63vZ1z0z5h6Z1yzvwjmZ1z0wxp6Z1yzs6iiZ1z0j1pr
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/5535091-5?qs=U4pz39agNJApG5vcI2Ocug%3D%3D
+		Connectors right:
+		https://www.mouser.sg/TE-Connectivity/Connectors/Backplane-Connectors/DIN-41612-Connectors/_/N-axj5jZ1yzvvqx?P=1ytf3jyZ1ytkn9pZ1ysmvawZ1z0z63vZ1z0z5h6Z1yzvwjmZ1z0wxp6Z1yzs6iiZ1z0vlpq
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/5650478-5?qs=xrnNvQC1SKQL0IHY3tGLpg%3D%3D
+		
+		
+		
+		
+		
+	
+	
+
+
+	Backplane:
+		https://www.ti.com/lit/an/szza016b/szza016b.pdf
+		https://resources.altium.com/p/signal-integrity-simulations-backplane-bus-connectors
+	Ribbon cable + IDC:
+		https://electronics.stackexchange.com/questions/206133/ribbon-cable-noise-susceptibility
+		https://www.machinedesign.com/archive/article/21818753/tricks-of-the-trade-for-lownoise-design
+		https://forum.allaboutcircuits.com/threads/ribbon-problems-there-has-to-be-a-better-way.17214/
+		https://www.avrfreaks.net/forum/shielding-ribbon-cable
+	* Perhaps a terminating header row, with a parallel row of headers at ground/power, allowing an easy bridge by any resistor/capacitor as needed
+
+
+
+
+* 5 RCA male to VGA Male is uncommon:
+	https://www.cs1.net/products/canare/V5-1p5C_RGBHV_VGA_breakout.htm
+	https://www.elecbee.com/en/d-sub-cable-assemblies/3035-vga-to-rgbhv-rca-connector-cable-hd15-male-to-5-rca-male-connectors-12-feet-long.html
+	5 BNC male to male VGA is a lot more common:
+		https://www.amazon.com/C2G-02572-Premium-Rgbhv-Meters/dp/B0073DP4BC
+		https://search.c2g.com/uk?category=1%7CVGA&it=item&keyword=rgbhv
+	So consider BNC female for the next generation board
+		https://www.mouser.sg/ProductDetail/TE-Connectivity/5227677-1?qs=GSeC4G%252BEqEX0oAnTcsRqKg%3D%3D
+			The 3D model orientation is wrong for this part, when it gets imported from the extended search
+		** Remember some spacing between connectors is good
+	VGA female 15 way 3 row:
+		https://www.mouser.sg/Connectors/D-Sub-Connectors/D-Sub-High-Density-Connectors/_/N-9gy6qZ1yzvvqx?P=1z0yy6bZ1yzsf9eZ1z0xbywZ1z0xbudZ1ytmhdpZ1ysmvaw
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/2311586-4?qs=rrS6PyfT74fCtSRxG4pC6w%3D%3D
+
+
+
+
+
+* To order and also place into the stock code for the schematic
+	https://www.mouser.sg/ProductDetail/Vishay-Cera-Mite/562R10TST20?qs=1Vd4QiMLiWEhnW3IqIibiA%3D%3D
+	https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55100R00FHEK?qs=E1R6yEsG10vYngbhrGJpcw%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55220R00FHEK?qs=UEmB0FaNOjg2TC4qgSAJvQ%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55221R00FKEB?qs=gQ87q99%2FLGLtVGUX15QkBw%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-Dale/CMF55442R00FHEB?qs=gQQ%2FpDEpiRKHk7nNPbIyfA%3D%3D
+	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/SFR25H0004700FR500?qs=58bml8Dt%2FllkS%252Ba6658qMg%3D%3D
+	Misc:
+	https://www.mouser.sg/ProductDetail/161-0097-E
+	https://www.mouser.sg/ProductDetail/517-929975-01-10-RK
+	https://www.mouser.sg/ProductDetail/575-8034700810001000
+	https://www.mouser.sg/ProductDetail/520-HCU1209-SX
+	https://www.mouser.sg/ProductDetail/661-E-630L100ME11D
+	Power:
+	https://www.mouser.sg/ProductDetail/163-179PH-EX
+	Userport:
+	https://www.mouser.sg/ProductDetail/587-305-52-024
+	Jumper cables:
+	https://www.mouser.sg/ProductDetail/932-MIKROE-513
+	https://www.mouser.sg/ProductDetail/932-MIKROE-512
+	https://www.mouser.sg/ProductDetail/932-MIKROE-511
+
+
+
+
+* Find out where TST-105-04-T-D-RA and TST-105-04-L-D-RA orders came from. One is gold, the other is tin. Just need one type.
+	Also Harting 09021646921 is missing, need to order
+	The Mill-Max 380-10-108-10-003000 is not quite right, it has a solder cup, ooops
+		Should have been something like this with longer mating post length:
+		https://www.mouser.sg/ProductDetail/Molex/90121-0128?qs=PvP5v7EimsmfZ8WDsc6%252BuA%3D%3D
+		https://www.mouser.sg/ProductDetail/TE-Connectivity/826631-8?qs=6Tj7fpyCzVoXtZFhyBL3bg%3D%3D
+
+
+
+* Pixel header connectivity
+	PCB female header to male right angled: https://www.mouser.sg/ProductDetail/Molex/90122-0764/?qs=kEwmkoUtv7R5aSrMIeNWYw%3D%3D
+	Then to socket: https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/3868-6600/?qs=8XPjJVwSY9BFfS5andYLaA%3D%3D
+		Or: https://www.mouser.sg/ProductDetail/Wurth-Elektronik/61200823021/?qs=PhR8RmCirEZvQm5v3EiYrA%3D%3D
+	Cable: https://www.mouser.sg/Wire-Cable/Flat-Cables/_/N-5ggmZ1yzvvqx?P=1ytitytZ1z0vl9dZ1yzu8m9
+	
+	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
+	Perhaps these 10 way: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1yzs9vm&Ns=Number+of+Positions%7c0&FS=True
+	>> Right angled: https://www.mouser.sg/Connectors/Headers-Wire-Housings/TST-Series/_/N-ay0loZ1yzvvqx?P=1y6pcziZ1yvgchwZ1ytkn06Z1z0spqhZ1yzs9vmZ1z0z63vZ1yzobh4Z1z0z63xZ1z0wxp6Z1yzv8u1Z1yzv7x2Z1z0xbud&Ns=Number+of+Positions%7c0&FS=True
+	>> 10 way cables: https://www.mouser.sg/Wire-Cable/Cable-Assemblies/Ribbon-Cables-IDC-Cables/_/N-bkreeZ1yzvvqx?P=1yyu1hyZ1z0wxp6Z1yny8waZ1yny8w9&Keyword=idc&FS=True
+
+
+
+* Order replacements:
+	74HC138
+	https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138NE4?qs=SL3LIuy2dWx0lDDFWb%252BGZQ%3D%3D
+
+	CONN-DIL34
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-RA?qs=VCIs6OJqWMkB6xFyOZZSxA%3D%3D
+		
+	CONN-DIL20
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929975-01-10-RK?qs=4V84emjyG36NmJ6%252BaqUY8g%3D%3D
+	
+	CONN-SIL2
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-RA?qs=s3by4FhMkp0TJ2ZYzpYr%252Bg%3D%3D
+	
+	CONN-SIL8
+	https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929974-01-08-RK?qs=neFkstNq%252B6G7LvVslYqF6A%3D%3D
+	
+	Long tail (wire wrap) SIL and a DIL
+	https://www.mouser.sg/ProductDetail/437-8018700353001101
+	https://www.mouser.sg/ProductDetail/437-8018700553001101
+	https://www.mouser.sg/ProductDetail/437-8018700853001101
+	https://www.mouser.sg/ProductDetail/437-8018701053001101
+	https://www.mouser.sg/ProductDetail/437-8038301653001101
+	
+	DIL decoupling
+	These can be in the component "Supplier" property, add using View->Property Columns the "CODE" (stock code) and "Supplier"
+	DIL08 no cap
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
+	DIL14
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj
+	DIL16
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-316-41-801000?qs=WZeyYeqMOWd122xzWNZKKg%3D%3D
+	DIL18
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-318-41-801000?qs=WZeyYeqMOWcusVdSCp10bQ%3D%3D
+	DIL20
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-320-41-801000?qs=RC2ne4458IKe5rHuueYA%2FA%3D%3D
+	DIL24
+	Need narrow and wide (7.62 mm and 15.24 mm)
+	Narrow: https://www.mouser.sg/ProductDetail/Mill-Max/110-93-324-41-801000?qs=2mZjssE3HVXiFvwLlnaxRQ%3D%3D
+	Wide: https://www.mouser.sg/ProductDetail/Mill-Max/110-13-624-41-801000/?qs=WZeyYeqMOWcY1RNZipzOSA%3D%3D
+	DIL28 No cap
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-328-41-001000?qs=IGgAdOvCTsQUPmob89wrvw%3D%3D
+	DIL28
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-628-41-801000?qs=%2Fha2pyFaduh%2F2llJlOg9PDhABSeSvrmpwTTGEnsRDIDydS5MKhEOSHtrFYy51Bes
+	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-628-41-801000?qs=%2Fha2pyFaduj2Vn9jTBaNkbbuPoiuMRTWeD8fU3A14YCfUCD0%252BtDLsfAVe9w3OSTn
+	
+	* Wide 6116 SRAM https://www.mouser.sg/ProductDetail/Renesas-IDT/6116SA150DB?qs=GVScuG1d83icae5fIq%252BJNg%3D%3D
+		Also wide https://www.mouser.sg/ProductDetail/972-6116LA45DB
+		The wide variants seem to have stock issues, so perhaps better to stick with the narrow variants
+
+	* Can oscillators for user port interface, various speeds. Note the "tristate" ones where pin 1 is EOH "enable on high", it can float:
+		https://www.mouser.sg/Passive-Components/Frequency-Control-Timing-Devices/Oscillators/Standard-Clock-Oscillators/_/N-7jdvaZ1yzvvqx?P=1z0yz4qZ1z0wu68Z1yzv18zZ1y95k8nZ1yzmm18Z1yzmm16Z1z0wnuiZ1z0wo7vZ1z0wnt1Z1z0woad&FS=True
+		
+
+
+
+* Parts list, Book of Materials, stock code links to ordering websites needed
+	Adding links to the "stock code"
+	Breadboard
+	https://www.mouser.sg/ProductDetail/Twin-Industries/TW-E41-1060?qs=sGAEpiMZZMvxYGX2LOb%252BCkpSd%2FF6Zib6rdOv%2FJq26CY%3D
+	Resistors
+	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5
+	https://www.mouser.sg/Passive-Components/Resistors/Through-Hole-Resistors/_/N-7h7z5?P=1z0z819Z1yzbpodZ1yyxf87
+	Multiple resistance values: https://www.mouser.sg/Passive-Components/Resistors/Film-Resistors/Metal-Film-Resistors-Through-Hole/_/N-7gz41Z1yzvvqx?Ns=Resistance%7c0&No=25&P=1yzbppyZ1z0x8ahZ1z0x8beZ1z0wnmfZ1z0wngkZ1z0x8b3Z1z0vpm5Z1z0we4uZ1z0wljo
+	
+	VGA
+	https://www.mouser.sg/ProductDetail/Gravitech/DB15F-VGA-TERM?qs=%2Fha2pyFadujCKQleo0iutDpWDaGRRxjTkj9IAyF0Np7%252BUoWsr1SFIUxZNLIelf9qWe7mZLtJ2l3bbZy4VSVLAA%3D%3D
+	SIL/DIL connectors
+	https://www.mouser.sg/3M/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1z0xbxoZ1yvsm2aZ1yvgcdjZ1ytkn39Z1yq9ciwZ1ytkls2Z1ytkn06Z1z0z5h6Z1yzxj1jZ1z0z63xZ1z0wxp6Z1yzv7x1Z1z0zp4d
+	With long pins, wire wrap termination style: https://www.mouser.sg/Connectors/Headers-Wire-Housings/_/N-ay0lo?P=1z0z24iZ1z0z63xZ1z0wxp6Z1yzxj1j
+	Sockets decoupling
+	https://www.digikey.sg/products/en/connectors-interconnects/sockets-for-ics-transistors/409?k=&pkeyword=dip+decoupling&sv=0&pv5=382168&sf=1&FV=589%7C405002%2C-8%7C409&quantity=&ColumnSort=0&page=1&pageSize=25
+	Same decoupling socket, found using manufacturer part number
+		https://www.digikey.com/product-detail/en/mill-max-manufacturing-corp/110-93-314-41-801000/ED2101-ND/33731
+		https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj
+	This shows decoupling sockets by size
+		https://www.digikey.com/en/products/filter/sockets-for-ics-transistors/409?s=N4IgjCBcoKxaBjKAzAhgGwM4FMA0IB7KAbRAGYAOAJjADYKQBdfABwBcoQBlNgJwEsAdgHMQAX3y0AnPBBJIaLHkIkQAFjBgKUgOxNWHSNz5DRYiSFqz%2BAE04wdEA5x4CRIfGwCeLbJxuYSOZAA
+	Digikey might be a better source?
+		https://www.digikey.sg/products/en/integrated-circuits-ics/logic-gates-and-inverters/705?k=74ls27&k=&pkeyword=74ls27&sv=0&pv69=411897&sf=0&FV=-8%7C705&quantity=&ColumnSort=0&page=1&pageSize=25
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27N?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIwsPDjIqEADE%3D
+	Digikey has memory
+		https://www.digikey.sg/products/en/integrated-circuits-ics/memory/774?k=&pkeyword=&sv=0&pv69=411897&sf=1&FV=-8%7C774&quantity=&ColumnSort=0&page=1&pageSize=25
+		But no price: https://www.digikey.sg/products/en/integrated-circuits-ics/memory/774?k=&pkeyword=&sv=0&pv142=227740&sf=1&FV=-8%7C774%2C69%7C411897&quantity=&ColumnSort=0&page=1&pageSize=25
+		Jameco has: https://www.jameco.com/shop/ProductDisplay?catalogId=10001&langId=-1&storeId=10001&productId=38957
+			Faster: https://www.jameco.com/z/2114N-2-Major-Brands-IC-2114N-2-SRAM-1Kx4-DIP-18-pin-200ns_38973.html?CID=MERCH
+
+
+
+
+
 * V6.0
 
 * 2114 SRAM might be unreliable to find. Consider using the same workaround from the sprite layer scan lines
@@ -2037,3 +2241,6 @@ All layouts now use V3.1
 
 * Check the trimming resistors produce a good tweak range
 	They do. the colour channels can be made very dim or very bright.
+
+
+
