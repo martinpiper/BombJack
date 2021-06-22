@@ -1,3 +1,17 @@
+* APU Seems to have 1 bit available in the instruction set. Perhaps use this to create 16 bit adds? By expanding kAPU_IDataSelect
+
+
+
+
+* APU write back to its internal data RAM? Currently the internal data RAM cannot be accessed by itself.
+	This could change if the data RAM is connected via the destination external address bus
+	The init code should always set the APU into pass-through mode
+	But this would introduce extra complexity with the _MEMBSEL logic that retries the instruction on a write to its internal memory
+	* So, another signal to cause a write pulse with the currently selected ADDRB would be a lot simpler.
+	
+
+
+
 * Flux
 * Power meter
 * Solder sucker https://www.electronicshub.org/best-desoldering-stations/
