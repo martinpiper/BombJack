@@ -30,6 +30,9 @@ b$10,b$00
 ; For kAPU_SkipIfEQ check
 b$00
 
+; ADDRB2 address
+b$08,b$02
+
 ; Sprite register EBS+address
 b$01
 b$20

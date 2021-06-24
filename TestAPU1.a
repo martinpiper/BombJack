@@ -11,9 +11,9 @@
 	+MAPU kAPU_Reset_ADDRB1
 
 	; Test PC load
-	+MAPU kAPU_IDataRegLoad0
+	+MAPU kAPU_IDataRegLoad0 | kAPU_IDataRegLoad2
 	+MAPU kAPU_Incr_ADDRB1
-	+MAPU kAPU_IDataRegLoad1
+	+MAPU kAPU_IDataRegLoad1 | kAPU_IDataRegLoad3
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_PCLoad16
 
@@ -34,6 +34,13 @@
 	; Will be skipped since the memory is 0
 	+MAPU kAPU_SkipIfEQ | kAPU_Reset_PC
 	+MAPU kAPU_Incr_ADDRB1
+
+	+MAPU kAPU_IDataRegLoad0
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad1
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_ADDRB2Load16
+
 
 	+MAPU kAPU_Load_EBS
 	+MAPU kAPU_Incr_ADDRB1
@@ -67,6 +74,27 @@
 
 	+MAPU kAPU_Incr_EADDR
 
+
+
+	; Write values back to internal data memory
+	; Note the kAPU_IDataSelect needs to be stable before the write
+	+MAPU kAPU_IDataSelectReg3
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg3
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg2
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg2
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg1
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg1
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg0
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg0
+	+MAPU kAPU_Incr_ADDRB2
+
+	; Since r0/r1 have not changed
+	+MAPU kAPU_ADDRB2Load16
+
+
 	; Then overwrite $9820 with two bytes
 	+MAPU kAPU_Load_EADDRLo
 	+MAPU kAPU_Incr_ADDRB1
@@ -77,6 +105,20 @@
 	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 
+	; Write values back to internal data memory
+	; Note the kAPU_IDataSelect needs to be stable before the write
+	+MAPU kAPU_IDataSelectReg3
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg0
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg1
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg1
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg2
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg2
+	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_IDataSelectReg3
+	+MAPU kAPU_ADDRB2Select | kAPU_InternalMEWR | kAPU_IDataSelectReg3
+	+MAPU kAPU_Incr_ADDRB2
 
 	+MAPU kAPU_Reset_ADDRB1 | kAPU_Reset_PC
 	+MAPU
