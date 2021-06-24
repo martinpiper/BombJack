@@ -2244,3 +2244,9 @@ All layouts now use V3.1
 
 
 
+* APU write back to its internal data RAM? Currently the internal data RAM cannot be accessed by itself.
+	This could change if the data RAM is connected via the destination external address bus
+	The init code should always set the APU into pass-through mode
+	But this would introduce extra complexity with the _MEMBSEL logic that retries the instruction on a write to its internal memory
+	* So, another signal to cause a write pulse with the currently selected ADDRB would be a lot simpler.
+	* Tested simulation with kAPU_InternalMEWR
