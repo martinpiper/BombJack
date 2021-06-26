@@ -15,7 +15,7 @@ Bus24Bit_WaitVBlank
 Bus24Bit_DisableDisplay
 	; Reset priority to default
 	jsr Bus24Bit_SetAddressVideoPriorityRegister
-	lda #%11100100
+	lda #kBus24Bit_VideoLayer_Priority_Default
 	sta CIA2PortBRS232
 	; Disable display entirely
 	jsr Bus24Bit_SetAddressVideoControlRegisters
