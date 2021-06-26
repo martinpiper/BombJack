@@ -1,7 +1,3 @@
-* Need kAPU_InternalMEWR in BDD6502
-
-
-
 * APU Seems to have 1 bit available in the instruction set. Perhaps use this to create 16 bit adds? By expanding kAPU_IDataSelect
 
 
