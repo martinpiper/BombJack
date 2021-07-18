@@ -2253,3 +2253,14 @@ All layouts now use V3.1
 	But this would introduce extra complexity with the _MEMBSEL logic that retries the instruction on a write to its internal memory
 	* So, another signal to cause a write pulse with the currently selected ADDRB would be a lot simpler.
 	* Tested simulation with kAPU_InternalMEWR
+
+
+
+* IC Pin Straightener DIP Alignment Tool
+	https://www.mouser.sg/ProductDetail/Aries-Electronics/T-516AS?qs=%2Fha2pyFadugyCCs6foAxw32%252B71CytEXs2beegWfw3qAoFiGedY8kFpk7%2Far1WGmu
+	https://www.jameco.com/z/ICS-01-R-Jameco-Benchpro-IC-Pin-Straightener-Tool_99363.html
+	https://www.amazon.com/JAMECO-BENCHPRO-Pin-Straightener-Tool/dp/B00B888W5S/ref=cm_cr_arp_d_pb_opt?ie=UTF8
+	https://www.conrad.com/p/conrad-components-pin-straightening-tool-168203
+	https://www.conrad.com/p/tru-components-pin-aligner-1-pcs-1564782-suitable-for-grids-sized-762-mm-1524-mm-compatible-with-semiconductor-en-1564782
+	https://www.conrad.com/p/tru-components-pin-aligner-1-pcs-tc-8990560-suitable-for-grids-sized-762-mm-1524-mm-compatible-with-semiconductor-2247640
+	
