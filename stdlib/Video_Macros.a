@@ -57,3 +57,11 @@ kBus24Bit_CharScreen_Control_DisableChars	= $02
 kBus24Bit_CharScreen_ScrollX16		= $9001
 kBus24Bit_CharScreen_ScrollY16		= $9003
 
+kBus24Bit_CharScreenMap_EBBS		= $80
+kBus24Bit_CharScreenMap				= $4000
+
+kBus24Bit_CharScreenPlanes_EBBS		= $20
+kBus24Bit_CharScreenPlanes_0		= $2000
+kBus24Bit_CharScreenPlanes_1		= $4000
+kBus24Bit_CharScreenPlanes_2		= $8000
+kBus24Bit_CharScreenPlanes_3		= $0000

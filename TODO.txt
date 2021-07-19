@@ -1,3 +1,9 @@
+* New Tiles board mostly works with 16 colours, except certain scroll values still produce weird colour strobing effects
+	Investigate further: Perhaps related to: Real hardware When Tiles X scroll & 7 = 7
+
+
+
+
 * APU Seems to have 1 bit available in the instruction set. Perhaps use this to create 16 bit adds? By expanding kAPU_IDataSelect
 
 
