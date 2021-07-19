@@ -1,5 +1,10 @@
 * New Tiles board mostly works with 16 colours, except certain scroll values still produce weird colour strobing effects
 	Investigate further: Perhaps related to: Real hardware When Tiles X scroll & 7 = 7
+	* Options:
+		* Remove the same RAM being used and separate out the colour and screen display RAMs. This means the screen and colour loads are in parallel
+		* Remove the 16x16 tiles completely and just use the double RAM technique to increase the size of the 8x8 chars screen instead
+			Basically have one chars layer design only and just build two or even three to get desired layer functionality
+			Will need to test chars layer hardware scrolling capability first
 
 
 
