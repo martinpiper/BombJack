@@ -5,7 +5,10 @@
 		* Remove the 16x16 tiles completely and just use the double RAM technique to increase the size of the 8x8 chars screen instead
 			Basically have one chars layer design only and just build two or even three to get desired layer functionality
 			Will need to test chars layer hardware scrolling capability first
-
+		* Try using a 74273 latch for the BGH values coming from the adders with a latch on 6MHz
+			This will push the tile pixels one pixel behind, but can be corrected by using a 0xffff X scroll value
+				As long as the full screen edges are correct
+				
 
 
 
