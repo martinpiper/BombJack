@@ -1,13 +1,18 @@
 * New Tiles board mostly works with 16 colours, except certain scroll values still produce weird colour strobing effects
 	Investigate further: Perhaps related to: Real hardware When Tiles X scroll & 7 = 7
 	* Options:
+		* No difference - Try bypassing the adders, by removing them and using the BGH values without any add, to see if that fixes the ripple
+			Although, setting the plane selector to %11111111 to select the last plane, filling the remaining palette with grey scale colours, and then using the 1H debug header pin did show considerable unstable values in the "meant to be" alternate pixel colours
+			* Repositioning the VGA cable and video conversion box did show some improvement.
+			* Going to have to get the logic analyser out I think and try to see how clean the captured signal is with a test pattern on screen
+			
+		* Since the above, likely no difference - Try using a 74273 latch for the BGH values coming from the adders with a latch on 6MHz
+			This will push the tile pixels one pixel behind, but can be corrected by using a 0xffff X scroll value
+				As long as the full screen edges are correct
 		* Remove the same RAM being used and separate out the colour and screen display RAMs. This means the screen and colour loads are in parallel
 		* Remove the 16x16 tiles completely and just use the double RAM technique to increase the size of the 8x8 chars screen instead
 			Basically have one chars layer design only and just build two or even three to get desired layer functionality
 			Will need to test chars layer hardware scrolling capability first
-		* Try using a 74273 latch for the BGH values coming from the adders with a latch on 6MHz
-			This will push the tile pixels one pixel behind, but can be corrected by using a 0xffff X scroll value
-				As long as the full screen edges are correct
 				
 
 
