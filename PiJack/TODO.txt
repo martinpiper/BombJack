@@ -1,6 +1,7 @@
 * Read data from the C64 user port
 	Works from C64 BASIC, but C64 assembly tends to cause the Pi to miss a lot of data because it takes so long to read the GPIO...
 	Although the 1MHz _PC2 is detected...
+	* Even doing a tight poll in a thread doesn't help much
 
 
 

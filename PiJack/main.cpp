@@ -52,6 +52,23 @@ void onPA2Rising(void)
 //	printf("%d onPA2 rising\n", sGot++);
 }
 
+PI_THREAD(myThread)
+{
+	while (true)
+	{
+		int value = digitalRead(PIN_PC2);
+		while (value == 0)
+		{
+			value = digitalRead(PIN_PC2);
+		}
+		onPC2();
+		while (value == 1)
+		{
+			value = digitalRead(PIN_PC2);
+		}
+	}
+}
+
 int main(void)
 {
 	printf("Hello world 4\n");
@@ -73,9 +90,11 @@ int main(void)
 //	wiringPiISR(PIN_PA2, INT_EDGE_FALLING, onPA2Falling);
 	wiringPiISR(PIN_PA2, INT_EDGE_RISING, onPA2Rising);
 	pinMode(PIN_PC2, INPUT);
-	wiringPiISR(PIN_PC2, INT_EDGE_RISING, onPC2);
+//	wiringPiISR(PIN_PC2, INT_EDGE_RISING, onPC2);
 
 	pinMode(PIN_FLAG2, OUTPUT);
+
+	piThreadCreate(myThread);
 
 	while (true)
 	{
