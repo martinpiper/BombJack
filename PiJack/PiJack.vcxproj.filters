@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="WiringPi-master\wiringPi\ads1115.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\bmp180.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\ds18b20.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\htu21d.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\max5322.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\max31855.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23s08.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23s17.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3002.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3004.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3422.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp4802.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23008.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23016.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23017.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\pcf8574.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\pcf8591.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\piHiPri.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\piThread.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\pseudoPins.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\rht03.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\sn3218.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\softPwm.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\softServo.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\softTone.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\sr595.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPi.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPiI2C.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPiSPI.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wiringSerial.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wiringShift.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\wpiExtensions.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPiD\network.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPiD\runRemote.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\drcNet.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+    <ClCompile Include="WiringPi-master\wiringPi\drcSerial.c">
+      <Filter>WiringPi-master</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="WiringPi-master">
+      <UniqueIdentifier>{99dd733b-8381-4a7a-ba2a-9a0518e4954c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WiringPi-master\wiringPi\ads1115.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\bmp180.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\drcNet.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\drcSerial.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\ds18b20.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\htu21d.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\max5322.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\max31855.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23s08.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23s17.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23x08.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23x0817.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3002.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3004.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3422.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp4802.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23008.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23016.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23016reg.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23017.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\pcf8574.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\pcf8591.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\pseudoPins.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\rht03.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\sn3218.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\softPwm.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\softServo.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\softTone.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\sr595.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPi.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPiI2C.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPiSPI.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wiringSerial.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wiringShift.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPi\wpiExtensions.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPiD\daemonise.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPiD\drcNetCmd.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPiD\network.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\wiringPiD\runRemote.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+    <ClInclude Include="WiringPi-master\version.h">
+      <Filter>WiringPi-master</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WiringPi-master\wiringPi\COPYING.LESSER">
+      <Filter>WiringPi-master</Filter>
+    </None>
+    <None Include="WiringPi-master\wiringPi\Makefile">
+      <Filter>WiringPi-master</Filter>
+    </None>
+    <None Include="WiringPi-master\wiringPi\noMoreStatic">
+      <Filter>WiringPi-master</Filter>
+    </None>
+    <None Include="WiringPi-master\wiringPiD\Makefile">
+      <Filter>WiringPi-master</Filter>
+    </None>
+  </ItemGroup>
+</Project>

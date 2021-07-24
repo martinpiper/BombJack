@@ -46,9 +46,17 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>
+    </IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>
+    </IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
-      <LibraryDependencies>wiringPi</LibraryDependencies>
+      <LibraryDependencies>m;pthread;rt;crypt</LibraryDependencies>
     </Link>
     <RemotePostBuildEvent>
       <Command>gpio export 17 in &amp;&amp; gpio export 18 in &amp;&amp; gpio export 27 in &amp;&amp; gpio export 22 in &amp;&amp; gpio export 23 in &amp;&amp; gpio export 24 in &amp;&amp; gpio export 25 in &amp;&amp; gpio export 4 in &amp;&amp; gpio edge 7 rising &amp;&amp; gpio edge 8 rising &amp;&amp; gpio export 9 out</Command>
@@ -57,20 +65,111 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <Link>
-      <LibraryDependencies>wiringPi</LibraryDependencies>
+      <LibraryDependencies>m;pthread;rt;crypt</LibraryDependencies>
     </Link>
     <RemotePostBuildEvent>
       <Command>gpio export 17 in &amp;&amp; gpio export 18 in &amp;&amp; gpio export 27 in &amp;&amp; gpio export 22 in &amp;&amp; gpio export 23 in &amp;&amp; gpio export 24 in &amp;&amp; gpio export 25 in &amp;&amp; gpio export 4 in &amp;&amp; gpio edge 7 rising &amp;&amp; gpio edge 8 rising &amp;&amp; gpio export 9 out</Command>
       <Message>setup pins using the gpio utility so that we can execute the blink program without sudo</Message>
     </RemotePostBuildEvent>
+    <ClCompile>
+      <PreprocessorDefinitions>_GNU_SOURCE;OLD_WAY;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="WiringPi-master\wiringPiD\network.c" />
+    <ClCompile Include="WiringPi-master\wiringPiD\runRemote.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\ads1115.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\bmp180.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\drcNet.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\drcSerial.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\ds18b20.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\htu21d.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\max31855.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\max5322.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23008.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23016.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23017.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23s08.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp23s17.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3002.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3004.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp3422.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\mcp4802.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\pcf8574.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\pcf8591.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\piHiPri.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\piThread.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\pseudoPins.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\rht03.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\sn3218.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\softPwm.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\softServo.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\softTone.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\sr595.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPi.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPiI2C.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wiringPiSPI.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wiringSerial.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wiringShift.c" />
+    <ClCompile Include="WiringPi-master\wiringPi\wpiExtensions.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO.txt" />
   </ItemGroup>
-  <ItemDefinitionGroup />
+  <ItemGroup>
+    <ClInclude Include="WiringPi-master\version.h" />
+    <ClInclude Include="WiringPi-master\wiringPiD\daemonise.h" />
+    <ClInclude Include="WiringPi-master\wiringPiD\drcNetCmd.h" />
+    <ClInclude Include="WiringPi-master\wiringPiD\network.h" />
+    <ClInclude Include="WiringPi-master\wiringPiD\runRemote.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\ads1115.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\bmp180.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\drcNet.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\drcSerial.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\ds18b20.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\htu21d.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\max31855.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\max5322.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23008.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23016.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23016reg.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23017.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23s08.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23s17.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23x08.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp23x0817.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3002.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3004.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp3422.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\mcp4802.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\pcf8574.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\pcf8591.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\pseudoPins.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\rht03.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\sn3218.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\softPwm.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\softServo.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\softTone.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\sr595.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPi.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPiI2C.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wiringPiSPI.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wiringSerial.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wiringShift.h" />
+    <ClInclude Include="WiringPi-master\wiringPi\wpiExtensions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WiringPi-master\wiringPiD\Makefile" />
+    <None Include="WiringPi-master\wiringPi\COPYING.LESSER" />
+    <None Include="WiringPi-master\wiringPi\Makefile" />
+    <None Include="WiringPi-master\wiringPi\noMoreStatic" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_GNU_SOURCE;OLD_WAY;</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
