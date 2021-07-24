@@ -1,0 +1,7 @@
+* Read data from the C64 user port
+	Works from C64 BASIC, but C64 assembly tends to cause the Pi to miss a lot of data because it takes so long to read the GPIO...
+	Although the 1MHz _PC2 is detected...
+
+
+
+* When data is able to be read from the C64 reliably, then start to render graphics and use decoded memory writes to change the emulated rendering
