@@ -1,11 +1,47 @@
-* New Tiles board mostly works with 16 colours, except certain scroll values still produce weird colour strobing effects
+* Original timings from the original schematic from root sheet 3
+	1H	2H	4H		_SLOAD	_SL1	_SL2
+	0	0	0		1		1		1
+	1	0	0		1		0		1
+	0	1	0		1		1		1
+	1	1	0		1		1		0
+	0	0	1		1		1		1
+	1	0	1		1		1		1
+	1	1	1		0		1		1
+	* Looking at the timings, it seems as though the original tiles layer has some timing bugs to do with colour loading, but these would not be visible in the graphics data as the edges of tiles and tile colours didn't change much
+
+
+
+
+* New Tiles board mostly works with 16 colours, except certain there is a weird colour strobing effects with what looks like 8 pixel gaps that do not move with the X or Y scroll position
 	Investigate further: Perhaps related to: Real hardware When Tiles X scroll & 7 = 7
+		Note: This effect is visible in the 8 colour board version (videos) after the X scroll bug is fixed with the extra external board. https://youtu.be/UzVHgiNhnio?t=69
+			So it's not a regression per se
 	* Options:
 		* No difference - Try bypassing the adders, by removing them and using the BGH values without any add, to see if that fixes the ripple
 			Although, setting the plane selector to %11111111 to select the last plane, filling the remaining palette with grey scale colours, and then using the 1H debug header pin did show considerable unstable values in the "meant to be" alternate pixel colours
+				Note: The same noisy effect, with 1H to pixel header, is visible in the 8 colour board stack as well. So also not a regression per se.
 			* Repositioning the VGA cable and video conversion box did show some improvement.
 			* Going to have to get the logic analyser out I think and try to see how clean the captured signal is with a test pattern on screen
-			
+		* Perhaps because the 6MHz clock is used to latch the H/V/signals then the counters for the original signals should be used _6MHz instead?
+			* Tried: To remove the H/V/signal latch effect, the latches can be removed and the inputs and outputs can be connected to restore the previous functionality
+				Remove U255 , U256 , U259
+					Connect pins:
+						3	2
+						4	5
+						7	6
+						8	9
+						13	12
+						14	15
+						17	16
+						18	19
+				* No effect, tiles still shows the wobbly pixels. The 1H pin header into pixel header also still shows wobbly pixels, even without any other boards plugged in.
+					Starting to think it is signal reflection on these lines?
+					But even sourcing the pixel signal directly from U255 pin 2 or 3 (1H or pre1H) still shows the wobble
+			* Alternatively try changing 3T:B clock input to be _6MHz
+				Before and after change output images are exactly the same in simulation
+			* TODO: Need to try changing the input clock pin on 3T:B pin 11 from 4T pin 9 6MHz to 4T pin 13 _6MHz
+				Also 3S pin 2 and 3R pin 2
+
 		* Since the above, likely no difference - Try using a 74273 latch for the BGH values coming from the adders with a latch on 6MHz
 			This will push the tile pixels one pixel behind, but can be corrected by using a 0xffff X scroll value
 				As long as the full screen edges are correct

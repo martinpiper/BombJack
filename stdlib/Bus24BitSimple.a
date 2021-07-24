@@ -106,9 +106,14 @@ Bus24Bit_CopySmallDataAgain
 	rts
 	
 Bus24Bit_CopySmallDataRepeatForX
+	; Safety check
+	cpx #1
+	bpl .cl1
+	rts
+.cl1
 	jsr Bus24Bit_CopySmallDataAgain
 	dex
-	bne Bus24Bit_CopySmallDataRepeatForX
+	bne .cl1
 	rts
 
 
