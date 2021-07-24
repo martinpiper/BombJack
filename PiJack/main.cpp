@@ -36,8 +36,8 @@ static volatile int gotBytesCountDisplay = 0;
 
 void onPC2(void)
 {
-	int value = digitalRead(PIN_DATA0) | (digitalRead(PIN_DATA1) << 1) | (digitalRead(PIN_DATA2) << 2) | (digitalRead(PIN_DATA3) << 3)
-		| (digitalRead(PIN_DATA4) << 4) | (digitalRead(PIN_DATA5) << 5) | (digitalRead(PIN_DATA6) << 6) | (digitalRead(PIN_DATA7) << 7);
+	int value = digitalRead(PIN_DATA0) | (digitalReadFromCache(PIN_DATA1) << 1) | (digitalReadFromCache(PIN_DATA2) << 2) | (digitalReadFromCache(PIN_DATA3) << 3)
+		| (digitalReadFromCache(PIN_DATA4) << 4) | (digitalReadFromCache(PIN_DATA5) << 5) | (digitalReadFromCache(PIN_DATA6) << 6) | (digitalReadFromCache(PIN_DATA7) << 7);
 //	int value = digitalRead8(PIN_DATA0);
 //	printf("%d onPC2 %x %d\n", sGot++, value, value);
 
@@ -77,7 +77,7 @@ int main(void)
 //	wiringPiISR(PIN_PA2, INT_EDGE_FALLING, onPA2Falling);
 	wiringPiISR(PIN_PA2, INT_EDGE_RISING, onPA2Rising);
 	pinMode(PIN_PC2, INPUT);
-	wiringPiISR(PIN_PC2, INT_EDGE_RISING, onPC2);
+	wiringPiISR(PIN_PC2, INT_EDGE_FALLING, onPC2);
 
 	pinMode(PIN_FLAG2, OUTPUT);
 

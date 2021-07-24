@@ -207,6 +207,7 @@ extern          void pinModeAlt          (int pin, int mode) ;
 extern          void pinMode             (int pin, int mode) ;
 extern          void pullUpDnControl     (int pin, int pud) ;
 extern          int  digitalRead         (int pin) ;
+extern          int digitalReadFromCache (int pin) ;
 extern          void digitalWrite        (int pin, int value) ;
 extern unsigned int  digitalRead8        (int pin) ;
 extern          void digitalWrite8       (int pin, int value) ;

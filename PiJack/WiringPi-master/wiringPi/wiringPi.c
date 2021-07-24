@@ -1569,6 +1569,8 @@ void pullUpDnControl (int pin, int pud)
  *********************************************************************************
  */
 
+static volatile int cachedPortA = 0;
+
 int digitalRead (int pin)
 {
   char c ;
@@ -1591,7 +1593,8 @@ int digitalRead (int pin)
     else if (wiringPiMode != WPI_MODE_GPIO)
       return LOW ;
 
-    if ((*(gpio + gpioToGPLEV [pin]) & (1 << (pin & 31))) != 0)
+    cachedPortA = *(gpio + gpioToGPLEV[pin]);
+    if ((cachedPortA & (1 << (pin & 31))) != 0)
       return HIGH ;
     else
       return LOW ;
@@ -1602,6 +1605,42 @@ int digitalRead (int pin)
       return LOW ;
     return node->digitalRead (node, pin) ;
   }
+}
+
+int digitalReadFromCache(int pin)
+{
+    if ((pin & PI_GPIO_MASK) == 0)		// On-Board Pin
+    {
+        /**/ if (wiringPiMode == WPI_MODE_GPIO_SYS)	// Sys mode
+        {
+            return digitalRead(pin);
+        }
+        else if (wiringPiMode == WPI_MODE_PINS)
+            pin = pinToGpio[pin];
+        else if (wiringPiMode == WPI_MODE_PHYS)
+            pin = physToGpio[pin];
+        else if (wiringPiMode != WPI_MODE_GPIO)
+            return LOW;
+
+        if ((cachedPortA & (1 << (pin & 31))) != 0)
+            return HIGH;
+        else
+            return LOW;
+    }
+    else
+    {
+        return digitalRead(pin);
+    }
+}
+
+int digitalReadCache(void)
+{
+    /**/ if (wiringPiMode == WPI_MODE_GPIO_SYS)	// Sys mode
+    {
+        return 0;
+    }
+    int value = *(gpio + gpioToGPLEV[0]);
+    return value;
 }
 
 
