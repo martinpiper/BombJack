@@ -4,7 +4,15 @@
 	* Even doing a tight poll in a thread doesn't help much
 	* Seems even cachingthe value and using that in release mode isn't very performant *sigh*
 	* TODO: Try??: https://www.raspberrypi.org/documentation/usage/gpio/
-
+		http://abyz.me.uk/rpi/pigpio/cif.html#gpioSetISRFuncEx
+	* Booting into command line mode without X starting seems to allow much better gpio access and I can still SSH into the box
+		Used this to change the boot options: sudo raspi-config
+		However it's not a stable solution - sigh
+	* TODO: Decode user port requests into 24 bit memory requests
 
 
 * When data is able to be read from the C64 reliably, then start to render graphics and use decoded memory writes to change the emulated rendering
+	Direct frame buffer access:
+		https://medium.com/@avik.das/writing-gui-applications-on-the-raspberry-pi-without-a-desktop-environment-8f8f840d9867
+		http://raspberrycompote.blogspot.com/2012/12/low-level-graphics-on-raspberry-pi-part_9509.html
+		echo ZZZZZZZ > /dev/fb0

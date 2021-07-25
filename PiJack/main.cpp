@@ -1,6 +1,11 @@
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <linux/fb.h>
+#include <sys/mman.h>
+#include <sys/ioctl.h>
 //#include <wiringPi.h>
 #include "WiringPi-master/wiringPi/wiringPi.h"
 
@@ -36,13 +41,44 @@ static volatile int gotBytesCountDisplay = 0;
 
 void onPC2(void)
 {
-	int value = digitalRead(PIN_DATA0) | (digitalReadFromCache(PIN_DATA1) << 1) | (digitalReadFromCache(PIN_DATA2) << 2) | (digitalReadFromCache(PIN_DATA3) << 3)
+	int value = digitalReadFromCache(PIN_DATA0) | (digitalReadFromCache(PIN_DATA1) << 1) | (digitalReadFromCache(PIN_DATA2) << 2) | (digitalReadFromCache(PIN_DATA3) << 3)
 		| (digitalReadFromCache(PIN_DATA4) << 4) | (digitalReadFromCache(PIN_DATA5) << 5) | (digitalReadFromCache(PIN_DATA6) << 6) | (digitalReadFromCache(PIN_DATA7) << 7);
 //	int value = digitalRead8(PIN_DATA0);
 //	printf("%d onPC2 %x %d\n", sGot++, value, value);
 
 	gotBytes[gotBytesCount] = (unsigned char) value;
 	gotBytesCount = (gotBytesCount+1) & 1023;
+}
+
+void onPC2NotCached(void)
+{
+	int value = digitalRead(PIN_DATA0) | (digitalReadFromCache(PIN_DATA1) << 1) | (digitalReadFromCache(PIN_DATA2) << 2) | (digitalReadFromCache(PIN_DATA3) << 3)
+		| (digitalReadFromCache(PIN_DATA4) << 4) | (digitalReadFromCache(PIN_DATA5) << 5) | (digitalReadFromCache(PIN_DATA6) << 6) | (digitalReadFromCache(PIN_DATA7) << 7);
+	//	int value = digitalRead8(PIN_DATA0);
+	//	printf("%d onPC2 %x %d\n", sGot++, value, value);
+
+	gotBytes[gotBytesCount] = (unsigned char)value;
+	gotBytesCount = (gotBytesCount + 1) & 1023;
+}
+
+PI_THREAD(myThread)
+{
+	while (true)
+	{
+		int value = digitalRead(PIN_PC2);
+		while (value)
+		{
+			value = digitalRead(PIN_PC2);
+		}
+		// Falling edge here
+		onPC2();
+		while (!value)
+		{
+			value = digitalRead(PIN_PC2);
+		}
+		// Rising edge here
+	}
+
 }
 
 void onPA2Falling(void)
@@ -75,11 +111,42 @@ int main(void)
 
 	pinMode(PIN_PA2, INPUT);
 //	wiringPiISR(PIN_PA2, INT_EDGE_FALLING, onPA2Falling);
-	wiringPiISR(PIN_PA2, INT_EDGE_RISING, onPA2Rising);
+//	wiringPiISR(PIN_PA2, INT_EDGE_RISING, onPA2Rising);
 	pinMode(PIN_PC2, INPUT);
-	wiringPiISR(PIN_PC2, INT_EDGE_FALLING, onPC2);
+//	wiringPiISR(PIN_PC2, INT_EDGE_RISING, onPC2NotCached);
+	piHiPri(99);
+	piThreadCreate(myThread);
 
 	pinMode(PIN_FLAG2, OUTPUT);
+
+	int fbfd = 0; // framebuffer filedescriptor
+	struct fb_var_screeninfo var_info;
+
+	// Open the framebuffer device file for reading and writing
+	fbfd = open("/dev/fb0", O_RDWR);
+	if (fbfd == -1) {
+		printf("Error: cannot open framebuffer device.\n");
+		return(1);
+	}
+	printf("The framebuffer device opened.\n");
+
+	// Get variable screen information
+	if (ioctl(fbfd, FBIOGET_VSCREENINFO, &var_info)) {
+		printf("Error reading variable screen info.\n");
+	}
+	printf("Display info %dx%d, %d bpp\n",
+		var_info.xres, var_info.yres,
+		var_info.bits_per_pixel);
+
+	int rgb = 0x0000ff00;
+	int i;
+	for (i = 0; i < 1000; i++)
+	{
+		write(fbfd, &rgb, sizeof(rgb));
+	}
+
+	// close file  
+	close(fbfd);
 
 	while (true)
 	{
