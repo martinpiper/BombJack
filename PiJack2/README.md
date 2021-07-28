@@ -34,6 +34,8 @@
 	* Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
 		handlePS2ClockEvent
 		Note time_microsec()
+		uart_buffer_start == uart_buffer_end
+		Note GPIO code in initPS2
 	* Done: Strip code, remove USPI as it isn't needed.
 		Tested in QEmu
 	* Add simple code, one GPIO IRQ, to read values from C64, like in PiJack

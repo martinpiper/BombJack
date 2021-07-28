@@ -444,7 +444,6 @@ unsigned char getPS2char(unsigned char *fromKbd)
 void PS2KeyboardHandler()
 {
     unsigned char fromKbd;
-    unsigned char usbKey = 0;
 
     if (getPS2char(&fromKbd) == 0)      // got a char
     {
@@ -461,12 +460,6 @@ void PS2KeyboardHandler()
                 }
                 else
                 {
-                    // key pressed -> translate
-                    if (fromKbd <= 0x83)
-                    {
-
-                        usbKey = ps2_set2_to_usb_map[fromKbd];
-                    }
                 }
                 break;
 
@@ -477,7 +470,6 @@ void PS2KeyboardHandler()
                 {
                     ps2E1CntChars = 0;
                     ps2ToUsbState = ps2_idle;
-                    usbKey = 0x48;    // PAUSE key
                 }
                 else if (ps2E1CntChars >= 7)
                 {
@@ -499,11 +491,6 @@ void PS2KeyboardHandler()
                 {
                     // E0 key pressed -> translate
                     ps2ToUsbState = ps2_idle;
-                    if (fromKbd <= 0x7d)
-                    {
-
-                        usbKey = ps2_set2_e0_to_usb_map[fromKbd];
-                    }
                 }
                 break;
         }

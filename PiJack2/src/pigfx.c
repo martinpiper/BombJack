@@ -303,10 +303,6 @@ void term_main_loop()
     while( uart_buffer_start == uart_buffer_end )
     {
         timer_poll();       // ActLed working while waiting for data
-        if (ps2KeyboardFound)
-        {
-            PS2KeyboardHandler();
-        }
     }
     /**/
 
@@ -345,11 +341,6 @@ void term_main_loop()
         uart_fill_queue(0);
 
         timer_poll();
-
-        if (ps2KeyboardFound)
-        {
-            PS2KeyboardHandler();
-        }
     }
 
 }
@@ -478,10 +469,10 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     ee_printf("Initializing PS/2:\n");
     gfx_set_bg(BLACK);
     gfx_set_fg(GRAY);
-    if (initPS2() == 0)
-    {
-        ps2KeyboardFound = 1;
-    }
+//    if (initPS2() == 0)
+//    {
+//        ps2KeyboardFound = 1;
+//    }
 
     if (PiGfxConfig.showRC2014Logo)
     {
