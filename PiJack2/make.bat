@@ -5,12 +5,7 @@ if "%1" == "dump" goto DUMP
 if "%1" == "clean" goto CLEAN
 set RPI=%1
 
-if "%RPI%"=="4" goto SKIPUSPI
-call makeuspi %RPI%
-:SKIPUSPI
-
 set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o uspios_wrapper.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o ps2.o keyboard.o binary_assets.o
-set LIBUSPI= uspi/lib/libuspi.a
 
 set CFLAGS= -Wall -Wextra -O2 -g -nostdlib -nostartfiles -fno-stack-limit -ffreestanding -fsigned-char
 if "%RPI%"=="1" (
@@ -24,7 +19,6 @@ if "%RPI%"=="3" (
 )
 if "%RPI%"=="4" (
   set CFLAGS= %CFLAGS% -march=armv8-a -mtune=cortex-a53 -DRPI=4
-  set LIBUSPI=
 )
 
 echo Compiling for Pi generation %RPI%
@@ -59,7 +53,7 @@ for %%s in (src/*.s) do arm-none-eabi-gcc src\%%s %CFLAGS% -c -o build\%%~ns.o
 for %%c in (src/*.c) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
 :: linking files
 for %%A in (%OOB%) do (call :addbuild %%A)
-arm-none-eabi-ld %OBJS% "%LIBGCC%" %LIBUSPI% -T memmap -o pigfx.elf
+arm-none-eabi-ld %OBJS% "%LIBGCC%" -T memmap -o pigfx.elf
 :: generate .img
 arm-none-eabi-objcopy pigfx.elf -O binary pigfx.img
 
