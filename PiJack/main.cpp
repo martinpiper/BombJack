@@ -119,6 +119,7 @@ int main(void)
 
 	pinMode(PIN_FLAG2, OUTPUT);
 
+#if 0
 	int fbfd = 0; // framebuffer filedescriptor
 	struct fb_var_screeninfo var_info;
 
@@ -147,6 +148,7 @@ int main(void)
 
 	// close file  
 	close(fbfd);
+#endif
 
 	while (true)
 	{
