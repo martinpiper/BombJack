@@ -388,7 +388,8 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     timers_init();
     attach_timer_handler( HEARTBEAT_FREQUENCY, _heartbeat_timer_handler, 0, 0 );
 
-    initialize_framebuffer(640, 480, 8);
+//    initialize_framebuffer(640, 480, 8);
+    initialize_framebuffer(384, 256, 8);
 
     gfx_term_putstring( "\x1B[2J" ); // Clear screen
     gfx_set_bg(BLUE);

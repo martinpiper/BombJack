@@ -41,6 +41,7 @@
 	* Add simple code, one GPIO IRQ, to read values from C64, like in PiJack
 	* Store in volatile ring buffer, also like in PiJack
 	* Display on the terminal display
+		Note: initialize_framebuffer(384, 256, 8);
 	* Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
 	
 * Stretch TODO:
