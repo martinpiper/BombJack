@@ -1,0 +1,23 @@
+#ifndef _PIGFX_CONFIG_H_
+#define _PIGFX_CONFIG_H_
+
+#include "globaldefs.h"
+
+#define PIGFX_VERSION           "$VERSION$"
+#define FRAMEBUFFER_DEBUG       OFF             /* Log framebuffer operations to UART */
+#define HEARTBEAT_FREQUENCY     1               /* Status led blink frequency in Hz */
+
+#define PIGFX_MAJVERSION        1               /* Major version number */
+#define PIGFX_MINVERSION        8               /* Minor version number */
+#define PIGFX_BUILDVERSION      3               /* Build version. */
+
+/** Versions:
+	
+1.1.0  Initial version with mode change, 8x16 and 8x24 fonts etc.
+1.1.1  fix for 1-based coordinates in ESC H command instead of 0-based
+1.1.2  fix for reversed row/col parameter index in ESC H command
+
+*/
+
+#endif
+

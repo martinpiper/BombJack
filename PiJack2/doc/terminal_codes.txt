@@ -1,0 +1,102 @@
+Cursor Control
+
+<ESC>[?25l          Cursor invisible
+<ESC>[?25b          Cursor blinking
+<ESC>[?25h          Cursor visible
+<ESC>[H             Move to 0-0
+<ESC>[f             Move to 0-0
+<ESC>[s             Save the cursor position 
+<ESC>[u             Move cursor to previously saved position 
+<ESC>[<Row>;<Col>H  Move to <Row>,<Col>
+<ESC>[<Row>;<Col>f  Move to <Row>,<Col>
+<ESC>[<n>A          Move the cursor up <n> lines
+<ESC>[<n>B          Move the cursor down <n> lines
+<ESC>[<n>C          Move the cursor forward <n> characters
+<ESC>[<n>D          Move the cursor backward <n> characters
+
+Clearing Text
+
+<ESC>[K             Clear from cursor to the end of the line
+<ESC>[0K            Clear from cursor to the end of the line
+<ESC>[1K            Clear from the beginning of the current line to the cursor
+<ESC>[2K            Clear the whole line
+<ESC>[J             Clear the screen from cursor
+<ESC>[0J            Clear the screen from cursor
+<ESC>[1J            Clear the screen until cursor position
+<ESC>[2J            Clear the screen and move the cursor to 0-0, defined sprites are removed, loaded bitmaps are kept
+
+Insert / Delete
+
+<ESC>[1@            Insert a blank character position (shift line to the right)
+<ESC>[1P            Delete a character position (shift line to the left)
+<ESC>[1L            Insert blank line at current row (shift screen down)
+<ESC>[1M            Delete the current line (shift screen up)
+ 
+Graphics
+
+<ESC>[#<x0>;<y0>;<x1>;<y1>l              Draw a line from <x0>,<y0> to <x1>,<y1>
+<ESC>[#<x0>;<y0>;<w>;<h>r                Fill a rectangle with top-left corner at <x0>,<y0> and width <w>, height <h>
+<ESC>[#<x0>;<y0>;<w>;<h>R                Draw a rectangle with top-left corner at <x0>,<y0> and width <w>, height <h>
+<ESC>[#<x0>;<y0>;<r>c                    Fill a circle with center at <x0>,<y0> and radius <r>
+<ESC>[#<x0>;<y0>;<r>C                    Draw a circle with center at <x0>,<y0> and radius <r>
+<ESC>[#<x0>;<y0>;<x1>;<y1>;<x2>;<y2>T    Draw a triangle from <x0>,<y0> to <x1>,<y1> to <x2>,<y2>
+<ESC>[#<idx>;<x>;<y>;<b>a                Load ASCII encoded bitmap to index 0-127 with width x and height y pixels, base=10 for decimal, 16 for hex.
+                                         Expects x*y semicolon separated pixels of ASCII encoded colors, e.g. 12;23;44;44;130;130; or for hex C;17;2C;2C;82;82;
+                                         A semicolon after the last pixel needs to be sent.
+<ESC>[#<idx>;<x>;<y>;<b>A                Load RLE compressed ASCII encoded bitmap to index 0-127 with width x and height y pixels, base=10 for decimal, 16 for hex.
+                                         Expects RLE compressed ASCII encoded semicolon separated pixel data after this command,
+                                         e.g. 16;32; or with hex 10;20; draws color 16 for the next 32 pixels.
+                                         Repeat values must be between 1 and 255, of 1 and FF for hex.
+                                         A semicolon after the last repeat value needs to be sent.
+<ESC>[#<idx>;<x>;<y>b                    Load raw bitmap to index 0-127 with width x and height y pixels. Expects x*y binary pixel bytes sent after this command.
+<ESC>[#<idx>;<x>;<y>B                    Load RLE compressed bitmap to index 0-127 with width x and height y pixels. Expects RLE compressed binary pixel data after this command, e.g. 0x10 0x20 draws color 16 for the next 32 pixels.
+<ESC>[#<idx>;<x>;<y>d                    Draw bitmap with index 0-127 at position x, y.
+<ESC>[#<idx>;<ref>;<x>;<y>s              Draw a sprite with index 0-255 from bitmap <ref> at position <x>, <y>.
+<ESC>[#<idx>x                            Remove sprite with index 0-255, restore background.
+<ESC>[#<idx>;<x>;<y>m                    Move sprite with index 0-255 to x,y, restore background.
+
+Scrolling
+
+<ESC>[#<n>"         Scroll up by <n> pixels, fill with background color.
+<ESC>[#<n>_         Scroll down by <n> pixels, fill with background color.
+<ESC>[#<n><         Scroll left by <n> pixels, fill with background color.
+<ESC>[#<n>>         Scroll right by <n> pixels, fill with background color.
+ 
+Settings
+
+<ESC>[m             Reset color attributes (gray on black)
+<ESC>[<a>;<b>;<c>m  Set display attributes (1 to 3 params, so <b> and <c> are optional)
+                    0 = Reset all attributes
+                    1 = increase intensity (only in 4 byte mode colors 0..7)
+                    2 = decrease intensity (only in 4 byte mode colors 8..15)
+                    7 = Turn on reverse color
+                    22= shifts color from dim to bright (only in 4 byte mode 0..7)
+                    27= Turn off reverse color 
+                    30 ... 37 set foreground color to palette color 0 ... 7
+                    40 ... 47 set background color to palette color 0 ... 7
+                    90 ... 97 set high intensity foreground color (palette color 8 ... 15)
+                    100 ... 107 set high intensity background color (palette color 8 ... 15) 
+<ESC>[38;5;<n>m     Set foreground color to <n> (0-255)
+<ESC>[38;6;<n>m     Set foreground color to <n> (0-255) and save as default
+<ESC>[48;5;<n>m     Set background color to <n> (0-255)
+<ESC>[48;6;<n>m     Set background color to <n> (0-255) and save as default
+<ESC>[58;5;<n>m     Set transparent color to <n> (0-255)
+<ESC>[=0m           Reset color attributes (gray on black) and sets normal drawing (sprites and characters)
+<ESC>[=1m           Set XOR drawing (sprites and characters)
+<ESC>[=2m           Set transparent drawing (sprites and characters)
+<ESC>[=0f           Set 8x8 font
+<ESC>[=1f           Set TRS-80 8x16 font
+<ESC>[=2f           Set TRS-80 8x24 font
+<ESC>[=<n>t         Set tabulation width (8 by default)
+<ESC>[=<n>h         Change to display mode <n> (legacy PC ANSI.SYS)
+                    This is actually only approximate resolutions (check README_ADD)
+<ESC>[=<n>p         Load color palette <n>, where 0=XTerm (default), 1=VGA, 2=custom, 3=C64
+<ESC>[=<b>;<n>p     Set custom palette, with <n> as the number of colors to follow (1-256) and <b> as the base (10 for decimal or 16 for hex).
+                    <n> colors need to follow this command. Color information is always 8bit RGB, e.g. 000000 for black or FFFFFF for white.
+                    A semicolon after the last color needs to be sent.
+                    Here's an example for color 0:red, 1:green, 2:blue -> <ESC>[=16;3pFF0000;FF00;FF;
+                    
+Commands from PiGFX to the controller
+
+<ESC>[#<idx1>;<idx2>c                   Collision detected between sprite idx1 and sprite idx2.
+
