@@ -4,6 +4,43 @@
 	Needed https://github.com/rsta2/uspi/tree/2d6f33c6daa052137a0fe05bb74026d795b65b9e to be extracted to uspi\
 
 
+* This is an attempt to use some bare metal code to try to service the GPIO pins quickly enough that all requests from the C64 can be captured in parallel, using the full 10 bits from the user port, without any extra latching logic.
+
+* This code was used because it usefully demonstrates how to render to the screen and also service UART/GPIO signals in an interrupt.
+* The plan is to strip the code, add specific C64 signal handling, and then incorporate emulated graphics display from the C64.
+
+* Tweaks made from the versions in source control up to this version:
+	Remove git command usage in "make.bat" and replace with:
+	set GIT_DESCRIBE=1234567890
+	set BUILD_VERSION=1234567890
+
+* To build:
+
+	"C:\Users\Martin Piper\Downloads\gcc-arm-none-eabi-10-2020-q4-major-win32\gcc-arm-none-eabi-10-2020-q4-major\bin\gccvar.bat"
+	cd /d C:\work\BombJack\PiJack2
+	Then...
+	This will make all img files in bin\
+	makeall
+	This makes a Pi0 compatible elf
+	make 1
+	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append ""
+	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi1ap -no-reboot -serial stdio -append ""
+
+	This starts a qemu monitor on port 55555
+	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append "" -monitor tcp::55555,server,nowait
+
+
+* TODO: 
+	* Strip code, remove USPI as it isn't needed.
+	* Add simple code, one GPIO IRQ, to read values from C64, like in PiJack
+	* Store in volatile ring buffer, also like in PiJack
+	* Display on the terminal display
+	* Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
+	
+* Stretch TODO:
+	* GPIO IRQ on separate higher priority core compared to the video rendering
+	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core
+
 # PiGFX 
 ## Raspberry Pi graphics card / ANSI terminal emulator
 
