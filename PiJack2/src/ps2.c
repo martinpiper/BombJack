@@ -458,20 +458,12 @@ void PS2KeyboardHandler()
                 else if (ps2released == 1)
                 {
                     ps2released = 0;
-                    if (fromKbd == 0x11) keyModifiers &= ~ALT;
-                    else if (fromKbd == 0x12) keyModifiers &= ~LSHIFT;
-                    else if (fromKbd == 0x14) keyModifiers &= ~LCTRL;
-                    else if (fromKbd == 0x59) keyModifiers &= ~RSHIFT;
                 }
                 else
                 {
                     // key pressed -> translate
                     if (fromKbd <= 0x83)
                     {
-                        if (fromKbd == 0x11) keyModifiers |= ALT;
-                        else if (fromKbd == 0x12) keyModifiers |= LSHIFT;
-                        else if (fromKbd == 0x14) keyModifiers |= LCTRL;
-                        else if (fromKbd == 0x59) keyModifiers |= RSHIFT;
 
                         usbKey = ps2_set2_to_usb_map[fromKbd];
                     }
@@ -499,10 +491,6 @@ void PS2KeyboardHandler()
                 if (fromKbd == 0xf0) ps2E0released = 1;
                 else if (ps2E0released == 1)
                 {
-                    if (fromKbd == 0x11) keyModifiers &= ~ALTGR;
-                    else if (fromKbd == 0x14) keyModifiers &= ~RCTRL;
-                    else if (fromKbd == 0x1f) keyModifiers &= ~LWIN;
-                    else if (fromKbd == 0x27) keyModifiers &= ~RWIN;
 
                     ps2E0released = 0;
                     ps2ToUsbState = ps2_idle;
@@ -513,10 +501,6 @@ void PS2KeyboardHandler()
                     ps2ToUsbState = ps2_idle;
                     if (fromKbd <= 0x7d)
                     {
-                        if (fromKbd == 0x11) keyModifiers |= ALTGR;
-                        else if (fromKbd == 0x14) keyModifiers |= RCTRL;
-                        else if (fromKbd == 0x1f) keyModifiers |= LWIN;
-                        else if (fromKbd == 0x27) keyModifiers |= RWIN;
 
                         usbKey = ps2_set2_e0_to_usb_map[fromKbd];
                     }
@@ -524,8 +508,6 @@ void PS2KeyboardHandler()
                 break;
         }
     }
-    // Call Key handler
-    KeyEvent(usbKey, keyModifiers);
 }
 
 void setPS2Leds(unsigned char scroll, unsigned char num, unsigned char caps)

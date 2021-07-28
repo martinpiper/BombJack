@@ -32,7 +32,6 @@
 #include "ps2.h"
 #include "memory.h"
 #include "mmu.h"
-#include "../uspi/include/uspi.h"
 
 #define UART_BUFFER_SIZE 16384 /* 16k */
 
@@ -307,9 +306,7 @@ void term_main_loop()
         if (ps2KeyboardFound)
         {
             PS2KeyboardHandler();
-            fUpdateKeyboardLeds(0);
         }
-        else if (usbKeyboardFound) fUpdateKeyboardLeds(1);
     }
     /**/
 
@@ -337,17 +334,8 @@ void term_main_loop()
             {
                 if (PiGfxConfig.skipBackspaceEcho)
                 {
-                    if( time_microsec()-last_backspace_t > 50000 )
-                        backspace_n_skip=0;
-
-                    if( backspace_n_skip  > 0 )
-                    {
-                        //ee_printf("Skip %c",strb[0]);
-                        strb[0]=0; // Skip this char
-                        backspace_n_skip--;
-                        if( backspace_n_skip == 0)
-                            strb[0]=0x7F; // Add backspace instead
-                    }
+//                    if( time_microsec()-last_backspace_t > 50000 )
+//                        backspace_n_skip=0;
                 }
 
                 gfx_term_putstring( strb );
@@ -361,9 +349,7 @@ void term_main_loop()
         if (ps2KeyboardFound)
         {
             PS2KeyboardHandler();
-            fUpdateKeyboardLeds(0);
         }
-        else if (usbKeyboardFound) fUpdateKeyboardLeds(1);
     }
 
 }
@@ -495,48 +481,7 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     if (initPS2() == 0)
     {
         ps2KeyboardFound = 1;
-        fInitKeyboard(PiGfxConfig.keyboardLayout);
     }
-
-#if RPI<4
-    if ((PiGfxConfig.useUsbKeyboard) && (ps2KeyboardFound == 0))
-    {
-        gfx_set_bg(BLUE);
-        gfx_set_fg(YELLOW);
-        ee_printf("Initializing USB:\n");
-        gfx_set_bg(BLACK);
-        gfx_set_fg(GRAY);
-
-        if( USPiInitialize() )
-        {
-            ee_printf("Initialization OK!\n");
-            ee_printf("Checking for keyboards: ");
-
-            if ( USPiKeyboardAvailable () )
-            {
-                fInitKeyboard(PiGfxConfig.keyboardLayout);
-                USPiKeyboardRegisterKeyStatusHandlerRaw(KeyStatusHandlerRaw);
-                gfx_set_fg(GREEN);
-                usbKeyboardFound = 1;
-                ee_printf("Keyboard found.");
-                gfx_set_fg(GRAY);
-                ee_printf("\n");
-            }
-            else
-            {
-                gfx_set_fg(RED);
-                ee_printf("No keyboard found.");
-                gfx_set_fg(GRAY);
-                ee_printf("\n");
-            }
-        }
-        else
-        {
-            gfx_set_fg(RED);
-            ee_printf("USB initialization failed.\n");
-        }
-    }
-#endif
 
     if (PiGfxConfig.showRC2014Logo)
     {

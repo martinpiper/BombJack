@@ -29,11 +29,6 @@ int inihandler(void* user, const char* section, const char* name, const char* va
         tmpValue = atoi(value);
         if (tmpValue > 0) PiGfxConfig.uartBaudrate = tmpValue;
     }
-    else if (pigfx_strcmp(name, "useUsbKeyboard") == 0)
-    {
-        tmpValue = atoi(value);
-        if ((tmpValue == 0) || (tmpValue == 1)) PiGfxConfig.useUsbKeyboard = tmpValue;
-    }
     else if (pigfx_strcmp(name, "sendCRLF") == 0)
     {
         tmpValue = atoi(value);
@@ -86,7 +81,6 @@ void setDefaultConfig()
     pigfx_memset(&PiGfxConfig, 0, sizeof(PiGfxConfig));
 
     PiGfxConfig.uartBaudrate = 115200;
-    PiGfxConfig.useUsbKeyboard = 1;
     PiGfxConfig.sendCRLF = 0;
     PiGfxConfig.replaceLFwithCR = 0;
     PiGfxConfig.backspaceEcho = 0;

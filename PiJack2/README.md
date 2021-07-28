@@ -30,14 +30,19 @@
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append "" -monitor tcp::55555,server,nowait
 
 
-* TODO: 
-	* Strip code, remove USPI as it isn't needed.
+* TODO:
+	* Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
+		handlePS2ClockEvent
+		Note time_microsec()
+	* Done: Strip code, remove USPI as it isn't needed.
+		Tested in QEmu
 	* Add simple code, one GPIO IRQ, to read values from C64, like in PiJack
 	* Store in volatile ring buffer, also like in PiJack
 	* Display on the terminal display
 	* Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
 	
 * Stretch TODO:
+	* Strip PS2 code
 	* GPIO IRQ on separate higher priority core compared to the video rendering
 	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core
 

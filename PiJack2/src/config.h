@@ -26,7 +26,6 @@
 typedef struct
 {
     unsigned int uartBaudrate;          // The desired baudrate of the UART interface
-    unsigned int useUsbKeyboard;        // Use uspi to enable a USB keyboard
     unsigned int sendCRLF;              // send CRLF instead of only LF
     unsigned int replaceLFwithCR;       // Send CR instead of LF
     unsigned int backspaceEcho;         // Auto-echo the backspace char

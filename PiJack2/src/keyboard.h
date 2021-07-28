@@ -14,8 +14,6 @@
 typedef unsigned short u16;
 typedef unsigned char   u8;
 
-#include "../uspi/include/uspi.h"
-
 #define REPEAT_FREQ     10       // 10 hz -> 100ms
 
 #define PHY_MAX_CODE    127
@@ -131,31 +129,24 @@ TKeyMap;
 
 static const unsigned short keyMap_de[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_de.h"
 };
 static const unsigned short keyMap_es[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_es.h"
 };
 static const unsigned short keyMap_fr[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_fr.h"
 };
 static const unsigned short keyMap_it[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_it.h"
 };
 static const unsigned short keyMap_uk[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_uk.h"
 };
 static const unsigned short keyMap_us[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "../uspi/lib/keymap_us.h"
 };
 static const unsigned short keyMap_sg[PHY_MAX_CODE+1][K_ALTSHIFTTAB+1] =
 {
-    #include "keymap_sg.h"
 };
 
 extern unsigned int backspace_n_skip;
