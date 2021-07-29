@@ -32,6 +32,8 @@
 #include "ps2.h"
 #include "memory.h"
 #include "mmu.h"
+#include "C64UserPort24Bit.h"
+#include "synchronize.h"
 
 #define UART_BUFFER_SIZE 16384 /* 16k */
 
@@ -294,51 +296,145 @@ void video_line_test(int maxloops)
     }
 }
 
-
+#define WHOLE_FRAME_TIME		(1000000 / 60)
+#define FRAME_WIDTH_PIXELS		384
+#define FRAME_HEIGHT_PIXELS		264
+#define FRAME_PIXELS			(FRAME_WIDTH_PIXELS * FRAME_HEIGHT_PIXELS)
 void term_main_loop()
 {
-    ee_printf("Waiting for UART data (%d,8,N,1)\n",PiGfxConfig.uartBaudrate);
+	unsigned int frameStartTime = time_microsec();
+	unsigned int calculatedPixelPos = 0;
+	int theFrame = 0;
+	int currentColour = 255;
+	int frameX = 0;
+	int frameY = 0;
 
-    /**/
-    while( uart_buffer_start == uart_buffer_end )
-    {
-        timer_poll();       // ActLed working while waiting for data
-    }
-    /**/
-
-    gfx_term_putstring( "\x1B[2J" );
-
-    char strb[2] = {0,0};
-
+	
+#if 1
+	// To prove the coordinates being drawn to are correct
+	int x,y;
+	for (y = 0; y < 128; y++)
+	{
+		for (x=0;x<192;x++)
+		{
+			gfx_draw_pixel(x , y , 10);
+		}
+	}
+	for (y = 128; y < 256; y++)
+	{
+		for (x=192;x<384;x++)
+		{
+			gfx_draw_pixel(x , y , 20);
+		}
+	}
+	CleanDataCache ();
+	InvalidateDataCache ();
+//	while(1)
+//	{
+//	}
+#endif
+	
     while(1)
     {
-        if( uart_buffer_start != uart_buffer_end )
-        {
-            strb[0] = *uart_buffer_start++;
-            if( uart_buffer_start >= uart_buffer_limit )
-                uart_buffer_start = uart_buffer;
+		unsigned int frameTime = time_microsec() - frameStartTime;
+		int sentVsync = 0;
+		// Try to catch-up any pending vsync pulses
+		while (frameTime >= WHOLE_FRAME_TIME)
+		{
+#if 0
+			// Finish any remaining pixels in the buffer quickly
+			while (calculatedPixelPos < FRAME_PIXELS)
+			{
+				int frameX = calculatedPixelPos % FRAME_WIDTH_PIXELS;
+				int frameY = calculatedPixelPos / FRAME_WIDTH_PIXELS;
+//				ee_printf("@%d,%d  " , frameX , frameY);
 
-            if (gfx_term_loading_bitmap())
-            {
-                gfx_term_load_bitmap(strb[0]);
-            }
-            else if (gfx_term_loading_palette())
-            {
-                gfx_term_load_palette(strb[0]);
-            }
-            else
-            {
-                if (PiGfxConfig.skipBackspaceEcho)
-                {
-//                    if( time_microsec()-last_backspace_t > 50000 )
-//                        backspace_n_skip=0;
-                }
+				int gotValue = C64UserPort24Bit_getNext();
 
-                gfx_term_putstring( strb );
-            }
-        }
+//				if (gotValue != -2)
+				if (gotValue >= 0)
+				{
+					currentColour = gotValue;
+//					ee_printf("@%d,%d : 0x%02x  " , frameX , frameY , gotValue);
+				}
 
-        uart_fill_queue(0);
+				gfx_draw_pixel(frameX , frameY , currentColour);
+				calculatedPixelPos++;
+			}
+#endif
+
+			// Otherwise we see very strange cached data behaviour in the display
+			CleanDataCache ();
+			DataSyncBarrier();
+			InvalidateDataCache();
+//			gfx_switch_framebuffer();
+
+//			ee_printf("sent vsync %d   secs %d\n" , theFrame++ , theFrame / 60);
+			frameStartTime += WHOLE_FRAME_TIME;
+			frameTime -= WHOLE_FRAME_TIME;
+			C64UserPort24Bit_setVSync(0);
+			C64UserPort24Bit_setVSync(1);
+			sentVsync = 1;
+			calculatedPixelPos = 0;
+			frameX = 0;
+			frameY = 0;
+//			currentColour++;
+			currentColour = 0;
+
+//			ee_printf("@%d : vsync  " , frameTime);
+		}
+		if (sentVsync)
+		{
+			continue;
+		}
+		if (frameTime > 7285)
+		{
+			currentColour = 10;
+		}
+#if 0
+		int gotValue = C64UserPort24Bit_getNext();
+
+		if (gotValue >= 0)
+		{
+			double frameFraction = ((double)frameTime) / ((double)WHOLE_FRAME_TIME);
+			unsigned int targetPixelPosInFrame = (unsigned int) (FRAME_PIXELS * frameFraction);
+			int frameX = targetPixelPosInFrame % FRAME_WIDTH_PIXELS;
+			int frameY = targetPixelPosInFrame / FRAME_WIDTH_PIXELS;
+			ee_printf("@%d @perc%d @%d,%d: 0x%02x  " , frameTime , (int) (frameFraction * 100), frameX , frameY , gotValue);
+		}
+#endif
+		// Try to process pixels to "catch-up" where the virtual raster beam should be based on the frame time
+#if 1
+		if (frameTime > 0)
+		{
+			unsigned int targetPixelPosInFrame = (FRAME_PIXELS * frameTime) / WHOLE_FRAME_TIME;
+//			double frameFraction = ((double)frameTime) / ((double)WHOLE_FRAME_TIME);
+//			unsigned int targetPixelPosInFrame = (unsigned int) (FRAME_PIXELS * frameFraction);
+//			ee_printf("want pixels %d  " , targetPixelPosInFrame);
+			while (calculatedPixelPos < targetPixelPosInFrame)
+			{
+//				ee_printf("@%d,%d  " , frameX , frameY);
+
+				int gotValue = C64UserPort24Bit_getNext();
+
+//				if (gotValue != -2)
+				if (gotValue >= 0)
+				{
+					currentColour = gotValue;
+//					ee_printf("@%d,%d : 0x%02x  " , frameX , frameY , gotValue);
+				}
+
+				gfx_draw_pixel(frameX , frameY , currentColour);
+				calculatedPixelPos++;
+				frameX++;
+				if (frameX >= FRAME_WIDTH_PIXELS)
+				{
+					frameX = 0;
+					frameY++;
+				}
+			}
+		}
+#endif
 
         timer_poll();
     }
@@ -389,58 +485,13 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     attach_timer_handler( HEARTBEAT_FREQUENCY, _heartbeat_timer_handler, 0, 0 );
 
 //    initialize_framebuffer(640, 480, 8);
-    initialize_framebuffer(384, 256, 8);
+    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 8);
 
     gfx_term_putstring( "\x1B[2J" ); // Clear screen
     gfx_set_bg(BLUE);
     gfx_term_putstring( "\x1B[2K" ); // Render blue line at top
-    gfx_set_fg(YELLOW);// bright yellow
-    ee_printf(" ===  PiGFX %d.%d.%d  ===  Build %s\n", PIGFX_MAJVERSION, PIGFX_MINVERSION, PIGFX_BUILDVERSION, PIGFX_VERSION );
-    gfx_term_putstring( "\x1B[2K" );
-    ee_printf(" Copyright (c) 2016 Filippo Bergamasco\n\n");
-    gfx_set_bg(BLACK);
-    gfx_set_fg(DARKGRAY);
 
-    // draw possible colors:
-    // 0-15 are primary colors
-    int color = 0;
-    for (color = 0 ; color < 16 ; color++) {
-   		gfx_set_bg(color);
-   		ee_printf("%02x", color);
-    }
-    ee_printf("\n");
-
-    // 16-223 are gradients
-    int count = 0;
-	for (  ; color <= 255-24 ; color++) {
-		gfx_set_bg(color);
-		ee_printf("%02x", color);
-		count = (count + 1) % 36;
-		if (count == 0)
-			ee_printf("\n");
-	}
-
-	// 224-255 are gray scales
-    for (  ; color <= 255 ; color++) {
-		gfx_set_bg(color);
-		ee_printf("%02x", color);
-	}
 	ee_printf("\n");
-
-    /* informations
-    gfx_set_bg(0);
-    ee_printf("W: %d\nH: %d\nPitch: %d\nFont Width: %d, Height: %d\nChar bytes: %d\nFont Ints: %d, Remain: %d\n",
-			ctx.W, ctx.H,
-			ctx.Pitch,
-			ctx.term.FONTWIDTH,
-			ctx.term.FONTHEIGHT,
-			ctx.term.FONTCHARBYTES,
-			ctx.term.FONTWIDTH_INTS, ctx.term.FONTWIDTH_REMAIN);
-    ee_printf("size: %d, bpp: %d\n", ctx.size, ctx.bpp);
-	*/
-
-    //video_test();
-    //video_line_test();
 
     gfx_set_bg(BLACK);
     gfx_set_fg(GRAY);
@@ -474,6 +525,7 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
 //    {
 //        ps2KeyboardFound = 1;
 //    }
+	C64UserPort24Bit_init();
 
     if (PiGfxConfig.showRC2014Logo)
     {

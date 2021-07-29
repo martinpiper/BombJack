@@ -2699,8 +2699,14 @@ void gfx_switch_framebuffer()
 {
     // Change FB write pointer
     unsigned char* showingFb = ctx.pfb;     // this fb is now not showing, but gets changed now to be showing
-    if (ctx.pfb == ctx.pFirstFb) ctx.pfb = ctx.pSecondFb;
-    else ctx.pfb = ctx.pFirstFb;
+    if (ctx.pfb == ctx.pFirstFb)
+	{
+		ctx.pfb = ctx.pSecondFb;
+	}
+    else
+	{
+		ctx.pfb = ctx.pFirstFb;
+	}
 
     // Change y offset of framebuffer to other buffer
     if (ctx.fb_yOffset == 0) ctx.fb_yOffset = ctx.H;
@@ -2708,5 +2714,14 @@ void gfx_switch_framebuffer()
     fb_switch_framebuffer(ctx.fb_yOffset);
 
     // Copy all data of the now showing framebuffer part to the not showing framebuffer part
-    dma_memcpy_32(showingFb, ctx.pfb, ctx.size);
+//    dma_memcpy_32(showingFb, ctx.pfb, ctx.size);
+}
+
+void gfx_draw_pixel(int x0, int y0, unsigned int colour)
+{
+    if ((y0 < 0) || (y0 >= (int)ctx.H)) return;
+    if (x0 >= (int)ctx.W) return;
+
+    register unsigned char* pfb = PFB(x0,y0);
+    *pfb = (unsigned char) colour;
 }

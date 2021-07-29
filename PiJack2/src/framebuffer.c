@@ -355,6 +355,8 @@ FB_RETURN_TYPE fb_switch_framebuffer(unsigned int yOffset)
     msg->value.request.yOffset = yOffset;
     msg->footer.end = 0;
 
+    CleanDataCache ();
+    DataSyncBarrier ();
     if (mbox_send(msg) != 0) {
         return FB_ERROR;
     }

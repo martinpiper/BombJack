@@ -29,20 +29,30 @@
 	This starts a qemu monitor on port 55555
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append "" -monitor tcp::55555,server,nowait
 
+	To copy to the SD card:
+		copy bin\kernel.img g: /y
 
 * TODO:
-	* Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
+	* Done: Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
 		handlePS2ClockEvent
 		Note time_microsec()
 		uart_buffer_start == uart_buffer_end
 		Note GPIO code in initPS2
 	* Done: Strip code, remove USPI as it isn't needed.
 		Tested in QEmu
-	* Add simple code, one GPIO IRQ, to read values from C64, like in PiJack
-	* Store in volatile ring buffer, also like in PiJack
-	* Display on the terminal display
-		Note: initialize_framebuffer(384, 256, 8);
-	* Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
+	* Done: Add simple code, one GPIO IRQ, to read values from C64, like in PiJack
+	* Done: Store in volatile ring buffer, also like in PiJack
+	* Done: Display on the terminal display
+		Note: initialize_framebuffer(384, 264, 8);
+	* Done: Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
+	
+	* TODO: When the C64 is sending data and the display is rendering, only the top part of the screen is showing colour updates. The raster timing is consistent.
+		This indicates the timing is off? but the screen redraw does update at 60 fps, the full screen of pixels is updated
+		The data cache is invalidated between frames, and also when a byte arrives
+		What is going in here? :)
+		* "if (frameTime > 7285)" shows the problem on real hardware quite well. The split should be quite stable in the middle of the screen, however it is not...
+			This indicates there is an issue with the timing of pixel writes and the number it can process
+		* I think I'm going to capture a frame's worth of timed data from the C64 then draw the screen one frame behind instead
 	
 * Stretch TODO:
 	* Strip PS2 code
