@@ -53,6 +53,8 @@
 		* "if (frameTime > 7285)" shows the problem on real hardware quite well. The split should be quite stable in the middle of the screen, however it is not...
 			This indicates there is an issue with the timing of pixel writes and the number it can process
 		* I think I'm going to capture a frame's worth of timed data from the C64 then draw the screen one frame behind instead
+		* C64UserPort24Bit_getNext will need to return time captured and also have a filter time based on the current frameStartTime
+			* It will need to capture raw time_microsec() for each event
 	
 * Stretch TODO:
 	* Strip PS2 code
