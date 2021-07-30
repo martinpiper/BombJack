@@ -93,5 +93,6 @@ extern unsigned char gfx_term_loading_palette();
 extern void gfx_term_load_palette(char rgb);
 
 extern void gfx_draw_pixel(int x0, int y0, unsigned int colour);
+extern unsigned char* gfx_get_pixel_addr(int x0, int y0);
 
 #endif

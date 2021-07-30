@@ -46,7 +46,7 @@
 		Note: initialize_framebuffer(384, 264, 8);
 	* Done: Validate that the screen can be updated quickly enough with the GPIO IRQ taking priority
 	
-	* TODO: When the C64 is sending data and the display is rendering, only the top part of the screen is showing colour updates. The raster timing is consistent.
+	* Done: When the C64 is sending data and the display is rendering, only the top part of the screen is showing colour updates. The raster timing is consistent.
 		This indicates the timing is off? but the screen redraw does update at 60 fps, the full screen of pixels is updated
 		The data cache is invalidated between frames, and also when a byte arrives
 		What is going in here? :)

@@ -2725,3 +2725,12 @@ void gfx_draw_pixel(int x0, int y0, unsigned int colour)
     register unsigned char* pfb = PFB(x0,y0);
     *pfb = (unsigned char) colour;
 }
+
+unsigned char* gfx_get_pixel_addr(int x0, int y0)
+{
+    if ((y0 < 0) || (y0 >= (int)ctx.H)) return 0;
+    if (x0 >= (int)ctx.W) return 0;
+
+    unsigned char* pfb = PFB(x0,y0);
+    return pfb;
+}

@@ -303,14 +303,10 @@ void video_line_test(int maxloops)
 void term_main_loop()
 {
 	unsigned int frameStartTime = time_microsec();
-	unsigned int calculatedPixelPos = 0;
 	int theFrame = 0;
-	int currentColour = 255;
-	int frameX = 0;
-	int frameY = 0;
 
 	
-#if 1
+#if 0
 	// To prove the coordinates being drawn to are correct
 	int x,y;
 	for (y = 0; y < 128; y++)
@@ -337,104 +333,60 @@ void term_main_loop()
     while(1)
     {
 		unsigned int frameTime = time_microsec() - frameStartTime;
-		int sentVsync = 0;
 		// Try to catch-up any pending vsync pulses
 		while (frameTime >= WHOLE_FRAME_TIME)
 		{
+			theFrame++;
+			C64UserPort24Bit_setVSync(0);
+			C64UserPort24Bit_setVSync(1);
+
 #if 0
-			// Finish any remaining pixels in the buffer quickly
-			while (calculatedPixelPos < FRAME_PIXELS)
-			{
-				int frameX = calculatedPixelPos % FRAME_WIDTH_PIXELS;
-				int frameY = calculatedPixelPos / FRAME_WIDTH_PIXELS;
-//				ee_printf("@%d,%d  " , frameX , frameY);
-
-				int gotValue = C64UserPort24Bit_getNext();
-
-//				if (gotValue != -2)
-				if (gotValue >= 0)
-				{
-					currentColour = gotValue;
-//					ee_printf("@%d,%d : 0x%02x  " , frameX , frameY , gotValue);
-				}
-
-				gfx_draw_pixel(frameX , frameY , currentColour);
-				calculatedPixelPos++;
-			}
+			// Add some debug values
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 16);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 32);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 128);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 255);
 #endif
+			
+			// We have a frame worth of time, so render the data associated with it
+			int calculatedPixelPos = 0;
+			int currentColour = 1;
+			int frameX = 0;
+			int frameY = 0;
+			int nextPixelPos = FRAME_HEIGHT_PIXELS;
+			int nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
+
+			for (frameY = 0 ; frameY < FRAME_HEIGHT_PIXELS ; frameY++)
+			{
+				// Pre-calc the current span start address based on frameY
+				unsigned char *pixelAddr = gfx_get_pixel_addr(0,frameY);
+				for (frameX = 0 ; frameX < FRAME_WIDTH_PIXELS ; frameX++)
+				{
+					if (nextPixelColour != -2 && calculatedPixelPos >= nextPixelPos)
+					{
+						currentColour = nextPixelColour;
+						nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
+//						ee_printf("frm%d : @%d,%d : 0x%02x  " , theFrame , frameX , frameY , currentColour);
+					}
+
+					*pixelAddr++ = (unsigned char) currentColour;
+
+					calculatedPixelPos++;
+				}
+			}
 
 			// Otherwise we see very strange cached data behaviour in the display
-			CleanDataCache ();
-			DataSyncBarrier();
-			InvalidateDataCache();
+//			CleanDataCache ();
+//			DataSyncBarrier();
+//			InvalidateDataCache();
 //			gfx_switch_framebuffer();
 
 //			ee_printf("sent vsync %d   secs %d\n" , theFrame++ , theFrame / 60);
 			frameStartTime += WHOLE_FRAME_TIME;
 			frameTime -= WHOLE_FRAME_TIME;
-			C64UserPort24Bit_setVSync(0);
-			C64UserPort24Bit_setVSync(1);
-			sentVsync = 1;
-			calculatedPixelPos = 0;
-			frameX = 0;
-			frameY = 0;
-//			currentColour++;
-			currentColour = 0;
 
 //			ee_printf("@%d : vsync  " , frameTime);
 		}
-		if (sentVsync)
-		{
-			continue;
-		}
-		if (frameTime > 7285)
-		{
-			currentColour = 10;
-		}
-#if 0
-		int gotValue = C64UserPort24Bit_getNext();
-
-		if (gotValue >= 0)
-		{
-			double frameFraction = ((double)frameTime) / ((double)WHOLE_FRAME_TIME);
-			unsigned int targetPixelPosInFrame = (unsigned int) (FRAME_PIXELS * frameFraction);
-			int frameX = targetPixelPosInFrame % FRAME_WIDTH_PIXELS;
-			int frameY = targetPixelPosInFrame / FRAME_WIDTH_PIXELS;
-			ee_printf("@%d @perc%d @%d,%d: 0x%02x  " , frameTime , (int) (frameFraction * 100), frameX , frameY , gotValue);
-		}
-#endif
-		// Try to process pixels to "catch-up" where the virtual raster beam should be based on the frame time
-#if 1
-		if (frameTime > 0)
-		{
-			unsigned int targetPixelPosInFrame = (FRAME_PIXELS * frameTime) / WHOLE_FRAME_TIME;
-//			double frameFraction = ((double)frameTime) / ((double)WHOLE_FRAME_TIME);
-//			unsigned int targetPixelPosInFrame = (unsigned int) (FRAME_PIXELS * frameFraction);
-//			ee_printf("want pixels %d  " , targetPixelPosInFrame);
-			while (calculatedPixelPos < targetPixelPosInFrame)
-			{
-//				ee_printf("@%d,%d  " , frameX , frameY);
-
-				int gotValue = C64UserPort24Bit_getNext();
-
-//				if (gotValue != -2)
-				if (gotValue >= 0)
-				{
-					currentColour = gotValue;
-//					ee_printf("@%d,%d : 0x%02x  " , frameX , frameY , gotValue);
-				}
-
-				gfx_draw_pixel(frameX , frameY , currentColour);
-				calculatedPixelPos++;
-				frameX++;
-				if (frameX >= FRAME_WIDTH_PIXELS)
-				{
-					frameX = 0;
-					frameY++;
-				}
-			}
-		}
-#endif
 
         timer_poll();
     }

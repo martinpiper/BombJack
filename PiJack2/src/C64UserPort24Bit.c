@@ -25,7 +25,8 @@
 #define	PIN_FLAG2	9
 
 #define	BUFFERSIZE	1024
-static unsigned int volatile gotBytes[BUFFERSIZE];
+static int volatile gotBytes[BUFFERSIZE];
+static unsigned int volatile gotBytesTime[BUFFERSIZE];
 static volatile int gotBytesCount = 0;
 static volatile int gotBytesCountDisplay = 0;
 
@@ -67,6 +68,8 @@ static void onPC2(void)
 	}
 
 	gotBytes[gotBytesCount] = value;
+	gotBytesTime[gotBytesCount] = time_microsec();
+
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
 
 #if RPI == 1
@@ -80,6 +83,8 @@ static void onPC2(void)
 static void onPA2(void)
 {
 	gotBytes[gotBytesCount] = -1;
+	gotBytesTime[gotBytesCount] = time_microsec();
+
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
 	
 #if RPI == 1
@@ -120,8 +125,8 @@ unsigned char C64UserPort24Bit_init(void)
 
     gpio_setpull(PIN_FLAG2, GPIO_PULL_OFF);
 
-    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
-    fiq_attach_gpio_handler(PIN_PA2, onPA2);
+//    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
+//    fiq_attach_gpio_handler(PIN_PA2, onPA2);
 
     gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
     fiq_attach_gpio_handler(PIN_PC2, onPC2);
@@ -130,15 +135,46 @@ unsigned char C64UserPort24Bit_init(void)
 	return 0;
 }
 
-int C64UserPort24Bit_getNext(void)
+// Used for debugging
+void C64UserPort24Bit_addNext(unsigned int theTime , int theValue)
 {
+	gotBytes[gotBytesCount] = theValue;
+	gotBytesTime[gotBytesCount] = theTime;
+
+	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
+	
+#if RPI == 1
+	CleanDataCache();
+	DataSyncBarrier();
+#else
+	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
+#endif
+}
+
+int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned int lowTimeFilter , unsigned int highTimeFilter , int totalPixels , int *nextPixelPos)
+{
+	// Retire any early values in the time window
+	while ( (gotBytesCount != gotBytesCountDisplay) && (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) < lowTimeFilter )
+	{
+		gotBytesCountDisplay = (gotBytesCountDisplay+1) & (BUFFERSIZE-1);
+	}
+
+	// Don't return anything if there isn't any value pending
 	if (gotBytesCount == gotBytesCountDisplay)
 	{
 		return -2;
 	}
-	
+
+	// Ignore values beyond the maximum time window
+	if ( (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) >= highTimeFilter )
+	{
+		return -2;
+	}
+
+	// Now should be left with only values we want
 	int temp = gotBytes[gotBytesCountDisplay];
-	gotBytesCountDisplay = (gotBytesCountDisplay+1) & (BUFFERSIZE-1);	
+	*nextPixelPos = (((gotBytesTime[gotBytesCountDisplay] - startTimeWindow) - lowTimeFilter) * totalPixels) / (highTimeFilter - lowTimeFilter);
+	gotBytesCountDisplay = (gotBytesCountDisplay+1) & (BUFFERSIZE-1);
 
 //	ee_printf("[C64UserPort24Bit] 0x%02x\n" , temp);
 
