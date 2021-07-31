@@ -139,8 +139,8 @@ unsigned char C64UserPort24Bit_init(void)
 
     gpio_setpull(PIN_FLAG2, GPIO_PULL_OFF);
 
-//    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
-//    fiq_attach_gpio_handler(PIN_PA2, onPA2);
+    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
+    fiq_attach_gpio_handler(PIN_PA2, onPA2);
 
     gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
     fiq_attach_gpio_handler(PIN_PC2, onPC2);
@@ -163,6 +163,7 @@ unsigned int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned in
 	// Don't return anything if there isn't any value pending
 	if (gotBytesCount == gotBytesCountDisplay)
 	{
+		*nextPixelPos = totalPixels;
 		return 0;
 	}
 
@@ -175,12 +176,14 @@ unsigned int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned in
 	// Don't return anything if there isn't any value pending
 	if (gotBytesCount == gotBytesCountDisplay)
 	{
+		*nextPixelPos = totalPixels;
 		return 0;
 	}
 
 	// Ignore values beyond the maximum time window
 	if ( (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) >= highTimeFilter )
 	{
+		*nextPixelPos = totalPixels;
 		return 0;
 	}
 

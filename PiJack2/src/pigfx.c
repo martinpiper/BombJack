@@ -342,10 +342,10 @@ void term_main_loop()
 
 #if 0
 			// Add some debug values
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 16);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 32);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 128);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 255);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 0x04);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 0x08);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 0x18);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 0x1f);
 #endif
 
 			// Before rendering, sync all data from GPIO IRQs
@@ -370,12 +370,12 @@ void term_main_loop()
 					{
 						currentColour = nextPixelColour;
 						// Need to reset the value before the next call to cope with an empty buffer
-						nextPixelPos = FRAME_PIXELS;
 						nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
 //						ee_printf("frm%d : @%d,%d : 0x%02x  " , theFrame , frameX , frameY , currentColour);
 					}
 
 					*pixelAddr++ = (unsigned char) currentColour;
+					*pixelAddr++ = (unsigned char) 0;
 
 					calculatedPixelPos++;
 				}
@@ -443,7 +443,7 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     attach_timer_handler( HEARTBEAT_FREQUENCY, _heartbeat_timer_handler, 0, 0 );
 
 //    initialize_framebuffer(640, 480, 8);
-    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 8);
+    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 16);
 
     gfx_term_putstring( "\x1B[2J" ); // Clear screen
     gfx_set_bg(BLUE);
