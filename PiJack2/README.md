@@ -57,8 +57,8 @@
 			* It will need to capture raw time_microsec() for each event
 			* Don't flush cache in gpio irq, instead flush caches just before rendering
 
-	
-* Stretch TODO:
+	* Done: Add proper 32 bit user port interface return values, with incrementing address
+	* Proper video rendering handling, port the java code...
 	* Strip PS2 code
 	* GPIO IRQ on separate higher priority core compared to the video rendering
 	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core

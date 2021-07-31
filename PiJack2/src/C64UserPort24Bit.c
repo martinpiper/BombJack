@@ -24,15 +24,18 @@
 // Outputs
 #define	PIN_FLAG2	9
 
-#define	BUFFERSIZE	1024
-static int volatile gotBytes[BUFFERSIZE];
+#define	BUFFERSIZE	(1<<16)
+static unsigned int volatile gotBytes[BUFFERSIZE];
 static unsigned int volatile gotBytesTime[BUFFERSIZE];
 static volatile int gotBytesCount = 0;
 static volatile int gotBytesCountDisplay = 0;
+static volatile int interfaceState = 0;
+static volatile unsigned int interfaceStateEBBS = 0;
+static volatile unsigned int interfaceStateAddress = 0;
 
 static void onPC2(void)
 {
-	int value = 0;
+	unsigned int value = 0;
 	int allBits = gpio_get0to31();
 	if (allBits & (1<<PIN_DATA0))
 	{
@@ -67,36 +70,43 @@ static void onPC2(void)
 		value |= 1 << 7;
 	}
 
-	gotBytes[gotBytesCount] = value;
-	gotBytesTime[gotBytesCount] = time_microsec();
+	switch(interfaceState)
+	{
+		case 0:
+		default:
+			interfaceStateEBBS = (unsigned int) value;
+			interfaceState++;
+			break;
 
-	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
+		case 1:
+			interfaceStateAddress = (unsigned int) value;
+			interfaceState++;
+			break;
 
-#if 0
-#if RPI == 1
-	CleanDataCache();
-	DataSyncBarrier();
-#else
-	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
-#endif
-#endif
+		case 2:
+			interfaceStateAddress |= (unsigned int) value << 8;
+			interfaceState++;
+			break;
+
+		case 3:
+			// Ordering matches the 32 bits used in the schematic
+			gotBytes[gotBytesCount] = value | (interfaceStateEBBS << 8) | ((interfaceStateAddress & 0xffff) << 16);
+			gotBytesTime[gotBytesCount] = time_microsec();
+
+			gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
+			
+			interfaceStateAddress++;
+			break;
+	}
+
 }
 
 static void onPA2(void)
 {
-	gotBytes[gotBytesCount] = -1;
-	gotBytesTime[gotBytesCount] = time_microsec();
-
-	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
-	
-#if 0
-#if RPI == 1
-	CleanDataCache();
-	DataSyncBarrier();
-#else
-	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
-#endif
-#endif
+	// Clear internal state
+	interfaceState = 0;
+	interfaceStateEBBS = 0;
+	interfaceStateAddress = 0;
 }
 
 unsigned char C64UserPort24Bit_init(void)
@@ -140,25 +150,22 @@ unsigned char C64UserPort24Bit_init(void)
 }
 
 // Used for debugging
-void C64UserPort24Bit_addNext(unsigned int theTime , int theValue)
+void C64UserPort24Bit_addNext(unsigned int theTime , unsigned int theValue)
 {
 	gotBytes[gotBytesCount] = theValue;
 	gotBytesTime[gotBytesCount] = theTime;
 
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
-
-#if 0
-#if RPI == 1
-	CleanDataCache();
-	DataSyncBarrier();
-#else
-	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
-#endif
-#endif
 }
 
-int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned int lowTimeFilter , unsigned int highTimeFilter , int totalPixels , int *nextPixelPos)
+unsigned int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned int lowTimeFilter , unsigned int highTimeFilter , int totalPixels , int *nextPixelPos)
 {
+	// Don't return anything if there isn't any value pending
+	if (gotBytesCount == gotBytesCountDisplay)
+	{
+		return 0;
+	}
+
 	// Retire any early values in the time window
 	while ( (gotBytesCount != gotBytesCountDisplay) && (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) < lowTimeFilter )
 	{
@@ -168,17 +175,17 @@ int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned int lowTime
 	// Don't return anything if there isn't any value pending
 	if (gotBytesCount == gotBytesCountDisplay)
 	{
-		return -2;
+		return 0;
 	}
 
 	// Ignore values beyond the maximum time window
 	if ( (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) >= highTimeFilter )
 	{
-		return -2;
+		return 0;
 	}
 
 	// Now should be left with only values we want
-	int temp = gotBytes[gotBytesCountDisplay];
+	unsigned int temp = gotBytes[gotBytesCountDisplay];
 	*nextPixelPos = (((gotBytesTime[gotBytesCountDisplay] - startTimeWindow) - lowTimeFilter) * totalPixels) / (highTimeFilter - lowTimeFilter);
 	gotBytesCountDisplay = (gotBytesCountDisplay+1) & (BUFFERSIZE-1);
 

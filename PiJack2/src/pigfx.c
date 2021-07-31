@@ -357,8 +357,8 @@ void term_main_loop()
 			int currentColour = 1;
 			int frameX = 0;
 			int frameY = 0;
-			int nextPixelPos = FRAME_HEIGHT_PIXELS;
-			int nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
+			int nextPixelPos = FRAME_PIXELS;
+			unsigned int nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
 
 			for (frameY = 0 ; frameY < FRAME_HEIGHT_PIXELS ; frameY++)
 			{
@@ -366,9 +366,11 @@ void term_main_loop()
 				unsigned char *pixelAddr = gfx_get_pixel_addr(0,frameY);
 				for (frameX = 0 ; frameX < FRAME_WIDTH_PIXELS ; frameX++)
 				{
-					if (nextPixelColour != -2 && calculatedPixelPos >= nextPixelPos)
+					if (calculatedPixelPos > nextPixelPos)
 					{
 						currentColour = nextPixelColour;
+						// Need to reset the value before the next call to cope with an empty buffer
+						nextPixelPos = FRAME_PIXELS;
 						nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
 //						ee_printf("frm%d : @%d,%d : 0x%02x  " , theFrame , frameX , frameY , currentColour);
 					}
