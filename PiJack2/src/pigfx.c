@@ -347,7 +347,11 @@ void term_main_loop()
 			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 128);
 			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 255);
 #endif
-			
+
+			// Before rendering, sync all data from GPIO IRQs
+			CleanDataCache();
+			InvalidateDataCache();
+	
 			// We have a frame worth of time, so render the data associated with it
 			int calculatedPixelPos = 0;
 			int currentColour = 1;
@@ -376,7 +380,7 @@ void term_main_loop()
 			}
 
 			// Otherwise we see very strange cached data behaviour in the display
-//			CleanDataCache ();
+//			CleanDataCache();
 //			DataSyncBarrier();
 //			InvalidateDataCache();
 //			gfx_switch_framebuffer();

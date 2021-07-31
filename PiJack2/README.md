@@ -55,6 +55,8 @@
 		* I think I'm going to capture a frame's worth of timed data from the C64 then draw the screen one frame behind instead
 		* C64UserPort24Bit_getNext will need to return time captured and also have a filter time based on the current frameStartTime
 			* It will need to capture raw time_microsec() for each event
+			* Don't flush cache in gpio irq, instead flush caches just before rendering
+
 	
 * Stretch TODO:
 	* Strip PS2 code

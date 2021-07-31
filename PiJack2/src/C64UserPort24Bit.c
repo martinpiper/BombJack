@@ -72,11 +72,13 @@ static void onPC2(void)
 
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
 
+#if 0
 #if RPI == 1
 	CleanDataCache();
 	DataSyncBarrier();
 #else
 	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
+#endif
 #endif
 }
 
@@ -87,11 +89,13 @@ static void onPA2(void)
 
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
 	
+#if 0
 #if RPI == 1
 	CleanDataCache();
 	DataSyncBarrier();
 #else
 	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
+#endif
 #endif
 }
 
@@ -142,12 +146,14 @@ void C64UserPort24Bit_addNext(unsigned int theTime , int theValue)
 	gotBytesTime[gotBytesCount] = theTime;
 
 	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
-	
+
+#if 0
 #if RPI == 1
 	CleanDataCache();
 	DataSyncBarrier();
 #else
 	CleanAndInvalidateDataCacheRange(&gotBytesCount , sizeof(gotBytesCount));
+#endif
 #endif
 }
 
