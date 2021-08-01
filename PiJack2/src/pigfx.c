@@ -34,6 +34,7 @@
 #include "mmu.h"
 #include "C64UserPort24Bit.h"
 #include "synchronize.h"
+#include "DisplayBombJackC.h"
 
 #define UART_BUFFER_SIZE 16384 /* 16k */
 
@@ -305,6 +306,7 @@ void term_main_loop()
 	unsigned int frameStartTime = time_microsec();
 	int theFrame = 0;
 
+	DisplayBombJack_init();
 	
 #if 0
 	// To prove the coordinates being drawn to are correct
@@ -340,42 +342,53 @@ void term_main_loop()
 			C64UserPort24Bit_setVSync(0);
 			C64UserPort24Bit_setVSync(1);
 
+			// Debug enable the display and show some raster bars
 #if 1
-			// Add some debug values
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 0x04);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 0x08);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 0x18);
-			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 0x1f);
+			// Add some debug values, these are now full memory address bus values
+			// (MSB) <addr>x16 <ebbs>x8 <value>x8 (LSB)
+			// Enable display and default priority register
+			C64UserPort24Bit_addNext(frameStartTime , 0x9e000130);
+			C64UserPort24Bit_addNext(frameStartTime , 0x9e0801e4);
+			// Palette entries
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 0x9dfe0104 | (theFrame & 0xff));
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 0x9dfe0108);
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 16) , 0x9dfe0118 | (theFrame & 0xff));
+			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 2) , 0x9dfe011f);
 #endif
 
 			// Before rendering, sync all data from GPIO IRQs
 			CleanDataCache();
 			InvalidateDataCache();
-	
+			
 			// We have a frame worth of time, so render the data associated with it
 			int calculatedPixelPos = 0;
-			int currentColour = 1;
+//			int currentColour = 1;
 			int frameX = 0;
 			int frameY = 0;
 			int nextPixelPos = FRAME_PIXELS;
 			unsigned int nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
 
+			DisplayBombJack_startCalculateAFrame();
+
 			for (frameY = 0 ; frameY < FRAME_HEIGHT_PIXELS ; frameY++)
 			{
 				// Pre-calc the current span start address based on frameY
-				unsigned char *pixelAddr = gfx_get_pixel_addr(0,frameY);
+//				unsigned char *pixelAddr = gfx_get_pixel_addr(0,frameY);
 				for (frameX = 0 ; frameX < FRAME_WIDTH_PIXELS ; frameX++)
 				{
 					if (calculatedPixelPos > nextPixelPos)
 					{
-						currentColour = nextPixelColour;
+//						ee_printf("frm%d : @%d,%d : 0x%x  " , theFrame , frameX , frameY , nextPixelColour);
+						DisplayBombJack_writeMemoryBus(nextPixelColour);
+//						currentColour = nextPixelColour;
 						// Need to reset the value before the next call to cope with an empty buffer
 						nextPixelColour = C64UserPort24Bit_getNext(frameStartTime , 0 , WHOLE_FRAME_TIME , FRAME_PIXELS, &nextPixelPos);
-//						ee_printf("frm%d : @%d,%d : 0x%02x  " , theFrame , frameX , frameY , currentColour);
 					}
 
-					*pixelAddr++ = (unsigned char) currentColour;
-					*pixelAddr++ = (unsigned char) 0;
+//					*pixelAddr++ = (unsigned char) currentColour;
+//					*pixelAddr++ = (unsigned char) 0;
+
+					DisplayBombJack_calculatePixel();
 
 					calculatedPixelPos++;
 				}
@@ -443,6 +456,7 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     attach_timer_handler( HEARTBEAT_FREQUENCY, _heartbeat_timer_handler, 0, 0 );
 
 //    initialize_framebuffer(640, 480, 8);
+//    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 8);
     initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 16);
 
     gfx_term_putstring( "\x1B[2J" ); // Clear screen

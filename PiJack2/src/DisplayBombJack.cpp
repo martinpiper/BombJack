@@ -2,11 +2,40 @@
 #include <stdlib.h>
 
 extern "C" {
+#include "ee_printf.h"
 #include "gfx.h"
+#include "DisplayBombJackC.h"
 }
 #include "DisplayBombJack.h"
 
-class DisplayBombJack;
+DisplayBombJack gTheDisplay;
+
+extern "C" {
+void DisplayBombJack_calculatePixel()
+{
+	if (!gTheDisplay.enableDisplay) {
+//		ee_printf("DisplayBombJack not enabled!\n");
+	}
+//	ee_printf("@%d,%d :   " , gTheDisplay.displayX , gTheDisplay.displayY);
+	gTheDisplay.calculatePixel();
+}
+
+void DisplayBombJack_startCalculateAFrame()
+{
+	gTheDisplay.startCalculateAFrame();
+}
+
+void DisplayBombJack_init()
+{
+	gTheDisplay.init();
+}
+
+void DisplayBombJack_writeMemoryBus(unsigned int value)
+{
+	gTheDisplay.writeData((value >> 16) & 0xffff , (value >> 8) & 0xff, value & 0xff);
+}
+
+}
 
 bool MemoryBus::addressLower8KActive(int addressEx) {
 	return addressEx < 0x2000;
@@ -49,9 +78,9 @@ void MemoryBus::writeData(int address, int addressEx, int data) {
 	writeData(address, addressEx, (unsigned char) data);
 }
 
-//virtual void MemoryBus::writeData(int address, int addressEx, unsigned char data);
+void MemoryBus::writeData(int address, int addressEx, unsigned char data) {}
 
-//virtual void MemoryBus::setAddressBus(int address, int addressEx);
+void MemoryBus::setAddressBus(int address, int addressEx) {}
 
 int MemoryBus::getByteOrContention(int value) {
 	sequentialValue++;
@@ -68,15 +97,49 @@ bool MemoryBus::extEXTWANTIRQ() {
 void MemoryBus::resetExtEXTWANTIRQ() {
 }
 
-//void UserPortTo24BitAddress::setDisplay(DisplayBombJack *);
-//void UserPortTo24BitAddress::writeData(int address, int addressEx, unsigned char data);
-//void UserPortTo24BitAddress::calculatePixel();
+void UserPortTo24BitAddress::setDisplay(DisplayBombJack *) {}
+void UserPortTo24BitAddress::writeData(int address, int addressEx, unsigned char data) {}
+void UserPortTo24BitAddress::calculatePixel() {}
 
-//void DisplayLayer::setDisplay(DisplayBombJack *);
-//void DisplayLayer::writeData(int address, int addressEx, unsigned char data);
-//int DisplayLayer::calculatePixel(int displayH, int displayV, bool _hSync, bool _vSync);
+void DisplayLayer::setDisplay(DisplayBombJack *) {}
+void DisplayLayer::writeData(int address, int addressEx, unsigned char data) {}
+int DisplayLayer::calculatePixel(int displayH, int displayV, bool _hSync, bool _vSync) {}
 
 DisplayBombJack::DisplayBombJack() {
+}
+
+void DisplayBombJack::init(void) {
+    layersRaw[0] = 0;
+    layersRaw[1] = 0;
+    layersRaw[2] = 0;
+    layersRaw[3] = 0;
+
+    frameNumber = 0;
+    displayWidth = 384;
+    displayHeight = 264;
+    busContentionPalette = 0;
+    addressPalette = 0x9c00, addressExPalette = 0x01;
+    addressRegisters = 0x9e00, addressExRegisters = 0x01;
+    displayPriority = 0;  // Default to be 0, this helps ensure startup code correctly sets this option
+
+    displayH = 0, displayV = 0;
+    displayX = 0, displayY = 0xf8;	// Start when the vsync negative edge happens
+    displayBitmapX = 0, displayBitmapY = 0xf8;	// Start when the vsync negative edge happens
+    enablePixels = false;
+    borderX = true, borderY = true;
+    enableDisplay = false;  // Default to be display off, this helps ensure startup code correctly sets this option
+    latchedPixel = 0;
+    lastDataWritten = 0;
+    vBlank = false;
+    _hSync = true, _vSync = true;
+    extEXTWANTIRQFlag = false;
+    pixelsSinceLastDebugWrite = 0;
+    pixelsSinceLastDebugWriteMax = 32;
+    is16Colours = false;
+    callbackAPU = 0;
+	layerIndex = 0;
+	pixelAddr = 0;
+    sequentialValue = 0;
 }
 
 int DisplayBombJack::getFrameNumberForSync() {
@@ -141,6 +204,8 @@ void DisplayBombJack::addLayer(DisplayLayer *layer) {
 }
 
 void DisplayBombJack::writeData(int address, int addressEx, unsigned char data) {
+//	ee_printf("@%d,%d : 0x%x 0x%x 0x%x  " , displayX , displayY , address , addressEx , data);
+//	ee_printf("regs 0x%x 0x%x  " , addressRegisters , addressExRegisters , data);
 
 	lastDataWritten = data;
 	if (MemoryBus::addressActive(addressEx, addressExPalette) && address >= addressPalette && address < (addressPalette + 0x200)) {
@@ -153,6 +218,7 @@ void DisplayBombJack::writeData(int address, int addressEx, unsigned char data) 
 
 	// This logic now exists on the video layer hardware
 	if (MemoryBus::addressActive(addressEx, addressExRegisters) && address == addressRegisters) {
+//		ee_printf("hit display reg  ");
 		if ((data & 0x20) > 0) {
 			enableDisplay = true;
 		} else {
@@ -183,11 +249,8 @@ void DisplayBombJack::writeData(int address, int addressEx, unsigned char data) 
 	}
 }
 
-void DisplayBombJack::calculateAFrame() {
-	pixelAddr = gfx_get_pixel_addr(0,0);
-	for (int i = 0 ; i < pixelsInWholeFrame() ; i++) {
-		calculatePixel();
-	}
+void DisplayBombJack::startCalculateAFrame() {
+	pixelAddr = gfx_get_pixel_addr(displayBitmapX ,displayBitmapY);
 }
 
 int DisplayBombJack::pixelsInWholeFrame() {

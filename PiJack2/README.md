@@ -59,6 +59,10 @@
 
 	* Done: Add proper 32 bit user port interface return values, with incrementing address
 	* Proper video rendering handling, port the java code...
+		* Added DisplayBombJack.h
+		* Note there is no libstdc++ so new won't work, neither will stack allocated class initialisation, so an explicit init() method is needed for each class
+		** Eek, it looks like the code is updating the graphics too slowly... Is the cache off or something?
+			Note: enable "// Debug enable the display and show some raster bars" then test the rendering speed on the real hardware compared to qemu...
 	* Strip PS2 code
 	* GPIO IRQ on separate higher priority core compared to the video rendering
 	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core

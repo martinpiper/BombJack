@@ -50,6 +50,8 @@ class DisplayBombJack : public MemoryBus {
 
 public:
     DisplayBombJack();
+	
+	void init(void);
 
     DisplayLayer *layersRaw[4] = {0,0,0,0};
 
@@ -78,8 +80,8 @@ public:
     bool is_vSync();
 
     int displayH = 0, displayV = 0;
-    int displayX = 0, displayY = 0;
-    int displayBitmapX = 0, displayBitmapY = 0;
+    int displayX = 0, displayY = 0xf8;	// Start when the vsync negative edge happens
+    int displayBitmapX = 0, displayBitmapY = 0xf8;	// Start when the vsync negative edge happens
     bool enablePixels = false;
     bool borderX = true, borderY = true;
     bool enableDisplay = false;  // Default to be display off, this helps ensure startup code correctly sets this option
@@ -114,7 +116,7 @@ public:
 
     virtual void writeData(int address, int addressEx, unsigned char data);
 
-    void calculateAFrame();
+    void startCalculateAFrame();
 
     int pixelsInWholeFrame();
 

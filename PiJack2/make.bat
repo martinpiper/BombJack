@@ -5,9 +5,10 @@ if "%1" == "dump" goto DUMP
 if "%1" == "clean" goto CLEAN
 set RPI=%1
 
-set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o
+set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o DisplayBombJack.o
 
 set CFLAGS= -Wall -Wextra -O2 -g -nostdlib -nostartfiles -fno-stack-limit -ffreestanding -fsigned-char
+set CPPFLAGS= %CFLAGS% -fno-exceptions -fno-rtti
 if "%RPI%"=="1" (
   set CFLAGS= %CFLAGS% -march=armv6j -mtune=arm1176jzf-s -DRPI=1
 )
@@ -50,7 +51,8 @@ del build\*.* /Q 2>NUL
 del *.elf /Q 2>NUL
 :: Compiling s files
 for %%s in (src/*.s) do arm-none-eabi-gcc src\%%s %CFLAGS% -c -o build\%%~ns.o
-for %%c in (src/*.c*) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
+for %%c in (src/*.c) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
+for %%c in (src/*.cpp) do arm-none-eabi-gcc src\%%c %CPPFLAGS% -c -o build\%%~nc.o
 :: linking files
 for %%A in (%OOB%) do (call :addbuild %%A)
 arm-none-eabi-ld %OBJS% "%LIBGCC%" -T memmap -o pigfx.elf

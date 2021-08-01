@@ -111,6 +111,12 @@ static void onPA2(void)
 
 unsigned char C64UserPort24Bit_init(void)
 {
+	gotBytesCount = 0;
+	gotBytesCountDisplay = 0;
+	interfaceState = 0;
+	interfaceStateEBBS = 0;
+	interfaceStateAddress = 0;
+
     gpio_select(PIN_DATA0, GPIO_INPUT);
     gpio_select(PIN_DATA1, GPIO_INPUT);
     gpio_select(PIN_DATA2, GPIO_INPUT);
