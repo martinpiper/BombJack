@@ -50,7 +50,7 @@ del build\*.* /Q 2>NUL
 del *.elf /Q 2>NUL
 :: Compiling s files
 for %%s in (src/*.s) do arm-none-eabi-gcc src\%%s %CFLAGS% -c -o build\%%~ns.o
-for %%c in (src/*.c) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
+for %%c in (src/*.c*) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
 :: linking files
 for %%A in (%OOB%) do (call :addbuild %%A)
 arm-none-eabi-ld %OBJS% "%LIBGCC%" -T memmap -o pigfx.elf

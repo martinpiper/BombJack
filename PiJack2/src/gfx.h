@@ -48,7 +48,7 @@ extern void gfx_clear_rect( unsigned int x, unsigned int y, unsigned int width, 
  * Renders the character "c" at location (x,y).
  * This points to the current drawing mode function.
  */
-extern draw_putc_fun (*gfx_putc);
+extern draw_putc_fun *gfx_putc;
 
 /*!
  * Scrolls the entire framebuffer down (adding background color at the bottom)
@@ -64,7 +64,7 @@ extern void gfx_scroll_up( unsigned int npixels );
  * Renders a sprite to the framebuffer at the specified (x,y) location
  * This points to the current drawing mode function.
  */
-extern draw_putsprite_fun (*gfx_put_sprite);
+extern draw_putsprite_fun *gfx_put_sprite;
 
 /*!
  *  Terminal functions

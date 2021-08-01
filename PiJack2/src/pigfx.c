@@ -340,7 +340,7 @@ void term_main_loop()
 			C64UserPort24Bit_setVSync(0);
 			C64UserPort24Bit_setVSync(1);
 
-#if 0
+#if 1
 			// Add some debug values
 			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 64) , 0x04);
 			C64UserPort24Bit_addNext(frameStartTime + (WHOLE_FRAME_TIME / 32) , 0x08);
