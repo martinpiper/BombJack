@@ -108,6 +108,9 @@ int DisplayLayer::calculatePixel(int displayH, int displayV, bool _hSync, bool _
 DisplayBombJack::DisplayBombJack() {
 }
 
+const int displayWidth = 384;
+const int displayHeight = 264;
+
 void DisplayBombJack::init(void) {
     layersRaw[0] = 0;
     layersRaw[1] = 0;
@@ -115,8 +118,6 @@ void DisplayBombJack::init(void) {
     layersRaw[3] = 0;
 
     frameNumber = 0;
-    displayWidth = 384;
-    displayHeight = 264;
     busContentionPalette = 0;
     addressPalette = 0x9c00, addressExPalette = 0x01;
     addressRegisters = 0x9e00, addressExRegisters = 0x01;
@@ -133,8 +134,8 @@ void DisplayBombJack::init(void) {
     vBlank = false;
     _hSync = true, _vSync = true;
     extEXTWANTIRQFlag = false;
-    pixelsSinceLastDebugWrite = 0;
-    pixelsSinceLastDebugWriteMax = 32;
+//    pixelsSinceLastDebugWrite = 0;
+//    pixelsSinceLastDebugWriteMax = 32;
     is16Colours = false;
     callbackAPU = 0;
 	layerIndex = 0;
@@ -258,7 +259,7 @@ int DisplayBombJack::pixelsInWholeFrame() {
 }
 
 void DisplayBombJack::calculatePixel() {
-	pixelsSinceLastDebugWrite++;
+//	pixelsSinceLastDebugWrite++;
 	_hSync = true;
 	_vSync = true;
 
@@ -291,7 +292,7 @@ void DisplayBombJack::calculatePixel() {
 	// Save the frame
 	if (displayX == 0 && displayY == 0) {
 		frameNumberForSync++;
-		pixelsSinceLastDebugWrite = 0;
+//		pixelsSinceLastDebugWrite = 0;
 	}
 	if (displayX == 0 && displayY == (displayHeight-1)) {
 		// Debug frame write
@@ -354,6 +355,7 @@ void DisplayBombJack::calculatePixel() {
 		}
 	}
 
+#if 1
 	// Calculate any pixels in the layers
 	int cachedPixel[4];
 	for (int i = 0 ; i < 4 ; i++) {
@@ -385,6 +387,9 @@ void DisplayBombJack::calculatePixel() {
 		}
 		firstLayer = false;
 	}
+#else
+	latchedPixel = 0xff;
+#endif
 
 	displayX++;
 	displayBitmapX++;

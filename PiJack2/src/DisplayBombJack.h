@@ -56,8 +56,8 @@ public:
     DisplayLayer *layersRaw[4] = {0,0,0,0};
 
     int frameNumber = 0;
-    int displayWidth = 384;
-    int displayHeight = 264;
+//    int displayWidth = 384;
+//    int displayHeight = 264;
     int busContentionPalette = 0;
     int addressPalette = 0x9c00, addressExPalette = 0x01;
     int addressRegisters = 0x9e00, addressExRegisters = 0x01;
@@ -92,8 +92,8 @@ public:
     bool vBlank = false;
     bool _hSync = true, _vSync = true;
     bool extEXTWANTIRQFlag = false;
-    int pixelsSinceLastDebugWrite = 0;
-    int pixelsSinceLastDebugWriteMax = 32;
+//    int pixelsSinceLastDebugWrite = 0;
+//    int pixelsSinceLastDebugWriteMax = 32;
     bool is16Colours = false;
     UserPortTo24BitAddress *callbackAPU = 0;
 

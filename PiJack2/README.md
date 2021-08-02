@@ -20,9 +20,9 @@
 	cd /d C:\work\BombJack\PiJack2
 	Then...
 	This will make all img files in bin\
-	makeall
+	cls && makeall
 	This makes a Pi0 compatible elf
-	make 1
+	cls && make 1
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append ""
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi1ap -no-reboot -serial stdio -append ""
 
@@ -63,6 +63,8 @@
 		* Note there is no libstdc++ so new won't work, neither will stack allocated class initialisation, so an explicit init() method is needed for each class
 		** Eek, it looks like the code is updating the graphics too slowly... Is the cache off or something?
 			Note: enable "// Debug enable the display and show some raster bars" then test the rendering speed on the real hardware compared to qemu...
+				Added and enabled setup_cache(), no effect.
+				Try: https://www.raspberrypi.org/forums/viewtopic.php?t=219212 , also no effect
 	* Strip PS2 code
 	* GPIO IRQ on separate higher priority core compared to the video rendering
 	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core

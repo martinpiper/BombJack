@@ -75,3 +75,29 @@ hang:
     nop
     b hang
 
+.global setup_cache
+setup_cache:
+  mov       r0, #0
+  mcr       p15, 0, r0, c7, c7, 0
+  mcr       p15, 0, r0, c8, c7, 0
+  mrc       p15, 0, r0, c1, c0, 0
+  ldr       r1, =0x1004
+  orr       r0, r0, r1
+  mcr       p15, 0, r0, c1, c0, 0
+  mov       pc, lr
+
+.global perform_cpu_init
+perform_cpu_init:
+  // ---------------------------------------------------------------------- Set secure state
+  mrc p15, 0, r1, c1, c1, 0   // Get SCR  (Secure Configuration Register)
+  bic r1, r1, #1              // Reset 'Non-secure' bit (set secure state)
+  mcr p15, 0, r1, c1, c1, 0   // Write to SCR
+
+  // ---------------------------------------------------------------------- Turn on Instruction cache
+  mrc p15,0,r2,c1,c0,0
+  orr r2, #0x1000    // Instruction cache
+  //orr r2, #0x0800    // Branch prediction (does not affect this result)
+  //orr r2, #0x0004    // Data cache        (does not affect this result)
+  //orr r2, #0x0001  // MMU               (does not work! don't know why yet)
+  mcr p15,0,r2,c1,c0,0
+  mov       pc, lr

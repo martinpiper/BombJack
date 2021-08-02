@@ -508,5 +508,6 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     gfx_set_drawing_mode(drawingNORMAL);
     gfx_set_fg(GRAY);
 
+//	setup_cache();
     term_main_loop();
 }

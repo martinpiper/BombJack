@@ -75,6 +75,10 @@ void EnableMMU()
 	DataSyncBarrier ();
 	FlushPrefetchBuffer ();
 
+	// Try code from: https://www.raspberrypi.org/forums/viewtopic.php?t=219212
+	// Note: _reset_ already does VBAR init
+//	perform_cpu_init();
+
 	// enable MMU
 	unsigned int nControl;
 	asm volatile ("mrc p15, 0, %0, c1, c0,  0" : "=r" (nControl));
