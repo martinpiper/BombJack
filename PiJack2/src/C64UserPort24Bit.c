@@ -6,6 +6,9 @@
 #include "synchronize.h"
 #include "C64UserPort24Bit.h"
 
+// When defined, just returns raw bytes, no address or value time filtering
+#define SIMPLE_MODE
+
 // https://www.c64-wiki.com/wiki/User_Port
 // Broadcom GPIO numbers
 // Inputs
@@ -70,6 +73,10 @@ static void onPC2(void)
 		value |= 1 << 7;
 	}
 
+#ifdef SIMPLE_MODE
+	gotBytes[gotBytesCount] = value | (interfaceStateEBBS << 8) | ((interfaceStateAddress & 0xffff) << 16);
+	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
+#else
 	switch(interfaceState)
 	{
 		case 0:
@@ -98,7 +105,7 @@ static void onPC2(void)
 			interfaceStateAddress++;
 			break;
 	}
-
+#endif
 }
 
 static void onPA2(void)
@@ -169,10 +176,23 @@ unsigned int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned in
 	// Don't return anything if there isn't any value pending
 	if (gotBytesCount == gotBytesCountDisplay)
 	{
-		*nextPixelPos = totalPixels;
+#ifdef SIMPLE_MODE
 		return 0;
+#else
+		if (nextPixelPos != 0)
+		{
+			*nextPixelPos = totalPixels;
+		}
+		return 0;
+#endif
 	}
+	
+#ifdef SIMPLE_MODE
+	unsigned int temp = gotBytes[gotBytesCountDisplay];
+	gotBytesCountDisplay = (gotBytesCountDisplay+1) & (BUFFERSIZE-1);
 
+	return temp;
+#else
 	// Retire any early values in the time window
 	while ( (gotBytesCount != gotBytesCountDisplay) && (gotBytesTime[gotBytesCountDisplay] - startTimeWindow) < lowTimeFilter )
 	{
@@ -201,6 +221,8 @@ unsigned int C64UserPort24Bit_getNext(unsigned int startTimeWindow , unsigned in
 //	ee_printf("[C64UserPort24Bit] 0x%02x\n" , temp);
 
 	return temp;
+#endif
+
 }
 
 static int lastVSync = 0;

@@ -306,7 +306,7 @@ void term_main_loop()
 	unsigned int frameStartTime = time_microsec();
 	int theFrame = 0;
 
-	DisplayBombJack_init();
+//	DisplayBombJack_init();
 	
 #if 0
 	// To prove the coordinates being drawn to are correct
@@ -334,6 +334,8 @@ void term_main_loop()
 	
     while(1)
     {
+		// Enable/Disable the complex display rendering
+#if 0
 		unsigned int frameTime = time_microsec() - frameStartTime;
 		// Try to catch-up any pending vsync pulses
 		while (frameTime >= WHOLE_FRAME_TIME)
@@ -406,6 +408,22 @@ void term_main_loop()
 
 //			ee_printf("@%d : vsync  " , frameTime);
 		}
+#else
+		// Synch with what is from the GPIO
+		CleanDataCache();
+		DataSyncBarrier();
+		InvalidateDataCache();
+		
+		// Display whatever is returned, if it isn't null
+		unsigned int nextValue = C64UserPort24Bit_getNext(0 , 0 , 0 , 0, 0);
+		if (nextValue != 0)
+		{
+			char text[2];
+			text[0] = (char)nextValue;
+			text[1] = 0;
+			gfx_term_putstring(text);
+		}
+#endif
 
         timer_poll();
     }
@@ -455,9 +473,9 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     timers_init();
     attach_timer_handler( HEARTBEAT_FREQUENCY, _heartbeat_timer_handler, 0, 0 );
 
-//    initialize_framebuffer(640, 480, 8);
+    initialize_framebuffer(640, 480, 8);
 //    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 8);
-    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 16);
+//    initialize_framebuffer(FRAME_WIDTH_PIXELS, FRAME_HEIGHT_PIXELS, 16);
 
     gfx_term_putstring( "\x1B[2J" ); // Clear screen
     gfx_set_bg(BLUE);
@@ -485,14 +503,14 @@ void entry_point(unsigned int r0, unsigned int r1, unsigned int *atags)
     // Try to load a config file
     lookForConfigFile();
 
-    uart_init(PiGfxConfig.uartBaudrate);
-    initialize_uart_irq();
+//    uart_init(PiGfxConfig.uartBaudrate);
+//    initialize_uart_irq();
 
-    gfx_set_bg(BLUE);
-    gfx_set_fg(YELLOW);
-    ee_printf("Initializing PS/2:\n");
-    gfx_set_bg(BLACK);
-    gfx_set_fg(GRAY);
+//    gfx_set_bg(BLUE);
+//    gfx_set_fg(YELLOW);
+//    ee_printf("Initializing PS/2:\n");
+//    gfx_set_bg(BLACK);
+//    gfx_set_fg(GRAY);
 //    if (initPS2() == 0)
 //    {
 //        ps2KeyboardFound = 1;

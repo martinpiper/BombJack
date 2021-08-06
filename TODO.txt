@@ -1,3 +1,8 @@
+* Check the headers on the chars and other layers are using the vertical SIL-2 not the right angled connectors
+
+
+
+
 * Original timings from the original schematic from root sheet 3
 	1H	2H	4H		_SLOAD	_SL1	_SL2
 	0	0	0		1		1		1

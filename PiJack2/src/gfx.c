@@ -1582,6 +1582,16 @@ void gfx_term_putstring( const char* str )
 {
     while( *str )
     {
+		if (gfx_term_loading_palette())
+		{
+			gfx_term_load_palette(*str++);
+			continue;
+		}
+		if (gfx_term_loading_bitmap())
+		{
+			gfx_term_load_bitmap(*str++);
+			continue;
+		}
         int checkscroll = 1;
         switch( *str )
         {

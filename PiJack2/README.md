@@ -65,9 +65,11 @@
 			Note: enable "// Debug enable the display and show some raster bars" then test the rendering speed on the real hardware compared to qemu...
 				Added and enabled setup_cache(), no effect.
 				Try: https://www.raspberrypi.org/forums/viewtopic.php?t=219212 , also no effect
-	* Strip PS2 code
+	* Done: Strip PS2 and UART code
 	* GPIO IRQ on separate higher priority core compared to the video rendering
 	* Audio output over HDMI with background mixing IRQ on separate core compared to the GPIO IRQ core
+	* Instead added: SIMPLE_MODE
+		This just uses the terminal output mode and displays whatever the C64 sends. Example code in VideoHardware main7.a
 
 # PiGFX 
 ## Raspberry Pi graphics card / ANSI terminal emulator
