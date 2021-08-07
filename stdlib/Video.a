@@ -159,6 +159,17 @@ Bus24Bit_SetAddressCharsControl
 	rts
 
 
+Bus24Bit_SetAddressCharScrollRegisters
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_CharScreen_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_CharScreen_ScrollX16
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_CharScreen_ScrollX16
+	sta CIA2PortBRS232
+	rts
+
+
 ; Usually call this immediately after using Bus24Bit_WaitVBlank
 Bus24Bit_StartRasterTimers
 	; Start two timers, which should count raster position
