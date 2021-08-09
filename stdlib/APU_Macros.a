@@ -107,21 +107,21 @@ kAPU_InstructionSize	= 4
 }
 
 
-!macro APU_SetDataUpdateBus .label {
+!macro MAPU_SetDataUpdateBus .label {
 	lda #kBus24Bit_APU_EBBS
 	+MWordValueTo_XY kBus24Bit_APU_Data + .label - APUData_Start
 	jsr Bus24Bit_SetAddressBus
 }
 
-!macro APU_DataUpdate16Bits .label {
-	+APU_SetDataUpdateBus .label
+!macro MAPU_DataUpdate16Bits .label {
+	+MAPU_SetDataUpdateBus .label
 	lda .label
 	sta CIA2PortBRS232
 	lda .label+1
 	sta CIA2PortBRS232
 }
-!macro APU_DataUpdateNumBytes .label , .num {
-	+APU_SetDataUpdateBus .label
+!macro MAPU_DataUpdateNumBytes .label , .num {
+	+MAPU_SetDataUpdateBus .label
 	!for .i , .num {
 		lda .label + .i -1
 		sta CIA2PortBRS232
@@ -139,16 +139,16 @@ kAPU_InstructionSize	= 4
 	!by .ypos
 }
 
-!macro APUEmitChangePalette .r , .g , .b {
+!macro MAPUEmitChangePalette .r , .g , .b {
 	+MLittleEndian16Bit kBus24Bit_VideoLayer_Palette
 	+MBus24Bit_MakePaletteRGB .r , .g , .b
 }
-!macro APUEmitChangeXScroll ~.addr {
+!macro MAPUEmitChangeXScroll ~.addr {
 	+MLittleEndian16Bit kBus24Bit_TileScreen_ScrollX16
 .addr = *
 	+MLittleEndian16Bit 0
 }
-!macro APUEmitChangeXScrollChars ~.addr {
+!macro MAPUEmitChangeXScrollChars ~.addr {
 	+MLittleEndian16Bit kBus24Bit_CharScreen_ScrollX16
 .addr = *
 	+MLittleEndian16Bit 0

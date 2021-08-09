@@ -1,6 +1,6 @@
 !zn
 ; Waits for the start of the _VBLANK to be triggered from the video, which is a negative edge on the _VBLANK line
-Bus24Bit_WaitVBlank
+Video_WaitVBlank
 	; ACK Any previous VBLANK
 	lda CIA2InterruptControl
 
@@ -12,35 +12,35 @@ Bus24Bit_WaitVBlank
 	rts
 
 
-Bus24Bit_DisableDisplay
+Video_DisableDisplay
 	; Reset priority to default
-	jsr Bus24Bit_SetAddressVideoPriorityRegister
+	jsr Video_SetAddressVideoPriorityRegister
 	lda #kBus24Bit_VideoLayer_Priority_Default
 	sta CIA2PortBRS232
 	; Disable display entirely
-	jsr Bus24Bit_SetAddressVideoControlRegisters
+	jsr Video_SetAddressVideoControlRegisters
 	lda #$00
 	sta CIA2PortBRS232
 	rts
 
 
 ; A = Value to use for the video initialisation
-Bus24Bit_EnableDisplay
+Video_EnableDisplay
 	pha
-	jsr Bus24Bit_SetAddressVideoControlRegisters
+	jsr Video_SetAddressVideoControlRegisters
 	pla
 	sta CIA2PortBRS232
 	rts
 
 
 ; Clears sprite registers, turns off sprites, no 32x32 sprites
-Bus24Bit_SpritesDisable
-	jsr Bus24Bit_SetAddressSpritesControl
+Video_SpritesDisable
+	jsr Video_SetAddressSpritesControl
 	lda #0
 	sta CIA2PortBRS232
 	sta CIA2PortBRS232
 
-	jsr Bus24Bit_SetAddressSprites
+	jsr Video_SetAddressSprites
 	lda #0
 	ldx #24*4
 .cs1
@@ -52,14 +52,14 @@ Bus24Bit_SpritesDisable
 	
 ; A/X = lo/hi address
 ; Y = length
-Bus24Bit_SpriteDataCopy
+Video_SpriteDataCopy
 	pha
-	jsr Bus24Bit_SetAddressSprites
+	jsr Video_SetAddressSprites
 	pla
 	jmp Bus24Bit_CopySmallData
 
 
-Bus24Bit_SetAddressVideoControlRegisters
+Video_SetAddressVideoControlRegisters
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
@@ -71,7 +71,7 @@ Bus24Bit_SetAddressVideoControlRegisters
 
 
 
-Bus24Bit_SetAddressVideoPriorityRegister
+Video_SetAddressVideoPriorityRegister
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
@@ -82,7 +82,7 @@ Bus24Bit_SetAddressVideoPriorityRegister
 	rts
 
 
-Bus24Bit_SetAddressTileScrollRegisters
+Video_SetAddressTileScrollRegisters
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
@@ -93,7 +93,7 @@ Bus24Bit_SetAddressTileScrollRegisters
 	rts
 
 
-Bus24Bit_SetAddressTileBackgroundRegister
+Video_SetAddressTileBackgroundRegister
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_TileScreen_EBBS
 	sta CIA2PortBRS232
@@ -104,7 +104,7 @@ Bus24Bit_SetAddressTileBackgroundRegister
 	rts
 
 
-Bus24Bit_SetAddressPalette
+Video_SetAddressPalette
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
@@ -115,7 +115,7 @@ Bus24Bit_SetAddressPalette
 	rts
 
 
-Bus24Bit_SetAddressSprites
+Video_SetAddressSprites
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_Sprites_EBBS
 	sta CIA2PortBRS232
@@ -126,7 +126,7 @@ Bus24Bit_SetAddressSprites
 	rts
 
 
-Bus24Bit_SetAddressSpritesControl
+Video_SetAddressSpritesControl
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_Sprites_EBBS
 	sta CIA2PortBRS232
@@ -137,7 +137,7 @@ Bus24Bit_SetAddressSpritesControl
 	rts
 
 
-Bus24Bit_SetAddressMode7
+Video_SetAddressMode7
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_Mode7Screen_EBBS
 	sta CIA2PortBRS232
@@ -148,7 +148,7 @@ Bus24Bit_SetAddressMode7
 	rts
 
 
-Bus24Bit_SetAddressCharsControl
+Video_SetAddressCharsControl
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_CharScreen_EBBS
 	sta CIA2PortBRS232
@@ -159,7 +159,7 @@ Bus24Bit_SetAddressCharsControl
 	rts
 
 
-Bus24Bit_SetAddressCharScrollRegisters
+Video_SetAddressCharScrollRegisters
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_CharScreen_EBBS
 	sta CIA2PortBRS232
@@ -170,8 +170,8 @@ Bus24Bit_SetAddressCharScrollRegisters
 	rts
 
 
-; Usually call this immediately after using Bus24Bit_WaitVBlank
-Bus24Bit_StartRasterTimers
+; Usually call this immediately after using Video_WaitVBlank
+Video_StartRasterTimers
 	; Start two timers, which should count raster position
 	lda #0
 	sta CIA1TimerAControl

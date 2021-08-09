@@ -1,7 +1,7 @@
 !zn
 
 APU_ResetDisable
-	jsr Bus24Bit_SetAddressAPURegisters
+	jsr APU_SetAddressAPURegisters
 	lda #%00
 	sta CIA2PortBRS232
 	lda #%01
@@ -10,13 +10,13 @@ APU_ResetDisable
 
 
 APU_Enable
-	jsr Bus24Bit_SetAddressAPURegisters
+	jsr APU_SetAddressAPURegisters
 	lda #%11
 	sta CIA2PortBRS232
 	rts
 
 
-Bus24Bit_SetAddressAPURegisters
+APU_SetAddressAPURegisters
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232
@@ -27,7 +27,7 @@ Bus24Bit_SetAddressAPURegisters
 	rts
 
 
-Bus24Bit_SetAddressAPUInstructions
+APU_SetAddressAPUInstructions
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232
@@ -38,7 +38,7 @@ Bus24Bit_SetAddressAPUInstructions
 	rts
 
 
-Bus24Bit_SetAddressAPUData
+APU_SetAddressAPUData
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_APU_EBBS
 	sta CIA2PortBRS232

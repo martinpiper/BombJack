@@ -47,7 +47,7 @@ Bus24Bit_CopySmallDataAgain
 
 	lda Bus24Bit_WriteMakeSafe
 	bne .skipWait
-	jsr Bus24Bit_WaitVBlank
+	jsr Video_WaitVBlank
 	lda Bus24Bit_WriteMakeSafeReset
 	sta Bus24Bit_WriteMakeSafe
 .skipWait

@@ -149,7 +149,7 @@ Bus24Bit_Write
 	bne .skipWait
 	lda #0
 	jsr Bus24Bit_EBBSNoSet
-	jsr Bus24Bit_WaitVBlank
+	jsr Video_WaitVBlank
 	lda Bus24Bit_EBBS
 	jsr Bus24Bit_EBBSNoSet
 	lda Bus24Bit_WriteMakeSafeReset

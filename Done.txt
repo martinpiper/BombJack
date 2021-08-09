@@ -1230,7 +1230,7 @@
 		Simulation checked: EXTWANTIRQ = _VBLANK which triggers on the negative edge at raster $f0
 		Checked, it is a one off event that gets reset when the memory location is read - Check the C64 strobe behaviour
 		Done, improved logic to reflect hardware - Check emulated logic around device.extEXTWANTIRQ() that it reflects a one shot strobe
-		Done - Bus24Bit_WaitVBlank might need to be simplified to do an initial read, then wait for the single strobe, to align with the hardware
+		Done - Video_WaitVBlank might need to be simplified to do an initial read, then wait for the single strobe, to align with the hardware
 		Checked, setting EBBS = 0, waiting for VBLANK, setting EBBS=1, using some time, then setting EBBS = 0, does display expected raster line in hardware - Also Check the timing of the negative transition from the hardware with respect to the raster position
 
 
@@ -1327,7 +1327,7 @@ All layouts now use V3.1
 		50 poke 56576,0 : poke 56576,4
 		60 next i
 		70 goto 30
-	* Bus24Bit_WaitVBlank hardware signals tested
+	* Video_WaitVBlank hardware signals tested
 	
 * UserPortTo24BitAddressSimple.pdsprj is a simple user port interface, not optimal at all as it uses a 4 bit data and 4 bit control protocol just using the bottom row of the user port
 	* UserPortDataSimple.ptn and UserPortSignalsSimple.ptn demonstrate the input protocol and eventual memory writes
