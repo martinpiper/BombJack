@@ -197,7 +197,7 @@ Video_InitDisplaySpritesScrollsBackground
 	lda #$00
 	sta CIA2PortBRS232
 
-	jsr Video_SetAddressCharScrollRegisters
+	jsr Video_SetAddressCharsControl
 	lda #$00
 	sta CIA2PortBRS232
 	; Scrolls
