@@ -12,12 +12,12 @@ kBus24Bit_VideoLayer_Priority		= $9e08
 kBus24Bit_VideoLayer_Priority_Default		= %11100100
 kBus24Bit_VideoLayer_Palette		= $9c00
 
+kBus24Bit_SpritesMaxNum				= 24
 kBus24Bit_Sprites_EBBS				= $01
 kBus24Bit_Sprites					= $9820
 kBus24Bit_SpritesControlLo			= $9a00
 kBus24Bit_SpritesControlLoEnable	= $10
 kBus24Bit_SpritesControlHi			= $9a01
-
 
 
 kBus24Bit_Video_FlipH = $40
@@ -59,6 +59,7 @@ kBus24Bit_CharScreen_ScrollY16		= $9003
 
 kBus24Bit_CharScreenMap_EBBS		= $80
 kBus24Bit_CharScreenMap				= $4000
+kBus24Bit_CharColourMap				= $5000
 
 kBus24Bit_CharScreenPlanes_EBBS		= $20
 kBus24Bit_CharScreenPlanes_0		= $2000

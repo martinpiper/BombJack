@@ -80,6 +80,14 @@ Bus24Bit_CopySmallDataRepeatForX
 	rts
 
 
+Bus24Bit_WriteAForY
+.cl2
+	sta CIA2PortBRS232
+	dey
+	bne .cl2
+	rts
+
+
 ; A = EBBS
 ; X/Y = lo/hi address
 Bus24Bit_SetAddressBus

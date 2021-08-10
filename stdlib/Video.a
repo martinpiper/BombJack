@@ -212,7 +212,9 @@ Video_InitDisplaySpritesScrollsBackground
 	sta CIA2PortBRS232
 	sta CIA2PortBRS232
 	sta CIA2PortBRS232
-	; Background
+
+	jsr Video_SetAddressTileBackgroundRegister
+	lda #0
 	sta CIA2PortBRS232
 
 	rts
