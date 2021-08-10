@@ -19,6 +19,12 @@ kBus24Bit_SpritesControlLo			= $9a00
 kBus24Bit_SpritesControlLoEnable	= $10
 kBus24Bit_SpritesControlHi			= $9a01
 
+kBus24Bit_SpritePlanes_EBBS			= $10
+kBus24Bit_SpritePlanes_0			= $2000
+kBus24Bit_SpritePlanes_1			= $4000
+kBus24Bit_SpritePlanes_2			= $8000
+kBus24Bit_SpritePlanes_3			= $0000
+
 
 kBus24Bit_Video_FlipH = $40
 kBus24Bit_Video_FlipV = $80
@@ -34,6 +40,15 @@ kBus24Bit_TileScreen_ScrollX16		= $9e01
 kBus24Bit_TileScreen_ScrollY16		= $9e03
 kBus24Bit_TileScreen_Background		= $9e07
 
+kBus24Bit_TileScreenMap_EBBS		= $80
+kBus24Bit_TileScreenMap				= $2000
+kBus24Bit_TileColourMap				= $3000
+
+kBus24Bit_TileScreenPlanes_EBBS		= $40
+kBus24Bit_TileScreenPlanes_0		= $2000
+kBus24Bit_TileScreenPlanes_1		= $4000
+kBus24Bit_TileScreenPlanes_2		= $8000
+kBus24Bit_TileScreenPlanes_3		= $0000
 
 
 kBus24Bit_Mode7Screen_EBBS			= $01
