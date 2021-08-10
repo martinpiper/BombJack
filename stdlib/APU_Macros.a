@@ -153,3 +153,7 @@ kAPU_InstructionSize	= 4
 .addr = *
 	+MLittleEndian16Bit 0
 }
+
+!macro MAPU_VideoLayer_EmitPriority_NearToFar_A .near , .middleNear , .middleFar , .far {
+	!by (.far << 6) | (.middleFar << 4) | (.middleNear << 2) | .near
+}
