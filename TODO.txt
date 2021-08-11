@@ -1,3 +1,9 @@
+* Consider a "hat" board for each voice, using a common bus interfacing with the main logic board
+	Each hat would have a signal to select it from the voice schedule
+
+
+
+
 * Check the headers on the chars and other layers are using the vertical SIL-2 not the right angled connectors
 
 

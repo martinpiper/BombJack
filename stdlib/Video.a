@@ -13,6 +13,7 @@ Video_WaitVBlank
 
 
 Video_DisableDisplay
+	jsr Video_SpritesDisable
 	; Reset priority to default
 	jsr Video_SetAddressVideoPriorityRegister
 	lda #kBus24Bit_VideoLayer_Priority_Default
@@ -42,7 +43,7 @@ Video_SpritesDisable
 
 	jsr Video_SetAddressSprites
 	lda #0
-	ldx #24*4
+	ldx #kBus24Bit_SpritesMaxNum*4
 .cs1
 	sta CIA2PortBRS232
 	dex
@@ -189,7 +190,6 @@ Video_StartRasterTimers
 
 ; Initialises sprites without any large sprites, tiles/char screen scrolls and tiles background colour to 0
 Video_InitDisplaySpritesScrollsBackground
-
 	; Sprites enable, no large sprites
 	jsr Video_SetAddressSpritesControl
 	lda #kBus24Bit_SpritesControlLoEnable
