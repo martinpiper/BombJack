@@ -4,11 +4,6 @@
 
 
 
-* Check the headers on the chars and other layers are using the vertical SIL-2 not the right angled connectors
-
-
-
-
 * Original timings from the original schematic from root sheet 3
 	1H	2H	4H		_SLOAD	_SL1	_SL2
 	0	0	0		1		1		1
@@ -63,10 +58,6 @@
 	* The new chars board, with those tall columns that show the effect in the tiles board, is also visible in the charslayer
 		The logic is very different in the tiles board, so perhaps this indicates the issue is in the video board after all?
 			* TODO: Check if the video board timer generation needs some pullup resisiters? Or perhaps a filter capacitor?
-
-
-
-* APU Seems to have 1 bit available in the instruction set. Perhaps use this to create 16 bit adds? By expanding kAPU_IDataSelect
 
 
 
@@ -168,6 +159,8 @@
 
 * User port layout : Consider moving the ribbon cable header to the bus edge
 
+* User port: For the Raspberry Pi interface it is useful to have the %v from the C64 drive the 5V side of the level shifters
+	This would need an extra line for the C64 5V and call the net "C645V", be careful not to connect it to the 5V on the externally powered user port interface!
 
 
 

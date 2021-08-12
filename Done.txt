@@ -2264,3 +2264,13 @@ All layouts now use V3.1
 	https://www.conrad.com/p/tru-components-pin-aligner-1-pcs-1564782-suitable-for-grids-sized-762-mm-1524-mm-compatible-with-semiconductor-en-1564782
 	https://www.conrad.com/p/tru-components-pin-aligner-1-pcs-tc-8990560-suitable-for-grids-sized-762-mm-1524-mm-compatible-with-semiconductor-2247640
 	
+
+
+
+
+* APU Seems to have 1 bit available in the instruction set. Perhaps use this to create 16 bit adds? By expanding kAPU_IDataSelect
+	Used by _InternalMEWR
+
+
+
+* Check the headers on the chars and other layers are using the vertical SIL-2 not the right angled connectors
