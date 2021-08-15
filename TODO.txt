@@ -60,6 +60,7 @@
 			* TODO: Check if the video board timer generation needs some pullup resisiters? Or perhaps a filter capacitor?
 	* Squeezing, or even touching, CSYNC1 produces noticeable visual horizontal shifting of the video signal and alters the noise observed?
 		Squeezing TVSYNC1 produces a similar effect, but less noticeable.
+	* TODO: Using the header and jumper VGA connector from the prototype 1 board, try switching back to the HV sync method... and also try some filtering caps
 
 
 
