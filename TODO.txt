@@ -58,6 +58,8 @@
 	* The new chars board, with those tall columns that show the effect in the tiles board, is also visible in the charslayer
 		The logic is very different in the tiles board, so perhaps this indicates the issue is in the video board after all?
 			* TODO: Check if the video board timer generation needs some pullup resisiters? Or perhaps a filter capacitor?
+	* Squeezing, or even touching, CSYNC1 produces noticeable visual horizontal shifting of the video signal and alters the noise observed?
+		Squeezing TVSYNC1 produces a similar effect, but less noticeable.
 
 
 
