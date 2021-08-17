@@ -2274,3 +2274,7 @@ All layouts now use V3.1
 
 
 * Check the headers on the chars and other layers are using the vertical SIL-2 not the right angled connectors
+
+
+
+* Original PCB pictures: http://ikotsu.blogspot.com/2011/09/bomb-jack-pcb-tehkan-1984.html
