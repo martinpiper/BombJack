@@ -8,11 +8,11 @@ Are you sure you want to buy the hardware?
 
 | Item													| US$		|
 |-------------------------------------------------------|-----------|
-| PCBs with sockets, connectors, and passive components | 3688		|
-| Remaining components ICs, cables, etc					| 787		|
-| Board population, testing, fix-up						| 100		|
+| PCBs with sockets, connectors, and passive components | 4241		|
+| Remaining components ICs, cables, etc					| 905		|
+| Board population, testing, fix-up						| 150		|
 | Postage                                               | 350  		|
-| *Total:*												| *4925*	|
+| *Total:*												| *5646*	|
 
 
 Important considerations
