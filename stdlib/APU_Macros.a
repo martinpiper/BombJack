@@ -1,11 +1,15 @@
 ; Instructions, can be combined
+; Any MEWR is timed to pulse low on the PCINCR (cycle 5)
+; Any Load is timed to pulse low on the PCINCR (cycle 5)
+; Any Incr is timed at cycle 6+3, which means 3 cycles into the *next* instruction if active in the previous instruction. Effectively after any Load or MEWR pulses. This only happens if the instructions successfully transitions.
+; Note Incr is not a pulse, like Load or MEWR, it has to be an edge transition to the next instruction. This means the Incr only happens when the next instruction does not have Incr.
 kAPU_Reset_ADDRB1		= %00000000000000000000000000000001
 kAPU_Reset_PC			= %00000000000000000000000000000010
 kAPU_InternalMEWR		= %00000000000000000000000000000100
 kAPU_WaitForEqualsHV	= %00000000000000000000000000001000
 kAPU_Incr_ADDRB1		= %00000000000000000000000000100000
 kAPU_Incr_EADDR			= %00000000000000000000000001000000
-kAPU_ExternalMEWR		= %00000000000000000000000010000000		; This is timed to pulse low on the PCINCR (cycle 3)
+kAPU_ExternalMEWR		= %00000000000000000000000010000000
 
 ; 8th bit
 kAPU_Load_EBS			= %00000000000000000000000100000000
@@ -57,6 +61,32 @@ kBus24Bit_APU_Instructions	= $8000
 
 kAPU_InstructionSize	= 4
 !macro MAPU .i {
+
+!ifdef kAPU_previousInstruction {
+!if kAPU_previousInstruction & kAPU_Incr_ADDRB1 {
+!if .i & kAPU_Incr_ADDRB1 {
+	!error "Consecutive kAPU_Incr_ADDRB1 detected"
+}
+}
+!if kAPU_previousInstruction & kAPU_Incr_ADDRB2 {
+!if .i & kAPU_Incr_ADDRB2 {
+	!error "Consecutive kAPU_Incr_ADDRB2 detected"
+}
+}
+!if kAPU_previousInstruction & kAPU_Incr_EADDR {
+!if .i & kAPU_Incr_EADDR {
+	!error "Consecutive kAPU_Incr_EADDR detected"
+}
+}
+!if kAPU_previousInstruction & kAPU_Incr_EADDR2 {
+!if .i & kAPU_Incr_EADDR2 {
+	!error "Consecutive kAPU_Incr_EADDR2 detected"
+}
+}
+}
+
+!set kAPU_previousInstruction = .i
+
 	!by <(.i)
 	!by <(.i >> 8)
 	!by <(.i >> 16)
@@ -88,6 +118,8 @@ kAPU_InstructionSize	= 4
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_IDataRegLoad1
 	+MAPU kAPU_Incr_ADDRB1
+	; Needed because of the kAPU_Incr_ADDRB1 executing during the kAPU_SkipIfEQ test
+	+MAPU
 	+MAPU kAPU_SkipIfEQ | kAPU_PCLoad16
 	+MAPU kAPU_Incr_ADDRB1
 }

@@ -23,6 +23,7 @@ s$80000200
 
 ; Store data into APU memory bank 1 data
 s$40000200
+b$00
 
 ; kAPU_PCLoad16 address $0010
 b$10,b$00
@@ -84,7 +85,7 @@ w$ff01ff00,$f8019000
 d$0
 
 ; Causes the PC to reset and loop around with kAPU_SkipIfEQ check
-d$40020201
+d$40030201
 
 d$0
 
@@ -94,7 +95,7 @@ w$ff01ff00,$f8019000
 d$0
 
 ; Cause a known value, still NE, to be written to the debug output
-d$400202ff
+d$400302ff
 
 ; For kAPU_SkipIfEQ check
 d$0
@@ -102,7 +103,7 @@ w$ff01ff00,$f8019000
 d$0
 
 ; Should not see any sprite writes between these two frames
-d$40020201
+d$40030201
 
 d$0
 
@@ -111,8 +112,8 @@ d$0
 w$ff01ff00,$f8019000
 d$0
 
-; Causes the PC to reset and loop around with kAPU_SkipIfEQ check
-d$40020200
+; Causes the PC to skip the reset and not loop around with kAPU_SkipIfEQ check
+d$40030200
 
 d$0
 

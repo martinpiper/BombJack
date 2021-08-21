@@ -1,3 +1,4 @@
+; cd /d C:\Work\BombJack
 ; ..\c64\acme.exe -v4 --msvc "TestAPU1.a"
 
 ; This test is bare minimal functionality for a copper, where values can be read from ADDRB1 RAM, HV waits, then external memory writes, and a final PC reset
@@ -8,12 +9,16 @@
 
 *=0
 	+MAPU
-	+MAPU kAPU_Reset_ADDRB1
+	; This empirically demonstrates the kAPU_Incr_ADDRB1 happens *just* after the kAPU_Reset_ADDRB1 completes its clear
+	; However this timing is generally unsafe, don't rely on it.
+	+MAPU kAPU_Reset_ADDRB1 | kAPU_Incr_ADDRB1
+	+MAPU 
 
 	; Test PC load
-	+MAPU kAPU_IDataRegLoad0 | kAPU_IDataRegLoad2
-	+MAPU kAPU_Incr_ADDRB1
-	+MAPU kAPU_IDataRegLoad1 | kAPU_IDataRegLoad3
+	; This empirically demonstrates the kAPU_Incr_ADDRB1 happens after the kAPU_IDataRegLoad0 pulse
+	+MAPU kAPU_IDataRegLoad0 | kAPU_IDataRegLoad2 | kAPU_Incr_ADDRB1
+	+MAPU 
+	+MAPU kAPU_IDataRegLoad1 | kAPU_IDataRegLoad3 | kAPU_Incr_ADDRB1
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_PCLoad16
 
@@ -23,6 +28,7 @@
 
 	; Padding for the PC load to hit somewhere in
 	+MAPU
+
 	+MAPU
 	+MAPU
 	+MAPU
@@ -31,7 +37,7 @@
 	+MAPU
 	+MAPU
 	
-	; Will be skipped since the memory is 0
+	; Will be eventually skipped since the memory is eventually set to 0
 	+MAPU kAPU_SkipIfEQ | kAPU_Reset_PC
 	+MAPU kAPU_Incr_ADDRB1
 
