@@ -1,3 +1,7 @@
+* Audio: DAC to opamp output: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm
+
+
+
 * Consider a "hat" board for each voice, using a common bus interfacing with the main logic board
 	Each hat would have a signal to select it from the voice schedule
 
