@@ -1,7 +1,3 @@
-* APU: Double check the timing for one entire instruction and compare with the pixel timing in the hardware
-
-
-
 * Audio: DAC to opamp output: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm
 
 

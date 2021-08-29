@@ -2283,3 +2283,42 @@ All layouts now use V3.1
 
 * APU needs VIDCLK counter/divider with jumper output select, first choice being raw VIDCLK, going to U35:D
 	U126 and jumpers output USECLK
+
+
+
+
+* APU: Double check the timing for one entire instruction and compare with the pixel timing in the hardware
+	APU timing for 10 consecutive breakpoint on low PCINCR without any memory contention retries
+		During execution of the next frame (after the wait)
+		0.016282774		0.00000463
+		0.016287404		0.00000463
+		0.016293190		0.000005786
+		0.016298977		0.000005787
+		
+		Single cycle triggers right at the start:
+		0.000329200		0.00001579
+		0.000344990		0.00001579
+		0.000345569		0.000000579
+		0.000346147		0.000000578
+		0.000346726		0.000000579
+		
+		Same timing logic from APU copied to video, single cycle triggers:
+		0.031484630
+		0.031485208		0.000000578
+		0.031485787		0.000000579
+		0.031486366		0.000000579
+		
+		RH samples, single cycle triggers
+		0x0141
+		0x0144		3
+		0x0148		4
+		0x014b		3
+		0x014f		4
+		0x0152		3
+		0x0156		4
+		0x0159		3
+		0x015d		4
+		0x0160		3
+	Note cycle timings per cycle alternate 3 and 4 pixels per APU instruction
+	* BDD6502 updated with correct cycle count, validated the same instruction and RH pattern
+	* Enabled "And enable video display bus debug output" in @ShadowBeast and validated simulation with "..\C64\VideoHardware\target\debugData.txt"
