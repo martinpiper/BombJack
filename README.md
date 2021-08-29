@@ -339,6 +339,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 		Giving 384 pixel clocks per line
 		Visible portion $008 to $188.
 		The 8 pixel delay is to sync with the 8 pixel delay for sprite data output into the off scan buffer
+		The 8 pixel delay also allows time for the chars and tiles layers to read the index+colour and start shifting pixel data
 	SREAD = Sprite register address (lo byte)
 	
 	Line RH starts at $180
@@ -382,6 +383,18 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	$00d	hi ENABLEPIXELS (with borderx flag)
 	$0fe	SREAD $7f
 	Loops back to $180 again and RV increment
+
+
+	The file "BombJack\RecordingRHSprAddr.txt" contains recorded address and RH values from Root Sheet 4 device VSMDD5.
+	This clearly shows (sparse extracts)
+		Recording		Address	@ RH
+		d$00200180		$20		@ $180
+		d$003001c0		$30		@ $1c0
+		d$00400000		$40		@ $000
+		d$00500040		$50		@ $040
+		d$00600080		$60		@ $080
+		d$007000c0		$70		@ $0c0
+
 
 #### Sprite scan RAM logic
 
