@@ -1,0 +1,5 @@
+!macro MBus24Bit_SetAddress_AXY .ebbs , .addr {
+	lda #.ebbs
+	+MWordValueTo_XY .addr
+	jsr Bus24Bit_SetAddressBus
+}

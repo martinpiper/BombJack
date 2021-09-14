@@ -1,0 +1,243 @@
+!zn
+HardwareTest_Char_0
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %#.#.##..
++LinePlane8 %#..###..
++LinePlane8 %#..###..
++LinePlane8 %.####...
++LinePlane8 %........
+HardwareTest_Char_1
++LinePlane8 %....#...
++LinePlane8 %...##...
++LinePlane8 %..#.#...
++LinePlane8 %....#...
++LinePlane8 %....#...
++LinePlane8 %....#...
++LinePlane8 %..####..
++LinePlane8 %........
+HardwareTest_Char_2
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %...##...
++LinePlane8 %..##....
++LinePlane8 %.##.....
++LinePlane8 %##......
++LinePlane8 %######..
++LinePlane8 %........
+HardwareTest_Char_3
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %....##..
++LinePlane8 %..###...
++LinePlane8 %....##..
++LinePlane8 %##..##..
++LinePlane8 %.####...
++LinePlane8 %........
+
+!zn
+HardwareTest_VideoInit
+	jsr Bus24Bit_Init
+	jsr Video_DisableDisplay
+	rts
+
+HardwareTest_VideoInitDisplay
+	jsr Video_InitDisplaySpritesScrollsBackground
+	lda #kVideo_EnableDisplay_Enable | kVideo_EnableDisplay_Tiles_Enable
+	jsr Video_EnableDisplay
+	jsr Video_SetAddressTileBackgroundRegister
+	lda #0
+	sta CIA2PortBRS232
+	rts
+
+!macro HardwareTest_SendBitplaneData .a , .b {
+	+MWordValueTo_AX HardwareTest_Char_0
+	ldy #8*.a
+	jsr Bus24Bit_FastCopySmallData
+	lda #0
+	ldy #8*.b
+	jsr Bus24Bit_WriteAForY
+}
+
+!zn
+HardwareTest_VideoPattern0
+	jsr HardwareTest_VideoInit
+	jsr HardwareTest_VideoInitDisplay
+
+	jsr Video_SetAddressPalette
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 200 , 200 , 200
+	+MBus24Bit_SendPaletteRGB 150 , 150 , 150
+	+MBus24Bit_SendPaletteRGB 100 , 100 , 100
+	+MBus24Bit_SendPaletteRGB 50 , 50 , 50
+	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
+
+	; Chars
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+	lda #1
+	jsr Bus24Bit_WriteAForY
+	lda #2
+	jsr Bus24Bit_WriteAForY
+	lda #3
+	jsr Bus24Bit_WriteAForY
+	lda #4
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
+	+HardwareTest_SendBitplaneData 4 , 1
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_1
+	+HardwareTest_SendBitplaneData 3 , 2
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_2
+	+HardwareTest_SendBitplaneData 2 , 3
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3
+	+HardwareTest_SendBitplaneData 1 , 4
+
+	; Tiles
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenMap_EBBS , kBus24Bit_TileScreenMap
+	lda #1
+	ldy #0
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	lda #1
+	ldy #$c0
+	jsr Bus24Bit_WriteAForY
+	lda #0
+	ldy #$40
+	jsr Bus24Bit_WriteAForY
+	lda #1
+	ldy #$40
+	jsr Bus24Bit_WriteAForY
+	lda #0
+	ldy #$40
+	jsr Bus24Bit_WriteAForY
+	lda #1
+	ldy #0
+	jsr Bus24Bit_WriteAForY
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenMap_EBBS , kBus24Bit_TileColourMap
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenPlanes_EBBS , kBus24Bit_TileScreenPlanes_0
+	+HardwareTest_SendBitplaneData 4 , 4
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenPlanes_EBBS , kBus24Bit_TileScreenPlanes_1
+	+HardwareTest_SendBitplaneData 3 , 5
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenPlanes_EBBS , kBus24Bit_TileScreenPlanes_2
+	+HardwareTest_SendBitplaneData 2 , 6
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenPlanes_EBBS , kBus24Bit_TileScreenPlanes_3
+	+HardwareTest_SendBitplaneData 1 , 7
+
+
+	; Sprites
+	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_0
+	+HardwareTest_SendBitplaneData 4 , 1
+	lda #$ff
+	ldy #8
+	jsr Bus24Bit_WriteAForY
+	+HardwareTest_SendBitplaneData 4 , 1
+	+HardwareTest_SendBitplaneData 4 , 1
+	+HardwareTest_SendBitplaneData 4 , 1
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_1
+	+HardwareTest_SendBitplaneData 3 , 2
+	lda #$ff
+	ldy #8
+	jsr Bus24Bit_WriteAForY
+	+HardwareTest_SendBitplaneData 3 , 2
+	+HardwareTest_SendBitplaneData 3 , 2
+	+HardwareTest_SendBitplaneData 3 , 2
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_2
+	+HardwareTest_SendBitplaneData 2 , 3
+	lda #$ff
+	ldy #8
+	jsr Bus24Bit_WriteAForY
+	+HardwareTest_SendBitplaneData 2 , 3
+	+HardwareTest_SendBitplaneData 2 , 3
+	+HardwareTest_SendBitplaneData 2 , 3
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_3
+	+HardwareTest_SendBitplaneData 1 , 4
+	lda #$ff
+	ldy #8
+	jsr Bus24Bit_WriteAForY
+	+HardwareTest_SendBitplaneData 1 , 4
+	+HardwareTest_SendBitplaneData 1 , 4
+	+HardwareTest_SendBitplaneData 1 , 4
+
+	jsr Video_SetAddressSpritesControl
+	lda #kBus24Bit_SpritesControlLoEnable
+	sta CIA2PortBRS232
+	lda #$04
+	sta CIA2PortBRS232
+
+	jsr Video_SetAddressSprites
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	lda #90
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	lda #90
+	sta CIA2PortBRS232
+	lda #150
+	sta CIA2PortBRS232
+
+	lda #0
+	sta CIA2PortBRS232
+	lda #kBus24Bit_Sprite_FullHeight
+	sta CIA2PortBRS232
+	lda #90
+	sta CIA2PortBRS232
+	lda #200
+	sta CIA2PortBRS232
+
+;	jsr HardwareTest_VideoInitDisplay
+
+	; If fire is held down, then pause on this screen
+	+WaitForFireRelease_A
+
+	rts

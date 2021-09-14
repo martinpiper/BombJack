@@ -2322,3 +2322,25 @@ All layouts now use V3.1
 	Note cycle timings per cycle alternate 3 and 4 pixels per APU instruction
 	* BDD6502 updated with correct cycle count, validated the same instruction and RH pattern
 	* Enabled "And enable video display bus debug output" in @ShadowBeast and validated simulation with "..\C64\VideoHardware\target\debugData.txt"
+
+
+
+
+* main7.a using HardwareTest_VideoPattern0
+	If the screen is enabled with HardwareTest_VideoInitDisplay then the simulation shows corrupted sprite data, char and tile data is fine.
+	However the same demo, with display enabled, on real hardware did not show any sprite corruption.
+	* Test: Perhaps the data generator needs some timing value tweaks to safely write data, with a longer write pulse perhaps? This might align with the 24bit userport hardware writes.
+		* Using data generator MEWR LOW/HI timings: 0.000000225 and 0.000000425 solves the corrupt sprite write issue
+			This is however a very long write period
+			Using 0.000000225 and shorter time period 0.000000125 also works but generates "early data trigger ignored" warnings
+			0.000000150 and 0.000000125 works and does not generate warnings
+
+
+
+* APU memory write timings need to be tested properly at the current VIDCLK faster clock speed
+	The hi InterceptBus to _MEWR timing seems to be quite short
+	The _MEWR pulse length also seems to be quite short, when InterceptBus is hi
+	The _MEWR pulse also seems to be quite early in the InterceptBus timing, when InterceptBus is hi. It would be much better to push this much later in the slot.
+		When using APU JP11 (which is VIDCLK/2) instead of JP10 (VIDCLK) then the InterceptBus to _MEWR = 175ns and lo pulse time = 160ns, which seems to be adequate
+	Need to sync the APU generated timings to the data generator in the video schematic
+	Also the emulation needs to use the correct APU speed when a suitable default timing is found

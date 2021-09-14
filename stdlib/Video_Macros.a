@@ -45,6 +45,8 @@ kBus24Bit_SpritePlanes_3			= $0000
 kBus24Bit_Video_FlipH = $40
 kBus24Bit_Video_FlipV = $80
 
+kBus24Bit_Sprite_FullHeight = $20
+
 kVideo_EnableDisplay_Tiles_Enable			= $10
 kVideo_EnableDisplay_Enable					= $20
 kVideo_EnableDisplay_Tiles_BorderXShrink	= $40
@@ -97,3 +99,16 @@ kBus24Bit_CharScreenPlanes_0		= $2000
 kBus24Bit_CharScreenPlanes_1		= $4000
 kBus24Bit_CharScreenPlanes_2		= $8000
 kBus24Bit_CharScreenPlanes_3		= $0000
+
+
+!macro LinePlane16 .v {
+!set .t = *
+	!by (.v>>8)&255
+* = .t + 8
+	!by .v&255
+* = .t + 1
+}
+
+!macro LinePlane8 .v {
+	!by .v&255
+}

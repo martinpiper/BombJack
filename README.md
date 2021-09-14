@@ -122,7 +122,6 @@ Note: Most control registers can be updated at any point during the frame and th
 		Then front most layer	= %00 (0)
 
 
-
 Sprite 32x32 size select
 
 	0x9a00 start index of 32x32 sprites
@@ -148,6 +147,20 @@ At 0x9820 - 0x987f each sprite is described by 4 bytes:
 
 	Byte 2: The sprite’s Y position on screen
 	Byte 3: The sprite’s X position on screen
+
+
+
+#### Tile and sprite data layout
+16x16 pixel tile and sprite data is stored in 8x8 cells and in memory order:
+	01
+	23
+
+For 32x32 sprites, this arrangement is expanded in memory as:
+	0145
+	2367
+	89cd
+	abef
+
 
 
 ### Mode7 registers

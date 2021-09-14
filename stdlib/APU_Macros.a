@@ -103,6 +103,13 @@ kAPU_InstructionSize	= 4
 	+MAPU kAPU_Incr_ADDRB1
 }
 
+!macro MAPU_LoadEADDR2FromB1 {
+	+MAPU kAPU_Load_EADDR2Lo
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_Load_EADDR2Hi
+	+MAPU kAPU_Incr_ADDRB1
+}
+
 !macro MAPU_LoadDoWait {
 	+MAPU kAPU_Load_Wait8
 	+MAPU kAPU_Incr_ADDRB1
@@ -135,6 +142,12 @@ kAPU_InstructionSize	= 4
 !macro MAPU_ProcessRasterByte {
 	+MAPU_LoadEADDRFromB1
 	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1
+}
+
+!macro MAPU_ProcessRasterByteEADDR2 {
+	+MAPU_LoadEADDR2FromB1
+	+MAPU kAPU_ExternalMEWR | kAPU_SelectEBS2EADDR2
 	+MAPU kAPU_Incr_ADDRB1
 }
 

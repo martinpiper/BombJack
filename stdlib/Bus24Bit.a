@@ -68,6 +68,27 @@ Bus24Bit_CopySmallDataAgain
 	sta .sm2+1
 	rts
 
+; A/X = lo/hi address
+; Y = length
+Bus24Bit_FastCopySmallData
+	sta .fcsm1+1
+	stx .fcsm1+2
+Bus24Bit_FastCopySmallDataAgain
+.fcl1
+.fcsm1	lda $1234
+	sta CIA2PortBRS232
+	; We do this instead of indexing the above LDA with Y so that repeated requests will continue on from where the last position was
+	inc .fcsm1+1
+	bne .fcl3
+	inc .fcsm1+2
+.fcl3
+	dey
+	bne .fcl1
+	rts
+
+
+
+!zn
 Bus24Bit_CopySmallDataRepeatForX
 	; Safety checks
 	cpx #1
@@ -80,14 +101,28 @@ Bus24Bit_CopySmallDataRepeatForX
 	rts
 
 
-Bus24Bit_WriteAForY
-.cl2
-	sta CIA2PortBRS232
-	dey
-	bne .cl2
+!zn
+Bus24Bit_FastCopySmallDataRepeatForX
+	; Safety checks
+	cpx #1
+	bpl .cl1
+	rts
+.cl1
+	jsr Bus24Bit_FastCopySmallDataAgain
+	dex
+	bne .cl1
 	rts
 
 
+!zn
+Bus24Bit_WriteAForY
+.cl1
+	sta CIA2PortBRS232
+	dey
+	bne .cl1
+	rts
+
+!zn
 ; A = EBBS
 ; X/Y = lo/hi address
 Bus24Bit_SetAddressBus

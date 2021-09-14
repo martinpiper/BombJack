@@ -1,3 +1,21 @@
+* APU: Consider pushing kAPU_InternalMEWR and kAPU_ExternalMEWR later into the instruction cycle and making their pulses twice as long
+	This would allow the APU to operate at JP10 speed, not currently JP11 speed as it is in the current emulation
+	* The setup and pulse needs be at least 150ns and 125ns
+
+
+
+
+* Consider replacement packages for sockets that include space for decoupling capacitors
+	https://scholarsmine.mst.edu/cgi/viewcontent.cgi?article=2210&context=ele_comeng_facwork
+	https://learnemc.com/decoupling-for-boards-with-closely-spaces-power-planes
+	https://learnemc.com/decoupling-for-boards-with-widely-spaced-planes
+	Note widths: https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/mlccs-multilayer-ceramic-capacitors/?capacitance=0.1+uF&termination+style=Radial&voltage+rating+dc=50+V~~50+VDC&rp=passive-components%2fcapacitors%2fceramic-capacitors%2fmlccs-multilayer-ceramic-capacitors%7cVoltage+Rating+DC
+	5mm lead spacing: https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D
+		0.19685 inch == CAP20
+	
+
+
+
 * Audio: DAC to opamp output: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm
 
 
