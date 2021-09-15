@@ -1,6 +1,6 @@
 ; Instructions, can be combined
-; Any MEWR is timed to pulse low on the PCINCR (cycle 5)
 ; Any Load is timed to pulse low on the PCINCR (cycle 5)
+; Any MEWR is timed to pulse low on the PCINCR (cycle 6+0/1)
 ; Any Incr is timed at cycle 6+3, which means 3 cycles into the *next* instruction if active in the previous instruction. Effectively after any Load or MEWR pulses. This only happens if the instructions successfully transitions.
 ; Note Incr is not a pulse, like Load or MEWR, it has to be an edge transition to the next instruction. This means the Incr only happens when the next instruction does not have Incr.
 kAPU_Reset_ADDRB1		= %00000000000000000000000000000001
