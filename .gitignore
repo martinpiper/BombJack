@@ -20,3 +20,4 @@ Project Backups/
 output/DebugAPUOutput.txt
 *.img
 output/DebugAPUOutputJust9800.txt
+output/DebugAPUOutputInternal.txt
