@@ -1,0 +1,1 @@
+del debug0*.bmp
