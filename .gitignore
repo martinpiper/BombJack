@@ -6,9 +6,8 @@ Bomb Jack.sts
 Bomb Jack.log
 VSMDigitalDisplay.dll
 VSMDigitalData.dll
-*.bmp
-output/DebugAudio.txt
-output/DebugAudioCounter.txt
+output/*.bmp
+output/*.txt
 Audio.log
 Audio.DO
 Audio.EDF
