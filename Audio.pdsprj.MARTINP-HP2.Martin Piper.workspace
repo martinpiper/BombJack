@@ -1,11 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
+ <FRAME activewindow="2">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffcd010000cb0000002805000025030000</PLACEMENT>
-  <WINDOW type="default" module="ISIS"/>
-  <WINDOW type="default" module="ARES"/>
+  <WINDOW type="default" module="ISIS">
+   <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="215254">
+    <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
+    <centre x="0" y="20820"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
+  <WINDOW type="default" module="ARES">
+   <editor metric="1" gridmajor="10000000" mode="00000000" zoom="-1" scale="81" flipped="0" gridminor="500000" gridmode="16" snapidx="3" snap="250000" xcursor="0" orgmode="0" snaprange="156790">
+    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+    <centre x="-376170" y="-459580"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
   <WINDOW type="default" module="DXP"/>
  </FRAME>
+ <MODULE name="ARES">
+  <editor metric="1" gridmajor="10000000" mode="00000000" zoom="-1" scale="81" flipped="0" gridminor="500000" gridmode="16" snapidx="3" snap="250000" xcursor="0" orgmode="0" snaprange="156790">
+   <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+   <centre x="-376170" y="-459580"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="ISIS">
+  <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="215254">
+   <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
+   <centre x="0" y="20820"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
  <MODULE name="VSMDEBUG">
   <PWI>
    <POPUP w="800" x="267" flags="00008003" y="715" h="187" pid="0" iid="-1">

@@ -1289,7 +1289,7 @@
 * Hardware tests https://youtu.be/23YtiLoUx7U?t=850 indicated left hand pixel edge flickering issues for full screen height sprites: https://positronic-processing.slack.com/archives/C8GP4S84Q/p1608180015000600
 	The SPRFULL signal makes U80 tri-state, ignoring the high nybble of the screen Y position, forcing the sprite to always be in range for output, thus making it full screen height
 	The tri-state nature of the logic means it was not floating high quickly enough.
-	Weak pull-up resistors (5.6k) we added to the outputs of U80, this fixed this left hand edge flickering issue. This is the same logic as the pull-up to $ff for the sprite scan RAMs
+	Weak pull-up resistors (5.6k) were added to the outputs of U80, this fixed this left hand edge flickering issue. This is the same logic as the pull-up to $ff for the sprite scan RAMs
 
 
 
@@ -2344,3 +2344,16 @@ All layouts now use V3.1
 		When using APU JP11 (which is VIDCLK/2) instead of JP10 (VIDCLK) then the InterceptBus to _MEWR = 175ns and lo pulse time = 160ns, which seems to be adequate
 	Need to sync the APU generated timings to the data generator in the video schematic
 	Also the emulation needs to use the correct APU speed when a suitable default timing is found
+
+
+
+
+* Pull-up resistors
+	https://eepower.com/resistor-guide/resistor-applications/pull-up-resistor-pull-down-resistor/#
+	* A typical pull-up resistor value is 4.7 kΩ, but can vary depending on the application
+	* A rule of thumb is to use a resistor that is at least 10 times smaller than the value of the input pin impedance. In bipolar logic families which operate at operating at 5 V, the typical pull-up resistor value is 1-5 kΩ. For switch and resistive sensor applications, the typical pull-up resistor value is 1-10 kΩ.
+	Currently using 5.6k, but had to add another 5.6k in parallel: https://www.allaboutcircuits.com/tools/parallel-resistance-calculator/
+		= 2800 ohm
+	So instead of: https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601
+	Try using 3k ohm: https://www.mouser.sg/ProductDetail/KOA-Speer/MFS1-4DCT52A3001F?qs=0J7VXftDlT5UxbwvicmnGw%3D%3D
+	** All pull-up (PULLUP) resistor values on the sprite layer were changed
