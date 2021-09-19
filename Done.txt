@@ -2357,3 +2357,11 @@ All layouts now use V3.1
 	So instead of: https://www.mouser.sg/ProductDetail/660-MFS1-4DCT52R5601
 	Try using 3k ohm: https://www.mouser.sg/ProductDetail/KOA-Speer/MFS1-4DCT52A3001F?qs=0J7VXftDlT5UxbwvicmnGw%3D%3D
 	** All pull-up (PULLUP) resistor values on the sprite layer were changed
+
+
+
+* Debugging incorrect raster bar wait position
+	* TestData_DebugPixelTiming.txt
+	; This reproduces and fixed the incorrect wait position check observed in the raster bars wait
+	; Note: Inverted VIDCLK to be used in the APU, just after RH8 input
+	; Note: "w$ff03ff00," is used instead of "w$ff01ff00,"

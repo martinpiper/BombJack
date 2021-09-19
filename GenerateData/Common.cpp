@@ -13,7 +13,7 @@ void WaitForRaster(std::ofstream &file, int yoff)
 {
 	file << "; WaitForRaster" << std::endl;
 	file << "d$0" << std::endl;
-	file << "w$ff01ff00,$" << std::hex << std::setw(2) << yoff;
+	file << "w$ff03ff00,$" << std::hex << std::setw(2) << yoff;
 	file << "018000" << std::endl;
 }
 

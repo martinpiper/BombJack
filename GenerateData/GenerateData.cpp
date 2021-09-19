@@ -126,26 +126,26 @@ int main(int argc, char**argv)
 			int ypos = (int)(64 + i + (sin(rads2) * 32));
 
 			file << "d$0" << std::endl;
-			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "w$ff03ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x20 + (sin(i*M_PI / 64.0) * 16)) << "00" << std::endl;
 //			file << "001000" << std::endl;
 			file << "d$a01401" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
-			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "w$ff03ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x50 + (cos(i*M_PI / 32.0) * 16)) << "00" << std::endl;
 			file << "d$a01401" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
-			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "w$ff03ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0x90 + (sin(i*M_PI / 32.0) * 16)) << "00" << std::endl;
 			file << "d$a01401" << std::hex << std::setw(2) << colour1 << std::endl;
 			file << std::endl;
 
 			file << "d$0" << std::endl;
-			file << "w$ff01ff00,$" << std::hex << std::setw(2) << ypos;
+			file << "w$ff03ff00,$" << std::hex << std::setw(2) << ypos;
 			file << "00" << std::hex << std::setw(2) << (int)(0xc0 + (cos(i*M_PI / 64.0) * 16)) << "00" << std::endl;
 			file << "d$a01401" << std::hex << std::setw(2) << colour2 << std::endl;
 			file << std::endl;
