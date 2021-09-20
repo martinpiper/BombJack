@@ -2360,8 +2360,50 @@ All layouts now use V3.1
 
 
 
+* APU: Consider pushing kAPU_InternalMEWR and kAPU_ExternalMEWR later into the instruction cycle and making their pulses twice as long
+	This would allow the APU to operate at JP10 speed, not currently JP11 speed as it is in the current emulation
+	* The setup and pulse needs be at least 150ns and 125ns
+	output\DebugAPUOutputInternal.txt
+		d$02080000
+		d$02090010
+		d$020a0002
+		d$020b0008
+		d$02080008
+		d$02090002
+		d$020a0010
+		d$020b0000
+		d$02080000
+		d$02090010
+		d$020a0002
+		d$020b0008
+		d$02080008
+		d$02090002
+		d$020a0010
+		d$020b0000
+	output\DebugAPUOutputJust9800.txt
+		d$98200111
+		d$98210112
+		d$98200101
+		d$98210101
+		d$98200111
+		d$98210112
+		d$98200101
+		d$98210101
+	* _MEWRSLOT now triggers at cycle 6+0/1 and hits _ExternalMEWRPulse or _InternalMEWRPulse
+		Expected internal and external memory data is validated
+		With highest JP10 (VIDCLK) speed, MEMORY VSM shows bus intercept is 580ns and intercept to -ve _MEWR is 220ns and _MEWR pulse time is 185ns
+		_InternalMEWR pulse is 185ns and data/memory bus setup time to -ve _InternalMEWR is 180ns
+	* This means the emulation can use the faster APU timing again
+	
+	
+
 * Debugging incorrect raster bar wait position
 	* TestData_DebugPixelTiming.txt
 	; This reproduces and fixed the incorrect wait position check observed in the raster bars wait
 	; Note: Inverted VIDCLK to be used in the APU, just after RH8 input
 	; Note: "w$ff03ff00," is used instead of "w$ff01ff00,"
+
+
+
+* Check the APU retry opcode works when it detects writes to its data/instruction memory from an external source
+	Add extra validation for delta timings
