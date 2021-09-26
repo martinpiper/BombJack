@@ -187,6 +187,18 @@ Video_StartRasterTimers
 	sta CIA1TimerAControl
 	rts
 
+Video_clearByte
+	lda #$00
+	sta CIA2PortBRS232
+	rts
+
+Video_clearFourBytes
+	lda #$00
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	rts
 
 ; Initialises sprites without any large sprites, tiles/char screen scrolls and tiles background colour to 0
 Video_InitDisplaySpritesScrollsBackground
@@ -194,27 +206,18 @@ Video_InitDisplaySpritesScrollsBackground
 	jsr Video_SetAddressSpritesControl
 	lda #kBus24Bit_SpritesControlLoEnable
 	sta CIA2PortBRS232
-	lda #$00
-	sta CIA2PortBRS232
+	jsr Video_clearByte
 
 	jsr Video_SetAddressCharsControl
-	lda #$00
-	sta CIA2PortBRS232
+	jsr Video_clearByte
 	; Scrolls
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
+	jsr Video_clearFourBytes
 
 	jsr Video_SetAddressTileScrollRegisters
-	lda #$00
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
+	; Scrolls
+	jsr Video_clearFourBytes
 
 	jsr Video_SetAddressTileBackgroundRegister
-	lda #0
-	sta CIA2PortBRS232
+	jsr Video_clearByte
 
 	rts

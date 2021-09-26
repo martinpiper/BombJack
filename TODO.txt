@@ -6,6 +6,17 @@
 	5mm lead spacing: https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D
 		0.19685 inch == CAP20
 	
+	
+* Sprites2: Using the scanline clear technique, but with a longer line of 384 pixels, and a drawn scan of 256 pixels, and logic that includes a scale factor...
+	Perhaps this would allow scaled sprites, without rotation, (although rotation could be applied with another lookup?) and a mechanism to allow a maximum fill rate of XX pixels
+	Where XX = 384 - the time needed to read coordinates, perform vertical clipping tests, and setup the scan segment write, per sprite
+	When the scan line runs out of time to process sprites, then it just draws as much as it can
+	Sprites could be 16x16 pixels with 240 (256-16) colours as well...
+		Or have hi/lo 4 bits for sprite 0/32 (8192 / 256 = 32), and 4 bits palette index
+	Try some software logic first, see if it is feasible with simple small per-pixel operations and state...
+	Don't forget transparent pixel tests
+	* A scale and inverse scale value would remove the need for a lookup table
+
 
 
 
