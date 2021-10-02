@@ -3,3 +3,11 @@
 	+MWordValueTo_XY .addr
 	jsr Bus24Bit_SetAddressBus
 }
+
+
+!macro MBus24Bit_FastSpeedCopy .label , .length {
+!for .i , .length {
+	lda .label + .i - 1
+	sta CIA2PortBRS232
+}
+}
