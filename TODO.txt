@@ -16,7 +16,10 @@
 	Try some software logic first, see if it is feasible with simple small per-pixel operations and state...
 	Don't forget transparent pixel tests
 	* A scale and inverse scale value would remove the need for a lookup table
-	Swap MSBX/Y to match the flips
+	
+	* Schematic case 7: "Perform Y extent check" checked working.
+		Now at: case 13:
+	* TODO: Swap MSBX/Y to match the flips
 
 
 
