@@ -32,8 +32,9 @@
 	* Done: currentSpriteXPixel = currentSpriteScaleXInv / 2;
 		currentSpriteXPixel will get input depending on S2_ADVSPRI
 		Needs to select the S2_LDSCALEXINV or 6MHz clock depending on the S2_ADVSPRI state (U335, U336, U337)
+	* Needs to use adders for currentSpriteScaleXInv on rising edge of 6MHz (to coincide with just after the sprite data pixel write)
+		S2currentSpriteXPixel[0..15] and S2nextSpriteXPixel[0..15]
 	* TODO: currentSpriteYPixel lookup table access
-	* TODO: Needs to use adders for currentSpriteScaleXInv on rising edge of 6MHz (to coincide with just after the sprite data pixel write)
 
 
 
