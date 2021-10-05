@@ -29,7 +29,11 @@
 				The 6MHz clock is used to count the sprite X position until the extent is reached
 					The counter is only enabled when S2_ADVSPRI == 0 (S2ADVSPRI == 1)
 					The counter load happens during S2_LDFRAME == 0
-	* TODO: currentSpriteXPixel = currentSpriteScaleXInv / 2;
+	* Done: currentSpriteXPixel = currentSpriteScaleXInv / 2;
+		currentSpriteXPixel will get input depending on S2_ADVSPRI
+		Needs to select the S2_LDSCALEXINV or 6MHz clock depending on the S2_ADVSPRI state (U335, U336, U337)
+	* TODO: currentSpriteYPixel lookup table access
+	* TODO: Needs to use adders for currentSpriteScaleXInv on rising edge of 6MHz (to coincide with just after the sprite data pixel write)
 
 
 

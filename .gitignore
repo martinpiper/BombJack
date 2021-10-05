@@ -1,5 +1,8 @@
 *.suo
 *.sdf
+*/Debug/
+*/Release/
+*/.vs/
 
 bestsave.rte
 Bomb Jack.sts
