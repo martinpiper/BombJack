@@ -18,7 +18,18 @@
 	* A scale and inverse scale value would remove the need for a lookup table
 	* Swap MSBX/Y to match the flips
 	* Schematic case 7: "Perform Y extent check" checked working.
-	* TODO: Now at: case 13:
+	* For case 13:
+		For the left (even) scan logic block:
+			When S2DOPIXEL == 0 ( S2_DOPIXEL == 1 ) then:
+				Scan pixels are output and the pixel logic uses the pull-up resistors to clear the scan memory
+				The 6MHz clock is used to count the entire scan
+					The counters are always enabled
+			When S2DOPIXEL == 1 ( S2_DOPIXEL == 0 ) then:
+				Scan pixels are updated from the sprite data
+				The 6MHz clock is used to count the sprite X position until the extent is reached
+					The counter is only enabled when S2_ADVSPRI == 0 (S2ADVSPRI == 1)
+					The counter load happens during S2_LDFRAME == 0
+	* TODO: currentSpriteXPixel = currentSpriteScaleXInv / 2;
 
 
 
