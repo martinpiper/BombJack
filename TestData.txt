@@ -21,7 +21,8 @@ d$b8000119
 
 ; Sprites2 test data
 d$920001c1
-d$92010140
+; First line coincides with the left (even) scan logic due to the internal invert
+d$9201013f
 d$92020120
 d$920301f0
 d$92040120
