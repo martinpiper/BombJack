@@ -11,7 +11,7 @@ d$88000113
 ; Char screen disable
 d$90000102
 ; Char screen enable
-;d$90000100
+d$90000100
 
 d$98000115
 d$a0000116
@@ -22,7 +22,7 @@ d$b8000119
 ; Sprites2 test data
 d$920001c1
 ; First line coincides with the left (even) scan logic due to the internal invert
-d$9201013f
+d$9201015f
 d$92020120
 d$920301f0
 d$92040120
@@ -31,7 +31,7 @@ d$92060110
 d$92070102
 
 d$92080102
-d$92090147
+d$92090167
 d$920a0140
 d$920b01a0
 d$920c0120
@@ -45,7 +45,7 @@ d$9e07017f
 ; Testing background colour from mode7 layer
 d$a014017f
 ; EnableMode7
-;d$a015011f
+d$a015011f
 d$0
 
 

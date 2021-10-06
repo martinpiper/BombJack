@@ -36,6 +36,7 @@
 		S2currentSpriteXPixel[0..15] and S2nextSpriteXPixel[0..15]
 	* if ((currentSpriteXPixel >> 4) >= currentSpriteScaleExtentX)
 	* currentSpriteYPixel lookup table access
+	* The sprite load schedulers (that choose which register to read from RAM) needed to be off for S2LINESTART
 	* TODO: currentSpriteXPixel and currentSpriteYPixel pixel data fetch
 	* TODO: invert currentSpriteXPixel and currentSpriteYPixel
 
