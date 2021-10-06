@@ -11,7 +11,7 @@ d$88000113
 ; Char screen disable
 d$90000102
 ; Char screen enable
-d$90000100
+;d$90000100
 
 d$98000115
 d$a0000116
@@ -31,9 +31,9 @@ d$92060110
 d$92070102
 
 d$92080102
-d$92090180
+d$92090147
 d$920a0140
-d$920b01c0
+d$920b01a0
 d$920c0120
 d$920d0108
 d$920e0108
@@ -45,7 +45,7 @@ d$9e07017f
 ; Testing background colour from mode7 layer
 d$a014017f
 ; EnableMode7
-d$a015011f
+;d$a015011f
 d$0
 
 
