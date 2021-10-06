@@ -38,6 +38,9 @@
 	* currentSpriteYPixel lookup table access
 	* The sprite load schedulers (that choose which register to read from RAM) needed to be off for S2LINESTART
 	* TODO: currentSpriteXPixel and currentSpriteYPixel pixel data fetch
+		S2SPRIA0 == 1 (currentSpriteFrame & 0x01) will need to >>4 the sprite data
+		Also (currentSpriteFrame & 0x30) will need to select
+		* TODO: Need remaining selectors...
 	* TODO: invert currentSpriteXPixel and currentSpriteYPixel
 
 
