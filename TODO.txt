@@ -7,7 +7,7 @@
 		0.19685 inch == CAP20
 	
 	
-* Sprites2: Using the scanline clear technique, but with a longer line of 384 pixels, and a drawn scan of 256 pixels, and logic that includes a scale factor...
+* Sprites2: Using the scan line clear technique, but with a longer line of 384 pixels, and a drawn scan of 256 pixels, and logic that includes a scale factor...
 	Perhaps this would allow scaled sprites, without rotation, (although rotation could be applied with another lookup?) and a mechanism to allow a maximum fill rate of XX pixels
 	Where XX = 384 - the time needed to read coordinates, perform vertical clipping tests, and setup the scan segment write, per sprite
 	When the scan line runs out of time to process sprites, then it just draws as much as it can
@@ -37,11 +37,12 @@
 	* if ((currentSpriteXPixel >> 4) >= currentSpriteScaleExtentX)
 	* currentSpriteYPixel lookup table access
 	* The sprite load schedulers (that choose which register to read from RAM) needed to be off for S2LINESTART
-	* TODO: currentSpriteXPixel and currentSpriteYPixel pixel data fetch
+	* currentSpriteXPixel and currentSpriteYPixel pixel data fetch
 		S2SPRIA0 == 1 (currentSpriteFrame & 0x01) will need to >>4 the sprite data
 		Also (currentSpriteFrame & 0x30) will need to select
-		* TODO: Need remaining selectors...
+		* Need remaining selectors...
 	* TODO: invert currentSpriteXPixel and currentSpriteYPixel
+	* TODO: Output disable flag, only clears the line...
 
 
 

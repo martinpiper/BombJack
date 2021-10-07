@@ -19,26 +19,6 @@ d$a8000117
 d$b0000118
 d$b8000119
 
-; Sprites2 test data
-d$920001c1
-; First line coincides with the left (even) scan logic due to the internal invert
-d$9201015f
-d$92020120
-d$920301f0
-d$92040120
-d$92050110
-d$92060110
-d$92070102
-
-d$92080102
-d$92090167
-d$920a0140
-d$920b01a0
-d$920c0120
-d$920d0108
-d$920e0108
-d$920f0101
-
 
 ; Old tile background colour
 d$9e07017f

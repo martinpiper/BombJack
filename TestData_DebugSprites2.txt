@@ -69,8 +69,8 @@ s$98200100
 ; frame
 ; palette
 ; Rotated
-; x
 ; y
+; x
 ; Normal
 ; y (inverted)
 ; x
