@@ -1,0 +1,189 @@
+; Just sprites with a test pattern and screen positions with flips that aims to test the visual integrity of the display
+; To use this, exclude U281, on root sheet 5, from the simulation.
+; Enable U311, on root sheet 12, in the simulation.
+; This remaps the sprite2 output to the sprite layer.
+
+; Blank (address b$0000)
+d0
+
+; Just choose the scaled sprites layer and the chars
+d$9e0801fc
+
+
+; Char screen disable
+d$90000102
+; Set background palette choice
+d$a0140107
+; Disable mode7
+d$a0150100
+
+; Disable the display
+d$9e000110
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+
+; Sprite data
+s$20001000
+<0,1,2,3,4,5,6,7,<C:\Work\C64\VideoHardware\tmp\TurricanScaledSprites0.bin
+
+s$40001000
+<0,1,2,3,4,5,6,7,<C:\work\C64\VideoHardware\tmp\TurricanScaledSprites1.bin
+
+s$80001000
+<0,1,2,3,4,5,6,7,<C:\work\C64\VideoHardware\tmp\TurricanClouds_tiles.bin2
+
+s$00001000
+<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\testconcat4ScaledSprites0.bin
+
+; Palette data
+s$9c000100
+<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\chars512_paletteData.bin
+s$9d600100
+<0,1,2,3,4,5,6,7,<C:\Work\C64\VideoHardware\tmp\TurricanScaledPaletteData.bin
+s$9d800100
+<0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\testconcat4PaletteData.bin
+
+; Setup grey background colour in the palette
+s$9c000100
+b$33,b$33
+
+; Background tile disable, enable display
+d$9e000120
+
+; Sprites2 test data
+s$92000100
+
+; First line coincides with the left (even) scan logic due to the internal invert
+;b$cb,b$5f,b$20,b$f0,b$20,b$10,b$10,b$00
+;b$01,b$67,b$40,b$a0,b$20,b$08,b$08,b$00
+
+
+; Sprites2 registers
+; Sprites support X and Y flips with X & Y repeating patterns
+; Palette | 0x10 = MSBX | 0x20 = MSBY | 0x40 = flipX | 0x80 = flipY
+; Y pos
+; Y size (in screen pixels, regardless of scale)
+; X pos
+; X scale extent (uses internal coordinates)
+; Y inv scale (*16)
+; X inv scale (*16)
+; Sprite frame (index)
+b$8b
+b$40
+b$20
+b$f8
+b$20
+b$10
+b$10
+b$00
+
+b$4b
+b$80
+b$30
+b$f0
+b$20
+b$08
+b$08
+b$04
+
+; Use MSB X test
+b$db
+b$c0
+b$80
+b$20
+b$18
+b$04
+b$04
+b$00
+
+; Use MSB Y test
+b$2b
+b$f0
+b$68
+b$20
+b$20
+b$03
+b$03
+b$02
+
+; /2
+b$0c
+b$80
+b$10
+b$90
+b$20
+b$20
+b$20
+b$30
+
+b$0c
+b$80
+b$10
+b$a0
+b$20
+b$20
+b$20
+b$31
+
+b$0c
+b$90
+b$10
+b$90
+b$20
+b$20
+b$20
+b$32
+
+b$0c
+b$90
+b$10
+b$a0
+b$20
+b$20
+b$20
+b$33
+
+; *2
+b$0c
+b$a0
+b$40
+b$b0
+b$20
+b$08
+b$08
+b$30
+
+b$0c
+b$a0
+b$40
+b$f0
+b$20
+b$08
+b$08
+b$31
+
+b$0c
+b$e0
+b$10
+b$b0
+b$20
+b$08
+b$08
+b$32
+
+b$0c
+b$e0
+b$10
+b$f0
+b$20
+b$08
+b$08
+b$33
+
+
+d$0
+^-$01
+d$0
