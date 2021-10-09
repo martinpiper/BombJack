@@ -2400,8 +2400,10 @@ All layouts now use V3.1
 * Debugging incorrect raster bar wait position
 	* TestData_DebugPixelTiming.txt
 	; This reproduces and fixed the incorrect wait position check observed in the raster bars wait
+		Basically add the _VIDCLK signal to the value wait
 	; Note: Inverted VIDCLK to be used in the APU, just after RH8 input
 	; Note: "w$ff03ff00," is used instead of "w$ff01ff00,"
+	
 
 
 
