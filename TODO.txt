@@ -1,3 +1,17 @@
+* Sprites2: Trigger on rising horizontal blank edge (synched with 6MHz) to edge set flip-flop. The low 6MHz can reset the flip-flop.
+
+
+* Video layer: can have 4 register bits to enable each pixel input independently.
+	This activity signal for each layer can then be sent out through the pixel headers.
+	This reduces the complexity of each layer.
+
+
+* Video layer: Overscan choice (7A2 and 8B2) with hard clear on hblank/vblank. Could also use _TVSYNC for overscan
+	Test _TVSYNC on real hardware first...
+	Can be tested by removing U95 (only :A is used) and connecting U284 pin 4 to pin 3
+
+
+
 * Consider replacement packages for sockets that include space for decoupling capacitors
 	https://scholarsmine.mst.edu/cgi/viewcontent.cgi?article=2210&context=ele_comeng_facwork
 	https://learnemc.com/decoupling-for-boards-with-closely-spaces-power-planes
@@ -43,6 +57,10 @@
 		* Need remaining selectors...
 	* invert currentSpriteXPixel and currentSpriteYPixel
 	* TODO: Output disable flag, only clears the line...
+		Need to calculate the maximum sprite address, then use that is the design. Needs to access somewhere within the $800 range for the selector...
+			Don't forget it's using $200 within the $800 range for the sprite registers
+			Perhaps offset $100 as it's not within the char screen?
+			Think about the mechanism, does it just stop the sprite data being written and zero the "fetching sprite" state/index?
 
 
 
