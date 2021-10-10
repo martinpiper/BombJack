@@ -2409,3 +2409,13 @@ All layouts now use V3.1
 
 * Check the APU retry opcode works when it detects writes to its data/instruction memory from an external source
 	Add extra validation for delta timings
+
+
+
+
+* Removed old 2114 RAMs from the sprite scan layout 4A/4B/4C/4D
+	The 6116 RAMs are perfectly fine
+
+
+
+* Need to tidy the components to their layers.
