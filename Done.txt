@@ -2419,3 +2419,18 @@ All layouts now use V3.1
 
 
 * Need to tidy the components to their layers.
+
+
+
+
+* Video layer: Overscan choice (7A2 and 8B2) with hard clear on hblank/vblank. Could also use _TVSYNC for overscan
+	Test _TVSYNC on real hardware first...
+	Can be tested by removing U95 (only :A is used) and connecting U284 pin 4 to pin 3
+		Tested on real hardware, a picture is generated with expected char corruption down the left and right hand edges where the borders should be.
+		But the picture is very dark with brightness varying down the screen in horizontal bands, almost like the conversion box is compensating for the signal being active outside of the display area.
+
+
+
+* Sprites2: Trigger on rising horizontal blank edge to edge set flip-flop. The next pixel can reset the flip-flop.
+	Removes the large comparators, also allows the potential for overscan operation with longer scan lengths
+	Emulation updated to match the simulation

@@ -1,11 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="2">
+ <FRAME activewindow="0">
   <PLACEMENT>2c0000000200000003000000fffffffffffffffffffffffffffffffff5000000820000004e040000da020000</PLACEMENT>
-  <WINDOW type="default" module="ISIS"/>
+  <WINDOW type="default" module="ISIS">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="172" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+    <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
+    <centre x="26162000" y="-11430000"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
   <WINDOW type="default" module="DXP"/>
-  <WINDOW type="default" module="ARES"/>
+  <WINDOW type="default" module="ARES">
+   <editor metric="1" gridmajor="1000000" mode="00000000" zoom="-1" scale="373" flipped="0" gridminor="250000" gridmode="16" snapidx="3" snap="250000" xcursor="0" orgmode="0" snaprange="125000">
+    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+    <centre x="-5000000" y="6250000"/>
+    <origin x="0" y="0"/>
+   </editor>
+  </WINDOW>
  </FRAME>
+ <MODULE name="ARES">
+  <editor metric="1" gridmajor="1000000" mode="00000000" zoom="-1" scale="373" flipped="0" gridminor="250000" gridmode="16" snapidx="3" snap="250000" xcursor="0" orgmode="0" snaprange="125000">
+   <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
+   <centre x="-5000000" y="6250000"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
+ <MODULE name="ISIS">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="172" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
+   <centre x="26162000" y="-11430000"/>
+   <origin x="0" y="0"/>
+  </editor>
+ </MODULE>
  <MODULE name="VSMDEBUG">
   <PWI>
    <POPUP w="800" x="-1915" flags="00000002" y="90" h="505" pid="0" iid="-1">
