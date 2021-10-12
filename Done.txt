@@ -2434,3 +2434,10 @@ All layouts now use V3.1
 * Sprites2: Trigger on rising horizontal blank edge to edge set flip-flop. The next pixel can reset the flip-flop.
 	Removes the large comparators, also allows the potential for overscan operation with longer scan lengths
 	Emulation updated to match the simulation
+
+
+
+* Sprite2 scale now *32
+	Also fixed the logic that detects the sprite X >= extent test and and changes internal state back to fetching sprite registers
+		The cascaded comparators can produce a momentary glitch, but isn't longer than the 6MHz low to high edge
+		Removed the latch (flip-flop without clock) for the state and used simpler logic

@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 	{
 		for (int insideHeight = 0; insideHeight < 256; insideHeight++)
 		{
-			int currentSpriteYPixel = ((currentSpriteScaleYInv / 2) + ((insideHeight & 0xff) * currentSpriteScaleYInv)) >> 4;
+			int currentSpriteYPixel = ((currentSpriteScaleYInv / 2) + ((insideHeight & 0xff) * currentSpriteScaleYInv)) >> 5;
 
 			// And clamp
 			if (currentSpriteYPixel > 255)
