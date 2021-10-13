@@ -2442,3 +2442,4 @@ All layouts now use V3.1
 		The cascaded comparators can produce a momentary glitch, but isn't longer than the 6MHz low to high edge
 		Removed the latch (flip-flop without clock) for the state and used simpler logic
 		The last sprite register RAM address selector also needed to be connected, it was floating which meant the sprites were not being stored to the correct address
+		Also need currentLineV to match emulation. To avoid the Y coord changing during the scan die to triggering at HSYNC
