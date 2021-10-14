@@ -667,8 +667,6 @@ d$0
 d$a0140100
 d$a01401ff
 
-; Char screen bank 0 and uses lower palette bank
-d$90000100
 
 
 ; Test priority being updated mid-frame
