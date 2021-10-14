@@ -53,6 +53,9 @@ b$33,b$33
 ; Background tile disable, enable display
 d$9e000120
 
+; Sprites2 enable
+d$91000101
+
 ; Sprites2 test data
 s$92000100
 
@@ -191,6 +194,21 @@ b$10
 b$10
 b$33
 
+
+d$0
+^-$01
+d$0
+
+; Tests disabling and enabling the Sprites2 layer at specific Y positions on the screen
+w$ff01ff00,$a0000000
+
+; Sprites2 disable
+d$91000100
+
+d$0
+w$ff01ff00,$a8000000
+; Sprites2 enable
+d$91000101
 
 d$0
 ^-$01

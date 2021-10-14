@@ -52,11 +52,12 @@
 		Also (currentSpriteFrame & 0x30) will need to select
 		* Need remaining selectors...
 	* invert currentSpriteXPixel and currentSpriteYPixel
-	* TODO: Output disable flag, only clears the line...
+	* Done: Output disable flag, only clears the line...
 		Need to calculate the maximum sprite address, then use that is the design. Needs to access somewhere within the $800 range for the selector...
 			Don't forget it's using $200 within the $800 range for the sprite registers
 			Perhaps offset $100 as it's not within the char screen?
 			Think about the mechanism, does it just stop the sprite data being written and zero the "fetching sprite" state/index?
+			$9100 = $01 = Enable sprites2
 	* TODO: Consider using the two upper bits from the sprite frame to add numeric range to the scale for extremely small sprites. Currently sprites can only scale down to about 4 pixels in size.
 		Or perhaps use the palette entry flips and instead have the flips in the sprite frame, to allow the extra scale bits to be read earlier and allow the initial scaleX to use all thhe available 10 bits
 
