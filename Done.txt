@@ -2496,3 +2496,7 @@ All layouts now use V3.1
 			$9100 = $01 = Enable sprites2
 	* TODO: Consider using the two upper bits from the sprite frame to add numeric range to the scale for extremely small sprites. Currently sprites can only scale down to about 4 pixels in size.
 		Or perhaps use the palette entry flips and instead have the flips in the sprite frame, to allow the extra scale bits to be read earlier and allow the initial scaleX to use all the available 10 bits
+
+
+
+* Sprites2: Fixed the logic contention in the sprite scan buffer by moving the 6MHz OE for the input pixel selector to be earlier in the OR tree and moving the DOPIXEL and sprite enable OR later.
