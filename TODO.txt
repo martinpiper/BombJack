@@ -1,7 +1,3 @@
-* Logic ICs need tidying again
-
-
-
 * Video layer: can have 4 register bits to enable each pixel input independently.
 	This activity signal for each layer can then be sent out through the pixel headers.
 	This reduces the complexity of each layer.

@@ -2500,3 +2500,7 @@ All layouts now use V3.1
 
 
 * Sprites2: Fixed the logic contention in the sprite scan buffer by moving the 6MHz OE for the input pixel selector to be earlier in the OR tree and moving the DOPIXEL and sprite enable OR later.
+
+
+
+* Logic ICs need tidying again
