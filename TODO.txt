@@ -57,6 +57,8 @@
 			Don't forget it's using $200 within the $800 range for the sprite registers
 			Perhaps offset $100 as it's not within the char screen?
 			Think about the mechanism, does it just stop the sprite data being written and zero the "fetching sprite" state/index?
+	* TODO: Consider using the two upper bits from the sprite frame to add numeric range to the scale for extremely small sprites. Currently sprites can only scale down to about 4 pixels in size.
+		Or perhaps use the palette entry flips and instead have the flips in the sprite frame, to allow the extra scale bits to be read earlier and allow the initial scaleX to use all thhe available 10 bits
 
 
 
