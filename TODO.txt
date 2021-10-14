@@ -17,53 +17,6 @@
 		0.19685 inch == CAP20
 	
 	
-* Sprites2: Using the scan line clear technique, but with a longer line of 384 pixels, and a drawn scan of 256 pixels, and logic that includes a scale factor...
-	Perhaps this would allow scaled sprites, without rotation, (although rotation could be applied with another lookup?) and a mechanism to allow a maximum fill rate of XX pixels
-	Where XX = 384 - the time needed to read coordinates, perform vertical clipping tests, and setup the scan segment write, per sprite
-	When the scan line runs out of time to process sprites, then it just draws as much as it can
-	Sprites could be 16x16 pixels with 240 (256-16) colours as well...
-		Or have hi/lo 4 bits for sprite 0/32 (8192 / 256 = 32), and 4 bits palette index
-	Try some software logic first, see if it is feasible with simple small per-pixel operations and state...
-	Don't forget transparent pixel tests
-	* A scale and inverse scale value would remove the need for a lookup table
-	* Swap MSBX/Y to match the flips
-	* Schematic case 7: "Perform Y extent check" checked working.
-	* For case 13:
-		For the left (even) scan logic block:
-			When S2DOPIXEL == 0 ( S2_DOPIXEL == 1 ) then:
-				Scan pixels are output and the pixel logic uses the pull-up resistors to clear the scan memory
-				The 6MHz clock is used to count the entire scan
-					The counters are always enabled
-			When S2DOPIXEL == 1 ( S2_DOPIXEL == 0 ) then:
-				Scan pixels are updated from the sprite data
-				The 6MHz clock is used to count the sprite X position until the extent is reached
-					The counter is only enabled when S2_ADVSPRI == 0 (S2ADVSPRI == 1)
-					The counter load happens during S2_LDFRAME == 0
-	* Done: currentSpriteXPixel = currentSpriteScaleXInv / 2;
-		currentSpriteXPixel will get input depending on S2_ADVSPRI
-		Needs to select the S2_LDSCALEXINV or 6MHz clock depending on the S2_ADVSPRI state (U335, U336, U337)
-	* Needs to use adders for currentSpriteScaleXInv on rising edge of 6MHz (to coincide with just after the sprite data pixel write)
-		S2currentSpriteXPixel[0..15] and S2nextSpriteXPixel[0..15]
-	* if ((currentSpriteXPixel >> 4) >= currentSpriteScaleExtentX)
-	* currentSpriteYPixel lookup table access
-	* The sprite load schedulers (that choose which register to read from RAM) needed to be off for S2LINESTART
-	* currentSpriteXPixel and currentSpriteYPixel pixel data fetch
-		S2SPRIA0 == 1 (currentSpriteFrame & 0x01) will need to >>4 the sprite data
-		Also (currentSpriteFrame & 0x30) will need to select
-		* Need remaining selectors...
-	* invert currentSpriteXPixel and currentSpriteYPixel
-	* Done: Output disable flag, only clears the line...
-		Need to calculate the maximum sprite address, then use that is the design. Needs to access somewhere within the $800 range for the selector...
-			Don't forget it's using $200 within the $800 range for the sprite registers
-			Perhaps offset $100 as it's not within the char screen?
-			Think about the mechanism, does it just stop the sprite data being written and zero the "fetching sprite" state/index?
-			$9100 = $01 = Enable sprites2
-	* TODO: Consider using the two upper bits from the sprite frame to add numeric range to the scale for extremely small sprites. Currently sprites can only scale down to about 4 pixels in size.
-		Or perhaps use the palette entry flips and instead have the flips in the sprite frame, to allow the extra scale bits to be read earlier and allow the initial scaleX to use all thhe available 10 bits
-
-
-
-
 * Audio: DAC to opamp output: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm
 
 
