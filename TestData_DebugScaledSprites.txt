@@ -73,7 +73,7 @@ s$92000100
 ; X scale extent (uses internal coordinates)
 ; Y inv scale (*16)
 ; X inv scale (*16)
-; Sprite frame (index)
+; Sprite frame (index) | 0x40 = halfX | 0x80 = halfY
 b$8b
 b$40
 b$20
@@ -81,7 +81,7 @@ b$f8
 b$20
 b$20
 b$20
-b$00
+b$c0
 
 b$4b
 b$80

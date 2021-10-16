@@ -2504,3 +2504,7 @@ All layouts now use V3.1
 
 
 * Logic ICs need tidying again
+
+
+
+* Sprite2: Frame now has added  | 0x40 = halfX | 0x80 = halfY to start rendering at a different half of each coordinate. Useful for smaller 16x16 sprites where you might want to start rendering from the other 16x16 quadrants.
