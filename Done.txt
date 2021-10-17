@@ -2527,3 +2527,7 @@ All layouts now use V3.1
 		This holds the _WE slightly longer, adds some delay, to match the 74LS258
 		Sine U396DEL is only used for this delay, it can be be bypassed in the real hardware with some jumpers if needed.
 		Output video compares the same. No logic contentions now.
+		
+		
+		
+* Sprites2: Merging some of the ICs to reduce IC count
