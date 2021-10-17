@@ -2508,3 +2508,22 @@ All layouts now use V3.1
 
 
 * Sprite2: Frame now has added  | 0x40 = halfX | 0x80 = halfY to start rendering at a different half of each coordinate. Useful for smaller 16x16 sprites where you might want to start rendering from the other 16x16 quadrants.
+
+
+
+
+* Sprite2: Logic contentions on the scan RAMs, but only for some parts of the screen, not all lines.
+	Enabling debug break on logic contentions shows... S2ILD11 Most likely to happen around RV=0x49 RH=0x003 S2SPRIA=0x01
+	The 74LS258 _OE = 1 so it's off
+	RAM 6116 _OE = 0 so it's on
+	But the debug shows the 74LS258 is still driving the outputs for a short while.
+		Possible since https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=%2Fha2pyFadugYCoHUAKZ16e6Ix0Tl4e52u5lkASBqGrE%3D
+		Shows average propagation delay of 9ns for the LS part.
+	RAM 6116 https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D
+		Indicates the _OE is ignored when _WE is low...
+		Perhaps use this behaviour with the slightly delayed _WE, to match the _OE of the 74LS258, to delay the end of the 6116 write and therefore delay the start of the output enable
+		This would reduce clash with the output of the 74LS258
+	* Added 7432 U396DEL to the _WE inputs of the two 6116 RAMs.
+		This holds the _WE slightly longer, adds some delay, to match the 74LS258
+		Sine U396DEL is only used for this delay, it can be be bypassed in the real hardware with some jumpers if needed.
+		Output video compares the same. No logic contentions now.
