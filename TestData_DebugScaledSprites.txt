@@ -53,8 +53,8 @@ b$33,b$33
 ; Background tile disable, enable display
 d$9e000120
 
-; Sprites2 enable
-d$91000101
+; Sprites2 disable
+d$91000100
 
 ; Sprites2 test data
 s$92000100
@@ -195,9 +195,40 @@ b$10
 b$33
 
 
+; Will be end of list, but temporarily set this to be a valid but vertically very small sprite
+b$00
+b$00
+b$01
+b$00
+b$00
+b$00
+b$00
+b$00
+; After the end of list, this large sprite should not be displayed
+b$0c
+b$00
+b$f0
+b$40
+b$20
+b$01
+b$01
+b$33
+
+
+; Sprites2 enable
+d$91000101
+
 d$0
 ^-$01
 d$0
+
+; Now test the end of list
+d$92620100
+
+d$0
+^-$01
+d$0
+
 
 ; Tests disabling and enabling the Sprites2 layer at specific Y positions on the screen
 w$ff01ff00,$a0000000

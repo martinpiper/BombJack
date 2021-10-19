@@ -2531,3 +2531,9 @@ All layouts now use V3.1
 		
 		
 * Sprites2: Merging some of the ICs to reduce IC count
+
+
+
+* Sprites2: If the Y size is 0 then treat it as an end of list marker and stop processing any more sprite registers for the line
+	Done: Simulation
+	Done: Emulation
