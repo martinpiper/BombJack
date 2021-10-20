@@ -1,3 +1,11 @@
+* Overscan, disable all pixel blanking from HBL?
+	Related to the fading side effect of settingthe pixel blank signal to the TV Sync
+	* In the boot screen for demo7 try clearing all the display data, except the area in the middle.
+		See if the pixel data near edges of the screen causes the fade effect.
+
+
+
+
 * Sprite2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
 
 
@@ -240,11 +248,6 @@
 	Then validate the border shrinks
 
 
-
-
-
-
-* Overscan, disable all pixel blanking from HBL?
 
 
 
