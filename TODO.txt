@@ -1,3 +1,8 @@
+* Sprite2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
+
+
+
+
 * Video layer: can have 4 register bits to enable each pixel input independently.
 	This activity signal for each layer can then be sent out through the pixel headers.
 	This reduces the complexity of each layer.
