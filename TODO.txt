@@ -15,7 +15,11 @@
 	** This means it should be possible to have a hardware register for "wideness", that alters the inputs to the comparators for the HBLANK?
 		* Or perhaps selects several different "wideness" signals, one of which being the current option as default, with several other wider ones.
 		* Reuse the enable/disable register, with the unused 0 bits selecting the overscan extent.
+	* Perhaps have a less than and greater than comparator, for the left and right hand edge, that has 8 pixel steps?
+		This would be an additional four 4-bit comparators with combinatorial logic and suitable inputs from some extra registers.
+			Plus perhaps a selector to select old and new operation
 	* Test code in the C64 "overscantest.prg" Prototype2 folder
+
 
 		
 
