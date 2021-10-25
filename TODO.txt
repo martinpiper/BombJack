@@ -1,7 +1,23 @@
+ * Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
+	Initial test didn't work so well, looks like the calculations and loads went wrong
+
+
+
+
 * Overscan, disable all pixel blanking from HBL?
-	Related to the fading side effect of settingthe pixel blank signal to the TV Sync
+	Related to the fading side effect of setting the pixel blank signal to the TV Sync
 	* In the boot screen for demo7 try clearing all the display data, except the area in the middle.
 		See if the pixel data near edges of the screen causes the fade effect.
+	* Success!
+		The video (25/10/2021) shows how a char screen with a bright white area can scroll around
+		Only when the bright area seems to step into the extreme left/right area does it affect the sprite brightness
+		* This is probably because the "zero voltage" cannot be read correctly during the HBLANK period
+	** This means it should be possible to have a hardware register for "wideness", that alters the inputs to the comparators for the HBLANK?
+		* Or perhaps selects several different "wideness" signals, one of which being the current option as default, with several other wider ones.
+		* Reuse the enable/disable register, with the unused 0 bits selecting the overscan extent.
+	* Test code in the C64 "overscantest.prg" Prototype2 folder
+
+		
 
 
 
