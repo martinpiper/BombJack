@@ -266,6 +266,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9e01/2              | Background image XL/XH pixel scroll     |
    | $01           | Original RAMs                 | $9e03/4              | Background image YL/YH pixel scroll     |
    | $01           | Original RAMs                 | $9e07                | Background colour select                |
+   | $01           | Original RAMs                 | $9e08                | Layer priority select                   |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
    | $02           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |

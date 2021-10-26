@@ -17,8 +17,11 @@
 		* Reuse the enable/disable register, with the unused 0 bits selecting the overscan extent.
 	* Perhaps have a less than and greater than comparator, for the left and right hand edge, that has 8 pixel steps?
 		This would be an additional four 4-bit comparators with combinatorial logic and suitable inputs from some extra registers.
-			Plus perhaps a selector to select old and new operation
+			Plus perhaps a selector to select old and new operation for maximum compatibility
+		If RH $1xx is only used, this reduces the bit sizes needed for the comparator to only the values 0-$7f (ignoring the MSB $8x)
+			Could use one register for upper and lower nybbles for the <= right hand edge and >= left hand edge
 	* Test code in the C64 "overscantest.prg" Prototype2 folder
+	** Left/right border edge logic updated to feed into one pathway - Identical output images
 
 
 		
@@ -34,6 +37,7 @@
 * Video layer: can have 4 register bits to enable each pixel input independently.
 	This activity signal for each layer can then be sent out through the pixel headers.
 	This reduces the complexity of each layer.
+	* kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
 
 
 
