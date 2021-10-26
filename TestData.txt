@@ -638,6 +638,7 @@ b$27,b$52,b$c0,b$74
 d$9e000120
 ; Background tile enable, enable display
 d$9e000130
+d$9e000131	; Add over scan flag
 
 
 !TestTileDisableRapidColours.txt
@@ -654,6 +655,7 @@ d$0
 ; Note the zero data after the wait, this helps with timings of the following memory writes as the display finally releases the bus
 d$0
 d$9e0001f0
+d$9e0001f1	; Add over scan flag
 ; Also start moving a sprite
 d$98420139
 b$11

@@ -20,6 +20,8 @@
 			Plus perhaps a selector to select old and new operation for maximum compatibility
 		If RH $1xx is only used, this reduces the bit sizes needed for the comparator to only the values 0-$7f (ignoring the MSB $8x)
 			Could use one register for upper and lower nybbles for the <= right hand edge and >= left hand edge
+			* Less than and greater than range check works for a couple of fixed values
+			* TODO: Top right of the screen, and bottom right, show the "pixel notch" issue. Need to latch the vertical line position, probably on -ve _HSYNC (start of the sync), and expose from the video layer that instead?
 	* Test code in the C64 "overscantest.prg" Prototype2 folder
 	** Left/right border edge logic updated to feed into one pathway - Identical output images
 
