@@ -642,6 +642,36 @@ d$9e000120
 d$9e000130
 d$9e000131	; Add over scan flag
 
+d$0
+; Wait for _VBLANK since we enable the screen
+^-$01
+
+; Test over scan information being updated mid-frame
+d$0
+w$ff01ff00,$40000000
+d$9e0901f0
+d$0
+w$ff01ff00,$48000000
+d$9e0901d1
+d$0
+w$ff01ff00,$50000000
+d$9e0901c2
+d$0
+w$ff01ff00,$58000000
+d$9e0901b3
+d$0
+w$ff01ff00,$60000000
+d$9e0901a4
+d$0
+w$ff01ff00,$68000000
+d$9e090195
+d$0
+; Back to normal without over scan flag
+w$ff01ff00,$70000000
+d$9e000130
+d$0
+
+
 
 !TestTileDisableRapidColours.txt
 !TestSpriteRegisterOffscreen.txt
@@ -657,9 +687,9 @@ d$0
 ; Note the zero data after the wait, this helps with timings of the following memory writes as the display finally releases the bus
 d$0
 d$9e0001f0
-d$9e0001f1	; Add over scan flag
+;d$9e0001f1	; Add over scan flag
 ; Also start moving a sprite
-d$98420139
+d$9e0901d2
 b$11
 d$0
 
