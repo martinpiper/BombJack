@@ -40,6 +40,8 @@ d$0
 ; Write data from into RAM mapped at $9e00 with EBS $01
 ; Disable the display
 d$9e000110
+; Setup over scan border extents
+d$9e0901d2
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010107
