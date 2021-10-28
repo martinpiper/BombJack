@@ -2540,7 +2540,8 @@ All layouts now use V3.1
 
 
 
-* MegaWang 3000 Turbo Edition: https://twitter.com/too_late_nate/status/1446606425925554181
+* MegaWang 2000 Turbo Edition: https://twitter.com/too_late_nate/status/1446606425925554181
+	https://twitter.com/MartinPiper/status/1448298427142402051
 	Logos:
 		https://github.com/ianhan/BitmapFonts/blob/main/bb_font.png
 		https://github.com/ianhan/BitmapFonts/blob/main/font-pack/Charset-DNS_Kefrens%20The%20Wall%20Font.png
