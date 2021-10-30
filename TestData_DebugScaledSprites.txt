@@ -56,10 +56,6 @@ b$33,b$33
 d$9e000120
 d$9e000121	; Add over scan flag
 
-d$0
-; Wait for _VBLANK since we enable the screen
-^-$01
-
 
 ; Sprites2 disable
 d$91000100
