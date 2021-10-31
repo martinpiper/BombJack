@@ -1,4 +1,10 @@
- * Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
+* Video layer, isolate the signals and ICs used for the timer generation.
+	Reduce VIDCLK signal paths by using dedicated ICs 3T:A should be split out
+
+
+
+
+* Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
 	Initial test didn't work so well, looks like the calculations and loads went wrong
 
 
