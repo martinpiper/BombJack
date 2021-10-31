@@ -2581,3 +2581,13 @@ All layouts now use V3.1
 		0.19685 inch == CAP20
 	* SocketsWithCaps.pdsprj
 	** It worked! https://www.youtube.com/watch?v=pFrLmoHeYb8
+
+
+
+
+* Connectors PIXEL1 and LAYER1 are using the wrong pins (orientations) compared to LAYER2/3/4 etc
+
+
+
+* PIXEL6 is using the wrong output names
+	And using the wrong orientation
