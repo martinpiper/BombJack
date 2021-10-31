@@ -1,3 +1,7 @@
+* Video: Make a call to remove the placement of the 2114 RAMs
+
+
+
 * Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
 	Initial test didn't work so well, looks like the calculations and loads went wrong
 
@@ -9,10 +13,10 @@
 
 
 
-* Video layer: can have 4 register bits to enable each pixel input independently.
-	This activity signal for each layer can then be sent out through the pixel headers.
-	This reduces the complexity of each layer.
-	* kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
+* Done: Video layer: can have 4 register bits to enable each pixel input independently.
+	Done: This activity signal for each layer can then be sent out through the pixel headers.
+	TODO: This reduces the complexity of each layer.
+	TODO: * kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
 
 
 
@@ -82,6 +86,8 @@
 			* TODO: Check if the video board timer generation needs some pull-up resistors? Or perhaps a filter capacitor?
 	* Squeezing, or even touching, CSYNC1 produces noticeable visual horizontal shifting of the video signal and alters the noise observed?
 		Squeezing TVSYNC1 produces a similar effect, but less noticeable.
+		Perhaps related to the VIDCLK and 6MHz signals being routed through 3T:a which is quite distant from the main clock circuitry on the version of the video board fabricated
+			Split out 3TT:B from 3T:B to ensure the 3T and 4T ICs are very near each other
 	* TODO: Using the header and jumper VGA connector from the prototype 1 board, try switching back to the HV sync method... and also try some filtering caps
 
 

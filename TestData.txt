@@ -42,6 +42,8 @@ d$0
 d$9e000110
 ; Setup overscan border extents
 d$9e0901d2
+; Setup new layer enable bits
+d$9e0a010f
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010107

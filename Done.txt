@@ -2643,3 +2643,11 @@ All layouts now use V3.1
 
 * Video layer, isolate the signals and ICs used for the timer generation.
 	Reduce VIDCLK signal paths by using dedicated ICs 3T:A should be split out
+
+
+
+* V8.0 PCB updates
+
+
+
+* Expanded backplane by an extra header

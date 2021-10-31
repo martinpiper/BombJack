@@ -109,7 +109,8 @@ Note: Most control registers can be updated at any point during the frame and th
 0x9c00-0x9cff	Palette RAM
 
 
-0x9e00	0x10	Enable tiles
+0x9e00	0x01	Overscan mode, uses values configured in 0x9e09
+		0x10	Enable tiles
 		0x20	Enable display
 		0x40	BorderX shrink
 		0x80	BorderY shrink
@@ -120,6 +121,14 @@ Note: Most control registers can be updated at any point during the frame and th
 		Next layer closer		= %10 (2)
 		Then next closest		= %01 (1)
 		Then front most layer	= %00 (0)
+
+0x9e09	0xlg	Setup extents for overscan to enable the border(g = greater than, and l = less than) in 8 pixel steps
+
+0x9e0a	0x01	Enable layer 1
+		0x02	Enable layer 2
+		0x04	Enable layer 3
+		0x08	Enable layer 4
+
 
 
 Sprite 32x32 size select
