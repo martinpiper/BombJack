@@ -40,7 +40,7 @@ d$0
 ; Write data from into RAM mapped at $9e00 with EBS $01
 ; Disable the display
 d$9e000110
-; Setup over scan border extents
+; Setup overscan border extents
 d$9e0901d2
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
@@ -640,13 +640,13 @@ b$27,b$52,b$c0,b$74
 d$9e000120
 ; Background tile enable, enable display
 d$9e000130
-d$9e000131	; Add over scan flag
+d$9e000131	; Add overscan flag
 
 d$0
 ; Wait for _VBLANK since we enable the screen
 ^-$01
 
-; Test over scan information being updated mid-frame
+; Test overscan information being updated mid-frame
 d$0
 w$ff01ff00,$40000000
 d$9e0901f0
