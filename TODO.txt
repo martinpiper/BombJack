@@ -2,6 +2,11 @@
 
 
 
+* The single cycle low pulse for "end of hblank" as well as "start of hblank" could be exposed via the backplane
+
+
+
+
 * Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
 	Initial test didn't work so well, looks like the calculations and loads went wrong
 
@@ -17,6 +22,17 @@
 	Done: This activity signal for each layer can then be sent out through the pixel headers.
 	TODO: This reduces the complexity of each layer.
 	TODO: * kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
+
+
+
+
+* Fix the Sprite schedule to align with the overscan expectation that the V counter only changes at the end of the hblank
+	Could also allow MSBX for the sprite by using the F (full screen height) flag. MSBX is much more useful that the full screen height flag.
+	CMPBLK signal might be able to be removed
+	* The emulation would need to be fixed the add an optional new video board behaviour and the fixed sprite behaviour
+	The sprite rendering line can be 512 bytes long, like sprites2, giving a much better horizontal clipping range
+
+
 
 
 
