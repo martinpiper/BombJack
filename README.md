@@ -102,17 +102,13 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 Note: Most control registers can be updated at any point during the frame and the next pixel will reflect the change.
 
 0x9000			Chars control register
-		0x01	Palette bank lo/hi control
 		0x02	Chars screen disable
-		0x40	Bank select 0x01 with below
-		0x80	Bank select 0x02 with above
+
 0x9c00-0x9cff	Palette RAM
 
 
-0x9e00	0x01	Overscan mode, uses values configured in 0x9e09
-		0x10	Enable tiles
+0x9e00	0x10	Enable tiles
 		0x20	Enable display
-		0x40	BorderX shrink
 		0x80	BorderY shrink
 
 0x9e08	Layer priority select, for each layer select the input header pixel input
@@ -123,6 +119,10 @@ Note: Most control registers can be updated at any point during the frame and th
 		Then front most layer	= %00 (0)
 
 0x9e09	0xlg	Setup extents for overscan to enable the border(g = greater than, and l = less than) in 8 pixel steps
+	Overscan mode is always on, so this needs to be set to sensible values
+	Sensible wide value for this is 29 which hides the left edge (including 16x16 tiles) and brings in the right edge in slightly
+	This gives a 320 pixel wide screen, displaying a full width of 40 8x8 characters
+	
 
 0x9e0a	0x01	Enable layer 1
 		0x02	Enable layer 2
@@ -142,17 +142,18 @@ Sprite 32x32 size select
 
 
 
-At 0x9820 - 0x987f each sprite is described by 4 bytes:
+At 0x9800 - 0x985f each sprite is described by 4 bytes:
 
 	Byte 0:
 		The tile code for the sprite, used to look up the sprite’s image bitplanes in the tile ROMs
 		(MAME Emu documentation is wrong, bit 7 has nothing to do with selecting double size mode)
 
-	Byte 1: HVFCCCCC
+	Byte 1: HVFMCCCC
 		Bit 7: H : If set, the sprite is horizontally flipped
 		Bit 6: V : If set, the sprite is vertically flipped
-		But 5: F : If set, the sprite is full screen height. The sprite data will repeat.
-		Bits 4..0: C : 5 bits to provide the colour value for the tile decoder
+		Bit 5: F : If set, the sprite is full screen height. The sprite data will repeat.
+		Bit 4: MSBX
+		Bits 3..0: C : 4 bits to provide the colour value for the tile decoder
 
 	Byte 2: The sprite’s Y position on screen
 	Byte 3: The sprite’s X position on screen
@@ -269,7 +270,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9000                | Char screen control                     |
    | $01           | Original RAMs                 | $9001/2              | Char screen X scroll                    |
    | $01           | Original RAMs                 | $9003/4              | Char screen Y scroll                    |
-   | $01           | Original RAMs                 | $9820   $60 bytes    | Sprite registers                        |
+   | $01           | Original RAMs                 | $9800   $60 bytes    | Sprite registers                        |
    | $01           | Original RAMs                 | $9c00   $200 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |
    | $01           | Original RAMs                 | $9e01/2              | Background image XL/XH pixel scroll     |

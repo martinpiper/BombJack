@@ -31,7 +31,18 @@
 	CMPBLK signal might be able to be removed
 	* The emulation would need to be fixed the add an optional new video board behaviour and the fixed sprite behaviour
 	The sprite rendering line can be 512 bytes long, like sprites2, giving a much better horizontal clipping range
-
+	Key differences
+	* RH=0 is the start of the line just after +ve _HSYNC and RV is changed on +ve _HSYNC
+		This is accomplished by extra internal pixel counters
+	* The overscan lg register 0x9e09 is now used to mask the left/right borders during any scrolling
+	* BorderX shrink flag no longer used in 0x9e00
+	* No more "enable overscan" bit in 0x9e00
+	* Sprite register reads now start at 0 for RH=0
+	* Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
+	* Sprite raster line output is delayed roughly 8 pixels (due to the 8 pixel shift outputs and the _CONTRLDA/_CONTRLDB switch), which means the sprites are all shifted over by that number of pixels
+		TODO: The last sprite might be displaying only the first 8 pixels edge?
+	* Sprite MSBX = 0x10 in palette register
+	* Sprites2 currentLineV no longer needs to be latched
 
 
 

@@ -14,13 +14,14 @@ void WaitForRaster(std::ofstream &file, int yoff)
 	file << "; WaitForRaster" << std::endl;
 	file << "d$0" << std::endl;
 	file << "w$ff03ff00,$" << std::hex << std::setw(2) << yoff;
-	file << "018000" << std::endl;
+	// xpos = 320 ($140)
+	file << "014000" << std::endl;
 }
 
 void SetSpriteAddress(std::ofstream &file)
 {
 	file << "; SetSpriteAddress" << std::endl;
-	file << "s$98200100" << std::endl;
+	file << "s$98000100" << std::endl;
 }
 
 

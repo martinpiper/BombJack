@@ -20,10 +20,11 @@ int main(int argc, char**argv)
 	const double rads1Speed = M_PI / 100 , rads2Speed = M_PI / 173, rads3Speed = M_PI / 123, rads4Speed = M_PI / 200, rads5Speed = M_PI / 240;
 	const double rads1Separation = M_PI / 20, rads2Separation = M_PI / 30, rads3Separation = M_PI / 15;
 	const double mode7RotSpeed = M_PI / 150;
-	const double radius1x = 70, radius2x = 30, radius3x = 100;
+	const double radius1x = 170, radius2x = 60, radius3x = 100;
 	const double radius1y = 50, radius2y = 20;
 
-	const char *paletteHiNybbles = "00000000245438983cdc2010";
+	const char *paletteHiNybbles =		"00000000046408a8ac8c0020";
+	const char *paletteHiNybblesMSBX =	"11111111157519b9bd9e1131";
 	EnableMode7(file);
 
 	while (frame++ < maxFrames)
@@ -102,9 +103,17 @@ int main(int argc, char**argv)
 		for(int i = 0; i < 24; i++)
 		{
 			file << "b$" << std::hex << std::setw(2) << 0x10+i;
-			file << ",b$" << paletteHiNybbles[i] << std::hex << std::setw(1) << ((i / 8)&0xf);
+			int xpos = (int)(192 + (sin(rads1Real) * radius1x) + (cos(rads2Real) * radius2x));
+			if (xpos & 0x100)
+			{
+				file << ",b$" << paletteHiNybblesMSBX[i] << std::hex << std::setw(1) << ((i / 8) & 0xf);
+			}
+			else
+			{
+				file << ",b$" << paletteHiNybbles[i] << std::hex << std::setw(1) << ((i / 8) & 0xf);
+			}
 			file << ",b$" << std::hex << std::setw(2) << (int)(150 + (cos(rads1Real) * radius1y) + (sin(rads2Real) * radius2y));
-			file << ",b$" << std::hex << std::setw(2) << (int)(128 + (sin(rads1Real) * radius1x) + (cos(rads2Real) * radius2x));
+			file << ",b$" << std::hex << std::setw(2) << xpos;
 			file << std::endl;
 
 			rads1Real += rads1Separation;
@@ -203,13 +212,13 @@ int main(int argc, char**argv)
 			DisableSprites(file , 'c');
 
 			// Output address for sprites
-			file << "s$" << std::hex << std::setw(4) << 0x9820 + (chunk * 4);
+			file << "s$" << std::hex << std::setw(4) << 0x9800 + (chunk * 4);
 			file << "0100" << std::endl;
 
 			for (int i = 0; i < chunkSize; i++)
 			{
 				file << "b$" << std::hex << std::setw(2) << 0x10 + (i + chunk) + frame;
-				file << ",b$" << std::hex << std::setw(2) << (((i + chunk)*2) & 0x1f);
+				file << ",b$" << std::hex << std::setw(2) << (((i + chunk)*2) & 0x0f);
 				file << ",b$" << std::hex << std::setw(2) << 32 + (i + chunk);
 				file << ",b$" << std::hex << std::setw(2) << (int)(105 + (sin(rads3Real) * radius3x));
 				file << std::endl;
@@ -222,7 +231,7 @@ int main(int argc, char**argv)
 			file << "d$a01401" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 
-			EnableSprites(file, 'c');
+			EnableSprites(file, '4');
 
 			// Debug colour change
 			file << "d$a0140100" << std::endl;
