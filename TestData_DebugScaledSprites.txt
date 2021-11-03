@@ -20,7 +20,7 @@ d$a0150100
 ; Disable the display
 d$9e000110
 ; Setup over scan border extents
-d$9e0901d2
+d$9e090129
 
 ; Address auto-increment using data bits 16-31
 +16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
@@ -54,7 +54,6 @@ b$33,b$33
 
 ; Background tile disable, enable display
 d$9e000120
-d$9e000121	; Add over scan flag
 
 
 ; Sprites2 disable

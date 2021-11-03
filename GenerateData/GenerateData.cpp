@@ -20,7 +20,7 @@ int main(int argc, char**argv)
 	const double rads1Speed = M_PI / 100 , rads2Speed = M_PI / 173, rads3Speed = M_PI / 123, rads4Speed = M_PI / 200, rads5Speed = M_PI / 240;
 	const double rads1Separation = M_PI / 20, rads2Separation = M_PI / 30, rads3Separation = M_PI / 15;
 	const double mode7RotSpeed = M_PI / 150;
-	const double radius1x = 170, radius2x = 60, radius3x = 100;
+	const double radius1x = 150, radius2x = 60, radius3x = 100;
 	const double radius1y = 50, radius2y = 20;
 
 	const char *paletteHiNybbles =		"00000000046408a8ac8c0020";
@@ -113,7 +113,7 @@ int main(int argc, char**argv)
 				file << ",b$" << paletteHiNybbles[i] << std::hex << std::setw(1) << ((i / 8) & 0xf);
 			}
 			file << ",b$" << std::hex << std::setw(2) << (int)(150 + (cos(rads1Real) * radius1y) + (sin(rads2Real) * radius2y));
-			file << ",b$" << std::hex << std::setw(2) << xpos;
+			file << ",b$" << std::hex << std::setw(2) << (xpos & 0xff);
 			file << std::endl;
 
 			rads1Real += rads1Separation;

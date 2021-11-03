@@ -120,7 +120,7 @@ Note: Most control registers can be updated at any point during the frame and th
 
 0x9e09	0xlg	Setup extents for overscan to enable the border(g = greater than, and l = less than) in 8 pixel steps
 	Overscan mode is always on, so this needs to be set to sensible values
-	Sensible wide value for this is 29 which hides the left edge (including 16x16 tiles) and brings in the right edge in slightly
+	Sensible wide value for this is $29 which hides the left edge (including 16x16 tiles) and brings in the right edge in slightly
 	This gives a 320 pixel wide screen, displaying a full width of 40 8x8 characters
 	
 

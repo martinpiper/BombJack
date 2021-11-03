@@ -3,7 +3,7 @@
 
 void WaitForVSync(std::ofstream &file, int frame)
 {
-	file << "; WaitForVSync " << frame << std::endl;
+	file << "; WaitForVSync " << std::dec << frame << " $" << std::hex << frame << std::endl;
 	file << "d$0" << std::endl;
 	file << "^-$01" << std::endl;
 	file << "d$0" << std::endl;

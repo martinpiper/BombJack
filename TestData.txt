@@ -271,8 +271,8 @@ s$80002000
 ;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane2.bin
 
 ; The extra bitplane for the SotB chars
-s$00002000
-<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane3.bin
+;s$00002000
+;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane3.bin
 
 
 ; Sprite data
@@ -445,38 +445,110 @@ s$98000100
 ; y (inverted)
 ; x
 
-; Top middle of normal screen, all the same frame, palette and flips
-b$14,b$04,b$d0,b$00
-b$14,b$04,b$c8,b$08
-b$14,b$04,b$c0,b$10
-b$14,b$04,b$b8,b$18
+;; Top middle of normal screen, all the same frame, palette and flips, same position
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
+;b$14,b$04,b$d0,b$80
 
-b$14,b$04,b$d0,b$60
-b$14,b$04,b$d0,b$60
-b$14,b$04,b$d0,b$60
-b$14,b$04,b$d0,b$60
 
-b$14,b$04,b$d0,b$a0
-b$14,b$04,b$d0,b$a0
-b$14,b$04,b$d0,b$a0
-b$14,b$04,b$d0,b$a0
+;; Top of normal screen, all the same frame, palette and flips, with some positional differences
+;b$14,b$04,b$d0,b$00
+;b$14,b$04,b$c8,b$08
+;b$14,b$04,b$c0,b$10
+;b$14,b$04,b$b8,b$18
+;
+;b$14,b$04,b$d0,b$60
+;b$14,b$04,b$c8,b$60
+;b$14,b$04,b$c0,b$60
+;b$14,b$04,b$b8,b$60
+;
+;b$14,b$04,b$d0,b$a0
+;b$14,b$04,b$c8,b$a0
+;b$14,b$04,b$c0,b$a0
+;b$14,b$04,b$b8,b$a0
+;
+;b$14,b$04,b$d0,b$e0
+;b$14,b$04,b$c8,b$e0
+;b$14,b$04,b$c0,b$e0
+;b$14,b$04,b$b8,b$e0
+;
+;; MSBX
+;b$14,b$14,b$d0,b$20
+;b$14,b$14,b$c8,b$20
+;b$14,b$14,b$c0,b$20
+;b$14,b$14,b$b8,b$20
+;
+;; MSB with full height
+;b$14,b$34,b$d0,b$30
+;b$14,b$14,b$c8,b$30
+;b$14,b$14,b$c0,b$30
+;b$14,b$14,b$b8,b$30
 
-b$14,b$04,b$d0,b$e0
-b$14,b$04,b$d0,b$e0
-b$14,b$04,b$d0,b$e0
-b$14,b$04,b$d0,b$e0
+
+; Top half of normal screen, all the same frame, palette and flips, with some positional differences to highlight 32x32 flags
+b$10,b$04,b$d0,b$00
+b$11,b$04,b$b0,b$08
+b$12,b$04,b$90,b$10
+b$13,b$04,b$70,b$18
+
+b$14,b$04,b$d0,b$40
+b$15,b$04,b$b0,b$48
+b$16,b$04,b$90,b$50
+b$17,b$04,b$70,b$58
+
+b$18,b$04,b$d0,b$80
+b$19,b$04,b$b0,b$88
+b$1a,b$04,b$90,b$90
+b$1b,b$04,b$70,b$98
+
+b$1c,b$04,b$d0,b$c0
+b$1d,b$04,b$b0,b$c8
+b$1e,b$04,b$90,b$d0
+b$1f,b$04,b$70,b$d8
 
 ; MSBX
-b$14,b$14,b$d0,b$20
-b$14,b$14,b$d0,b$20
-b$14,b$14,b$d0,b$20
-b$14,b$14,b$d0,b$20
+b$20,b$14,b$d0,b$00
+b$21,b$14,b$b0,b$08
+b$22,b$14,b$90,b$10
+b$23,b$14,b$70,b$18
 
-; MSB with full height
-b$14,b$34,b$e0,b$30
-b$14,b$14,b$e0,b$30
-b$14,b$14,b$e0,b$30
-b$14,b$14,b$e0,b$30
+; Testing the wraparound on the left hand screen edge
+;b$24,b$14,b$d0,b$f4
+;b$25,b$14,b$b0,b$f8
+;b$26,b$14,b$90,b$fc
+;b$27,b$14,b$70,b$ff
+; No wraparound test
+b$24,b$14,b$d0,b$30
+b$25,b$14,b$b0,b$38
+b$26,b$14,b$90,b$40
+b$27,b$14,b$70,b$48
+
 
 
 ;; Spread out all over the screen

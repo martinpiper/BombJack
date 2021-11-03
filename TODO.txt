@@ -32,18 +32,43 @@
 	* The emulation would need to be fixed the add an optional new video board behaviour and the fixed sprite behaviour
 	The sprite rendering line can be 512 bytes long, like sprites2, giving a much better horizontal clipping range
 	Key differences
-	* RH=0 is the start of the line just after +ve _HSYNC and RV is changed on +ve _HSYNC
-		This is accomplished by extra internal pixel counters
-	* The overscan lg register 0x9e09 is now used to mask the left/right borders during any scrolling
-	* BorderX shrink flag no longer used in 0x9e00
-	* No more "enable overscan" bit in 0x9e00
-	* Sprite register reads now start at 0 for RH=0
-	* Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
-	* Sprite raster line output is delayed roughly 8 pixels (due to the 8 pixel shift outputs and the _CONTRLDA/_CONTRLDB switch), which means the sprites are all shifted over by that number of pixels
-		TODO: The last sprite might be displaying only the first 8 pixels edge?
-	* Sprite MSBX = 0x10 in palette register
-	* Sprites2 currentLineV no longer needs to be latched
+		* RH=0 is the start of the line just after +ve _HSYNC and RV is changed on +ve _HSYNC
+			This is accomplished by extra internal pixel counters
+		* The overscan lg register 0x9e09 is now used to mask the left/right borders during any scrolling
+		* BorderX shrink flag no longer used in 0x9e00
+		* No more "enable overscan" bit in 0x9e00
+		* Sprite register reads now start at 0 for RH=0
+		* Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
+		* Sprite raster line output is delayed roughly 8 pixels (due to the 8 pixel shift outputs and the _CONTRLDA/_CONTRLDB switch), which means the sprites are all shifted over by that number of pixels
+			TODO: The last sprite might be displaying only the first 8 pixels edge?
+		* Sprite MSBX = 0x10 in palette register
+		* Last sprite is only 8x16 pixels, not 16x16 pixels, due to the reduction in time for the output scan line start
+			The 32x32 behaviour will need careful checking
+		* Sprites2 currentLineV no longer needs to be latched
+	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
+		Narrow down which frames
+		Then the data that produces them
+		Line 47365 when rendering frame 44
+			Should be:
+				d$900101ef
+				d$90020101
+				d$900301f5**
+				d$90040100**
+			But CHXP[0..8] is showing f5ef instead?!!
+			But CHYP[0..8] is showing 23f5 instead?!!
+		Line 49801 when rendering frame 46
+		Line 53695 when rendering frame 49
+		Changing data generator "Then time to MEWR HI" from 0.000000125 to 0.000000100 (shortening the write pulse, making the after data hold time longer) seems to fix the incorrect latch write issue
+			This might be because the READCHYH time got the 8-bit latch on sheet 6 using three 74HC138 chained together, could be taking a long time and the data hold time wasn't quite long enough...
+			Done: Try using _MEWR on the _OE inputs to the 138s with the 0.000000125 timing
+				Worked
+				Updated a few other latches on other layers
+				Sprites2 (scaled) tested, still works
 
+
+
+
+* Double check timings with the APU output, use the scope, after +ve edge hold time and align with the data generator
 
 
 
