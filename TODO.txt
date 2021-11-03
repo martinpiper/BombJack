@@ -32,19 +32,20 @@
 	* The emulation would need to be fixed the add an optional new video board behaviour and the fixed sprite behaviour
 	The sprite rendering line can be 512 bytes long, like sprites2, giving a much better horizontal clipping range
 	Key differences
-		* RH=0 is the start of the line just after +ve _HSYNC and RV is changed on +ve _HSYNC
+		* EMUDone: RH=0 is the start of the line just after +ve _HSYNC and RV is changed on +ve _HSYNC
 			This is accomplished by extra internal pixel counters
-		* The overscan lg register 0x9e09 is now used to mask the left/right borders during any scrolling
-		* BorderX shrink flag no longer used in 0x9e00
-		* No more "enable overscan" bit in 0x9e00
-		* Sprite register reads now start at 0 for RH=0
+		* EMUDone: The overscan lg register 0x9e09 is now used to mask the left/right borders during any scrolling
+		* EMUDone: BorderX shrink flag no longer used in 0x9e00
+		* EMUDone: No more "enable overscan" bit in 0x9e00
+		* EMUDone: Sprite register reads now start at 0 for RH=0
 		* Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
 		* Sprite raster line output is delayed roughly 8 pixels (due to the 8 pixel shift outputs and the _CONTRLDA/_CONTRLDB switch), which means the sprites are all shifted over by that number of pixels
-			TODO: The last sprite might be displaying only the first 8 pixels edge?
-		* Sprite MSBX = 0x10 in palette register
-		* Last sprite is only 8x16 pixels, not 16x16 pixels, due to the reduction in time for the output scan line start
+			Done: The last sprite might be displaying only the first 8 pixels edge?
+		* EMUDone: Sprite MSBX = 0x10 in palette register
+		* EMUDone: Last sprite is only 8x16 pixels, not 16x16 pixels, due to the reduction in time for the output scan line start
 			The 32x32 behaviour will need careful checking
-		* Sprites2 currentLineV no longer needs to be latched
+		* EMUDone: Sprites2 currentLineV no longer needs to be latched
+		* Sprites2: Check screen edges related to doLineStart
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames
 		Then the data that produces them
