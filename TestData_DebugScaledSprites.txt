@@ -57,7 +57,7 @@ d$9e000120
 
 
 ; Sprites2 disable
-d$91000100
+d$9e0a0100
 
 ; Sprites2 test data
 s$92000100
@@ -219,7 +219,7 @@ b$33
 
 
 ; Sprites2 enable
-d$91000101
+d$9e0a0101
 
 d$0
 ^-$01
@@ -237,12 +237,12 @@ d$0
 w$ff01ff00,$a0000000
 
 ; Sprites2 disable
-d$91000100
+d$9e0a0100
 
 d$0
 w$ff01ff00,$a8000000
 ; Sprites2 enable
-d$91000101
+d$9e0a0101
 
 d$0
 ^-$01

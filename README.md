@@ -123,11 +123,12 @@ Note: Most control registers can be updated at any point during the frame and th
 	This gives a 320 pixel wide screen, displaying a full width of 40 8x8 characters
 	
 
-0x9e0a	Bits	Action				Default layer assigned to this connector (can be changed)		Replaces logic
-		0x01	Enable layer 1		Sprites															0x9a00 Upper nybble: $10 = Enable sprite output (6S SPREN)
+0x9e0a	Video layer enable flags. These are passed through the VideoX connectors. Each layer has the option of reading their enable flag and taking appropriate action.
+		Bits	Action				Default layer assigned to this connector (can be changed)		Replaces logic
+		0x01	Enable layer 1		Sprites (or Sprites2)											0x9a00 Upper nybble: $10 = Enable sprite output (6S SPREN)
 		0x02	Enable layer 2		Chars															0x9000 Chars control register	0x02	Chars screen disable
 		0x04	Enable layer 3		Tiles															0x9e00	0x10	Enable tiles
-		0x08	Enable layer 4		Background or mode7 or Sprites2									0xa015	: Flags	:	0 : Enable display
+		0x08	Enable layer 4		Background or mode7												0xa015	: Flags	:	0 : Enable display
 
 
 
@@ -267,6 +268,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9000                | Char screen control                     |
    | $01           | Original RAMs                 | $9001/2              | Char screen X scroll                    |
    | $01           | Original RAMs                 | $9003/4              | Char screen Y scroll                    |
+   | $01           | Sprite2 registers             | $9200-$92ff          | Sprite2 registers                       |
    | $01           | Original RAMs                 | $9800   $60 bytes    | Sprite registers                        |
    | $01           | Original RAMs                 | $9c00   $200 bytes   | Palette GR XB 2 bytes per entry         |
    | $01           | Original RAMs                 | $9e00                | Background image enable and borders     |
