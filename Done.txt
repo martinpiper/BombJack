@@ -2651,3 +2651,14 @@ All layouts now use V3.1
 
 
 * Expanded backplane by an extra header
+
+
+
+
+* Sprite scan RAMs chip enable use V and _HSYNC
+	_HSYNC	V		_CE
+	0		0		1
+	0		1		0
+	1		0		0
+	1		1		0
+	This reduces the time the RAMs are on, which can help save some power and heat stress
