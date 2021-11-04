@@ -46,6 +46,7 @@
 			The 32x32 behaviour will need careful checking
 		* EMUDone: Sprites2 currentLineV no longer needs to be latched
 		* Sprites2: Check screen edges related to doLineStart
+		* Document new raster line schedule, especially for sprite fetches
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames
 		Then the data that produces them
