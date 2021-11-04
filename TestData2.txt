@@ -23,7 +23,7 @@ d$9e070100
 ; Mode7 background
 d$a00f0100
 ; EnableMode7
-d$a015011f
+d$a015010f
 d$0
 
 

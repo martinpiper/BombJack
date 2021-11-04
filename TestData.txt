@@ -28,7 +28,7 @@ d$9e07017f
 ; Testing background colour from mode7 layer
 d$a014017f
 ; EnableMode7
-d$a015011f
+d$a015010f
 d$0
 
 

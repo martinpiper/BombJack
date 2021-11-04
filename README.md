@@ -125,9 +125,9 @@ Note: Most control registers can be updated at any point during the frame and th
 
 0x9e0a	Bits	Action				Default layer assigned to this connector (can be changed)		Replaces logic
 		0x01	Enable layer 1		Sprites															0x9a00 Upper nybble: $10 = Enable sprite output (6S SPREN)
-		0x02	Enable layer 2		Chars
-		0x04	Enable layer 3		Tiles
-		0x08	Enable layer 4		Background or mode7 or Sprites2
+		0x02	Enable layer 2		Chars															0x9000 Chars control register	0x02	Chars screen disable
+		0x04	Enable layer 3		Tiles															0x9e00	0x10	Enable tiles
+		0x08	Enable layer 4		Background or mode7 or Sprites2									0xa015	: Flags	:	0 : Enable display
 
 
 
@@ -222,11 +222,10 @@ During the coordinate (xo,yo) to screen transformation: bits 8-11 are used to lo
 Note: The full, but hidden by borders, screen resolution is 384x264 pixels.
 
 0xa014	: Background colour, any pixel index of zero in the mode7 tile data will show the background colour
-0xa015	: Flags	:	0 : Enable display
-					1 : Enable X update, or reset to 0
-					2 : Enable XY update, or reset to 0
-					3 : Enable Y update, or reset to 0
-					4 : Enable YX update, or reset to 0
+0xa015	: Flags	:	0 : Enable X update, or reset to 0
+					1 : Enable XY update, or reset to 0
+					2 : Enable Y update, or reset to 0
+					3 : Enable YX update, or reset to 0
 
 
 	

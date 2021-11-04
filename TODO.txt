@@ -51,7 +51,7 @@
 			Done: Sprite enable flag
 			Done: Chars enable flag
 			Done: Tiles enable flag
-			TODO: Mode7 enable flag
+			Done: Mode7 enable flag
 				Shift bits down
 			TODO: Sprites2 enable flag
 		* Emulation: Layers to use combined enable bits from the video board, update code/defines
