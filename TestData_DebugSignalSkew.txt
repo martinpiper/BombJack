@@ -4,8 +4,8 @@
 ; Blank (address b$0000)
 d0
 
-; Char screen disable
-d$90000102
+; Sprites enable
+d$9e0a0101
 ; Clear background palette choice
 d$a0140100
 ; Disable mode7
@@ -50,7 +50,7 @@ b$33,b$33
 
 ; Start and end (exclusive) of double size 32x32 sprite index
 s$9a000100
-b$10,b$00
+b$00,b$00
 
 ; Write sprite register data into RAM mapped at $9820 with EBS $01
 s$98200100

@@ -102,7 +102,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 Note: Most control registers can be updated at any point during the frame and the next pixel will reflect the change.
 
 0x9000			Chars control register
-		0x02	Chars screen disable
+		<unused>
 
 0x9c00-0x9cff	Palette RAM
 

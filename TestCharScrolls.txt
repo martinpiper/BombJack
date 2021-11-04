@@ -1,6 +1,6 @@
 ; Disable sprites, tiles, mode7
 d$9a000100
-; Just enable display, disable tiles
+; Just enable display
 d$9e000120
 ; Background 0
 d$9e070100
@@ -10,7 +10,10 @@ d$a0140100
 ; Without shrink CHXP 4/5/6 seems to generate bad data on the left and right columns
 d$a0150100
 ; Ensure chars enabled
-d$90000100
+; Setup new layer enable bits
+d$9e0a0102
+
+
 
 d$0
 ^-$01

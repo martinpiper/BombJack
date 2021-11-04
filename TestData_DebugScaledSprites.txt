@@ -10,8 +10,8 @@ d0
 d$9e0801fc
 
 
-; Char screen disable
-d$90000102
+; Sprites2 enable, char screen and other layers disabled
+d$9e0a0101
 ; Set background palette choice
 d$a0140107
 ; Disable mode7

@@ -49,7 +49,7 @@
 		* Document new raster line schedule, especially for sprite fetches
 		* Hardware: Layers to use combined enable bits from the video board
 			Done: Sprite enable flag
-			TODO: Chars enable flag
+			Done: Chars enable flag
 			TODO: Tiles enable flag
 			TODO: Mode7 enable flag
 			TODO: Sprites2 enable flag

@@ -1,7 +1,5 @@
 ; Disable sprites, chars, mode7
-d$9a000100
-d$90000102
-d$a0150100
+d$9e0a0104
 ; Ensure tiles enabled
 d$9e000130
 

@@ -3,8 +3,8 @@
 ; Blank (address b$0000)
 d0
 
-; Char screen disable
-d$90000102
+; Char/tiles/mode7 screen disable
+d$9e0a0101
 
 ; Old tile background colour
 d$9e07017f

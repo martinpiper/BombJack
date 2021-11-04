@@ -17,11 +17,10 @@ d$9e0801e4
 ; Enable the display, disable tiles
 d$9e000120
 ; Disable sprites
-d$9a000100
 ; Char screen disable
-d$90000102
-; Disable mode7
-d$a0150100
+; Enable just mode7
+d$9e0a0108
+
 ; Background colour from mode7 layer
 d$a0140147
 d$0

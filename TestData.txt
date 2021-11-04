@@ -5,6 +5,9 @@ d0
 ; This may cause left border issues with tiles/chars/sprites as their data is shifted in over 8 pixels
 d$9e09010f
 
+; Setup new layer enable bits
+d$9e0a010f
+
 ; Video generator input priorities register
 ; Binary for 11 10 01 00 = choose plane input 3 , 2 , 1 , 0 in that order
 d$9e0801e4
@@ -12,10 +15,6 @@ d$9e0801e4
 ; Testing the _EXTCS8000-B800 lines
 d$80000112
 d$88000113
-; Char screen disable
-d$90000102
-; Char screen enable
-d$90000100
 
 d$98000115
 d$a0000116
@@ -44,8 +43,6 @@ d$0
 ; Write data from into RAM mapped at $9e00 with EBS $01
 ; Disable the display
 d$9e000110
-; Setup new layer enable bits
-d$9e0a010f
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010107

@@ -1,8 +1,8 @@
 ; Blank (address b$0000)
 d0
 
-; Char screen disable
-d$90000102
+; Char/tiles/mode7 screen disable
+d$9e0a0101
 ; Clear background palette choice to 1f (high palette)
 d$a01401ff
 ; Disable mode7
