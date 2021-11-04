@@ -449,10 +449,11 @@ There is significant logic internally that allows data to be processed: https://
 
 There is a PCB layout design included in the Proteus workspace file. It is deliberately and mostly blank with the exception of adding placement for the external address/data/RW lines, clock, external VBLANK (for IRQ triggering) and video signals output header and the associated resistor ladders. The dual sprite bit plane pull-up resistors are also placed near the edge of the sprites board. The sprite resistors and RAMs are placed to maintain an aesthetic symmetry to the board.
 
-There are five boards in the layout:
+There are six boards in the layout:
 	Video generation
 	Character screen
 	Sprites
+	Scaled sprites
 	Tiles
 	Mode7
 

@@ -1,3 +1,5 @@
+; Define this with a value to enable overscan support: kBus24Bit_VideoLayer_HasOverscan
+
 !macro MBus24Bit_WaitUntilRasterY .raster {
 !if .raster <= 255 {
 .l1
@@ -10,6 +12,13 @@
 kBus24Bit_VideoLayer_EBBS			= $01
 kBus24Bit_VideoLayer_Priority		= $9e08
 kBus24Bit_VideoLayer_Priority_Default		= %11100100
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+kBus24Bit_VideoLayer_OverscanExtent		= $9e09
+kBus24Bit_VideoLayer_OverscanExtent_Default		= $76
+kBus24Bit_VideoLayer_OverscanExtent_Wide		= $29
+kBus24Bit_VideoLayer_LayersEnable		= $9e0a
+kBus24Bit_VideoLayer_LayersEnable_Default		= $0f
+}
 kBus24Bit_VideoLayer_Palette		= $9c00
 
 kBus24Bit_VideoLayer_Priority_Sprites		= %00
@@ -30,9 +39,15 @@ kBus24Bit_VideoLayer_Priority_Pixel3		= %11
 
 kBus24Bit_SpritesMaxNum				= 24
 kBus24Bit_Sprites_EBBS				= $01
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+kBus24Bit_Sprites					= $9800
+} else {
 kBus24Bit_Sprites					= $9820
+}
 kBus24Bit_SpritesControlLo			= $9a00
+!ifndef kBus24Bit_VideoLayer_HasOverscan {
 kBus24Bit_SpritesControlLoEnable	= $10
+}
 kBus24Bit_SpritesControlHi			= $9a01
 
 kBus24Bit_SpritePlanes_EBBS			= $10
