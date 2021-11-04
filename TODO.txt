@@ -50,14 +50,16 @@
 		* Hardware: Layers to use combined enable bits from the video board
 			Done: Sprite enable flag
 			Done: Chars enable flag
-			TODO: Tiles enable flag
+			Done: Tiles enable flag
 			TODO: Mode7 enable flag
+				Shift bits down
 			TODO: Sprites2 enable flag
 		* Emulation: Layers to use combined enable bits from the video board, update code/defines
 			TODO: Sprite enable flag
 			TODO: Chars enable flag
 			TODO: Tiles enable flag
 			TODO: Mode7 enable flag
+				Shift bits down
 			TODO: Sprites2 enable flag
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames

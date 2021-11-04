@@ -42,7 +42,7 @@ d$0
 ;  y	index (DB0-3)
 ; Write data from into RAM mapped at $9e00 with EBS $01
 ; Disable the display
-d$9e000110
+d$9e000100
 
 ; Setup the BG tiles X/Y fine scroll positions to be X=7 and Y=7, or X=f and Y=f
 d$9e010107
@@ -714,15 +714,11 @@ b$27,b$14,b$70,b$48
 
 
 
-; Background image enable and index
-;d$9e000130
-; Background image enable and index, shrink bottom border
-;d$9e0001b0
+; Enable display and shrink bottom border
+;d$9e0001a0
 
-; Background tile disable, enable display
+; Enable display
 d$9e000120
-; Background tile enable, enable display
-d$9e000130
 
 d$0
 ; Wait for _VBLANK since we enable the screen
@@ -791,7 +787,7 @@ d$0
 ^-$01
 ; Note the zero data after the wait, this helps with timings of the following memory writes as the display finally releases the bus
 d$0
-d$9e0001b0
+d$9e0001a0
 
 ; Also set a sensible wide overscan to hide the horizontal scrolling
 d$9e090129
@@ -828,6 +824,5 @@ d$0
 ; Switch back to normal screen and include the animation data
 ; Interesting to note that on the right hand edge the colour bars do still show ~4 pixels of change and the tile screen has some small issues with colours.
 ; This could indicate a limit to the maths at those positions, it also indicates the pixel output is not quite matched with 0x180.
-;d$9e000132
-;d$9e000120	; Disable the tile screen
+;d$9e000120
 !GenerateData\AnimationData.txt

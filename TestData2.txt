@@ -5,12 +5,11 @@ d0
 ; Binary for 11 10 01 00 = choose plane input 3 , 2 , 1 , 0 in that order
 d$9e0801e4
 
-; Background image enable and index
-; x	Display enable (DB5)
-; x	enable (DB4)
-;  y	index (DB0-3)
-; Write data from into RAM mapped at $9e00 with EBS $01
-d$9e000100
+; Setup new layer enable bits
+d$9e0a010f
+
+; Enable video
+d$9e000120
 
 ; No scroll position
 d$9e010100

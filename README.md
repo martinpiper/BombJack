@@ -107,8 +107,7 @@ Note: Most control registers can be updated at any point during the frame and th
 0x9c00-0x9cff	Palette RAM
 
 
-0x9e00	0x10	Enable tiles
-		0x20	Enable display
+0x9e00	0x20	Enable display
 		0x80	BorderY shrink
 
 0x9e08	Layer priority select, for each layer select the input header pixel input
