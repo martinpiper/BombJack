@@ -47,6 +47,18 @@
 		* EMUDone: Sprites2 currentLineV no longer needs to be latched
 		* Sprites2: Check screen edges related to doLineStart
 		* Document new raster line schedule, especially for sprite fetches
+		* Hardware: Layers to use combined enable bits from the video board
+			Done: Sprite enable flag
+			TODO: Chars enable flag
+			TODO: Tiles enable flag
+			TODO: Mode7 enable flag
+			TODO: Sprites2 enable flag
+		* Emulation: Layers to use combined enable bits from the video board, update code/defines
+			TODO: Sprite enable flag
+			TODO: Chars enable flag
+			TODO: Tiles enable flag
+			TODO: Mode7 enable flag
+			TODO: Sprites2 enable flag
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames
 		Then the data that produces them

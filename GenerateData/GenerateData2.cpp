@@ -165,7 +165,7 @@ int main(int argc, char**argv)
 			WaitForVSync(file, frame);
 		}
 
-		EnableSpritesNoWait(file, '0');
+		EnableSpritesNoWait(file);
 		SetSpriteAddress(file);
 		for (int i = 0; i < 24; i++)
 		{
@@ -197,14 +197,14 @@ int main(int argc, char**argv)
 						// Check if the sprites need enabling
 						if (spritesDisabled)
 						{
-							EnableSprites(file, '0');
+							EnableSprites(file);
 							// Debug colour change
 //							file << "d$a0140100" << std::endl;
 						}
 						// TODO: MPi: Investigate if the -14 here and -16 for "New lowest sprite Y pos" can be eliminated completely for 16x16 and 32x32 sprites
 						// Perhaps the sprites are ending at the Y position, not starting from it?
 						WaitForRaster(file, (255-lastSpriteBottomOutputYPos) - 14);	// Adjustment due to sprite position timing logic?
-						DisableSprites(file, '0');
+						DisableSprites(file);
 						spritesDisabled = true;
 					}
 					// Debug colour change
@@ -361,7 +361,7 @@ int main(int argc, char**argv)
 				numSprites++;
 			}
 
-			EnableSprites(file, '0');
+			EnableSprites(file);
 			// Debug colour change
 //			file << "d$a0140100" << std::endl;
 		}

@@ -209,7 +209,7 @@ int main(int argc, char**argv)
 			file << "d$a01401" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 
-			DisableSprites(file , 'c');
+			DisableSprites(file);
 
 			// Output address for sprites
 			file << "s$" << std::hex << std::setw(4) << 0x9800 + (chunk * 4);
@@ -231,7 +231,7 @@ int main(int argc, char**argv)
 			file << "d$a01401" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
 			debugPal = (debugPal + 1) & 0x7;
 
-			EnableSprites(file, '4');
+			EnableSprites(file);
 
 			// Debug colour change
 			file << "d$a0140100" << std::endl;

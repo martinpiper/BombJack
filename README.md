@@ -124,17 +124,16 @@ Note: Most control registers can be updated at any point during the frame and th
 	This gives a 320 pixel wide screen, displaying a full width of 40 8x8 characters
 	
 
-0x9e0a	0x01	Enable layer 1
-		0x02	Enable layer 2
-		0x04	Enable layer 3
-		0x08	Enable layer 4
+0x9e0a	Bits	Action				Default layer assigned to this connector (can be changed)		Replaces logic
+		0x01	Enable layer 1		Sprites															0x9a00 Upper nybble: $10 = Enable sprite output (6S SPREN)
+		0x02	Enable layer 2		Chars
+		0x04	Enable layer 3		Tiles
+		0x08	Enable layer 4		Background or mode7 or Sprites2
 
 
 
 Sprite 32x32 size select
-
 	0x9a00 start index of 32x32 sprites
-		Upper nybble: $10 = Enable sprite output (6S SPREN)
 	0x9a01 end index of 32x32 sprites (exclusive)
 		So 0,0 = no 32x32 sprites
 		0,8 means indexes 0 to 7 (inclusive) are 32x32

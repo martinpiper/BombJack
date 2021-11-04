@@ -8,11 +8,11 @@ void WaitForRaster(std::ofstream &file, int yoff);
 
 void SetSpriteAddress(std::ofstream &file);
 
-void DisableSprites(std::ofstream &file, char spr32);
+void DisableSprites(std::ofstream &file);
 
-void EnableSprites(std::ofstream &file, char spr32);
+void EnableSprites(std::ofstream &file);
 
-void EnableSpritesNoWait(std::ofstream &file, char spr32);
+void EnableSpritesNoWait(std::ofstream &file);
 
 void SetMode7Address(std::ofstream &file);
 

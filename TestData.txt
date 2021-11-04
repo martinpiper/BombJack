@@ -426,7 +426,7 @@ b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 
 ; Start and end (exclusive) of double size 32x32 sprite index
 s$9a000100
-b$14,b$08
+b$04,b$08
 ;b$10,b$00
 
 ; Write sprite register data into RAM mapped at $9800 with EBS $01
