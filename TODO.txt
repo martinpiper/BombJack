@@ -71,7 +71,7 @@
 				Frame 444 of @Demo9
 					Emulation displays worse performance, less pixels filled, than simulation... Hmm...
 					Fixed. Combination of Y extent check and transition from load frame to output first pixel
-		* Update example code/defines
+		* Done: Update example code/defines
 			Especially the Sprites2 demo
 			Added kBus24Bit_VideoLayer_HasOverscan
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
