@@ -45,7 +45,7 @@
 		* EMUDone: Last sprite is only 8x16 pixels, not 16x16 pixels, due to the reduction in time for the output scan line start
 			The 32x32 behaviour will need careful checking
 		* EMUDone: Sprites2 currentLineV no longer needs to be latched
-		* Sprites2: Check screen edges related to doLineStart
+		* EMUDone: Sprites2: Check screen edges related to doLineStart
 		* Document new raster line schedule, especially for sprite fetches
 		* Hardware: Layers to use combined enable bits from the video board
 			Done: Sprite enable flag
@@ -61,6 +61,16 @@
 			Done: Mode7 enable flag
 				Shift bits down
 			Done: Sprites2 enable flag
+			Done: Check borders with hardware
+				Done: right border brought in by one pixel in emulation.
+					DisplayBombJack.java
+			            // Note: When using $2b in emulation, the very last pixel edge will be duplicated in hardware, but not in emulation which outputs a new column of pixels
+						// This is due to a small difference in _HSYNC handling
+						// Will be safer to use the recommended $29 for a 320 wide screen
+			Done: Check Sprites2 behaviour with hardware to emulation when the raster line runs out of time
+				Frame 444 of @Demo9
+					Emulation displays worse performance, less pixels filled, than simulation... Hmm...
+					Fixed. Combination of Y extent check and transition from load frame to output first pixel
 		* Update example code/defines
 			Especially the Sprites2 demo
 			Added kBus24Bit_VideoLayer_HasOverscan
