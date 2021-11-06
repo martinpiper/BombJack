@@ -1,3 +1,8 @@
+* Simulation: Video capture, restore 384 pixels wide, output signals during _HSYNC
+	Add verification option (and warning) that the signals are 0 during _HSYNC
+
+
+
 * Video: Make a call to remove the placement of the 2114 RAMs
 
 
