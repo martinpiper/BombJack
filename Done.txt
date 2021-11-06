@@ -2662,3 +2662,8 @@ All layouts now use V3.1
 	1		0		0
 	1		1		0
 	This reduces the time the RAMs are on, which can help save some power and heat stress
+
+
+
+
+* Simulation video capture width = 384 - 32 = 352
