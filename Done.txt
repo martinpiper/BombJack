@@ -2667,3 +2667,9 @@ All layouts now use V3.1
 
 
 * Simulation video capture width = 384 - 32 = 352
+
+
+
+* Simulation: Video capture, restore 384 pixels wide, output signals during _HSYNC
+	Add verification option (and warning) that the signals are 0 during _HSYNC
+	Note: By setting a very wide overscan extent register, e.g. $0f, it is possible to generate video data output of the display area.
