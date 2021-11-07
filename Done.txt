@@ -2678,3 +2678,8 @@ All layouts now use V3.1
 
 
 * Add separate use display time, split from the current display in sync option
+
+
+
+* Added an early 3-input AND with ENABLEPIXELS, _HSYNC & _VSYNC output pixel disable, just to catch the instances where the overscan extent register is configured incorrectly.
+	This definitely avoid any instances of incorrect video signals.
