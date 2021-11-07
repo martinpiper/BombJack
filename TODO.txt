@@ -18,14 +18,6 @@
 
 
 
-* Done: Video layer: can have 4 register bits to enable each pixel input independently.
-	Done: This activity signal for each layer can then be sent out through the pixel headers.
-	TODO: This reduces the complexity of each layer.
-	TODO: * kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
-
-
-
-
 * Fix the Sprite schedule to align with the overscan expectation that the V counter only changes at the end of the hblank
 	Could also allow MSBX for the sprite by using the F (full screen height) flag. MSBX is much more useful that the full screen height flag.
 	CMPBLK signal might be able to be removed
@@ -74,7 +66,7 @@
 		* Done: Update example code/defines
 			Especially the Sprites2 demo
 			Added kBus24Bit_VideoLayer_HasOverscan
-		* Mode7 X/Y position in emulation compared to hardware
+		* Done: Mode7 X/Y position in emulation compared to hardware
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames
 		Then the data that produces them

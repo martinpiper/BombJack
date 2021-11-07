@@ -2632,7 +2632,10 @@ All layouts now use V3.1
 				* First 15 TestData.txt frames are exact at this point
 		* TestData_DebugScaledSprites.txt has been updated to include overscan, second sprite Xpos updated to be 0 to hit the left border
 			* Done: Emulation needs to be updated to include overscan support
-
+* Done: Video layer: can have 4 register bits to enable each pixel input independently.
+	Done: This activity signal for each layer can then be sent out through the pixel headers.
+	Done: This reduces the complexity of each layer.
+	done: * kVideo_EnableDisplay_Tiles_Enable is already there in the video and tiles logic, it could be reduced in the tiles schematic
 
 
 
@@ -2683,3 +2686,9 @@ All layouts now use V3.1
 
 * Added an early 3-input AND with ENABLEPIXELS, _HSYNC & _VSYNC output pixel disable, just to catch the instances where the overscan extent register is configured incorrectly.
 	This definitely avoid any instances of incorrect video signals.
+
+
+
+
+* _EHSYNC _EVSYNC _ETVSYNC all need to be on the external headers and connectors. Sigh.
+	* And other layers (mode7!) need to use them too.
