@@ -74,6 +74,7 @@
 		* Done: Update example code/defines
 			Especially the Sprites2 demo
 			Added kBus24Bit_VideoLayer_HasOverscan
+		* Mode7 X/Y position in emulation compared to hardware
 	* Done: The chars scroll in Generatedata\AnimationData.txt seems to have some weird flickering frames
 		Narrow down which frames
 		Then the data that produces them
