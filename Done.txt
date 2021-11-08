@@ -2692,3 +2692,7 @@ All layouts now use V3.1
 
 * _EHSYNC _EVSYNC _ETVSYNC all need to be on the external headers and connectors. Sigh.
 	* And other layers (mode7!) need to use them too.
+
+
+
+* Updated connectors in APU and Audio for new signals
