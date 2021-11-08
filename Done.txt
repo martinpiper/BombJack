@@ -2696,3 +2696,8 @@ All layouts now use V3.1
 
 
 * Updated connectors in APU and Audio for new signals
+
+
+
+* Video: Make a call to remove the placement of the 2114 RAMs
+	Disabled in simulation and placement

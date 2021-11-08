@@ -1,7 +1,3 @@
-* Video: Make a call to remove the placement of the 2114 RAMs
-
-
-
 * The single cycle low pulse for "end of hblank" as well as "start of hblank" could be exposed via the backplane
 
 
