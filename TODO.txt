@@ -3,6 +3,21 @@
 		Or simpler to pass through the reset logic signal to the last part of the pixel output, which would increase the end period between one sprite and the next sprite reads by one clock as the pixels are flushed...
 	2 x 64KB EPROMS, for X and Y rot, the high bit in one of the EPROMS would indicate if the result it out of the sprite bounds or not
 	Possible to have different X/Y rotations? Which would generate some skews?
+		Doesn't look good...
+	https://segaretro.org/Sega_X_Board
+		Sprite pixels/texels per frame: 833,333 (at 60 Hz) to 838,408 (at 59.6368 Hz)
+		Sprite pixels/texels per scanline: 3180 to 3200 sprite pixels/texels per scanline
+		Sprites/textures per scanline: 256
+	https://github.com/bji/libmame/blob/master/old/src/mame/video/segaic16.c
+	https://github.com/bji/libmame/blob/master/old/src/mame/video/sega16sp.c#L1059
+	Perhaps the sprite index high bit could signify sqrt(2) corrected scales to avoid sprite edges
+		Meaning select different rotation EPROMs...
+		Allowing the full 256 rotations to be used in the lookup
+		Plus full 8 bits used for X/Y coords...
+		Hmm X and Y would need to be used, or would need multiply lookups for separate X and Y with adds, which doubles IC count...
+		Plus X/Y coordinate correction EPROMs based on rotation...
+
+
 
 
 
