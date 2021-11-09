@@ -1,3 +1,11 @@
+* Scaled sprite rotation, if the EPROM is too slow, then split the pixel output across two clocks?
+	There would need to be some latches for the second part of the output path, to ensure that the next sprite being read (during the attribute read) does not affect the final values being written
+		Or simpler to pass through the reset logic signal to the last part of the pixel output, which would increase the end period between one sprite and the next sprite reads by one clock as the pixels are flushed...
+	2 x 64KB EPROMS, for X and Y rot, the high bit in one of the EPROMS would indicate if the result it out of the sprite bounds or not
+	Possible to have different X/Y rotations? Which would generate some skews?
+
+
+
 * The single cycle low pulse for "end of hblank" as well as "start of hblank" could be exposed via the backplane
 
 
