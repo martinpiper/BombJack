@@ -188,7 +188,7 @@ Mode7 borrows its name from the graphics mode on the Super NES video game consol
 Each pixel on the layer is accessed using the accumulated results of these registers, this means it is possible to have per-pixel transformations combining translation, scaling, reflection, rotation, and shearing.
 It is possible to update these registers per scanline, or per pixel, and generate even more complex results. Register values are latched and used immediately, so timing the update of the three bytes must be considered.
 
-Note: The internal accumulated values, x/xy/y/yx are not accessible via registers and are reset only by _HSYNC and _VSYNC
+Note: The internal accumulated values, x/xy/y/yx are not accessible via registers and are reset only by _EHSYNC and _EVSYNC
 
 For each horizontal pixel (on +ve 6MHz):
 
@@ -198,17 +198,17 @@ For each horizontal pixel (on +ve 6MHz):
 	xo = x + xy + xorg
 	yo = y + yx + yorg
 
-For each scanline (on +ve _HSYNC):
+For each scanline (on +ve _EHSYNC):
 
 	xy += dxy
 	y += dy
 
-For each scanline (on _HSYNC):
+For each scanline (on _EHSYNC):
 
 	yx = 0
 	x = 0
 
-For each frame (on _VSYNC):
+For each frame (on _EVSYNC):
 
 	y = 0
 	xy = 0
@@ -344,79 +344,66 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 
 ### Raster line schedule
 
-	_HSYNC continues its pulses on every line, even when _VSYNC is low
-	Positive edge of _HSYNC indicates start of the line
-	Negative edge of _VSYNC indicates start of the frame
+	_EHSYNC continues its pulses on every line, even when _EVSYNC is low
+	Positive edge of _EHSYNC indicates start of the line
+	Negative edge of _EVSYNC indicates start of the frame
 	
 	Positive edge of VBLANK indicates the bottom of the visible screen edge
 	Note: EXTWANTIRQ = _VBLANK which triggers on the negative edge at raster $f0
 
 	RV = vertical raster line number
-		$f8-$ff	lo _VSYNC
-		$00-$ff	hi _VSYNC
+		$f8-$ff	lo _EVSYNC
+		$00-$ff	hi _EVSYNC
 			$10		lo VBLANK
-			$e0		lo ENABLEPIXELS with bordery flag
+			$e0		lo FINALENABLEPIXELS with bordery flag
 			$f0		hi VBLANK
 	RH = horizontal pixel clock
-		Full line starts at $180 to $1ff then $000 to $0ff
+		Full raster line starts at $0 to $17e
+			In reality, RH $0 occurs for two clocks, each subsequent pixel advances with one clock, up to a maximum of $17e
 		Giving 384 pixel clocks per line
-		Visible portion $008 to $188.
-		The 8 pixel delay is to sync with the 8 pixel delay for sprite data output into the off scan buffer
-		The 8 pixel delay also allows time for the chars and tiles layers to read the index+colour and start shifting pixel data
-	SREAD = Sprite register address (lo byte)
+		Maximum visible portion (when _EHSYNC = 1) is $000 to $15f
+		_EHSYNC = 0 (HBLANK portion of the display where nothing is visible) is $160 to $17e (plus the first half of the next $000)
+
+	SREAD = Sprite register address (lo byte, also maps to ISAB[0..6] in the schematic)
 	
-	Line RH starts at $180
-	$180	SREAD $20
+	Line RH starts at $000
+	$000	SREAD $00
 			Begin sprite 0 register reads
 			1V*. H
-			Note 4A/B are $ff blank
-			Note 4C/D have pixel data in the first 8 bytes (16 pixels) then 0xff blank
-			hi _HSYNC
-	$181	lo ENABLEPIXELS (with borderx flag)
-	$182	SREAD $21
-	$184	SREAD $22
-	$186	SREAD $23
-	$188 	SREAD $20 to $23 again
-			1V*. L
-	$188H	OV0/1/2 LHH OC0/1/2/3 HLHL from M0-M7
-	$188L	All L no data from $188H clocked into pixel output latch at 5E2
-	$189H	Begin sprite 0 pixel writes
-			4A/B First pixel written $7f (0 offset LSB byte in the window)
-			Note 7 written into 4B since it is the high nybble, 4A looks unchanged
-			This is transparent .111 with palette .1111
-			lo ENABLEPIXELS (with no border flags)
-	$18aH	4A/B Second pixel written $7b (0 offset MSB byte in the window)
-			This is not transparent .011 with palette .1111
-	$190	SREAD $24 same 4x2 repeating pattern every 2 pixels
+			lo to hi _EHSYNC (in second clock for $000)
+	$002	SREAD $01
+	$004	SREAD $02
+	$006	SREAD $03
+	$008 	SREAD $00 to $03 again
+	$008H	OV0/1/2 LHH OC0/1/2/3 HLHL from M0-M7
+	$008L	All L no data from $008H clocked into pixel output latch at 5E2
+	$009H	Pixel data is latched into 5E2
+	$009H	Begin sprite 0 pixel writes
+			U77 First pixel written
+	$00aH	U77 Second pixel written
+	$00a	Pixels start arriving at the real video output, resistor ladders
+			Pixel also cleared to $ff in U78
+	$010	SREAD $04 same 4x2 repeating pattern every 2 pixels
 			Begin sprite 1 register reads
 			Meaning 16 pixels elapse for each sprite
-	$198	4A/B Last transparent pixel $7f written at byte offset $7 (pixel $f) high nybble
-	$199H	Begin sprite 1 pixel writes
-			Pixel $67 written (0 offset LSB byte in the window)
-			This is transparent .111 with palette .1100
-	$1b0	lo _HSYNC
-	$1d0	hi _HSYNC
-	$000	SREAD $40 same 4x2 pattern as above
-	$008L	Pixel data arrives at 5E2
-	$009H	Pixel data is latched into 5E2
-			hi ENABLEPIXELS (with no border flags)
-	$00a	Pixels start arriving at the real video output, resistor ladders
-			Pixel also cleared in 4C/D
-			This clears the pixel just output to the final video palette check since it's obviously not needed
-	$00d	hi ENABLEPIXELS (with borderx flag)
-	$0fe	SREAD $7f
-	Loops back to $180 again and RV increment
+	$012	lo to hi FINALENABLEPIXELS (with overscan $29)
+	$0c0	SREAD $30 same 4x2 pattern as above
+	$152	hi to lo FINALENABLEPIXELS (with overscan $29)
+	$160	lo _EHSYNC
+	$17e	hi _EHSYNC (into first half of $000)
+	$17e	SREAD $7f
+	Loops back to $000 again and RV increment
 
 
 	The file "BombJack\RecordingRHSprAddr.txt" contains recorded address and RH values from Root Sheet 4 device VSMDD5.
 	This clearly shows (sparse extracts)
 		Recording		Address	@RH
-		d$00200180		$20		$180
-		d$003001c0		$30		$1c0
-		d$00400000		$40		$000
-		d$00500040		$50		$040
-		d$00600080		$60		$080
-		d$007000c0		$70		$0c0
+		d$00000000		$00		$000
+		d$00100040		$10		$040
+		d$00200080		$20		$080
+		d$003000c0		$30		$0c0
+		d$00400100		$40		$100
+		d$00500140		$50		$140
 
 
 #### Sprite scan RAM logic

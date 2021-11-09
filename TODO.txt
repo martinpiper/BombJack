@@ -13,10 +13,13 @@
 
 
 
+* CMPBLK and _CMPBLK signals might be able to be removed, they seem to be unused
+	Could expose FINALENABLEPIXELS instead
+
+
 
 * Fix the Sprite schedule to align with the overscan expectation that the V counter only changes at the end of the hblank
 	Could also allow MSBX for the sprite by using the F (full screen height) flag. MSBX is much more useful that the full screen height flag.
-	CMPBLK signal might be able to be removed
 	* The emulation would need to be fixed the add an optional new video board behaviour and the fixed sprite behaviour
 	The sprite rendering line can be 512 bytes long, like sprites2, giving a much better horizontal clipping range
 	Key differences
@@ -34,7 +37,7 @@
 			The 32x32 behaviour will need careful checking
 		* EMUDone: Sprites2 currentLineV no longer needs to be latched
 		* EMUDone: Sprites2: Check screen edges related to doLineStart
-		* Document new raster line schedule, especially for sprite fetches
+		* Done: Document new raster line schedule, especially for sprite fetches
 		* Hardware: Layers to use combined enable bits from the video board
 			Done: Sprite enable flag
 			Done: Chars enable flag
