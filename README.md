@@ -397,13 +397,13 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 
 	The file "BombJack\RecordingRHSprAddr.txt" contains recorded address and RH values from Root Sheet 4 device VSMDD5.
 	This clearly shows (sparse extracts)
-		Recording		Address	@RH
-		d$00000000		$00		$000
-		d$00100040		$10		$040
-		d$00200080		$20		$080
-		d$003000c0		$30		$0c0
-		d$00400100		$40		$100
-		d$00500140		$50		$140
+		Recording		Index	Address	@RH
+		d$00000000		0		$00		$000
+		d$00100040		4		$10		$040
+		d$00200080		8		$20		$080
+		d$003000c0		12		$30		$0c0
+		d$00400100		16		$40		$100
+		d$00500140		20		$50		$140
 
 
 #### Sprite scan RAM logic
