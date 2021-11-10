@@ -2701,3 +2701,7 @@ All layouts now use V3.1
 
 * Video: Make a call to remove the placement of the 2114 RAMs
 	Disabled in simulation and placement
+
+
+
+* Added extra schematic documentation for sprite multiplexing
