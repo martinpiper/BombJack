@@ -254,22 +254,22 @@ s$80004000
 ; Character data
 ; Write character data from 05_k08t.bin into RAM mapped at $2000 with EBS $20
 s$20002000
-<0,1,2,3,4,5,6,7,<05_k08t.bin
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane0.bin
+;<0,1,2,3,4,5,6,7,<05_k08t.bin
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane0.bin
 
 ; Write character data from 04_h08t.bin into RAM mapped at $4000 with EBS $20
 s$40002000
-<0,1,2,3,4,5,6,7,<04_h08t.bin
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane1.bin
+;<0,1,2,3,4,5,6,7,<04_h08t.bin
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane1.bin
 
 ; Write character data from 03_e08t.bin into RAM mapped at $8000 with EBS $20
 s$80002000
-<0,1,2,3,4,5,6,7,<03_e08t.bin
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane2.bin
+;<0,1,2,3,4,5,6,7,<03_e08t.bin
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane2.bin
 
 ; The extra bitplane for the SotB chars
-;s$00002000
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane3.bin
+s$00002000
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_plane3.bin
 
 
 ; Sprite data
@@ -286,80 +286,115 @@ s$80001000
 <0,1,2,3,4,5,6,7,<16_m07b.bin
 
 !PaletteData.txt
-;s$9c000100
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastPaletteData.bin
+s$9c000100
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastPaletteData.bin
 
 
 ; Write char screen data into RAM mapped at $4000 with EBS $80
 s$40808000
+s$41008000
 ; Screen data
 b$40,b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+b$40,b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 
 b$40,b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+b$40,b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
+b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
+b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 s$41008000
+s$42008000
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 s$42008000
+s$44008000
 b$41,b$42,b$43,b$44,b$45,b$46,b$47,b$48,b$49,b$4a,b$4b,b$4c,b$4d,b$4e,b$4f,b$50
 s$43008000
+s$46008000
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$10
 
 ; Colour data
 s$50808000
+s$81008000
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+; Demonstrating various flips and also the extended character set using hi-nybble 1/2
+b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0,b$c1
+b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 ; Demonstrating various flips and also the extended character set using hi-nybble 1/2
 b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0,b$c1
 b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
+; Demonstrating various flips and also the extended character set using hi-nybble 1/2
+b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0,b$c1
+b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 ; Demonstrating various flips and also the extended character set using hi-nybble 1/2
 b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0,b$c1
 b$01,b$02,b$13,b$14,b$15,b$16,b$37,b$18,b$49,b$4a,b$8b,b$8c,b$cd,b$ce,b$cf,b$c0
 s$51008000
+s$82008000
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 s$52008000
+s$84008000
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 s$53008000
+s$86008000
 b$01,b$22,b$33,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$00
 
 
 s$48c08000
+s$51808000
 ; Screen data
 b$80,b$81,b$82,b$83,b$84,b$85,b$86,b$87,b$88,b$89,b$8a,b$8b,b$8c,b$8d,b$8e,b$8f
 
 ; Colour data
 s$58c08000
+s$91808000
 b$11,b$22,b$33,b$44,b$55,b$66,b$77,b$88,b$99,b$aa,b$bb,b$cc,b$dd,b$ee,b$ff,b$82
 
 
 s$4cc08000
+s$59808000
 ; Screen data
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 
 ; Colour data
 s$5cc08000
+s$99808000
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 
 
 s$49c08000
+s$53808000
 ; Screen data
 b$50,b$51,b$52,b$53,b$54,b$55,b$56,b$57,b$58,b$59,b$5a,b$5b,b$5c,b$5d,b$5e,b$5f
 
 ; Colour data
 s$59c08000
+s$93808000
 b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f,b$02
 
 
 ; Write SotB char screen data into RAM mapped at $4000 with EBS $80
-;s$40008000
-;<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_map.bin
+s$40008000
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_map.bin
+; Write SotB char colour screen data into RAM mapped at $8000 with EBS $80
+s$80008000
+<0,1,2,3,4,5,6,7,<C:\work\c64\VideoHardware\tmp\ShadowBeastChars_map.bin2
 
 
 
@@ -794,7 +829,7 @@ d$9e090129
 d$0
 
 ;!TestTileScrolls.txt
-;!TestCharScrolls.txt
+!TestCharScrolls.txt
 
 
 ; Clear background palette choice
