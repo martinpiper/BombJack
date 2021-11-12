@@ -1,7 +1,7 @@
 * Chars: Think about adding an extra 8K to make the virtual screen wider
 	Simulation and emulation updated for 1024 wide char screen - Tested with SotB demos
 	TODO: Need to update data files for unit tests
-	TODO: Update other demos that use overscan (Demo7 and Demo9)
+	Done: Update other demos that use overscan (Demo7 and Demo9)
 
 
 

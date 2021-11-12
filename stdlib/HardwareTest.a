@@ -88,16 +88,33 @@ HardwareTest_VideoPattern0
 	lda #0
 	tay
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+}
 	lda #1
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+}
 	lda #2
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+}
 	lda #3
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+}
 	lda #4
 	jsr Bus24Bit_WriteAForY
 	jsr Bus24Bit_WriteAForY
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+}
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
 	lda #0
@@ -106,6 +123,12 @@ HardwareTest_VideoPattern0
 	jsr Bus24Bit_WriteAForY
 	jsr Bus24Bit_WriteAForY
 	jsr Bus24Bit_WriteAForY
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForY
+}
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
 	+HardwareTest_SendBitplaneData 4 , 1

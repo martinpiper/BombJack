@@ -283,8 +283,8 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $02           | APU                           | $2000   8KB          | APU bank 2 registers                    |
    | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
-   | $80           | Char screen                   | $4000   8KB          | Chars and colours into U258             |
-   | Note 1 spare  |                               |                      |                                         |
+   | $80           | Char screen                   | $4000   8KB          | Chars into U258                         |
+   | $80           | Char screen colours           | $8000   8KB          | Chars colours into U137                 |
    | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R             |
    | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 1 into 8N7R             |
    | $40           | Background 16x16 Root sheet 7 | $8000   8KB          | Tiles bit plane 2 into 8L7R             |
@@ -312,7 +312,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 	** Comment: Top left all the same
 
 	This sets all sprites to be in the top left of the screen, it is useful to testing maximum pixel write through and sprite selection logic scenarios. The background is disabled and char screen uses transparent chars. This leaves just the sprite plane outputting pixels.
-	Setting a logic break on RV[0..7] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
+	Setting a logic break on RV[0..8] = 0xe8 will allow the simulation timing and scan line RAM contents to be inspected in detail.
 	The timing of sprite pixel writes into scan RAM 4A/4B and pixel reads from scan RAM 4C/4D with its clear to $ff can be seen whilst single stepping. Note the values for the RV and RH bus lines just below the video display.
 
 	** Comment: X pos group

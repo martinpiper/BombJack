@@ -123,7 +123,11 @@ kBus24Bit_CharScreen_ScrollY16		= $9003
 
 kBus24Bit_CharScreenMap_EBBS		= $80
 kBus24Bit_CharScreenMap				= $4000
+!ifdef kBus24Bit_VideoLayer_HasOverscan {
+kBus24Bit_CharColourMap				= $8000
+} else {
 kBus24Bit_CharColourMap				= $5000
+}
 
 kBus24Bit_CharScreenPlanes_EBBS		= $20
 kBus24Bit_CharScreenPlanes_0		= $2000

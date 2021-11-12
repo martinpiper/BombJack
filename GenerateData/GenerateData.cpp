@@ -43,7 +43,7 @@ int main(int argc, char**argv)
 		file << "d$9e0301" << std::hex << std::setw(2) << (screenYPos & 0xff) << std::endl;
 		file << "d$9e0401" << std::hex << std::setw(2) << ((screenYPos >> 8) & 0xff) << std::endl;
 
-		screenXPos = (int)(256 + (sin(rads1 * 1.5f) * 256));
+		screenXPos = (int)(512 + (sin(rads1 * 0.5f) * 600));
 		screenYPos = (int)(256 + (cos(rads1 * 1.25f) * 256));
 		file << "d$900101" << std::hex << std::setw(2) << (screenXPos & 0xff) << std::endl;
 		file << "d$900201" << std::hex << std::setw(2) << ((screenXPos >> 8) & 0xff) << std::endl;
