@@ -42,7 +42,7 @@ b$98
 ; Value to store in $9820
 b$11
 ; Next RHRV to wait for
-b$f8,b$01,b$a1
+b$f8,b$01,b$61
 ; Value to store in $9821
 b$12
 
@@ -67,7 +67,7 @@ d$0
 
 ; Now try waiting for a pixel before the APU trigger and using memory writes to test the APU delay processing logic
 d$0
-w$ff01ff00,$f8019000
+w$ff01ff00,$f8015000
 d$0
 
 ; Test memory access APU delay during scan
@@ -81,7 +81,7 @@ d$0
 
 ; For kAPU_SkipIfEQ check
 d$0
-w$ff01ff00,$f8019000
+w$ff01ff00,$f8015000
 d$0
 
 ; Causes the PC to reset and loop around with kAPU_SkipIfEQ check
@@ -91,7 +91,7 @@ d$0
 
 ; For kAPU_SkipIfEQ check
 d$0
-w$ff01ff00,$f8019000
+w$ff01ff00,$f8015000
 d$0
 
 ; Cause a known value, still NE, to be written to the debug output
@@ -99,7 +99,7 @@ d$400302ff
 
 ; For kAPU_SkipIfEQ check
 d$0
-w$ff01ff00,$f8019000
+w$ff01ff00,$f8015000
 d$0
 
 ; Should not see any sprite writes between these two frames
@@ -109,7 +109,7 @@ d$0
 
 ; For kAPU_SkipIfEQ check
 d$0
-w$ff01ff00,$f8019000
+w$ff01ff00,$f8015000
 d$0
 
 ; Causes the PC to skip the reset and not loop around with kAPU_SkipIfEQ check

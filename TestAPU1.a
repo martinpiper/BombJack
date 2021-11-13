@@ -19,7 +19,7 @@
 	+MAPU kAPU_IDataRegLoad0 | kAPU_IDataRegLoad2 | kAPU_Incr_ADDRB1
 	+MAPU 
 	+MAPU kAPU_IDataRegLoad1 | kAPU_IDataRegLoad3 | kAPU_Incr_ADDRB1
-	+MAPU kAPU_Incr_ADDRB1
+	+MAPU
 	+MAPU kAPU_PCLoad16
 
 	; This should never execute due to the above PC load

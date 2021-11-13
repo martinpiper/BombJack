@@ -60,12 +60,13 @@
 		* EMUDone: BorderX shrink flag no longer used in 0x9e00
 		* EMUDone: No more "enable overscan" bit in 0x9e00
 		* EMUDone: Sprite register reads now start at 0 for RH=0
-		* Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
+		* EMUDone: Sprite 32x32 check uses 256H not _256H, which means the selection logic has changed. Will need to be figured out from the simulation again.
 		* Sprite raster line output is delayed roughly 8 pixels (due to the 8 pixel shift outputs and the _CONTRLDA/_CONTRLDB switch), which means the sprites are all shifted over by that number of pixels
 			Done: The last sprite might be displaying only the first 8 pixels edge?
 		* EMUDone: Sprite MSBX = 0x10 in palette register
 		* EMUDone: Last sprite is only 8x16 pixels, not 16x16 pixels, due to the reduction in time for the output scan line start
 			The 32x32 behaviour will need careful checking
+				@TC-9 created for 32x32 behaviour
 		* EMUDone: Sprites2 currentLineV no longer needs to be latched
 		* EMUDone: Sprites2: Check screen edges related to doLineStart
 		* Done: Document new raster line schedule, especially for sprite fetches
@@ -117,10 +118,6 @@
 				Updated a few other latches on other layers
 				Sprites2 (scaled) tested, still works
 
-
-
-
-* Double check timings with the APU output, use the scope, after +ve edge hold time and align with the data generator
 
 
 

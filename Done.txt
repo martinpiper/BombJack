@@ -2705,3 +2705,7 @@ All layouts now use V3.1
 
 
 * Added extra schematic documentation for sprite multiplexing
+
+
+
+* Double check timings with the APU output, use the scope, after +ve edge hold time and align with the data generator
