@@ -2889,3 +2889,20 @@ All layouts now use V3.1
 
 
 * Added DIL24NARCAP20
+
+
+
+
+* To prepare for DIL*CAP20
+	https://resources.altium.com/p/emi-reducing-pcb-shielding-techniques-incorporate-your-designs
+	Some of the shield guard traces need to be moved.
+	Using the design explorer, IC package search, look for:
+		DIL14
+		DIL16
+		DIL18
+		DIL20
+		DIL24NAR
+		DIL28
+	Highlight the column, type in and append "CAP20" to the package name
+	Look for unplaced package ICs, delete IC, then replace IC using new package to ensure netlist is correct
+		Check ground and power pins are populated

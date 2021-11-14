@@ -1,3 +1,10 @@
+* Check list!
+	Ensure ICs, except EPROMs, are present in the BOM. Do not want to populate a bunch of sockets by accident.
+	Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
+
+
+	
+
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
 	Menu->Technology->Set Layer Stackup
 		Gradually reduce each type "Plane" to "Signal" starting with the top most plane *with the greater number of existing layers* first.
