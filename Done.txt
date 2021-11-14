@@ -2709,3 +2709,19 @@ All layouts now use V3.1
 
 
 * Double check timings with the APU output, use the scope, after +ve edge hold time and align with the data generator
+
+
+
+
+* Chars: Think about adding an extra 8K to make the virtual screen wider
+	Simulation and emulation updated for 1024 wide char screen - Tested with SotB demos
+	Done: Need to update data files for unit tests
+	Done: Update other demos that use overscan (Demo7 and Demo9)
+
+
+
+
+* CMPBLK and _CMPBLK signals might be able to be removed, they seem to be unused
+	Could expose FINALENABLEPIXELS instead
+	_CMPBLK = UNUSEDVIDEO7
+	CMPBLK = FINALENABLEPIXELS
