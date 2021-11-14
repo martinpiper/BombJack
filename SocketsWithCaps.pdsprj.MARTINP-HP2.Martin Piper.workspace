@@ -10,9 +10,9 @@
    </editor>
   </WINDOW>
   <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="152" flipped="0" gridminor="254000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="83552">
+   <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="116" flipped="0" gridminor="254000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="109482">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-7239000" y="11951400"/>
+    <centre x="-4508500" y="3818132"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -25,9 +25,9 @@
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="152" flipped="0" gridminor="254000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="83552">
+  <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="116" flipped="0" gridminor="254000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="109482">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-7239000" y="11951400"/>
+   <centre x="-4508500" y="3818132"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
