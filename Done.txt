@@ -2884,3 +2884,8 @@ All layouts now use V3.1
 	Connect power
 	Measure 4T output pin 9, remember to connect GND (grey wire) on the logic analyser
 	Logic analyser logic threshold 2V
+
+
+
+
+* Added DIL24NARCAP20
