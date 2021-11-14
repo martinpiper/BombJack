@@ -1,3 +1,20 @@
+* To prepare for DIL*CAP20
+	https://resources.altium.com/p/emi-reducing-pcb-shielding-techniques-incorporate-your-designs
+	Some of the shield guard traces need to be moved.
+	Using the design explorer, IC package search, look for:
+		DIL14
+		DIL16
+		DIL18
+		DIL20
+		DIL24NAR
+		DIL28
+	Highlight the column, type in and append "CAP20" to the package name
+	Look for unplaced package ICs, delete IC, then replace IC using new package to ensure netlist is correct
+		Check ground and power pins are populated
+
+
+
+
 * Scaled sprite rotation, if the EPROM is too slow, then split the pixel output across two clocks?
 	There would need to be some latches for the second part of the output path, to ensure that the next sprite being read (during the attribute read) does not affect the final values being written
 		Or simpler to pass through the reset logic signal to the last part of the pixel output, which would increase the end period between one sprite and the next sprite reads by one clock as the pixels are flushed...
