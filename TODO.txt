@@ -10,6 +10,7 @@
 	
 	
 	
+* Instead of headers for the address selects, think about a bank of dip switches
 	
 
 
