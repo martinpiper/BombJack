@@ -1,6 +1,11 @@
 * Check list!
+	Using design explorer check all components are assigned to their appropriate layers
+	Full place on all boards together
+		Then auto-route
+		Check connectivity
 	Ensure ICs, except EPROMs, are present in the BOM. Do not want to populate a bunch of sockets by accident.
 	Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
+	Ensure all components have ordering links
 
 
 	
