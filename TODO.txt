@@ -43,13 +43,13 @@
 
 
 
-* Sprite2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
+* Sprites2: Try reducing the time needed to read the registers, by not having the memory rest periods before the latches
 	Initial test didn't work so well, looks like the calculations and loads went wrong
 
 
 
 
-* Sprite2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
+* Sprites2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
 
 
 
