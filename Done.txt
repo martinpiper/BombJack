@@ -2912,3 +2912,11 @@ All layouts now use V3.1
 * CheckConnectivity
 	Include alias names for header nets
 	Include video connector nets, including layer enable
+
+
+
+
+* Instead of headers for the address selects, think about a bank of dip switches
+	Two options:
+		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/ADE08A04?qs=sGAEpiMZZMtt%2FePYj%2FTMhwk%252B%2FhX4O0WAjJubDt0lPR8%3D
+		https://www.mouser.sg/ProductDetail/TE-Connectivity/5-435626-5?qs=sGAEpiMZZMvC4tFtz7F%252BjiWKZepm43pLTfhntRPSxuc%3D
