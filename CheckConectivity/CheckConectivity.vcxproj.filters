@@ -23,5 +23,6 @@
     <Text Include="..\Done.txt" />
     <Text Include="..\TODO.txt" />
     <Text Include="..\HeaderNets.txt" />
+    <Text Include="..\MakeRelease.txt" />
   </ItemGroup>
 </Project>

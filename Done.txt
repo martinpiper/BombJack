@@ -2906,3 +2906,9 @@ All layouts now use V3.1
 	Highlight the column, type in and append "CAP20" to the package name
 	Look for unplaced package ICs, delete IC, then replace IC using new package to ensure netlist is correct
 		Check ground and power pins are populated
+
+
+
+* CheckConnectivity
+	Include alias names for header nets
+	Include video connector nets, including layer enable

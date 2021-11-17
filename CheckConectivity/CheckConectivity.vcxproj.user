@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>"C:\Work\BombJack\V3.0\Bomb Jack.IPC" "C:\work\BombJack\V3.0\Pre-Production Check.txt" "C:\Work\BombJack\HeaderNets.txt"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"C:\work\BombJack\V8.0\Bomb Jack - All - Routed.IPC" "C:\work\BombJack\V8.0\connectivity check.txt" "C:\Work\BombJack\HeaderNets.txt"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
