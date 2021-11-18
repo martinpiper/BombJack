@@ -1,4 +1,4 @@
-* Check list!
+* Release check list!
 	Using design explorer check all components are assigned to their appropriate layers
 	Full place on all boards together
 		Then auto-route
@@ -8,7 +8,7 @@
 				Connectivity
 				Net zone routing
 			Run
-			Selact all->Copy->Save text to file
+			Select all->Copy->Save text to file
 			Then run CheckConnectivity with a command line like: "C:\work\BombJack\V8.0\Bomb Jack - All - Routed.IPC" "C:\work\BombJack\V8.0\connectivity check.txt" "C:\Work\BombJack\HeaderNets.txt"
 	Ensure ICs, except EPROMs, are present in the BOM. Do not want to populate a bunch of sockets by accident.
 	Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
@@ -16,13 +16,17 @@
 
 
 	
-
+** For each board, ensure the signal layers have a GND power plane created
+	Menu->Technology->Set Layer Stackup
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
 	Menu->Technology->Set Layer Stackup
 		Gradually reduce each type "Plane" to "Signal" starting with the top most plane *with the greater number of existing layers* first.
 		** Remember to check the Menu->Technology-Design Rule Manager
 			Tab: Net Classes
 				That Net Class: "Signal" is enabled for the required layers, adjust for layer pairs
+* For boards with analogue signals, check those areas do not contain digital signals
+	Using Track Mode highlights the tracks well
+	Highlight 6MHz on the layout to easily check
 * For PCBWay export and quote
 	Menu->Output->Generate Gerber
 		Choose: RS274X

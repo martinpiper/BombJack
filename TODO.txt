@@ -1,3 +1,7 @@
+* Audio: Perhaps widen the resistor ladders and separate the analogue output, much like the video board usage of keepout areas
+
+
+
 * Plastic (PDIP) 6116 (6116SA20TDB) 2Kx8 SRAM 20ns is going end of life
 	EoL notice: https://www.mouser.sg/ProductDetail/IDT/6116SA20TPGI?qs=sGAEpiMZZMt9mBA6nIyysK6VW3GrAnba45Kc6Apw0Go%3D
 	https://www.renesas.com/us/en/products/memory-logic/srams/asynchronous-srams
@@ -11,10 +15,6 @@
 	
 	
 * Sprites2 
-	
-
-
-
 * Scaled sprite rotation, if the EPROM is too slow, then split the pixel output across two clocks?
 	There would need to be some latches for the second part of the output path, to ensure that the next sprite being read (during the attribute read) does not affect the final values being written
 		Or simpler to pass through the reset logic signal to the last part of the pixel output, which would increase the end period between one sprite and the next sprite reads by one clock as the pixels are flushed...

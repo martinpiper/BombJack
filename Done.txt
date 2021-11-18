@@ -2920,3 +2920,13 @@ All layouts now use V3.1
 	Two options:
 		>> https://www.mouser.sg/ProductDetail/TE-Connectivity/ADE08A04?qs=sGAEpiMZZMtt%2FePYj%2FTMhwk%252B%2FhX4O0WAjJubDt0lPR8%3D
 		https://www.mouser.sg/ProductDetail/TE-Connectivity/5-435626-5?qs=sGAEpiMZZMvC4tFtz7F%252BjiWKZepm43pLTfhntRPSxuc%3D
+
+
+
+* To attempt to reduce signal crosstalk on the video board between the digital and analogue parts
+	The resistor ladders have been horizontally separated to allow signals to pass between the resistors
+	L5E2 and the input 5F8 , 5H8 , 5J8 , 5K8 have been placed closer to the output and the resistor ladders (their traces were straying into the output header areas)
+	Keepout boxes have been placed below the resistor ladders, and to the left of the output headers
+	The output latches 7B2 , 8A2 6MHz track passes to the left of the ICs, not to the right near analogue signals
+	The sync signal output U284 moved closer to the VGA header output and the _ETVSYNC resistors
+	
