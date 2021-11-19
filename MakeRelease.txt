@@ -56,7 +56,8 @@
 			Menu->Data-Auto Filter
 			Ctrl+A then double click column separator to resize all columns to fit the data
 			For PCBWay BOM choose to merge suitable component sockets and any other intended components
-				The "Supplier" column has IC sockets, for assembly. The actual ICs from the "Stock Code" column are then socketed.
+				The "Supplier" column has IC sockets, for assembly where the actual ICs from the "Stock Code" column can be socketed.
+				However most designs now have ICs soldered with decoupling capacitors and directly use the "Stock Code" column.
 				For example:
 					Sort by "Supplier"
 						Then copy from "Stock Code" into the empty supplied cells all those components PCBWay can order and assemble.
@@ -69,4 +70,6 @@
 					Group Layer
 					PCB Package
 				Save as XLSX file using "- BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
-	Order note: Your standard 1.6mm +/- 10% 1oz stackup is OK. Please assemble 1 board, leave the other boards bare. The BOM file "Supplier" column contains the component ordering links.
+	Order note:
+		Your standard 1.6mm +/- 10% 1oz stackup is OK. Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
+		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen.

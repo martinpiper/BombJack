@@ -2930,3 +2930,6 @@ All layouts now use V3.1
 	The output latches 7B2 , 8A2 6MHz track passes to the left of the ICs, not to the right near analogue signals
 	The sync signal output U284 moved closer to the VGA header output and the _ETVSYNC resistors
 	
+	
+	
+* Header text protected by placement keepout and DIP switch default markers moved to the edge of the board with DIP switch moved away from the board edge
