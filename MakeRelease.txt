@@ -11,7 +11,7 @@
 			Select all->Copy->Save text to file
 			Then run CheckConnectivity with a command line like: "C:\work\BombJack\V8.0\Bomb Jack - All - Routed.IPC" "C:\work\BombJack\V8.0\connectivity check.txt" "C:\Work\BombJack\HeaderNets.txt"
 	Ensure ICs, except EPROMs, are present in the BOM. Do not want to populate a bunch of sockets by accident.
-	Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
+	For BOMs: Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
 	Ensure all components have ordering links
 
 
@@ -33,13 +33,17 @@
 	Menu->Output->Generate Pick and Place File
 		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
 		File format: CSV
-		Export, append "- PNP" suffix
+		Export, append " - PNP" suffix
 	Toolbar->Bill of Materials ($ icon)
 		Use columns
+			Value
 			Stock Code
-			Supplier
+			Description
+			Group Layer
+			PCB Package
+			Supplier (not needed when not using IC sockets)
 			Placed
-		Choose: Full CSV
+		Choose check box: Full CSV
 		Press CSV button ("a" document icon)
 		Text Import window
 			Click top left grid, to select all cells
@@ -60,16 +64,22 @@
 				However most designs now have ICs soldered with decoupling capacitors and directly use the "Stock Code" column.
 				For example:
 					Sort by "Supplier"
-						Then copy from "Stock Code" into the empty supplied cells all those components PCBWay can order and assemble.
+						Then copy from "Supplier" into "Stock Code" any sockets PCBWay can order and assemble.
+						** Use sockets for: **
+							27C512 - EPROM
 				Delete columns:
-					Category
-					Value
-					Stock Code
+					Supplier
 					Unit Cost
-					Description
 					Group Layer
-					PCB Package
-				Save as XLSX file using "- BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
+				Save as XLSX file using " - BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
+					e.g. Bomb Jack - Video - Routed - CADCAM - BOM.xlsx
+				Count ICs from "PCB Package" "*CAP20" then add a row similar to:
+					Capacitors	59 units for DC	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
+
+
+				
 	Order note:
-		Your standard 1.6mm +/- 10% 1oz stackup is OK. Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
+		Your standard 1.6mm +/- 10% 1oz stackup is OK.
+	Assembly note:
+		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
 		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen.

@@ -1,3 +1,16 @@
+* Check if 27C512 needs wiped sockets
+
+
+* Kobiconn plugs are obsolete and need replacing
+	https://www.mouser.sg/ProductDetail/Kobiconn/161-0097-E?qs=XvXsANjzvCPrZr5AKzRXng%3D%3D
+	removed from V8.0 BOM
+
+
+* Video: The analogue signals between the resistor ladders and their headers could benefit from being manually placed with wider gaps?
+	Also the VGA and 2x4 header output could benefit from being closer to the resistor ladders?
+
+
+
 * Audio: Perhaps widen the resistor ladders and separate the analogue output, much like the video board usage of keepout areas
 
 
