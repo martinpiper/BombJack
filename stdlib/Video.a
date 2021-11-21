@@ -180,6 +180,15 @@ Video_SetAddressCharScrollRegisters
 	sta CIA2PortBRS232
 	rts
 
+Video_SetAddressVideoLayersEnable
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_CharScreen_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_VideoLayer_LayersEnable
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_VideoLayer_LayersEnable
+	sta CIA2PortBRS232
+	rts
 
 ; Usually call this immediately after using Video_WaitVBlank
 Video_StartRasterTimers
