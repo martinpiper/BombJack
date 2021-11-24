@@ -4,9 +4,21 @@ Feature: Tests APU design
 
   Scenario: Validates expected memory accesses for internal APU instruction memory
     Given open file "output\DebugAPUOutput.txt" for reading
+    And skip line
+    And skip line
+    And skip line
     Then expect the next line to contain "d$00000000"
+    And skip line
+    And skip line
+    And skip line
     Then expect the next line to contain "d$20000200"
+    And skip line
+    And skip line
+    And skip line
     Then expect the next line to contain "d$20000201"
+    And skip line
+    And skip line
+    And skip line
     Then expect the next line to contain "d$80000200"
 
 
@@ -32,7 +44,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$020b0000"
 
 
-    Then expect the next line to contain "delta:0.016225"
+    Then expect the next line to contain "delta:0.000479"
     Then expect the next line to contain "d$02080000"
     Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$02090010"
@@ -55,7 +67,7 @@ Feature: Tests APU design
     Given open file "output\DebugAPUOutputJust9800.txt" for reading
     And skip line
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.015915"
+    Then expect the next line to contain "delta:0.015968"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
@@ -64,16 +76,16 @@ Feature: Tests APU design
 
     Then expect the next line to contain "delta:0.000022"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.016207"
+    Then expect the next line to contain "delta:0.000461"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98210101"
 
-    Then expect the next line to contain "delta:0.048760"
+    Then expect the next line to contain "delta:0.033018"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.016242"
+    Then expect the next line to contain "delta:0.000494"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
