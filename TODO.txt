@@ -1,3 +1,46 @@
+; Using BombJack\output\DebugAPUOutput.txt
+	From the simulated APU output from the emulated APU input, described in BDD6502\Done.txt: @TC-1: When using "enable APU mode" and "enable user port bus debug output"
+	** Waiting for $24017e01 line 578539, frame 5, it misses that trigger, why? :)
+		Well, the previous wait is:
+			**w$ff03ff00,$24017901**
+			d$9e020100
+			;@time:0.220757
+			;delta:0.000001
+			**w$ff03ff00,$24017e01**
+		This is a gap of 5, which is a bit too short
+		Using a quicker output from the VIDCLK divider pushes the problem to waiting for $2d020501 line 579055, why?
+			w$ff03ff00,$2d030001
+			d$00000000
+			;@time:0.221266
+			;delta:0.000001
+			w$ff03ff00,$2d020501
+		Which is again quite short, but also the 6MHz phase is opposite...
+			** Also the RH8 is inverted, meaning it is looking for $100 then $005 ????!!!
+		** Is this because the U95:B which is a 7474 is lagging compared to the U1 74LS374?
+			Perhaps, temporarily changing this this push the error to wait for $24017b01 line 582727...
+				Added a U95 to buffer the RH8 along with the U1 and U2, also placed these on the board connector
+				w$ff03ff00,$24017501
+				d$00000000
+				;@time:0.237517
+				;delta:0.000001
+				w$ff03ff00,$24017801
+				d$9e010109
+				;@time:0.237518
+				;delta:0.000000
+				w$ff03ff00,$24017b01
+				d$00000000
+			This time, notice the d$00000000 writes
+		** Perhaps this means the recorder needs an "ignore $00000000" write mode?
+
+		
+		
+
+	
+	
+	
+	
+	
+
 * Check if 27C512 needs wiped sockets
 
 
