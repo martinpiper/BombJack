@@ -2933,3 +2933,12 @@ All layouts now use V3.1
 	
 	
 * Header text protected by placement keepout and DIP switch default markers moved to the edge of the board with DIP switch moved away from the board edge
+
+
+
+* Perhaps the APU schematic needs a clock divider for the VIDCLK to 6MHz clock, which is excluded from the layout of course...
+	To avoid any chance of clock skew
+	* Check if _VIDCLK for the ID17 can be changed to be 6MHz instead
+		Also would need to check com.loomcom.symon.devices.UserPortTo24BitAddress#apuCheckTriggers
+		Tested successfully with emulator output
+		Also the first couple of frames from simulated APU output are correct

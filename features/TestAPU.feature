@@ -83,9 +83,9 @@ Feature: Tests APU design
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98210101"
 
-    Then expect the next line to contain "delta:0.033018"
+    Then expect the next line to contain "delta:0.033012"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.000494"
+    Then expect the next line to contain "delta:0.000500"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
