@@ -1,3 +1,8 @@
+* Perhaps the APU schematic needs a clock divider for the VIDCLK to 6MHz clock, which is excluded fro mthe layput of course...
+	To avoid any chance of clock skew
+
+
+
 * Check if 27C512 needs wiped sockets
 
 
