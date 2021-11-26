@@ -18,7 +18,7 @@
 			** Also the RH8 is inverted, meaning it is looking for $100 then $005 ????!!!
 		** Is this because the U95:B which is a 7474 is lagging compared to the U1 74LS374?
 			Perhaps, temporarily changing this this push the error to wait for $24017b01 line 582727...
-				Added a U95 to buffer the RH8 along with the U1 and U2, also placed these on the board connector
+				Added a U95 to buffer the RH8 along with the U1 and U2, also placed these very the board connector to shorten the time
 				w$ff03ff00,$24017501
 				d$00000000
 				;@time:0.237517
@@ -31,6 +31,7 @@
 				d$00000000
 			This time, notice the d$00000000 writes
 		** Perhaps this means the recorder needs an "ignore $00000000" write mode?
+		* Since the video board already buffers the RH/RV signals, is another latch in the APU needed?
 
 		
 		
