@@ -2982,3 +2982,34 @@ All layouts now use V3.1
 			Testing ignore zero writes does clean up the data a lot and results in more successful frames
 		* Since the video board already buffers the RH/RV signals, is another latch in the APU needed?
 			Removed latches and just use 6MHz for the comparison
+
+
+
+
+
+* Why did the APU have a weird wait 0x47ff60 that was never reached?
+	At 0.706843665 seconds
+	Line 162501 $25002600
+	RH=0x012
+	RV=0x25
+	It had recently finished this wait and write from the user port:
+		w$ff03ff00,$24017600
+		d$0
+		d$41bc0215
+	The $ff looks very wrong, breakpoint on that value... WAIT_VAL[16..23] = 0xff
+		The write happens at 0.706841640 seconds
+		RH=0x006
+		RV=0x25
+		At line 162499 PC=0x00fb
+			This write is still being processed IEMEMWRITE is low:
+				w$ff03ff00,$24017600
+				d$0
+				d$41bc0215
+			Hmm _MEMBSEL is low, which is correct
+			The instruction schedule U71 is being reset, which is correct
+		This means _Load_Wait16Pulse was low, which happened when _Load_Wait16 and PCINCR were low
+		Hmm... This would mean the memory write interrupted the load pulse and the pulse to increment the instruction
+		** This is bad as the instruction will not retry the load instruction after the memory contention is done
+		*** Perhaps stop the instruction increment when there is any member contention? i.e. when _MEMBSEL is high??
+			Fixing this, seems to avoid the wrong wait read
+	>50 frames seem to be output correctly...

@@ -7,10 +7,6 @@ Feature: Tests APU design
     And skip line
     And skip line
     And skip line
-    Then expect the next line to contain "d$00000000"
-    And skip line
-    And skip line
-    And skip line
     Then expect the next line to contain "d$20000200"
     And skip line
     And skip line
@@ -76,7 +72,7 @@ Feature: Tests APU design
 
     Then expect the next line to contain "delta:0.000022"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.000461"
+    Then expect the next line to contain "delta:0.000462"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
@@ -85,7 +81,7 @@ Feature: Tests APU design
 
     Then expect the next line to contain "delta:0.033012"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.000500"
+    Then expect the next line to contain "delta:0.000499"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
