@@ -1,3 +1,11 @@
+* When running with BombJack\output\DebugAPUOutput.txt from the SotB demo, frame debug*31 has a wrong sprite for the tree, bottom right under the logo.
+	This doesn't happen from the emulation debug output VideoHardware\target\debugData.txt
+	** Perhaps reconcile the simulation output with the emulation output, find any mismatching write first
+		This will need a tool to check data bytes written after each ^-$01, but will need to sync using w$ values instead since the simulation output doesn't have ^-$01
+
+
+
+
 * Check if 27C512 needs wiped sockets
 
 
