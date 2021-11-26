@@ -31,7 +31,9 @@
 				d$00000000
 			This time, notice the d$00000000 writes
 		** Perhaps this means the recorder needs an "ignore $00000000" write mode?
+			Testing ignore zero writes does clean up the data a lot and results in more successful frames
 		* Since the video board already buffers the RH/RV signals, is another latch in the APU needed?
+			Removed latches and just use 6MHz for the comparison
 
 		
 		
