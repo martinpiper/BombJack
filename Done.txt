@@ -3013,3 +3013,11 @@ All layouts now use V3.1
 		*** Perhaps stop the instruction increment when there is any member contention? i.e. when _MEMBSEL is high??
 			Fixing this, seems to avoid the wrong wait read
 	>50 frames seem to be output correctly...
+
+
+
+
+* TestDataAPU1.txt
+	; Why does this write fail?
+	d$420002fe
+	IEBSx wasn't being used for the internal APU dip switch... Doh!

@@ -52,13 +52,20 @@ b$20
 b$01
 b$01
 
+; For memory read and write checking
+; For skip
+b$ff
+; New address to start storing to
+b$01
+b$00
+b$98
 
 
 ; Enable APU after writing memory
 d$20000203
 
 ; Test memory access APU delay straight after APU enable
-s$82000200
+s$9f000200
 b$01
 b$01,b$02,b$03,b$04,b$05,b$06,b$07
 s$41000200
@@ -71,7 +78,7 @@ w$ff01ff00,$f8015000
 d$0
 
 ; Test memory access APU delay during scan
-s$82100200
+s$9f100200
 b$01,b$02,b$03,b$04,b$05,b$06,b$07
 s$41100200
 b$11,b$12,b$13,b$14,b$15,b$16,b$17
@@ -117,3 +124,36 @@ d$40030200
 
 d$0
 
+
+; Now execute a few frames
+^-$01
+d$0
+^-$01
+d$0
+
+; Last kAPU_SkipIfEQ test enable
+d$40110200
+
+; Wait sync
+; Wow, interesting bug, if this is not d$0 before the edge wait then **two bytes** at $4011 and $4012 from the previous write are cleared...
+;d$0
+;^-$01
+;d$0
+
+; Needs the double wait because RV=0xf9 happens twice
+d$0
+w$ff01ff00,$f9001100
+d$0
+w$ff01ff00,$f9001100
+d$0
+d$421002fe
+
+d$0
+w$ff01ff00,$f9004100
+d$0
+; Why does this write fail?
+d$421002fd
+
+
+; Last clear the bus
+d$0
