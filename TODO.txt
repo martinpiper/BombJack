@@ -1,3 +1,9 @@
+* Check if constant _OE can be used on all 6116 and 6264 chips instead of toggling them
+	Video board shows logic contentions, but data writes seem to still be OK
+
+
+
+
 * When running with BombJack\output\DebugAPUOutput.txt from the SotB demo, frame debug*31 has a wrong sprite for the tree, bottom right under the logo.
 	This doesn't happen from the emulation debug output VideoHardware\target\debugData.txt
 	** Perhaps reconcile the simulation output with the emulation output, find any mismatching write first
@@ -60,7 +66,20 @@
 			w$ff03ff00,$24036f01
 			d$01bb0006
 		Perhaps still not long enough? Measure and replicate the timings from the userport interface...
-
+		* The userport interface, with 4MHz, has 270ns setup and 240ns write
+		Even with:
+			0.000000270
+			0.000000240
+			0.000000015
+			0.000000625
+		The U22 74LS373 is generating UND outputs, even through the 6264 is FLT and OE is disabled
+	** Making _OE always low seems to solve the incorrect UND write issue
+		According to the datasheet this is a _OE write cycle 1 model: https://www.mouser.sg/datasheet/2/12/Alliance%20Memory_64K_AS6C6264v2.0July2017-1144693.pdf
+			Page 2 of 12 shows _OE can be X (Don't care) when _WE is low
+		Data reconciliation shows the 46 write is fixed
+			There are other recon issues, but these seems to be old data which could be a slow write issue, not wildly incorrect data issues
+		Could this explain why writing to the chars with the screen on, during the visible screen portion, sometimes generates that spurious write?
+		
 
 
 * Check if 27C512 needs wiped sockets
