@@ -2,6 +2,30 @@
 	This doesn't happen from the emulation debug output VideoHardware\target\debugData.txt
 	** Perhaps reconcile the simulation output with the emulation output, find any mismatching write first
 		This will need a tool to check data bytes written after each ^-$01, but will need to sync using w$ values instead since the simulation output doesn't have ^-$01
+	Reconcile shows some sprite register write mismatches: python C:\Work\BombJack\ReconcileData\ReconcileData.py C:\work\C64\VideoHardware\target\debugData.txt C:\work\BombJack\output\DebugAPUOutput.txt
+		Begin reconciliation
+		data     152950   982301a0  :  589568   9823019f	x
+		data     152955   982701b0  :  589584   982701af	x
+		data     163566   9823019f  :  611192   9823019e	x
+		data     163571   982701af  :  611208   982701ae	x
+		data     174130   9823019e  :  632764   9823019d	x
+		data     174135   982701ae  :  632780   982701ad	x
+		data     181770   98180146  :  647816   98180106	f
+		data     184699   9823019d  :  654340   9823019c	x
+		data     184703   982701ad  :  654356   982701ac	x
+		data     185739   98190115  :  655916   98190100	c
+		data     195258   9823019c  :  675908   9823019b	x
+		data     195263   982701ac  :  675924   982701ab	x
+		data     205826   9823019b  :  697484   9823019a	x
+		data     205831   982701ab  :  697500   982701aa	x
+		data     216394   9823019a  :  719060   98230199	x
+		data     216399   982701aa  :  719076   982701a9	x
+		Read lines  226919  :  740465
+	This shows all the reconciliation differences are data byte not address based.
+		Most are "x" position differences
+		One "f" is a sprite frame difference
+			; Frame 44
+		One "c" is a sprite colour difference
 
 
 
