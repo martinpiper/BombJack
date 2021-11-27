@@ -136,8 +136,8 @@ Sprite 32x32 size select
 	0x9a00 start index of 32x32 sprites
 	0x9a01 end index of 32x32 sprites (exclusive)
 		So 0,0 = no 32x32 sprites
-		0,8 means indexes 0 to 7 (inclusive) are 32x32
-		Maximum number in both is is 0xf
+		0,8 means indexes 2 to 7 (exclusive) are 32x32
+		Maximum number in both is 0xf
 
 
 

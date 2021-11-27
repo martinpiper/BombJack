@@ -26,7 +26,40 @@
 		One "f" is a sprite frame difference
 			; Frame 44
 		One "c" is a sprite colour difference
-
+	d$98180106 the sprite frame difference only appears once in DebugAPUOutput.txt
+		It also only happens at w$ff03ff00,$94021901
+		;@time:0.680369
+		;delta:0.000003
+		w$ff03ff00,$94021901
+		d$98180106
+	Using a timed breakpoint run for 0.680368 seconds (-0.000001)
+		It is using APU RAM $1bb which contains $06
+		Added APUDRAMA[0..12] and _APUDRAMWE for U17 Can record DATA[0..7]
+		Looking for d$01bb0006 in BombJack\output\DebugAPUDataRAM.txt
+			;@time:0.673315
+			;delta:0.000071
+			d$01bb0006
+		Only one instance...
+		So run to 0.673314 (-0.000001)
+		The write to the data RAM is definitely outputting an occasional 06 even though it started out as 46
+		This is due to the data selection and direction logic at U22 U124 U125
+		The APU DigitalData generator is using timings
+			0.000000125
+			0.000000125
+			0.000000000
+			0.000000000
+		This seems a little short?
+		Perhaps set the DigitalData to use these values as they are meant to come from the user port module...
+			0.000000150
+			0.000000125
+			0.000000015
+			0.000000390
+		Hmm still seeing:
+			;@time:0.673315
+			;delta:0.000071
+			w$ff03ff00,$24036f01
+			d$01bb0006
+		Perhaps still not long enough? Measure and replicate the timings from the userport interface...
 
 
 
