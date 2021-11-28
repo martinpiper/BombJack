@@ -79,7 +79,41 @@
 		Data reconciliation shows the 46 write is fixed
 			There are other recon issues, but these seems to be old data which could be a slow write issue, not wildly incorrect data issues
 		Could this explain why writing to the chars with the screen on, during the visible screen portion, sometimes generates that spurious write?
-		
+	Remaining reconciliation errors:
+		Begin reconciliation
+		data     152950   982301a0  :  589568   9823019f
+		data     152955   982701b0  :  589584   982701af
+		data     163566   9823019f  :  611192   9823019e
+		data     163571   982701af  :  611208   982701ae
+		data     174130   9823019e  :  632764   9823019d
+		data     174135   982701ae  :  632780   982701ad
+		data     184699   9823019d  :  654340   9823019c
+		data     184703   982701ad  :  654356   982701ac
+		data     195258   9823019c  :  675908   9823019b
+		data     195263   982701ac  :  675924   982701ab
+		data     205826   9823019b  :  697484   9823019a
+		data     205831   982701ab  :  697500   982701aa
+		data     216394   9823019a  :  719060   98230199
+		data     216399   982701aa  :  719076   982701a9
+		Read lines  226919  :  740465
+		;@time:0.319097
+		;delta:0.000001
+		w$ff03ff00,$01015400
+		d$9823019f
+	So run to 0.319096
+	It comes from from $003a which is $9f
+	Look for d$003a009f in DebugAPUDataRAM.txt
+		;@time:0.317519
+		;delta:0.000001
+		w$ff03ff00,$f1020d00
+		d$003a009f
+	From external write $403a029f
+	From line 146931 debugDataJustUserPort.txt which is $403a029f
+	So it's just a precise timing issue, not an incorrect write, because the writes here are all done without timing sync in the vblank
+
+
+	
+	
 
 
 * Check if 27C512 needs wiped sockets
