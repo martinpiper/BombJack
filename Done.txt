@@ -3131,3 +3131,5 @@ All layouts now use V3.1
 	From external write $403a029f
 	From line 146931 debugDataJustUserPort.txt which is $403a029f
 	So it's just a precise timing issue, not an incorrect write, because the writes here are all done without timing sync in the vblank
+	Note: For SotB title demo, in C64\VideoHardware\asm\ShadowBeast\APUTitle.a , changing the first "+MAPU_EmitWait kBus24Bit_VideoLayer_XPos_HSYNC_start , 0" to use raster line 11 "+MAPU_EmitWait kBus24Bit_VideoLayer_XPos_HSYNC_start , 11"
+		This solves the remaining reconciliation issues as it gives enough time for the CPU to send blimp sprite position updates to the APU data RAM.
