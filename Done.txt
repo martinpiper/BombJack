@@ -3021,3 +3021,113 @@ All layouts now use V3.1
 	; Why does this write fail?
 	d$420002fe
 	IEBSx wasn't being used for the internal APU dip switch... Doh!
+
+
+
+
+* When running with BombJack\output\DebugAPUOutput.txt from the SotB demo, frame debug*31 has a wrong sprite for the tree, bottom right under the logo.
+	This doesn't happen from the emulation debug output VideoHardware\target\debugData.txt
+	** Perhaps reconcile the simulation output with the emulation output, find any mismatching write first
+		This will need a tool to check data bytes written after each ^-$01, but will need to sync using w$ values instead since the simulation output doesn't have ^-$01
+	Reconcile shows some sprite register write mismatches: python C:\Work\BombJack\ReconcileData\ReconcileData.py C:\work\C64\VideoHardware\target\debugData.txt C:\work\BombJack\output\DebugAPUOutput.txt
+		Begin reconciliation
+		data     152950   982301a0  :  589568   9823019f	x
+		data     152955   982701b0  :  589584   982701af	x
+		data     163566   9823019f  :  611192   9823019e	x
+		data     163571   982701af  :  611208   982701ae	x
+		data     174130   9823019e  :  632764   9823019d	x
+		data     174135   982701ae  :  632780   982701ad	x
+		data     181770   98180146  :  647816   98180106	f
+		data     184699   9823019d  :  654340   9823019c	x
+		data     184703   982701ad  :  654356   982701ac	x
+		data     185739   98190115  :  655916   98190100	c
+		data     195258   9823019c  :  675908   9823019b	x
+		data     195263   982701ac  :  675924   982701ab	x
+		data     205826   9823019b  :  697484   9823019a	x
+		data     205831   982701ab  :  697500   982701aa	x
+		data     216394   9823019a  :  719060   98230199	x
+		data     216399   982701aa  :  719076   982701a9	x
+		Read lines  226919  :  740465
+	This shows all the reconciliation differences are data byte not address based.
+		Most are "x" position differences
+		One "f" is a sprite frame difference
+			; Frame 44
+		One "c" is a sprite colour difference
+	d$98180106 the sprite frame difference only appears once in DebugAPUOutput.txt
+		It also only happens at w$ff03ff00,$94021901
+		;@time:0.680369
+		;delta:0.000003
+		w$ff03ff00,$94021901
+		d$98180106
+	Using a timed breakpoint run for 0.680368 seconds (-0.000001)
+		It is using APU RAM $1bb which contains $06
+		Added APUDRAMA[0..12] and _APUDRAMWE for U17 Can record DATA[0..7]
+		Looking for d$01bb0006 in BombJack\output\DebugAPUDataRAM.txt
+			;@time:0.673315
+			;delta:0.000071
+			d$01bb0006
+		Only one instance...
+		So run to 0.673314 (-0.000001)
+		The write to the data RAM is definitely outputting an occasional 06 even though it started out as 46
+		This is due to the data selection and direction logic at U22 U124 U125
+		The APU DigitalData generator is using timings
+			0.000000125
+			0.000000125
+			0.000000000
+			0.000000000
+		This seems a little short?
+		Perhaps set the DigitalData to use these values as they are meant to come from the user port module...
+			0.000000150
+			0.000000125
+			0.000000015
+			0.000000390
+		Hmm still seeing:
+			;@time:0.673315
+			;delta:0.000071
+			w$ff03ff00,$24036f01
+			d$01bb0006
+		Perhaps still not long enough? Measure and replicate the timings from the userport interface...
+		* The userport interface, with 4MHz, has 270ns setup and 240ns write
+		Even with:
+			0.000000270
+			0.000000240
+			0.000000015
+			0.000000625
+		The U22 74LS373 is generating UND outputs, even through the 6264 is FLT and OE is disabled
+	** Making _OE always low seems to solve the incorrect UND write issue
+		According to the datasheet this is a _OE write cycle 1 model: https://www.mouser.sg/datasheet/2/12/Alliance%20Memory_64K_AS6C6264v2.0July2017-1144693.pdf
+			Page 2 of 12 shows _OE can be X (Don't care) when _WE is low
+		Data reconciliation shows the 46 write is fixed
+			There are other recon issues, but these seems to be old data which could be a slow write issue, not wildly incorrect data issues
+		Could this explain why writing to the chars with the screen on, during the visible screen portion, sometimes generates that spurious write?
+	Remaining reconciliation errors:
+		Begin reconciliation
+		data     152950   982301a0  :  589568   9823019f
+		data     152955   982701b0  :  589584   982701af
+		data     163566   9823019f  :  611192   9823019e
+		data     163571   982701af  :  611208   982701ae
+		data     174130   9823019e  :  632764   9823019d
+		data     174135   982701ae  :  632780   982701ad
+		data     184699   9823019d  :  654340   9823019c
+		data     184703   982701ad  :  654356   982701ac
+		data     195258   9823019c  :  675908   9823019b
+		data     195263   982701ac  :  675924   982701ab
+		data     205826   9823019b  :  697484   9823019a
+		data     205831   982701ab  :  697500   982701aa
+		data     216394   9823019a  :  719060   98230199
+		data     216399   982701aa  :  719076   982701a9
+		Read lines  226919  :  740465
+		;@time:0.319097
+		;delta:0.000001
+		w$ff03ff00,$01015400
+		d$9823019f
+	So run to 0.319096
+	It comes from from $003a which is $9f
+	Look for d$003a009f in DebugAPUDataRAM.txt
+		;@time:0.317519
+		;delta:0.000001
+		w$ff03ff00,$f1020d00
+		d$003a009f
+	From external write $403a029f
+	From line 146931 debugDataJustUserPort.txt which is $403a029f
+	So it's just a precise timing issue, not an incorrect write, because the writes here are all done without timing sync in the vblank
