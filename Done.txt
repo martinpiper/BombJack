@@ -3145,3 +3145,7 @@ All layouts now use V3.1
 
 
 * Add GND track isolation and keep-out to audio
+
+
+
+* Audio to use DIL*CAP20 packages and adjust board size
