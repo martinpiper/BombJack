@@ -1,3 +1,8 @@
+* Audio needs stereo headphone socket
+
+
+
+
 * Check if constant _OE can be used on all 6116 and 6264 chips instead of toggling them
 	Video board shows logic contentions, but data writes seem to still be OK
 
