@@ -3159,3 +3159,16 @@ All layouts now use V3.1
 	Original: https://www.mouser.sg/ProductDetail/Bourns/3005P-1-101?qs=%2Fha2pyFadugNvqHzgUEG%2Fv4gN98QRkBfjRsbXcFAihF0XyOI7GuhTQ%3D%3D
 	Replace with: https://www.mouser.sg/ProductDetail/Bourns/3006P-7-101LF?qs=GiVA9kKujyafZRjN8HNnfA%3D%3D
 
+
+
+
+
+* Audio needs stereo headphone socket
+	https://www.mouser.sg/c/connectors/audio-video-connectors/phone-connectors/?q=audio%20jack&mounting%20style=Through%20Hole&number%20of%20positions=3%20Position&orientation=Horizontal&standard=3.5%20mm%2C%201%2F8%20in
+	Metal socket https://www.mouser.sg/ProductDetail/CUI-Devices/SJ1-3523N?qs=WyjlAZoYn50aNl0vAhb3Tg%3D%3D
+	>> Plastic socket https://www.mouser.sg/ProductDetail/CUI-Devices/SJ1-3523NG?qs=%2Fha2pyFadug1PPkGIC3KLTQ8pv5w8IY43h8lhtTB0RjfsNT227Qv1Q%3D%3D
+	https://www.headphonesty.com/2019/04/headphone-jacks-plugs-explained/
+		Left = 2 = tip
+		Right = 3 = Middle
+		GND = 1 = Sleeve, closest to the cable
+
