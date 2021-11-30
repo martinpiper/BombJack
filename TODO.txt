@@ -1,6 +1,24 @@
+* Trim pots rapidly out of stock
+	Similar: https://sg.element14.com/w/c/passive-components/potentiometers-trimmers-accessories/trimmer-potentiometers?trimpot-type=multi-turn&adjustment-type=side-adjust&track-resistance=100ohm&potentiometer-mounting=through-hole&trimpot-shape-size=3-4-inch-rectangular&range=inc-in-stock
+	
+	Original: https://www.mouser.sg/ProductDetail/Bourns/3005P-1-101?qs=%2Fha2pyFadugNvqHzgUEG%2Fv4gN98QRkBfjRsbXcFAihF0XyOI7GuhTQ%3D%3D
+	Replace with: https://www.mouser.sg/ProductDetail/Bourns/3006P-7-101LF?qs=GiVA9kKujyafZRjN8HNnfA%3D%3D
+	
+
+
+
 * Audio needs stereo headphone socket
 
 
+
+* Audio - Check how many ICs/gates need to maintain state for each voice. Compare with remaining ICs/gates used for calculation and interface to the common address bus
+	Estimate if there is saving to reduce the rest of the voice calculation to common functionality and state gates with selection logic
+
+
+
+* Sprites3
+	Choose scale tab and ignore X/Y boundaries for tiling up to the sprite edge bit flags
+	
 
 
 * Check if constant _OE can be used on all 6116 and 6264 chips instead of toggling them
@@ -38,7 +56,7 @@
 	
 	
 	
-* Sprites2 
+* Sprites3
 * Scaled sprite rotation, if the EPROM is too slow, then split the pixel output across two clocks?
 	There would need to be some latches for the second part of the output path, to ensure that the next sprite being read (during the attribute read) does not affect the final values being written
 		Or simpler to pass through the reset logic signal to the last part of the pixel output, which would increase the end period between one sprite and the next sprite reads by one clock as the pixels are flushed...
