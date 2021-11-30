@@ -1,12 +1,3 @@
-* Trim pots rapidly out of stock
-	Similar: https://sg.element14.com/w/c/passive-components/potentiometers-trimmers-accessories/trimmer-potentiometers?trimpot-type=multi-turn&adjustment-type=side-adjust&track-resistance=100ohm&potentiometer-mounting=through-hole&trimpot-shape-size=3-4-inch-rectangular&range=inc-in-stock
-	
-	Original: https://www.mouser.sg/ProductDetail/Bourns/3005P-1-101?qs=%2Fha2pyFadugNvqHzgUEG%2Fv4gN98QRkBfjRsbXcFAihF0XyOI7GuhTQ%3D%3D
-	Replace with: https://www.mouser.sg/ProductDetail/Bourns/3006P-7-101LF?qs=GiVA9kKujyafZRjN8HNnfA%3D%3D
-	
-
-
-
 * Audio needs stereo headphone socket
 
 
