@@ -43,7 +43,7 @@
 			PCB Package
 			Supplier (not needed when not using IC sockets)
 			Placed
-		Choose check box: Full CSV
+		Uncheck box: Full CSV
 		Press CSV button ("a" document icon)
 		Text Import window
 			Click top left grid, to select all cells
@@ -74,8 +74,11 @@
 				Save as XLSX file using " - BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
 					e.g. Bomb Jack - Video - Routed - CADCAM - BOM.xlsx
 				Count ICs from "PCB Package" "*CAP20" then add a row similar to:
-					Capacitors	59 units for DC	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
+					Capacitors	59	units for DC	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
 
+
+			** Remove oscillators (VIDCLK etc.), prefer clock crystals
+			** EPROMs as sockets, not ICs
 
 				
 	Order note:
