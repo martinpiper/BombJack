@@ -1,0 +1,5 @@
+# Writing all output to: C:\Work\BombJack\V8.0\Audio - Routed.log
+set pad_wire_necking on
+bus diagonal
+fanout 5
+route 50

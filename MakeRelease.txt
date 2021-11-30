@@ -77,7 +77,7 @@
 					Capacitors	59	units for DC	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
 
 
-			** Remove oscillators (VIDCLK etc.), prefer clock crystals
+			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals
 			** EPROMs as sockets, not ICs
 
 				
