@@ -1,3 +1,5 @@
+
+
 * Audio - Check how many ICs/gates need to maintain state for each voice. Compare with remaining ICs/gates used for calculation and interface to the common address bus
 	Estimate if there is saving to reduce the rest of the voice calculation to common functionality and state gates with selection logic
 
@@ -84,6 +86,9 @@
 
 
 * Audio: DAC to opamp output: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm
+	Page 6 https://www.nxp.com/docs/en/data-sheet/TDA7050T.pdf
+	https://www.electronics-tutorials.ws/combination/r-2r-dac.html
+
 
 
 

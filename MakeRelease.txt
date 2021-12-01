@@ -79,6 +79,7 @@
 
 			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals
 			** EPROMs as sockets, not ICs
+			** Check EPROMs with their sockets are not too close to ICs, especially the ends of the ICs hitting the EPROM pins
 
 				
 	Order note:
