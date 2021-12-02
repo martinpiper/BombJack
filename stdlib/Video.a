@@ -6,9 +6,12 @@ Video_WaitVBlank
 
 	; Wait for VBLANK event
 	lda #%10000
+	; Can be used with: When ignore address Video_WaitVBlank_startGuard to Video_WaitVBlank_endGuard for trace
+Video_WaitVBlank_startGuard
 .l1
 	bit CIA2InterruptControl
 	beq .l1
+Video_WaitVBlank_endGuard
 	rts
 
 
