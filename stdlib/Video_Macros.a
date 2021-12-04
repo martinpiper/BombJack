@@ -128,7 +128,7 @@ kBus24Bit_CharColourMap				= $8000
 kBus24Bit_CharScreenWidth			= 128
 } else {
 kBus24Bit_CharColourMap				= $5000
-kBus24Bit_CharScreenWidth			= 63
+kBus24Bit_CharScreenWidth			= 64
 }
 kBus24Bit_CharScreenHeight			= 64
 

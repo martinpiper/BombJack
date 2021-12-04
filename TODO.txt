@@ -1,3 +1,4 @@
+* Sprites2: If I double the RAMs used for storing scaled sprite registers, I can load 2x8 bits in parallel and draw more data.
 
 
 * Audio - Check how many ICs/gates need to maintain state for each voice. Compare with remaining ICs/gates used for calculation and interface to the common address bus
