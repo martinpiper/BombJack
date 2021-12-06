@@ -56,14 +56,14 @@ b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
 
 
 ; Bank 1
-s$80620200
-b$81,b$7f,b$82,b$ff,b$83,b$00,b$84,b$fe
+s$80520200
+b$81,b$3f,b$82,b$ff,b$83,b$50,b$84,b$fe
 
 ; Next line
-b$85,b$7f,b$86,b$01,b$87,b$02,b$88,b$fe
+b$85,b$3f,b$86,b$01,b$87,b$52,b$88,b$fe
 
 ; Line after a gap
-s$810a0200
+s$81b20200
 b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
 
 
