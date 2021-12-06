@@ -1,0 +1,76 @@
+; Vectors layer tests. Checks some of the functionality from @TC-11
+; To use this, exclude U281, on root sheet 5, from the simulation.
+; Enable UXXX, on root sheet 13, in the simulation.
+; This remaps the Vectors output to the sprite layer.
+
+; Blank (address b$0000)
+d0
+
+; Just choose the vectors layer and the chars
+d$9e0801fc
+
+
+; Vectors enable, char screen and other layers disabled
+d$9e0a0101
+
+; Setup over scan border extents
+d$9e090129
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+
+; Palette data
+s$9d000100
+
+b$0f,b$0f,b$11,b$11,b$22,b$22,b$33,b$33b$44,b$44,b$55,b$55,b$66,b$66,b$77,b$77b$88,b$88,b$99,b$99,b$aa,b$aa,b$bb,b$bbb$cc,b$cc,b$dd,b$dd,b$ee,b$ee,b$ff,b$ff
+; Setup brink purple background colour in the palette
+s$9c000100
+b$0f,b$0f
+
+; Enable display
+d$9e000120
+
+; Vectors bank register
+s$a0000100
+
+; Fill display banks with transparent long spans
+s$00000200
+!TestData_DebugVectors_Clear.txt
+s$80000200
+!TestData_DebugVectors_Clear.txt
+
+
+; Bank 0
+; First visible line
+s$00420200
+b$81,b$7f,b$82,b$ff,b$83,b$00,b$84,b$fe
+
+; Next line
+b$85,b$7f,b$86,b$01,b$87,b$02,b$88,b$fe
+
+; Line after a gap
+s$01aa0200
+b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
+
+
+; Bank 1
+s$80620200
+b$81,b$7f,b$82,b$ff,b$83,b$00,b$84,b$fe
+
+; Next line
+b$85,b$7f,b$86,b$01,b$87,b$02,b$88,b$fe
+
+; Line after a gap
+s$810a0200
+b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
+
+
+d$0
+w$ff01ff00,$a8000000
+d$0
+
+d$0
+^-$01
+d$0
