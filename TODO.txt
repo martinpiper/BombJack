@@ -1,5 +1,14 @@
 * Vectors:
 	bank0 RAMs data write, needs isolated address from bank1 RAMs data write
+	bank select register
+	Index counters, reset to zero on !_Vsync or !enablelayer
+	Reset pixel count counter and final pixel latch on !_Hsync
+	When _hsync and _vsync
+		if pixelcount == 0
+			clock in new final pixel and inverted pixel count
+			also increment the idx
+		else
+			clock pixelcount
 
 
 
