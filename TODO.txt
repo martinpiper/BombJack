@@ -1,7 +1,7 @@
 * Vectors:
 	Done: bank0 RAMs data write, needs isolated address from bank1 RAMs data write
-	bank select register
-	bank demux data from bank select register
+	Done: bank select register
+	Done: bank demux data from bank select register
 	Index counters, reset to zero on !_Vsync or !enablelayer
 	Reset pixel count counter and final pixel latch on !_Hsync
 	When _hsync and _vsync

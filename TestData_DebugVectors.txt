@@ -32,8 +32,10 @@ b$0f,b$0f
 ; Enable display
 d$9e000120
 
-; Vectors bank register
-s$a0000100
+; Vectors bank register tests
+d$a0000100
+d$a0000101
+d$a0000100
 
 ; Fill display banks with transparent long spans
 s$00000200
