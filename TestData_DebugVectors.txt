@@ -1,6 +1,6 @@
 ; Vectors layer tests. Checks some of the functionality from @TC-11
 ; To use this, exclude U281, on root sheet 5, from the simulation.
-; Enable UXXX, on root sheet 13, in the simulation.
+; Enable U401, on root sheet 13, in the simulation.
 ; This remaps the Vectors output to the sprite layer.
 
 ; Blank (address b$0000)
@@ -46,26 +46,26 @@ s$80000200
 
 ; Bank 0
 ; First visible line
-s$00420200
+s$00400200
 b$81,b$7f,b$82,b$ff,b$83,b$00,b$84,b$fe
 
 ; Next line
 b$85,b$7f,b$86,b$01,b$87,b$02,b$88,b$fe
 
 ; Line after a gap
-s$01aa0200
+s$01a80200
 b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
 
 
 ; Bank 1
-s$80520200
+s$80500200
 b$81,b$3f,b$82,b$ff,b$83,b$50,b$84,b$fe
 
 ; Next line
 b$85,b$3f,b$86,b$01,b$87,b$52,b$88,b$fe
 
 ; Line after a gap
-s$81b20200
+s$81b00200
 b$85,b$1f,b$86,b$3f,b$87,b$7f,b$88,b$fe
 
 

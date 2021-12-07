@@ -3172,3 +3172,21 @@ All layouts now use V3.1
 		Right = 3 = Middle
 		GND = 1 = Sleeve, closest to the cable
 
+
+
+
+
+* Vectors:
+	Done: bank0 RAMs data write, needs isolated address from bank1 RAMs data write
+	Done: bank select register
+	Done: bank demux data from bank select register
+	Done: Index counters, reset to zero on !_Vsync or !enablelayer
+	Done: Reset pixel count counter and final pixel latch on !_Hsync
+	Done: When _hsync and _vsync
+		TODO: This could have been _ETVSYNC but it's not on the backplane...
+		if pixelcount == 0
+			clock in new final pixel and inverted pixel count
+			also increment the idx
+		else
+			clock pixelcount
+	Tested with emulation output data
