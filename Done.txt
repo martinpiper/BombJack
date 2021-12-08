@@ -3190,3 +3190,10 @@ All layouts now use V3.1
 		else
 			clock pixelcount
 	Tested with emulation output data
+
+
+
+
+* Need IC grouping
+	Vectors layer will need code and supplier data added
+	Layout created
