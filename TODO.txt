@@ -1,5 +1,21 @@
 * Sprites2: If I double the RAMs used for storing scaled sprite registers, I can load 2x8 bits in parallel and draw more data.
 
+* Hardware multiply?
+	result = 0
+	for(b = 0 to 31)
+	{
+		// Or use bit select, or value shift per iteration...
+		if( ((y >> b) & 1) != 0)
+		{
+			// Use value shift per iteration...
+			result = result + (x << b)
+		}
+	}
+* Hardware edge trace?
+	https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm#Algorithm_for_integer_arithmetic
+
+
+
 
 * Audio - Check how many ICs/gates need to maintain state for each voice. Compare with remaining ICs/gates used for calculation and interface to the common address bus
 	Estimate if there is saving to reduce the rest of the voice calculation to common functionality and state gates with selection logic

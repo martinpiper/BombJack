@@ -2915,6 +2915,11 @@ All layouts now use V3.1
 
 
 
+* Each layer enable can be used to zero out the layer's output pixel latch
+	Except sprites, since they are using scan lines and multiplexing needs to work
+	
+	
+
 
 * Instead of headers for the address selects, think about a bank of dip switches
 	Two options:
