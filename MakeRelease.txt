@@ -86,4 +86,5 @@
 		Your standard 1.6mm +/- 10% 1oz stackup is OK.
 	Assembly note:
 		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
+		This is my preferred supplier. Substitutions can be suggested if the supplier is out of stock and similar components can be sourced from your preferred supplier.
 		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen.
