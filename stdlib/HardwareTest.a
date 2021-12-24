@@ -91,6 +91,16 @@ HardwareTest_VideoPattern0
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 	jsr Bus24Bit_WriteAForY
 }
+
+	ldx #32
+.fl1
+	+MBus24Bit_Send8BitValue 0
+	+MBus24Bit_Send8BitValue 1
+	+MBus24Bit_Send8BitValue 2
+	+MBus24Bit_Send8BitValue 3
+	dex
+	bne .fl1
+
 	lda #1
 	jsr Bus24Bit_WriteAForY
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
@@ -107,27 +117,21 @@ HardwareTest_VideoPattern0
 	jsr Bus24Bit_WriteAForY
 }
 	lda #4
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
+	ldx #3
+	jsr Bus24Bit_WriteAForYThenX
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
+	ldx #3
+	jsr Bus24Bit_WriteAForYThenX
 }
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
 	lda #0
 	tay
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
+	ldx #8
+	jsr Bus24Bit_WriteAForYThenX
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
+	ldx #8
+	jsr Bus24Bit_WriteAForYThenX
 }
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
@@ -167,10 +171,8 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenMap_EBBS , kBus24Bit_TileColourMap
 	lda #0
 	tay
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
-	jsr Bus24Bit_WriteAForY
+	ldx #4
+	jsr Bus24Bit_WriteAForYThenX
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenPlanes_EBBS , kBus24Bit_TileScreenPlanes_0
 	+HardwareTest_SendBitplaneData 4 , 4
@@ -261,8 +263,6 @@ HardwareTest_VideoPattern0
 	sta CIA2PortBRS232
 	lda #200
 	sta CIA2PortBRS232
-
-;	jsr HardwareTest_VideoInitDisplay
 
 	; If fire is held down, then pause on this screen
 	+WaitForFireRelease_A

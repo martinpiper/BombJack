@@ -23,3 +23,7 @@
 	lda #.value
 	sta CIA2PortBRS232
 }
+
+!macro MBus24Bit_Send8BitValueFromA {
+	sta CIA2PortBRS232
+}

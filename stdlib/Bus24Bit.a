@@ -123,6 +123,14 @@ Bus24Bit_WriteAForY
 	rts
 
 !zn
+Bus24Bit_WriteAForYThenX
+.cl1
+	jsr Bus24Bit_WriteAForY
+	dex
+	bne .cl1
+	rts
+
+!zn
 ; A = EBBS
 ; X/Y = lo/hi address
 Bus24Bit_SetAddressBus

@@ -16,7 +16,9 @@ kBus24Bit_VideoLayer_Priority_Default		= %11100100
 kBus24Bit_VideoLayer_OverscanExtent		= $9e09
 kBus24Bit_VideoLayer_OverscanExtent_Default		= $76
 
-kBus24Bit_VideoLayer_OverscanExtent_Wide		= $29
+; This wide mode is the maximum displayable extent output by the video to HDMI conversion box
+; This is 39 characters (8x8) wide by 28 characters
+kBus24Bit_VideoLayer_OverscanExtent_Wide		= $39
 kBus24Bit_VideoLayer_XPos_OverscanExtent_Wide_right	= $152
 
 kBus24Bit_VideoLayer_LayersEnable		= $9e0a
