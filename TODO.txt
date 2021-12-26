@@ -1,11 +1,3 @@
-* Video: VGA output wasn't showing a Hsync, but the VID1 header was
-	Had to disconnect R104 as it was a dodgy pull-up that was just not working at all.
-	The VGA header should just use _EHSYNC and _EVSYNC signals
-	There should be another VGA header using _ETVSYNC, or have the sync selectable via DIP switch
-	
-
-
-
 * Right angled connectors need silk screen indication
 
 

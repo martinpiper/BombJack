@@ -2884,6 +2884,7 @@ All layouts now use V3.1
 	Connect power
 	Measure 4T output pin 9, remember to connect GND (grey wire) on the logic analyser
 	Logic analyser logic threshold 2V
+	DSW9 to choose _EHSYNC or _ETVSYNC
 
 
 
@@ -3204,8 +3205,19 @@ All layouts now use V3.1
 	Layout created
 
 
-
+* V9.0 PCB updates
 
 * Dip switch on PCB needs numbers
 	Perhaps rotate all the dips for convention left to right numbering?
 	Moved DIP switches to the left of the board near the backplane connector
+
+
+
+
+* Video: VGA VID2 output wasn't showing a Hsync, but the VID1 header was
+	VGA VID2 header stupidly using TVSYNCout
+	Had to disconnect R104 as it was a dodgy pull-up that was just not working at all.
+	The VGA header should just use _EHSYNC and _EVSYNC signals
+	There should be another VGA header using _ETVSYNC, or have the sync selectable via DIP switch
+	* Added DSW9 to choose _EHSYNC or _ETVSYNC
+		Using: https://www.mouser.sg/ProductDetail/TE-Connectivity-PB/1825360-1?qs=Ftb%252BnBCDTZKCT4kLG1kHfw%3D%3D
