@@ -3221,3 +3221,7 @@ All layouts now use V3.1
 	There should be another VGA header using _ETVSYNC, or have the sync selectable via DIP switch
 	* Added DSW9 to choose _EHSYNC or _ETVSYNC
 		Using: https://www.mouser.sg/ProductDetail/TE-Connectivity-PB/1825360-1?qs=Ftb%252BnBCDTZKCT4kLG1kHfw%3D%3D
+
+
+
+* Right angled connectors need silk screen indication

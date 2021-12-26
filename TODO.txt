@@ -1,7 +1,3 @@
-* Right angled connectors need silk screen indication
-
-
-
 * Sprites2: If I double the RAMs used for storing scaled sprite registers, I can load 2x8 bits in parallel and draw more data.
 
 * Hardware multiply?
