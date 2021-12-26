@@ -3202,3 +3202,10 @@ All layouts now use V3.1
 * Need IC grouping
 	Vectors layer will need code and supplier data added
 	Layout created
+
+
+
+
+* Dip switch on PCB needs numbers
+	Perhaps rotate all the dips for convention left to right numbering?
+	Moved DIP switches to the left of the board near the backplane connector

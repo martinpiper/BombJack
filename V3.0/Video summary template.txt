@@ -3,6 +3,7 @@ This started life as a working schematic for the video display portion of the or
 The main project page with dev logs and downloads: https://martin-piper.itch.io/bomb-jack-display-hardware
 
 Proteus simulation and PCB design: https://www.labcenter.com/
+PCBWay PCB manufacture: https://www.pcbway.com/
 Xinweike PCB manufacture: http://www.xinweikedz.com/
 
 https://twitter.com/hashtag/RetroTTLVideoCard
