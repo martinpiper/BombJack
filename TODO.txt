@@ -1,3 +1,20 @@
+* Scaled sprites clocking, perhaps have a faster clock, with a divider clock. Include VIDCLK and 6MHz
+	When calculating a line have a DIP switch that chooses one of these clocks so it can be manually tweaked for performance.
+	* Maximum simulated VIDCLK rate before seeing significant issues is ~15Mhz, which really doesn't offer enough performance gain for much benefit
+		It would give around an extra 92 pixels, which would help with the sprite reading overhead
+	S2DOSPRITE and S2_DOSPRITE can be used to switch the 6MHz or other clock rate selector signals appropriately for the scan logic
+
+
+
+
+* The instruction memory is not limited to 8KB, since it is mapped to $8000
+	Using a better select it would be possible to widen the instructions to 64 bits
+	This would allow more register selects, ALU operations, status register it selects and branching options
+	It would also allow 8 bits to be spent on immediate load values from the instruction
+
+
+
+
 * Sprites2: If I double the RAMs used for storing scaled sprite registers, I can load 2x8 bits in parallel and draw more data.
 
 * Hardware multiply?
