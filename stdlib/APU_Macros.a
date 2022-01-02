@@ -61,6 +61,7 @@ kBus24Bit_APU_Instructions	= $8000
 
 kAPU_InstructionSize	= 4
 !macro MAPU .i {
+!previouscontext
 
 !ifdef kAPU_previousInstruction {
 !if kAPU_previousInstruction & kAPU_Incr_ADDRB1 {
@@ -93,7 +94,8 @@ kAPU_InstructionSize	= 4
 	!by <(.i >> 24)
 }
 !macro MAPU {
-	+MAPU 0
+!previouscontext
++MAPU 0
 }
 
 !macro MAPU_LoadEADDRFromB1 {
