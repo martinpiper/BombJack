@@ -2,8 +2,25 @@
 	When calculating a line have a DIP switch that chooses one of these clocks so it can be manually tweaked for performance.
 	* Maximum simulated VIDCLK rate before seeing significant issues is ~15Mhz, which really doesn't offer enough performance gain for much benefit
 		It would give around an extra 92 pixels, which would help with the sprite reading overhead
-	S2DOSPRITE and S2_DOSPRITE can be used to switch the 6MHz or other clock rate selector signals appropriately for the scan logic
-
+	S2DOPIXEL and S2_DOPIXEL can be used to switch the 6MHz or other clock rate selector signals appropriately for the scan logic
+	* Trying... Generate baseline
+	* Added select of S2CalcCLK / _S2CalcCLK to S2CLKA / S2CLKB / _S2CLKA / _S2CLKB
+	This isn't working at all well. If the clock is not synced to the 6MHz then it is missing scan lines, wobbly lines appear etc
+	* Interesting to note: The DEL (delay) OR into each _WE for the scan RAMs can be removed
+	It works so badly, it indicates there is some core logic going wrong with the sprite calc and the scan calc
+		Is this a serious clock skew issue?
+	** Ah ha, it's because the short tick S2_LINESTART from VID_LINESTART was not being synchronised reliably with S2CalcCLK
+		It still generates wobbly scanlines, but at least all scanlines are present now
+		This indicates some residual timing pulse issue at the start of the scanline...
+		Perhaps the scanline start reset signal should be held lower longer or delayed...?
+			** S2DELVID_LINESTART created, which delays the line start pulse until after the S2DOPIXEL swap and fixes the wibbly line issue
+			This basically resets the scan counters a few pixels later when they are meant to be outputting the scan
+	Using 15MHz calc clock, which is divided by 2: Observed the massive scaled sprite, behind others, does render more horizontal pixels
+	* Problem: The bottom right flipped scaled Turrican legs sprite doesn't seem to want to complete rendering?
+		Is this because the sprite X extent signal is early? Cascading extent test issues?
+			Adding a bunch of OR delays, and adding a off-cycle _S2CalcCLK delay, did not fix the issue... Hmm...
+			Could be a adder ripple carry issue then...?
+	* Problem: Also lots of sub-minimal write pulse ignored issues for U307 and U355
 
 
 
