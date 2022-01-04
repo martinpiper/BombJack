@@ -20,7 +20,22 @@
 		Is this because the sprite X extent signal is early? Cascading extent test issues?
 			Adding a bunch of OR delays, and adding a off-cycle _S2CalcCLK delay, did not fix the issue... Hmm...
 			Could be a adder ripple carry issue then...?
+			>> Yes, causing the pixel test to be "one extra" by using the latch clk line into U341 ANDed with DELS2ADVSPRI avoids the issue
+			But it renders one extra source pixel... hmm...
+			When U95:B(CLK) running at 12.2M the one extra pixel overflow render is fixed without any cascade delay compensation
+			When running at 13M the incorrect leg rendering cascade issue comes back
+			This is actually because the calculation result from the add and the S2nextSpriteXPixel extent check takes too long for the clock speed
+			It doesn't have time to shutdown the clocks, create S2nextNextSpriteXPixel, and use that to test ahead for extent and delay the extent result by one S2CalcCLK
+			This allows the scan adders to be switched off at the correct time
+			The fix is to have a second adder
+			>> This makes the issue fixed at 14MHz now, it gives an extra 60 pixels of scan fill rate
+			** The question now is, does this extra scan fill rate justify the extra complexity?
 	* Problem: Also lots of sub-minimal write pulse ignored issues for U307 and U355
+	* Problem: For calculated pixels trying to output when the end of the scan is reached (S2_LOGICRESET) this causes write errors to the scan data at the calculated X position 
+		Caused by the need to delay the S2DELVID_LINESTART for the pixel output until after the S2DOPIXEL toggle, which happen at different clock rates
+		* One way to solve this might be to hold the line start low for longer, before and after the line switch and to reset the counters regardless
+		Fixed with S2_LONGLINESTART
+	* Note for emulation: Output pixels are delayed by 2 (more) to the right now. Due to the shifter line end
 
 
 
