@@ -35,11 +35,39 @@
 		Caused by the need to delay the S2DELVID_LINESTART for the pixel output until after the S2DOPIXEL toggle, which happen at different clock rates
 		* One way to solve this might be to hold the line start low for longer, before and after the line switch and to reset the counters regardless
 		Fixed with S2_LONGLINESTART
-	* Note for emulation: Output pixels are delayed by 2 (more) to the right now. Due to the shifter line end
+	* Note for emulation: Output pixels are delayed by 2 (more) to the right now. Due to the shifted line end
+	Oscillators (for OSCCLK)
+		NOTE: Sizes vary from DIL08 to DIL14
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format&sort=frequency
+		>> Selection of sizes:
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?frequency=2%20MHz%7C~4%20MHz%7C~8%20MHz%7C~10%20MHz~~14.31818%20MHz&operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&sort=frequency&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format%7C~Frequency
+		>> Specifically DIP-8:
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?length=13.2%20mm&package%20%2F%20case=DIP-8&width=13.2%20mm&instock=y&sort=frequency
+	* At 14.2MHz the S2FRAME6HalfX/S2FRAME6HalfY signals arrive a little late which causes the first X pixel for the "quadrant" flipped sprite to be incorrect. Ignoring this the calculation is OK at 14.31818MHz, giving an extra 71 pixels of fill rate per scan line
+	
+	Remember to choose "no enable" types for the oscillators
+	>> 14.31818MHz wide DIP14 https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-143?qs=GxOUx7aO6nydcT%252BF6wMSEQ%3D%3D
+	>> 12MHz square DIP08 https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-12M0000?qs=hbgUSdfWRJVeJrdNsQ6usw%3D%3D
+	>> DIP14 wipe open frame https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4814-3000-CP?qs=IGgAdOvCTsSwgxfUvPVZeg%3D%3D
+	Created SQRWIDOSCDIL14 part and package for sprites2 board
+	Simulation using Demo9 output also shows valid scaled sprites2 movement
+		Need to wait to see if it will render more large scaled results during the animation...
+		** TODO: Some frames are rendering no sprites2, find out why. Luckily one of the early frames shows this issue...
+			Truncating the output after ; Frame 2 with d$0 shows normal rendering, so it's not a hardware issue?
+			** But adding Frame2 data shows U313 on frame 2 gets filled with 00 or 02 and the real data is lost?!
+			*** Fixed: Setting U313 _OE to be always low fixes the write issue...
+	* TODO: Fix S2FRAME6HalfX/S2FRAME6HalfY signals (above).
+		Could use parallel register RAMs and load 16 bits at a time, this would shorten the register setup as well...
+		Or just delay the output SPRADV going to the rest of the scan logic by a clock using a 7474? To give the signals time to propagate?
 
 
 
-* The instruction memory is not limited to 8KB, since it is mapped to $8000
+* Check all 6264 and 6116 writes, in audio/APU/video, except the scan RAMs, by setting _OE to be always low
+	Check with SotB demo output, including the APU simulation output, and test input data
+
+
+
+* APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
 	This would allow more register selects, ALU operations, status register it selects and branching options
 	It would also allow 8 bits to be spent on immediate load values from the instruction
