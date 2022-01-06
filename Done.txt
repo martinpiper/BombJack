@@ -3291,3 +3291,12 @@ All layouts now use V3.1
 			Truncating the output after ; Frame 2 with d$0 shows normal rendering, so it's not a hardware issue?
 			** But adding Frame2 data shows U313 on frame 2 gets filled with 00 or 02 and the real data is lost?!
 			*** Fixed: Setting U313 _OE to be always low fixes the write issue...
+
+
+
+
+* Check all 6116 writes, in audio/APU/video by setting _OE to be always low
+	6264 writes don't work the same way, due to timing.
+	Check with SotB demo output, including the APU simulation output, and test input data
+	Video seems fine, but APU generated logic contentions as its address switch logic was a different speed
+	"C:\Program Files (x86)\WinMerge\WinMergeU.exe" /f *.txt c:\temp\APUOrig\ output\
