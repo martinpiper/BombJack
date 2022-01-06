@@ -30,7 +30,9 @@
 			The fix is to have a second adder
 			>> This makes the issue fixed at 14MHz now, it gives an extra 60 pixels of scan fill rate
 			** The question now is, does this extra scan fill rate justify the extra complexity?
-	* Problem: Also lots of sub-minimal write pulse ignored issues for U307 and U355
+	* Done: Problem: Also lots of sub-minimal write pulse ignored issues for U307 and U355
+		Might be due to the switch between clock rates. Perhaps turn off the RAMs during the line start period
+		Turned off the clock generation during the extended line start. Also seemed to fix the logic contention in the sprites2 scan RAMs.
 	* Problem: For calculated pixels trying to output when the end of the scan is reached (S2_LOGICRESET) this causes write errors to the scan data at the calculated X position 
 		Caused by the need to delay the S2DELVID_LINESTART for the pixel output until after the S2DOPIXEL toggle, which happen at different clock rates
 		* One way to solve this might be to hold the line start low for longer, before and after the line switch and to reset the counters regardless
@@ -44,6 +46,8 @@
 		>> Specifically DIP-8:
 		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?length=13.2%20mm&package%20%2F%20case=DIP-8&width=13.2%20mm&instock=y&sort=frequency
 	* At 14.2MHz the S2FRAME6HalfX/S2FRAME6HalfY signals arrive a little late which causes the first X pixel for the "quadrant" flipped sprite to be incorrect. Ignoring this the calculation is OK at 14.31818MHz, giving an extra 71 pixels of fill rate per scan line
+		Using demo9 output, removes frames 3 to 370, keeping frame 371 onwards where the letters have a large "kBaseScale = 32" "kBaseScaleMax = 26" "kPulseScaleMax = 20" scale with all of them on the same scan line... The emulations reflects the lack of draw time by missing some chunks on the right hand edges of the last sprites
+		The simulation, with 14.31818MHz, does not drop any pixels, which is cool!
 	
 	Remember to choose "no enable" types for the oscillators
 	>> 14.31818MHz wide DIP14 https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-143?qs=GxOUx7aO6nydcT%252BF6wMSEQ%3D%3D
@@ -52,7 +56,7 @@
 	Created SQRWIDOSCDIL14 part and package for sprites2 board
 	Simulation using Demo9 output also shows valid scaled sprites2 movement
 		Need to wait to see if it will render more large scaled results during the animation...
-		** TODO: Some frames are rendering no sprites2, find out why. Luckily one of the early frames shows this issue...
+		** Done: Some frames are rendering no sprites2, find out why. Luckily one of the early frames shows this issue...
 			Truncating the output after ; Frame 2 with d$0 shows normal rendering, so it's not a hardware issue?
 			** But adding Frame2 data shows U313 on frame 2 gets filled with 00 or 02 and the real data is lost?!
 			*** Fixed: Setting U313 _OE to be always low fixes the write issue...
@@ -62,7 +66,7 @@
 
 
 
-* Check all 6264 and 6116 writes, in audio/APU/video, except the scan RAMs, by setting _OE to be always low
+* Check all 6264 and 6116 writes, in audio/APU/video by setting _OE to be always low
 	Check with SotB demo output, including the APU simulation output, and test input data
 
 
