@@ -2,12 +2,76 @@
 	When calculating a line have a DIP switch that chooses one of these clocks so it can be manually tweaked for performance.
 	* Maximum simulated VIDCLK rate before seeing significant issues is ~15Mhz, which really doesn't offer enough performance gain for much benefit
 		It would give around an extra 92 pixels, which would help with the sprite reading overhead
-	S2DOSPRITE and S2_DOSPRITE can be used to switch the 6MHz or other clock rate selector signals appropriately for the scan logic
+	S2DOPIXEL and S2_DOPIXEL can be used to switch the 6MHz or other clock rate selector signals appropriately for the scan logic
+	* Trying... Generate baseline
+	* Added select of S2CalcCLK / _S2CalcCLK to S2CLKA / S2CLKB / _S2CLKA / _S2CLKB
+	This isn't working at all well. If the clock is not synced to the 6MHz then it is missing scan lines, wobbly lines appear etc
+	* Interesting to note: The DEL (delay) OR into each _WE for the scan RAMs can be removed
+	It works so badly, it indicates there is some core logic going wrong with the sprite calc and the scan calc
+		Is this a serious clock skew issue?
+	** Ah ha, it's because the short tick S2_LINESTART from VID_LINESTART was not being synchronised reliably with S2CalcCLK
+		It still generates wobbly scanlines, but at least all scanlines are present now
+		This indicates some residual timing pulse issue at the start of the scanline...
+		Perhaps the scanline start reset signal should be held lower longer or delayed...?
+			** S2DELVID_LINESTART created, which delays the line start pulse until after the S2DOPIXEL swap and fixes the wibbly line issue
+			This basically resets the scan counters a few pixels later when they are meant to be outputting the scan
+	Using 15MHz calc clock, which is divided by 2: Observed the massive scaled sprite, behind others, does render more horizontal pixels
+	* Problem: The bottom right flipped scaled Turrican legs sprite doesn't seem to want to complete rendering?
+		Is this because the sprite X extent signal is early? Cascading extent test issues?
+			Adding a bunch of OR delays, and adding a off-cycle _S2CalcCLK delay, did not fix the issue... Hmm...
+			Could be a adder ripple carry issue then...?
+			>> Yes, causing the pixel test to be "one extra" by using the latch clk line into U341 ANDed with DELS2ADVSPRI avoids the issue
+			But it renders one extra source pixel... hmm...
+			When U95:B(CLK) running at 12.2M the one extra pixel overflow render is fixed without any cascade delay compensation
+			When running at 13M the incorrect leg rendering cascade issue comes back
+			This is actually because the calculation result from the add and the S2nextSpriteXPixel extent check takes too long for the clock speed
+			It doesn't have time to shutdown the clocks, create S2nextNextSpriteXPixel, and use that to test ahead for extent and delay the extent result by one S2CalcCLK
+			This allows the scan adders to be switched off at the correct time
+			The fix is to have a second adder
+			>> This makes the issue fixed at 14MHz now, it gives an extra 60 pixels of scan fill rate
+			** The question now is, does this extra scan fill rate justify the extra complexity?
+	* Done: Problem: Also lots of sub-minimal write pulse ignored issues for U307 and U355
+		Might be due to the switch between clock rates. Perhaps turn off the RAMs during the line start period
+		Turned off the clock generation during the extended line start. Also seemed to fix the logic contention in the sprites2 scan RAMs.
+	* Problem: For calculated pixels trying to output when the end of the scan is reached (S2_LOGICRESET) this causes write errors to the scan data at the calculated X position 
+		Caused by the need to delay the S2DELVID_LINESTART for the pixel output until after the S2DOPIXEL toggle, which happen at different clock rates
+		* One way to solve this might be to hold the line start low for longer, before and after the line switch and to reset the counters regardless
+		Fixed with S2_LONGLINESTART
+	* Note for emulation: Output pixels are delayed by 2 (more) to the right now. Due to the shifted line end
+	Oscillators (for OSCCLK)
+		NOTE: Sizes vary from DIL08 to DIL14
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format&sort=frequency
+		>> Selection of sizes:
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?frequency=2%20MHz%7C~4%20MHz%7C~8%20MHz%7C~10%20MHz~~14.31818%20MHz&operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&sort=frequency&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format%7C~Frequency
+		>> Specifically DIP-8:
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?length=13.2%20mm&package%20%2F%20case=DIP-8&width=13.2%20mm&instock=y&sort=frequency
+	* At 14.2MHz the S2FRAME6HalfX/S2FRAME6HalfY signals arrive a little late which causes the first X pixel for the "quadrant" flipped sprite to be incorrect. Ignoring this the calculation is OK at 14.31818MHz, giving an extra 71 pixels of fill rate per scan line
+		Using demo9 output, removes frames 3 to 370, keeping frame 371 onwards where the letters have a large "kBaseScale = 32" "kBaseScaleMax = 26" "kPulseScaleMax = 20" scale with all of them on the same scan line... The emulations reflects the lack of draw time by missing some chunks on the right hand edges of the last sprites
+		The simulation, with 14.31818MHz, does not drop any pixels, which is cool!
+	
+	Remember to choose "no enable" types for the oscillators
+	>> 14.31818MHz wide DIP14 https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-143?qs=GxOUx7aO6nydcT%252BF6wMSEQ%3D%3D
+	>> 12MHz square DIP08 https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-12M0000?qs=hbgUSdfWRJVeJrdNsQ6usw%3D%3D
+	>> DIP14 wipe open frame https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4814-3000-CP?qs=IGgAdOvCTsSwgxfUvPVZeg%3D%3D
+	Created SQRWIDOSCDIL14 part and package for sprites2 board
+	Simulation using Demo9 output also shows valid scaled sprites2 movement
+		Need to wait to see if it will render more large scaled results during the animation...
+		** Done: Some frames are rendering no sprites2, find out why. Luckily one of the early frames shows this issue...
+			Truncating the output after ; Frame 2 with d$0 shows normal rendering, so it's not a hardware issue?
+			** But adding Frame2 data shows U313 on frame 2 gets filled with 00 or 02 and the real data is lost?!
+			*** Fixed: Setting U313 _OE to be always low fixes the write issue...
+	* TODO: Fix S2FRAME6HalfX/S2FRAME6HalfY signals (above).
+		Could use parallel register RAMs and load 16 bits at a time, this would shorten the register setup as well...
+		Or just delay the output SPRADV going to the rest of the scan logic by a clock using a 7474? To give the signals time to propagate?
 
 
 
+* Check all 6264 and 6116 writes, in audio/APU/video by setting _OE to be always low
+	Check with SotB demo output, including the APU simulation output, and test input data
 
-* The instruction memory is not limited to 8KB, since it is mapped to $8000
+
+
+* APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
 	This would allow more register selects, ALU operations, status register it selects and branching options
 	It would also allow 8 bits to be spent on immediate load values from the instruction
