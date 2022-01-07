@@ -24,7 +24,7 @@ int main(int argc, char**argv)
 	const double radius1y = 50, radius2y = 20;
 
 	const char *paletteHiNybbles =		"00000000046408a8ac8c0020";
-	const char *paletteHiNybblesMSBX =	"11111111157519b9bd9e1131";
+	const char *paletteHiNybblesMSBX =	"11111111157519b9bd9d1131";
 	EnableMode7(file);
 
 	while (frame++ < maxFrames)
