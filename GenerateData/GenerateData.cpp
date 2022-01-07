@@ -32,7 +32,14 @@ int main(int argc, char**argv)
 		WaitForVSync(file, frame);
 
 		// Priority change - Default
-		file << "d$9e0801e4" << std::endl;
+		if (!(frame & 0x40))
+		{
+			file << "d$9e0801e4" << std::endl;
+		}
+		else
+		{
+			file << "d$9e080136" << std::endl;
+		}
 
 		int screenXPos = (int)abs(128 + (sin(rads4) * 120) + (sin(rads4 / 3) * 768));
 		int screenYPos = (int)abs((sin(rads5) * 256) + (sin(rads5 / 3) * 768));
@@ -203,7 +210,14 @@ int main(int argc, char**argv)
 
 			// Priority change - Sprites should be behind everything, then mode 7 , then chars, then tiles in front
 			// Vertical sprite palette lines should be seen because they are in the last layer
-			file << "d$9e080136" << std::endl;
+			if (!(frame & 0x40))
+			{
+				file << "d$9e080136" << std::endl;
+			}
+			else
+			{
+				file << "d$9e0801e4" << std::endl;
+			}
 
 			// Debug colour change
 			file << "d$a01401" << std::hex << std::setw(2) << ((debugPal + 1) | 0xf0) << std::endl;
