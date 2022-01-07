@@ -1,9 +1,3 @@
-* Fix sprites2 alignment (shift 2 pixels to the right) in emulation to match simulation and reduce calculation by 2 extra clocks
-
-
-* Add sprites2 clock speed selection in emulation
-
-
 * TODO: Fix S2FRAME6HalfX/S2FRAME6HalfY signals (above).
 	Could use parallel register RAMs and load 16 bits at a time, this would shorten the register setup as well...
 	Or just delay the output SPRADV going to the rest of the scan logic by a clock using a 7474? To give the signals time to propagate?
