@@ -1,12 +1,6 @@
-* TODO: Fix S2FRAME6HalfX/S2FRAME6HalfY signals (above).
-	Could use parallel register RAMs and load 16 bits at a time, this would shorten the register setup as well...
-	Or just delay the output SPRADV going to the rest of the scan logic by a clock using a 7474? To give the signals time to propagate?
-
-
-
 * APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
-	This would allow more register selects, ALU operations, status register it selects and branching options
+	This would allow more register selects, ALU operations, status register, indirected selects and branching options
 	It would also allow 8 bits to be spent on immediate load values from the instruction
 
 

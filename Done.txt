@@ -3300,3 +3300,15 @@ All layouts now use V3.1
 	Check with SotB demo output, including the APU simulation output, and test input data
 	Video seems fine, but APU generated logic contentions as its address switch logic was a different speed
 	"C:\Program Files (x86)\WinMerge\WinMergeU.exe" /f *.txt c:\temp\APUOrig\ output\
+
+
+
+
+* TODO: Fix S2FRAME6HalfX/S2FRAME6HalfY signals (above).
+	Could use parallel register RAMs and load 16 bits at a time, this would shorten the register setup as well...
+	Or just delay the output SPRADV going to the rest of the scan logic by a clock using a 7474? To give the signals time to propagate?
+		Adding one 7474 delay mostly fixes the issue. Draw time, judged by the large scaled sprite in the background, is also reduced
+		Adding a second 7474 has no visible effect, except to reduce the available draw time more.
+		There are still three bad lower left quadrant pixels visible, but the main offset issue is fixed
+		Actually the leading left edge of most scaled sprites is fixed, sometimes there was a missing screen pixel
+		Using VIDCLK the sprites still match perfectly with emulation test data
