@@ -3312,3 +3312,30 @@ All layouts now use V3.1
 		There are still three bad lower left quadrant pixels visible, but the main offset issue is fixed
 		Actually the leading left edge of most scaled sprites is fixed, sometimes there was a missing screen pixel
 		Using VIDCLK the sprites still match perfectly with emulation test data
+
+
+
+
+* Sprites2: "There are still three bad lower left quadrant pixels visible" from above residual issue
+	Note: When using the faster MHz: Pixels output to the display at RV=83 RH=~0xd6 or ~0.015476842
+	Will need to be the line before...
+		Debug memory view for U307 U355
+		BombJack\TestData_DebugScaledSprites.txt is updated to only include the single troublesome sprite
+			b$8b
+			b$40
+			b$20
+			b$f8
+			b$20
+			b$20
+			b$20
+			b$c0
+		Interesting to note that it still displays the problem, it's also the first sprite in the list... hmm...
+		With breakpoint RV=83 (the start of the line) then U355 already contains one scanline calculated, since the calculation happened the line before
+		Using breakpoint RV=81 then U355 is cleared to ff and U307 starts displaying a blank line of ff with a segment of 4f starting at f8
+		* After stepping a few cycles, can see $48 written to U355 byte 0 (kind of expected) but then the erroneous write $48 to $f8
+		Looks like the scan X pixel counter load was triggering early on S2_LDFRAME, created a delayed DELS2_LDFRAME
+			Makes sense since the S2_ADVSPRI and S2ADVSPRI were delayed
+			The troublesome sprite rendering is fixed, in both fast and normal pixel clock rates
+		Restore all test debug sprites data
+			Fast clock rate perfectly matches (except expected last pixel in the huge background scaled sprite clock edges, but even those are on the same position now)
+
