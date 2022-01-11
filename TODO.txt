@@ -32,8 +32,12 @@
 			0.000000390
 		Lots of missed writes resulting in huge frame timings differences as it cycles around to the next frame
 	>> At the moment using _OE always low, like the APU data RAM
+	* Using TestData.txt with "UserPort24Bit Data timing model (faster for emulation output)" at 1.5MHz and normal plane configuration shows no issues
+	Perhaps the vectors test data is trying to write as the bank is trying to read?
+		Try waiting for vsync after swapping banks before writing data?
+			No effect?!
+			Time to analyse the write attempts more closely.
 
-		
 
 
 * APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
