@@ -1,3 +1,41 @@
+* Vectors: If using 2MHz as the data write timing (not VIDCLK synchronised) then the RAM writes seem to be unreliable.
+	Seeing logic contentions on VEC*D* from each of the vector data RAMs
+	Using VIDCLK synchronised writes there are no logic contention issues
+	* Perhaps the userport24bit timing needs to be replicated better in the video data generator?
+		As the current userport board uses a 4MHz clock
+		Measured 1.02us (1020ns) from address/data to _MEWR for 240ns then 530ns after hold
+		For low time is 1.79us (1790ns)
+			https://convertermaniacs.com/second/nanosecond-to-second/convert-1020-nanoseconds-to-seconds.html
+		This results in a new 500KHz data generator model that can be used. These writes have a very long setup time :)
+			0.000001020
+			0.000000240
+			0.000000530
+			0.000001790
+		This speed also misses the video timing writes, hmm
+		Need a "faster userport model" to reflect the debug output timings
+		Always setting _OE to low and using 1.5M with
+			0.000000300
+			0.000000200
+			0.000000100
+			0.000000600
+		Does show logic contentions, but the output comparison "compareimages.bat 20" shows no differences...
+			0.130472535 VEC0D0
+		With _OE logic, some logic contentions, some output differences
+	* Using "APU Data timing model" with _OE always low...
+		Also generates logic contentions, but output comparison shows no issues
+		With _OE logic no more logic contentions, output comparison shows no issues
+	* Hmm APU uses:
+		1MHz with:
+			0.000000150
+			0.000000125
+			0.000000015
+			0.000000390
+		Lots of missed writes resulting in huge frame timings differences as it cycles around to the next frame
+	>> At the moment using _OE always low, like the APU data RAM
+
+		
+
+
 * APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
 	This would allow more register selects, ALU operations, status register, indirected selects and branching options
