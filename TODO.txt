@@ -37,6 +37,22 @@
 		Try waiting for vsync after swapping banks before writing data?
 			No effect?!
 			Time to analyse the write attempts more closely.
+	With _OE logic and 1.5MHz data generation (DG), Logic Contention (LC) VEC0D0/1/3 @ 0.130474385 so timed breakpoint 0.130474300
+		LC time changed after adding logic analyser?!
+		Now @ 0.194019655 so 0.194019500
+	Back to _OE = low using 1.5 MHz DG and:
+		0.000000250
+		0.000000125
+		0.000000015
+		0.000000500
+		Some early LC up to 0.158888456s but running for 2.0s (simulated time (ST)) no further issues. Output looks fine too.
+	Using emulation output and APU DG:
+		Some early LC up to 0.131503488s but running for 2.0s (simulated time (ST)) no further issues. Output looks fine too with "compareimages.bat 120" (CI 120).
+			Except:
+			1032         00000036	: These look like two well rendered frames, just different frame data. The frames show regular (every 8-10 frames) of disconnect thereafter. Meaning a data write was missed for some period...
+	Going to have to live with the early LC warnings I think. The timings seem to be very generous on the 1.5 MHz DG already
+		Perhaps the RAM timings can be tweaked to remove the warnings?
+
 
 
 
