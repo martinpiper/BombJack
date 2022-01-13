@@ -53,7 +53,9 @@ kBus24Bit_VideoLayer_Priority_Pixel3		= %11
 	sta CIA2PortBRS232
 }
 
+!ifndef kBus24Bit_SpritesMaxNum {
 kBus24Bit_SpritesMaxNum				= 24
+}
 kBus24Bit_Sprites_MSBX				= $10
 kBus24Bit_Sprites_MaxX				= $180
 
