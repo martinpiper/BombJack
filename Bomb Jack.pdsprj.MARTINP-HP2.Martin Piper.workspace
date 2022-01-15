@@ -3,21 +3,12 @@
  <FRAME activewindow="0">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff01000000010000007f07000007040000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="25400000" mode="00000000" zoom="0" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="215254">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="198" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
     <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-    <centre x="0" y="0"/>
+    <centre x="13788571" y="-9842500"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
-  <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="25400000" mode="00000001" zoom="-1" scale="35" flipped="0" gridminor="1016000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="362857">
-    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-9819220" y="-8161472"/>
-    <origin x="0" y="0"/>
-   </editor>
-  </WINDOW>
-  <WINDOW type="default" module="PROJNOTES"/>
-  <WINDOW type="default" module="DXP"/>
  </FRAME>
  <MODULE name="ARES">
   <editor metric="0" gridmajor="25400000" mode="00000001" zoom="-1" scale="35" flipped="0" gridminor="1016000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="362857">
@@ -27,15 +18,15 @@
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="25400000" mode="00000000" zoom="0" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="215254">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="0" scale="198" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
    <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-   <centre x="0" y="0"/>
+   <centre x="13788571" y="-9842500"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="28" flags="00008003" y="806" h="200" pid="0" iid="-1">
+   <POPUP w="800" x="28" flags="00000003" y="806" h="200" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">542</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -64,7 +55,7 @@
    <POPUP w="610" x="78" flags="00000000" y="169" h="466" pid="0" iid="227">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="610" x="98" flags="00000000" y="189" h="466" pid="0" iid="265">
+   <POPUP w="610" x="88" flags="00000000" y="385" h="466" pid="0" iid="265">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="610" x="118" flags="00000000" y="209" h="466" pid="0" iid="20">
@@ -383,7 +374,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="38" flags="0000000b" y="289" h="42" pid="1" iid="77">
+   <POPUP w="16" x="38" flags="0000000a" y="278" h="43" pid="1" iid="77">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -393,7 +384,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="29" flags="0000000a" y="487" h="16" pid="1" iid="133">
+   <POPUP w="16" x="575" flags="0000000a" y="278" h="43" pid="1" iid="133">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -413,7 +404,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="578" flags="0000000a" y="372" h="16" pid="1" iid="547">
+   <POPUP w="16" x="1356" flags="0000000a" y="257" h="43" pid="1" iid="547">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -423,7 +414,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="166" flags="00000001" y="96" h="466" pid="0" iid="853">
+   <POPUP w="610" x="249" flags="00000000" y="339" h="466" pid="0" iid="853">
     <PROPERTIES/>
    </POPUP>
   </PWI>

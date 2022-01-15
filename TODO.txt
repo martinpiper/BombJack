@@ -1,62 +1,13 @@
-* Vectors: If using 2MHz as the data write timing (not VIDCLK synchronised) then the RAM writes seem to be unreliable.
-	Seeing logic contentions on VEC*D* from each of the vector data RAMs
-	Using VIDCLK synchronised writes there are no logic contention issues
-	* Perhaps the userport24bit timing needs to be replicated better in the video data generator?
-		As the current userport board uses a 4MHz clock
-		Measured 1.02us (1020ns) from address/data to _MEWR for 240ns then 530ns after hold
-		For low time is 1.79us (1790ns)
-			https://convertermaniacs.com/second/nanosecond-to-second/convert-1020-nanoseconds-to-seconds.html
-		This results in a new 500KHz data generator model that can be used. These writes have a very long setup time :)
-			0.000001020
-			0.000000240
-			0.000000530
-			0.000001790
-		This speed also misses the video timing writes, hmm
-		Need a "faster userport model" to reflect the debug output timings
-		Always setting _OE to low and using 1.5M with
-			0.000000300
-			0.000000200
-			0.000000100
-			0.000000600
-		Does show logic contentions, but the output comparison "compareimages.bat 20" shows no differences...
-			0.130472535 VEC0D0
-		With _OE logic, some logic contentions, some output differences
-	* Using "APU Data timing model" with _OE always low...
-		Also generates logic contentions, but output comparison shows no issues
-		With _OE logic no more logic contentions, output comparison shows no issues
-	* Hmm APU uses:
-		1MHz with:
-			0.000000150
-			0.000000125
-			0.000000015
-			0.000000390
-		Lots of missed writes resulting in huge frame timings differences as it cycles around to the next frame
-	>> At the moment using _OE always low, like the APU data RAM
-	* Using TestData.txt with "UserPort24Bit Data timing model (faster for emulation output)" at 1.5MHz and normal plane configuration shows no issues
-	Perhaps the vectors test data is trying to write as the bank is trying to read?
-		Try waiting for vsync after swapping banks before writing data?
-			No effect?!
-			Time to analyse the write attempts more closely.
-	With _OE logic and 1.5MHz data generation (DG), Logic Contention (LC) VEC0D0/1/3 @ 0.130474385 so timed breakpoint 0.130474300
-		LC time changed after adding logic analyser?!
-		Now @ 0.194019655 so 0.194019500
-	Back to _OE = low using 1.5 MHz DG and:
-		0.000000250
-		0.000000125
-		0.000000015
-		0.000000500
-		Some early LC up to 0.158888456s but running for 2.0s (simulated time (ST)) no further issues. Output looks fine too.
-	Using emulation output and APU DG:
-		Some early LC up to 0.131503488s but running for 2.0s (simulated time (ST)) no further issues. Output looks fine too with "compareimages.bat 120" (CI 120).
-			Except:
-			1032         00000036	: These look like two well rendered frames, just different frame data. The frames show regular (every 8-10 frames) of disconnect thereafter. Meaning a data write was missed for some period...
-	Going to have to live with the early LC warnings I think. The timings seem to be very generous on the 1.5 MHz DG already
-		Perhaps the RAM timings can be tweaked to remove the warnings?
-
+* Now the APU DG timing is fixed, perhaps revisit the _OE logic removal on all other video areas
 
 
 
 * APU: Remove instruction RAM _OE logic
+
+
+
+
+* Merge layer: A very small board that takes 2/3/4 pixel outputs from layers and merges the output based on transparency rules and outputs to the final video layer board. It doesn't need to be clocked since the layer outputs are clocked and the layer input is clocked.
 
 
 
