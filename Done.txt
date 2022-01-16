@@ -3439,3 +3439,15 @@ All layouts now use V3.1
 				nope
 				shorter values better...
 	Simulated @Demo6 output data for 6.46 seconds
+
+
+
+
+* Chars board (same design as the working chars board from PCBWay) from xinwei was mostly dead: https://www.youtube.com/watch?v=shdOwHSAbxE
+	Looking at the display, the screen memory looks "OK" but the chars definition data looks bad.
+	The horizontal lines could indicate a failure to access the definition memory, or perhaps a failure to shift data in the pixel shifters
+	Debugging with the simulation using DG: C:\Work\C64\VideoHardware\Prototype3\just chars debugData.txt
+	Disabling the output to CIS0 the control, by detaching it in the simulation in root sheet 6, that goes into the shifters generates very similar horizontal banding results
+	The colours of the trees do come through though, indicating the initial bits are picked up, perhaps the colour RAM is also having issues
+	
+	
