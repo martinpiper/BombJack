@@ -3438,3 +3438,4 @@ All layouts now use V3.1
 			Instead of time to _MEWR 0.000000150 try other longer values?
 				nope
 				shorter values better...
+	Simulated @Demo6 output data for 6.46 seconds

@@ -8,6 +8,7 @@
 
 
 * Merge layer: A very small board that takes 2/3/4 pixel outputs from layers and merges the output based on transparency rules and outputs to the final video layer board. It doesn't need to be clocked since the layer outputs are clocked and the layer input is clocked.
+	This would be useful when stacking several layers together, like sprites or chars layers in fixed order
 
 
 
