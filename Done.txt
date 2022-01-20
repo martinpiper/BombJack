@@ -3449,5 +3449,8 @@ All layouts now use V3.1
 	Debugging with the simulation using DG: C:\Work\C64\VideoHardware\Prototype3\just chars debugData.txt
 	Disabling the output to CIS0 the control, by detaching it in the simulation in root sheet 6, that goes into the shifters generates very similar horizontal banding results
 	The colours of the trees do come through though, indicating the initial bits are picked up, perhaps the colour RAM is also having issues
-	
+	Perhaps 4M6 will also account for the colour? No, too dark
+	6N2 disable? Nope
+	U17 disable? Also similar to CIS0, but colour not affected that much
+	U10 disable? No
 	
