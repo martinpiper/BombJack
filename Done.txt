@@ -3454,3 +3454,53 @@ All layouts now use V3.1
 	U17 disable? Also similar to CIS0, but colour not affected that much
 	U10 disable? No
 	
+	
+	
+	
+* APU: Note: BombJack\ReconcileData\ReconcileData.py
+	DG using C:\Work\C64\VideoHardware\target\debugDataJustUserPort.txt
+	From C:\Work\BombJack\output\DebugAPUOutput.txt
+	Why is this a double write? d$9e000170
+	EA break point = 0x9e00
+	The DG is writing it twice?!
+	From C:\Work\C64\VideoHardware\target\debugDataJustUserPort.txt
+	Seems that the data before a wait is written after the wait command is executed
+		d$9e000170
+		w$ff03ff00,$9100b600
+		d$20000203
+	Fixed DG
+	* But the wait seems to be taking too long?
+	For example when executing this:
+		w$ff03ff00,$72005300
+		d$a0140139
+	The write cycle, and next instruction, only seems to be ready at RH=0x5c
+		Which is 9 pixels
+	To get the DebugAPUOutput.txt working in the simulation with the DG needs:
+		The data until the display is enabled, no waits because the display doesn't generate timing data when disabled, obviously.
+		0.000000150
+		0.000000125
+		0.000000100
+		Force output lo after time 0.000000300
+		Period: 50n
+	This allows the narrowly timed writes recorded from the APU to be detected while still maintaining the timings separation of the writes and the address bus returning to 0.
+	The output simulates frame correctly after that.
+	* TODO: Probably need a way to disable the "Early data trigger ignored" in SG and allow the DG logic to "clock" faster than the data output
+	Wow, this attempted write is very narrow line 152710:
+		;@time:0.086664
+		;delta:0.000001
+		w$ff03ff00,$24017d01
+		d$9e020100
+		;@time:0.086665
+		;delta:0.000000
+		>>>> w$ff03ff00,$24017e01 <<<<
+		d$dfbe0315
+	Given that VIDCLK 12.096MHz = 82.67ns
+	* TODO: Might need a recording option that doesn't output a wait if the last output time is less than a certain threshold
+		Debug the very short write attempt, step to see what happens. I bet the DG just misses the next pixel
+		Timed breakpoint at: 0.140266 0.140267 0.140268 0.140269 0.1402695 going to need to narrow down
+		DG CLK = 10n
+		System->Animation options->Single Step Time: 50n to 5n
+	* TODO: Actually, the recording of the write is not going to be exact because it records when the edge happened, not what the write cycle *started*
+		So the playback of the recording is necessarily going to be shifted later by the write cycle time delta
+	Done: For "if (realtime(time) < mNotEarlierThan)"
+		Going to have to queue the transitions to .simulate and play them back later on
