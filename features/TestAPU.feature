@@ -65,6 +65,9 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98200111"
     And skip line
     Then expect the next line to contain "d$98210112"
+    # Ignore whatever write is captured, as it will be retried
+    And skip line
+    And skip line
     Then expect the next line to contain "delta:0.000001"
     # Retry external write due to APU data memory write
     Then expect the next line to contain "d$98210112"

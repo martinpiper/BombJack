@@ -3035,6 +3035,7 @@ All layouts now use V3.1
 	This doesn't happen from the emulation debug output VideoHardware\target\debugData.txt
 	** Perhaps reconcile the simulation output with the emulation output, find any mismatching write first
 		This will need a tool to check data bytes written after each ^-$01, but will need to sync using w$ values instead since the simulation output doesn't have ^-$01
+	NOTE: Before using ReconcileData.py in debugData.txt look for "d$20000203", copy everything from the top of the file, replacing everything in DebugAPUOutput.txt to the first d$20000203
 	Reconcile shows some sprite register write mismatches: python C:\Work\BombJack\ReconcileData\ReconcileData.py C:\work\C64\VideoHardware\target\debugData.txt C:\work\BombJack\output\DebugAPUOutput.txt
 		Begin reconciliation
 		data     152950   982301a0  :  589568   9823019f	x

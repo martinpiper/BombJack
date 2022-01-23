@@ -1,3 +1,27 @@
+* Why did the APU simulation generate a write of d$dfbe0315 ?!
+	When using @Demo6: C:\Work\C64\VideoHardware\target\debugDataJustUserPort.txt
+	Then in C:\Work\BombJack\output\DebugAPUOutput.txt
+	The EBS is 03 which is quite invalid
+		;@time:0.086665
+		;delta:0.000000
+		w$ff03ff00,$24017e01
+		d$dfbe0315
+	It's reproducible with a breakpoint EBS=0x03 line 7863 time 0.086664638 so 0.086664000
+		w$ff03ff00,$24017600
+		d$41bc0215
+	Adding a sustained write value while _MEWR is low to the recorder code fixes the EBS = 0x03 write
+		But now the write is still wrong :)
+			w$ff03ff00,$24017e01
+			d$9e020115
+		This time the data value from the APU RAM write is coming through in the write from the external attempt
+		This is because the APU is trying to write a value on its internal bus at the same time the external write is happening *sigh*
+	* If the APU instruction or data is selected, then slam the bus select back to the external pass through mode
+		ReconcileData shows the simulation data is good now
+		TestAPU.feature passes
+
+
+
+
 * Now the APU DG timing is fixed, perhaps revisit the _OE logic removal on all other video areas
 
 
