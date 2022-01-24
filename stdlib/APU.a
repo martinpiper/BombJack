@@ -4,6 +4,7 @@ APU_ResetDisable
 	jsr APU_SetAddressAPURegisters
 	lda #%00
 	sta CIA2PortBRS232
+	jsr APU_SetAddressAPURegisters
 	lda #%01
 	sta CIA2PortBRS232
 	rts

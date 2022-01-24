@@ -27,6 +27,10 @@ def get_data(file):
         if bus & 0x200:
             continue
 
+        # Ignore Audio writes as these come from the CPU not APU
+        if (bus & 0x80000100) == 0x80000100:
+            continue
+
         return line
 
     return line
