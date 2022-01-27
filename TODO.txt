@@ -1,3 +1,7 @@
+* Try recording a high resolution APU bus sample using the DG?
+
+
+
 * Now the APU DG timing is fixed, perhaps revisit the _OE logic removal on all other video areas
 
 
