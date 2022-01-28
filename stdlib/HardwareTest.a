@@ -127,7 +127,16 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
 	lda #0
 	tay
-	ldx #8
+	ldx #2
+	jsr Bus24Bit_WriteAForYThenX
+	lda #kBus24Bit_Video_FlipH
+	ldx #2
+	jsr Bus24Bit_WriteAForYThenX
+	lda #kBus24Bit_Video_FlipV
+	ldx #2
+	jsr Bus24Bit_WriteAForYThenX
+	lda #kBus24Bit_Video_FlipH | kBus24Bit_Video_FlipV
+	ldx #2
 	jsr Bus24Bit_WriteAForYThenX
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 	ldx #8

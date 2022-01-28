@@ -3458,6 +3458,25 @@ All layouts now use V3.1
 	>> Board inspection results:
 		U10 is using 74LS00 and should be 74LS10
 		U17 is using 74HC04 and should be 74LS04
+	* Fixing U10 fixes some of the character load timing issues.
+	However when DSW2 is set correctly, for the character definitions, it causes the working board to stop working
+		Indicating a non-working CHEBS5 line, either short or logic contention, feeding back and killing the working board
+		Checking continuity of CHEBS5 indicates shows U29 pin 7 (ICA1) is connected, when it shouldn't be.
+		ICA1 is an output for the internal address to fetch char definition data address
+		There is a via next to the pin... The via shows continuity, which is correct as it's CHEBS5, but it shows continuity to pin 7 which is wrong.
+		Re-flowing the pin to remove the solder bridge to the via fixed most of the character definition data
+		There is a single vertical pixel, roughly 3 pixels from the left edge of every character, that seems to always be set
+			Also the 0 character indicates one pixel next to it on the left might always be having issues as well? But in a different plane?
+		This is probably an output from one of the RAMs, less likely to be one of the shifters, but let's check in the simulation
+			The boot test pattern needs flips, this would make it easier the deduce if the input to the shifters or the line inversion are wrong, or the outputs from the RAMs
+		Setting 8K6D5 from IC 8K6R to be 1 in the simulation, disconnecting it, causes the red vertical line
+			* 8K6D5 on the PCB has a short to VCC power, oops
+				Suspect is the VIA near pin 28 (VCC) on 8H6R
+		Setting 8E6D6 from IC L8E6R to be 0 causes remaining visible effect on the 0 character
+			Another solder bridge at 8N6R pin 23
+		
+		
+			
 		
 		
 	
