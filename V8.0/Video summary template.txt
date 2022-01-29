@@ -1,0 +1,16 @@
+Modular audio and video hardware for retro machines like the Commodore 64. Designed to use 74 series TTL through hole ICs available back in the 1980s, something you can solder at home from parts or order ready assembled.
+
+This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. The hardware has progressed to add extra features not present in the original.
+
+The main project page with dev logs and downloads: https://martin-piper.itch.io/bomb-jack-display-hardware
+
+Proteus simulation and PCB design: https://www.labcenter.com/
+PCBWay PCB manufacture: https://www.pcbway.com/
+Xinweike PCB manufacture: http://www.xinweikedz.com/
+
+https://twitter.com/hashtag/RetroTTLVideoCard
+https://twitter.com/hashtag/RetroTTL
+
+#RetroTTL #RetroTTLVideoCard #C64 #Commodore64 #electronics #electronicsproject
+
+RetroTTL,RetroTTLVideoCard,C64,Commodore64,electronics,electronicsproject
