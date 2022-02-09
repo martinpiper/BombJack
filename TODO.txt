@@ -1,3 +1,12 @@
+* PCBWay sprites board seems to work OK
+* PCBWay Tiles board does not. Seems to have at least one logic contention back to the data bus as it stops other boards from working when plugged in without EBS DSW. Probably horizontal pixel count logic contention, i.e. a solder bridge back to VCC/GND
+	* 1. Found solder bridge on U18 pin 11 (VCC) to via (ED5) which would cause data issues on the whole bus
+	* 2. Found solder bridge near U66 pin 1, two vias internal nets for 4P7R (tile screen and colour data) A5 and A6
+	* 3. Found solder bridge on U4 pin 8 (GND) to via (BGYP2) which will affect Y scroll position
+	
+
+
+
 * Try recording a high resolution APU bus sample using the DG?
 
 

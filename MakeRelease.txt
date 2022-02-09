@@ -18,6 +18,10 @@
 	
 ** For each board, ensure the signal layers have a GND power plane created
 	Menu->Technology->Set Layer Stackup
+** Ensure the pad to pad distance is set to avoid soldering bridges, by moving via placement away from pads
+	Menu->Design Rules Manager
+	Design Rules tab->Rule Name = DEFAULT
+		Pad-Pad = 35th (This is different to the default 10th)
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
 	Menu->Technology->Set Layer Stackup
 		Gradually reduce each type "Plane" to "Signal" starting with the top most plane *with the greater number of existing layers* first.

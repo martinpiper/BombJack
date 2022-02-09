@@ -158,6 +158,18 @@ At 0x9800 - 0x985f each sprite is described by 4 bytes:
 	Byte 3: The sprite’s X position on screen
 
 
+0x9200 Sprites2 registers
+	Sprites support X and Y flips with X & Y repeating patterns
+
+	Byte 0: Palette | 0x10 = MSBX | 0x20 = MSBY | 0x40 = flipX | 0x80 = flipY
+	Byte 1: Y pos
+	Byte 2: Y size (in screen pixels, regardless of scale)
+	Byte 3: X pos
+	Byte 4: X scale extent (uses internal coordinates)
+	Byte 5: Y inv scale (*32)
+	Byte 6: X inv scale (*32)
+	Byte 7: Sprite frame (index) | 0x40 = halfX | 0x80 = halfY
+
 
 #### Tile and sprite data layout
 16x16 pixel tile and sprite data is stored in 8x8 cells and in memory order:
