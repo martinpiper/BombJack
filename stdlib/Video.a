@@ -151,6 +151,18 @@ Video_SetAddressSpritesControl
 	rts
 
 
+!zn
+Video_SetAddressSprites2
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_Sprites2_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_Sprites2
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_Sprites2
+	sta CIA2PortBRS232
+	rts
+
+
 Video_SetAddressMode7
 	jsr Bus24Bit_Reset
 	lda #kBus24Bit_Mode7Screen_EBBS
