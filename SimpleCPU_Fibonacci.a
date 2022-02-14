@@ -5,14 +5,23 @@
 ; This automatically splits the instruction output bytes for each ROM depending on the input PC offset
 !set InstructionOffset = *
 
+; This outputs the signals with an edge in the middle for any writes.
+; The data selection mask IHeld__Mask and PC load and the immediate values are maintained for the whole of the instruction.
+; This means an instruction is at least 3 clocks long
 !macro MI .i , .imm {
 !if InstructionOffset = 0 {
+	!by <(.i & IHeld__Mask)
 	!by <(.i)
+	!by <(.i & IHeld__Mask)
 }
 !if InstructionOffset = 1 {
+	!by <((.i & IHeld__Mask) >> 8)
 	!by <(.i >> 8)
+	!by <((.i & IHeld__Mask) >> 8)
 }
 !if InstructionOffset = 2 {
+	!by <.imm
+	!by <.imm
 	!by <.imm
 }
 }
@@ -28,6 +37,7 @@ IWrite_RegAddr		= %0000000000001000
 IWrite_RegPC		= %0000000000010000
 IWrite_RAM			= %0000000000100000
 ;Only choose one of ISel_*
+ISel__Mask			= %0000000111000000
 ISel_Imm			= %0000000000000000
 ISel_RAM			= %0000000001000000
 ISel_RegA			= %0000000010000000
@@ -37,10 +47,15 @@ ISel_RegAddr		= %0000000101000000
 ISel_RegPC			= %0000000110000000
 ISel_ALU			= %0000000111000000
 ; Tweak the ALU calculation between A+B and A+immediate
-IALU_AB				= %0000000000000000
-IALU_Imm			= %0000001000000000
-IIfNotZero			= %0000010000000000
-IWrite_ALUResult	= %0000100000000000
+IALU_Mask			= %0000011000000000
+IALUA_A				= %0000000000000000
+IALUA_Addr			= %0000001000000000
+IALUB_B				= %0000000000000000
+IALUB_Imm			= %0000010000000000
+IIfNotZero			= %0000100000000000
+IWrite_Result		= %0001000000000000
+; The bit mask for held values
+IHeld__Mask			= ISel__Mask | ISel_RegPC | IALU_Mask
 
 ;Write Addr , #13
 	+MI IWrite_RegAddr | ISel_Imm , 13
@@ -51,17 +66,17 @@ IWrite_ALUResult	= %0000100000000000
 ;
 .loop
 ;	Write RAM, Write C , Add A , B
-	+MI IWrite_RAM | IWrite_RegC | ISel_ALU | IALU_AB
+	+MI IWrite_RAM | IWrite_RegC | ISel_ALU | IALUA_A | IALUB_B
 ;	Write A , B
 	+MI IWrite_RegA | ISel_RegB
 ;	Write B , C
 	+MI IWrite_RegB | ISel_RegC
-;	Write Addr , Add A , #2
-	+MI IWrite_RegAddr | ISel_ALU | IALU_Imm , 2
+;	Write Addr , Add Addr , #2
+	+MI IWrite_RegAddr | ISel_ALU | IALUA_Addr | IALUB_Imm , 2
 ;	; This Add is used as a comparison for, the result is not stored, it behaves like a conditional branch or jump
 ;	Add C , #-89 If not zero Write PC , #.loop
-	; Note: Cannot have two immediate values. Need to write into ALU result and then test
-	+MI IWrite_ALUResult | ISel_ALU | IALU_Imm , -89
+	; Note: Cannot have two immediate values. Need to write into result and then test
+	+MI IWrite_Result | ISel_ALU | IALUA_A  | IALUB_Imm, -89
 	+MI IIfNotZero | IWrite_RegPC | ISel_Imm , .loop - InstructionOffset
 ;
 ;	; An infinite loop that effectively terminates the code

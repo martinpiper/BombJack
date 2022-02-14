@@ -24,3 +24,7 @@ output/DebugAPUOutput.txt
 output/DebugAPUOutputJust9800.txt
 output/DebugAPUOutputInternal.txt
 target/
+SimpleCPU.DO
+SimpleCPU.EDF
+SimpleCPU.log
+SimpleCPU.sts
