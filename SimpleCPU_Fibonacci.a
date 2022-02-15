@@ -79,6 +79,10 @@ IHeld__Mask			= ISel__Mask | ISel_RegPC | IALU_Mask
 	+MI IWrite_Result | ISel_ALU | IALUA_A  | IALUB_Imm, -89
 	+MI IIfNotZero | IWrite_RegPC | ISel_Imm , .loop - InstructionOffset
 ;
+
+	; Debug
+;	+MI IWrite_RAM | ISel_Imm , $ff
+
 ;	; An infinite loop that effectively terminates the code
 .end
 ;Write PC , #.end
