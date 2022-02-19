@@ -11,7 +11,7 @@
 			Select all->Copy->Save text to file
 			Then run CheckConnectivity with a command line like: "C:\work\BombJack\V8.0\Bomb Jack - All - Routed.IPC" "C:\work\BombJack\V8.0\connectivity check.txt" "C:\Work\BombJack\HeaderNets.txt"
 	Ensure ICs, except EPROMs, are present in the BOM. Do not want to populate a bunch of sockets by accident.
-	For BOMs: Ensure EPROM ICs, 27C512, use the socket in the BOM, not the IC.
+	For BOMs: Ensure CLK and EPROM ICs, 27C512, use the socket in the BOM, not the IC.
 	Ensure all components have ordering links
 
 

@@ -3554,3 +3554,10 @@ All layouts now use V3.1
 	* If the APU instruction or data is selected, then slam the bus select back to the external pass through mode
 		ReconcileData shows the simulation data is good now
 		TestAPU.feature passes
+
+
+
+* Check if 27C512 needs wiped sockets
+* Sprites2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
+* For CLK/OSC and IC components that need to be plugged in later make sure their BOM CODE is using the socket, to avoid the components being soldered.
+	Add a note to the schematic (and design notes) detailing the component ordering links.
