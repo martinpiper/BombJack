@@ -81,6 +81,7 @@
 			** EPROMs as sockets, not ICs
 			** Check EPROMs with their sockets are not too close to ICs, especially the ends of the ICs hitting the EPROM pins
 
+		Save the file as a *.xlsx (Excel 2007-2013) with the suffix " - BOM.xlsx" for example "Bomb Jack - Sprites2 - Routed - BOM.xlsx"
 				
 	Order note:
 		Your standard 1.6mm +/- 10% 1oz stackup is OK.
