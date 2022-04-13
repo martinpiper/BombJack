@@ -44,7 +44,9 @@
 	* Vectors: It currently uses _EXTCSA000 for its registers which is the same as Mode7.
 		Make Vectors detect $a100 and improve Mode7 to detect $a000
 			Mode7 added 74138 U413 to differentiate
-		This would allow the Vectors and Mode7
+			Vectors in schematic moved to $a100 with existing differentiator
+		TODO: Update Vectors software layer and code defines for the test to match new differentiator for address $a100
+		This would allow the Vectors and Mode7 to be combined into one layer
 
 
 

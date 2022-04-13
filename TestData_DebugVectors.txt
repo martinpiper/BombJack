@@ -33,9 +33,9 @@ b$0f,b$0f
 d$9e000120
 
 ; Vectors bank register tests
-d$a0000100
-d$a0000101
-d$a0000100
+d$a1000100
+d$a1000101
+d$a1000100
 
 ; Fill display banks with transparent long spans
 s$00000200
@@ -76,3 +76,27 @@ d$0
 d$0
 ^-$01
 d$0
+
+d$0
+^-$01
+d$0
+
+d$a1000101
+
+d$0
+^-$01
+d$0
+
+d$a1000100
+
+d$0
+^-$01
+d$0
+
+d$a1000101
+
+d$0
+^-$01
+d$0
+
+d$a1000100
