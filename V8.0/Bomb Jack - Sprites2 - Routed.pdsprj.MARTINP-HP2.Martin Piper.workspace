@@ -27,8 +27,8 @@
   </WINDOW>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="-44593592" y="-11707425" z="11598181"/>
-    <focus x="-44593592" y="-11707425" z="0"/>
+    <position x="-39638300" y="-18857500" z="31894990"/>
+    <focus x="-39638300" y="-18857500" z="0"/>
     <up x="0" y="1000000" z="0"/>
    </camera>
   </WINDOW>

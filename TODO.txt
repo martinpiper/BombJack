@@ -45,8 +45,13 @@
 		Make Vectors detect $a100 and improve Mode7 to detect $a000
 			Mode7 added 74138 U413 to differentiate
 			Vectors in schematic moved to $a100 with existing differentiator
-		TODO: Update Vectors software layer and code defines for the test to match new differentiator for address $a100
+			Update Mode7 and Vectors software layer and code defines for the test to match new differentiator for address $a100
 		This would allow the Vectors and Mode7 to be combined into one layer
+		TODO: Update simulation to reconnect the layers with 2-1 combiners
+			The input headers on the Video layer can be renamed
+			The new output headers can use this naming
+				Enable all the layer outputs with new names
+		TODO: Update simulation to include the Vectors test in the main test data
 
 
 

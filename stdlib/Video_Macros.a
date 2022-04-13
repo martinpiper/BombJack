@@ -114,6 +114,15 @@ kBus24Bit_TileScreenPlanes_3		= $0000
 kBus24Bit_Mode7Screen_EBBS			= $01
 kBus24Bit_Mode7Screen_Registers		= $a000
 
+
+kBus24Bit_VectorsScreen_EBBS		= $01
+kBus24Bit_VectorsScreen_Registers	= $a100
+kBus24Bit_VectorsScreen_Bank0_EBBS		= $02
+kBus24Bit_VectorsScreen_Bank0_Plane		= $0000
+kBus24Bit_VectorsScreen_Bank1_EBBS		= $02
+kBus24Bit_VectorsScreen_Bank1_Plane		= $8000
+
+
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
 }
