@@ -3561,3 +3561,5 @@ All layouts now use V3.1
 * Sprites2: ROM needs ZIF socket space, or at least a socket with wipes (not precision)
 * For CLK/OSC and IC components that need to be plugged in later make sure their BOM CODE is using the socket, to avoid the components being soldered.
 	Add a note to the schematic (and design notes) detailing the component ordering links.
+	Data sheet https://www.jameco.com/Jameco/Products/ProdDS/203625.pdf
+	Start Menu\Programs\Batronix\Prog-Express

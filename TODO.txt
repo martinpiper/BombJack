@@ -11,7 +11,6 @@
 	Menu->Design Rules Manager
 	Design Rules tab->Rule Name = VIA*
 		Pad-Pad = 35th (This is different to the default 10th)
-	
 
 
 
@@ -30,6 +29,22 @@
 
 * Merge layer: A very small board that takes 2/3/4 pixel outputs from layers and merges the output based on transparency rules and outputs to the final video layer board. It doesn't need to be clocked since the layer outputs are clocked and the layer input is clocked.
 	This would be useful when stacking several layers together, like sprites or chars layers in fixed order
+	* Have one board with two 2-to-1 merges. So 4 inputs and two independent outputs
+	* Merge Sprites and Sprites2
+	* Merge Mode7 and Vectors
+	Current _EXTCS usage:
+		8000
+		8800	Only @Demo10 for second Chars layer
+		9000	Chars 9000, Sprites2 9200 (Using U248/U315:A)
+		9800	Sprites / Palette etc
+		a000	Mode7 / Vectors
+		a800	
+		b000
+		b800
+	* Vectors: It currently uses _EXTCSA000 for its registers which is the same as Mode7.
+		Make Vectors detect $a100 and improve Mode7 to detect $a000
+			Mode7 added 74138 U413 to differentiate
+		This would allow the Vectors and Mode7
 
 
 
