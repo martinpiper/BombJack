@@ -55,7 +55,6 @@
 
 
 
-
 * APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
 	This would allow more register selects, ALU operations, status register, indirected selects and branching options

@@ -122,6 +122,9 @@ kBus24Bit_VectorsScreen_Bank0_Plane		= $0000
 kBus24Bit_VectorsScreen_Bank1_EBBS		= $02
 kBus24Bit_VectorsScreen_Bank1_Plane		= $8000
 
+kBus24Bit_VectorsScreen_Control_Kill	= %10000000
+
+
 
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)

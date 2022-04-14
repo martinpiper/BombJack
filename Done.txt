@@ -3563,3 +3563,10 @@ All layouts now use V3.1
 	Add a note to the schematic (and design notes) detailing the component ordering links.
 	Data sheet https://www.jameco.com/Jameco/Products/ProdDS/203625.pdf
 	Start Menu\Programs\Batronix\Prog-Express
+	
+	
+	
+* Vectors: Perhaps have an independent disable in the hit MSB of the bank select, to output zeros and kill the counters?
+	MSB 1 = kill
+		kBus24Bit_VectorsScreen_Control_Kill in kBus24Bit_VectorsScreen_Registers
+	U420:A
