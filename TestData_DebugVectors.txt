@@ -7,11 +7,12 @@
 d0
 
 ; Just choose the vectors layer and the chars
-d$9e0801fc
+d$9e08017f
+d$9e0801e4
 
 
-; Vectors enable, char screen and other layers disabled
-d$9e0a0101
+; Vectors (layer 4 mode7) enable, char screen and other layers disabled
+d$9e0a010f
 
 ; Setup over scan border extents
 d$9e090129

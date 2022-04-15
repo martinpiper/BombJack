@@ -290,14 +290,16 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9e08                | Layer priority select                   |
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
+   | $01           | Vectors                       | $a100   1 byte       | Vectors display bank 					|
    | Note: APU and vectors are by default using the same EBBS in the schematics										|
    | $02           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
    | $02           | APU                           | $4000   8KB          | APU memory bank 1 data                  |
    | $02           | APU                           | $2000   8KB          | APU bank 2 registers                    |
-   | $01           | Vectors                       | $a000   1 byte       | Vectors display bank 					|
    | $02           | Vectors                       | $0000   16KB         | Vectors bank 0 data						|
    | $02           | Vectors                       | $8000   16KB         | Vectors bank 1 data						|
+   | Note: Audio and Sprites2 are by default using the same EBBS in the schematics									|
    | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
+   | $04           | Sprites2 data                 | $2000   8KB++        | Sprites2 bit planes                     |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | $80           | Char screen                   | $4000   8KB          | Chars into U258                         |
    | $80           | Char screen colours           | $8000   8KB          | Chars colours into U137                 |

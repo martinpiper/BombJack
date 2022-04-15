@@ -2,6 +2,8 @@
 d0
 
 !TestData_DebugPixelTiming.txt
+!TestData_DebugVectors.txt
+!TestData_DebugScaledSprites.txt
 
 ; Setup full overscan border extents
 ; This may cause left border issues with tiles/chars/sprites as their data is shifted in over 8 pixels

@@ -27,34 +27,6 @@
 
 
 
-* Merge layer: A very small board that takes 2/3/4 pixel outputs from layers and merges the output based on transparency rules and outputs to the final video layer board. It doesn't need to be clocked since the layer outputs are clocked and the layer input is clocked.
-	This would be useful when stacking several layers together, like sprites or chars layers in fixed order
-	* Have one board with two 2-to-1 merges. So 4 inputs and two independent outputs
-	* Merge Sprites and Sprites2
-	* Merge Mode7 and Vectors
-	Current _EXTCS usage:
-		8000
-		8800	Only @Demo10 for second Chars layer
-		9000	Chars 9000, Sprites2 9200 (Using U248/U315:A)
-		9800	Sprites / Palette etc
-		a000	Mode7 / Vectors
-		a800	
-		b000
-		b800
-	* Vectors: It currently uses _EXTCSA000 for its registers which is the same as Mode7.
-		Make Vectors detect $a100 and improve Mode7 to detect $a000
-			Mode7 added 74138 U413 to differentiate
-			Vectors in schematic moved to $a100 with existing differentiator
-			Update Mode7 and Vectors software layer and code defines for the test to match new differentiator for address $a100
-		This would allow the Vectors and Mode7 to be combined into one layer
-		TODO: Update simulation to reconnect the layers with 2-1 combiners
-			The input headers on the Video layer can be renamed
-			The new output headers can use this naming
-				Enable all the layer outputs with new names
-		TODO: Update simulation to include the Vectors test in the main test data
-
-
-
 * APU: The instruction memory is not limited to 8KB, since it is mapped to $8000
 	Using a better select it would be possible to widen the instructions to 64 bits
 	This would allow more register selects, ALU operations, status register, indirected selects and branching options

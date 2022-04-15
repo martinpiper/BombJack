@@ -28,16 +28,16 @@ d$9e090129
 
 
 ; Sprite data
-s$20001000
+s$20000400
 <0,1,2,3,4,5,6,7,<C:\Work\C64\VideoHardware\tmp\TurricanScaledSprites0.bin
 
-s$40001000
+s$40000400
 <0,1,2,3,4,5,6,7,<C:\work\C64\VideoHardware\tmp\TurricanScaledSprites1.bin
 
-s$80001000
+s$80000400
 <0,1,2,3,4,5,6,7,<C:\work\C64\VideoHardware\tmp\TurricanClouds_tiles.bin2
 
-s$00001000
+s$00000400
 <0,1,2,3,4,5,6,7,<C:\Work\ImageToBitplane\target\testconcat4ScaledSprites0.bin
 
 ; Palette data
