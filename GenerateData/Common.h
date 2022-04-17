@@ -17,3 +17,5 @@ void EnableSpritesNoWait(std::ofstream &file);
 void SetMode7Address(std::ofstream &file);
 
 void EnableMode7(std::ofstream &file);
+
+void SetSprites2Address(std::ofstream &file);

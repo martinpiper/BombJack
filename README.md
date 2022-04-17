@@ -163,7 +163,7 @@ At 0x9800 - 0x985f each sprite is described by 4 bytes:
 
 	Byte 0: Palette | 0x10 = MSBX | 0x20 = MSBY | 0x40 = flipX | 0x80 = flipY
 	Byte 1: Y pos
-	Byte 2: Y size (in screen pixels, regardless of scale)
+	Byte 2: Y size (in screen pixels, regardless of scale) (0 = end of list)
 	Byte 3: X pos
 	Byte 4: X scale extent (uses internal coordinates)
 	Byte 5: Y inv scale (*32)

@@ -3606,3 +3606,8 @@ All layouts now use V3.1
 			Done: Sprites2 (ScaledSprites)
 			Done: Vectors
 	All done and tested
+
+
+
+* Since the schematic now includes Vectors and Sprites2 in the visible output, add data generator animations for this
+	Sprites2 done

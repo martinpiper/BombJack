@@ -103,6 +103,54 @@ int main(int argc, char**argv)
 		file << std::endl;
 
 		file << "d$0" << std::endl;
+
+
+#if 1
+		SetSprites2Address(file);
+		dx = sin(1.25f * mode7Rot + M_PI_2) * scaleValue * 0.25f;
+		intValue = (int)dx;
+		file << "b$" << std::hex << std::setw(2) << (frame & 0x03);
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		dy = sin(mode7Rot) * scaleValue * -1.25f;
+		intValue = (int)dy;
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		file << ",b$" << std::hex << std::setw(2) << (frame & 0x03);
+		file << std::endl;
+
+		dx = sin(1.55f * mode7Rot + M_PI_2) * scaleValue * 0.15f;
+		intValue = (int)dx;
+		file << "b$" << std::hex << std::setw(2) << (frame & 0x03);
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x30);
+		dy = sin(mode7Rot) * scaleValue * -1.25f;
+		intValue = (int)dy;
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		file << ",b$" << std::hex << std::setw(2) << (0x10);
+		file << ",b$" << std::hex << std::setw(2) << (0x10);
+		file << ",b$" << std::hex << std::setw(2) << ((frame + 1) & 0x03);
+		file << std::endl;
+
+		dx = sin(0.55f * mode7Rot + M_PI_2) * scaleValue * -0.15f;
+		intValue = (int)dx;
+		file << "b$" << std::hex << std::setw(2) << (0x0b);
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x80);
+		dy = sin(0.45f * mode7Rot) * scaleValue * -0.25f;
+		intValue = (int)dy;
+		file << ",b$" << std::hex << std::setw(2) << (intValue & 0xff);
+		file << ",b$" << std::hex << std::setw(2) << (0x20);
+		file << ",b$" << std::hex << std::setw(2) << (0x08);
+		file << ",b$" << std::hex << std::setw(2) << (0x08);
+		file << ",b$" << std::hex << std::setw(2) << (0x00);
+		file << std::endl;
+#endif
+
+
 #if 1
 		// Top sprites
 		SetSpriteAddress(file);

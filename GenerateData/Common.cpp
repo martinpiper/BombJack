@@ -68,3 +68,9 @@ void EnableMode7(std::ofstream &file)
 	file << "d$a015010f" << std::endl;
 	file << "d$0" << std::endl;
 }
+
+void SetSprites2Address(std::ofstream &file)
+{
+	file << "; SetSprites2Address" << std::endl;
+	file << "s$92000100" << std::endl;
+}
