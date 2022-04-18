@@ -13,6 +13,17 @@
 		Pad-Pad = 35th (This is different to the default 10th)
 
 
+* Audio: 3.5 mm jack voltage levels, need to be -ve to +ve voltages, not the 0-+ve voltage as it is currently
+	This shows some examples of providing a suitable REFMID voltage: BombJack\TTL to SCART resistor ladder.pdsprj
+	For the final resistor 75 ohms looks good, near the volt meters: https://www.mouser.sg/c/passive-components/resistors/film-resistors/metal-film-resistors-through-hole/?m=Vishay&product=Metal%20Film%20Resistors%20Controlled%20Temp%20Coefficient&series=CMF%20Industrial&termination%20style=Axial&tolerance=1%20%25&type=Industrial%20Grade%20Precision%20Metal%20Film%20Resistor&voltage%20rating=250%20V&instock=y
+	This REFMId would need similar structure for the Audio schematic
+	The 100ohm trimmer resistor is also out of stock, options for replacements: https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?series=3006&instock=y
+	https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?resistance=100%20Ohms&series=3006&instock=y
+	** Pay close attention to pin/package dimensions
+	
+	
+
+
 
 * Try recording a high resolution APU bus sample using the DG?
 
