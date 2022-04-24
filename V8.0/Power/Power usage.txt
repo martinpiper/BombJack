@@ -1,0 +1,6 @@
+Layers		Power	Delta
+Video		6.96	6.96
++Chars		10.02	3.06
++Sprites	15.24	5.22
++Tiles		18.68	3.44
++Chars		22.63	3.95
