@@ -11,6 +11,12 @@
 	Menu->Design Rules Manager
 	Design Rules tab->Rule Name = VIA*
 		Pad-Pad = 35th (This is different to the default 10th)
+		
+		
+		
+		
+* Case: https://twitter.com/MartinPiper/status/1522241048059150340
+	
 
 
 * Audio: 3.5 mm jack voltage levels, need to be -ve to +ve voltages, not the 0-+ve voltage as it is currently
@@ -20,7 +26,12 @@
 	The 100ohm trimmer resistor is also out of stock, options for replacements: https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?series=3006&instock=y
 	https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?resistance=100%20Ohms&series=3006&instock=y
 	** Pay close attention to pin/package dimensions
-	
+
+
+
+* Ceramic capacitors for filters: https://twitter.com/MartinPiper/status/1514627903647993856
+	Dedicated opamp for audio instead?
+	Also perhaps useful for the video output?
 	
 
 
