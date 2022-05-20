@@ -11,7 +11,34 @@
 	Menu->Design Rules Manager
 	Design Rules tab->Rule Name = VIA*
 		Pad-Pad = 35th (This is different to the default 10th)
-		
+	Sprites2 debugging:
+		When plugged in and connected, main video board and existing sprites/chars/tiles layers generate graphics without issues
+		But Sprites2 has severe issues, some alternating scanline display that seems to display RAM data, but it isn't clearing
+		Also adding sprites seems to cause random flickering
+		Indicates significant issues
+		Single sprite debug positions, does show some horrible flickering sprite data at the correct screen position
+		Indicating at least some part of the position calculation is sort of OK
+		* Things to check
+		* Sprite definition debug data clear with all opaque data, does it alter the buggy display?
+			Works in emulation, but hardware doesn't show anything recognisable with VIDCLK
+			With resistor in R24 and correct palette, Time: 22:34
+			Adding the full first bank of sprite data. time: 23:07, seems to render correctly
+		* Touching R23-R26 stops the debug sprite flickering for one of the scan lines
+			Cannot reproduce, perhpas temperature related
+			Using proper resistor, R24 is parallel produces recognisible graphics data for that scanline RAM. Other scanline RAM not responding really. Time: 22:22
+			TODO: Check R24 resistor value compared to others.
+				Check all the resistor values with those in the sprites board
+				Solder in the bodge resistor...?
+				** TODO: Check other resistor values?
+		* Time: 22:43 Using oscillator at 4MHz doesn't allow the low scanline start pulse to be picked up reliably (timed from VIDCLK using the pixel clock)
+			Using the 14.31818 oscillator shows the working scanline has the fill rate observed in the simulation
+			Time 22:48 the 16 MHz oscillator also seems to work for the working scanline
+				TODO: Need to try faster clock rates!
+		* TODO: Since adding a resistor on the other scanline RAM doesn't work, need to trace back from it in the schematic and see what else coould be failing
+			Try adding a permanent resistor to remove that failure however?
+			Check trace continuity from below and above the board...
+
+
 		
 		
 		
