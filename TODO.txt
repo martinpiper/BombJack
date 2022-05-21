@@ -37,7 +37,19 @@
 		* TODO: Since adding a resistor on the other scanline RAM doesn't work, need to trace back from it in the schematic and see what else coould be failing
 			Try adding a permanent resistor to remove that failure however?
 			Check trace continuity from below and above the board...
+		* TODO: Check the 6116 U355 _WE (pin 21) is getting strobed.
+		* Fixed: Needed extra 300 Ohm resistors in parallel to the pullups on the first four signals for the pixel value.
 
+
+
+
+* Options for removing the need for pullup resistors for the scanline RAMs. This is because the pullups are causing issues in the Sprites2 board again.
+	When the _OE for the 74LS258 is high, this is an inverting selector/multiplexor, the pullups provide a $ff clear signal
+		The tristate is also for RAM reading...
+	* Instead use a 74LS540 with suitable signal on the _OE. But potential for logic contentions...
+		The _OE needs to be low only on RAM _WE S2CLKB=0 and and 74LS258 _OE=1 (or _S2CLKB=1 and _OE=1)
+		This is relatively simple, possibility to test with breadboard...
+		
 
 		
 		
