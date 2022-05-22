@@ -4,6 +4,8 @@
 	* Instead use a 74LS540 with suitable signal on the _OE. But potential for logic contentions...
 		The _OE needs to be low only on RAM _WE S2CLKB=0 and and 74LS258 _OE=1 (or _S2CLKB=1 and _OE=1)
 		This is relatively simple, possibility to test with breadboard...
+	It would be possible to have the 74LS540 IC and the pullup resistors in the design. Then choose to either populate the resistors or the IC in fabrication.
+		It would even be possible to make the resistors socketed, given the correct pitch, and the IC socketed, to really make it configurable and easily tweakable/testable.
 		
 
 		
