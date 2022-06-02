@@ -190,9 +190,9 @@
 
 * User port layout : Consider moving the ribbon cable header to the bus edge
 
-* User port: For the Raspberry Pi interface it is useful to have the %v from the C64 drive the 5V side of the level shifters
+* User port: For the Raspberry Pi interface it is useful to have the 5V from the C64 drive the 5V side of the level shifters
 	This would need an extra line for the C64 5V and call the net "C645V", be careful not to connect it to the 5V on the externally powered user port interface!
-
+	Adafruit. Sparkfun. TXB0108
 
 
 
