@@ -29,7 +29,18 @@
 
 	
 	
+* At some point around here, when working on the sprites schematic,	I chose to use 2114 SRAMs instead of 6148 SRAMs for 4A/4B/4C/4D, as seen in the original schematic
+	https://datasheetspdf.com/pdf-file/515019/Hitachi/HM6148HLP/1
+	https://www.jameco.com/Jameco/Products/ProdDS/38957NTE.pdf
+	* This change is apparent in the very first revisions of the board. This might account for the difference observed in the pull-up resistors when building and testing the boards.
+	The 6148 and 2114 are pin compatible.
+	The 6148 isn't available in Proteus whereas the 2114 is, which was probably the deciding factor.
+	The 6148 spec does have much shorter timings compared to the "no specific manufacturer" spec for the 2114.
 	
+
+
+
+
 * Examine bus SREAD for the timing of sprite reads corresponding to the BH pixel clock and pixel output timing during the scan
 	Done - Examine when the scan RAMs get cleared before sprite rendering
 	Find out the reason for the first few bytes of what looks like odd data being written even when sprites are not at that coordinate?
@@ -3656,3 +3667,10 @@ All layouts now use V3.1
 			Check trace continuity from below and above the board...
 		* TODO: Check the 6116 U355 _WE (pin 21) is getting strobed.
 		* Fixed: Needed extra 300 Ohm resistors in parallel to the pullups on the first four signals for the pixel value.
+
+
+
+
+* Original board connectors: http://www.mikesarcade.com/cgi-bin/spies.cgi?action=url&type=pinout&page=Bombjack.txt
+	Service manual scan: https://www.arcade-museum.com/manuals-videogames/B/BombJack.pdf
+	

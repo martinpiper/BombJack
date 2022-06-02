@@ -35,6 +35,8 @@ This simulation can also be used to debug failures in original boards, since dis
 
 ## Developer technical details
 
+To produce the test data run: BDD6502\ForUnitTests.bat
+
 If you have Proteus setup with the digital display model, you should see a screen that looks somewhat like this when starting the simulation:
 
 ![Screenshot](Capture.PNG?raw=true "Screenshot")

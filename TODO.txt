@@ -1,3 +1,14 @@
+* Researching power supplies:
+	Recommendations for Mean Well: https://www.retrorgb.com/budget-arcade-power-supplies-unmasked.html
+	https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC
+	3-4 outputs: https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&number%20of%20outputs=3%20Output~~4%20Output&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC&sort=number%20of%20outputs&rp=power%2Fpower-supplies%2Fswitching-power-supplies%7C~Number%20of%20Outputs
+	125W++ https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&number%20of%20outputs=3%20Output~~4%20Output&open%20frame%2Fenclosed=Enclosed&output%20power=125%20W~~316%20W&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC&sort=number%20of%20outputs&rp=power%2Fpower-supplies%2Fswitching-power-supplies%7C~Number%20of%20Outputs%7C~Output%20Power
+	* Remember to use **regulated** supplies
+
+
+
+
+
 * Options for removing the need for pullup resistors for the scanline RAMs. This is because the pullups are causing issues in the Sprites2 board again.
 	When the _OE for the 74LS258 is high, this is an inverting selector/multiplexor, the pullups provide a $ff clear signal
 		The tristate is also for RAM reading...
