@@ -17,8 +17,30 @@
 		This is relatively simple, possibility to test with breadboard...
 	It would be possible to have the 74LS540 IC and the pullup resistors in the design. Then choose to either populate the resistors or the IC in fabrication.
 		It would even be possible to make the resistors socketed, given the correct pitch, and the IC socketed, to really make it configurable and easily tweakable/testable.
+	Logic for U220:A and U220:B is: Enable the SRAM if the sprites are being calculated, or enable it during the visible portion of the screen where it gets cleared.
+	For the left hand sprite (*not sprites2*) logic, only enable the FF output during the visible portion of the screen:
+		_EHSYNC		_1V*.	_OE
+		0			0		1
+		0			1		1
+		1			0		1
+		1			1		0
+		=NOT a OR NOT b
+		=a NAND b
+		_EHSYNC		1V*.	_OE
+		0			0		1
+		0			1		1
+		1			0		0
+		1			1		1
+		=NOT a OR b
+	** BombJack\Project Backups\Sprites using IC to drive FF value instead of pullups.png
+		And disable the pullups...
+		This works, but it also causes logic contentions as the read cycle conflicts with the write... Very often:
+			Contention state CSF on net ID17. @0.000306213s
+			3A_U4(!Q) =>  FF
+			U78_U1(D7) =>  SL
+			U428_U2(B7) =>  SH
+	
 		
-
 		
 		
 		
@@ -26,13 +48,15 @@
 	
 
 
-* Audio: 3.5 mm jack voltage levels, need to be -ve to +ve voltages, not the 0-+ve voltage as it is currently
+* Audio: 3.5 mm jack voltage levels, need to be -ve to +ve voltages, not the 0 to +ve voltage as it is currently
 	This shows some examples of providing a suitable REFMID voltage: BombJack\TTL to SCART resistor ladder.pdsprj
 	For the final resistor 75 ohms looks good, near the volt meters: https://www.mouser.sg/c/passive-components/resistors/film-resistors/metal-film-resistors-through-hole/?m=Vishay&product=Metal%20Film%20Resistors%20Controlled%20Temp%20Coefficient&series=CMF%20Industrial&termination%20style=Axial&tolerance=1%20%25&type=Industrial%20Grade%20Precision%20Metal%20Film%20Resistor&voltage%20rating=250%20V&instock=y
 	This REFMId would need similar structure for the Audio schematic
 	The 100ohm trimmer resistor is also out of stock, options for replacements: https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?series=3006&instock=y
 	https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?resistance=100%20Ohms&series=3006&instock=y
 	** Pay close attention to pin/package dimensions
+	** Might need filtering caps? Reference original schematic.
+
 
 
 
