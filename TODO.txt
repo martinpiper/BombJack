@@ -57,6 +57,7 @@
 			Logic contention(s) detected on net S2ILD17. @0.397140315s
 			Logic contention(s) detected on net S2ILD11. @0.662739680s
 	** TODO: Pullups for Y height need explicit logic? It's not a very used feature...
+		Demux with adder output on high or 0xf signal on low
 	** TODO: Tidy components and groups	
 		
 		
