@@ -39,11 +39,12 @@
 			3A_U4(!Q) =>  FF
 			U78_U1(D7) =>  SL
 			U428_U2(B7) =>  SH
-	** Using two 74LS258 instead, with the same _1V*. signal as 7B:B but with NAND _EHVSYNC, and simulation disable the pullups...
+	** For Sprites: Using two 74LS258 instead, with the same _1V*. signal as 7B:B but with NAND _EHVSYNC, and simulation disable the pullups...
 		See: BombJack\Project Backups\Sprites using IC to drive FF value instead of pullups 2.png
 		compareimages.bat 30 - OK, no logic contentions
 			This works because it is roughly a mirror of the calculation logic.
-		
+		Both sides now, resistors removed from simulation. Both work.
+			compareimages.bat 40 - OK, no logic contentions
 		
 		
 		
