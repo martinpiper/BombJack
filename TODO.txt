@@ -45,6 +45,18 @@
 			This works because it is roughly a mirror of the calculation logic.
 		Both sides now, resistors removed from simulation. Both work.
 			compareimages.bat 40 - OK, no logic contentions
+	** For Sprites2: Adding left hand side explicit FF logic, the first frame shows differences in the far left border area (which is usually hidden anyway) due to failure to clear the far left edge during the display portion of the screen
+		compareimages.bat 40 : Is OK, except frame 0 (as noted above)
+			No extra logic contentions
+		Right hand side done. Also 40 compares are fine, except slightly more differences on the first frame, as expected really.
+		Also these logic contentions, in the right hand edge, are solved:
+			Logic contention(s) detected on net S2ILD10. @0.123305199s
+			Logic contention(s) detected on net S2ILD12. @0.123305199s
+			Logic contention(s) detected on net S2ILD13. @0.308080255s
+			Logic contention(s) detected on net S2ILD16. @0.397140315s
+			Logic contention(s) detected on net S2ILD17. @0.397140315s
+			Logic contention(s) detected on net S2ILD11. @0.662739680s
+	** TODO: Tidy components and groups	
 		
 		
 		
