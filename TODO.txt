@@ -77,7 +77,7 @@
 			Combiners needed to be disabled and default to Sprites/Mode7 for @Demo6 due to audio/APU memory usage showing in the vector display
 	* Removed, excluded, all pullups from PCBs
 	** Done: Remove single inverter for the SPRFULL signal and change the demux inputs
-	** TODO: Tidy components and groups	
+	** Done: Tidy components and groups	
 		
 		
 		
