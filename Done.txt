@@ -3636,7 +3636,7 @@ All layouts now use V3.1
 	Add these rooms over any place where ICs are expected, but not the connectors as these tend to have closely pitched pads
 	Add these room names using the same design rule names using 35th pad separation
 ** Ensure the pad to pad distance is set to avoid soldering bridges, by moving via placement away from pads
-	Menu->Design Rules Manager
+	Menu->Technology->Design Rules Manager
 	Design Rules tab->Rule Name = VIA*
 		Pad-Pad = 35th (This is different to the default 10th)
 	Sprites2 debugging:
