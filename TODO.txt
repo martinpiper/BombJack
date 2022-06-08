@@ -78,7 +78,8 @@
 	* Removed, excluded, all pullups from PCBs
 	** Done: Remove single inverter for the SPRFULL signal and change the demux inputs
 	** Done: Tidy components and groups
-		
+	Tested Sprites2 rendering with higher clock speeds, generally pixel accurate even on the scaled sprites, except the left hand border.
+		Old and new designs do show various logic contentions at the higher clock rate however.
 		
 		
 		
