@@ -73,6 +73,10 @@
 			0         00000023
 		Also simulation tested with @Demo1 "C:\work\C64\VideoHardware\target\debugData.txt"
 		Sprites and Sprites2 PCB to V9.0
+		@Demo1 and @Demo6 using "C64\VideoHardware\target\debugData.txt" passed visual check and 40 frames check
+			Combiners needed to be disabled and default to Sprites/Mode7 for @Demo6 due to audio/APU memory usage showing in the vector display
+	* Removed, excluded, all pullups from PCBs
+	** Done: Remove single inverter for the SPRFULL signal and change the demux inputs
 	** TODO: Tidy components and groups	
 		
 		
