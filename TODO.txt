@@ -80,7 +80,7 @@
 
 
 * Sprites3
-	Choose scale tab and ignore X/Y boundaries for tiling up to the sprite edge bit flags
+	Choose scale tabLE (allows the root2 or unscaled table to be chosen, useful if the corners of the rotated sprite are not that important) and ignore X/Y boundaries for tiling up to the sprite edge bit flags
 	
 
 
