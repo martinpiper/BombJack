@@ -3767,3 +3767,8 @@ All layouts now use V3.1
 	$ff = 1.14V
 	$80 is the digital middle = 0.53V
 	Added 74LS373 and suitable resistor ladder to the analogue area of the board
+
+
+
+
+* Audio: Add separate debug headers for each channel. Include GND/5V/MIDREF lines and digital debug points
