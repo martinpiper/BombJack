@@ -166,6 +166,7 @@
 
 * Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
 	Need correct mouser links.
+	* Or add an oscillator, which might be much better :)
 
 		
 
