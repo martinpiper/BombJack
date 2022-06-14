@@ -1,3 +1,12 @@
+* Audio: Check mid-voltage reference comes from the same IC
+
+
+
+* Audio: Add two separate debug header strips for each channel. Include GND/5V lines
+
+
+
+
 * Researching power supplies:
 	Recommendations for Mean Well: https://www.retrorgb.com/budget-arcade-power-supplies-unmasked.html
 	https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC

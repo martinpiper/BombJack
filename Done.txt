@@ -1142,11 +1142,16 @@
 
 	
 * Test: For audio playback of the audio simulation output:
+	For: C64\VideoHardware\features\smoke test.feature
+		@Demo1
+		Enable: And enable video display bus debug output
+	For: C64\VideoHardware\asm\main.a
+		Disable: IncludeGraphicsData = 1
 	Run C:\Work\C64\VideoHardware\BuildIt.bat
 		The digital data input uses the output debug bus data from the above demo
 	Then use:
-		c:\work\c64\bin\LZMPi.exe -hex C:\Work\BombJack\output\DebugAudioOutput.txt c:\temp\t.bin 1 2
-		"C:\Users\Martin Piper\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe" -f u8 -channels 2 -ar 25000 c:\temp\t.bin
+		cd /d C:\Work\BombJack
+		AudioPlay.bat
 	
 	
 	
@@ -3748,3 +3753,10 @@ All layouts now use V3.1
 	Tested Sprites2 rendering with higher clock speeds, generally pixel accurate even on the scaled sprites, except the left hand border.
 		Old and new designs do show various logic contentions at the higher clock rate however.
 		Packages
+		
+		
+		
+* Audio and APU: Check comparator out and input ripple, add latch if needed...
+	Related to this thread, which got me second guessing my designs again: https://twitter.com/MartinPiper/status/1536257693110784001
+	Audio: Uses ! _V0ST_COMPARELENGTH to time the comparison result (U205:A) after the signals have settled
+	APU: Uses WAIT_VAL17 compared with 6MHz which allows the code to decide if it compares with 0/1 clock cycle, which mitigates ripple
