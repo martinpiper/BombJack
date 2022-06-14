@@ -3760,3 +3760,10 @@ All layouts now use V3.1
 	Related to this thread, which got me second guessing my designs again: https://twitter.com/MartinPiper/status/1536257693110784001
 	Audio: Uses ! _V0ST_COMPARELENGTH to time the comparison result (U205:A) after the signals have settled
 	APU: Uses WAIT_VAL17 compared with 6MHz which allows the code to decide if it compares with 0/1 clock cycle, which mitigates ripple
+
+
+
+* Audio: Check mid-voltage reference comes from the same IC type
+	$ff = 1.14V
+	$80 is the digital middle = 0.53V
+	Added 74LS373 and suitable resistor ladder to the analogue area of the board
