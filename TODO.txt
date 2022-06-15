@@ -1,3 +1,16 @@
+* Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
+	Need correct mouser links.
+	* Or add an oscillator, which might be much better :)
+		Bomb Jack schematic root sheet 12 OSC1
+		Replace AUDCLK and 4T/cap/res/crystal parts
+		3T is the 7474 which is useful
+	Note the current component links are still using the old 12MHz parts, which is problematic
+	Oscillators: https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=HCMOS%2C%20TTL&package%20%2F%20case=DIP-8&product%20type=Standard%20Oscillators&instock=y
+	4MHz part: https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-4M000000?qs=55YtniHzbhCUVfr2tBYy8Q%3D%3D
+
+
+
+
 * Researching power supplies:
 	Recommendations for Mean Well: https://www.retrorgb.com/budget-arcade-power-supplies-unmasked.html
 	https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC
@@ -19,8 +32,14 @@
 	For the final resistor 75 ohms looks good, near the volt meters: https://www.mouser.sg/c/passive-components/resistors/film-resistors/metal-film-resistors-through-hole/?m=Vishay&product=Metal%20Film%20Resistors%20Controlled%20Temp%20Coefficient&series=CMF%20Industrial&termination%20style=Axial&tolerance=1%20%25&type=Industrial%20Grade%20Precision%20Metal%20Film%20Resistor&voltage%20rating=250%20V&instock=y
 	This REFMId would need similar structure for the Audio schematic
 	The 100ohm trimmer resistor is also out of stock, options for replacements: https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?series=3006&instock=y
+		** Pay close attention to pin/package dimensions
+		Removed from layout
 	https://www.mouser.sg/c/passive-components/potentiometers-trimmers-rheostats/trimmer-resistors-through-hole/?resistance=100%20Ohms&series=3006&instock=y
-	** Pay close attention to pin/package dimensions
+	Calculate R-2R: http://www.aaabbb.de/JDAC/DAC_R2R_network_calculation_en.php
+		R1 = 221
+		R2 = 442
+		RL = 75		= ~1.25V
+		RL = 10000	= ~4.9V
 	** Might need filtering caps? Reference original schematic.
 
 
@@ -162,13 +181,6 @@
 	Each hat would have a signal to select it from the voice schedule
 
 
-
-
-* Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
-	Need correct mouser links.
-	* Or add an oscillator, which might be much better :)
-
-		
 
 
 * For the video combination layer, for each pixel input, perhaps add a pixel XOR value that can be used to introduce fast changing palette effects?
