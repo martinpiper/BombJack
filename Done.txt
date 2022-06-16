@@ -3772,3 +3772,17 @@ All layouts now use V3.1
 
 
 * Audio: Add separate debug headers for each channel. Include GND/5V/MIDREF lines and digital debug points
+
+
+
+
+* Audio: Clarify oscillator and crystal timing rate (4MHz) and C5 capacitance for this rate.
+	Need correct mouser links.
+	* Or add an oscillator, which might be much better :)
+		Bomb Jack schematic root sheet 12 OSC1
+		Replace AUDCLK and 4T/cap/res/crystal parts
+		3T is the 7474 which is useful
+	Note the current component links are still using the old 12MHz parts, which is problematic
+	Oscillators: https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=HCMOS%2C%20TTL&package%20%2F%20case=DIP-8&product%20type=Standard%20Oscillators&instock=y
+	4MHz part: https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-4M000000?qs=55YtniHzbhCUVfr2tBYy8Q%3D%3D
+
