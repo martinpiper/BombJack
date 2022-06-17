@@ -3786,3 +3786,6 @@ All layouts now use V3.1
 	Oscillators: https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=HCMOS%2C%20TTL&package%20%2F%20case=DIP-8&product%20type=Standard%20Oscillators&instock=y
 	4MHz part: https://www.mouser.sg/ProductDetail/CTS-Electronic-Components/MXO45HS-3C-4M000000?qs=55YtniHzbhCUVfr2tBYy8Q%3D%3D
 
+
+
+* Proteus Placement Grid default is 50th. Changing to 0.2in is much faster to auto place. But results is slightly less IC packing.
