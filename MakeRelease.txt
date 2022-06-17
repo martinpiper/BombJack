@@ -28,12 +28,7 @@
 	Using Track Mode highlights the tracks well
 	Highlight 6MHz on the layout to easily check
 * For PCBWay export and quote
-	Menu->Output->Generate Gerber
-		Choose: RS274X
-	Menu->Output->Generate Pick and Place File
-		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
-		File format: CSV
-		Export, append " - PNP" suffix
+		https://www.pcbway.com/blog/PCB_Layout_Software/How_to_generate_BOM_and_Pick_and_Place_File_in_Proteus_92f4eea0.html
 	Toolbar->Bill of Materials ($ icon)
 		Use columns
 			Value
@@ -82,6 +77,16 @@
 			** Check EPROMs with their sockets are not too close to ICs, especially the ends of the ICs hitting the EPROM pins
 
 		Save the file as a *.xlsx (Excel 2007-2013) with the suffix " - BOM.xlsx" for example "Bomb Jack - Sprites2 - Routed - BOM.xlsx"
+
+	Menu->Output->Generate Pick and Place File
+		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
+		File format: CSV
+		Export, append " - PNP" suffix
+
+	Menu->Output->Generate Gerber
+		https://www.pcbway.com/blog/PCB_Layout_Software/How_to_generate_Gerber_files_from_Proteus.html
+		Choose: Output to a single ZIP file?
+		Choose: RS274X
 				
 	Order note:
 		Your standard 1.6mm +/- 10% 1oz stackup is OK.
