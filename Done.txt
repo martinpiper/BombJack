@@ -3825,3 +3825,6 @@ All layouts now use V3.1
 		Signal	GND
 		Plane	GND
 		Signal	VCC
+
+
+* Audio: Mounting hole size issue: https://support.labcenter.com/forums/viewtopic.php?f=11&t=8204
