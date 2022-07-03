@@ -55,6 +55,10 @@
 	https://www.arrow.com/en/research-and-events/articles/using-capacitors-to-filter-electrical-noise
 	
 		https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/?capacitance=20%20uF~~470%20uF&termination%20style=Axial~~Radial%7C~Through%20Hole&voltage%20rating%20dc=6.3%20VDC~~100%20VDC&instock=y&sort=capacitance%7C1&rp=passive-components%2Fcapacitors%2Fceramic-capacitors%7C~Termination%20Style%7C~Capacitance%7C~Voltage%20Rating%20DC
+		
+	* However for Road Blasters https://www.arcade-museum.com/manuals-videogames/R/Road%20Blasters%20Schematic%20Package.pdf
+		Page 11 shows 470 pf to ground on the RGB (lower right corner)
+		
 
 
 
