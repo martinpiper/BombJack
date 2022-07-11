@@ -3657,7 +3657,7 @@ All layouts now use V3.1
 			With resistor in R24 and correct palette, Time: 22:34
 			Adding the full first bank of sprite data. time: 23:07, seems to render correctly
 		* Touching R23-R26 stops the debug sprite flickering for one of the scan lines
-			Cannot reproduce, perhpas temperature related
+			Cannot reproduce, perhaps temperature related
 			Using proper resistor, R24 is parallel produces recognisible graphics data for that scanline RAM. Other scanline RAM not responding really. Time: 22:22
 			TODO: Check R24 resistor value compared to others.
 				Check all the resistor values with those in the sprites board

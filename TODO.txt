@@ -1,3 +1,23 @@
+* SMT options:
+	https://macrofab.com/blog/bypass-caps-decouple-your-way-to-cleaner-power/
+		"In many cases the datasheet for an IC will give a recommended value for the capacitor. If no value is suggested, 0.1uF (100nF) is widely accepted as a standard go-to value. For most designs, a standard ceramic 0402, 0603, or 0805 package size will typically work well as a bypass cap."
+	AgonLight BOM has: https://raw.githubusercontent.com/TheByteAttic/AgonLight/main/Manufacturing/BOM_PCB_AgonLight_R1.0%20MINIMAL.csv
+		SAMSUNG,CL05B104KO5NNNC,100nF,C1525
+		SAMSUNG,CL05A106MQ5NUNC,10µF,C15525 LCSC,C0402
+		** Check voltages for the above
+		Note multiple decoupling capacitors (and inductor) top left: https://youtu.be/1gVx7XcETuM?t=994
+	** Need to check the footprint from data sheets and add suitable options with caps to: SocketsWithCaps.pdsprj
+		Check in Proteus packages for SOIC (20) and SO (20) for example
+		9.3 mm or 9.3 mm width for example...
+		https://www.ti.com/lit/ds/symlink/sn74ls373.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1657457875796&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
+		This package has pads that closely match the 0.6 mm x 2 mm pads: SOIC127P1032X265-20
+		It has 24x79 thou pads...
+		For example, test created: SOIC127P1032X265-20-CAPC1005X55N
+			By using the package from CL05B104KO5NNNC
+		
+
+
+
 * Researching power supplies:
 	Recommendations for Mean Well: https://www.retrorgb.com/budget-arcade-power-supplies-unmasked.html
 	https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC
@@ -60,6 +80,11 @@
 		Page 11 shows 470 pf to ground on the RGB (lower right corner)
 		
 
+	* Spy Hunter https://www.jammarcade.net/files/Schematics/Arcade/Spy%20Hunter.pdf
+		Page 43 bottom right shows 47pf C128 50V AX CER (axial ceramic?) to ground with ferrite beads
+			https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/mlccs-multilayer-ceramic-capacitors/multilayer-ceramic-capacitors-mlcc-leaded/?capacitance=47%20pF&termination%20style=Axial&voltage%20rating%20dc=50%20VDC&instock=y
+			https://www.mouser.sg/ProductDetail/Hitachi-Metals/FT-3AM-B4ARLY-PF?qs=0lSvoLzn4L9HT5vJRSDFaw%3D%3D
+		
 
 
 * Try recording a high resolution APU bus sample using the DG?
