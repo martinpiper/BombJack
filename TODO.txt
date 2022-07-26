@@ -14,7 +14,14 @@
 		It has 24x79 thou pads...
 		For example, test created: SOIC127P1032X265-20-CAPC1005X55N
 			By using the package from CL05B104KO5NNNC
-		
+	** Create a new CODESMT entry for each part for the ordering link
+	** Check 3 TI parts with their SMT
+		Their pads were made slightly wider and longer to match the data sheets
+		SMTCODE	SMTPACKAGE	Proteus package	Data sheet
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374DBR?qs=SL3LIuy2dWz11ywxrLmk0A%3D%3D	SSOP DB 20	SSOP20TI	https://www.ti.com/lit/ds/symlink/sn74ls374.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658839044091&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04DBR?qs=yajEpaT76uTkIEJSyxTAVA%3D%3D	SSOP DB 14	SSOP14TI	https://www.ti.com/lit/ds/symlink/sn74ls04.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658819899855&ref_url=https%253A%252F%252Fwww.mouser.in%252F
+		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374DBR?qs=SL3LIuy2dWz11ywxrLmk0A%3D%3D	SSOP DB 20	SSOP20TI	https://www.ti.com/lit/ds/symlink/sn74ls374.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658839044091&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
+
 
 
 
