@@ -2,8 +2,8 @@
 	https://macrofab.com/blog/bypass-caps-decouple-your-way-to-cleaner-power/
 		"In many cases the datasheet for an IC will give a recommended value for the capacitor. If no value is suggested, 0.1uF (100nF) is widely accepted as a standard go-to value. For most designs, a standard ceramic 0402, 0603, or 0805 package size will typically work well as a bypass cap."
 	AgonLight BOM has: https://raw.githubusercontent.com/TheByteAttic/AgonLight/main/Manufacturing/BOM_PCB_AgonLight_R1.0%20MINIMAL.csv
-		SAMSUNG,CL05B104KO5NNNC,100nF,C1525
-		SAMSUNG,CL05A106MQ5NUNC,10µF,C15525 LCSC,C0402
+		C11		SAMSUNG,CL05B104KO5NNNC,100nF,C1525	>> Like the current decouple capacitors
+		C15		SAMSUNG,CL05A106MQ5NUNC,10µF,C15525 LCSC,C0402
 		** Check voltages for the above
 		Note multiple decoupling capacitors (and inductor) top left: https://youtu.be/1gVx7XcETuM?t=994
 	** Need to check the footprint from data sheets and add suitable options with caps to: SocketsWithCaps.pdsprj

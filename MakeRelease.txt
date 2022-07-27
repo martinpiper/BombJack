@@ -69,7 +69,7 @@
 				Save as XLSX file using " - BOM" suffix, where the naming matches the exported layer Gerber CADCAM file
 					e.g. Bomb Jack - Video - Routed - CADCAM - BOM.xlsx
 				Count ICs from "PCB Package" "*CAP20" then add a row similar to:
-					Capacitors	59	One capacitor for ICs marked with extra DC near pin 1	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
+					Capacitors	59	One 100nF (0.1uF) capacitor for ICs marked with extra DC near pin 1	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
 
 
 			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals

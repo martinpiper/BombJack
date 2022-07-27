@@ -3789,6 +3789,9 @@ All layouts now use V3.1
 
 
 * Proteus Placement Grid default is 50th. Changing to 0.2in is much faster to auto place. But results is slightly less IC packing.
+	Push and shove
+	Horizontal
+	
 
 
 

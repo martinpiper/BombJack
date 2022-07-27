@@ -3,16 +3,16 @@
  <FRAME activewindow="1">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff83010000540100008806000006040000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="2540000" mode="00000001" zoom="0" scale="125" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <editor metric="0" gridmajor="2540000" mode="00000010" zoom="0" scale="125" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
     <world y1="-8890000" x1="-12700000" y2="8890000" x2="12700000"/>
     <centre x="0" y="0"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
   <WINDOW type="default" module="ARES">
-   <editor metric="1" gridmajor="1000000" mode="00000002" zoom="-1" scale="352" flipped="0" gridminor="200000" gridmode="16" snapidx="0" snap="10000" xcursor="0" orgmode="0" snaprange="36079">
+   <editor metric="1" gridmajor="1000000" mode="00000002" zoom="-1" scale="580" flipped="0" gridminor="40000" gridmode="16" snapidx="0" snap="10000" xcursor="0" orgmode="0" snaprange="21896">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-225991" y="6735991"/>
+    <centre x="-196843" y="6033960"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -25,14 +25,14 @@
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="1" gridmajor="1000000" mode="00000002" zoom="-1" scale="352" flipped="0" gridminor="200000" gridmode="16" snapidx="0" snap="10000" xcursor="0" orgmode="0" snaprange="36079">
+  <editor metric="1" gridmajor="1000000" mode="00000002" zoom="-1" scale="580" flipped="0" gridminor="40000" gridmode="16" snapidx="0" snap="10000" xcursor="0" orgmode="0" snaprange="21896">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-225991" y="6735991"/>
+   <centre x="-196843" y="6033960"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="2540000" mode="00000001" zoom="0" scale="125" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+  <editor metric="0" gridmajor="2540000" mode="00000010" zoom="0" scale="125" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
    <world y1="-8890000" x1="-12700000" y2="8890000" x2="12700000"/>
    <centre x="0" y="0"/>
    <origin x="0" y="0"/>
