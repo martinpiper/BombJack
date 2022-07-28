@@ -15,7 +15,11 @@
 	Ensure all components have ordering links
 
 
-	
+
+** Proteus Placement Grid default is 50th. Changing to 0.2in is much faster to auto place. But results is slightly less IC packing.
+	Push and shove
+	Vertical	
+
 ** For each board, ensure the signal layers have a GND power plane created
 	Menu->Technology->Set Layer Stackup
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds
@@ -79,6 +83,7 @@
 		Save the file as a *.xlsx (Excel 2007-2013) with the suffix " - BOM.xlsx" for example "Bomb Jack - Sprites2 - Routed - BOM.xlsx"
 
 	Menu->Output->Generate Pick and Place File
+		Metric
 		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
 		File format: CSV
 		Export, append " - PNP" suffix
@@ -94,3 +99,6 @@
 		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
 		This is my preferred supplier. Substitutions can be suggested if the supplier is out of stock and similar components can be sourced from your preferred supplier.
 		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen. One capacitor for ICs marked with extra DC near pin 1
+		
+		NOTE: Image files can be attached from: BombJack\Order clarifications
+		
