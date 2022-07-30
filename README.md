@@ -445,7 +445,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 ### APU - What is it
 
 The Advanced Processing Unit is an optimised raster and data transfer processor that can execute several instructions at the same time.
-It is able to precisely wait for raster H&V positions, transfer data, and perform simple comparisons based on internal data.
+It is able to precisely wait for raster H&V positions, transfer data, and perform simple comparisons based on internal data with conditional executions based on the results of the comparison.
 This significantly reduces load on the CPU and the amount of memory the CPU, allowing the CPU to transfer data when it can.
 
 There is significant logic internally that allows data to be processed: https://docs.google.com/presentation/d/1Tb4B5-INhH2oiOSG4jfb3BfGGtdT9jPvyWoryOIJNzo/edit?usp=sharing
