@@ -1,5 +1,6 @@
 * Audio: U73 the common volume calculation lookup could do with moving upwards to near the output section of the board. This will move it closer to the final output channel mixing.
 	This should reduce congestion for the sample with volume result
+		* Caused congestion problems?!!
 
 
 

@@ -98,6 +98,21 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 10.	Mode7 pixel logic
 	1. Background colour latch, transparent pixel detection
 	2. Interleaved blocks (for RAM timing) mode7 screen access, feeding into tile access, H & V flip logic
+11.	Scaled sprite logic - Part 1
+	1. Register memory
+	2. Sprite extent and scan line detection
+	3. Sprite flipping
+12.	Scaled sprite logic - Part 2
+	1. Scanline - Two alternating banks
+	2. Sprite definition RAM
+13.	Vector logic
+	1. Register logic - Bank display and kill
+	2. Scan RAM banks - Two banks
+14.	Pixel data combiner logic
+	1. 2-1 pixel data combiners - Two blocks
+
+
+
 
 ### Memory map
 
@@ -241,6 +256,24 @@ Note: The full, but hidden by borders, screen resolution is 384x264 pixels.
 					1 : Enable XY update, or reset to 0
 					2 : Enable Y update, or reset to 0
 					3 : Enable YX update, or reset to 0
+
+
+
+### Audio
+
+Current audio hardware has 4 voices, each using 11 bytes. Extra bytes are used for voice loop enable and voice active bit masks after the voice registers.
+
+Each voice register layout is as follows:
+	byte	register
+	0		volume
+	1/2		address lo/hi
+	3/4		length lo/hi
+	5/6		rate lo/hi
+	7/8		loop address lo/hi
+	9/10	loop length lo/hi
+
+The sample frequency in hertz to voice rate conversion, using internal 4MHz clock, is:  (4096 * hertz) / 25000
+
 
 
 	
