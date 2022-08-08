@@ -225,6 +225,12 @@
 
 
 
+* DAC options?
+	TLC5602CDW	Digital to Analog Converters - DAC 8bit 30Msps 1ch 5V
+	Also: https://www.mouser.sg/c/semiconductors/data-converter-ics/digital-to-analog-converters-dac/?interface%20type=Parallel&mounting%20style=Through%20Hole&number%20of%20channels=1%20Channel&output%20type=Voltage%20Buffered&resolution=8%20bit&sampling%20rate=30%20MS%2Fs~~-&rp=semiconductors%2Fdata-converter-ics%2Fdigital-to-analog-converters-dac%7C~Sampling%20Rate
+
+
+
 
 * Consider a "hat" board for each voice, using a common bus interfacing with the main logic board
 	Each hat would have a signal to select it from the voice schedule
