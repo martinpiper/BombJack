@@ -1,3 +1,8 @@
+* Badges : https://twitter.com/RBadgeman/status/1547111545213181952
+	https://twitter.com/RBadgeman
+	Define kJustForLogo
+
+
 * SMT options:
 	https://macrofab.com/blog/bypass-caps-decouple-your-way-to-cleaner-power/
 		"In many cases the datasheet for an IC will give a recommended value for the capacitor. If no value is suggested, 0.1uF (100nF) is widely accepted as a standard go-to value. For most designs, a standard ceramic 0402, 0603, or 0805 package size will typically work well as a bypass cap."
@@ -141,7 +146,7 @@
 
 
 * Sprites3
-	Choose scale tabLE (allows the root2 or unscaled table to be chosen, useful if the corners of the rotated sprite are not that important) and ignore X/Y boundaries for tiling up to the sprite edge bit flags
+	Choose scale table (allows the root2 or unscaled table to be chosen, useful if the corners of the rotated sprite are not that important) and ignore X/Y boundaries for tiling up to the sprite edge bit flags
 	
 
 
