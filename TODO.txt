@@ -1,3 +1,15 @@
+* Audio assembly issue: For U91---Part is 2*7 but board request 2*8
+	It's a 7432
+	Luckily only one gate used. First layer, for memory control.
+	* Should be DIL14CAP20 but it's using a DIL16CAP20. Oops!
+	** Use the package tool to update the custom part package
+	** TODO: Check all 7432 on all other boards
+	>> U91:C -> U71:C : So might be possible to use three flying leads to that spare gate on the build...
+		Of course it's on opposite edges, bottom middle and top left. Arghh
+
+
+	
+
 * Badges : https://twitter.com/RBadgeman/status/1547111545213181952
 	https://twitter.com/RBadgeman
 	Define kJustForLogo
