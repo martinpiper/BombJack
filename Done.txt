@@ -3830,3 +3830,9 @@ All layouts now use V3.1
 * Audio: U73 the common volume calculation lookup could do with moving upwards to near the output section of the board. This will move it closer to the final output channel mixing.
 	This should reduce congestion for the sample with volume result
 		* Caused congestion problems?!!
+
+
+
+* Audio: U209 also missing CAP20?
+	Was in V8.0 not in latest.
+	Check all other missing CAP20?

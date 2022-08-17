@@ -9,11 +9,6 @@
 
 
 
-* Audio: U209 also missing CAP20?
-	Check all other missing CAP20?
-
-	
-
 * Badges : https://twitter.com/RBadgeman/status/1547111545213181952
 	https://twitter.com/RBadgeman
 	Define kJustForLogo
