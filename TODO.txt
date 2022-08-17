@@ -8,6 +8,10 @@
 		Of course it's on opposite edges, bottom middle and top left. Arghh
 
 
+
+* Audio: U209 also missing CAP20?
+	Check all other missing CAP20?
+
 	
 
 * Badges : https://twitter.com/RBadgeman/status/1547111545213181952
