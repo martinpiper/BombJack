@@ -1,17 +1,3 @@
-!macro MBus24Bit_SetAddress_AXY .ebbs , .addr {
-	lda #.ebbs
-	+MWordValueTo_XY .addr
-	jsr Bus24Bit_SetAddressBus
-}
-
-
-!macro MBus24Bit_FastSpeedCopy .label , .length {
-!for .i , .length {
-	lda .label + .i - 1
-	sta CIA2PortBRS232
-}
-}
-
 !macro MBus24Bit_SendLE16BitValue .value {
 	lda #<.value
 	sta CIA2PortBRS232
@@ -27,3 +13,24 @@
 !macro MBus24Bit_Send8BitValueFromA {
 	sta CIA2PortBRS232
 }
+
+!macro MBus24Bit_SetAddress_AXY .ebbs , .addr {
+	lda #.ebbs
+	+MWordValueTo_XY .addr
+	jsr Bus24Bit_SetAddressBus
+}
+
+!macro MBus24Bit_SetAddress_A .ebbs , .addr {
+	jsr Bus24Bit_Reset
+	+MBus24Bit_Send8BitValue .ebbs
+	+MBus24Bit_SendLE16BitValue .addr
+}
+
+
+!macro MBus24Bit_FastSpeedCopy .label , .length {
+!for .i , .length {
+	lda .label + .i - 1
+	sta CIA2PortBRS232
+}
+}
+

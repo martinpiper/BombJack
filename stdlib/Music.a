@@ -14,6 +14,9 @@
 ; And audio refresh is independent
 ; Given write data from file "testdata/exportedMusicSamples.bin" to 24bit bus at '0x0000' and addressEx '0x04'
 
+
+;kOnlyAllowChannel = %00001000
+
 !zn
 zeroPageCode_start
 !pseudopc $02 {
@@ -261,14 +264,7 @@ MusicPoll
 	cmp #.kMusicCommandStop
 	bne .notkMusicCommandStop
 
-	jsr Bus24Bit_Reset
-	lda #.regBaseEx
-	sta CIA2PortBRS232
-	lda #<.regActiveControl
-	sta CIA2PortBRS232
-	lda #>.regActiveControl
-	sta CIA2PortBRS232
-	lda .channelPlayingMask
+	+MBus24Bit_SetAddress_A .regBaseEx , .regActiveControl
 	lda #0
 	; Kill voices and the play flag
 	sta CIA2PortBRS232
@@ -296,6 +292,7 @@ MusicPoll
 	sta CIA2PortBRS232
 
 	jsr DecompressMusic_GetNextByte
+;	lda #$ff
 	sta CIA2PortBRS232
 
 	; Frequency
@@ -333,6 +330,7 @@ MusicPoll
 	sta CIA2PortBRS232
 
 	jsr DecompressMusic_GetNextByte
+;	lda #$ff
 	sta CIA2PortBRS232
 
 	jmp .getNextCommand
@@ -357,24 +355,15 @@ MusicPoll
 	sta .channelLoopingMask
 
 	; Write the voice active mask
-	jsr Bus24Bit_Reset
-	lda #.regBaseEx
-	sta CIA2PortBRS232
-	lda #<.regActiveControl
-	sta CIA2PortBRS232
-	lda #>.regActiveControl
-	sta CIA2PortBRS232
+	+MBus24Bit_SetAddress_A .regBaseEx , .regActiveControl
 	lda .channelPlayingMask
+!ifdef kOnlyAllowChannel {
+	and #kOnlyAllowChannel
+}
 	sta CIA2PortBRS232
 
 	; Setup the voice reg writes
-	jsr Bus24Bit_Reset
-	lda #.regBaseEx
-	sta CIA2PortBRS232
-	lda .channelToVoiceRegLo,x
-	sta CIA2PortBRS232
-	lda .channelToVoiceRegHi,x
-	sta CIA2PortBRS232
+	jsr Audio_SetAddr_Channel_X
 
 	; Now write the registers
 	jsr DecompressMusic_GetNextByte
@@ -415,16 +404,31 @@ MusicPoll
 	ora .channelToBit,x
 	sta .channelPlayingMask
 
-	jsr Bus24Bit_Reset
-	lda #.regBaseEx
-	sta CIA2PortBRS232
-	lda #<.regLoopControl
-	sta CIA2PortBRS232
-	lda #>.regLoopControl
-	sta CIA2PortBRS232
+	+MBus24Bit_SetAddress_A .regBaseEx , .regLoopControl
 	lda .channelLoopingMask
 	sta CIA2PortBRS232
 	lda .channelPlayingMask
+!ifdef kOnlyAllowChannel {
+	and #kOnlyAllowChannel
+}
 	sta CIA2PortBRS232
 
 	jmp .getNextCommand
+
+Audio_SetAddr_LoopControl
+	+MBus24Bit_SetAddress_A .regBaseEx , .regLoopControl
+	rts
+
+Audio_SetAddr_ActiveControl
+	+MBus24Bit_SetAddress_A .regBaseEx , .regActiveControl
+	rts
+
+Audio_SetAddr_Channel_X
+	jsr Bus24Bit_Reset
+	lda #.regBaseEx
+	sta CIA2PortBRS232
+	lda .channelToVoiceRegLo,x
+	sta CIA2PortBRS232
+	lda .channelToVoiceRegHi,x
+	sta CIA2PortBRS232
+	rts
