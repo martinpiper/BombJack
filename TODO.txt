@@ -15,6 +15,7 @@
 			* rate regiser U170 output pins 2 5 6 9 12 15 16 19
 			* accumulator U168 , U171-U176 outputs 74283 pins 4 1 13 10
 			* accumulator latches U164-U167 74273 pins
+		** Assembly error? U182	should be 74157	but looks like a 74LS167?
 
 
 
