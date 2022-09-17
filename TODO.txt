@@ -21,9 +21,23 @@
 		But in hardware this is happening *all the time*
 		>> Adding a common method handleVoiceActiveMaskLatches() and putting this in calculateBalancedSamples() makes emulation sound like hardware
 		>> But now the music sounds equally wrong on both
-		** TODO: The hardware needs to be fixed to align with emulation not having handleVoiceActiveMaskLatches() in calculateBalancedSamples()
-			In other words, only reset voiceInternalCounter and voiceInternalChooseLoop if during the write the bit is low
+		** TODO: The hardware needs to be fixed to align with emulation
+			** The below logic changes can be tested by adding handleVoiceActiveMaskLatches() back into calculateBalancedSamples()
+				>> Emulation passed! With lots of music tests (--exportmod --playmod tests)
+			** Reset voicesActiveMask if **during the write the bit is low**
+			** Only load 1 into voicesActiveMask on a positive edge of the bit
+				Will need another register latch to be safe :) - Added U53
+			** In other words, reset voiceInternalCounter and voiceInternalChooseLoop if **during the write the bit is low**
+			** Need logic to only strobe a reset if it is not currently reset... Yay
+				a Current mask			b Reset request		x Output
+				0						0					1
+				0						1					1
+				1						0					0
+				1						1					1
+				== not a or b
+			>> Hardware changes passed with Demo1 tune and Demo9 tune problematic loops
 
+				
 
 
 

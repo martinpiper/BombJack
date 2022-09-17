@@ -1071,7 +1071,7 @@
 					C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\ffmpeg.exe -i "C:\Users\Martin Piper\Downloads\Digital Leisure\Dragon's Lair\VIDEO_TS\VTS_06_1.VOB" -y -acodec pcm_u8 -ar 25000 -ac 1 c:\temp\sample.wav
 					Then trim the WAV header and make it 65536 bytes long for testdata\sample.pcmu8
 				IntelliJ run config "TestRunner --exportmod (2)" used and "target\" music data files copied to testdata
-				C64\VideoHardware\BuiltIt.bat also works
+				C64\VideoHardware\BuildIt.bat also works
 
 
 * When listening to the audio simulation output
