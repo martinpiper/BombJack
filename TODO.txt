@@ -36,7 +36,11 @@
 				1						1					1
 				== not a or b
 			>> Hardware changes passed with Demo1 tune and Demo9 tune problematic loops
-
+			Test with more music data:
+				cd /d C:\Work\C64\VideoHardware\tmp
+				java.exe -Dmusic.volume=1 -jar ..\..\..\BDD6502\target\BDD6502-1.0.9-SNAPSHOT-jar-with-dependencies.jar --exportmod "C:\Users\Martin Piper\Downloads\blood_money_title.mod" "target/MusicMW2000" 65535 155920
+				Then run @Demo9
+				Comment out all w$ lines in debugData.txt
 				
 
 
