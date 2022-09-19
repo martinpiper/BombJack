@@ -1,5 +1,12 @@
 d0
 
+; Audio registers
+; Loop and active = 0
+d$802c0100
+d$802d0100
+
+d0
+
 ; Some sample data
 d$e0000401
 d$e0010402
@@ -34,11 +41,6 @@ d$e0050405
 
 d0
 
-; Audio registers
-; Loop and active = 0
-d$802c0100
-d$802d0100
-
 ; Voice 0
 ; Volume
 d$80000180
@@ -61,66 +63,95 @@ d$800a0100
 
 ; Voice 1
 ; Volume
-d$80000180
+d$800b0180
 ; Address
-d$80010102
-d$80020100
+d$800c0102
+d$800d0100
 ; Length
-d$80030104
-d$80040100
+d$800e0104
+d$800f0100
 ; Rate
-d$80050180
-d$80060101
+d$80100180
+d$80110101
 ; Loop address
-d$80070120
-d$80080140
+d$80120120
+d$80130140
 ; Loop length
-d$80090103
-d$800a0100
+d$80140103
+d$80150100
 
 
 ; Voice 2
 ; Volume
-d$80000180
+d$80160180
 ; Address
-d$80010102
-d$80020100
+d$80170102
+d$80180100
 ; Length
-d$80030104
-d$80040100
+d$80190104
+d$801a0100
 ; Rate
-d$80050110
-d$80060101
+d$801b0110
+d$801c0101
 ; Loop address
-d$80070120
-d$80080140
+d$801d0120
+d$801e0140
 ; Loop length
-d$80090103
-d$800a0100
+d$801f0103
+d$80200100
 
 
 ; Voice 3
 ; Volume
-d$80000180
+d$80210180
 ; Address
-d$80010102
-d$80020100
+d$80220102
+d$80230100
 ; Length
-d$80030104
-d$80040100
+d$80240104
+d$80250100
 ; Rate
-d$800501f0
-d$80060100
+d$802601f0
+d$80270100
 ; Loop address
-d$80070120
-d$80080140
+d$80280120
+d$80290140
 ; Loop length
-d$80090103
-d$800a0100
+d$802a0103
+d$802b0100
 
 
 ; Turn on voice 0/2 looping and voice 0/1/2/3
 d$802c0105
+d$802d010f
+
+d0
+
+; Wait for the audio clock AUDCLK to start after 250m
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+
+
+; This should not trigger voice 1 & 3 again, since the voice has not been explicitly disabled by a control register write
+; Note: Audio V9.2 fixes a bug observed in DebugAudio1.txt at line 2085 where the voice was incorrectly started again
 d$802d010f
 
 d0
