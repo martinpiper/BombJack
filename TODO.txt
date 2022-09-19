@@ -43,6 +43,7 @@
 				java.exe -Dmusic.volume=1 -jar ..\..\..\BDD6502\target\BDD6502-1.0.9-SNAPSHOT-jar-with-dependencies.jar --exportmod "C:\Users\Martin Piper\Downloads\shadowofthebeast.mod" "target/MusicMW2000" 1 1
 				java.exe -Dmusic.volume=1 -jar ..\..\..\BDD6502\target\BDD6502-1.0.9-SNAPSHOT-jar-with-dependencies.jar --exportmod "C:\Users\Martin Piper\Downloads\Shadow of the Beast (1)\Beast1_2.mod" "target/MusicMW2000" 65535 71268
 				java.exe -Dmusic.volume=1 -jar ..\..\..\BDD6502\target\BDD6502-1.0.9-SNAPSHOT-jar-with-dependencies.jar --exportmod "..\assets\SOTB - TITLE.mod" "target/MusicMW2000" 1 1
+				java.exe -Dmusic.volume=1 -jar ..\..\..\BDD6502\target\BDD6502-1.0.9-SNAPSHOT-jar-with-dependencies.jar --exportmod "C:\Users\Martin Piper\Downloads\outrun_intro.mod" "target/MusicMW2000" 1 3
 				Then run @Demo9
 				Comment out all w$ lines in debugData.txt
 		* Done: TestAudio1.txt needs updates
