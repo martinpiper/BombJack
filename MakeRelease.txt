@@ -47,6 +47,7 @@
 		Text Import window
 			Click top left grid, to select all cells
 			Drop down: Column type: Text
+			Select column "Quantity" and then choose column type "Standard"
 			Press: OK
 			Menu->Data->Auto filter
 			Group Layer
@@ -98,7 +99,7 @@
 	Assembly note:
 		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
 		This is my preferred supplier. Substitutions can be suggested if the supplier is out of stock and similar components can be sourced from your preferred supplier.
-		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen. One capacitor for ICs marked with extra DC near pin 1
+		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen. One capacitor for ICs marked with extra DC near pin 1, every component in the BOM "PCB Package" column with suffix CAP20
 		
 		NOTE: Image files can be attached from: BombJack\Order clarifications
 		

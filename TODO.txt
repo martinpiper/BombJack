@@ -1,3 +1,7 @@
+* U83 needs code and supplier info
+
+
+
 * Audio hardware testing log
 	First power on sounded roughly correct, but there are some differences compared to emulation
 	* Stereo separation is not completely separate. Which is actually OK, sounds better. But the root cause needs to be understood why.
