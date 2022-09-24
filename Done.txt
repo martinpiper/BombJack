@@ -3836,3 +3836,21 @@ All layouts now use V3.1
 * Audio: U209 also missing CAP20?
 	Was in V8.0 not in latest.
 	Check all other missing CAP20?
+
+
+
+
+* Researching power supplies:
+	Recommendations for Mean Well: https://www.retrorgb.com/budget-arcade-power-supplies-unmasked.html
+	https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC
+	3-4 outputs: https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&number%20of%20outputs=3%20Output~~4%20Output&open%20frame%2Fenclosed=Enclosed&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC&sort=number%20of%20outputs&rp=power%2Fpower-supplies%2Fswitching-power-supplies%7C~Number%20of%20Outputs
+	125W++ https://www.mouser.sg/c/power/power-supplies/switching-power-supplies/?m=MEAN%20WELL&number%20of%20outputs=3%20Output~~4%20Output&open%20frame%2Fenclosed=Enclosed&output%20power=125%20W~~316%20W&output%20voltage-channel%201=5%20VDC&output%20voltage-channel%202=12%20VDC&sort=number%20of%20outputs&rp=power%2Fpower-supplies%2Fswitching-power-supplies%7C~Number%20of%20Outputs%7C~Output%20Power
+	* Remember to use **regulated** supplies
+	* +5V and +12V needed for Bomb Jack
+	** Going for this one: https://www.mouser.sg/ProductDetail/MEAN-WELL/RT-125B?qs=l0g2inPJSHMdRKvDbtGuSg%3D%3D
+		It has a high 5V output power and also has +12V/-12V.
+	* Linear regulator: https://twitter.com/MartinPiper/status/1560076937871077381
+		https://www.mouser.sg/ProductDetail/Analog-Devices/LT1575CN8-5PBF?qs=ytflclh7QUWWi5jqeRzDkA%3D%3D
+	* Turns out the Mean Well RT-125B powers all the boards without any extra regulation:
+		https://www.mouser.sg/ProductDetail/MEAN-WELL/RT-125B?qs=l0g2inPJSHMdRKvDbtGuSg%3D%3D
+		Demo: https://www.youtube.com/watch?v=l-Fn7Ad8Izo
