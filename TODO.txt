@@ -123,7 +123,11 @@
 		It has a high 5V output power and also has +12V/-12V.
 	* Linear regulator: https://twitter.com/MartinPiper/status/1560076937871077381
 		https://www.mouser.sg/ProductDetail/Analog-Devices/LT1575CN8-5PBF?qs=ytflclh7QUWWi5jqeRzDkA%3D%3D
-
+	* Turns out the Mean Well RT-125B powers all the boards without any extra regulation:
+		https://www.mouser.sg/ProductDetail/MEAN-WELL/RT-125B?qs=l0g2inPJSHMdRKvDbtGuSg%3D%3D
+		Demo: https://www.youtube.com/watch?v=l-Fn7Ad8Izo
+		
+	
 
 
 
