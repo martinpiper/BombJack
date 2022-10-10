@@ -1,3 +1,21 @@
+* Kobiconn power jack also very hard to find. Need alternatives, perhaps include both on the layout as options...
+	For better power delivery include on back plane and use wider power tracks.
+	Some options, but they all use plated slots
+		https://www.mouser.sg/c/connectors/power-connectors/dc-power-connectors/?inside%20contact%20diameter=2%20mm&mounting%20angle=Right%20Angle&mounting%20style=Through%20Hole&outside%20contact%20diameter=5.5%20mm&product=Jacks&termination%20style=Solder&instock=y
+	Options
+	https://www.mouser.sg/ProductDetail/CUI-Devices/PJ-079AH?qs=l7cgNqFNU1iSj66d2zd4mw%3D%3D
+	Note 8.2 jack insertion depth might not be long enough...
+	Weird extra leg coming out behind... https://www.mouser.sg/datasheet/2/670/pj_081ah-1778736.pdf
+	Other options
+		https://www.mouser.sg/datasheet/2/670/pj_083ah-1778570.pdf
+		https://www.mouser.sg/datasheet/2/670/pj_084ah-1778572.pdf
+		https://www.mouser.sg/datasheet/2/670/pj_085ah-1779033.pdf
+	SnapEDA footprint options look OK
+	Done: Back plane headers moved closer together, plus extra one added with power indicator LED.	
+	
+
+
+
 * U83 needs code and supplier info
 
 
