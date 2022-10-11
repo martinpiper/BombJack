@@ -12,7 +12,7 @@
 		https://www.mouser.sg/datasheet/2/670/pj_085ah-1779033.pdf
 	SnapEDA footprint options look OK
 	Done: Back plane headers moved closer together, plus extra one added with power indicator LED.	
-	Consider moving the back plane to a separate file
+	Done: Consider moving the back plane to a separate file
 
 
 

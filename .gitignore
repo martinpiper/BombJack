@@ -28,3 +28,7 @@ SimpleCPU.DO
 SimpleCPU.EDF
 SimpleCPU.log
 SimpleCPU.sts
+*.log
+*.EDF
+*.DO
+*.sts
