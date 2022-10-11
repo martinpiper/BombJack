@@ -13,7 +13,14 @@
 	SnapEDA footprint options look OK
 	Done: Back plane headers moved closer together, plus extra one added with power indicator LED.	
 	Done: Consider moving the backplane to a separate file. V9.0
-	Consider some large backplane capacitors
+	Done: Consider some large backplane capacitors
+		Power supply thoughts around this time: https://youtu.be/1gVx7XcETuM?list=PLDf2uklC__d19aBeKd8OXMdupeDaAiAR4&t=1700
+		**Low ESR** Electrolytic Capacitors
+		Note options with voltages choose 25V-50V: https://www.mouser.sg/c/passive-components/capacitors/aluminum-electrolytic-capacitors/aluminum-electrolytic-capacitors-radial-leaded/?capacitance=470%20uF&product=Low%20ESR%20Electrolytic%20Capacitors&termination%20style=Radial&instock=y
+		>> https://www.mouser.sg/ProductDetail/Panasonic/EEU-FR1E471YB?qs=n1SRcuzDZT1JwIghP%252BP6vA%3D%3D
+			EEU-FR1E471YB
+		
+		
 
 
 
