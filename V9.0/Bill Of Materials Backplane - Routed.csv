@@ -1,0 +1,12 @@
+Category,Quantity,References,Value,Stock Code,Unit Cost,Description,Group Layer,PCB Package,Supplier,Placed
+Capacitors,2,"C1,C2",EEUFR1E471YB,https://www.mouser.sg/ProductDetail/Panasonic/EEU-FR1E471YB?qs=n1SRcuzDZT1JwIghP%252BP6vA%3D%3D,,FR-A_,Backplane,CAPPRD500W60D800H1500,,Top Copper
+Resistors,1,R208,200,,,Generic resistor symbol,Backplane,RES40,,Top Copper
+Diodes,1,D204,LED-RED,,,Animated LED model (Red),Backplane,LED,,Top Copper
+Miscellaneous,1,EXPANSIONBUSA1,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,S$4.54,0.1in pitch DIL connector strip,Backplane,CONN-DIL34,,Top Copper
+Miscellaneous,1,EXPANSIONBUSB1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,S$8.11,0.1in pitch DIL connector strip,Backplane,CONN-DIL8,,Top Copper
+Miscellaneous,1,EXPANSIONBUSC1,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,S$1.28,0.1in pitch SIL connector strip,Backplane,CONN-SIL2,,Top Copper
+Miscellaneous,16,"EXPANSIONBUSH1,EXPANSIONBUSH2,EXPANSIONBUSH3,EXPANSIONBUSH4,EXPANSIONBUSH5,EXPANSIONBUSH6,EXPANSIONBUSH7,EXPANSIONBUSH8,VIDEOH1,VIDEOH2,VIDEOH3,VIDEOH4,VIDEOH5,VIDEOH6,VIDEOH7,VIDEOH8",09022646824,https://www.mouser.sg/ProductDetail/?qs=gIpPgrDBK%2Fj7cjNJs9Ij%252BQ%3D%3D,,"Harting 64 Way 2.54mm Pitch, Type B Class C2, 2 Row a/b, Straight DIN 41612 Connector, Socket, Solder",Backplane,09022646824,,Top Copper
+Miscellaneous,1,J1,PJ079AH,https://www.mouser.sg/ProductDetail/CUI-Devices/PJ-079AH?qs=l7cgNqFNU1iSj66d2zd4mw%3D%3D,,DC_Power_Jack__â?¢_2_mm_center_pin_â?¢_5_A_rating_â?¢_shielded_â?¢_through_hole_â?¢_1_switch,Backplane,CUI_PJ079AH,,Top Copper
+Miscellaneous,1,POWER 5V,163-179PH-EX,https://www.mouser.sg/ProductDetail/163-179PH-EX,,DC Power Connectors PCB 2.1MM,Backplane,163179PHEX,,Top Copper
+Miscellaneous,1,ROWCOL1,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,S$4.48,0.1in pitch DIL connector strip,Backplane,CONN-DIL20,,Top Copper
+Miscellaneous,1,VIDEO1,CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,,0.1in pitch DIL connector strip,Backplane,CONN-DIL20,,Top Copper

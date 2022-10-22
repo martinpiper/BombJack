@@ -84,7 +84,7 @@
 		Save the file as a *.xlsx (Excel 2007-2013) with the suffix " - BOM.xlsx" for example "Bomb Jack - Sprites2 - Routed - BOM.xlsx"
 
 	Menu->Output->Generate Pick and Place File
-		Metric
+		Metric (check Units: mm)
 		Drop downs: Part ID | <<empty>> | Package | <<empty>> | Layer | Rotation | X | Y
 		File format: CSV
 		Export, append " - PNP" suffix

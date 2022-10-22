@@ -87,6 +87,12 @@
 
 
 
+
+* Regarding audio stereo separation: https://twitter.com/MartinPiper/status/1570011172673556480
+
+
+
+
 * 470uF cap for larger sparse decoupling?
 	https://youtu.be/fP7RpCtJz7w?t=2634
 	https://www.mouser.sg/c/passive-components/capacitors/?capacitance=470%20uF&voltage%20rating%20dc=25%20VDC~~50%20VDC&rp=passive-components%2Fcapacitors%7C~Voltage%20Rating%20DC
