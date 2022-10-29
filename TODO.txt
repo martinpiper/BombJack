@@ -1,3 +1,40 @@
+* The right-angled edge connectors can be moved back away from the board edge to protect their pins
+
+
+
+* Audio 9.2 hardware tests
+	main9.a : .commonSetVoice
+	During tests, if the loop bit is not set for the voice it can sometimes not start the next sample
+	But during further tests if the loop bit is always set but the loop address and loop length are set to zero the next sample reliably starts
+	* This could indicate something like a race condition when resetting the voice active mask and starting a new sound?
+		Perhaps the internal voice active flag is being reset just as the edge comes in to trigger a new sample?
+		Is it the voice always needs the loop to be set?
+			No, since the voice clear also clears the loop before setting voice...
+	>> This music fix worked:
+		; TODO: Hardware bug fix for non-looping samples, force the sample position/length to be zero
+		; TODO: Hardware bug fix for non-looping samples, force the sample loop to always be on
+	* But is there a better fix?
+		** Disable the voice, enable loop, double disable the voice?
+			Didn't work
+	** How about altering the design so that looping is always enabled?
+		The loop position and length is then used to control what th voice does
+		This simplifies a couple of the gates in the hardware and removes the latch
+		>> TODO
+			** Alter the init code to test always setting the loop register to on, never alter/clear the loop register afterwards, and only modifying the active register
+				* Create new Audio_Init which sets loop control to $ff in init to support audio hardware <= 9.2
+					And disable all voices
+				* Update all existing usages of Audio_SetAddr_LoopControl to be Audio_SetAddr_ActiveControl
+					Look for .regLoopControl in Music.a
+					Remove .channelLoopingMask usage
+			* If the above passes then...
+			* Alter the emulation to ignore the loop register, assume loop is always active
+			* Alter the next hardware design to remove the latch and simplify the gates
+			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
+
+
+
+
+
 * Kobiconn power jack also very hard to find. Need alternatives, perhaps include both on the layout as options...
 	For better power delivery include on back plane and use wider power tracks.
 	Some options, but they all use plated slots

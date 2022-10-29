@@ -398,14 +398,25 @@ MusicPoll
 	lda .channelLoopingMask
 	ora .channelToBit,x
 	sta .channelLoopingMask
+	jmp .overLoopLength
 
 .noLoopLength
+	; TODO: Hardware bug fix for non-looping samples, force the sample position/length to be zero
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+
+.overLoopLength
 	lda .channelPlayingMask
 	ora .channelToBit,x
 	sta .channelPlayingMask
 
 	+MBus24Bit_SetAddress_A .regBaseEx , .regLoopControl
 	lda .channelLoopingMask
+	; TODO: Hardware bug fix for non-looping samples, force the sample loop to always be on
+	lda .channelPlayingMask
 	sta CIA2PortBRS232
 	lda .channelPlayingMask
 !ifdef kOnlyAllowChannel {
