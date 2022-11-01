@@ -16,6 +16,19 @@
 	* But is there a better fix?
 		** Disable the voice, enable loop, double disable the voice?
 			Didn't work
+		* This also didn't work before setting the voice:
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 0
+				+MBus24Bit_Send8BitValue 0
+
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 1
+				+MBus24Bit_Send8BitValue 0
+
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 0
+				+MBus24Bit_Send8BitValue 0
+			So twiddling the loop with disable doesn't work, neither does trying to set three times...
 	** How about altering the design so that looping is always enabled?
 		The loop position and length is then used to control what th voice does
 		This simplifies a couple of the gates in the hardware and removes the latch
@@ -27,8 +40,13 @@
 					Look for .regLoopControl in Music.a
 					Remove .channelLoopingMask usage
 			* If the above passes then...
+			* Using existing TestAudio data in the existing simulation, capture the output
+				Alter the audio test data to use the new way of defining the loop/no-loop voice using the length
+				Capture more data, compare for differences, should be the same
 			* Alter the emulation to ignore the loop register, assume loop is always active
 			* Alter the next hardware design to remove the latch and simplify the gates
+				The active latch clear could just use the active bit for example, no need to use the active control latch load edge with the OR
+				This removes a chunk of the "should we clear" logic and the "should we stop the voice" logic
 			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
 
 
