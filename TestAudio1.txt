@@ -1,8 +1,7 @@
 d0
 
 ; Audio registers
-; Loop and active = 0
-d$802c0100
+; Active = 0
 d$802d0100
 
 d0
@@ -20,6 +19,10 @@ d$00020423
 d$00030434
 d$00040445
 d$00050456
+
+; Since we are always looping, this will output the "quiet" byte
+d$00100480
+d$00110480
 
 ; Test each sample data 8K bank
 d$00010412
@@ -74,10 +77,10 @@ d$800f0100
 d$80100180
 d$80110101
 ; Loop address
-d$80120120
-d$80130140
+d$80120110
+d$80130100
 ; Loop length
-d$80140103
+d$80140100
 d$80150100
 
 
@@ -114,15 +117,15 @@ d$80250100
 d$802601f0
 d$80270100
 ; Loop address
-d$80280120
-d$80290140
+d$80280110
+d$80290100
 ; Loop length
-d$802a0103
+d$802a0100
 d$802b0100
 
 
-; Turn on voice 0/2 looping and voice 0/1/2/3
 ;d$802c0105
+; Turn on voice 0/1/2/3 with voice 0/2 looping
 d$802d010f
 
 d0
@@ -170,19 +173,16 @@ d$802d0101
 d0
 d$802d010f
 
-; Note: DebugAudio1.txt at line 3335 restart with DebugAudio0.txt showing restart
+; Note: DebugAudio1.txt at line 3335 restart with DebugAudio0.txt showing restart, with voices 1/2/3 stopped for a frame
 ^-$01
 d0
 d0
-d$802d0100
-d0
-d$802d010f
+d$802d0101
 
 ^-$01
 d0
 d0
 d0
-d$802d0100
 d0
 d$802d010f
 

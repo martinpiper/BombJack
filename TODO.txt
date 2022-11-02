@@ -48,6 +48,14 @@
 			* Alter the next hardware design to remove the latch and simplify the gates
 				The active latch clear could just use the active bit for example, no need to use the active control latch load edge with the OR
 				This removes a chunk of the "should we clear" logic and the "should we stop the voice" logic
+				New logic for clear reset:
+					a 	b		X
+					Q	ActMsk	
+					0	0		1
+					0	1		1
+					1	0		0
+					1	1		1
+					** NOT a OR b
 			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
 			* update documentation
 
