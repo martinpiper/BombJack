@@ -122,7 +122,7 @@ d$802b0100
 
 
 ; Turn on voice 0/2 looping and voice 0/1/2/3
-d$802c0105
+;d$802c0105
 d$802d010f
 
 d0

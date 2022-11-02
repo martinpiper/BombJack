@@ -39,6 +39,7 @@
 				* Update all existing usages of Audio_SetAddr_LoopControl to be Audio_SetAddr_ActiveControl
 					Look for .regLoopControl in Music.a
 					Remove .channelLoopingMask usage
+				>> All the above works (in MusicInit)
 			* If the above passes then...
 			* Using existing TestAudio data in the existing simulation, capture the output
 				Alter the audio test data to use the new way of defining the loop/no-loop voice using the length
@@ -48,6 +49,13 @@
 				The active latch clear could just use the active bit for example, no need to use the active control latch load edge with the OR
 				This removes a chunk of the "should we clear" logic and the "should we stop the voice" logic
 			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
+			* update documentation
+
+
+
+
+* Extract Audio_Init (Audio.a) from MusicInit $ff
+	Code tidy, create defines for the default audio setup
 
 
 
@@ -89,7 +97,7 @@
 	* Stereo separation is not completely separate. Which is actually OK, sounds better. But the root cause needs to be understood why.
 		* Perhaps the left/right channel "ground" is not constant depending on the power used by other channels?
 	* Looping on one of the channels is perhaps not right?
-		* Need a sound tester when IncludeMusicData is enabled in Demo9
+		* Need a sound tester when MinimalMusicDemoTest is enabled in Demo9
 			Pressing fire will mute all channels
 			Then joystick left/right/up/down (debounced) will enable one voice only with a sample of the full sample RAM
 			Holding down fire will enable looping of half the same RAM length, starting from 25% into the RAM

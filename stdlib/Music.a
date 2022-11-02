@@ -175,6 +175,10 @@ MusicInit
 	
 	lda #1
 	sta .playFlag
+
+	jsr Audio_SetAddr_LoopControl
+	+MBus24Bit_Send8BitValue $ff
+	+MBus24Bit_Send8BitValue 0
 	
 	rts
 
@@ -413,11 +417,7 @@ MusicPoll
 	ora .channelToBit,x
 	sta .channelPlayingMask
 
-	+MBus24Bit_SetAddress_A .regBaseEx , .regLoopControl
-	lda .channelLoopingMask
-	; TODO: Hardware bug fix for non-looping samples, force the sample loop to always be on
-	lda .channelPlayingMask
-	sta CIA2PortBRS232
+	+MBus24Bit_SetAddress_A .regBaseEx , .regActiveControl
 	lda .channelPlayingMask
 !ifdef kOnlyAllowChannel {
 	and #kOnlyAllowChannel
