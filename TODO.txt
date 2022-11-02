@@ -44,7 +44,6 @@
 			* Using existing TestAudio data in the existing simulation, capture the output
 				Alter the audio test data to use the new way of defining the loop/no-loop voice using the length
 				Capture more data, compare for differences, should be the same
-			* Alter the emulation to ignore the loop register, assume loop is always active
 			* Alter the next hardware design to remove the latch and simplify the gates
 				The active latch clear could just use the active bit for example, no need to use the active control latch load edge with the OR
 				This removes a chunk of the "should we clear" logic and the "should we stop the voice" logic
@@ -57,7 +56,9 @@
 					1	1		1
 					** NOT a OR b
 			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
-			* update documentation
+			** Board updated to 9.3, reduced IC count :)
+			* Alter the emulation to ignore the loop register, assume loop is always active
+			* Update documentation
 
 
 
