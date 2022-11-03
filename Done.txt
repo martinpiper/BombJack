@@ -3854,3 +3854,63 @@ All layouts now use V3.1
 	* Turns out the Mean Well RT-125B powers all the boards without any extra regulation:
 		https://www.mouser.sg/ProductDetail/MEAN-WELL/RT-125B?qs=l0g2inPJSHMdRKvDbtGuSg%3D%3D
 		Demo: https://www.youtube.com/watch?v=l-Fn7Ad8Izo
+
+
+
+* Audio 9.2 hardware tests
+	main9.a : .commonSetVoice
+	During tests, if the loop bit is not set for the voice it can sometimes not start the next sample
+	But during further tests if the loop bit is always set but the loop address and loop length are set to zero the next sample reliably starts
+	* This could indicate something like a race condition when resetting the voice active mask and starting a new sound?
+		Perhaps the internal voice active flag is being reset just as the edge comes in to trigger a new sample?
+		Is it the voice always needs the loop to be set?
+			No, since the voice clear also clears the loop before setting voice...
+	>> This music fix worked:
+		; TODO: Hardware bug fix for non-looping samples, force the sample position/length to be zero
+		; TODO: Hardware bug fix for non-looping samples, force the sample loop to always be on
+	* But is there a better fix?
+		** Disable the voice, enable loop, double disable the voice?
+			Didn't work
+		* This also didn't work before setting the voice:
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 0
+				+MBus24Bit_Send8BitValue 0
+
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 1
+				+MBus24Bit_Send8BitValue 0
+
+				jsr Audio_SetAddr_LoopControl
+				+MBus24Bit_Send8BitValue 0
+				+MBus24Bit_Send8BitValue 0
+			So twiddling the loop with disable doesn't work, neither does trying to set three times...
+	** How about altering the design so that looping is always enabled?
+		The loop position and length is then used to control what th voice does
+		This simplifies a couple of the gates in the hardware and removes the latch
+		>> TODO
+			** Alter the init code to test always setting the loop register to on, never alter/clear the loop register afterwards, and only modifying the active register
+				* Create new Audio_Init which sets loop control to $ff in init to support audio hardware <= 9.2
+					And disable all voices
+				* Update all existing usages of Audio_SetAddr_LoopControl to be Audio_SetAddr_ActiveControl
+					Look for .regLoopControl in Music.a
+					Remove .channelLoopingMask usage
+				>> All the above works (in MusicInit)
+			* If the above passes then...
+			* Using existing TestAudio data in the existing simulation, capture the output
+				Alter the audio test data to use the new way of defining the loop/no-loop voice using the length
+				Capture more data, compare for differences, should be the same
+			* Alter the next hardware design to remove the latch and simplify the gates
+				The active latch clear could just use the active bit for example, no need to use the active control latch load edge with the OR
+				This removes a chunk of the "should we clear" logic and the "should we stop the voice" logic
+				New logic for clear reset:
+					a 	b		X
+					Q	ActMsk	
+					0	0		1
+					0	1		1
+					1	0		0
+					1	1		1
+					** NOT a OR b
+			* The address for control can be unchanged, the loop register can be moved to be unused (but documented as set to $ff for hardware versions <= 9.2)
+			** Board updated to 9.3, reduced IC count :)
+			* Alter the emulation to ignore the loop register, assume loop is always active
+			* Update documentation

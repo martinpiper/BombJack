@@ -149,13 +149,11 @@ DecompressMusic_escapeByte = * + 1
 .sampleLoopStartsHi		!fill 32 , 0
 .sampleLoopLengthsLo	!fill 32 , 0
 .sampleLoopLengthsHi	!fill 32 , 0
-.sampleLoopLengthsFlag	!fill 32 , 0
 
 .playFlag			!by 0
 .currentFrame		!by 0,0
 .waitUntil			!by 0,0
 .channelPlayingMask	!by 0
-.channelLoopingMask	!by 0
 
 MusicInit
 	; Setup optimised zeropage code
@@ -259,9 +257,6 @@ MusicPoll
 	sta .sampleLoopLengthsLo,y
 	jsr DecompressMusic_GetNextByte
 	sta .sampleLoopLengthsHi,y
-	; And calculate the flag
-	ora .sampleLoopLengthsLo,y
-	sta .sampleLoopLengthsFlag,y
 	jmp .getNextCommand
 
 .notkMusicCommandSetSampleData
@@ -354,9 +349,6 @@ MusicPoll
 	lda .channelPlayingMask
 	and .channelToMask,x
 	sta .channelPlayingMask
-	lda .channelLoopingMask
-	and .channelToMask,x
-	sta .channelLoopingMask
 
 	; Write the voice active mask
 	+MBus24Bit_SetAddress_A .regBaseEx , .regActiveControl
@@ -387,8 +379,6 @@ MusicPoll
 	sta CIA2PortBRS232
 	jsr DecompressMusic_GetNextByte
 	sta CIA2PortBRS232
-	lda .sampleLoopLengthsFlag,y
-	beq .noLoopLength
 
 	lda .sampleLoopStartsLo,y
 	sta CIA2PortBRS232
@@ -399,20 +389,6 @@ MusicPoll
 	lda .sampleLoopLengthsHi,y
 	sta CIA2PortBRS232
 
-	lda .channelLoopingMask
-	ora .channelToBit,x
-	sta .channelLoopingMask
-	jmp .overLoopLength
-
-.noLoopLength
-	; TODO: Hardware bug fix for non-looping samples, force the sample position/length to be zero
-	lda #0
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-	sta CIA2PortBRS232
-
-.overLoopLength
 	lda .channelPlayingMask
 	ora .channelToBit,x
 	sta .channelPlayingMask

@@ -261,7 +261,7 @@ Note: The full, but hidden by borders, screen resolution is 384x264 pixels.
 
 ### Audio
 
-Current audio hardware has 4 voices, each using 11 bytes. Extra bytes are used for voice loop enable and voice active bit masks after the voice registers.
+Current audio hardware has 4 voices, each using 11 bytes. Extra bytes are used for *currently unused byte* and voice active bit masks after the voice registers.
 
 Each voice register layout is as follows:
 	byte	register
