@@ -506,6 +506,12 @@ An entire place and route on a decent machine will take approximately 2 hours an
 ![Tracks](Layout2.PNG?raw=true "Tracks")
 
 The protoype boards have been built and documented here: https://www.youtube.com/playlist?list=PLAAYJEX1JbCPFzQDl8KOoVQR9_Us1lB46 or this project page: https://martin-piper.itch.io/bomb-jack-display-hardware
+
+
+I use Proteus simulation and PCB design: https://www.labcenter.com/
+And PCBWay PCB manufacture: https://pcbway.com/g/Xr8ZrI
+( Using the PCBWay referral link gives you a discount and also helps me reduce the cost of my next board. )
+
 	
 ## References
 
