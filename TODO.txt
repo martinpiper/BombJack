@@ -1,3 +1,10 @@
+* APU - Some code and supplier entries are missing from ICs
+
+
+* APU and backplane old bus and userport interface - Needs proper parts with suitable holes for long pin headers
+
+
+
 * The right-angled edge connectors can be moved back away from the board edge to protect their pins
 
 
