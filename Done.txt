@@ -3914,3 +3914,16 @@ All layouts now use V3.1
 			** Board updated to 9.3, reduced IC count :)
 			* Alter the emulation to ignore the loop register, assume loop is always active
 			* Update documentation
+
+
+
+
+* APU - Some code and supplier entries are missing from ICs
+	>> APU 9.4
+
+* APU and backplane old bus and userport interface - Needs proper parts with suitable holes for long pin headers
+	https://www.mouser.sg/c/connectors/headers-wire-housings/?contact%20gender=Socket%20%28Female%29&m=Mill-Max&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Socket
+	Multiple rows: https://www.mouser.sg/c/connectors/headers-wire-housings/?contact%20gender=Socket%20%28Female%29&m=Mill-Max&mounting%20angle=Straight&mounting%20style=Through%20Hole&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&type=Socket
+	
+	34 2 row - https://www.mouser.sg/ProductDetail/Mill-Max/803-43-034-10-001000?qs=iJx90KzHWBq7fAf92WBi9Q%3D%3D
+	>> APU 9.4
