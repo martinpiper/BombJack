@@ -2190,15 +2190,18 @@ All layouts now use V3.1
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
 	DIL14
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj
+	No cap: https://www.mouser.sg/ProductDetail/Mill-Max/110-43-314-41-001000?qs=YW4OkVwgsvIOJfZQG89gzQ%3D%3D
 	DIL16
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-316-41-801000?qs=WZeyYeqMOWd122xzWNZKKg%3D%3D
 	DIL18
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-13-318-41-801000?qs=WZeyYeqMOWcusVdSCp10bQ%3D%3D
 	DIL20
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-320-41-801000?qs=RC2ne4458IKe5rHuueYA%2FA%3D%3D
+	No cap: https://www.mouser.sg/ProductDetail/Mill-Max/110-43-320-41-001000?qs=IGgAdOvCTsRMu5ujNOAxjA%3D%3D
 	DIL24
 	Need narrow and wide (7.62 mm and 15.24 mm)
 	Narrow: https://www.mouser.sg/ProductDetail/Mill-Max/110-93-324-41-801000?qs=2mZjssE3HVXiFvwLlnaxRQ%3D%3D
+	Np cap: https://www.mouser.sg/ProductDetail/Mill-Max/110-99-324-41-001000?qs=WZeyYeqMOWdM8XxP27%252BcOg%3D%3D
 	Wide: https://www.mouser.sg/ProductDetail/Mill-Max/110-13-624-41-801000/?qs=WZeyYeqMOWcY1RNZipzOSA%3D%3D
 	DIL28 No cap
 	https://www.mouser.sg/ProductDetail/Mill-Max/110-43-328-41-001000?qs=IGgAdOvCTsQUPmob89wrvw%3D%3D
