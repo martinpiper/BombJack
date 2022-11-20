@@ -293,8 +293,20 @@
 	All sizes https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&mounting%20style=Through%20Hole&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208&supply%20voltage%20-%20max=5.5%20V
 	** 16k https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&memory%20size=16%20kbit&mounting%20style=Through%20Hole&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208&supply%20voltage%20-%20max=5.5%20V
 	** 20ns https://www.mouser.sg/c/semiconductors/memory-ics/sram/?access%20time=20%20ns&interface%20type=Parallel&memory%20size=16%20kbit&mounting%20style=Through%20Hole&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208&supply%20voltage%20-%20max=5.5%20V&sort=access%20time
-	
-	
+	** 16 kbit and 64 kbit alternatives: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?access%20time=15%20ns~~55%20ns&interface%20type=Parallel&mounting%20style=Through%20Hole&organization=2%20k%20x%208~~8%20k%20x%208&instock=y&rp=semiconductors%2Fmemory-ics%2Fsram%7C~Access%20Time%7C~Organization
+	*** At this point it might be better to just use 20ns 64 kbit everywhere?
+	>> There is a 15ns 64 kbit narrow (skinny) PDIP-28 option which is cheaper: https://www.mouser.sg/ProductDetail/Alliance-Memory/AS7C164A-15PCN?qs=Y%252BBGkTaltXsac5EeiguTUw%3D%3D
+	>>> Perhaps email Renesas Electronics and Alliance Memory to check on how long their options are likely to be around?
+
+
+
+
+* Sprites : Perhaps with the much faster option 15ns 64 kbit narrow (skinny) PDIP-28 (due to: "(6116SA20TDB) 2Kx8 SRAM 20ns is going end of life")
+	* There is maybe an option for over clocking the sprite scanline calculation just like the scaled sprites2 layer does?
+	* This would give the option of drawing many more normal sprites
+
+
+
 	
 * Sprites3
 * Scaled sprite rotation, if the EPROM is too slow, then split the pixel output across two clocks?
