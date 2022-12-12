@@ -297,6 +297,8 @@
 	*** At this point it might be better to just use 20ns 64 kbit everywhere?
 	>> There is a 15ns 64 kbit narrow (skinny) PDIP-28 option which is cheaper: https://www.mouser.sg/ProductDetail/Alliance-Memory/AS7C164A-15PCN?qs=Y%252BBGkTaltXsac5EeiguTUw%3D%3D
 	>>> Perhaps email Renesas Electronics and Alliance Memory to check on how long their options are likely to be around?
+		https://twitter.com/MartinPiper/status/1594159150476382211?s=20&t=QVV1iCGXh-cPtiAvdJ43ow
+		
 
 
 

@@ -98,6 +98,11 @@ kAPU_InstructionSize	= 4
 +MAPU 0
 }
 
+!macro MAPU_LoadEBSFromB1 {
+	+MAPU kAPU_Load_EBS
+	+MAPU kAPU_Incr_ADDRB1
+}
+
 !macro MAPU_LoadEADDRFromB1 {
 	+MAPU kAPU_Load_EADDRLo
 	+MAPU kAPU_Incr_ADDRB1

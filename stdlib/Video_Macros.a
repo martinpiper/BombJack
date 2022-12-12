@@ -9,6 +9,14 @@
 	+MWaitValueToMemoryCC .raster , CIA1TimerBLo
 }
 
+!macro MBus24Bit_WaitUntilRasterYWithA {
+.l1
+	ldy CIA1TimerBHi
+	bne .l1
+
+	+MWaitAToMemoryCC CIA1TimerBLo
+}
+
 kBus24Bit_VideoLayer_EBBS			= $01
 kBus24Bit_VideoLayer_Priority		= $9e08
 kBus24Bit_VideoLayer_Priority_Default		= %11100100
@@ -23,6 +31,9 @@ kBus24Bit_VideoLayer_XPos_OverscanExtent_Wide_right	= $152
 
 kBus24Bit_VideoLayer_LayersEnable		= $9e0a
 kBus24Bit_VideoLayer_LayersEnable_Default		= %00001111
+kBus24Bit_VideoLayer_LayersEnable_1				= %00000001
+kBus24Bit_VideoLayer_LayersEnable_124			= %00001011
+kBus24Bit_VideoLayer_LayersEnable_134			= %00001101
 kBus24Bit_VideoLayer_LayersEnable_234			= %00001110
 kBus24Bit_VideoLayer_LayersEnable_None			= %00000000
 
