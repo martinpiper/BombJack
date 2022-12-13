@@ -2,7 +2,7 @@
 
 
 
-* Extract Audio_Init (Audio.a) from MusicInit $ff
+* Done: Extract Audio_Init (Audio.a) from MusicInit $ff
 	Code tidy, create defines for the default audio setup
 
 

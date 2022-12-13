@@ -1,0 +1,8 @@
+!zn
+Audio_Init
+	; Audio register clear
+	+MBus24Bit_SetAddress_AXY $01 , $8000
+	lda #0
+	ldy #(11*4)+2
+	jsr Bus24Bit_WriteAForY
+	rts
