@@ -191,8 +191,10 @@ kAPU_InstructionSize	= 4
 	!by .ypos
 }
 
-!macro MAPUEmitChangePalette .r , .g , .b {
-	+MLittleEndian16Bit kBus24Bit_VideoLayer_Palette
+
+kMAPUEmitChangePaletteIndexHSyncAdjust = 32
+!macro MAPUEmitChangePaletteIndex .index , .r , .g , .b {
+	+MLittleEndian16Bit kBus24Bit_VideoLayer_Palette + (.index*2)
 	+MBus24Bit_MakePaletteRGB .r , .g , .b
 }
 !macro MAPUEmitChangeXScroll ~.addr {

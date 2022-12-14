@@ -268,4 +268,7 @@ Video_InitDisplaySpritesScrollsBackground
 	jsr Video_SetAddressTileBackgroundRegister
 	jsr Video_clearByte
 
+	jsr Video_SetAddressSprites2
+	jsr Video_clearFourBytes
+
 	rts
