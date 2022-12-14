@@ -94,6 +94,11 @@ kBus24Bit_Sprites2					= $9200
 kBus24Bit_Sprites2_MSBX				= $10
 kBus24Bit_Sprites2_MSBY				= $20
 
+kBus24Bit_Sprites2Planes_EBBS		= $08
+kBus24Bit_Sprites2Planes_0			= $2000
+kBus24Bit_Sprites2Planes_1			= $4000
+kBus24Bit_Sprites2Planes_2			= $8000
+kBus24Bit_Sprites2Planes_3			= $0000
 
 kBus24Bit_Video_FlipH = $40
 kBus24Bit_Video_FlipV = $80

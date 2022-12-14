@@ -14,6 +14,14 @@
 	sta CIA2PortBRS232
 }
 
+!macro MBus24Bit_Send8BitValueFromX {
+	stx CIA2PortBRS232
+}
+
+!macro MBus24Bit_Send8BitValueFromY {
+	sty CIA2PortBRS232
+}
+
 !macro MBus24Bit_SetAddress_AXY .ebbs , .addr {
 	lda #.ebbs
 	+MWordValueTo_XY .addr
