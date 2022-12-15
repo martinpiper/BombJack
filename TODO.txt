@@ -1,3 +1,21 @@
+* APU: Hardware test seems to show the APU will run its code and even the multiplex sprites and raster bars will work
+	But not in the CPU sending data to the APU (or externally?) interrupts APU processing
+	The more data sent to the APU the higher the chance the APU will hang
+	This indicates the bus arbitration is not functioning properly
+		>> Not entirely a surprise since the memory timing could have short pulses etc. These short pulses happen because the internal bus cut-off (going into RAM U17 APU data) and switch over can happen at any point
+	** This needs more testing with some simpler example code. Perhaps some raster bars and the CPU not sending any new memory updates either to the APU or the external bus...
+	* If no workaround can be found, perhaps an alternative design for the bus arbitration
+		For the internal bus writes (from the CPU) rely on the fact that they are relatively slow and store the last 24 bit address and data into temporary latches
+		Then if the current APU instruction is not flagging that it wants to write to external (InterceptBus) or internal (InternalMEWR) RAM then proceed to write and then reset the latches
+			The test will be if the latches EBBS is != 0 of course
+			This is a fully delayed and cooperative internal/external bus write model instead.
+			>> This would actually remove the need for any instruction retries.
+		
+		
+
+
+
+
 * The right-angled edge connectors can be moved back away from the board edge to protect their pins
 
 
