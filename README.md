@@ -1,8 +1,12 @@
 # Bomb Jack display hardware
 
-https://twitter.com/hashtag/RetroTTLVideoCard
-https://twitter.com/hashtag/RetroTTL
-#RetroTTL #RetroTTLVideoCard #C64 #Commodore64
+	* Main social media: https://mastodon.social/@martin_piper
+	* Don't have a Mastodon account? Click here for an invitation link: https://mastodon.social/invite/nuGxMC8z
+	* Itch IO project page: https://martin-piper.itch.io/bomb-jack-display-hardware
+	* YouTube channel: https://www.youtube.com/c/MartinPiper6502
+	* Buy me a ko-fi: https://ko-fi.com/martinpiper0750
+	* Legacy Twitter links: https://twitter.com/hashtag/RetroTTLVideoCard https://twitter.com/hashtag/RetroTTL
+	* Mostly using these tags: #RetroTTL #RetroTTLVideoCard #C64 #Commodore64
  
 This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 
