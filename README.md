@@ -12,13 +12,13 @@ This started life as a working schematic for the video display portion of the or
 
 The version 1.0 of this work was approximately interface pin and chip compatible with the original hardware schematic. Now since V2.0 the hardware has progressed to add extra features not present in the original, such as:
 
-	* Addressable RAM instead of ROMs
-	* Extra display blanking capability
-	* Tile X/Y pixel scroll
-	* 64x64 Tile X/Y offset, useful for fast hardware scrolling
-	* Full screen height sprites
-	* Background "mode7" screen that allows per-pixel affine transformation
-	* Background colour select (Can be rapidly updated during the frame for plasma effects)
+* Addressable RAM instead of ROMs
+* Extra display blanking capability
+* Tile X/Y pixel scroll
+* 64x64 Tile X/Y offset, useful for fast hardware scrolling
+* Full screen height sprites
+* Background "mode7" screen that allows per-pixel affine transformation
+* Background colour select (Can be rapidly updated during the frame for plasma effects)
 
 
 ## Background
