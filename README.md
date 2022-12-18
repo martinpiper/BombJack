@@ -6,7 +6,7 @@
 * YouTube channel: https://www.youtube.com/c/MartinPiper6502
 * Buy me a ko-fi: https://ko-fi.com/martinpiper0750
 * Legacy Twitter links: https://twitter.com/hashtag/RetroTTLVideoCard https://twitter.com/hashtag/RetroTTL
-* Mostly using these tags: #RetroTTL #RetroTTLVideoCard #C64 #Commodore64
+* Mostly using these tags: #MegaWang #RetroTTL #RetroTTLVideoCard #C64 #Commodore64 #electronics
  
 This started life as a working schematic for the video display portion of the original Bomb Jack arcade hardware. Why bother, you're probably asking? Well if you have to ask then perhaps you're not the right audience. :)
 

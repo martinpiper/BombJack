@@ -5,11 +5,18 @@
 		>> Not entirely a surprise since the memory timing could have short pulses etc. These short pulses happen because the internal bus cut-off (going into RAM U17 APU data) and switch over can happen at any point
 	** This needs more testing with some simpler example code. Perhaps some raster bars and the CPU not sending any new memory updates either to the APU or the external bus...
 	* If no workaround can be found, perhaps an alternative design for the bus arbitration
+		>> Workaround was found (see this commit APUAvoidRasters and APUAvoidRastersTable) however it is slow, so not suitable
 		For the internal bus writes (from the CPU) rely on the fact that they are relatively slow and store the last 24 bit address and data into temporary latches
-		Then if the current APU instruction is not flagging that it wants to write to external (InterceptBus) or internal (InternalMEWR) RAM then proceed to write and then reset the latches
-			The test will be if the latches EBBS is != 0 of course
-			This is a fully delayed and cooperative internal/external bus write model instead.
-			>> This would actually remove the need for any instruction retries.
+		If the latched EBBS is not 0 (indicating something is needed)
+			At the start of the APU instruction then:
+				Pause the instruction (not retry it) when trying to increment the PC and the current instruction is not trying to do any internal or external writes (which prioritises APU writes):
+					PCINCR = 0
+					and not InternalMEWR
+					and not InterceptBus
+				Execute the latched write by using the existing bus paths
+				Clear the latched data, which allows the APU to continue instructions
+			This is a fully delayed and cooperative internal/external bus write model instead
+				>> This would actually remove the need for any instruction retries.
 		
 		
 

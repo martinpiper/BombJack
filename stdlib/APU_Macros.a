@@ -211,3 +211,14 @@ kMAPUEmitChangePaletteIndexHSyncAdjust = 32
 !macro MAPU_VideoLayer_EmitPriority_NearToFar_A .near , .middleNear , .middleFar , .far {
 	!by (.far << 6) | (.middleFar << 4) | (.middleNear << 2) | .near
 }
+
+
+!macro MAPUAvoidRastersTableEntry .tstart , .tend {
+!if .tstart > .tend {
+	!error "MAPUAvoidRastersTableEntry problem"
+}
+!for .i , ((.tend + 1) + 10) - (.tstart-5) {
+!set .tpos = .tstart + .i-1
+	sta APUAvoidRastersTable + (255 - <(.tpos))
+}
+}
