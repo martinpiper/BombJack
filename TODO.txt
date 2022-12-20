@@ -56,7 +56,7 @@
 		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
 			Also there are a couple of extra cycles if the APU has to pause while a latched write happens
-		* Need to reconcile @Demo6 output with emulation and simulated APU
+		* Need to reconcile data and images for @Demo6 output with emulation and simulated APU
 
 
 
