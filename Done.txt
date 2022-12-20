@@ -3522,6 +3522,9 @@ All layouts now use V3.1
 		Which is 9 pixels
 	To get the DebugAPUOutput.txt working in the simulation with the DG needs:
 		The data until the display is enabled, no waits because the display doesn't generate timing data when disabled, obviously.
+			This means looking for: d$9e000170
+			Selecting all lines above it
+			Search/replace in selection "w$" with ";w$"
 		0.000000150
 		0.000000125
 		0.000000100
