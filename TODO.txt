@@ -44,7 +44,7 @@
 					$4100 $11 didn't write because its write happens while the previous cached write is being written
 						PCINCR = 0.8 MHZ so data clock back to 500KHz
 		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
-		
+		* Need to reconcile @Demo6 output with emulation and simulated APU
 
 
 
