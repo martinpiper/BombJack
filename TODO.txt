@@ -47,7 +47,10 @@
 		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
 		* Need to reconcile @Demo6 output with emulation and simulated APU
-			Remember to enable tree movement and remove the APUAvoidRastersTable code...
+			Done: Remember to enable tree movement and remove the APUAvoidRastersTable code...
+				; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
+				; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
+				; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
 
 
 

@@ -49,6 +49,8 @@ APU_SetAddressAPUData
 	sta CIA2PortBRS232
 	rts
 
+; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
+!if 0 {
 !align 255 , 0
 APUAvoidRastersTable
 	!fill 256 , 0
@@ -63,3 +65,4 @@ APUAvoidRasters
 
 	ldx zeroPage_Temp0
 	rts
+}
