@@ -59,6 +59,7 @@
 
 ;	+MAPU kAPU_WaitForEqualsHV
 	
+	; Value to store in $9820
 	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1
 
@@ -75,6 +76,7 @@
 
 	+MAPU kAPU_WaitForEqualsHV
 
+	; Value to store in $9821
 	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1
 
@@ -105,6 +107,7 @@
 	+MAPU kAPU_Load_EADDRLo
 	+MAPU kAPU_Incr_ADDRB1
 
+	; And values to write back
 	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 

@@ -10,6 +10,10 @@ d0
 d$20000200
 d$20000201
 
+; Try writing sprite debug memory
+;d$98000101
+
+
 ; PC		12 bits of APU PC (the other half of the 8 KB RAM is used for potential decision points, conditional branching instructions)
 ; A			8 bit register
 ; WAIT		32 bit value to wait for when comparing RHRV (and other signals)
@@ -151,7 +155,7 @@ d$421002fe
 d$0
 w$ff01ff00,$f9004100
 d$0
-; Why does this write fail?
+; Another write here
 d$421002fd
 
 

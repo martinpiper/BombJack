@@ -7,17 +7,43 @@
 	* If no workaround can be found, perhaps an alternative design for the bus arbitration
 		>> Workaround was found (see this commit APUAvoidRasters and APUAvoidRastersTable) however it is slow, so not suitable
 		For the internal bus writes (from the CPU) rely on the fact that they are relatively slow and store the last 24 bit address and data into temporary latches
-		If the latched EBBS is not 0 (indicating something is needed)
-			At the start of the APU instruction then:
-				Pause the instruction (not retry it) when trying to increment the PC and the current instruction is not trying to do any internal or external writes (which prioritises APU writes):
-					PCINCR = 0
-					and not InternalMEWR
-					and not InterceptBus
-				Execute the latched write by using the existing bus paths
-				Clear the latched data, which allows the APU to continue instructions
-			This is a fully delayed and cooperative internal/external bus write model instead
-				>> This would actually remove the need for any instruction retries.
-		
+		>> Done: Instruction and data selection (writes) no longer reset (retry) the APU instruction
+			The temporary latch writes can use the _IMEWR (IEMEMWRITE)
+			The register storage for _RESET and ENABLEAPU must still use original IEBS IEA IED and _IMEWR
+			The internal RAMs the BUSCHOICE must now use the external EBBS EA ED and _MEWR
+				This would theoretically mean the APU self write its internal memory using external writes, which is OK, but not ideal. Still use the internal write flag.
+			Using a new 1-of-4 to output to EBS EA ED and _MEWR _MERE (as before):
+			** When the APU is RESET/disabled then existing write timings from the userport interface are used
+			** Only when the APU is active are new write timings used
+				If _RAMSWITCHTOPASSTHROUGH = 0 then use the original IEBS IEA IED IEMEMWRITE IEMEMREAD
+				If _RAMSWITCHTOPASSTHROUGH = 1 and InterceptBus = 1 then use RINT IDATA _ExternalMEWRPulse 
+				If _RAMSWITCHTOPASSTHROUGH = 1 and InterceptBus = 0 then use latched values logic:
+					USECACHE and the eventual new generated write pulse are created from a counter and demuxers (like the API instruction)
+					If the latched EBBS (TLIEBS) is not 0 (indicating something is needed)
+						At the start of the APU instruction then:
+							Pause the instruction (not retry it) when trying to increment the PC and the current instruction is not trying to do any internal or external writes (which prioritises APU writes):
+								PCINCR = 0
+								and not InternalMEWR
+								and not InterceptBus
+							Execute the latched write by using the new 1-of-4 paths: Create a USECACHE and new write pulse (per above note for USECACHE)
+								>> Update NoLatchedWrite on +ve PCINCR
+							>> Needs _LATCHEDWRITEPulse
+							Clear the latched data (end of the generated write cycle) using a new input into _FLUSHCACHE, which allows the APU to continue instructions
+						This is a fully delayed and cooperative internal/external bus write model instead
+							>> This would actually remove the need for any instruction retries.
+		* Debugging notes
+			During reset and disabled period, instruction and data writes work
+			** Latched writes "b$11,b$12,b$13,b$14,b$15,b$16,b$17" are unreliable
+				When writing $4102 $13
+				Oh bother, it's because the APU instruction is waiting for a HV position
+				Still unreliable, but $4100 $11 didn't write
+				Break on LatchedWriteDesired
+					Debug data clock reverted back to 1M
+					>> There needs to be some logic that reads LatchedWriteProceed if it's waiting
+						InstrIsWaiting = 1 when instruction is waiting
+					$4100 $11 didn't write because its write happens while the previous cached write is being written
+						PCINCR = 0.8 MHZ so data clock back to 500KHz
+		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 		
 
 

@@ -1,6 +1,7 @@
 Feature: Tests APU design
 
   Tests the APU design by validating files output by the simulation.
+  Run the simulation for at least 0.16 seconds.
 
   Scenario: Validates expected memory accesses for internal APU instruction memory
     Given open file "output\DebugAPUOutput.txt" for reading
@@ -23,14 +24,14 @@ Feature: Tests APU design
     Given open file "output\DebugAPUOutputInternal.txt" for reading
     And skip line
     Then expect the next line to contain "d$02080000"
-    Then expect the next line to contain "delta:0.000003"
+    Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$02090010"
-    Then expect the next line to contain "delta:0.000003"
+    Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$020a0002"
     Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$020b0008"
 
-    Then expect the next line to contain "delta:0.000006"
+    Then expect the next line to contain "delta:0.000007"
     Then expect the next line to contain "d$02080008"
     Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$02090002"
@@ -40,7 +41,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$020b0000"
 
 
-    Then expect the next line to contain "delta:0.000487"
+    Then expect the next line to contain "delta:0.000488"
     Then expect the next line to contain "d$02080000"
     Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$02090010"
@@ -65,13 +66,9 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98200111"
     And skip line
     Then expect the next line to contain "d$98210112"
-    # Ignore whatever write is captured, as it will be retried
-    And skip line
-    And skip line
-    Then expect the next line to contain "delta:0.000001"
-    # Retry external write due to APU data memory write
-    Then expect the next line to contain "d$98210112"
-    Then expect the next line to contain "delta:0.000015"
+
+    # External write during APU data memory write
+    Then expect the next line to contain "delta:0.000012"
     Then expect the next line to contain "d$98200101"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98210101"
@@ -87,7 +84,7 @@ Feature: Tests APU design
 
     Then expect the next line to contain "delta:0.03301"
     Then expect the next line to contain "d$98200111"
-    Then expect the next line to contain "delta:0.0005"
+    Then expect the next line to contain "delta:0.0004"
     Then expect the next line to contain "d$98210112"
     Then expect the next line to contain "delta:0.000010"
     Then expect the next line to contain "d$98200101"
@@ -130,7 +127,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98020110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98030110"
-    Then expect the next line to contain "delta:0.000002"
+    Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98040110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98050110"
@@ -142,7 +139,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98080110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98090110"
-    Then expect the next line to contain "delta:0.000002"
+    Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$980a0110"
 
 
