@@ -43,14 +43,20 @@
 						InstrIsWaiting = 1 when instruction is waiting
 					$4100 $11 didn't write because its write happens while the previous cached write is being written
 						PCINCR = 0.8 MHZ so data clock back to 500KHz
+		Done: Remember to enable tree movement and remove the APUAvoidRastersTable code...
+			; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
+			; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
+			; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
+		* Done: Check the _MEWR timings and address setup timings are balanced, for (all in ns):
+											Bus			Write time		Pre			Post
+			_RAMSWITCHTOPASSTHROUGH = 0		395			120				155			120
+			InterceptBus = 1				580			182				202			195
+			LatchedWriteActive = 1			512			160				225			132	(not centred)
 		TODO:
 		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
+			Also there are a couple of extra cycles if the APU has to pause while a latched write happens
 		* Need to reconcile @Demo6 output with emulation and simulated APU
-			Done: Remember to enable tree movement and remove the APUAvoidRastersTable code...
-				; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
-				; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
-				; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
 
 
 
