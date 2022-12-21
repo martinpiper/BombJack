@@ -52,20 +52,22 @@
 			A5 _RAMSWITCHTOPASSTHROUGH = 0		2000 (500KHz)			395			120				155			120
 			A3 InterceptBus = 1					1650					580			182				202			195
 			A4 LatchedWriteActive = 1			2230					512			160				225			132	(not centred)
-		* Done: Need to reconcile data and images for @Demo6 output with emulation and simulated APU
+		Done:
+		* Need to reconcile data and images for @Demo6 output with emulation and simulated APU
 			See: "* For APU validation when running @Demo6:"
-		* Done: Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
+		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
 			Also there are a couple of extra cycles if the APU has to pause while a latched write happens
-		* Done: Final feature file validation
-		* Done: Replace 6116SA20TPGI with https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
-		* Done: Layout group and packages
+		* Final feature file validation
+		* Replace 6116SA20TPGI with https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
+		* Layout group and packages
+		* Check for merged devices
 		TODO:
-			The emulation data output debugData.txt works. There are not reconciliation errors with simulated APU.
+			The emulation data output debugData.txt works. There are no reconciliation errors with simulated APU.
 				But using the APU simulated output DebugAPUOutput.txt generates some problematic video issues and some memory writes seem to be wrong.
 					This looks like a timing issue to do with the simulated APU output using more frequent waits?
-			Check for merged devices
 			Test place and route
+				Needed a bigger layout
 			
 
 
