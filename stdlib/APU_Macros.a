@@ -64,6 +64,16 @@ kAPU_InstructionSize	= 4
 !previouscontext
 
 !ifdef kAPU_previousInstruction {
+
+!if .i & kAPU_WaitForEqualsHV {
+!if kAPU_previousInstruction & (kAPU_ExternalMEWR | kAPU_InternalMEWR) {
+!if .i & (kAPU_ExternalMEWR | kAPU_InternalMEWR) {
+	!error "kAPU_WaitForEqualsHV should not write internal or external memory in the current or previous instruction"
+}
+}
+}
+
+
 !if kAPU_previousInstruction & kAPU_Incr_ADDRB1 {
 !if .i & kAPU_Incr_ADDRB1 {
 	!error "Consecutive kAPU_Incr_ADDRB1 detected"
