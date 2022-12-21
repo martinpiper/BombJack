@@ -41,7 +41,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$020b0000"
 
 
-    Then expect the next line to contain "delta:0.000488"
+    Then expect the next line to contain "delta:0.000486"
     Then expect the next line to contain "d$02080000"
     Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$02090010"
@@ -70,7 +70,7 @@ Feature: Tests APU design
     # External write during APU data memory write
     Then expect the next line to contain "delta:0.000013"
     Then expect the next line to contain "d$98200101"
-    Then expect the next line to contain "delta:0.000001"
+    Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$98210101"
 
     Then expect the next line to contain "delta:0.00002"
@@ -133,7 +133,7 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98050110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98060110"
-    Then expect the next line to contain "delta:0.000001"
+    Then expect the next line to contain "delta:0.000002"
     Then expect the next line to contain "d$98070110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$98080110"

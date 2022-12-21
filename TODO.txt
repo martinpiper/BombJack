@@ -57,10 +57,16 @@
 		* Done: Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
 			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
 			Also there are a couple of extra cycles if the APU has to pause while a latched write happens
+		* Done: Final feature file validation
+		* Done: Replace 6116SA20TPGI with https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
+		* Done: Layout group and packages
 		TODO:
-			Layout group and packages
+			The emulation data output debugData.txt works. There are not reconciliation errors with simulated APU.
+				But using the APU simulated output DebugAPUOutput.txt generates some problematic video issues and some memory writes seem to be wrong.
+					This looks like a timing issue to do with the simulated APU output using more frequent waits?
 			Check for merged devices
 			Test place and route
+			
 
 
 
@@ -364,7 +370,11 @@
 	>> There is a 15ns 64 kbit narrow (skinny) PDIP-28 option which is cheaper: https://www.mouser.sg/ProductDetail/Alliance-Memory/AS7C164A-15PCN?qs=Y%252BBGkTaltXsac5EeiguTUw%3D%3D
 	>>> Perhaps email Renesas Electronics and Alliance Memory to check on how long their options are likely to be around?
 		https://twitter.com/MartinPiper/status/1594159150476382211?s=20&t=QVV1iCGXh-cPtiAvdJ43ow
-		
+	>> Last APU build from PCBWay used: 6116LA20TPG
+		Replace with one of the following:
+		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116SA20TPG?qs=JcGQCygHkIYbYYjhCwPjqQ%3D%3D
+		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPGI?qs=GVScuG1d83j4PLGc6sWfNQ%3D%3D
+		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
 
 
 
