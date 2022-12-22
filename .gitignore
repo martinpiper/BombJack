@@ -3,6 +3,7 @@
 */Debug/
 */Release/
 */.vs/
+.idea/
 
 bestsave.rte
 Bomb Jack.sts

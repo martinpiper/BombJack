@@ -62,10 +62,57 @@
 		* Replace 6116SA20TPGI with https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
 		* Layout group and packages
 		* Check for merged devices
-		TODO:
-			The emulation data output debugData.txt works. There are no reconciliation errors with simulated APU.
+		* The emulation data output debugData.txt works. There are no reconciliation errors with simulated APU.
 				But using the APU simulated output DebugAPUOutput.txt generates some problematic video issues and some memory writes seem to be wrong.
 					This looks like a timing issue to do with the simulated APU output using more frequent waits?
+					>> Part of the problem was the next HV wait being too soon, so the data gen was missing the event.
+						This was most obvious by the screen not rendering raster bar effects for part of the display period
+						This was fixed in the data generator where if the next wait event happens during a write it will be processed
+					Some update issues remain with the APU simulated data, but not from the emulated output. Most likely also timing based.
+						>> Check the Sprites2 writes, since their first frame is not correct
+							Recon is fine...
+							Try disabling the waits for Sprites2 memory and visually check
+							WTF!! C:\work\c64\VideoHardware\target\debugData - Copy.txt has:
+								d$9200010b
+								d$920101b4
+								d$92020114
+								d$92030158
+								d$92040120
+								d$92050133
+							This is expected. But "C:\work\BombJack\output\DebugAPUOutput - Copy.txt" has:
+								d$9200010b
+								;@time:0.032650
+								;delta:0.000002
+								;w$ff03ff00,$f2005d00
+								d$920101b4
+								;@time:0.032652
+								;delta:0.000002
+								;w$ff03ff00,$f2006900
+								d$92020114
+								;@time:0.032656
+								;delta:0.000004
+								;w$ff03ff00,$f2028200
+								d$92040120
+								;@time:0.032658
+								;delta:0.000002
+								;w$ff03ff00,$f2028e00
+								d$92050133
+							The write d$92030158 is completely missing?!!!
+							Even worse the recon isn't showing any differences!!!
+								python C:\Work\BombJack\ReconcileData\ReconcileData.py "C:\work\c64\VideoHardware\target\debugData - Copy.txt" "C:\work\BombJack\output\DebugAPUOutput - Copy.txt"
+								WTFx2 BombJack\ReconcileData\ReconcileData.py has a bug where it wasn't filtering out audio writes properly
+									oh FFS
+								The missing write d$92030158 is present in "C:\work\c64\VideoHardware\target\debugDataJustUserPort.txt"
+								So the new APU must be missing it...
+								Need a breakpoint on attempting to write that value...
+								Found the issue, the positive edge on USECLK meant that sometimes USECACHE was very short and basically skipped
+									This meant the value was not cached and caused missing writes
+									Capture for output\DebugAPUOutput.txt has "ignore zero writes" enabled, which made it harder to spot
+									Adding an extra USECLK input for the latch set worked. This gives adequate time from the negative edge to the next positive edge to signal USECACHE
+								>> Data recon and image recon passed
+							>> Debug image 7 is wrong when using emulation output, but correct when using simulated APU output.	
+								APU simulated output image animation looks OK.
+		TODO:
 			Test place and route
 				Needed a bigger layout
 			

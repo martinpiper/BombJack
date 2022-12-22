@@ -7,10 +7,11 @@ def get_data(file):
 
     while True:
         line = file.readline()
-        file.thisLine = file.thisLine + 1
-        line = line.strip()
         if not line:
             return None
+
+        file.thisLine = file.thisLine + 1
+        line = line.strip()
 
         idx = line.find('d$')
         if idx == -1:
@@ -28,7 +29,7 @@ def get_data(file):
             continue
 
         # Ignore Audio writes as these come from the CPU not APU
-        if (bus & 0x80000100) == 0x80000100:
+        if (bus & 0xff00ff00) == 0x80000100:
             continue
 
         return line
