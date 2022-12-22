@@ -115,6 +115,9 @@
 		TODO:
 			Test place and route
 				Needed a bigger layout
+				8 layers, more compact: V9.4\APU - Routed - Tightly 2.pdsprj
+					Imported: Eight layers.LTF
+						Needed some planes created, layer pairs, and design rules signals to layers.
 			
 
 
