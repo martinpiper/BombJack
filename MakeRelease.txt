@@ -34,11 +34,12 @@
 * For PCBWay export and quote
 		https://www.pcbway.com/blog/PCB_Layout_Software/How_to_generate_BOM_and_Pick_and_Place_File_in_Proteus_92f4eea0.html
 	Toolbar->Bill of Materials ($ icon)
+		Select References: Individual
 		Use columns
 			Value
-			Stock Code
+			Stock Code	(Might need to un-tick external links)
 			Description
-			Group Layer
+			Group Layer	(Might need to add this as GROUP : Group Layer)
 			PCB Package
 			Supplier (not needed when not using IC sockets)
 			Placed
