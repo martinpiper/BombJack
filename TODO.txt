@@ -1,124 +1,28 @@
-* APU: Hardware test seems to show the APU will run its code and even the multiplex sprites and raster bars will work
-	But not in the CPU sending data to the APU (or externally?) interrupts APU processing
-	The more data sent to the APU the higher the chance the APU will hang
-	This indicates the bus arbitration is not functioning properly
-		>> Not entirely a surprise since the memory timing could have short pulses etc. These short pulses happen because the internal bus cut-off (going into RAM U17 APU data) and switch over can happen at any point
-	** This needs more testing with some simpler example code. Perhaps some raster bars and the CPU not sending any new memory updates either to the APU or the external bus...
-	* If no workaround can be found, perhaps an alternative design for the bus arbitration
-		>> Workaround was found (see this commit APUAvoidRasters and APUAvoidRastersTable) however it is slow, so not suitable
-		For the internal bus writes (from the CPU) rely on the fact that they are relatively slow and store the last 24 bit address and data into temporary latches
-		>> Done: Instruction and data selection (writes) no longer reset (retry) the APU instruction
-			The temporary latch writes can use the _IMEWR (IEMEMWRITE)
-			The register storage for _RESET and ENABLEAPU must still use original IEBS IEA IED and _IMEWR
-			The internal RAMs the BUSCHOICE must now use the external EBBS EA ED and _MEWR
-				This would theoretically mean the APU self write its internal memory using external writes, which is OK, but not ideal. Still use the internal write flag.
-			Using a new 1-of-4 to output to EBS EA ED and _MEWR _MERE (as before):
-			** When the APU is RESET/disabled then existing write timings from the userport interface are used
-			** Only when the APU is active are new write timings used
-				If _RAMSWITCHTOPASSTHROUGH = 0 then use the original IEBS IEA IED IEMEMWRITE IEMEMREAD
-				If _RAMSWITCHTOPASSTHROUGH = 1 and InterceptBus = 1 then use RINT IDATA _ExternalMEWRPulse
-				If _RAMSWITCHTOPASSTHROUGH = 1 and InterceptBus = 0 then use latched values logic:
-					USECACHE and the eventual new generated write pulse are created from a counter and demuxers (like the API instruction)
-					If the latched EBBS (TLIEBS) is not 0 (indicating something is needed)
-						At the start of the APU instruction then:
-							Pause the instruction (not retry it) when trying to increment the PC and the current instruction is not trying to do any internal or external writes (which prioritises APU writes):
-								PCINCR = 0
-								and not InternalMEWR
-								and not InterceptBus
-							Execute the latched write by using the new 1-of-4 paths: Create a USECACHE and new write pulse (per above note for USECACHE)
-								>> Update NoLatchedWrite on +ve PCINCR
-							>> Needs _LATCHEDWRITEPulse
-							Clear the latched data (end of the generated write cycle) using a new input into _FLUSHCACHE, which allows the APU to continue instructions
-						This is a fully delayed and cooperative internal/external bus write model instead
-							>> This would actually remove the need for any instruction retries.
-		* Debugging notes
-			During reset and disabled period, instruction and data writes work
-			** Latched writes "b$11,b$12,b$13,b$14,b$15,b$16,b$17" are unreliable
-				When writing $4102 $13
-				Oh bother, it's because the APU instruction is waiting for a HV position
-				Still unreliable, but $4100 $11 didn't write
-				Break on LatchedWriteDesired
-					Debug data clock reverted back to 1M
-					>> There needs to be some logic that reads LatchedWriteProceed if it's waiting
-						InstrIsWaiting = 1 when instruction is waiting
-					$4100 $11 didn't write because its write happens while the previous cached write is being written
-						PCINCR = 0.8 MHZ so data clock back to 500KHz
-		Done: Remember to enable tree movement and remove the APUAvoidRastersTable code...
-			; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
-			; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
-			; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
-		* Done: Check the _MEWR timings and address setup timings are balanced, for (all in ns):
-												Same write period		Bus			Write time		Pre			Post
-			A5 _RAMSWITCHTOPASSTHROUGH = 0		2000 (500KHz)			395			120				155			120
-			A3 InterceptBus = 1					1650					580			182				202			195
-			A4 LatchedWriteActive = 1			2230					512			160				225			132	(not centred)
-		Done:
-		* Need to reconcile data and images for @Demo6 output with emulation and simulated APU
-			See: "* For APU validation when running @Demo6:"
-		* Update emulation: When InstrIsWaiting check (debug break/error) that there are no InternalMEWR InterceptBus operations in the previous or current instruction
-			Also any userport writes must now be delayed, to emulate the latched memory write behaviour including delays for any InternalMEWR/InterceptBus and no delays while HV wait
-			Also there are a couple of extra cycles if the APU has to pause while a latched write happens
-		* Final feature file validation
-		* Replace 6116SA20TPGI with https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
-		* Layout group and packages
-		* Check for merged devices
-		* The emulation data output debugData.txt works. There are no reconciliation errors with simulated APU.
-				But using the APU simulated output DebugAPUOutput.txt generates some problematic video issues and some memory writes seem to be wrong.
-					This looks like a timing issue to do with the simulated APU output using more frequent waits?
-					>> Part of the problem was the next HV wait being too soon, so the data gen was missing the event.
-						This was most obvious by the screen not rendering raster bar effects for part of the display period
-						This was fixed in the data generator where if the next wait event happens during a write it will be processed
-					Some update issues remain with the APU simulated data, but not from the emulated output. Most likely also timing based.
-						>> Check the Sprites2 writes, since their first frame is not correct
-							Recon is fine...
-							Try disabling the waits for Sprites2 memory and visually check
-							WTF!! C:\work\c64\VideoHardware\target\debugData - Copy.txt has:
-								d$9200010b
-								d$920101b4
-								d$92020114
-								d$92030158
-								d$92040120
-								d$92050133
-							This is expected. But "C:\work\BombJack\output\DebugAPUOutput - Copy.txt" has:
-								d$9200010b
-								;@time:0.032650
-								;delta:0.000002
-								;w$ff03ff00,$f2005d00
-								d$920101b4
-								;@time:0.032652
-								;delta:0.000002
-								;w$ff03ff00,$f2006900
-								d$92020114
-								;@time:0.032656
-								;delta:0.000004
-								;w$ff03ff00,$f2028200
-								d$92040120
-								;@time:0.032658
-								;delta:0.000002
-								;w$ff03ff00,$f2028e00
-								d$92050133
-							The write d$92030158 is completely missing?!!!
-							Even worse the recon isn't showing any differences!!!
-								python C:\Work\BombJack\ReconcileData\ReconcileData.py "C:\work\c64\VideoHardware\target\debugData - Copy.txt" "C:\work\BombJack\output\DebugAPUOutput - Copy.txt"
-								WTFx2 BombJack\ReconcileData\ReconcileData.py has a bug where it wasn't filtering out audio writes properly
-									oh FFS
-								The missing write d$92030158 is present in "C:\work\c64\VideoHardware\target\debugDataJustUserPort.txt"
-								So the new APU must be missing it...
-								Need a breakpoint on attempting to write that value...
-								Found the issue, the positive edge on USECLK meant that sometimes USECACHE was very short and basically skipped
-									This meant the value was not cached and caused missing writes
-									Capture for output\DebugAPUOutput.txt has "ignore zero writes" enabled, which made it harder to spot
-									Adding an extra USECLK input for the latch set worked. This gives adequate time from the negative edge to the next positive edge to signal USECACHE
-								>> Data recon and image recon passed
-							>> Debug image 7 is wrong when using emulation output, but correct when using simulated APU output.	
-								APU simulated output image animation looks OK.
-		TODO:
-			Test place and route
-				Needed a bigger layout
-				8 layers, more compact: V9.4\APU - Routed - Tightly 2.pdsprj
-					Imported: Eight layers.LTF
-						Needed some planes created, layer pairs, and design rules signals to layers.
-			
+* User port: Expand this C64 user port breakout board to include the other data lines. Then I could add the ability to read RAM/registers from the video/audio expansion hardware.
+	This would include the ability to read the result of external maths calculations...
+	20/24 pins for the header?
+		https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Cable&contact%20gender=Pin%20%28Male%29&m=Samtec&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20positions=20%20Position~~26%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Shrouded&instock=y&rp=connectors%2Fheaders-wire-housings%7C~Number%20of%20Positions
+		
+	Cable? https://www.mouser.sg/c/wire-cable/cable-assemblies/ribbon-cables-idc-cables/?q=idc&connector%20end%20a%20pin%20count=20%20Position~~24%20Position&connector%20end%20b%20pin%20count=20%20Position~~24%20Position&gender=Female%20%2F%20Female&pitch=2.54%20mm&type=IDC%20Header%20Cable~~IDC%20Socket%20Cable&instock=y&rp=wire-cable%2Fcable-assemblies%2Fribbon-cables-idc-cables%7C~Type%7C~Connector%20End%20A%20Pin%20Count%7C~Connector%20End%20B%20Pin%20Count
+	>> Cable and header cost/availability is a factor in the design
+	Edge connector options if the EDAC one on the board isn't available? https://www.mouser.sg/c/connectors/card-edge-connectors/standard-card-edge-connectors/?board%20thickness=1.57%20mm&mounting%20angle=Straight~~Vertical&number%20of%20positions=24%20Position&pitch=3.96%20mm&instock=y&rp=connectors%2Fcard-edge-connectors%2Fstandard-card-edge-connectors%7C~Mounting%20Angle
+	
+	These signals (CIA2PortASerialBusVICBank		= $dd00		; 56576) could be used to allow individual EBS/ADDR/DATA/direction (read/write) to be selected
+		; Bit 2: RS232 TXD line, output bit.
+		; Bit 3: Serial bus ATN OUT; 0 = High; 1 = Low.
+		; Bit 4: Serial bus CLOCK OUT; 0 = High; 1 = Low.
+		; Bit 5: Serial bus DATA OUT; 0 = High; 1 = Low.
+	These 4 bits would give 16 addressable registers in the user port interface
+		Or at the very least 4 modes of operation...
+	Would need to check read signal operation with the DDR set appropriately. Port pin 8_PC2
+	>> Would also need to check the schematic to make sure the "seial bus" isn't connected to the serial port? To avoid hitting the disk drive...
+
+
+
+
+* APU: To get more instruction options, it would be possible to use the control register to allow extra RAM addressing for the instruction and data RAMs.
+	This would allow more data selection options, more registers, and more ALU options.
+
 
 
 
