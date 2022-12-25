@@ -7,6 +7,8 @@
 		0
 	Remember to choose Rounded Radius 12th
 	Also make the slot stack width/height smaller like 1.9mm x 30th
+	https://www.pcbway.com/pcb_prototype/Plated_through_slots.html
+		The min side of plated slot is 0.5mm for PCBWay. For unplated slot, the min size is 0.8mm width. 
 
 
 
