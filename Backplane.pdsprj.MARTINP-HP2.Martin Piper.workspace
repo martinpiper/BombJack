@@ -11,17 +11,17 @@
   </WINDOW>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000003" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
+   <editor metric="0" gridmajor="254000" mode="00000000" zoom="-1" scale="1106" flipped="0" gridminor="63500" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="31750">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-1470330" y="497720"/>
+    <centre x="8105500" y="8570115"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000003" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
+  <editor metric="0" gridmajor="254000" mode="00000000" zoom="-1" scale="1106" flipped="0" gridminor="63500" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="31750">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-1470330" y="497720"/>
+   <centre x="8105500" y="8570115"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>

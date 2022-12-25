@@ -1,3 +1,9 @@
+* Backplane: Solid relief for power pins
+	Slot stack for the other power plug part? https://labcenter.s3.amazonaws.com/support/Slotted_Pad.webm
+
+
+
+
 * User port: Expand this C64 user port breakout board to include the other data lines. Then I could add the ability to read RAM/registers from the video/audio expansion hardware.
 	This would include the ability to read the result of external maths calculations...
 	20/24 pins for the header?
@@ -16,9 +22,21 @@
 		Or at the very least 4 modes of operation...
 	Would need to check read signal operation with the DDR set appropriately. Port pin 8_PC2
 	>> Would also need to check the schematic to make sure the "seial bus" isn't connected to the serial port? To avoid hitting the disk drive...
+	20 positions:
+		Headers: https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Cable&contact%20gender=Pin%20%28Male%29&m=Samtec&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20positions=20%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Shrouded&instock=y
+		Cables, be careful of reversed and polarity!: https://www.mouser.sg/c/wire-cable/cable-assemblies/ribbon-cables-idc-cables/?q=idc&connector%20end%20a%20pin%20count=20%20Position&connector%20end%20b%20pin%20count=20%20Position&gender=Female%20%2F%20Female&pitch=2.54%20mm&type=IDC%20Header%20Cable~~IDC%20Socket%20Cable&instock=y&rp=wire-cable%2Fcable-assemblies%2Fribbon-cables-idc-cables%7C~Type
+	Previous board used: TST-107-01-G-D : https://www.mouser.sg/ProductDetail/Samtec/TST-107-01-G-D?qs=FESYatJ8odJB1y56XqI29Q%3D%3D
+	Lots of headers: https://www.mouser.sg/ProductDetail/Samtec/TST-110-01-G-D?qs=rU5fayqh%252BE1iIX99OHEFCg%3D%3D
+	Only long 9in cable without reverse!: https://www.mouser.sg/ProductDetail/Samtec/HCSD-10-D-09.00-01-N?qs=Cqqh%252BS766wkrU15Kulb0SQ%3D%3D
+		Added cable options to schematic
+	Button: https://www.amazon.com/MakerSpot-Momentary-Tactile-Breadboard-Friendly/dp/B06XT3FLVM
+		Options: https://www.mouser.sg/ProductDetail/TE-Connectivity-PB/FSM2JRT?qs=g%252BEszo6zu8OVk6hda53nSw%3D%3D
+			But .197 hole width
+				Can use package TBLOCK-I2
+					Pins edited to C-90-40
 
 
-
+			
 
 * APU: To get more instruction options, it would be possible to use the control register to allow extra RAM addressing for the instruction and data RAMs.
 	This would allow more data selection options, more registers, and more ALU options.

@@ -1,12 +1,12 @@
 (PCB UserPortBreakout
  (parser
   (host_cad ARES)
-  (host_version 8.11 SP0)
+  (host_version 8.15 SP1)
  )
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -40.12700 -22.62700 37.62700 10.12700))
+  (boundary (rect pcb -43.18000 -22.86000 45.72000 14.60500))
   (boundary (path signal 0.20320 -40.00000 -22.50000 37.50000 -22.50000 37.50000 10.00000
    -40.00000 10.00000 -40.00000 -22.50000))
   (flip_style mirror_first)
@@ -26,6 +26,32 @@
   (layer I13 (type signal) (direction off))
   (layer I14 (type signal) (direction off))
   (layer BOT (type signal) (direction vertical))
+  (region VIAS1TOP
+   (rect TOP -34.29000 -7.62000 40.64000 12.70000)
+   (rule
+    (clearance 0.88900)
+    (clearance 0.25400 (type wire_via))
+    (clearance 0.25400 (type wire_smd))
+    (clearance 0.25400 (type wire_pin))
+    (clearance 0.25400 (type wire_wire))
+    (clearance 0.88900 (type via_pin))
+    (clearance 0.88900 (type via_via))
+    (clearance 0.88900 (type via_smd))
+   )
+  )
+  (region VIAS2TOP
+   (rect TOP -43.18000 -22.86000 45.72000 -7.62000)
+   (rule
+    (clearance 1.27000)
+    (clearance 0.25400 (type wire_via))
+    (clearance 0.25400 (type wire_smd))
+    (clearance 0.25400 (type wire_pin))
+    (clearance 0.25400 (type wire_wire))
+    (clearance 1.27000 (type via_pin))
+    (clearance 1.27000 (type via_via))
+    (clearance 1.27000 (type via_smd))
+   )
+  )
   (grid via  0.63500)
   (grid wire 0.63500)
   (control
@@ -53,7 +79,7 @@
  (placement
   (component 305024520202_U27 (place U27 -22.50000 -15.00000 front 0))
   (component "CONN-SIL2_RESET" (place RESET -35.00000 7.50000 front -180))
-  (component "TST-107-XX-Y-D_USER BUS" (place "USER BUS" -7.50000 2.50000 front 0))
+  (component "TST-110-XX-Y-D_USER BUS" (place "USER BUS" -11.43000 1.27000 front 0))
  )
  (library
   (image 305024520202_U27 (side front)
@@ -90,8 +116,8 @@
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS2 (rotate 0) 1 2.54000 0.00000)
   )
-  (image "TST-107-XX-Y-D_USER BUS" (side front)
-   (outline (rect TOP -6.30500 -4.87500 21.54500 7.12500))
+  (image "TST-110-XX-Y-D_USER BUS" (side front)
+   (outline (rect TOP -6.30500 -4.87500 29.16500 7.12500))
    (pin PS3 (rotate 0) 0 0.00000 0.00000)
    (pin PS3 (rotate 0) 1 0.00000 2.54000)
    (pin PS3 (rotate 0) 2 2.54000 0.00000)
@@ -106,6 +132,12 @@
    (pin PS3 (rotate 0) 11 12.70000 2.54000)
    (pin PS3 (rotate 0) 12 15.24000 0.00000)
    (pin PS3 (rotate 0) 13 15.24000 2.54000)
+   (pin PS3 (rotate 0) 14 17.78000 0.00000)
+   (pin PS3 (rotate 0) 15 17.78000 2.54000)
+   (pin PS3 (rotate 0) 16 20.32000 0.00000)
+   (pin PS3 (rotate 0) 17 20.32000 2.54000)
+   (pin PS3 (rotate 0) 18 22.86000 0.00000)
+   (pin PS3 (rotate 0) 19 22.86000 2.54000)
   )
   (padstack PS0 (absolute on)
    (shape (circle TOP 2.06000 0 0))
@@ -217,7 +249,7 @@
   )
  )
  (network
-  (net "#00013"
+  (net "#00001"
    (circuit
     (use_layer TOP BOT)
     (use_via
@@ -226,6 +258,33 @@
    )
    (pins U27-2 RESET-1)
   )
+  (net "CNT1"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-3 "USER BUS"-6)
+  )
+  (net "CNT2"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-5 "USER BUS"-10)
+  )
+  (net "COMP5V"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-1 "USER BUS"-17)
+  )
   (net "GND"
    (circuit
     (use_layer TOP BOT)
@@ -233,7 +292,7 @@
      $VIA#0_POWER
     )
    )
-   (pins U27-0 U27-11 U27-12 U27-25 RESET-0 "USER BUS"-13)
+   (pins U27-0 U27-11 U27-12 U27-25 RESET-0 "USER BUS"-19)
   )
   (net "PA2"
    (circuit
@@ -244,6 +303,33 @@
    )
    (pins U27-22 "USER BUS"-2)
   )
+  (net "SERIALATN"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-8 "USER BUS"-14)
+  )
+  (net "SP1"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-4 "USER BUS"-8)
+  )
+  (net "SP2"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins U27-6 "USER BUS"-12)
+  )
   (net "UD0"
    (circuit
     (use_layer TOP BOT)
@@ -251,7 +337,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-14 "USER BUS"-6)
+   (pins U27-14 "USER BUS"-1)
   )
   (net "UD1"
    (circuit
@@ -260,7 +346,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-15 "USER BUS"-8)
+   (pins U27-15 "USER BUS"-3)
   )
   (net "UD2"
    (circuit
@@ -269,7 +355,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-16 "USER BUS"-10)
+   (pins U27-16 "USER BUS"-5)
   )
   (net "UD3"
    (circuit
@@ -278,7 +364,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-17 "USER BUS"-12)
+   (pins U27-17 "USER BUS"-7)
   )
   (net "UD4"
    (circuit
@@ -287,7 +373,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-18 "USER BUS"-1)
+   (pins U27-18 "USER BUS"-9)
   )
   (net "UD5"
    (circuit
@@ -296,7 +382,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-19 "USER BUS"-3)
+   (pins U27-19 "USER BUS"-11)
   )
   (net "UD6"
    (circuit
@@ -305,7 +391,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-20 "USER BUS"-5)
+   (pins U27-20 "USER BUS"-13)
   )
   (net "UD7"
    (circuit
@@ -314,7 +400,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins U27-21 "USER BUS"-7)
+   (pins U27-21 "USER BUS"-15)
   )
   (net "_FLAG2"
    (circuit
@@ -349,8 +435,14 @@
    )
   )
   (class SIGNAL
-   "#00013"
+   "#00001"
+   "CNT1"
+   "CNT2"
+   "COMP5V"
    "PA2"
+   "SERIALATN"
+   "SP1"
+   "SP2"
    "UD0"
    "UD1"
    "UD2"
