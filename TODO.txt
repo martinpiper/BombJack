@@ -1,5 +1,12 @@
 * Backplane: Solid relief for power pins
 	Slot stack for the other power plug part? https://labcenter.s3.amazonaws.com/support/Slotted_Pad.webm
+		2.62mm
+		51.5th
+		31th
+		31th
+		0
+	Remember to choose Rounded Radius 12th
+	Also make the slot stack width/height smaller like 1.9mm x 30th
 
 
 
