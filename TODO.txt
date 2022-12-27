@@ -1,3 +1,11 @@
+* APU: If there was a signal for "next instruction might need external bus" this could be used by the cached latched write proceed logic to stop a cached write before the real external write happens.
+	In the current design we don't know if the *next* instruction will want the external bus, so we don't know when to time the cached write.
+	Then the APU doesn't need to be paused while writing cached values, it only needs to write cached values when the current and next instructions do not have external/internal writes.
+	This would need an extra signal however, which we currently don't have instruction RAM space for.
+
+
+
+
 * Backplane: Solid relief for power pins
 	Slot stack for the other power plug part? https://labcenter.s3.amazonaws.com/support/Slotted_Pad.webm
 		2.62mm
@@ -43,6 +51,15 @@
 			But .197 hole width
 				Can use package TBLOCK-I2
 					Pins edited to C-90-40
+
+
+
+* With a read capable user port expansion, it should be possible to expand the simple CPU to be able to perform more complex ALU ops.
+	This could enhance 3D calculation.
+	Or scrolling...
+	
+	
+
 
 
 			
