@@ -1,3 +1,9 @@
+* When using APU "And enable APU mode", the first Bus24Bit_Init will need an immediate APU_ResetDisable
+	This is to ensure the APU is allowing RAM writes to the rest of the hardware
+
+
+
+
 * APU: If there was a signal for "next instruction might need external bus" this could be used by the cached latched write proceed logic to stop a cached write before the real external write happens.
 	In the current design we don't know if the *next* instruction will want the external bus, so we don't know when to time the cached write.
 	Then the APU doesn't need to be paused while writing cached values, it only needs to write cached values when the current and next instructions do not have external/internal writes.
