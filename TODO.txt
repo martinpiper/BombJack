@@ -67,7 +67,29 @@
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows: /PC	Port Control - Handshake output, Low pulse after read/write on port B.
 	* CNT1 CNT2 have pullup resistors and ground filter capacitors and got to pin 40 on the CIAs
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows pin 40 CNT is: CNT	Count - Internal timers can count pulses to this input. Can be used for frequency dependent operations.
+	* Some design options...
+		** New 32 bit address space with option to use the old 24 bit board
+			Large read/write external memory, with auto increment
+			Still pass through _FLAG2 from externals to computers
+			Option to let external device control the output to the old 24 bit interface board, to write data to the video hardware
+			Use case 1 : Read/write large amounts of memory from the C64 user port, with offset and auto increment for faster screen scrolling or lots of extra graphics or decompression of video/audio data
+				Scrolling would be faster because only absolute loads/stores would be needed instead of load/stores with X/Y offsets
+				Decompression would be faster as the source data pointer would not need to be updated. However an end data pointer might be needed... Or an end of decompressed data pointer test...
+			Use case 2 : External processor calculates 3D data and then allows result memory to be read after it has completed calculation
+				A simple latch register, without contention, indicating "job complete" at a certain address range would be suitable
+			Use case 3 : External processor calculates and sends large amounts of data direct to the video hardware via the old 24 bit interface
+			* SERIALATN = 0 : Keep the old 24 bit board, and have an interface that uses the old 14 pin header. Pass through PA2, D0..7, _PC from computer when active
+			* SERIALATN = 1 : New memory interface mode
+				PA2 : Low, reset all external address and data bus drivers, start reading 4 bytes for the address and then extra bytes on _PC for address increment
+				SP1 = 0 : Read address, address bus drivers active but data bus drivers inactive, allowing read from external memory
+				SP1 = 1 : Write address, address bus and data drivers active.
+				SP2 = 0 : User port can control the old 24 bit interface, if SERIALATN = 0
+				SP2 = 1 : External device controls the old 24 bit interface, regardless of SERIALATN
+					New 32 bit write/reads still function as normal
+			
 		
+		Using the new signals:
+			
 
 
 
