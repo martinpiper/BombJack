@@ -44,7 +44,7 @@
 	These 4 bits would give 16 addressable registers in the user port interface
 		Or at the very least 4 modes of operation...
 	Would need to check read signal operation with the DDR set appropriately. Port pin 8_PC2
-	>> Would also need to check the schematic to make sure the "seial bus" isn't connected to the serial port? To avoid hitting the disk drive...
+	>> Would also need to check the schematic to make sure the "serial bus" isn't connected to the serial port? To avoid hitting the disk drive...
 	20 positions:
 		Headers: https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Cable&contact%20gender=Pin%20%28Male%29&m=Samtec&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20positions=20%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Shrouded&instock=y
 		Cables, be careful of reversed and polarity!: https://www.mouser.sg/c/wire-cable/cable-assemblies/ribbon-cables-idc-cables/?q=idc&connector%20end%20a%20pin%20count=20%20Position&connector%20end%20b%20pin%20count=20%20Position&gender=Female%20%2F%20Female&pitch=2.54%20mm&type=IDC%20Header%20Cable~~IDC%20Socket%20Cable&instock=y&rp=wire-cable%2Fcable-assemblies%2Fribbon-cables-idc-cables%7C~Type
@@ -57,6 +57,11 @@
 			But .197 hole width
 				Can use package TBLOCK-I2
 					Pins edited to C-90-40
+	> Extra CIA info: https://www.c64-wiki.com/wiki/CIA
+	> See updates for Bus24Bit2_Init
+		Total signals available: PA2 , SERIALATN , SP1 , SP2 and the strobe _PC for D0..7 write
+
+
 
 
 

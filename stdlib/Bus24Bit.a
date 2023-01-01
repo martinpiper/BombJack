@@ -20,6 +20,121 @@ Bus24Bit_Init
 	rts
 
 
+!if 0 {
+; Corresponds to user port breakout V1.1
+Bus24Bit2_Init
+	; Setup PA2 and SERIALATN for writing
+	; Bit 2: RS232 TXD line, output bit.
+	; Bit 3: Serial bus ATN OUT; 0 = High; 1 = Low.
+	lda #%00001100
+	sta CIA2PortADDR
+
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+
+	; Test pattern, write the strobe value into strobe 1 bit into CIA2PortB, and then CIA2PortA to see what we can reliably set
+	ldx #0
+.tl0
+	; Easy debug write trigger
+	stx CIA2PortBRS232
+
+	; Strobe PA2 and SERIALATN
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%0000
+	sta CIA2PortBRS232
+	sta CIA2PortASerialBusVICBank
+	lda #%0100
+	sta CIA2PortBRS232
+	sta CIA2PortASerialBusVICBank
+	lda #%1000
+	sta CIA2PortBRS232
+	sta CIA2PortASerialBusVICBank
+	lda #%1100
+	sta CIA2PortBRS232
+	sta CIA2PortASerialBusVICBank
+	lda #%0000
+	sta CIA2PortBRS232
+	sta CIA2PortASerialBusVICBank
+
+	; This pulses SP2
+	; NOTE: SP2 is inverted
+	; The nop is to show timing in the captured data
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	nop
+	nop
+	nop
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	nop
+	nop
+	nop
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2TimerAControl
+	nop
+	nop
+	nop
+
+	; This pulses SP1
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA1TimerAControl
+	lda #0
+	sta CIA1TimerAControl
+	nop
+	nop
+	nop
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA1TimerAControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA1TimerAControl
+	nop
+	nop
+	nop
+	lda #%01000000
+	sta CIA2PortBRS232
+	sta CIA1TimerAControl
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA1TimerAControl
+	nop
+	nop
+	nop
+
+
+	inx
+	jmp .tl0
+
+	
+	jsr Bus24Bit_Reset
+
+	; Send zero bytes for the bus and data
+	lda #0
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	jsr Bus24Bit_Reset
+	rts
+}
+
+
 ; Resets the 24 bit bus
 Bus24Bit_Reset
 	; Reset the state input again
