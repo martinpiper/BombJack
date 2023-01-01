@@ -60,7 +60,14 @@
 	> Extra CIA info: https://www.c64-wiki.com/wiki/CIA
 	> See updates for Bus24Bit2_Init
 		Total signals available: PA2 , SERIALATN , SP1 , SP2 and the strobe _PC for D0..7 write
-
+	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_360.html
+	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_362.html
+	> Schematics: http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c64/index.html
+	* Does _PC go low when reading the data?
+		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows: /PC	Port Control - Handshake output, Low pulse after read/write on port B.
+	* CNT1 CNT2 have pullup resistors and ground filter capacitors and got to pin 40 on the CIAs
+		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows pin 40 CNT is: CNT	Count - Internal timers can count pulses to this input. Can be used for frequency dependent operations.
+		
 
 
 
