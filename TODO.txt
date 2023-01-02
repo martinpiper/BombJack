@@ -94,9 +94,11 @@
 			> Options for connectors. While the normal backplane used two 64 pin (2 row x 32) Harting connectors, this is quite wide. So instead consider a 96 pin (3 row x 32) instead:
 				Right-angled connectors for board edge: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Right%20Angle&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&instock=y
 				Straight receptacles for board: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&product=Receptacles&series=DIN-Signal%20C&termination%20style=Solder%20Pin&instock=y
+				Testing parts, these needed adjustment:
 				09031966921.step needs package adjustment: 2.3mm 0.5mm 0mm
 				09032966825222.step also needs adjustment:
 				** The real backplane board also needs model adjustment: 09022646824.step needs: 86.8mm 38.2mm 12.5mm
+				Choose the parts with most stock and in gold or copper
 
 
 
