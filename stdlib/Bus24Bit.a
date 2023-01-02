@@ -118,6 +118,17 @@ Bus24Bit2_Init
 	nop
 
 
+	; Setup input of 8 bits for reading, _PC is also pulsed just like when writing
+	lda #0
+	sta CIA2PortBDDR
+	lda CIA2PortBRS232
+	lda CIA2PortBRS232
+	lda CIA2PortBRS232
+	lda CIA2PortBRS232
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+
 	inx
 	jmp .tl0
 

@@ -65,9 +65,10 @@
 	> Schematics: http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c64/index.html
 	* Does _PC go low when reading the data?
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows: /PC	Port Control - Handshake output, Low pulse after read/write on port B.
+		Empirically tested
 	* CNT1 CNT2 have pullup resistors and ground filter capacitors and got to pin 40 on the CIAs
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows pin 40 CNT is: CNT	Count - Internal timers can count pulses to this input. Can be used for frequency dependent operations.
-	* Some design options...
+	* Some design options... Using the new signals:
 		** New 32 bit address space with option to use the old 24 bit board
 			Large read/write external memory, with auto increment
 			Still pass through _FLAG2 from externals to computers
@@ -86,11 +87,16 @@
 				SP2 = 0 : User port can control the old 24 bit interface, if SERIALATN = 0
 				SP2 = 1 : External device controls the old 24 bit interface, regardless of SERIALATN
 					New 32 bit write/reads still function as normal
-			
-		
-		Using the new signals:
-			
-
+			> Options for suitable SRAM: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208%7C~32%20k%20x%208%7C~128%20k%20x%208%7C~256%20k%20x%208%7C~512%20k%20x%208%7C~1%20M%20x%208%7C~2%20M%20x%208&supply%20voltage%20-%20max=5.25%20V~~5.5%20V&supply%20voltage%20-%20min=4.5%20V~~4.75%20V&instock=y&rp=semiconductors%2Fmemory-ics%2Fsram%7C~Supply%20Voltage%20-%20Max%7C~Supply%20Voltage%20-%20Min&sort=memory%20size%7C1
+				> https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D
+				> https://www.mouser.sg/ProductDetail/Infineon-Technologies/CY62158H-45ZSXI?qs=QmaLbtOb%252B600VoScfZ7T5g%3D%3D
+				>> Requested: https://support.labcenter.com/forums/viewtopic.php?f=6&t=8291
+			> Options for connectors. While the normal backplane used two 64 pin (2 row x 32) Harting connectors, this is quite wide. So instead consider a 96 pin (3 row x 32) instead:
+				Right-angled connectors for board edge: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Right%20Angle&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&instock=y
+				Straight receptacles for board: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&product=Receptacles&series=DIN-Signal%20C&termination%20style=Solder%20Pin&instock=y
+				09031966921.step needs package adjustment: 2.3mm 0.5mm 0mm
+				09032966825222.step also needs adjustment:
+				** The real backplane board also needs model adjustment: 09022646824.step needs: 86.8mm 38.2mm 12.5mm
 
 
 
