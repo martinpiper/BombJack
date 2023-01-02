@@ -71,6 +71,10 @@
 	* Instead added: SIMPLE_MODE
 		This just uses the terminal output mode and displays whatever the C64 sends. Example code in VideoHardware main7.a
 
+
+* Bidirectional level shifter: https://www.sparkfun.com/products/12009
+
+
 # PiGFX 
 ## Raspberry Pi graphics card / ANSI terminal emulator
 
