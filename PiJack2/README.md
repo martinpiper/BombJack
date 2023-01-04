@@ -31,6 +31,8 @@
 
 	To copy to the SD card:
 		copy bin\kernel.img g: /y
+		
+	Backup kernel.img files are in the backups folder.
 
 * TODO:
 	* Done: Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
