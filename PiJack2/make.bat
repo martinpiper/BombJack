@@ -5,7 +5,7 @@ if "%1" == "dump" goto DUMP
 if "%1" == "clean" goto CLEAN
 set RPI=%1
 
-set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o DisplayBombJack.o
+set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o DisplayBombJack.o binaryData.o
 
 set CFLAGS= -Wall -Wextra -O2 -g -nostdlib -nostartfiles -fno-stack-limit -ffreestanding -fsigned-char
 set CPPFLAGS= %CFLAGS% -fno-exceptions -fno-rtti
@@ -53,6 +53,14 @@ del *.elf /Q 2>NUL
 for %%s in (src/*.s) do arm-none-eabi-gcc src\%%s %CFLAGS% -c -o build\%%~ns.o
 for %%c in (src/*.c) do arm-none-eabi-gcc src\%%c %CFLAGS% -c -o build\%%~nc.o
 for %%c in (src/*.cpp) do arm-none-eabi-gcc src\%%c %CPPFLAGS% -c -o build\%%~nc.o
+
+:: Converting binary (bitmap or audio) data to obj file
+:: https://balau82.wordpress.com/2012/02/19/linking-a-binary-blob-with-gcc/
+:: arm-none-eabi-objdump -t build\binaryData.o
+:: _binary_binaryData_bin_start _binary_binaryData_bin_end _binary_binaryData_bin_size
+arm-none-eabi-objcopy -I binary -O elf32-littlearm -B armv6 binaryData.bin build\binaryData.o
+
+
 :: linking files
 for %%A in (%OOB%) do (call :addbuild %%A)
 arm-none-eabi-ld %OBJS% "%LIBGCC%" -T memmap -o pigfx.elf

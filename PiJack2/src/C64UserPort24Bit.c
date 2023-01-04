@@ -4,6 +4,7 @@
 #include "timer.h"
 #include "utils.h"
 #include "synchronize.h"
+#include "config.h"
 #include "C64UserPort24Bit.h"
 
 // When defined, just returns raw bytes, no address or value time filtering
@@ -12,17 +13,22 @@
 // https://www.c64-wiki.com/wiki/User_Port
 // Broadcom GPIO numbers
 // Inputs
-#define	PIN_DATA0	17
-#define	PIN_DATA1	18
-#define	PIN_DATA2	27
-#define	PIN_DATA3	22
-#define	PIN_DATA4	23
-#define	PIN_DATA5	24
-#define	PIN_DATA6	25
-#define	PIN_DATA7	4
+#define	PIN_DATA0		17
+#define	PIN_DATA1		18
+#define	PIN_DATA2		27
+#define	PIN_DATA3		22
+#define	PIN_DATA4		23
+#define	PIN_DATA5		24
+#define	PIN_DATA6		25
+#define	PIN_DATA7		4
 
-#define	PIN_PA2		7
-#define	PIN_PC2		8
+#define	PIN_PA2			7
+#define	PIN_PC2			8
+
+#define	PIN_SERIALATN	5
+#define	PIN_SP1			6
+#define	PIN_SP2			12
+
 
 // Outputs
 #define	PIN_FLAG2	9
@@ -35,8 +41,20 @@ static volatile int gotBytesCountDisplay = 0;
 static volatile int interfaceState = 0;
 static volatile unsigned int interfaceStateEBBS = 0;
 static volatile unsigned int interfaceStateAddress = 0;
+static unsigned char *largeData = 0;
 
-static void onPC2(void)
+extern unsigned char _binary_binaryData_bin_start;
+extern unsigned char _binary_binaryData_bin_end;
+extern unsigned char _binary_binaryData_bin_size;
+
+unsigned char *real_binary_binaryData_bin_start;
+unsigned char *real_binary_binaryData_bin_end;
+unsigned int real_binary_binaryData_bin_size;
+
+unsigned char *real_current_bitmap;
+
+
+static void onPC2Fall(void)
 {
 	unsigned int value = 0;
 	int allBits = gpio_get0to31();
@@ -108,22 +126,69 @@ static void onPC2(void)
 #endif
 }
 
-static void onPA2(void)
+static void setupOutput(void)
+{
+	unsigned char value = *real_current_bitmap;
+	
+	gpio_set(PIN_DATA0 , value & 0x01);
+	gpio_set(PIN_DATA1 , value & 0x02);
+	gpio_set(PIN_DATA2 , value & 0x04);
+	gpio_set(PIN_DATA3 , value & 0x08);
+	gpio_set(PIN_DATA4 , value & 0x10);
+	gpio_set(PIN_DATA5 , value & 0x20);
+	gpio_set(PIN_DATA6 , value & 0x40);
+	gpio_set(PIN_DATA7 , value & 0x80);
+}
+
+static void onNotPA2(void)
 {
 	// Clear internal state
 	interfaceState = 0;
 	interfaceStateEBBS = 0;
 	interfaceStateAddress = 0;
+	
+	real_current_bitmap = real_binary_binaryData_bin_start;
+}
+
+static void onPC2Rise(void)
+{
+	int allBits = gpio_get0to31();
+	
+	if (!(allBits & (1<<PIN_PA2)))
+	{
+		onNotPA2();
+	}
+
+	setupOutput();
+
+	real_current_bitmap++;
+	if (real_current_bitmap >= real_binary_binaryData_bin_end)
+	{
+		real_current_bitmap = real_binary_binaryData_bin_start;
+	}
+	
+	// Fake some output activity
+	gotBytes[gotBytesCount] = *real_current_bitmap;
+	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
+
 }
 
 unsigned char C64UserPort24Bit_init(void)
 {
+	real_binary_binaryData_bin_start = &_binary_binaryData_bin_start;
+	real_binary_binaryData_bin_end = &_binary_binaryData_bin_end;
+	real_binary_binaryData_bin_size = &_binary_binaryData_bin_size;
+	real_current_bitmap = real_binary_binaryData_bin_start;
+	ee_printf("[C64UserPort24Bit] Large data addr $%x size %d\n" , (int)real_binary_binaryData_bin_start , real_binary_binaryData_bin_size);
+
+
 	gotBytesCount = 0;
 	gotBytesCountDisplay = 0;
 	interfaceState = 0;
 	interfaceStateEBBS = 0;
 	interfaceStateAddress = 0;
 
+#if 0
     gpio_select(PIN_DATA0, GPIO_INPUT);
     gpio_select(PIN_DATA1, GPIO_INPUT);
     gpio_select(PIN_DATA2, GPIO_INPUT);
@@ -132,9 +197,23 @@ unsigned char C64UserPort24Bit_init(void)
     gpio_select(PIN_DATA5, GPIO_INPUT);
     gpio_select(PIN_DATA6, GPIO_INPUT);
     gpio_select(PIN_DATA7, GPIO_INPUT);
+#else
+    gpio_select(PIN_DATA0, GPIO_OUTPUT);
+    gpio_select(PIN_DATA1, GPIO_OUTPUT);
+    gpio_select(PIN_DATA2, GPIO_OUTPUT);
+    gpio_select(PIN_DATA3, GPIO_OUTPUT);
+    gpio_select(PIN_DATA4, GPIO_OUTPUT);
+    gpio_select(PIN_DATA5, GPIO_OUTPUT);
+    gpio_select(PIN_DATA6, GPIO_OUTPUT);
+    gpio_select(PIN_DATA7, GPIO_OUTPUT);
+#endif
 
     gpio_select(PIN_PA2, GPIO_INPUT);
     gpio_select(PIN_PC2, GPIO_INPUT);
+
+    gpio_select(PIN_SERIALATN, GPIO_INPUT);
+    gpio_select(PIN_SP1, GPIO_INPUT);
+    gpio_select(PIN_SP2, GPIO_INPUT);
 
     gpio_select(PIN_FLAG2, GPIO_OUTPUT);
 
@@ -150,15 +229,30 @@ unsigned char C64UserPort24Bit_init(void)
     gpio_setpull(PIN_PA2, GPIO_PULL_OFF);
     gpio_setpull(PIN_PC2, GPIO_PULL_OFF);
 
+    gpio_setpull(PIN_SERIALATN, GPIO_PULL_OFF);
+    gpio_setpull(PIN_SP1, GPIO_PULL_OFF);
+    gpio_setpull(PIN_SP2, GPIO_PULL_OFF);
+
     gpio_setpull(PIN_FLAG2, GPIO_PULL_OFF);
 
-    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
-    fiq_attach_gpio_handler(PIN_PA2, onPA2);
+//    gpio_setedgedetect(PIN_PA2, GPIO_EDGE_DETECT_FALLING);
+//    fiq_attach_gpio_handler(PIN_PA2, onPA2);
 
-    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
-    fiq_attach_gpio_handler(PIN_PC2, onPC2);
+//    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
+//    fiq_attach_gpio_handler(PIN_PC2, onPC2Fall);
+
+    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_RISING);
+    fiq_attach_gpio_handler(PIN_PC2, onPC2Rise);
+	
+	setupOutput();
 	
 	ee_printf("[C64UserPort24Bit] Initialised\n");
+//	largeData = lookForLargedata("mpdata1.bin");
+//	if (largeData != 0)
+//	{
+//		ee_printf("[C64UserPort24Bit] Got large data\n");
+//	}
+
 	return 0;
 }
 

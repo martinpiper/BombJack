@@ -2,7 +2,7 @@
 	Works from C64 BASIC, but C64 assembly tends to cause the Pi to miss a lot of data because it takes so long to read the GPIO...
 	Although the 1MHz _PC2 is detected...
 	* Even doing a tight poll in a thread doesn't help much
-	* Seems even cachingthe value and using that in release mode isn't very performant *sigh*
+	* Seems even caching the value and using that in release mode isn't very performant *sigh*
 	* TODO: Try??: https://www.raspberrypi.org/documentation/usage/gpio/
 		http://abyz.me.uk/rpi/pigpio/cif.html#gpioSetISRFuncEx
 	* Booting into command line mode without X starting seems to allow much better gpio access and I can still SSH into the box

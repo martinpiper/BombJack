@@ -42,5 +42,6 @@ extern tPiGfxConfig PiGfxConfig;
 
 void setDefaultConfig();
 unsigned char lookForConfigFile();
+unsigned char *lookForLargedata(const char *filename);
 
 #endif

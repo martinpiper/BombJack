@@ -29,10 +29,17 @@
 	This starts a qemu monitor on port 55555
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append "" -monitor tcp::55555,server,nowait
 
-	To copy to the SD card:
+	To copy to the SD card, make sure t is NOT THE RECOVERY drive:
 		copy bin\kernel.img g: /y
+		copy bin\kernel.img f: /y
 		
 	Backup kernel.img files are in the backups folder.
+	
+	"binaryData.bin" is a large amount of data to send to the C64, bitmap and sound data basically
+		See real_binary_binaryData_bin_start
+		
+	onPC2Rise should be sending a large chunk of binary data on _PC and reset the pointer on _PA2
+	
 
 * TODO:
 	* Done: Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly

@@ -92,6 +92,8 @@ void setDefaultConfig()
     pigfx_strcpy(PiGfxConfig.keyboardLayout, "us");
 }
 
+struct fs * gFilesys = 0;
+
 unsigned char lookForConfigFile()
 {
     int retVal;
@@ -115,6 +117,7 @@ unsigned char lookForConfigFile()
         ee_printf("Error reading filesystem\n");
         return errFS;
     }
+	gFilesys = filesys;
 
     // loading root dir
     char* myfilename = 0;
@@ -174,3 +177,58 @@ unsigned char lookForConfigFile()
     nmalloc_free(cfgfiledata);
     return errOK;
 }
+
+unsigned char *lookForLargedata(const char *filename)
+{
+	if (gFilesys == 0)
+	{
+		ee_printf("2Error initializing SD card\n");
+		return 0;
+	}
+
+    // loading root dir
+    char* myfilename = 0;
+    struct dirent *direntry = gFilesys->read_directory(gFilesys, &myfilename);
+    if (direntry == 0)
+    {
+        ee_printf("2Error reading root directory\n");
+        return 0;
+    }
+
+    struct dirent * thefileentry = 0;
+    while(1)
+    {
+        if (pigfx_strcmp(filename, direntry->name) == 0)
+        {
+            // File found
+            thefileentry = direntry;
+            break;
+        }
+        if (direntry->next) direntry = direntry->next;
+        else break;
+    }
+    if (thefileentry == 0)
+    {
+        ee_printf("2Error locating file\n");
+        return 0;
+    }
+
+    FILE *thefile = gFilesys->fopen(gFilesys, thefileentry, "r");
+    if (thefile == 0)
+    {
+        ee_printf("2Error opening file\n");
+        return 0;
+    }
+
+    ee_printf("2Found %s with length %d bytes\n", thefileentry->name, thefile->len);
+    char* filedata = nmalloc_malloc(thefile->len);
+    if (gFilesys->fread(gFilesys, filedata, thefile->len, thefile) != (size_t)thefile->len)
+    {
+        ee_printf("2Error reading config file\n");
+        nmalloc_free(filedata);
+        return 0;
+    }
+
+	return (unsigned char *)filedata;
+}
+
