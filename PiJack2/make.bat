@@ -5,7 +5,7 @@ if "%1" == "dump" goto DUMP
 if "%1" == "clean" goto CLEAN
 set RPI=%1
 
-set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o DisplayBombJack.o binaryData.o
+set OOB= asm.o exceptionstub.o synchronize.o mmu.o pigfx.o uart.o irq.o utils.o gpio.o mbox.o prop.o board.o actled.o framebuffer.o console.o gfx.o dma.o nmalloc.o ee_printf.o stupid_timer.o block.o emmc.o c_utils.o mbr.o fat.o config.o ini.o binary_assets.o C64UserPort24Bit.o DisplayBombJack.o binaryData.o smp.o
 
 set CFLAGS= -Wall -Wextra -O2 -g -nostdlib -nostartfiles -fno-stack-limit -ffreestanding -fsigned-char
 set CPPFLAGS= %CFLAGS% -fno-exceptions -fno-rtti
@@ -58,8 +58,11 @@ for %%c in (src/*.cpp) do arm-none-eabi-gcc src\%%c %CPPFLAGS% -c -o build\%%~nc
 :: https://balau82.wordpress.com/2012/02/19/linking-a-binary-blob-with-gcc/
 :: arm-none-eabi-objdump -t build\binaryData.o
 :: _binary_binaryData_bin_start _binary_binaryData_bin_end _binary_binaryData_bin_size
+copy /Y "C:\Work\C64\AnimationBitmap\Data\binaryData.bin" binaryData.bin
 arm-none-eabi-objcopy -I binary -O elf32-littlearm -B armv6 binaryData.bin build\binaryData.o
-
+:: _binary_smp_raw_start _binary_smp_raw_end _binary_smp_raw_size
+copy /Y "C:\Work\C64\AnimationBitmap\Data\smp.raw" smp.raw
+arm-none-eabi-objcopy -I binary -O elf32-littlearm -B armv6 smp.raw build\smp.o
 
 :: linking files
 for %%A in (%OOB%) do (call :addbuild %%A)

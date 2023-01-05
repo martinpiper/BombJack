@@ -33,3 +33,5 @@ SimpleCPU.sts
 *.EDF
 *.DO
 *.sts
+PiJack2/smp.raw
+PiJack2/binaryData.bin

@@ -11,8 +11,9 @@
 #define SIMPLE_MODE
 
 // https://www.c64-wiki.com/wiki/User_Port
-// Broadcom GPIO numbers
-// Inputs
+// Broadcom GPIO numbers, *not* header pin numbers
+
+// Level shifter IO1 to IO8
 #define	PIN_DATA0		17
 #define	PIN_DATA1		18
 #define	PIN_DATA2		27
@@ -22,16 +23,15 @@
 #define	PIN_DATA6		25
 #define	PIN_DATA7		4
 
+// Level shifter IO1 to IO8
 #define	PIN_PA2			7
 #define	PIN_PC2			8
-
+#define	PIN_FLAG2		9	// Output
 #define	PIN_SERIALATN	5
 #define	PIN_SP1			6
 #define	PIN_SP2			12
 
 
-// Outputs
-#define	PIN_FLAG2	9
 
 #define	BUFFERSIZE	(1<<16)
 static unsigned int volatile gotBytes[BUFFERSIZE];
@@ -46,12 +46,21 @@ static unsigned char *largeData = 0;
 extern unsigned char _binary_binaryData_bin_start;
 extern unsigned char _binary_binaryData_bin_end;
 extern unsigned char _binary_binaryData_bin_size;
+extern unsigned char _binary_smp_raw_start;
+extern unsigned char _binary_smp_raw_end;
+extern unsigned char _binary_smp_raw_size;
+
 
 unsigned char *real_binary_binaryData_bin_start;
 unsigned char *real_binary_binaryData_bin_end;
 unsigned int real_binary_binaryData_bin_size;
+unsigned char *real_binary_smp_raw_start;
+unsigned char *real_binary_smp_raw_end;
+unsigned int real_binary_smp_raw_size;
 
 unsigned char *real_current_bitmap;
+unsigned char *real_current_audio;
+
 
 
 static void onPC2Fall(void)
@@ -148,9 +157,10 @@ static void onNotPA2(void)
 	interfaceStateAddress = 0;
 	
 	real_current_bitmap = real_binary_binaryData_bin_start;
+	real_current_audio = real_binary_smp_raw_start;
 }
 
-static void onPC2Rise(void)
+static void onPC2Stream(void)
 {
 	int allBits = gpio_get0to31();
 	
@@ -158,19 +168,21 @@ static void onPC2Rise(void)
 	{
 		onNotPA2();
 	}
-
-	setupOutput();
-
-	real_current_bitmap++;
-	if (real_current_bitmap >= real_binary_binaryData_bin_end)
+	else
 	{
-		real_current_bitmap = real_binary_binaryData_bin_start;
+//		if (!(allBits & (1<<PIN_SERIALATN)))
+		setupOutput();
+
+		real_current_bitmap++;
+		if (real_current_bitmap >= real_binary_binaryData_bin_end)
+		{
+			real_current_bitmap = real_binary_binaryData_bin_start;
+		}
 	}
 	
 	// Fake some output activity
-	gotBytes[gotBytesCount] = *real_current_bitmap;
-	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
-
+//	gotBytes[gotBytesCount] = *real_current_bitmap;
+//	gotBytesCount = (gotBytesCount+1) & (BUFFERSIZE-1);
 }
 
 unsigned char C64UserPort24Bit_init(void)
@@ -178,8 +190,15 @@ unsigned char C64UserPort24Bit_init(void)
 	real_binary_binaryData_bin_start = &_binary_binaryData_bin_start;
 	real_binary_binaryData_bin_end = &_binary_binaryData_bin_end;
 	real_binary_binaryData_bin_size = &_binary_binaryData_bin_size;
-	real_current_bitmap = real_binary_binaryData_bin_start;
+	real_binary_smp_raw_start = &_binary_smp_raw_start;
+	real_binary_smp_raw_end = &_binary_smp_raw_end;
+	real_binary_smp_raw_size = &_binary_smp_raw_size;
+
+	onNotPA2();
+//	real_current_bitmap = real_binary_binaryData_bin_start;
+//	real_current_audio = real_binary_smp_raw_start;
 	ee_printf("[C64UserPort24Bit] Large data addr $%x size %d\n" , (int)real_binary_binaryData_bin_start , real_binary_binaryData_bin_size);
+	ee_printf("[C64UserPort24Bit] smp data addr $%x size %d\n" , (int)real_binary_smp_raw_start , real_binary_smp_raw_size);
 
 
 	gotBytesCount = 0;
@@ -241,8 +260,9 @@ unsigned char C64UserPort24Bit_init(void)
 //    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
 //    fiq_attach_gpio_handler(PIN_PC2, onPC2Fall);
 
-    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_RISING);
-    fiq_attach_gpio_handler(PIN_PC2, onPC2Rise);
+//    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_RISING);
+    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
+    fiq_attach_gpio_handler(PIN_PC2, onPC2Stream);
 	
 	setupOutput();
 	
