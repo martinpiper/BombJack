@@ -149,15 +149,43 @@ static void setupOutput(void)
 	gpio_set(PIN_DATA7 , value & 0x80);
 }
 
+static void setupOutputAudio(void)
+{
+	unsigned char value = *real_current_audio;
+	
+	gpio_set(PIN_DATA0 , value & 0x01);
+	gpio_set(PIN_DATA1 , value & 0x02);
+	gpio_set(PIN_DATA2 , value & 0x04);
+	gpio_set(PIN_DATA3 , value & 0x08);
+	gpio_set(PIN_DATA4 , value & 0x10);
+	gpio_set(PIN_DATA5 , value & 0x20);
+	gpio_set(PIN_DATA6 , value & 0x40);
+	gpio_set(PIN_DATA7 , value & 0x80);
+}
+
+static int sDataCount = 0;
+static int sDataCount1 = 0;
+static int sDataCount2 = 0;
+static int doAudioFor = 0;
+
 static void onNotPA2(void)
 {
 	// Clear internal state
 	interfaceState = 0;
 	interfaceStateEBBS = 0;
 	interfaceStateAddress = 0;
+	sDataCount = 0;
+	sDataCount1 = 0;
+	sDataCount2 = 0;
+	doAudioFor = 0;
 	
 	real_current_bitmap = real_binary_binaryData_bin_start;
 	real_current_audio = real_binary_smp_raw_start;
+}
+
+static void onGenericStream(void)
+{
+	int allBits = gpio_get0to31();
 }
 
 static void onPC2Stream(void)
@@ -171,12 +199,57 @@ static void onPC2Stream(void)
 	else
 	{
 //		if (!(allBits & (1<<PIN_SERIALATN)))
-		setupOutput();
-
-		real_current_bitmap++;
-		if (real_current_bitmap >= real_binary_binaryData_bin_end)
+		
+		if (doAudioFor > 0)
 		{
-			real_current_bitmap = real_binary_binaryData_bin_start;
+			setupOutputAudio();
+
+			real_current_audio++;
+			doAudioFor--;
+			if (real_current_audio >= real_binary_smp_raw_end)
+			{
+				real_current_audio = real_binary_smp_raw_start;
+			}
+		}
+		else
+		{
+			setupOutput();
+
+			if (sDataCount >= 0 && sDataCount < (22*16*8))
+			{
+				sDataCount++;
+				sDataCount1++;
+				real_current_bitmap++;
+				if ( sDataCount1 >= 16 )
+				{
+					doAudioFor = 1;
+					sDataCount1 = 0;
+				}
+			}
+			else if (sDataCount >= (22*16*8) && sDataCount < (22*16*8) + (22*16*2))
+			{
+				sDataCount++;
+				sDataCount2++;
+				real_current_bitmap++;
+				if ( sDataCount2 >= 24 )
+				{
+					doAudioFor = 1;
+					sDataCount2 = 0;
+				}
+			}
+			else
+			{
+				sDataCount = 0;
+				sDataCount1 = 0;
+				sDataCount2 = 0;
+				doAudioFor = 23;	// ????!!!!
+			}
+
+			if (real_current_bitmap >= real_binary_binaryData_bin_end)
+			{
+				real_current_bitmap = real_binary_binaryData_bin_start;
+				sDataCount = 0;
+			}
 		}
 	}
 	
@@ -263,6 +336,10 @@ unsigned char C64UserPort24Bit_init(void)
 //    gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_RISING);
     gpio_setedgedetect(PIN_PC2, GPIO_EDGE_DETECT_FALLING);
     fiq_attach_gpio_handler(PIN_PC2, onPC2Stream);
+
+//    gpio_setedgedetect(PIN_SERIALATN, GPIO_EDGE_DETECT_FALLING);
+//    fiq_attach_gpio_handler(PIN_SERIALATN, onGenericStream);
+
 	
 	setupOutput();
 	

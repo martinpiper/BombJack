@@ -39,6 +39,18 @@
 		See real_binary_binaryData_bin_start
 		
 	onPC2Rise should be sending a large chunk of binary data on _PC and reset the pointer on _PA2
+	Note *InsertVolumeEvery* is an interleave data test because reading PIN_SERIALATN (or PIN_SP1) seems to be quite slow, so changes being sent are not received in sync with _PC, which lead to bitmap data reading some bytes of sample and vice versa.
+		Corresponding interleaved data being sent is needed
+			kBitmapDrawWidth = 22
+			kBitmapDrawHeight = 16
+		For each frame of data, use sDataCount:
+			Every kBitmapDrawWidth skipping kBitmapDrawHeight, start of column, for 8 rows
+			Then every 24 bytes for kBitmapDrawWidth*kBitmapDrawHeight*2
+			Then for 24 samples
+		>> As expected, sync issues, hard to predict what bytes need extra audio
+			See: "// ????!!!!" The number is out by 1
+		
+
 	
 
 * TODO:
