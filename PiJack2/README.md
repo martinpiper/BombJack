@@ -49,7 +49,9 @@
 			Then for 24 samples
 		>> As expected, sync issues, hard to predict what bytes need extra audio
 			See: "// ????!!!!" The number is out by 1
-		
+	When the C64 is playing the video, there seems to be a momentary block of currupt video which then gets back in sync again. This happens at the same point regardless of the data.
+		Is this a memory corruption in the linked binary? Calculate a CRC for the whole video data and display it on the Pi to find out.
+		Otherwise it's a corruption happening while sending to the C64?
 
 	
 
