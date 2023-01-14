@@ -1,3 +1,25 @@
+* Audio 9.2 board
+	Was working fine.
+	> But after being stored for a while it developed a crackle, on all four voices.
+	> Only when playing sounds, otherwise when silent the voice is OK.
+	> Removed all other boards (except video), including APU. Same result, no change.
+	> Tried filling the sample RAM with $80 (middle zero volume) and there are no crackles
+		NOTE: ; For debug, fill audio with the same byte pattern
+		> Can hear the RAM being filled
+		Also filling the RAM with 0 causes a very short click to be heard when the voice is triggered from disabled, as expected
+		Also filling with $4000 byte chunks of $00 $40 $80 $c0 generates the expected series of clicks when debug playing or debug looping the voices (with fire and direction)
+		>> This indicates the RAMs are potentially fine, since they output expected data across their address range, but the output stage is perhaps crackling
+		Volume EPROM reads OK
+	>> Moving the board while plugged in seems to generate issues. Perhaps the connector on the audio board is loose?
+		Removing audio and adding all the other video boards, no APU, back again shows Prototype3\Demo9_*.prg works as intended
+		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
+			Are those positions experiencing a loose conection? If they are then the sprite RAMs could be activated which would generate a filled colour...
+
+			
+
+
+
+
 * When using APU "And enable APU mode", the first Bus24Bit_Init will need an immediate APU_ResetDisable
 	This is to ensure the APU is allowing RAM writes to the rest of the hardware
 
