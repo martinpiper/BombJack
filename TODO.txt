@@ -294,7 +294,13 @@
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374DBR?qs=SL3LIuy2dWz11ywxrLmk0A%3D%3D	SSOP DB 20	SSOP20TI	https://www.ti.com/lit/ds/symlink/sn74ls374.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658839044091&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04DBR?qs=yajEpaT76uTkIEJSyxTAVA%3D%3D	SSOP DB 14	SSOP14TI	https://www.ti.com/lit/ds/symlink/sn74ls04.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658819899855&ref_url=https%253A%252F%252Fwww.mouser.in%252F
 		https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS374DBR?qs=SL3LIuy2dWz11ywxrLmk0A%3D%3D	SSOP DB 20	SSOP20TI	https://www.ti.com/lit/ds/symlink/sn74ls374.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1658839044091&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
-
+	* Parts research:
+		https://en.wikipedia.org/wiki/7400-series_integrated_circuits
+		5V variants:		https://www.mouser.sg/c/semiconductors/logic-ics/latches/?q=373&logic%20family=74ABT~~74ALS%7C~ABT%7C~ALS~~F&number%20of%20circuits=8%20Circuit&number%20of%20output%20lines=8%20Line&polarity=Non-Inverting&supply%20voltage%20-%20max=5.5%20V&supply%20voltage%20-%20min=4.5%20V&instock=y&sort=propagation%20delay%20time&rp=semiconductors%2Flogic-ics%2Flatches%7C~Logic%20Family
+		https://www.mouser.sg/c/semiconductors/logic-ics/latches/?q=74ls373&number%20of%20output%20lines=8%20Line
+		Very handy logic guide: https://www.ti.com/lit/sg/sdyu001ab/sdyu001ab.pdf
+			Page 16 package size chart! https://mastodon.social/@martin_piper/109687968945408871
+	
 
 
 
