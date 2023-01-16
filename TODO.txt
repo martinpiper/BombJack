@@ -15,6 +15,47 @@
 		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
 			Are those positions experiencing a loose conection? If they are then the sprite RAMs could be activated which would generate a filled colour...
 
+
+
+* Debugging the hardware flash on frame kSkipToFrameThenWaitForFire
+	Note: kSkipToFrameThenWaitForFire means it is reproducible
+	This doesn't happen in emulation
+	The two player sprites are active, indicating it's not a global problem with the scaled sprites
+	Also sending the data twice per frame on the trigger doesn't solve the issue and indicates it's not a communication problem ending the data on this particular frame
+	> Tried forcing all active GameSpriteWorld_Z positions to be 96
+		This shows that resetting the world Z coordinate of active objects stops the problem
+		The question is then which particular object is causing the issue?
+	Setting the sprite Y pixel size to always be 1 (; Y pixel size) stops the issue, but obviously doesn't render correctly...
+		This seems to indicate that for some reason the Y extent check isn't performing as expected in hardware?
+		Try clamping the Y pixel size values calculated in Sprite2Tab_ScaleYSize
+			For values >=31 didn't stop the issue...
+	Take the precise memory dump from the sprite registers and send that as the first frame in the hardware. See if it replicates the issue. Then modify the data until it resolves to understand what is the work around. 
+		2B00 :  0A C4 20 A0 20 20 20 11   0A E4 20 A0 20 20 20 15
+		2B10 :  08 6B 10 B4 20 40 40 09   08 82 0F 92 20 44 44 08
+		2B20 :  08 68 0F B3 20 44 44 08   09 8F 0D C1 20 4E 4E 0E
+		2B30 :  09 8F 0D CD 20 4E 4E 0F   08 52 0C 9D 20 55 55 08
+		2B40 :  08 6F 0A C1 20 66 66 0A   08 7D 0A 9D 20 66 66 08
+		2B50 :  0B 8B 09 A6 20 71 71 16   09 82 09 A6 20 71 71 14
+		2B60 :  09 7A 09 A6 20 71 71 10   08 7F 09 C9 20 71 71 09
+		2B70 :  08 82 07 C3 20 92 92 0B   08 82 07 CB 20 92 92 0C
+		2B80 :  08 8A 07 C3 20 92 92 12   08 8A 07 CB 20 92 92 13
+		2B90 :  0B 87 06 A8 20 AA AA 16   09 81 06 A8 20 AA AA 14
+		2BA0 :  09 7B 06 A8 20 AA AA 10   00 00 00 00 00 00 00 00
+		2BB0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		2BC0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		2BD0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		> So it's the data, why?
+		With>
+		GameSpriteData
+			!by $0A ,$C4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$11   ,$0A ,$E4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$15
+			!by $08 ,$6B ,>>$10<< ,$B4 ,$20 ,$40 ,$40 ,$09   ,$08 ,$82 ,$0F ,$92 ,$20 ,$44 ,$44 ,$08
+		>>$10<< sprite Y pizel size is the issue, if it's $0f or $11 then the render is OK
+			This could be due to the comparison check, ripple in the signals perhaps?
+			Doesn't happen in simulation, even at 14.31818MHz for Sprites2
+		> Could be two things. The Y size comparison ripple, which can be checked by having Y size = 16 consistently, or the Y size = 0 check triggering early
+
+
+
 			
 
 
