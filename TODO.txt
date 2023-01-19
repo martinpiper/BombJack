@@ -13,7 +13,7 @@
 	>> Moving the board while plugged in seems to generate issues. Perhaps the connector on the audio board is loose?
 		Removing audio and adding all the other video boards, no APU, back again shows Prototype3\Demo9_*.prg works as intended
 		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
-			Are those positions experiencing a loose conection? If they are then the sprite RAMs could be activated which would generate a filled colour...
+			Are those positions experiencing a loose connection? If they are then the sprite RAMs could be activated which would generate a filled colour...
 
 
 
@@ -53,7 +53,7 @@
 			This could be due to the comparison check, ripple in the signals perhaps?
 			Doesn't happen in simulation, even at 14.31818MHz for Sprites2
 		> Could be two things. The Y size comparison ripple, which can be checked by having Y size = 16 consistently, or the Y size = 0 check triggering early
-
+			Or maybe the inputs to the comparators for Y size are wrong? Need to check datasheet again...
 
 
 			
