@@ -49,12 +49,12 @@
 		GameSpriteData
 			!by $0A ,$C4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$11   ,$0A ,$E4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$15
 			!by $08 ,$6B ,>>$10<< ,$B4 ,$20 ,$40 ,$40 ,$09   ,$08 ,$82 ,$0F ,$92 ,$20 ,$44 ,$44 ,$08
-		>>$10<< sprite Y pizel size is the issue, if it's $0f or $11 then the render is OK
+		>>$10<< sprite Y pixel size is the issue, if it's $0f or $11 then the render is OK
 			This could be due to the comparison check, ripple in the signals perhaps?
 			Doesn't happen in simulation, even at 14.31818MHz for Sprites2
 		> Could be two things. The Y size comparison ripple, which can be checked by having Y size = 16 consistently, or the Y size = 0 check triggering early
 			Or maybe the inputs to the comparators for Y size are wrong? Need to check datasheet again...
-
+			If it's ripple, it could be solved by adding an AND condition with the clock to trigger any comparison on a particular clock half
 
 			
 
