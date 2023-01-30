@@ -55,7 +55,41 @@
 		> Could be two things. The Y size comparison ripple, which can be checked by having Y size = 16 consistently, or the Y size = 0 check triggering early
 			Or maybe the inputs to the comparators for Y size are wrong? Need to check datasheet again...
 			If it's ripple, it could be solved by adding an AND condition with the clock to trigger any comparison on a particular clock half
-
+		>> Trying:
+			+MSendScaledSprite 64 , 128 , 13
+			+MSendScaledSprite 96 , 128 , 14
+			+MSendScaledSprite 128 , 128 , 15
+			+MSendScaledSprite 160 , 128 , 16
+			+MSendScaledSprite 192 , 128 , 17
+			+MSendScaledSprite 224 , 128 , 18
+			>> This had no problem on hardware. Tried above original problem data, as there was an issue.... So...
+			>> This showed that actually size Y 16 ($10) on its own is not causing the issue
+		>> Note: ; Using a different Y pos (with the problem size Y of $10) fixed the issue?!!
+			; So try different Y pos values...
+			Testing all pos Y = 0 - 255 (for the orange rock) shows that only a small number of pos Y values with size Y = $10 causes issues...
+		>> Moving the pos Y adjustment to the previous sprite (player legs) shows that a large number of Y pos cause issue for the next sprite (the orange rock), a small number fix the issue
+			>> Wrong: Perhaps this was caused by timing the write during rendering?
+		>>> This means the previous sprite can affect rendering of the next sprite?!
+			Does this mean the combined Y extent calculation is failing or getting stuck?
+				>> Using: ; So try different size Y
+					> This shows a large number of different size Y values for the orange rock are mostly OK, it just happens to be a small number of values causing issues
+			Does this happen with OSC and VIDCLK inputs?
+				Yes, input clock rate does nto affect the issue at all
+			> For the orange rock
+				Default Y pos = 6b size Y = 10
+			What Y pos values are causing this render issue?? (where the rest of the sprites, after the player top/legs, do not draw)
+				67 6b 6d 6f e1 e3 e5 e6 e7 e9 ea eb ec ed ee ef
+				Even with different player legs Y these numbers are the same
+			What size Y values are causing this render issue??
+				10
+			>> These size Y values do not cause the render issue, but render only the orange rock with the incorrect height (size Y)
+				14 (only render $4 rows)
+				16 (only render $6 rows) Not consistent between multiple advances by single clicks of fire... WTF...
+					Try disabling the layer then enabling it?
+						No effect, still inconsistent. Which excludes hardware memory contention and C64 write timing due to extra bus24 setup cycles
+				1c (only render $c rows)
+				94 (only render $4 rows)
+					
 			
 
 

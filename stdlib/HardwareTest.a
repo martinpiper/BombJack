@@ -9,9 +9,9 @@ HardwareTest_Char_0
 +LinePlane8 %.####...
 +LinePlane8 %........
 HardwareTest_Char_1
-+LinePlane8 %....#...
 +LinePlane8 %...##...
-+LinePlane8 %..#.#...
++LinePlane8 %..###...
++LinePlane8 %.##.#...
 +LinePlane8 %....#...
 +LinePlane8 %....#...
 +LinePlane8 %....#...
@@ -35,6 +35,116 @@ HardwareTest_Char_3
 +LinePlane8 %##..##..
 +LinePlane8 %.####...
 +LinePlane8 %........
+HardwareTest_Char_4
++LinePlane8 %...###..
++LinePlane8 %..##.#..
++LinePlane8 %.##..#..
++LinePlane8 %######..
++LinePlane8 %....##..
++LinePlane8 %....##..
++LinePlane8 %....##..
++LinePlane8 %........
+HardwareTest_Char_5
++LinePlane8 %.#####..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %.####...
++LinePlane8 %....##..
++LinePlane8 %....##..
++LinePlane8 %#####...
++LinePlane8 %........
+HardwareTest_Char_6
++LinePlane8 %.####...
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %.####...
++LinePlane8 %........
+HardwareTest_Char_7
++LinePlane8 %######..
++LinePlane8 %....##..
++LinePlane8 %...##...
++LinePlane8 %..##....
++LinePlane8 %..##....
++LinePlane8 %..##....
++LinePlane8 %..##....
++LinePlane8 %........
+HardwareTest_Char_8
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %.####...
++LinePlane8 %........
+HardwareTest_Char_9
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %.#####..
++LinePlane8 %....##..
++LinePlane8 %....##..
++LinePlane8 %....##..
++LinePlane8 %........
+HardwareTest_Char_A
++LinePlane8 %..##....
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %######..
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %........
+HardwareTest_Char_B
++LinePlane8 %#####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %#####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %#####...
++LinePlane8 %........
+HardwareTest_Char_C
++LinePlane8 %.####...
++LinePlane8 %##..##..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %##..##..
++LinePlane8 %.####...
++LinePlane8 %........
+HardwareTest_Char_D
++LinePlane8 %#####...
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %##..##..
++LinePlane8 %#####...
++LinePlane8 %........
+HardwareTest_Char_E
++LinePlane8 %######..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %######..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %######..
++LinePlane8 %........
+HardwareTest_Char_F
++LinePlane8 %######..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %######..
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %##......
++LinePlane8 %........
+; Last blank char
+!fill 8 , 0
 
 !zn
 HardwareTest_VideoInit
@@ -53,6 +163,34 @@ HardwareTest_VideoInitDisplay
 
 !macro HardwareTest_SendBitplaneData .a , .b {
 	+MWordValueTo_AX HardwareTest_Char_0
+	ldy #8*.a
+	jsr Bus24Bit_FastCopySmallData
+	lda #0
+	ldy #8*.b
+	jsr Bus24Bit_WriteAForY
+
+	+MWordValueTo_AX HardwareTest_Char_0 + ((.a+.b)*8)
+	ldy #8*.a
+	jsr Bus24Bit_FastCopySmallData
+	lda #0
+	ldy #8*.b
+	jsr Bus24Bit_WriteAForY
+
+	+MWordValueTo_AX HardwareTest_Char_0 + ((.a+.b)*8*2)
+	ldy #8*.a
+	jsr Bus24Bit_FastCopySmallData
+	lda #0
+	ldy #8*.b
+	jsr Bus24Bit_WriteAForY
+
+	+MWordValueTo_AX HardwareTest_Char_0 + ((.a+.b)*8*3)
+	ldy #8*.a
+	jsr Bus24Bit_FastCopySmallData
+	lda #0
+	ldy #8*.b
+	jsr Bus24Bit_WriteAForY
+
+	+MWordValueTo_AX HardwareTest_Char_0 + ((.a+.b)*8*4)
 	ldy #8*.a
 	jsr Bus24Bit_FastCopySmallData
 	lda #0
@@ -116,7 +254,7 @@ HardwareTest_VideoPattern0
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 	jsr Bus24Bit_WriteAForY
 }
-	lda #4
+	lda #$10
 	ldx #3
 	jsr Bus24Bit_WriteAForYThenX
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
@@ -124,24 +262,35 @@ HardwareTest_VideoPattern0
 	jsr Bus24Bit_WriteAForYThenX
 }
 
+	ldx #64
+.fl2
+	txa
+	and #$0f
+	+MBus24Bit_Send8BitValueFromA
+	dex
+	bne .fl2
+
+
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
 	lda #0
 	tay
 	ldx #2
 	jsr Bus24Bit_WriteAForYThenX
 	lda #kBus24Bit_Video_FlipH
-	ldx #2
+	ldx #1
 	jsr Bus24Bit_WriteAForYThenX
 	lda #kBus24Bit_Video_FlipV
-	ldx #2
+	ldx #1
 	jsr Bus24Bit_WriteAForYThenX
 	lda #kBus24Bit_Video_FlipH | kBus24Bit_Video_FlipV
-	ldx #2
+	ldx #1
 	jsr Bus24Bit_WriteAForYThenX
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
-	ldx #8
+	lda #0
+	ldx #10
 	jsr Bus24Bit_WriteAForYThenX
 }
+
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
 	+HardwareTest_SendBitplaneData 4 , 1
@@ -153,7 +302,7 @@ HardwareTest_VideoPattern0
 	+HardwareTest_SendBitplaneData 2 , 3
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3
-	+HardwareTest_SendBitplaneData 1 , 4
+	+HardwareTest_SendBitplaneData 7 , 1
 
 	; Tiles
 	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenMap_EBBS , kBus24Bit_TileScreenMap
@@ -203,16 +352,12 @@ HardwareTest_VideoPattern0
 	ldy #8
 	jsr Bus24Bit_WriteAForY
 	+HardwareTest_SendBitplaneData 4 , 1
-	+HardwareTest_SendBitplaneData 4 , 1
-	+HardwareTest_SendBitplaneData 4 , 1
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_1
 	+HardwareTest_SendBitplaneData 3 , 2
 	lda #$ff
 	ldy #8
 	jsr Bus24Bit_WriteAForY
-	+HardwareTest_SendBitplaneData 3 , 2
-	+HardwareTest_SendBitplaneData 3 , 2
 	+HardwareTest_SendBitplaneData 3 , 2
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_2
@@ -221,16 +366,12 @@ HardwareTest_VideoPattern0
 	ldy #8
 	jsr Bus24Bit_WriteAForY
 	+HardwareTest_SendBitplaneData 2 , 3
-	+HardwareTest_SendBitplaneData 2 , 3
-	+HardwareTest_SendBitplaneData 2 , 3
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_SpritePlanes_EBBS , kBus24Bit_SpritePlanes_3
 	+HardwareTest_SendBitplaneData 1 , 4
 	lda #$ff
 	ldy #8
 	jsr Bus24Bit_WriteAForY
-	+HardwareTest_SendBitplaneData 1 , 4
-	+HardwareTest_SendBitplaneData 1 , 4
 	+HardwareTest_SendBitplaneData 1 , 4
 
 	jsr Video_SetAddressSpritesControl
