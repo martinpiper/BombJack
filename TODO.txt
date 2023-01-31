@@ -89,7 +89,91 @@
 						No effect, still inconsistent. Which excludes hardware memory contention and C64 write timing due to extra bus24 setup cycles
 				1c (only render $c rows)
 				94 (only render $4 rows)
-					
+		The 74LS85 comparator seems to be OK: file:///C:/Downloads/74LS85.pdf
+			Even if U333 A>B input is hi
+	>> 74LS161 74LS163 74161 74163 https://www.ti.com/lit/ds/symlink/sn54ls161a-sp.pdf?ts=1675152985431&ref_url=https%253A%252F%252Fwww.google.com%252F
+		74LS161 74161 has asynchronous clear
+		74LS163 74163 has synchronous clear only on CLK
+	* Debug hardware strategy... Using: "C:\work\BombJack\V8.0\Bomb Jack - Sprites2 - Routed.pdsprj"
+		Mostly on: Root sheet 11
+		>> Sprites2 V8.0 Debug 1
+			Signal			IC		pin(s)
+			S2_LOGICRESET	U384	6
+			S2_RESETDRAW	U156	6
+			S2_ENDOFLIST	U138	11
+			S2SPRIA[0..3]	U316	14 13 12 11
+			S2SIZEY[0..7]	U325	2 5 6 9 12 15 16 19
+		> This is puzzling. So far: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 a.LPF"
+			This clearly shows the 0 is rendering, the 1 sprite is not (long and short times), as expected since they are vertically stacked.
+			But the 2 sprite S2SIZEY is being reading as 0
+		>> Going to need debug on: S2ISDB[0..7]	U325	3 4 7 8 13 14 17 18
+			> When S2SPRIA=2 S2ISDB Clearly shows 08 6b 00 on the DB: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 b.LPF"
+				Even when preceding values are correct
+		>> Going to need debug on:
+			S2SPRSA[0..2]	U302	13 12 11
+		> S2SPRIA=2 S2SPRSA=2 read size Y S2ISDB = 0 ?!! "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 c.LPF"
+		>> Going to need debug on:
+			S2_LDPALETTE	U303	15
+			S2_LDSPRY		U303	13
+			S2_LDSIZEY		U303	11
+			> Which clearly shows (at cursor A) a nice stable S2SPRIA=2 S2SPRSA=2: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 d.LPF"
+				And a well timed (middle of the held value) RAM read, just the value is wrong
+		>> Going to need debug on register SRAM
+			S2ISAB[0..8]	U313	8 7 6 5 4 3 2 1 23
+			And its WE				21
+				U313 is hard to attach, try...
+							U319	4 7 9 12
+							U318	4 7 9 12
+							U349	4
+			Keep these signals:
+				S2_LOGICRESET
+				S2_RESETDRAW
+				S2_ENDOFLIST
+				S2SPRIA
+				S2ISDB
+				S2_LDPALETTE
+				S2_LDSPRY
+				S2_LDSIZEY
+			> Which clearly shows at cursor A the SRAM address S2IASB is OK, the read value is still wrong?!
+				"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 e.LPF"
+		>> Going to need WE: Register RAM _WE
+			Signal rising edge: Register RAM _WE
+			> Which clearly shows at cursors A/B/C/D the SRAM write for S2ISAB=12 S2ISDB=0 which is the wrong value??!!
+				"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 f.LPF"
+		>> Try a software fudge to reset the address?
+			This worked, when the address fudge was at kBus24Bit_Sprites2 + $12 but not at kBus24Bit_Sprites2 + $12
+			WTF?!
+			> Disable address fudge
+			> Try delay
+				Using: +MACRODelay_X 30
+					> Which also worked. WTF?!
+				Using: +MACRODelay_X 20
+					> Which also worked
+					"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 f.LPF"
+		> Noticed during the register SRAM writes, sometimes S2_LDPALETTE is spiking from 0 to 1, could this be disrupting the write data?
+			Unlikely, the latches are read only
+		The Sprites2 layer is turned off, it does force S2_LOGICRESET=0 and then S2_RESETDRAW=0 and and S2_ENDOFLIST=1 and S2SPRIA[0..3]=0
+			As expected
+		> What delay timing value causes an issue then?
+			Works (reliably): +MACRODelay_X 6
+			Issue (unreliably): +MACRODelay_X 5
+			Issue (reliably): +MACRODelay_X 4
+		> Going to need to check DB[0..7] from the address bus at U317 pins 18 17 16 15 14 13 12 11
+		> Going to need to check the address demux U319/U318/U349 _A/B S2_9200CS pin 1
+		> Going to need to gather debug values from the address bus before the SRAM
+
+			
+
+
+
+			
+	* TODO:
+		* U302 ENT could take the result from before U384:C since it has an internal AND so no need the external AND into ENP
+		* Check the comparators: < > least significant bit input is 0 and = input is 1
+			Proably with the exception of the 32x32 sprite check?
+
+
+
 			
 
 
