@@ -4,14 +4,11 @@
 
 d0
 
-d$00000000
-
 ; First address setup
 d$00020000
 d$00030000
-d$00020000
-d$00030000
 
+; Sending _PC timed data, note there is no data setup time, like the C64
 d$00010001
 d$00030001
 
