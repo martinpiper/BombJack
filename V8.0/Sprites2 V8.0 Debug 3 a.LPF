@@ -2072,8 +2072,8 @@ InvertedChannelListFalseFalseFalseFalseFalseFalseFalseFalseFalseFalse
 ExportFormat2
 ExportRadix1
 ExportFile
-CursorOffsetSamples-16165082115148
-CursorOffsetTime-0.0000001650.0000001650.0000004950.0000008250.0000011550.000001485
+CursorOffsetSamples-9910155082115148
+CursorOffsetTime-0.000000990.000010150.0000004950.0000008250.0000011550.000001485
 CursorInterlock-1-1-1-1-1-1
 ControlSelections032445674567
 ControlValues151511.432301
@@ -2148,7 +2148,7 @@ PrefillTimeout2
 PostfillTimeout2
 QualifyStateSamplingFalse
 QualifierPolarity1
-MeasurementType0124
-MeasurementLeftTerm0202
-MeasurementRightTerm1343
+MeasurementType2124
+MeasurementLeftTerm2202
+MeasurementRightTerm3343
 NotesString//

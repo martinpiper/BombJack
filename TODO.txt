@@ -221,7 +221,7 @@
 							1	1	1
 							= a OR b
 							>> TODO: This held at 1 logic is better
-						The U1 latch will need to advance only on the correct +ve edge of _Pc, when not CS3, so... Held 1 logic
+						The U1 latch will need to advance only on the correct +ve edge of _PC, when not CS3, so... Held 1 logic
 							CS3	_PC	Output
 							0	0	1
 							0	1	1
@@ -231,7 +231,12 @@
 							* TODO: The above
 			* TODO: The test data for UserPortTo24BitAddressSimple.pdsprj needs to reflect the C64 clock timing compared to the 4MHz clock internally. Also the data setup is done on negative edge _PC, not before. Test data should reflect that.
 				As shown by "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
-
+			> Added data recorder VSMDD1 writes memory data to: output\DebugUserPortTo24BitAddress.txt
+				> The measured time between user port data byte changes (from the C64 sta/clc/adc #1/jmp update code) is 11.14us
+				> The realistic minimum time is going to be an unrolled loop of lda#/sta which is 2+4 cycles, at 985248 Hz = ~0.000006 seconds
+					or 164208 hz so use this for the new digital data
+			> Added data generator VSMDD2 for expected data test with testdata\DebugUserPortTo24BitAddress - Expected1.txt
+				
 
 
 
@@ -239,7 +244,8 @@
 	* TODO:
 		* U302 ENT could take the result from before U384:C since it has an internal AND so no need the external AND into ENP
 		* Check the comparators: < > least significant bit input is 0 and = input is 1
-			Proably with the exception of the 32x32 sprite check?
+			Probably with the exception of the 32x32 sprite check?
+
 
 
 
