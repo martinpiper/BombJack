@@ -3933,3 +3933,250 @@ All layouts now use V3.1
 	
 	34 2 row - https://www.mouser.sg/ProductDetail/Mill-Max/803-43-034-10-001000?qs=iJx90KzHWBq7fAf92WBi9Q%3D%3D
 	>> APU 9.4
+
+
+
+
+* Audio 9.2 board
+	Was working fine.
+	> But after being stored for a while it developed a crackle, on all four voices.
+	> Only when playing sounds, otherwise when silent the voice is OK.
+	> Removed all other boards (except video), including APU. Same result, no change.
+	> Tried filling the sample RAM with $80 (middle zero volume) and there are no crackles
+		NOTE: ; For debug, fill audio with the same byte pattern
+		> Can hear the RAM being filled
+		Also filling the RAM with 0 causes a very short click to be heard when the voice is triggered from disabled, as expected
+		Also filling with $4000 byte chunks of $00 $40 $80 $c0 generates the expected series of clicks when debug playing or debug looping the voices (with fire and direction)
+		>> This indicates the RAMs are potentially fine, since they output expected data across their address range, but the output stage is perhaps crackling
+		Volume EPROM reads OK
+	>> Moving the board while plugged in seems to generate issues. Perhaps the connector on the audio board is loose?
+		Removing audio and adding all the other video boards, no APU, back again shows Prototype3\Demo9_*.prg works as intended
+		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
+			Are those positions experiencing a loose connection? If they are then the sprite RAMs could be activated which would generate a filled colour...
+	>> This might be caused by the userport interface bug found here: V8.0\Sprites2 V8.0 Debug 2 c.LPF
+		>>> Yes!  Fixing the userport interface fixed the audio crackle issue.
+
+
+
+
+* Debugging the hardware flash on frame kSkipToFrameThenWaitForFire
+	Note: kSkipToFrameThenWaitForFire means it is reproducible
+	This doesn't happen in emulation
+	The two player sprites are active, indicating it's not a global problem with the scaled sprites
+	Also sending the data twice per frame on the trigger doesn't solve the issue and indicates it's not a communication problem ending the data on this particular frame
+	> Tried forcing all active GameSpriteWorld_Z positions to be 96
+		This shows that resetting the world Z coordinate of active objects stops the problem
+		The question is then which particular object is causing the issue?
+	Setting the sprite Y pixel size to always be 1 (; Y pixel size) stops the issue, but obviously doesn't render correctly...
+		This seems to indicate that for some reason the Y extent check isn't performing as expected in hardware?
+		Try clamping the Y pixel size values calculated in Sprite2Tab_ScaleYSize
+			For values >=31 didn't stop the issue...
+	Take the precise memory dump from the sprite registers and send that as the first frame in the hardware. See if it replicates the issue. Then modify the data until it resolves to understand what is the work around. 
+		2B00 :  0A C4 20 A0 20 20 20 11   0A E4 20 A0 20 20 20 15
+		2B10 :  08 6B 10 B4 20 40 40 09   08 82 0F 92 20 44 44 08
+		2B20 :  08 68 0F B3 20 44 44 08   09 8F 0D C1 20 4E 4E 0E
+		2B30 :  09 8F 0D CD 20 4E 4E 0F   08 52 0C 9D 20 55 55 08
+		2B40 :  08 6F 0A C1 20 66 66 0A   08 7D 0A 9D 20 66 66 08
+		2B50 :  0B 8B 09 A6 20 71 71 16   09 82 09 A6 20 71 71 14
+		2B60 :  09 7A 09 A6 20 71 71 10   08 7F 09 C9 20 71 71 09
+		2B70 :  08 82 07 C3 20 92 92 0B   08 82 07 CB 20 92 92 0C
+		2B80 :  08 8A 07 C3 20 92 92 12   08 8A 07 CB 20 92 92 13
+		2B90 :  0B 87 06 A8 20 AA AA 16   09 81 06 A8 20 AA AA 14
+		2BA0 :  09 7B 06 A8 20 AA AA 10   00 00 00 00 00 00 00 00
+		2BB0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		2BC0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		2BD0 :  00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+		> So it's the data, why?
+		With>
+		GameSpriteData
+			!by $0A ,$C4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$11   ,$0A ,$E4 ,$20 ,$A0 ,$20 ,$20 ,$20 ,$15
+			!by $08 ,$6B ,>>$10<< ,$B4 ,$20 ,$40 ,$40 ,$09   ,$08 ,$82 ,$0F ,$92 ,$20 ,$44 ,$44 ,$08
+		>>$10<< sprite Y pixel size is the issue, if it's $0f or $11 then the render is OK
+			This could be due to the comparison check, ripple in the signals perhaps?
+			Doesn't happen in simulation, even at 14.31818MHz for Sprites2
+		> Could be two things. The Y size comparison ripple, which can be checked by having Y size = 16 consistently, or the Y size = 0 check triggering early
+			Or maybe the inputs to the comparators for Y size are wrong? Need to check datasheet again...
+			If it's ripple, it could be solved by adding an AND condition with the clock to trigger any comparison on a particular clock half
+		>> Trying:
+			+MSendScaledSprite 64 , 128 , 13
+			+MSendScaledSprite 96 , 128 , 14
+			+MSendScaledSprite 128 , 128 , 15
+			+MSendScaledSprite 160 , 128 , 16
+			+MSendScaledSprite 192 , 128 , 17
+			+MSendScaledSprite 224 , 128 , 18
+			>> This had no problem on hardware. Tried above original problem data, as there was an issue.... So...
+			>> This showed that actually size Y 16 ($10) on its own is not causing the issue
+		>> Note: ; Using a different Y pos (with the problem size Y of $10) fixed the issue?!!
+			; So try different Y pos values...
+			Testing all pos Y = 0 - 255 (for the orange rock) shows that only a small number of pos Y values with size Y = $10 causes issues...
+		>> Moving the pos Y adjustment to the previous sprite (player legs) shows that a large number of Y pos cause issue for the next sprite (the orange rock), a small number fix the issue
+			>> Wrong: Perhaps this was caused by timing the write during rendering?
+		>>> This means the previous sprite can affect rendering of the next sprite?!
+			Does this mean the combined Y extent calculation is failing or getting stuck?
+				>> Using: ; So try different size Y
+					> This shows a large number of different size Y values for the orange rock are mostly OK, it just happens to be a small number of values causing issues
+			Does this happen with OSC and VIDCLK inputs?
+				Yes, input clock rate does nto affect the issue at all
+			> For the orange rock
+				Default Y pos = 6b size Y = 10
+			What Y pos values are causing this render issue?? (where the rest of the sprites, after the player top/legs, do not draw)
+				67 6b 6d 6f e1 e3 e5 e6 e7 e9 ea eb ec ed ee ef
+				Even with different player legs Y these numbers are the same
+			What size Y values are causing this render issue??
+				10
+			>> These size Y values do not cause the render issue, but render only the orange rock with the incorrect height (size Y)
+				14 (only render $4 rows)
+				16 (only render $6 rows) Not consistent between multiple advances by single clicks of fire... WTF...
+					Try disabling the layer then enabling it?
+						No effect, still inconsistent. Which excludes hardware memory contention and C64 write timing due to extra bus24 setup cycles
+				1c (only render $c rows)
+				94 (only render $4 rows)
+		The 74LS85 comparator seems to be OK: file:///C:/Downloads/74LS85.pdf
+			Even if U333 A>B input is hi
+	>> 74LS161 74LS163 74161 74163 https://www.ti.com/lit/ds/symlink/sn54ls161a-sp.pdf?ts=1675152985431&ref_url=https%253A%252F%252Fwww.google.com%252F
+		74LS161 74161 has asynchronous clear
+		74LS163 74163 has synchronous clear only on CLK
+	* Debug hardware strategy... Using: "C:\work\BombJack\V8.0\Bomb Jack - Sprites2 - Routed.pdsprj"
+		Mostly on: Root sheet 11
+		>> Sprites2 V8.0 Debug 1
+			Signal			IC		pin(s)
+			S2_LOGICRESET	U384	6
+			S2_RESETDRAW	U156	6
+			S2_ENDOFLIST	U138	11
+			S2SPRIA[0..3]	U316	14 13 12 11
+			S2SIZEY[0..7]	U325	2 5 6 9 12 15 16 19
+		> This is puzzling. So far: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 a.LPF"
+			This clearly shows the 0 is rendering, the 1 sprite is not (long and short times), as expected since they are vertically stacked.
+			But the 2 sprite S2SIZEY is being reading as 0
+		>> Going to need debug on: S2ISDB[0..7]	U325	3 4 7 8 13 14 17 18
+			> When S2SPRIA=2 S2ISDB Clearly shows 08 6b 00 on the DB: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 b.LPF"
+				Even when preceding values are correct
+		>> Going to need debug on:
+			S2SPRSA[0..2]	U302	13 12 11
+		> S2SPRIA=2 S2SPRSA=2 read size Y S2ISDB = 0 ?!! "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 c.LPF"
+		>> Going to need debug on:
+			S2_LDPALETTE	U303	15
+			S2_LDSPRY		U303	13
+			S2_LDSIZEY		U303	11
+			> Which clearly shows (at cursor A) a nice stable S2SPRIA=2 S2SPRSA=2: "C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 d.LPF"
+				And a well timed (middle of the held value) RAM read, just the value is wrong
+		>> Going to need debug on register SRAM
+			S2ISAB[0..8]	U313	8 7 6 5 4 3 2 1 23
+			And its WE				21
+				U313 is hard to attach, try...
+							U319	4 7 9 12
+							U318	4 7 9 12
+							U349	4
+			Keep these signals:
+				S2_LOGICRESET
+				S2_RESETDRAW
+				S2_ENDOFLIST
+				S2SPRIA
+				S2ISDB
+				S2_LDPALETTE
+				S2_LDSPRY
+				S2_LDSIZEY
+			> Which clearly shows at cursor A the SRAM address S2IASB is OK, the read value is still wrong?!
+				"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 e.LPF"
+		>> Going to need WE: Register RAM _WE
+			Signal rising edge: Register RAM _WE
+			> Which clearly shows at cursors A/B/C/D the SRAM write for S2ISAB=12 S2ISDB=0 which is the wrong value??!!
+				"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 f.LPF"
+		>> Try a software fudge to reset the address?
+			This worked, when the address fudge was at kBus24Bit_Sprites2 + $12 but not at kBus24Bit_Sprites2 + $12
+			WTF?!
+			> Disable address fudge
+			> Try delay
+				Using: +MACRODelay_X 30
+					> Which also worked. WTF?!
+				Using: +MACRODelay_X 20
+					> Which also worked
+					"C:\work\BombJack\V8.0\Sprites2 V8.0 Debug 1 f.LPF"
+		> Noticed during the register SRAM writes, sometimes S2_LDPALETTE is spiking from 0 to 1, could this be disrupting the write data?
+			Unlikely, the latches are read only
+		The Sprites2 layer is turned off, it does force S2_LOGICRESET=0 and then S2_RESETDRAW=0 and and S2_ENDOFLIST=1 and S2SPRIA[0..3]=0
+			As expected
+		> What delay timing value causes an issue then?
+			Works (reliably): +MACRODelay_X 6
+			Issue (unreliably): +MACRODelay_X 5
+			Issue (reliably): +MACRODelay_X 4
+		> Going to need to check DB[0..7] from the address bus at U317 pins 18 17 16 15 14 13 12 11
+		> Going to need to check the address demux U319/U318/U349 _A/B S2_9200CS pin 1
+		> Going to need to gather debug values from the address bus before the SRAM
+		> Going to check the memory address header on the backplane and userport interface: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 a.LPF"
+			EA[0..15] EBS[0..7] _MEWR
+			> Trigger +ve _MEWR and EAEBS[0..23] equal to 19212h
+				Shows ED[0..7] = 0 which is wrong
+			>> Is it because the userport is sending the wrong data? Maybe the control lines are sending something due to the serial shift register?
+				> Try with the userport board disconnected: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 b.LPF"
+					Shows ED[0..7] = 0 which is wrong
+					>> This would explain why the audio board is generating scratchy audio?!
+			> How much of the data being sent is bad? Repeatedly send a known pattern 00 - ff: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 c.LPF"
+				Changed sample mode setup to be +ve CLK1 _MEWR
+				Exporting the Data[0..31] data as CSV
+				Comparing with C:\Work\C64\VideoHardware\target\debugData.txt
+				After arranging the capture CSV file bytes to the debugData.txt format and setting the files to be upper case
+				Using cmpare tool
+				For around 1043 captures (lines in CSV) on trigger for 019212 does show these wrong values at regular intervals:
+					00019280
+					00019380
+					00019480
+					00019580
+				>> What is the interval of the wrong values? Why?
+					> Is this seen in just capturing the user port data bits?
+					Adding 4 nops as delay
+					92800100
+					92C00180
+					93800100
+					93C00180
+					94800100
+					94C00180
+					95800100
+					95C00180
+				> Is A being corrupted? Try using +MBus24Bit_Send8BitValueFromX with no nop delay
+					No change, still bugged
+		> Going to check the raw userport data now: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
+			huh well the raw data bytes from the userport are fine
+			There is a bit of signal fuzzing on the -ve edge of _PC but the userport interface latches should all be working on the +ve edge
+				oh how wrong I am...
+				The logic in UserPortTo24BitAddress.pdsprj is flawed, for ADDROUTLOAD, it tries to load on the -ve edge of _PC, after it was delay latched by the 4MHz clock
+				Which, almost always is fine since there is enough gate delay to allow for the fuzzing signals
+				But in the case of a transition from $7f to $80 there is slightly more signal fuzzing from the C64, where the period of the signals is settling, it's longer than the gate delay
+				>> I should be trying to load on the +ve edge, not the -ve edge
+					> The easiest bodge fix on the PCB is to use the other 7474 delay latch, which was unused. This would add a 250ns delay.
+					> Luckily the output from delay latch U27:A pin 5 can be used for the input for U27:B pin 12
+					>> The proper fix is to not use a NOR to select _PC and CS0/CS1/CS2/CS3
+						The output (for the latch clk) should be held at 0, unless the correct _PC is being used
+						CSX	_PC	Output
+						0	0	0
+						0	1	1
+						1	0	0
+						1	1	0
+						= NOT a AND b
+						>> Or held at 1, unless the correct _PC is being used
+							CSX	_PC	Output
+							0	0	0
+							0	1	1
+							1	0	1
+							1	1	1
+							= a OR b
+							>> TODO: This held at 1 logic is better
+						The U1 latch will need to advance only on the correct +ve edge of _PC, when not CS3, so... Held 1 logic
+							CS3	_PC	Output
+							0	0	1
+							0	1	1
+							1	0	0
+							1	1	1
+							= NOT a OR b
+							* TODO: The above
+			* Done: The test data for UserPortTo24BitAddressSimple.pdsprj needs to reflect the C64 clock timing compared to the 4MHz clock internally. Also the data setup is done on negative edge _PC, not before. Test data should reflect that.
+				As shown by "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
+			> Added data recorder VSMDD1 writes memory data to: output\DebugUserPortTo24BitAddress.txt
+				> The measured time between user port data byte changes (from the C64 sta/clc/adc #1/jmp update code) is 11.14us
+				> The realistic minimum time is going to be an unrolled loop of lda#/sta which is 2+4 cycles, at 985248 Hz = ~0.000006 seconds
+					or 164208 hz so use this for the new digital data
+					Using 1M because we need to control _PC and PA2 at greater accuracy
+			> Added data generator VSMDD2 for expected data test with testdata\DebugUserPortTo24BitAddress - Expected1.txt
+			>> Adding a couple of extra AND gates for _PC seems to slow the signal enough for it to "work" on the old V1.3 PCB
+				>> This is not a reliable fix however
+			>> Success when connected to hardware including Sprites2 using Demo9 with debug code. The problematic size Y value is fixed.
