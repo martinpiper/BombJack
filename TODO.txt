@@ -15,6 +15,7 @@
 		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
 			Are those positions experiencing a loose connection? If they are then the sprite RAMs could be activated which would generate a filled colour...
 	>> This might be caused by the userport interface bug found here: V8.0\Sprites2 V8.0 Debug 2 c.LPF
+		>>> Yes!  Fixing the userport interface fixed the audio crackle issue.
 
 
 
@@ -229,7 +230,7 @@
 							1	1	1
 							= NOT a OR b
 							* TODO: The above
-			* TODO: The test data for UserPortTo24BitAddressSimple.pdsprj needs to reflect the C64 clock timing compared to the 4MHz clock internally. Also the data setup is done on negative edge _PC, not before. Test data should reflect that.
+			* Done: The test data for UserPortTo24BitAddressSimple.pdsprj needs to reflect the C64 clock timing compared to the 4MHz clock internally. Also the data setup is done on negative edge _PC, not before. Test data should reflect that.
 				As shown by "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
 			> Added data recorder VSMDD1 writes memory data to: output\DebugUserPortTo24BitAddress.txt
 				> The measured time between user port data byte changes (from the C64 sta/clc/adc #1/jmp update code) is 11.14us
@@ -237,9 +238,11 @@
 					or 164208 hz so use this for the new digital data
 					Using 1M because we need to control _PC and PA2 at greater accuracy
 			> Added data generator VSMDD2 for expected data test with testdata\DebugUserPortTo24BitAddress - Expected1.txt
+			>> Adding a couple of extra AND gates for _PC seems to slow the signal enough for it to "work" on the old V1.3 PCB
+				>> This is not a reliable fix however
+			>> Success when connected to hardware including Sprites2 using Demo9 with debug code. The problematic size Y value is fixed.
+
 				
-
-
 
 			
 	* TODO:
@@ -247,6 +250,11 @@
 		* Check the comparators: < > least significant bit input is 0 and = input is 1
 			Probably with the exception of the 32x32 sprite check?
 
+
+
+
+* Properly fix the user port interface
+	See previous debugging comment: "The logic in UserPortTo24BitAddress.pdsprj is flawed, for ADDROUTLOAD"...
 
 
 

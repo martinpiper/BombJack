@@ -1,5 +1,5 @@
 Version2.172371 CAUTION: Do not change the contents of this file. File corruption is probable!
-DebugData-963382190
+DebugData496561016
 SampleData34204745655682
 {
    D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,CLK1,CLK2,Count
@@ -2067,7 +2067,7 @@ SaveOnAcqFalse
 SaveOnAcqAction0
 SaveOnAcqMaxFiles1
 SaveOnAcqHoldoff0
-USB_ErrorCount12
+USB_ErrorCount13
 InvertedChannelListFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalseFalse
 ExportFormat2
 ExportRadix1
@@ -2090,15 +2090,15 @@ GroupCAN Example121-1True0False04125000012True0.750True0.25
 Group1-Wire Example121-1True0False06False200
 GroupSmart Card Example121-1True0False038False219600True02False00
 Row1False-1285-1False2True-1
-Row0False12850False1False-1
-Row1False12850False1False-1
-Row2False12850False1False-1
-Row3False12850False1False-1
-Row4False12850False1False-1
-Row5False12850False1False-1
-Row6False12850False1False-1
-Row7False12850False1False-1
-Row8False-12850False1True-1
+Row0False12852False1False-1
+Row1False12852False1False-1
+Row2False12852False1False-1
+Row3False12852False1False-1
+Row4False12852False1False-1
+Row5False12852False1False-1
+Row6False12852False1False-1
+Row7False12852False1False-1
+Row8False-12852False1True-1
 Row9False-12852False1True-1
 Column40650 
 Column50650 
