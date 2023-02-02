@@ -14,6 +14,8 @@
 		Removing audio and adding all the other video boards, no APU, back again shows Prototype3\Demo9_*.prg works as intended
 		Except when pushing boards down in new backplane positions 3 Sprites2 and 4 Sprites, then there are weird issues with the sprites, sometimes they appear filled with the same colour...
 			Are those positions experiencing a loose connection? If they are then the sprite RAMs could be activated which would generate a filled colour...
+	>> This might be caused by the userport interface bug found here: V8.0\Sprites2 V8.0 Debug 2 c.LPF
+
 
 
 
@@ -161,8 +163,75 @@
 		> Going to need to check DB[0..7] from the address bus at U317 pins 18 17 16 15 14 13 12 11
 		> Going to need to check the address demux U319/U318/U349 _A/B S2_9200CS pin 1
 		> Going to need to gather debug values from the address bus before the SRAM
+		> Going to check the memory address header on the backplane and userport interface: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 a.LPF"
+			EA[0..15] EBS[0..7] _MEWR
+			> Trigger +ve _MEWR and EAEBS[0..23] equal to 19212h
+				Shows ED[0..7] = 0 which is wrong
+			>> Is it because the userport is sending the wrong data? Maybe the control lines are sending something due to the serial shift register?
+				> Try with the userport board disconnected: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 b.LPF"
+					Shows ED[0..7] = 0 which is wrong
+					>> This would explain why the audio board is generating scratchy audio?!
+			> How much of the data being sent is bad? Repeatedly send a known pattern 00 - ff: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 2 c.LPF"
+				Changed sample mode setup to be +ve CLK1 _MEWR
+				Exporting the Data[0..31] data as CSV
+				Comparing with C:\Work\C64\VideoHardware\target\debugData.txt
+				After arranging the capture CSV file bytes to the debugData.txt format and setting the files to be upper case
+				Using cmpare tool
+				For around 1043 captures (lines in CSV) on trigger for 019212 does show these wrong values at regular intervals:
+					00019280
+					00019380
+					00019480
+					00019580
+				>> What is the interval of the wrong values? Why?
+					> Is this seen in just capturing the user port data bits?
+					Adding 4 nops as delay
+					92800100
+					92C00180
+					93800100
+					93C00180
+					94800100
+					94C00180
+					95800100
+					95C00180
+				> Is A being corrupted? Try using +MBus24Bit_Send8BitValueFromX with no nop delay
+					No change, still bugged
+		> Going to check the raw userport data now: "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
+			huh well the raw data bytes from the userport are fine
+			There is a bit of signal fuzzing on the -ve edge of _PC but the userport interface latches should all be working on the +ve edge
+				oh how wrong I am...
+				The logic in UserPortTo24BitAddress.pdsprj is flawed, for ADDROUTLOAD, it tries to load on the -ve edge of _PC, after it was delay latched by the 4MHz clock
+				Which, almost always is fine since there is enough gate delay to allow for the fuzzing signals
+				But in the case of a transition from $7f to $80 there is slightly more signal fuzzing from the C64, where the period of the signals is settling, it's longer than the gate delay
+				>> I should be trying to load on the +ve edge, not the -ve edge
+					> The easiest bodge fix on the PCB is to use the other 7474 delay latch, which was unused. This would add a 250ns delay.
+					> Luckily the output from delay latch U27:A pin 5 can be used for the input for U27:B pin 12
+					>> The proper fix is to not use a NOR to select _PC and CS0/CS1/CS2/CS3
+						The output (for the latch clk) should be held at 0, unless the correct _PC is being used
+						CSX	_PC	Output
+						0	0	0
+						0	1	1
+						1	0	0
+						1	1	0
+						= NOT a AND b
+						>> Or held at 1, unless the correct _PC is being used
+							CSX	_PC	Output
+							0	0	0
+							0	1	1
+							1	0	1
+							1	1	1
+							= a OR b
+							>> TODO: This held at 1 logic is better
+						The U1 latch will need to advance only on the correct +ve edge of _Pc, when not CS3, so... Held 1 logic
+							CS3	_PC	Output
+							0	0	1
+							0	1	1
+							1	0	0
+							1	1	1
+							= NOT a OR b
+							* TODO: The above
+			* TODO: The test data for UserPortTo24BitAddressSimple.pdsprj needs to reflect the C64 clock timing compared to the 4MHz clock internally. Also the data setup is done on negative edge _PC, not before. Test data should reflect that.
+				As shown by "C:\WORK\BombJack\V8.0\Sprites2 V8.0 Debug 3 a.LPF"
 
-			
 
 
 
