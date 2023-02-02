@@ -235,7 +235,7 @@
 				> The measured time between user port data byte changes (from the C64 sta/clc/adc #1/jmp update code) is 11.14us
 				> The realistic minimum time is going to be an unrolled loop of lda#/sta which is 2+4 cycles, at 985248 Hz = ~0.000006 seconds
 					or 164208 hz so use this for the new digital data
-					Using 500k because we need to control _PC and PA2 at greater accuracy
+					Using 1M because we need to control _PC and PA2 at greater accuracy
 			> Added data generator VSMDD2 for expected data test with testdata\DebugUserPortTo24BitAddress - Expected1.txt
 				
 
