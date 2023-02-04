@@ -8,7 +8,11 @@
 
 * Properly fix the user port interface
 	See previous debugging comment: "The logic in UserPortTo24BitAddress.pdsprj is flawed, for ADDROUTLOAD"...
-
+		"C:\Program Files\TortoiseSVN\bin\TortoiseMerge.exe" /base:"C:\Work\BombJack\testdata\DebugUserPortTo24BitAddress - Expected1.txt" /mine:"C:\Work\BombJack\output\DebugUserPortTo24BitAddress.txt"
+	Original design timings:
+		_MEWR low pulse 245nS
+		Bus setup 1.02 uS
+		525 nS bus held
 
 
 			
