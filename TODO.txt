@@ -18,8 +18,9 @@
 		Bus setup 1.17 uS
 		275 nS bus held
 	* TODO: Need to validate a much longer series of writes
-
-			
+	* TODO: Perhaps this would be a good candidate for SMT TI parts?
+		"C:\Temp\SMT SMD Package test.pdsprj"
+		
 
 
 
@@ -291,7 +292,7 @@
 		It has 24x79 thou pads...
 		For example, test created: SOIC127P1032X265-20-CAPC1005X55N
 			By using the package from CL05B104KO5NNNC
-	** Create a new CODESMT entry for each part for the ordering link
+	** Create a new SMTCODE entry for each part for the ordering link
 	** Check 3 TI parts with their SMT
 		Their pads were made slightly wider and longer to match the data sheets
 		SMTCODE	SMTPACKAGE	Proteus package	Data sheet
@@ -304,6 +305,8 @@
 		https://www.mouser.sg/c/semiconductors/logic-ics/latches/?q=74ls373&number%20of%20output%20lines=8%20Line
 		Very handy logic guide: https://www.ti.com/lit/sg/sdyu001ab/sdyu001ab.pdf
 			Page 16 package size chart! https://mastodon.social/@martin_piper/109687968945408871
+		Mouser component pages have a link to: Mechanical Outline Drawing
+			This gives a good indication on size
 	
 
 
