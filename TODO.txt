@@ -13,7 +13,11 @@
 		_MEWR low pulse 245nS
 		Bus setup 1.02 uS
 		525 nS bus held
-
+	New design:
+		_MEWR low pulse 250nS
+		Bus setup 1.17 uS
+		275 nS bus held
+	* TODO: Need to validate a much longer series of writes
 
 			
 
