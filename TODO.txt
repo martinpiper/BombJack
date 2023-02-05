@@ -25,6 +25,7 @@
 			Will manage component version changes when using other projects
 			But this seemed to generate many netlist pin errors, like on U341?
 				Oh that's because it pulled changes from USERDVC.LIB which seems to be behind the schematic?
+		>> OK Ignore trying to unify the userport to bombjack schematic libraires. The AND and NOT gate ICs go very wrong and generate visual and netlist errors.
 		"C:\Temp\SMT SMD Package test.pdsprj"
 		Extract current BOM and packages, including caps, then revert.
 		Create SMTCODE
