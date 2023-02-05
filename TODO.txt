@@ -29,12 +29,25 @@
 		"C:\Temp\SMT SMD Package test.pdsprj"
 		Extract current BOM and packages, including caps, then revert.
 		Create SMTCODE
+			Not right now, it's not visible in the Design Explorer column picker??!!!
 		Add suitable SOIC/SOP packages depending on code link
 		Edit existing SMT packages to include a suitable decoupling cap space?
 			CL05B104KO5NNNC, which uses package CAPC1005X55N
 		Try adding new component with SMTCODE and package choice back to the user library
 		Create tool (python?) to process BOM CSV to extract the CODE or SMTCODE depending on chosen package
-		
+		>> Unique packages used, to create "-CAP" suffix versions in "C:\Work\BombJack\SMT SMD Package test.pdsprj":
+			SOIC127P780X200-16N
+			SOIC127P780X200-20N
+			SOIC127P600X175-14N
+			SOP65P780X200-14N
+			SOIC127P600X175-16N
+			SOIC127P1030X265-20N
+		>> "C:\Work\BombJack\V9.4\UserPortTo24BitAddress2 - Routed.pdsprj"
+			V1.3
+			>> Power connector has smaller holes
+			>> Power planes setup
+			>> DIL08 https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
+			>> Could do with perhaps some DRC pad-trace configuration for the conectors? To avoid vias getting too close.
 
 
 
@@ -306,6 +319,7 @@
 		It has 24x79 thou pads...
 		For example, test created: SOIC127P1032X265-20-CAPC1005X55N
 			By using the package from CL05B104KO5NNNC, which uses package CAPC1005X55N with label SDC and suitable ground/power pin assignments
+			CODE: https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D
 	** Create a new SMTCODE entry for each part for the ordering link
 	** Check 3 TI parts with their SMT
 		Their pads were made slightly wider and longer to match the data sheets

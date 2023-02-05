@@ -74,7 +74,9 @@
 					Group Layer
 
 				Count ICs from "PCB Package" "*CAP20" then add a row similar to:
-					Capacitors	59	One 100nF (0.1uF) capacitor for ICs marked with extra DC near pin 1	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
+					Capacitors	59	One 100nF (0.1uF) capacitor for DIP ICs marked with extra DC near pin 1	K104K15X7RF53H5	https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D	Decoupling capacitors for each DC component	All with suffix CAP20	Top Copper
+
+					Capacitors	59	One 100nF (0.1uF) capacitor for SMT ICs marked with extra SDC near pin 1	CL05B104KO5NNNC	https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D	Decoupling capacitors for each SDC component	All with suffix -CAP	Top Copper
 
 
 			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals
@@ -99,7 +101,10 @@
 	Assembly note:
 		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
 		This is my preferred supplier. Substitutions can be suggested if the supplier is out of stock and similar components can be sourced from your preferred supplier.
-		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen. One capacitor for ICs marked with extra DC near pin 1, every component in the BOM "PCB Package" column with suffix CAP20
+
+		There are decoupling capacitors (K104K15X7RF53H5 in the BOM) for each component marked with DC on the silk screen. One capacitor for DIP ICs marked with extra DC near pin 1, every component in the BOM "PCB Package" column with suffix CAP20
+
+		There are decoupling capacitors (CL05B104KO5NNNC in the BOM) for each component marked with SDC on the silk screen. One capacitor for SMT ICs marked with extra SDC near pin 1, every component in the BOM "PCB Package" column with suffix -CAP
 		
 		NOTE: ZIP / Image files can be attached from: BombJack\Order clarifications
 		
