@@ -20,6 +20,13 @@
 	* TODO: Need to validate a much longer series of writes
 	* TODO: Perhaps this would be a good candidate for SMT TI parts?
 		"C:\Temp\SMT SMD Package test.pdsprj"
+		Extract current BOM and packages, including caps, then revert.
+		Create SMTCODE
+		Add suitable SOIC/SOP packages depending on code link
+		Edit existing SMT packages to include a suitable decoupling cap space?
+			CL05B104KO5NNNC, which uses package CAPC1005X55N
+		Try adding new component with SMTCODE and package choice back to the user library
+		Create tool (python?) to process BOM CSV to extract the CODE or SMTCODE depending on chosen package
 		
 
 
@@ -291,7 +298,7 @@
 		This package has pads that closely match the 0.6 mm x 2 mm pads: SOIC127P1032X265-20
 		It has 24x79 thou pads...
 		For example, test created: SOIC127P1032X265-20-CAPC1005X55N
-			By using the package from CL05B104KO5NNNC
+			By using the package from CL05B104KO5NNNC, which uses package CAPC1005X55N with label SDC and suitable ground/power pin assignments
 	** Create a new SMTCODE entry for each part for the ordering link
 	** Check 3 TI parts with their SMT
 		Their pads were made slightly wider and longer to match the data sheets
