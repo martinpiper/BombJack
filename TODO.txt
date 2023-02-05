@@ -19,6 +19,12 @@
 		275 nS bus held
 	* TODO: Need to validate a much longer series of writes
 	* TODO: Perhaps this would be a good candidate for SMT TI parts?
+		On the BombJack project, for each component type, choose menu->Library->Packaging tool->"assign package(s)"
+			This will update their respective CODE/SUPPLIER property data
+		Menu->Library->Manage Changes
+			Will manage component version changes when using other projects
+			But this seemed to generate many netlist pin errors, like on U341?
+				Oh that's because it pulled changes from USERDVC.LIB which seems to be behind the schematic?
 		"C:\Temp\SMT SMD Package test.pdsprj"
 		Extract current BOM and packages, including caps, then revert.
 		Create SMTCODE
