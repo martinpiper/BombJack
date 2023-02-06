@@ -3,7 +3,7 @@
 	Writes to the APU data while the APU is trying to access that data seems to still be generating problems
 	The good news is that writes to elsewhere in the hardware seem to be OK, ish...
 	* Perhaps there is scope for having a signal that causes the APU to be held longer when a write is pending? Is that the issue?
-		* Or is itdue to contention again?
+		* Or is it due to contention again?
 		* Try reducing the APU clock rate?
 
 
@@ -58,7 +58,7 @@
 			>> Power connector has smaller holes
 			>> Power planes setup
 			>> DIL08 https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
-			>> Could do with perhaps some DRC pad-trace configuration for the conectors? To avoid vias getting too close.
+			>> Could do with perhaps some DRC pad-trace configuration for the connectors? To avoid vias getting too close.
 
 
 
@@ -73,6 +73,24 @@
 	In the current design we don't know if the *next* instruction will want the external bus, so we don't know when to time the cached write.
 	Then the APU doesn't need to be paused while writing cached values, it only needs to write cached values when the current and next instructions do not have external/internal writes.
 	This would need an extra signal however, which we currently don't have instruction RAM space for.
+
+
+
+
+* Video: There is a desire to have an optional background colour from a defined palette entry if the final output pixel is transparent.
+	This would make raster colour change effects much easier as only one palette entry would need to be changed instead of many for all possible rendered layers and their palette index values.
+	Video control register: U264: 1 bit to enable or 0 to disable this functionality. When disabled the behaviour is as before.
+	> Note: L5E2 would be a good choice to add most of the functionality as a hack daughter board.
+		An alternative would be to have this functionality in the Combiner board (root sheet 14) which could use optionally the same address space as the video board, just uses the unused latch bits...
+		From a final design flexibility point of view I don't want to have to force multiple pixel outputs through a new Combiner just to be able to access this functionality.
+		It would be far better to use a daughter board into L5E2 and select the signal, perhaps the MIRRORED3 signal as it isn't being used.
+		> There is also a spare signal on U262 pin 12 to allow the latch select for the final pixel colour? This would be after the layer enable flags at 0x9e0a, so 0x9e0b
+		> It would be possible to unsolder U262 and L5E2 and use their current board positions to generate a plugin daughter board.
+			Note: IC placements on current board: "C:\Work\BombJack\V8.0\Bomb Jack - Video - Routed.pdsprj"
+		> Or just unsolder L5E2 and fly lead to U262 pin 12 would be less invasive.
+		>> Hmm need access to DB[0..7], closest net to L5E2 is: U264 directly below L5E2
+	> When enabled the lower 4 bits of the output pixel before it gets to L5E2 are compared for = 0
+		Using a 2-to-1 demux with the enable bit and transparent bit, select either the pixel or the new latched transparent value
 
 
 
