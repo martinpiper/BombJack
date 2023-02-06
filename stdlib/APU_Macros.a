@@ -254,14 +254,14 @@ kMAPUEmitChangePaletteIndexHSyncAdjust = 32
 !if .tstart > .tend {
 	!error "MAPUAvoidRastersTableEntry problem"
 }
-!for .i , ((.tend + 1) + 10) - (.tstart-5) {
-!set .tpos = .tstart + .i-1
+!for .i , (.tend + 3) - (.tstart-1) {
+!set .tpos = .tstart + (.i-1)-1
 ; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
-;	sta APUAvoidRastersTable + (255 - <(.tpos))
+	sta APUAvoidRastersTable + (255 - <(.tpos))
 }
 }
 
 !macro MAPUAvoidRastersTest {
 ; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
-;	jsr APUAvoidRasters
+	jsr APUAvoidRasters
 }

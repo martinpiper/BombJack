@@ -9,6 +9,11 @@ APU_ResetDisable
 ;	sta CIA2PortBRS232
 	rts
 
+APU_Disable
+	jsr APU_SetAddressAPURegisters
+	lda #%01
+	sta CIA2PortBRS232
+	rts
 
 APU_Enable
 	jsr APU_SetAddressAPURegisters
@@ -50,7 +55,7 @@ APU_SetAddressAPUData
 	rts
 
 ; For MAPUAvoidRastersTest: Define out the next line to simply remove the avoid rasters code
-!if 0 {
+!if 1 {
 !align 255 , 0
 APUAvoidRastersTable
 	!fill 256 , 0

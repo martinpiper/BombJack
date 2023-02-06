@@ -1,3 +1,14 @@
+* APU V9.4 debugging:
+	The new board seems to be a bit better behaved, but...
+	Writes to the APU data while the APU is trying to access that data seems to still be generating problems
+	The good news is that writes to elsewhere in the hardware seem to be OK, ish...
+	* Perhaps there is scope for having a signal that causes the APU to be held longer when a write is pending? Is that the issue?
+		* Or is itdue to contention again?
+		* Try reducing the APU clock rate?
+
+
+	
+
 * TODO:
 	* U302 ENT could take the result from before U384:C since it has an internal AND so no need the external AND into ENP
 	* Check the comparators: < > least significant bit input is 0 and = input is 1
