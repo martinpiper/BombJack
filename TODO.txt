@@ -5,7 +5,11 @@
 	* Perhaps there is scope for having a signal that causes the APU to be held longer when a write is pending? Is that the issue?
 		* Or is it due to contention again?
 		* Try reducing the APU clock rate?
-
+	* APU Debugging - Software tests
+		Initialise char screen data to show obvious pattern.
+		Initialise APU raster bars to show pattern.
+		Then send repeated updates of graphics and raster bar colour data updates from CPU.
+		Watch for glitches.
 
 	
 
