@@ -6,6 +6,9 @@
 		* Or is it due to contention again?
 		* Try reducing the APU clock rate?
 	* APU Debugging - Software tests
+		Use a memory write clock that is like the C64, to test for all potential memory write overlaps?
+		Expand the APU multiplex demo to include raster bars?
+			Use a byte as an offset into a 256 x 2 (lo only) sin table
 		Initialise char screen data to show obvious pattern.
 		Initialise APU raster bars to show pattern.
 		Then send repeated updates of graphics and raster bar colour data updates from CPU.
