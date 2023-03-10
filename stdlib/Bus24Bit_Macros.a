@@ -42,3 +42,19 @@
 }
 }
 
+!macro MBus24Bit_FastCopyLarge .dstart , .length {
+!if .length > 0 {
+	+MWordValueTo_AX .dstart
+	ldy #<.length
+	jsr Bus24Bit_CopySmallData
+;!if (<.length) = 0 {
+;!set .length = .length - $100
+;}
+!if .length > 0 {
+!if (>.length) > 0 {
+	ldx #>.length
+	jsr Bus24Bit_CopySmallDataRepeatForX
+}
+}
+}
+}

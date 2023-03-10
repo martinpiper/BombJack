@@ -233,6 +233,15 @@ kMAPUEmitChangePaletteIndexHSyncAdjust = 32
 .addr = *
 	+MLittleEndian16Bit 0
 }
+!macro MAPUEmitChangeXScrollCharsValue ~.addr , .value {
+	+MLittleEndian16Bit kBus24Bit_CharScreen_ScrollX16
+.addr = *
+	+MLittleEndian16Bit .value
+}
+!macro MAPUEmitChangeXScrollCharsValueOnly .value {
+	+MLittleEndian16Bit kBus24Bit_CharScreen_ScrollX16
+	+MLittleEndian16Bit .value
+}
 
 !macro MAPUEmitChangeYScroll ~.addr {
 	+MLittleEndian16Bit kBus24Bit_TileScreen_ScrollY16
@@ -257,11 +266,11 @@ kMAPUEmitChangePaletteIndexHSyncAdjust = 32
 !for .i , (.tend + 3) - (.tstart-1) {
 !set .tpos = .tstart + (.i-1)-1
 ; For MAPUAvoidRastersTest: Comment out the next line to simply remove the table creation
-	sta APUAvoidRastersTable + (255 - <(.tpos))
+;	sta APUAvoidRastersTable + (255 - <(.tpos))
 }
 }
 
 !macro MAPUAvoidRastersTest {
 ; For MAPUAvoidRastersTest: Comment out the next line to simply remove the test
-	jsr APUAvoidRasters
+;	jsr APUAvoidRasters
 }
