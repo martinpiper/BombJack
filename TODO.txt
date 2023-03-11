@@ -1,3 +1,8 @@
+* MegaWang logo (or text) for layout solder layers or silk screen
+
+
+
+
 * APU V9.4 debugging:
 	The new board seems to be a bit better behaved, but...
 	Writes to the APU data while the APU is trying to access that data seems to still be generating problems
