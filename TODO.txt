@@ -75,9 +75,11 @@
 			>> Power planes setup
 			>> DIL08 https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
 			>> Could do with perhaps some DRC pad-trace configuration for the connectors? To avoid vias getting too close.
-	* TODO: CLK input to U10 (data register latch) and MR input to U2 (CS3 OR _PC) can be merged, U2 can use LOADTICK
+	* Done: CLK input to U10 (data register latch) and MR input to U2 (CS3 OR _PC) can be merged, U2 can use LOADTICK
 	* TODO: The U2 CLK input can also probably not need the AND with BUSCLEAR, instead route BUSCLEAR to ENT or perhaps ENP?
 		TODO: Same for U1?
+			>> ENT is used for RCO, so use ENP
+				https://www.ti.com/lit/ds/symlink/sn54s163.pdf?ts=1678601335548&ref_url=https%253A%252F%252Fwww.google.com%252F
 		
 
 
