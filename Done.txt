@@ -4180,3 +4180,18 @@ All layouts now use V3.1
 			>> Adding a couple of extra AND gates for _PC seems to slow the signal enough for it to "work" on the old V1.3 PCB
 				>> This is not a reliable fix however
 			>> Success when connected to hardware including Sprites2 using Demo9 with debug code. The problematic size Y value is fixed.
+
+
+
+
+
+* Debugging V1.3 SMT board:
+	It doesn't work, the external bus is always 0 and no _MEWR pulse
+	U14:A BUSCLEARWRITE is always 0, which holds BUSCLEAR 0, which does memory reset MR the output latches.
+	> Indicates that U1 or U22:A are not advancing their state?
+		Need: 1 2 13 14
+	>> Inspection of the built schematic shows that _PC is connected to the data output, but the USER BUS connector is using _PC2
+		So obviously the board isn't getting any write signal from the C64
+		>> Connecting the _PC2 to _PC with a bodge wire works
+			The new board doesn't fix the sporadic flickering of data going from the user port to through the APU though. There seems to be a residual timing issue there.
+
