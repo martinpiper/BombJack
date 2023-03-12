@@ -4195,3 +4195,11 @@ All layouts now use V3.1
 		>> Connecting the _PC2 to _PC with a bodge wire works
 			The new board doesn't fix the sporadic flickering of data going from the user port to through the APU though. There seems to be a residual timing issue there.
 
+
+
+
+
+
+* Long pin (wire wrap) preci-dip sockets: https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Board&contact%20gender=Socket%20%28Female%29&mounting%20angle=Straight&mounting%20style=Through%20Hole&pitch=2.54%20mm&product=Headers&termination%20post%20length=12.78%20mm&termination%20style=Wire%20Wrap&type=Socket&sort=number%20of%20positions
+	Ideally should use the right angled and straight connector type that exposes all the usual signals
+
