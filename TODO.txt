@@ -1,3 +1,13 @@
+* User port to APU or backplane connectivity
+	Could be better, could be use the a single existing **proper** plug/socket back plane connector
+	Could also have the existing 2x17 socket/headers for debugging of course
+	The proper plug/socket could be on the bottom
+		right angled: https://www.mouser.sg/ProductDetail/HARTING/09021646921?qs=gIpPgrDBK%2FiWr6s0yE4P1A%3D%3D
+	Could do a small existing 2x17 socket to straight plug/socket
+		
+
+
+
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
