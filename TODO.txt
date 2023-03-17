@@ -218,6 +218,13 @@
 				Choose the parts with most stock and in gold or copper
 	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
 		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
+			UM245R?	https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
+			Tech doc: https://ftdichip.com/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R
+			Code examples: https://ftdichip.com/software-examples/code-examples/
+			Could just send data to the COM port from the PC
+				Since there are 8 bits, it would be possible to use 4 bits for control, and 4 bits for parallel data
+			Although ideally being able to control other output lines on the C bus and read the _FLAG2 would be better
+
 
 
 
