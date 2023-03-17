@@ -184,7 +184,7 @@
 	* Some design options... Using the new signals:
 		** New 32 bit address space with option to use the old 24 bit board
 			Large read/write external memory, with auto increment
-			Still pass through _FLAG2 from externals to computers
+			Still pass through _FLAG2 from 23 bit interface (video hardware) to the user port, also to the new internal 32 bit interface for any external processor
 			Option to let external device control the output to the old 24 bit interface board, to write data to the video hardware
 			Use case 1 : Read/write large amounts of memory from the C64 user port, with offset and auto increment for faster screen scrolling or lots of extra graphics or decompression of video/audio data
 				Scrolling would be faster because only absolute loads/stores would be needed instead of load/stores with X/Y offsets
@@ -193,17 +193,21 @@
 				A simple latch register, without contention, indicating "job complete" at a certain address range would be suitable
 			Use case 3 : External processor calculates and sends large amounts of data direct to the video hardware via the old 24 bit interface
 			* SERIALATN = 0 : Keep the old 24 bit board, and have an interface that uses the old 14 pin header. Pass through PA2, D0..7, _PC from computer when active
-			* SERIALATN = 1 : New memory interface mode
-				PA2 : Low, reset all external address and data bus drivers, start reading 4 bytes for the address and then extra bytes on _PC for address increment
-				SP1 = 0 : Read address, address bus drivers active but data bus drivers inactive, allowing read from external memory
-				SP1 = 1 : Write address, address bus and data drivers active.
-				SP2 = 0 : User port can control the old 24 bit interface, if SERIALATN = 0
-				SP2 = 1 : External device controls the old 24 bit interface, regardless of SERIALATN
-					New 32 bit write/reads still function as normal
+				The 32 bit memory interface is bypassed by the user port, meaning the external processor can access the memory
+				The external processor would need to wait if wanting to access the old 23 bit interface
+			* SERIALATN = 1 : New 32 bit memory interface mode
+				SP2 = 0 : External device controls the 24 bit and 32 bit interface
+				SP2 = 1 : User port controls the 24 bit and 32 bit memory interface
+					External devices would need to wait if they need to perform writes
+					The transition time from SP2 = 1 to PA2 = 0 or _PC = 0 can be such that existing writes from an external device have time to complete
+					PA2 : Low, reset all external address and data bus drivers, start reading 4 bytes for the address and then extra bytes on _PC for address increment
+					SP1 = 0 : Read address, address bus drivers active but data bus drivers inactive, allowing read from external memory
+					SP1 = 1 : Write address, address bus and data drivers active.
 			> Options for suitable SRAM: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208%7C~32%20k%20x%208%7C~128%20k%20x%208%7C~256%20k%20x%208%7C~512%20k%20x%208%7C~1%20M%20x%208%7C~2%20M%20x%208&supply%20voltage%20-%20max=5.25%20V~~5.5%20V&supply%20voltage%20-%20min=4.5%20V~~4.75%20V&instock=y&rp=semiconductors%2Fmemory-ics%2Fsram%7C~Supply%20Voltage%20-%20Max%7C~Supply%20Voltage%20-%20Min&sort=memory%20size%7C1
 				> https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D
 				> https://www.mouser.sg/ProductDetail/Infineon-Technologies/CY62158H-45ZSXI?qs=QmaLbtOb%252B600VoScfZ7T5g%3D%3D
 				>> Requested: https://support.labcenter.com/forums/viewtopic.php?f=6&t=8291
+					>> Added
 			> Options for connectors. While the normal backplane used two 64 pin (2 row x 32) Harting connectors, this is quite wide. So instead consider a 96 pin (3 row x 32) instead:
 				Right-angled connectors for board edge: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Right%20Angle&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&instock=y
 				Straight receptacles for board: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&product=Receptacles&series=DIN-Signal%20C&termination%20style=Solder%20Pin&instock=y
@@ -212,6 +216,10 @@
 				09032966825222.step also needs adjustment:
 				** The real backplane board also needs model adjustment: 09022646824.step needs: 86.8mm 38.2mm 12.5mm
 				Choose the parts with most stock and in gold or copper
+	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
+		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
+
+
 
 
 
