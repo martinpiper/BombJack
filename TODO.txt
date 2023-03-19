@@ -31,6 +31,8 @@
 	>> First: Using the new user port interface board, to finally validate that data sent is not bad: "; How much of the data being sent is bad? Repeatedly send a known pattern 00 - ff"
 	>> Then if the data is good, send known data to the APU data memory and display that known data on the screen
 	>> If that is OK, send known data to hardware directly and from the APU at the same time
+	* Try a test of continuously copying from internal APU memory to sequential external memory addresses.
+		While continuously writing data into APU data, with some waits in there for good measure.
 
 
 	
