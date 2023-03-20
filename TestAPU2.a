@@ -1,0 +1,34 @@
+; cd /d C:\Work\BombJack
+; ..\c64\acme.exe -v4 --msvc "TestAPU2.a"
+
+; This tests complex internal and external memory bus interactions
+
+!source "stdlib/APU_Macros.a"
+
+!to "TestAPU2.bin" , plain
+
+*=0
+!macro MInitState {
+	+MAPU
+	+MAPU kAPU_Reset_ADDRB1
+	+MAPU
+	
+	+MAPU_LoadDoWait
+	
+	+MAPU_LoadEBSFromB1
+	+MAPU_LoadEADDRFromB1
+
+!for .i , 256 {
+	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+}
+}
+
+	+MInitState
+
+	+MAPU kAPU_WaitForEqualsHV
+	
+	+MInitState
+	
+	+MAPU kAPU_Reset_PC
+	+MAPU

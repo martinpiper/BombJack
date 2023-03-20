@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
+ <FRAME activewindow="2">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff050000000200000003050000a0020000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
    <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="58" flipped="0" gridminor="508000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="218965">
@@ -11,24 +11,24 @@
   </WINDOW>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="220" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="57727">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="5969000" y="7112000"/>
+    <centre x="-1470330" y="497720"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="-37724" y="27057086" z="10427194"/>
-    <focus x="-37724" y="2880006" z="-2428004"/>
-    <up x="0" y="-469471" z="882947"/>
+    <position x="-1483500" y="-967652992" z="968104896"/>
+    <focus x="-1483500" y="452000" z="0"/>
+    <up x="0" y="707106" z="707106"/>
    </camera>
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000002" zoom="-1" scale="220" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="57727">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="5969000" y="7112000"/>
+   <centre x="-1470330" y="497720"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>

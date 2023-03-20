@@ -1,0 +1,30 @@
+
+; Store data into APU memory bank 1 data
+s$40000200
+
+; Next RHRV to wait for
+b$61,b$01,b$f8
+
+; Sprite register EBS+address
+b$01
+b$00
+b$98
+
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07,b$08,b$09,b$0a,b$0b,b$0c,b$0d,b$0e,b$0f
+
+d$0

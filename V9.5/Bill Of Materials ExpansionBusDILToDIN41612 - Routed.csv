@@ -1,0 +1,5 @@
+Category,Quantity,References,Value,Stock Code,Description,Group Layer,PCB Package,Supplier,Placed
+Miscellaneous,1,EXPANSIONBUS,CONN-DIL34,https://www.mouser.sg/ProductDetail/TE-Connectivity/1658525-2?qs=sGAEpiMZZMs%252BGHln7q6pm4Fqf7MuBHLT6rOqfDeotQQ%3D,0.1in pitch DIL connector strip,,CONN-DIL34,,Top Copper
+Miscellaneous,1,EXPANSIONBUS2,CONN-SIL2,https://www.mouser.sg/ProductDetail/Harwin/M20-8900805?qs=%2Fha2pyFadujRVQMSBz%252BYoUCy7UbNMVfTNss7gWmWe0o%3D,0.1in pitch SIL connector strip,,CONN-SIL2,,Top Copper
+Miscellaneous,1,EXPANSIONBUS3,CONN-DIL8,https://www.mouser.sg/ProductDetail/Samtec/SSQ-104-04-F-D?qs=%252BZP6%2F%252BtExtCPFctAELblEw%3D%3D,0.1in pitch DIL connector strip,,CONN-DIL8,,Top Copper
+Miscellaneous,1,EXPANSIONBUSH1,09022646824,https://www.mouser.sg/ProductDetail/?qs=gIpPgrDBK%2Fj7cjNJs9Ij%252BQ%3D%3D,"Harting 64 Way 2.54mm Pitch, Type B Class C2, 2 Row a/b, Straight DIN 41612 Connector, Socket, Solder",Backplane,09022646824,,Top Copper
