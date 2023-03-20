@@ -54,6 +54,8 @@
 		** Will need some syntax to "ignore lines starting with" that reads all lines into an ignore buffer
 			Then "process the file displaying lines that do not match"
 			>> This will allow the output APU data files to be checked for spurious writes
+			>> features/TestAPU2.feature
+				Test passed. Going to need to reproduce on hardware then.
 
 
 

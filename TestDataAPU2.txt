@@ -11,6 +11,9 @@ d$20000200
 d$20000201
 
 
+!TestDataAPU2MemoryChunk2.txt
+
+
 ; PC		12 bits of APU PC (the other half of the 8 KB RAM is used for potential decision points, conditional branching instructions)
 ; A			8 bit register
 ; WAIT		32 bit value to wait for when comparing RHRV (and other signals)
@@ -32,6 +35,7 @@ d$0
 d$0
 w$ff01ff00,$f8016000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -40,6 +44,7 @@ d$0
 w$ff01ff00,$f8015000
 d$0
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 
@@ -48,25 +53,32 @@ w$ff01ff00,$08005000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
 w$ff01ff00,$08004000
 d$0
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 
 d$0
 w$ff01ff00,$09003000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
 w$ff01ff00,$0a003000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -74,7 +86,9 @@ d$0
 d$0
 w$ff01ff00,$09006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 
@@ -83,6 +97,7 @@ w$ff01ff00,$0a006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -90,6 +105,7 @@ w$ff01ff00,$0b006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -97,6 +113,7 @@ w$ff01ff00,$0c006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -104,6 +121,7 @@ w$ff01ff00,$0d006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -111,11 +129,14 @@ w$ff01ff00,$0e006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
 w$ff01ff00,$0f006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -123,6 +144,8 @@ d$0
 d$0
 w$ff01ff00,$10006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -132,6 +155,8 @@ w$ff01ff00,$11006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -145,42 +170,59 @@ d$0
 w$ff01ff00,$13006000
 d$0
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 
 d$0
 w$ff01ff00,$14006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 
 d$0
 w$ff01ff00,$15006000
 d$0
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 
 d$0
 w$ff01ff00,$16006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
 w$ff01ff00,$17006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
 w$ff01ff00,$18006000
 d$0
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 
 d$0
@@ -188,11 +230,15 @@ w$ff01ff00,$19006000
 d$0
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
+!TestDataAPU2MemoryChunk2.txt
+!TestDataAPU2MemoryChunk2.txt
 
 d$0
 w$ff01ff00,$1a006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -200,6 +246,7 @@ d$0
 d$0
 w$ff01ff00,$1b006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -207,6 +254,7 @@ d$0
 d$0
 w$ff01ff00,$1c006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -214,6 +262,7 @@ d$0
 d$0
 w$ff01ff00,$1d006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -221,6 +270,7 @@ d$0
 d$0
 w$ff01ff00,$1e006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
@@ -228,6 +278,8 @@ d$0
 d$0
 w$ff01ff00,$1f006000
 d$0
+!TestDataAPU2MemoryChunk2.txt
+!TestDataAPU2MemoryChunk2.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
 !TestDataAPU2MemoryChunk.txt
