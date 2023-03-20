@@ -127,13 +127,17 @@ kAPU_InstructionSize	= 4
 	+MAPU kAPU_Incr_ADDRB1
 }
 
-!macro MAPU_LoadDoWait {
+!macro MAPU_LoadWait {
 	+MAPU kAPU_Load_Wait8
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_Load_Wait16
 	+MAPU kAPU_Incr_ADDRB1
 	+MAPU kAPU_Load_Wait24
 	+MAPU kAPU_Incr_ADDRB1
+}
+
+!macro MAPU_LoadDoWait {
+	+MAPU_LoadWait
 	+MAPU kAPU_WaitForEqualsHV
 }
 

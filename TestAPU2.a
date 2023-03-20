@@ -13,7 +13,7 @@
 	+MAPU kAPU_Reset_ADDRB1
 	+MAPU
 	
-	+MAPU_LoadDoWait
+	+MAPU_LoadWait
 	
 	+MAPU_LoadEBSFromB1
 	+MAPU_LoadEADDRFromB1
