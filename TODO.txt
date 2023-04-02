@@ -62,7 +62,10 @@
 		* Try the test without enabling the APU, check for internal RAM writes
 		* Try the test without any external writes, just let the APU run
 		* Use the logic analyser to inspect the timings of address and data changes
-
+		>> Line 44: d$000a0000 is wrong, it should be d$000a0004
+			> DIGITAL DATA logic analyser indicates the external user port data is fine
+			The logic analyser shows a normal write, with data switch over.
+			>> Perhaps the digital data model is unable to time such small time values correctly?
 
 	
 
