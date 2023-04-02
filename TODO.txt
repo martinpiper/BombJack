@@ -56,7 +56,12 @@
 			>> This will allow the output APU data files to be checked for spurious writes
 			>> features/TestAPU2.feature
 				Test passed. Going to need to reproduce on hardware then.
-
+	>> When running APU "TestDataAPU2.txt" the output file: C:\work\BombJack\output\DebugAPUDataRAM.txt
+		Shows some: ;Data not stable before pos edge @petime:0.009509:$000a0004 with last change time @dctime:0.009509
+		This might indicate transient timing issues when writing to the internal data RAM.
+		* Try the test without enabling the APU, check for internal RAM writes
+		* Try the test without any external writes, just let the APU run
+		* Use the logic analyser to inspect the timings of address and data changes
 
 
 	
