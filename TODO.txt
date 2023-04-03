@@ -66,7 +66,11 @@
 			> DIGITAL DATA logic analyser indicates the external user port data is fine
 			The logic analyser shows a normal write, with data switch over.
 			>> Perhaps the digital data model is unable to time such small time values correctly?
-
+				The values seem to be timed correctly
+		>	fprintf(mPatternFP, "d$%08x\n", mRvalueWhenLow);
+				changed to:
+			fprintf(mPatternFP, "d$%08x\n", mRvalueOnPosEdge);
+		>> For now, disabled the stable data check, as it seems to be reading interference just before even though the logic analyser isn't showing this
 	
 
 * TODO:
