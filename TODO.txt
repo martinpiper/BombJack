@@ -71,6 +71,18 @@
 				changed to:
 			fprintf(mPatternFP, "d$%08x\n", mRvalueOnPosEdge);
 		>> For now, disabled the stable data check, as it seems to be reading interference just before even though the logic analyser isn't showing this
+	>> With VSMDD6 (check address before positive edge" 0.000000055
+		>> First data check hit: ;Data not stable before pos edge @petime:0.009573:$002a0004 with last change time @dctime:0.009573 atime 4495 delta_ns:4.495000
+		>> INTERNALMEMORY logic analyser with error trigger (+ve A8)
+			Does show 65 ns from +ve _MEWR for stable data, which seems rather short?
+				Actually this seems typical compared to other writes. Also the logic analyser isn't shows any data changes at 5n capture resolution
+		>> DG[8..31] break on 0x402a02
+			ENABLEAPU = 0
+			_RESET = 1
+			_RAMSWITCHTOPASSTHROGUH = 1 (so pass through)
+			
+		
+		
 	
 
 * TODO:
@@ -752,6 +764,17 @@
 
 
 
-	
+* Socket orientation on silkscreen
 
+
+
+* It should be possible to record the real hardware user port interface data with the logic analyser and reconcile that with what is recorded in emulation. The logic analyser can export data as a CSV file.
+	* Also then reconcile the APU output with emulated output.
+
+
+
+
+* Maybe the output vertical black lines are due to the output pixel being clocked too quickly after the left hand HSYNC pulse timing? Perhaps delaying the output pixel clock will help reduce black lines?
+	Or maybe the latch needs more decoupling capacitor support?
+	Check the original schematic for output latching, check for any extra filtering?
 
