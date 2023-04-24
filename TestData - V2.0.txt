@@ -3,6 +3,9 @@
 ; RAM instead of ROM for graphics data.
 ; The addition of X/Y scroll registers for the tiles layer.
 ; Full screen height sprites, effectively the Y height check is disabled.
+; Extra background colour register, which uses the last pixel layer slot.
+; Border size controls, to mask the side screen areas when scrolling.
+
 
 
 ; Blank (address b$2000)
