@@ -9,6 +9,7 @@
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
+  <WINDOW type="default" module="DXP"/>
  </FRAME>
  <MODULE name="ARES">
   <editor metric="0" gridmajor="25400000" mode="00000001" zoom="-1" scale="74" flipped="0" gridminor="508000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="171621">
@@ -60,10 +61,10 @@
    <POPUP w="610" x="972" flags="00000000" y="445" h="466" pid="0" iid="114">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="610" x="1251" flags="00000001" y="280" h="466" pid="0" iid="265">
+   <POPUP w="610" x="721" flags="00000000" y="286" h="466" pid="0" iid="265">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="16" x="1334" flags="0000000b" y="101" h="17" pid="1" iid="98">
+   <POPUP w="16" x="1334" flags="0000800b" y="101" h="13" pid="1" iid="98">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -73,7 +74,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="168" flags="0000000b" y="127" h="9" pid="1" iid="26">
+   <POPUP w="16" x="168" flags="0000000b" y="127" h="5" pid="1" iid="26">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -123,7 +124,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="636" flags="00000001" y="279" h="466" pid="0" iid="252">
+   <POPUP w="610" x="112" flags="00000000" y="286" h="466" pid="0" iid="252">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="800" x="32" flags="00000003" y="763" h="200" pid="0" iid="-1">
@@ -414,7 +415,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="610" x="27" flags="00008001" y="279" h="466" pid="0" iid="288">
+   <POPUP w="610" x="27" flags="00000000" y="279" h="466" pid="0" iid="288">
     <PROPERTIES/>
    </POPUP>
   </PWI>
