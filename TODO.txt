@@ -83,6 +83,7 @@
 			_RAMSWITCHTOPASSTHROGUH = 1 (so pass through)
 	** Now the digital data model is fixed with input pins, this exposed a data contention error on the APU data RAM, during external write while not ENABLEAPU
 		>> Adding APU data RAM _OE to be disabled when external or internal memory is written, the data recording seems to show a fixed data held issue now and no data contention.
+		** It should be possible to bodge this change into the board using one wire and bending out the RAM chip _OE.
 		
 		
 	
