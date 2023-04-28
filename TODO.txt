@@ -29,6 +29,7 @@
 * Video: There is a desire to have an optional background colour from a defined palette entry if the final output pixel is transparent.
 	This would make raster colour change effects much easier as only one palette entry would need to be changed instead of many for all possible rendered layers and their palette index values.
 	Video control register: U264: 1 bit to enable or 0 to disable this functionality. When disabled the behaviour is as before.
+		The option is to allow the last layer to use all 16 colours in a palette, including what would have been the transparent colour if it was on a different layer.
 	> Note: L5E2 would be a good choice to add most of the functionality as a hack daughter board.
 		An alternative would be to have this functionality in the Combiner board (root sheet 14) which could use optionally the same address space as the video board, just uses the unused latch bits...
 		From a final design flexibility point of view I don't want to have to force multiple pixel outputs through a new Combiner just to be able to access this functionality.
