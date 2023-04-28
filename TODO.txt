@@ -45,6 +45,11 @@
 
 
 
+* Investigate output pixel timing skew
+
+
+
+
 * Backplane: Solid relief for power pins
 	Slot stack for the other power plug part? https://labcenter.s3.amazonaws.com/support/Slotted_Pad.webm
 		2.62mm
