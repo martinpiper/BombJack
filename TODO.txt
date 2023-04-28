@@ -92,7 +92,8 @@
 				>> Since the APU is stable without userport memory access, this indicates the latched memory write is using a too fast clock?!
 					* Another bodge test would be to connect U144 pin 2 (CLK) to U126 pin 14 (or 13) to access the slower clock, while allowing the APU to run at full speed.
 						** Success!
-		** Improvement: Make the latched write use a DIP switch select for clock speed. Defauklt to twice as slow as the APU clock.
+		** Improvement: Make the latched write use a DIP switch select for clock speed. Default to twice as slow as the APU clock.
+			Bomb Jack V9.5 APU
 		
 		
 	
