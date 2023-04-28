@@ -1,15 +1,6 @@
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
-
-
-
-
-
-
-
-
-
 	
 
 * TODO:

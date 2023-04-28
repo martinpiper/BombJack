@@ -4305,3 +4305,9 @@ All layouts now use V3.1
 	Note: Old expansion bus and new connector power pins 17/18 have solid relief (not thermal)
 		And power planes setup
 	Note: EXPANSIONBUSPS1 is the straight variant, whereas EXPANSIONBUSP1 is the right-angled variant
+
+
+
+
+* Socket orientation on silkscreen, especially for the new straight headers
+	Also add clarifying image
