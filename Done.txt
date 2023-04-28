@@ -4311,3 +4311,54 @@ All layouts now use V3.1
 
 * Socket orientation on silkscreen, especially for the new straight headers
 	Also add clarifying image
+
+
+
+
+* Properly fix the user port interface
+	See previous debugging comment: "The logic in UserPortTo24BitAddress.pdsprj is flawed, for ADDROUTLOAD"...
+		"C:\Program Files\TortoiseSVN\bin\TortoiseMerge.exe" /base:"C:\Work\BombJack\testdata\DebugUserPortTo24BitAddress - Expected1.txt" /mine:"C:\Work\BombJack\output\DebugUserPortTo24BitAddress.txt"
+	Original design timings:
+		_MEWR low pulse 245nS
+		Bus setup 1.02 uS
+		525 nS bus held
+	New design:
+		_MEWR low pulse 250nS
+		Bus setup 1.17 uS
+		275 nS bus held
+	* TODO: Need to validate a much longer series of writes
+	* TODO: Perhaps this would be a good candidate for SMT TI parts?
+		On the BombJack project, for each component type, choose menu->Library->Packaging tool->"assign package(s)"
+			This will update their respective CODE/SUPPLIER property data
+		Menu->Library->Manage Changes
+			Will manage component version changes when using other projects
+			But this seemed to generate many netlist pin errors, like on U341?
+				Oh that's because it pulled changes from USERDVC.LIB which seems to be behind the schematic?
+		>> OK Ignore trying to unify the userport to bombjack schematic libraires. The AND and NOT gate ICs go very wrong and generate visual and netlist errors.
+		"C:\Temp\SMT SMD Package test.pdsprj"
+		Extract current BOM and packages, including caps, then revert.
+		Create SMTCODE
+			Not right now, it's not visible in the Design Explorer column picker??!!!
+		Add suitable SOIC/SOP packages depending on code link
+		Edit existing SMT packages to include a suitable decoupling cap space?
+			CL05B104KO5NNNC, which uses package CAPC1005X55N
+		Try adding new component with SMTCODE and package choice back to the user library
+		Create tool (python?) to process BOM CSV to extract the CODE or SMTCODE depending on chosen package
+		>> Unique packages used, to create "-CAP" suffix versions in "C:\Work\BombJack\SMT SMD Package test.pdsprj":
+			SOIC127P780X200-16N
+			SOIC127P780X200-20N
+			SOIC127P600X175-14N
+			SOP65P780X200-14N
+			SOIC127P600X175-16N
+			SOIC127P1030X265-20N
+		>> "C:\Work\BombJack\V9.4\UserPortTo24BitAddress2 - Routed.pdsprj"
+			V1.3
+			>> Power connector has smaller holes
+			>> Power planes setup
+			>> DIL08 https://www.mouser.sg/ProductDetail/Mill-Max/110-93-308-41-001000?qs=WZeyYeqMOWe5ncqYpB7m3g%3D%3D
+			>> Could do with perhaps some DRC pad-trace configuration for the connectors? To avoid vias getting too close.
+	* Done: CLK input to U10 (data register latch) and MR input to U2 (CS3 OR _PC) can be merged, U2 can use LOADTICK
+	* Done: The U2 CLK input can also probably not need the AND with BUSCLEAR, instead route BUSCLEAR to ENT or perhaps ENP?
+		Done: Same for U1?
+			>> ENT is used for RCO, so use ENP
+				https://www.ti.com/lit/ds/symlink/sn54s163.pdf?ts=1678601335548&ref_url=https%253A%252F%252Fwww.google.com%252F
