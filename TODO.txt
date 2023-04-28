@@ -94,8 +94,13 @@
 						** Success!
 		** Improvement: Make the latched write use a DIP switch select for clock speed. Default to twice as slow as the APU clock.
 			Bomb Jack V9.5 APU
-		
-		
+
+
+
+
+* APU 9.5 to include EXPANSIONBUSH1 from the ExpansionBusDILToDIN41612 but note the updated signal names from APU root sheet 2 old headers
+
+
 	
 
 * TODO:
