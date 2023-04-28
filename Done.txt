@@ -4275,3 +4275,33 @@ All layouts now use V3.1
 
 
 * APU 9.5 to include EXPANSIONBUSH1 from the ExpansionBusDILToDIN41612 but note the updated signal names from APU root sheet 2 old headers
+
+
+
+
+* User port to APU or backplane connectivity
+	Could be better, could be use the a single existing **proper** plug/socket back plane connector
+	Could also have the existing 2x17 socket/headers for debugging of course
+	The proper plug/socket could be on the bottom for boards that use this:
+		right angled: https://www.mouser.sg/ProductDetail/HARTING/09021646921?qs=gIpPgrDBK%2FiWr6s0yE4P1A%3D%3D
+		Straight: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=64%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&series=DIN-Signal%20B&termination%20style=Solder%20Pin&type=Type%20B&instock=y
+		In stock: https://www.mouser.sg/ProductDetail/HARTING/09021642922?qs=UV5Tb6pF94XZhGR3hSRdEQ%3D%3D
+			Harting 09021642922
+			Note: Pins assignments are the same, but the part is on the solder side
+	Could do a small existing 2x17 socket to straight plug/socket conversion board
+		ExpansionBusDILToDIN41612.pdsprj
+		Copy EXPANSIONBUSH1, which contains all the required signals, from the backplane board
+			-90		-90		90
+			86.8mm	38.2mm	12.5mm
+	Need some better link for the old DIL34 AND DIL8 SIL2 headers
+		dil8	https://www.mouser.sg/ProductDetail/Preci-dip/803-87-008-53-001101?qs=1N3g64hlyj55FJ75DAS30Q%3D%3D
+		Note lengths for straight pin versions: https://www.mouser.sg/datasheet/2/527/ssq_th-2854703.pdf
+			-04 type 14.83 mm	https://www.mouser.sg/c/connectors/headers-wire-housings/?contact%20gender=Socket%20%28Female%29&mounting%20angle=Straight&mounting%20style=Through%20Hole&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20post%20length=10%20mm~~14.83%20mm&type=Socket&instock=y&rp=connectors%2Fheaders-wire-housings%7C~Termination%20Post%20Length&sort=termination%20post%20length%7C1
+		DIL34
+			1 x DIL14	https://www.mouser.sg/ProductDetail/Samtec/SSQ-107-04-L-D?qs=%252BZP6%2F%252BtExtDu9WbdGqCIbw%3D%3D
+			2 x DIL10	https://www.mouser.sg/ProductDetail/Samtec/SSQ-105-04-F-D?qs=rU5fayqh%252BE1EB39FUh4r9A%3D%3D
+		DIL8	https://www.mouser.sg/ProductDetail/Samtec/SSQ-104-04-F-D?qs=%252BZP6%2F%252BtExtCPFctAELblEw%3D%3D
+		SIL2	Needs trimming, keep two leads	https://www.mouser.sg/ProductDetail/Samtec/SSQ-104-04-T-S?qs=rU5fayqh%252BE1vwmUZANK9qQ%3D%3D
+	Note: Old expansion bus and new connector power pins 17/18 have solid relief (not thermal)
+		And power planes setup
+	Note: EXPANSIONBUSPS1 is the straight variant, whereas EXPANSIONBUSP1 is the right-angled variant
