@@ -11,24 +11,24 @@
   </WINDOW>
   <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="322" flipped="0" gridminor="63500" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="39440">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-1470330" y="497720"/>
+    <centre x="5645172" y="7880324"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="-1483500" y="-967652992" z="968104896"/>
+    <position x="-1483500" y="-18910100" z="19362098"/>
     <focus x="-1483500" y="452000" z="0"/>
     <up x="0" y="707106" z="707106"/>
    </camera>
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="98" flipped="0" gridminor="254000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="129591">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="322" flipped="0" gridminor="63500" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="39440">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-1470330" y="497720"/>
+   <centre x="5645172" y="7880324"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>

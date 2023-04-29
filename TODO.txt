@@ -1,12 +1,21 @@
+* TODO:
+
+
+* Add "memory latch/cache" write time configuration in the emulation to match the recent hardware change.
+	Default to twice as slow as the main APU clock, basically pause APU execution for "n pixels" to simulate the real hardware performance.
+	If the APU main clock is twice as slow, the rendered output should show the palette updates on the left edge of the SotB demo and they should change as the 6502 sends data.
+	
+
+
+
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
 	
 
-* TODO:
-	* U302 ENT could take the result from before U384:C since it has an internal AND so no need the external AND into ENP
-	* Check the comparators: < > least significant bit input is 0 and = input is 1
-		Probably with the exception of the 32x32 sprite check?
+* U302 ENT could take the result from before U384:C since it has an internal AND so no need the external AND into ENP
+* Check the comparators: < > least significant bit input is 0 and = input is 1
+	Probably with the exception of the 32x32 sprite check?
 
 
 
@@ -97,14 +106,14 @@
 					Pins edited to C-90-40
 	> Extra CIA info: https://www.c64-wiki.com/wiki/CIA
 	> See updates for Bus24Bit2_Init
-		Total signals available: PA2 , SERIALATN , SP1 , SP2 and the strobe _PC for D0..7 write
+		Total signals available: PA2 , SERIALATN , SP1 , SP2 and the strobe _PC for D0..7 read/write
 	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_360.html
 	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_362.html
 	> Schematics: http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c64/index.html
 	* Does _PC go low when reading the data?
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows: /PC	Port Control - Handshake output, Low pulse after read/write on port B.
 		Empirically tested
-	* CNT1 CNT2 have pullup resistors and ground filter capacitors and got to pin 40 on the CIAs
+	* CNT1 CNT2 have pullup resistors and ground filter capacitors and go to pin 40 on the CIAs
 		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows pin 40 CNT is: CNT	Count - Internal timers can count pulses to this input. Can be used for frequency dependent operations.
 	* Some design options... Using the new signals:
 		** New 32 bit address space with option to use the old 24 bit board
@@ -119,7 +128,7 @@
 			Use case 3 : External processor calculates and sends large amounts of data direct to the video hardware via the old 24 bit interface
 			* SERIALATN = 0 : Keep the old 24 bit board, and have an interface that uses the old 14 pin header. Pass through PA2, D0..7, _PC from computer when active
 				The 32 bit memory interface is bypassed by the user port, meaning the external processor can access the memory
-				The external processor would need to wait if wanting to access the old 23 bit interface
+				The external processor would need to wait if wanting to access the old 24 bit interface
 			* SERIALATN = 1 : New 32 bit memory interface mode
 				SP2 = 0 : External device controls the 24 bit and 32 bit interface
 				SP2 = 1 : User port controls the 24 bit and 32 bit memory interface
@@ -130,9 +139,12 @@
 					SP1 = 1 : Write address, address bus and data drivers active.
 			> Options for suitable SRAM: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208%7C~32%20k%20x%208%7C~128%20k%20x%208%7C~256%20k%20x%208%7C~512%20k%20x%208%7C~1%20M%20x%208%7C~2%20M%20x%208&supply%20voltage%20-%20max=5.25%20V~~5.5%20V&supply%20voltage%20-%20min=4.5%20V~~4.75%20V&instock=y&rp=semiconductors%2Fmemory-ics%2Fsram%7C~Supply%20Voltage%20-%20Max%7C~Supply%20Voltage%20-%20Min&sort=memory%20size%7C1
 				> https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D
+					Stocked
 				> https://www.mouser.sg/ProductDetail/Infineon-Technologies/CY62158H-45ZSXI?qs=QmaLbtOb%252B600VoScfZ7T5g%3D%3D
+					Now not stocked: CY62158H-45ZSXI
 				>> Requested: https://support.labcenter.com/forums/viewtopic.php?f=6&t=8291
 					>> Added
+					>> SMT SMD Package test.pdsprj shows it works
 			> Options for connectors. While the normal backplane used two 64 pin (2 row x 32) Harting connectors, this is quite wide. So instead consider a 96 pin (3 row x 32) instead:
 				Right-angled connectors for board edge: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Right%20Angle&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&instock=y
 				Straight receptacles for board: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&product=Receptacles&series=DIN-Signal%20C&termination%20style=Solder%20Pin&instock=y
