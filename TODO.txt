@@ -118,7 +118,7 @@
 	* Some design options... Using the new signals:
 		** New 32 bit address space with option to use the old 24 bit board
 			Large read/write external memory, with auto increment
-			Still pass through _FLAG2 from 23 bit interface (video hardware) to the user port, also to the new internal 32 bit interface for any external processor
+			Still pass through _FLAG2 from 24 bit interface (video hardware) to the user port, also to the new internal 32 bit interface for any external processor
 			Option to let external device control the output to the old 24 bit interface board, to write data to the video hardware
 			Use case 1 : Read/write large amounts of memory from the C64 user port, with offset and auto increment for faster screen scrolling or lots of extra graphics or decompression of video/audio data
 				Scrolling would be faster because only absolute loads/stores would be needed instead of load/stores with X/Y offsets
