@@ -120,6 +120,7 @@
 			Large read/write external memory, with auto increment
 			Still pass through _FLAG2 from 24 bit interface (video hardware) to the user port, also to the new internal 32 bit interface for any external processor
 			Option to let external device control the output to the old 24 bit interface board, to write data to the video hardware
+			Use case 0 (UC0): Pass through user port to the old interface
 			Use case 1 : Read/write large amounts of memory from the C64 user port, with offset and auto increment for faster screen scrolling or lots of extra graphics or decompression of video/audio data
 				Scrolling would be faster because only absolute loads/stores would be needed instead of load/stores with X/Y offsets
 				Decompression would be faster as the source data pointer would not need to be updated. However an end data pointer might be needed... Or an end of decompressed data pointer test...
@@ -129,11 +130,19 @@
 			* SERIALATN = 0 : Keep the old 24 bit board, and have an interface that uses the old 14 pin header. Pass through PA2, D0..7, _PC from computer when active
 				The 32 bit memory interface is bypassed by the user port, meaning the external processor can access the memory
 				The external processor would need to wait if wanting to access the old 24 bit interface
+					There will need to be a signal that indicates to the external processor that the old 14 pin header is needed
+					There will need to be a signal from the external processor that indicates that it wants the old 14 pin header, and it will need to promise to relinquish the old 14 pin header within a certain amount of time
+				UC0
 			* SERIALATN = 1 : New 32 bit memory interface mode
 				SP2 = 0 : External device controls the 24 bit and 32 bit interface
-				SP2 = 1 : User port controls the 24 bit and 32 bit memory interface
+					UC2 UC3
+				SP2 = 1 : User port controls the 32 bit memory interface
+					UC1
 					External devices would need to wait if they need to perform writes
 					The transition time from SP2 = 1 to PA2 = 0 or _PC = 0 can be such that existing writes from an external device have time to complete
+						The time is due to the C64 signalling control with SP2 and then the time needed to alter other signals. This would be, minimum, 4 ~1MHz cycles (sta $abs) for CIA control.
+						There will need to be a signal that indicates to the external processor that the address bus is needed
+						There will need to be a signal from the external processor that indicates that it wants the address bus, and it will need to promise to relinquish the bus within a certain amount of time
 					PA2 : Low, reset all external address and data bus drivers, start reading 4 bytes for the address and then extra bytes on _PC for address increment
 					SP1 = 0 : Read address, address bus drivers active but data bus drivers inactive, allowing read from external memory
 					SP1 = 1 : Write address, address bus and data drivers active.
