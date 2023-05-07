@@ -1,5 +1,17 @@
 * TODO:
 
+* To automate Proteus using BDD6502 (since it is used to drive integrated tests with 6502 and graphics hardware)
+	Digital data connects to management session, probably a localhost port that is setup in the model, or just assumed.
+	Syntax to override the digital data model file name based on device name from the management session
+	Might need a new device that is able to automate start/stop of Proteus simulation by sending appropriate WM_CLICK or similar window messages to the process.
+		Might need to winspy/Spy++ the message for clicking start/stop simulation
+		Need syntax for this
+		Need syntax to terminate the process, or nicely stop and close without saving, after a certain simulation time has been reached
+	The produce a video/docs for "automated behavioural validation of complex schematics" using the output video and memory capture syntax
+	
+	
+
+
 
 * Add "memory latch/cache" write time configuration in the emulation to match the recent hardware change.
 	Default to twice as slow as the main APU clock, basically pause APU execution for "n pixels" to simulate the real hardware performance.
