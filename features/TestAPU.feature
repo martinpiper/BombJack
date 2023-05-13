@@ -7,6 +7,26 @@ Feature: Tests APU design
   Scenario: Assembles test
     Given I run the command line: ..\c64\acme.exe -v4 --msvc "TestAPU1.a"
     Then property "test.BDD6502.lastProcessOutput" must contain string "Saving"
+    Then I create file "ModelConfig_VSMDD2.txt" with
+    """
+    PATTERN=TestDataAPU1.txt
+    DELETETHISFILE=1
+    """
+    # The recording model should be the one to terminate the simulation, so it can flush its data properly
+    Then I create file "ModelConfig_VSMDD6.txt" with
+    """
+    EXITPROCCESSAFTER=0.16
+    DELETETHISFILE=1
+    """
+
+#    Then I run the command line: cmd /c APU.pdsprj
+
+    Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
+    When automation find window from pattern ".*APU.*Proteus.*"
+    When automation focus window
+    When automation expand main menu item "Debug"
+    When automation click current menu item "Run Simulation.*F12"
+    Then automation wait for window close
 
 
 
@@ -152,9 +172,6 @@ Feature: Tests APU design
     Then expect the next line to contain "d$98090110"
     Then expect the next line to contain "delta:0.000001"
     Then expect the next line to contain "d$980a0110"
-
-
-
 
 
 
