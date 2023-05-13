@@ -4,9 +4,10 @@ Feature: Tests APU design
   Run the simulation for at least 0.16 seconds.
   VSMDD2 = TestDataAPU1.txt
 
-  Scenario: Assembles test
+  Scenario: Assembles test and runs the simulation
     Given I run the command line: ..\c64\acme.exe -v4 --msvc "TestAPU1.a"
     Then property "test.BDD6502.lastProcessOutput" must contain string "Saving"
+
     Then I create file "ModelConfig_VSMDD2.txt" with
     """
     PATTERN=TestDataAPU1.txt
@@ -18,8 +19,21 @@ Feature: Tests APU design
     EXITPROCCESSAFTER=0.16
     DELETETHISFILE=1
     """
-
-#    Then I run the command line: cmd /c APU.pdsprj
+    Then I create file "ModelConfig_VSMDD3.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+    Then I create file "ModelConfig_VSMDD4.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+    Then I create file "ModelConfig_VSMDD5.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
 
     Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
     When automation find window from pattern ".*APU.*Proteus.*"
