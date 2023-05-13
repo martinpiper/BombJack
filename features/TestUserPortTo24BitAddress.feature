@@ -5,7 +5,7 @@ Feature: Tests UserPortTo24BitAddress design
 
   Scenario: Validates expected memory accesses for internal APU instruction memory
 
-    Then I create file "ModelConfig_VSMDD2.txt" with
+    Given I create file "ModelConfig_VSMDD2.txt" with
     """
     PATTERN=TestUserPortTo24BitAddress1.txt
     EXITPROCCESSAFTER=0.5
