@@ -759,7 +759,7 @@ b$27,b$14,b$70,b$48
 ; Enable display
 d$9e000120
 
-;!TestData_DebugBackgroundColourChoice.txt
+!TestData_DebugBackgroundColourChoice.txt
 
 d$0
 ; Wait for _VBLANK since we enable the screen

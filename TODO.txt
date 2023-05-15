@@ -41,7 +41,7 @@
 	> Note: L5E2 would be a good choice to add most of the functionality as a hack daughter board.
 		An alternative would be to have this functionality in the Combiner board (root sheet 14) which could use optionally the same address space as the video board, just uses the unused latch bits...
 		From a final design flexibility point of view I don't want to have to force multiple pixel outputs through a new Combiner just to be able to access this functionality.
-		It would be far better to use a daughter board into L5E2 and select the signal, perhaps the MIRRORED3 signal as it isn't being used.
+		It would be far better to use a daughter board into L5E2 and select the signal, perhaps the U264 bit 4 pin 15 MIRRORED3 signal as it isn't being used.
 		> There is also a spare signal on U262 pin 12 to allow the latch select for the final pixel colour? This would be after the layer enable flags at 0x9e0a, so 0x9e0b
 		> It would be possible to unsolder U262 and L5E2 and use their current board positions to generate a plugin daughter board.
 			Note: IC placements on current board: "C:\Work\BombJack\V8.0\Bomb Jack - Video - Routed.pdsprj"
@@ -51,6 +51,29 @@
 		Using a 2-to-1 demux with the enable bit and transparent bit, select either the pixel or the new latched transparent value
 	> Needs test data and before/after comparison.
 		!TestData_DebugBackgroundColourChoice.txt
+	> MIRRORED3 now USEBGCOLOUR
+	> Created L5E2NEW
+	> U25 stores BGCOLOUR[0..7]
+		USEBGCOLOUR	PIXELTRANS	DEMUX
+		0			0			0
+		0			1			0
+		1			0			0
+		1			1			1
+		= AND
+	** For daughter board, add traces for:
+		>> Move this OLD L5E2 to connect with the L5E2NEW outputs
+			** OPX[0..7] L5E2 pins 4, 7, 8, 18, 14, 17, 13, 3 must connect to the L5E2NEW
+			** L5E2 outputs [0..7] must also connect, 2, 5, 6, 9, 12, 15, 16, 19 to L5E2NEW
+		** And keep U264 for DB[0..7]
+	>> BombJack - Video daughter board BGCOLOUR.pdsprj
+	** Will need to update the emulation
+	** Add std lib define for new config and register
+		Add std init values
+	** And update SotB demo a/b demos to only use one palette entry, probably the first palette
+	** Then run the emulated output data in the simulation
+	** Will need to double check board/IC groups again
+	** Order parts or check I have stock
+
 
 
 

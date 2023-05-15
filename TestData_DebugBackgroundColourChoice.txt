@@ -16,12 +16,21 @@ d$9d8001f4
 d$9da00105
 d$9dc001f6
 d$9de00107
+
+
+; Enable USEBGCOLOUR
+d$9e000130
+; And choose the colour
+d$9e0b0133
+
+
 ; All sprites
 ; The sprites show alternating wide columns of light and dark blue from the palettes entries "last used"
 d$9e080100
 
 d$0
 ^-$01
+
 
 ; All chars
 ; The "BEAST" text has blue background colour, the "REFLECTIONS" text has different pink background colour.
@@ -40,9 +49,45 @@ d$0
 ^-$01
 
 
-
 ; All mode7
 ; No real effect since mode7 has a transparent pixel check and outputs its background colour instead. (By design, this was meant to be the last layer)
+d$9e0801ff
+
+d$0
+^-$01
+
+
+
+
+
+
+
+; Disable USEBGCOLOUR
+d$9e000120
+
+
+; All sprites
+d$9e080100
+
+d$0
+^-$01
+
+
+; All chars
+d$9e080155
+
+d$0
+^-$01
+
+
+; All tiles
+d$9e0801aa
+
+d$0
+^-$01
+
+
+; All mode7
 d$9e0801ff
 
 d$0

@@ -6,7 +6,7 @@ Feature: Tests the video hardware with expected output
     Then I create file "ModelConfig_VSMDD2.txt" with
     """
     PATTERN=TestData.txt
-    EXITPROCCESSAFTER=0.36
+    EXITPROCCESSAFTER=0.50
     DELETETHISFILE=1
     """
 
@@ -35,3 +35,11 @@ Feature: Tests the video hardware with expected output
     Then expect image "testdata/debug00000015.bmp" to be identical to "output/debug00000015.bmp"
     Then expect image "testdata/debug00000016.bmp" to be identical to "output/debug00000016.bmp"
     Then expect image "testdata/debug00000017.bmp" to be identical to "output/debug00000017.bmp"
+    Then expect image "testdata/debug00000018.bmp" to be identical to "output/debug00000018.bmp"
+    Then expect image "testdata/debug00000019.bmp" to be identical to "output/debug00000019.bmp"
+    Then expect image "testdata/debug00000020.bmp" to be identical to "output/debug00000020.bmp"
+    Then expect image "testdata/debug00000021.bmp" to be identical to "output/debug00000021.bmp"
+    Then expect image "testdata/debug00000022.bmp" to be identical to "output/debug00000022.bmp"
+    Then expect image "testdata/debug00000023.bmp" to be identical to "output/debug00000023.bmp"
+    Then expect image "testdata/debug00000024.bmp" to be identical to "output/debug00000024.bmp"
+    Then expect image "testdata/debug00000025.bmp" to be identical to "output/debug00000025.bmp"

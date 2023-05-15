@@ -10,13 +10,6 @@
    </editor>
   </WINDOW>
   <WINDOW type="default" module="DXP"/>
-  <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="165" flipped="0" gridminor="127000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="76969">
-    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-12837807" y="1534806"/>
-    <origin x="0" y="0"/>
-   </editor>
-  </WINDOW>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
     <position x="-1834700" y="-25154160" z="24609660"/>
@@ -26,9 +19,9 @@
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="165" flipped="0" gridminor="127000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="76969">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="438" flipped="0" gridminor="127000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="63500">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-12837807" y="1534806"/>
+   <centre x="-11953658" y="9141139"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
