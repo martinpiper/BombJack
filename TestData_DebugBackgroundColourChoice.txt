@@ -1,0 +1,49 @@
+; Debug for background colour transparency test. Choose the same layer for all layers
+; First set the colour 0 entries to different colours for each palette to make it easy to see the palettes being used
+d$9c000100
+d$9c20011f
+d$9c400120
+d$9c60013f
+d$9c800140
+d$9ca0015f
+d$9cc00160
+d$9ce0017f
+d$9d0001ff
+d$9d200101
+d$9d4001f2
+d$9d600103
+d$9d8001f4
+d$9da00105
+d$9dc001f6
+d$9de00107
+; All sprites
+; The sprites show alternating wide columns of light and dark blue from the palettes entries "last used"
+d$9e080100
+
+d$0
+^-$01
+
+; All chars
+; The "BEAST" text has blue background colour, the "REFLECTIONS" text has different pink background colour.
+; The bricks in the wall at the bottom of the screen use darker pink, and the wooden parts use a slightly different blue.
+d$9e080155
+
+d$0
+^-$01
+
+
+; All tiles
+; Less obvious here, the default tiles seem to mostly use similar palettes
+d$9e0801aa
+
+d$0
+^-$01
+
+
+
+; All mode7
+; No real effect since mode7 has a transparent pixel check and outputs its background colour instead. (By design, this was meant to be the last layer)
+d$9e0801ff
+
+d$0
+^-$01

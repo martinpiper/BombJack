@@ -49,6 +49,8 @@
 		>> Hmm need access to DB[0..7], closest net to L5E2 is: U264 directly below L5E2
 	> When enabled the lower 4 bits of the output pixel before it gets to L5E2 are compared for = 0
 		Using a 2-to-1 demux with the enable bit and transparent bit, select either the pixel or the new latched transparent value
+	> Needs test data and before/after comparison.
+		!TestData_DebugBackgroundColourChoice.txt
 
 
 
