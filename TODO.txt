@@ -65,16 +65,21 @@
 			** OPX[0..7] L5E2 pins 4, 7, 8, 18, 14, 17, 13, 3 must connect to the L5E2NEW
 			** L5E2 outputs [0..7] must also connect, 2, 5, 6, 9, 12, 15, 16, 19 to L5E2NEW
 		** And keep U264 for DB[0..7]
-	>> BombJack - Video daughter board BGCOLOUR.pdsprj
+		>> BombJack - Video daughter board BGCOLOUR.pdsprj
 	** Will need to update the emulation
 	** Add std lib define for new config and register
 		Add std init values
+		Removed: kVideo_EnableDisplay_Tiles_Enable kVideo_EnableDisplay_Tiles_BorderXShrink kVideo_EnableDisplay_Tiles_BorderYShrink
+		Added: kBus24Bit_VideoLayer_BackgroundColour
+		Removed: Demo4_8 since I don't need to support the old 8 colour variant any more
 	** And update SotB demo a/b demos to only use one palette entry, probably the first palette
 	** Then run the emulated output data in the simulation
-	** Will need to double check board/IC groups again
+	** Done: Will need to double check board/IC groups again
 	** Order parts or check I have stock
 
 
+
+* Consider removing the kBus24Bit_VideoLayer_HasOverscan option and making it always on
 
 
 

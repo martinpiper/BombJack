@@ -28,7 +28,7 @@ Video_DisableDisplay
 	rts
 
 
-; A = Value to use for the video initialisation
+; A = Value to use for the video initialisation: kVideo_EnableDisplay_*
 Video_EnableDisplay
 	pha
 	jsr Video_SetAddressVideoControlRegisters
@@ -65,11 +65,11 @@ Video_SpriteDataCopy
 
 Video_SetAddressVideoControlRegisters
 	jsr Bus24Bit_Reset
-	lda #kBus24Bit_TileScreen_EBBS
+	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
-	lda #<kBus24Bit_TileScreen_EnableBorders
+	lda #<kBus24Bit_VideoLayer_Control
 	sta CIA2PortBRS232
-	lda #>kBus24Bit_TileScreen_EnableBorders
+	lda #>kBus24Bit_VideoLayer_Control
 	sta CIA2PortBRS232
 	rts
 
@@ -198,11 +198,21 @@ Video_SetAddressCharScrollRegisters
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 Video_SetAddressVideoLayersEnable
 	jsr Bus24Bit_Reset
-	lda #kBus24Bit_CharScreen_EBBS
+	lda #kBus24Bit_VideoLayer_EBBS
 	sta CIA2PortBRS232
 	lda #<kBus24Bit_VideoLayer_LayersEnable
 	sta CIA2PortBRS232
 	lda #>kBus24Bit_VideoLayer_LayersEnable
+	sta CIA2PortBRS232
+	rts
+
+Video_SetAddressVideoBackgroundColour
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_VideoLayer_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_VideoLayer_BackgroundColour
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_VideoLayer_BackgroundColour
 	sta CIA2PortBRS232
 	rts
 }
