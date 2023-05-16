@@ -255,6 +255,8 @@ Video_InitDisplaySpritesScrollsBackground
 	sta CIA2PortBRS232
 	lda #kBus24Bit_VideoLayer_LayersEnable_Default
 	sta CIA2PortBRS232
+	lda #kBus24Bit_VideoLayer_BackgroundColour_Default
+	sta CIA2PortBRS232
 }
 	; Sprites enable, no large sprites
 	jsr Video_SetAddressSpritesControl

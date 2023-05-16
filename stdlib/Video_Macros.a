@@ -44,6 +44,7 @@ kBus24Bit_VideoLayer_LayersEnable_1234			= %00001111
 kBus24Bit_VideoLayer_LayersEnable_None			= %00000000
 
 kBus24Bit_VideoLayer_BackgroundColour	= $9e0b
+kBus24Bit_VideoLayer_BackgroundColour_Default = $00
 
 kBus24Bit_VideoLayer_XPos_HSYNC_start			= $160
 kBus24Bit_VideoLayer_XPos_HSYNC_end				= $17e
