@@ -77,7 +77,7 @@
 		Validated emulated output with steps in: * For APU validation when running @Demo6:
 	** Done: Will need to double check board/IC groups again
 	** Done: Order parts or check I have stock
-
+	*** When soldering: L5E2 and U264 should have pins/sockets on top which can connect to the sockets underneath on the main board.
 
 
 
