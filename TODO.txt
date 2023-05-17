@@ -1,12 +1,5 @@
 * TODO:
 
-* Add "memory latch/cache" write time configuration in the emulation to match the recent hardware change.
-	Default to twice as slow as the main APU clock, basically pause APU execution for "n pixels" to simulate the real hardware performance.
-	If the APU main clock is twice as slow, the rendered output should show the palette updates on the left edge of the SotB demo and they should change as the 6502 sends data.
-	
-
-
-
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
