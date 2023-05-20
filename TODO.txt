@@ -1,5 +1,72 @@
 * TODO:
 
+* Automation of SMT SMD Package replacement in Proteus
+	*Given known source part types and mappings to discovered SMT/SMD packages it might be possible to automate replacement in the Proteus Design Explorer tables
+		Replace package column entry
+		Replace CODE column entry with SMT part
+	* Output list of part types that don't have SMT packages
+		>> Be careful of the potential bug last time, where replacing the package caused schematic rendering issues
+		This might be mitigated by closing all view tabs except the Design Explorer?
+		Also try replacing one package each time, saving the file, then opening the file again?
+		> This might have been due to trying to refresh the schematic part with: Menu->Library->Manage Changes
+	* Since Proteus Design Explorer is very opaque, not responding to UI accessibility automation, then most likely revert to mostly using:
+		* Robot for mouse movement, clicking, and key events
+		* Clip board monitoring
+		>> Basically do something like:
+			Locate window
+			Close Design Explorer tab if it is open (resets Design Explorer left hand view size)
+			Locate and click tool bar Design Explorer
+			Locate and click: Menu->View->Property Columns
+			Locate window: Select Properties To View
+				Click: Drop down
+				Type: Stock<enter>
+				Click: Add
+				Click: OK
+			Click "Search tab"
+			For each DIPXXCAP20 size in the input mapping file:
+				Click: Package
+				Click: Drop down
+				Click: + A Package...
+				Type: DILXXCAP20<enter>
+				Optional:
+					Click: Placement drop down
+					Click: Placed or unplaced
+				Click: Search
+				For each table refresh:
+					Click: First top left reference cell
+					For each line:
+						Clear clipboard
+						Type: Ctrl+C
+						Note reference from clipboard
+							If the reference doesn't change, this indicates the end of the table has been reached
+								Goto: For each DIPXXCAP20 size in the input mapping file:
+							If the reference has already been fully processed:
+								Type: Escape (exits any edit box), Cursor down
+						Type: Escape (exists edit box if any), Cursor right
+						Type: Ctrl+C
+						Compare clipboard with mapping type
+						If there is no mapping:
+							Type: Escape, Cursor down
+							Type: Cursor left (can press several times to really reset the column)
+							Goto: For each line:
+						If the reference needs the stock code updated then:
+							Type x5: Escape, cursor right
+							Should be on Code column
+							Type: Mapping stock code for the type<enter>
+							Note the reference has stock code changed
+							The entire table will then refresh
+							Goto: For each table refresh:
+						If the reference needs the stock code updated then:
+							Type x3: Escape, cursor right
+							Should be on Package column
+							Type: Mapping package for the type<enter>
+							Note the reference has package changed
+							The entire table will then refresh (the reference should then disappear)
+							Goto: For each table refresh:
+
+
+	
+
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
