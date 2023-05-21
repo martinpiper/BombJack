@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../APU.EDF" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.EDF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APU.log" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserPortTo24BitAddress2.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../UserPortTo24BitAddress2.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V8.0/Audio - Placed.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V8.0/Audio - Placed.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V8.0/Audio - Routed.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V8.0/Audio - Routed.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V9.4/APU - Routed - Tightly 2.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V9.4/APU - Routed - Tightly 2.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Q6OFR4Pg9caRmswW7jUZEM84CU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.DesignExplorer.properties">
+    <configuration name="Debug -d" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
+      <module name="DesignUpdater" />
+      <option name="PROGRAM_PARAMETERS" value="-d" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DesignExplorer.properties" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
+      <module name="DesignUpdater" />
+      <option name="PROGRAM_PARAMETERS" value="DesignExplorer.properties" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Debug -d" />
+      <item itemvalue="Application.DesignExplorer.properties" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="" />
+      <created>1684670461010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684670461010</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
