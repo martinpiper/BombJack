@@ -75,16 +75,26 @@ public class Main {
             Thread.sleep(1000);
             copyToClipboard();
 
+            // Some retries, just to be sure
             String text = getClipboard();
             if(text.isEmpty()) {
+                Thread.sleep(1000);
                 copyToClipboard();
                 text = getClipboard();
             }
             if(text.isEmpty()) {
+                Thread.sleep(1000);
                 copyToClipboard();
                 text = getClipboard();
             }
             if(text.isEmpty()) {
+                clickOnElementWithPosition("DesignExplorer.FirstRow.Reference");
+                Thread.sleep(1000);
+                copyToClipboard();
+                text = getClipboard();
+            }
+            if(text.isEmpty()) {
+                System.out.println("Empty reference cell");
                 return;
             }
 
