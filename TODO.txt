@@ -63,6 +63,24 @@
 							Note the reference has package changed
 							The entire table will then refresh (the reference should then disappear)
 							Goto: For each table refresh:
+	>> BombJack\DesignUpdater
+		DesignExplorer.properties
+		ToSMTSOIC.csv
+	>> For each type value: e.g. 7404
+		Go to mouser and search for the equivalent 74LS part, e.g. 74LS04: https://www.mouser.sg/c/?q=74LS04
+		Choose: SMD/SMT and if available choose SOIC-XX. e.g. SOIC-14
+		Look at In Stock Availability. e.g. https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04DR?qs=SL3LIuy2dWzOhepjTMFpMg%3D%3D
+		Note: Mfr. No: SN74LS04DR
+		In Proteus "SMT SMD Package test.pdsprj" do a schematic component search with the same same: e.g. SN74LS04DR
+			Usually pick the Samacsys part, as they tend to be more reliable.
+			Usually don't override or import the package if it exists already
+		Now place the part in the schematic, and edit properties, note the package type. e.g. SOIC127P600X175-14N
+		In the PCB Layout, side toolbar Package Mode, search for the package name: SOIC127P600X175-14N
+			Look for a -CAP variant, create one if not found by decomposing, adding the "REF and SDC cap" parts
+				Note: The power pins numbering, top right, bottom left for the SDC capacitor pads!
+				Then package and create the new -CAP package name variant
+					Note: The step file (it uses the name from the original file e.g. SOIC127P600X175-14N.step ) and new offset/rotation
+		
 
 
 	
@@ -452,8 +470,8 @@
 		https://en.wikipedia.org/wiki/7400-series_integrated_circuits
 		5V variants:		https://www.mouser.sg/c/semiconductors/logic-ics/latches/?q=373&logic%20family=74ABT~~74ALS%7C~ABT%7C~ALS~~F&number%20of%20circuits=8%20Circuit&number%20of%20output%20lines=8%20Line&polarity=Non-Inverting&supply%20voltage%20-%20max=5.5%20V&supply%20voltage%20-%20min=4.5%20V&instock=y&sort=propagation%20delay%20time&rp=semiconductors%2Flogic-ics%2Flatches%7C~Logic%20Family
 		https://www.mouser.sg/c/semiconductors/logic-ics/latches/?q=74ls373&number%20of%20output%20lines=8%20Line
-		Very handy logic guide: https://www.ti.com/lit/sg/sdyu001ab/sdyu001ab.pdf
-			Page 16 package size chart! https://mastodon.social/@martin_piper/109687968945408871
+		Very handy logic guide Page 16 package size chart!: https://www.ti.com/lit/sg/sdyu001ab/sdyu001ab.pdf
+			https://mastodon.social/@martin_piper/109687968945408871
 		Mouser component pages have a link to: Mechanical Outline Drawing
 			This gives a good indication on size
 	

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DesignExplorer.properties">
+  <component name="RunManager" selected="Application.DesignExplorer.properties ToSMTSOIC.csv">
     <configuration name="Debug -d" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
       <module name="DesignUpdater" />
@@ -56,17 +54,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DesignExplorer.properties" type="Application" factoryName="Application">
+    <configuration name="DesignExplorer.properties ToSMTSOIC.csv" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
       <module name="DesignUpdater" />
-      <option name="PROGRAM_PARAMETERS" value="DesignExplorer.properties" />
+      <option name="PROGRAM_PARAMETERS" value="DesignExplorer.properties ToSMTSOIC.csv" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Debug -d" />
-      <item itemvalue="Application.DesignExplorer.properties" />
+      <item itemvalue="Application.DesignExplorer.properties ToSMTSOIC.csv" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,8 +83,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
+          <line>49</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,13 +1,18 @@
 package com.replicanet.DesignUpdater;
 
+import au.com.bytecode.opencsv.CSVReader;
+
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.awt.Toolkit;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     static Robot robot;
@@ -33,9 +38,17 @@ public class Main {
 
         System.getProperties().load(new FileInputStream(args[0]));
 
+        // Expected header ordering: Value,Package,ToPackage,ToCode
+        CSVReader csvReader = new CSVReader(new FileReader(args[1]));
+        String[] headers = csvReader.readNext();
+        List<String[]> records = csvReader.readAll();
+
         robot = new Robot();
 
-        processTypeAndPackage(true,"74161" , "DIL16CAP20" , "SOIC127P780X200-16N-CAP" , "https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161ANSR?qs=SL3LIuy2dWwsUuEVqjx8mw%3D%3D");
+        for (String[] row : records) {
+//            processTypeAndPackage(true, "74161", "DIL16CAP20", "SOIC127P780X200-16N-CAP", "https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161ANSR?qs=SL3LIuy2dWwsUuEVqjx8mw%3D%3D");
+            processTypeAndPackage(true, row[0] , row[1] , row[2] , row[3]);
+        }
 
         System.out.println("Updated: " + updated);
     }
@@ -100,6 +113,7 @@ public class Main {
 
             System.out.println("Got ref: " + text);
             if (text.compareTo(previousID) == 0) {
+                System.out.println("Same reference cell");
                 return;
             }
 

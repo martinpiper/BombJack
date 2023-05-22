@@ -1,26 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="0">
+ <FRAME activewindow="1">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff07000000000000000c050000a7020000</PLACEMENT>
-  <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="34" flipped="0" gridminor="1016000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="373529">
-    <world y1="-40640000" x1="-55880000" y2="40640000" x2="55880000"/>
-    <centre x="-35278" y="35278"/>
-    <origin x="0" y="0"/>
-   </editor>
-  </WINDOW>
+  <WINDOW type="default" module="DXP"/>
+  <WINDOW type="default" module="BOM"/>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="42" flipped="0" gridminor="508000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="302380">
+  <editor metric="0" gridmajor="25400000" mode="00000001" zoom="-1" scale="42" flipped="0" gridminor="508000" gridmode="16" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="302380">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-2186778" y="-639141"/>
+   <centre x="-2187392" y="-638527"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="25400000" mode="00000000" zoom="-1" scale="34" flipped="0" gridminor="1016000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="373529">
+  <editor metric="0" gridmajor="2540000" mode="00000001" zoom="0" scale="81" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="156790">
    <world y1="-40640000" x1="-55880000" y2="40640000" x2="55880000"/>
-   <centre x="-35278" y="35278"/>
+   <centre x="-6096000" y="24384000"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
