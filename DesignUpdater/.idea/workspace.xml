@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../APU.EDF" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.EDF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APU.log" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../APU.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../SMT SMD Package test.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserPortTo24BitAddress2.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../UserPortTo24BitAddress2.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../V8.0/Audio - Placed.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V8.0/Audio - Placed.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../V8.0/Audio - Routed.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V8.0/Audio - Routed.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../V9.4/APU - Routed - Tightly 2.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../V9.4/APU - Routed - Tightly 2.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignExplorer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DesignExplorer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +40,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.DesignExplorer.properties">
     <configuration name="Debug -d" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
@@ -89,7 +84,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java</url>
-          <line>10</line>
+          <line>16</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
