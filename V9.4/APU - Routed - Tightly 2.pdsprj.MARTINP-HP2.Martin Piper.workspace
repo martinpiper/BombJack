@@ -19,9 +19,9 @@
   <WINDOW type="default" module="BOM"/>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="-3878700" y="-544500" z="34803316"/>
+    <position x="-3878700" y="-25154160" z="24609660"/>
     <focus x="-3878700" y="-544500" z="0"/>
-    <up x="0" y="1000000" z="0"/>
+    <up x="0" y="707106" z="707106"/>
    </camera>
   </WINDOW>
  </FRAME>

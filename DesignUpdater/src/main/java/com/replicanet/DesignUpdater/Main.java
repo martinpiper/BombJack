@@ -148,19 +148,28 @@ public class Main {
 
     private static String getClipboard() {
         String data = "";
-        try {
-            data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
-        } catch (Exception e) {
+        boolean set = false;
+        while (!set) {
+            try {
+                data = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+                set = true;
+            } catch (Exception e) {
+            }
         }
         return data;
     }
 
     private static void setClipboard(String text) {
         checkForMouseAbort();
-        try {
-            StringSelection selection = new StringSelection(text);
-            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,selection);
-        } catch (Exception e) {}
+        boolean set = false;
+        while (!set) {
+            try {
+                StringSelection selection = new StringSelection(text);
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, selection);
+                set = true;
+            } catch (Exception e) {
+            }
+        }
     }
 
     public static void clickOnElementWithPosition(String element) throws InterruptedException {
