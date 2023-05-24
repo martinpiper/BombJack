@@ -60,6 +60,9 @@ public class Main {
         clickOnElementWithPosition("DesignExplorer.Reset");
 
         clickOnElementWithPosition("DesignExplorer.ValueText");
+
+        Thread.sleep(1000);
+
         setClipboard(type);
         pasteFromClipboard();
         typeEnter();
@@ -127,8 +130,12 @@ public class Main {
             typeEscapeRight();
             typeEscapeRight();
 
+            Thread.sleep(1000);
+
+            System.out.println("Set code: " + toCode);
             setClipboard(toCode);
             pasteFromClipboard();
+            Thread.sleep(1000);
             typeEnter();
 
             // Now the package
@@ -138,9 +145,15 @@ public class Main {
             typeEscapeRight();
             typeEscapeRight();
 
+            Thread.sleep(1000);
+
+            System.out.println("Set package: " + toPackage);
             setClipboard(toPackage);
             pasteFromClipboard();
+            Thread.sleep(1000);
             typeEnter();
+
+            Thread.sleep(1000);
 
             updated++;
         }
@@ -159,7 +172,7 @@ public class Main {
         return data;
     }
 
-    private static void setClipboard(String text) {
+    private static void setClipboard(String text) throws InterruptedException {
         checkForMouseAbort();
         boolean set = false;
         while (!set) {
@@ -170,6 +183,8 @@ public class Main {
             } catch (Exception e) {
             }
         }
+
+        Thread.sleep(1000);
     }
 
     public static void clickOnElementWithPosition(String element) throws InterruptedException {
