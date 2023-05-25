@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/target/DesignUpdater-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/DesignUpdater-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Audio.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../Audio.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../BombJack.pdsprj.MARTINP-HP2.Martin Piper.workspace" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToSMTSOIC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ToSMTSOIC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

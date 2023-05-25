@@ -1,0 +1,7 @@
+TODO
+
+* It would be possible to automate component search from an original value (e.g. 74LS32) in Mouser, identify a suitable replacement based on stock levels, package size/type, factory lead time, and manufacturer, type, and component number (e.g. SN74LS32DR) https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32DR?qs=SL3LIuy2dWwtfBSQ6o0JPg%3D%3D
+* Then using that Mouser link, identify the package/footprint/model etc: https://ms.componentsearchengine.com/ga/model.php?sz=N&fmt3d=stp&partID=672453&partner=Mouser&tok=1f2ejsur0Aotm7nu&emb=1&lang=en-GB&pna=Mouser&partner=Mouser
+* Parsing that data shows Proteus footprint information: C:\Users\Martin Piper\Downloads\LIB_SN74LS32DR\SN74LS32DR\Proteus\SN74LS32DR.pdif
+	> (package "SOIC127P600X175-14N")
+* This could all be used to construct suitable automated update/replacement of schematics/layouts in Proteus

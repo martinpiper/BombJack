@@ -1,6 +1,7 @@
 package com.replicanet.DesignUpdater;
 
 import au.com.bytecode.opencsv.CSVReader;
+import org.apache.commons.lang3.StringUtils;
 
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
@@ -46,7 +47,6 @@ public class Main {
         robot = new Robot();
 
         for (String[] row : records) {
-//            processTypeAndPackage(true, "74161", "DIL16CAP20", "SOIC127P780X200-16N-CAP", "https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161ANSR?qs=SL3LIuy2dWwsUuEVqjx8mw%3D%3D");
             processTypeAndPackage(true, row[0] , row[1] , row[2] , row[3]);
         }
 
@@ -67,13 +67,16 @@ public class Main {
         pasteFromClipboard();
         typeEnter();
 
-        clickOnElementWithPosition("DesignExplorer.PackageOpenDropdown");
-        Thread.sleep(1000);
-        clickOnElementWithPosition("DesignExplorer.PackageAddPackage");
-        Thread.sleep(1000);
-        setClipboard(packageName);
-        pasteFromClipboard();
-        typeEnter();
+
+        if (StringUtils.isNotEmpty(packageName)) {
+            clickOnElementWithPosition("DesignExplorer.PackageOpenDropdown");
+            Thread.sleep(1000);
+            clickOnElementWithPosition("DesignExplorer.PackageAddPackage");
+            Thread.sleep(1000);
+            setClipboard(packageName);
+            pasteFromClipboard();
+            typeEnter();
+        }
 
         if (!includePlaced) {
             clickOnElementWithPosition("DesignExplorer.PlacementOpenDropdown");
@@ -123,20 +126,22 @@ public class Main {
             previousID = text;
 
             // The stock code
-            typeEscapeRight();
-            typeEscapeRight();
-            typeEscapeRight();
-            typeEscapeRight();
-            typeEscapeRight();
-            typeEscapeRight();
+            if (StringUtils.isNotEmpty(toCode)) {
+                typeEscapeRight();
+                typeEscapeRight();
+                typeEscapeRight();
+                typeEscapeRight();
+                typeEscapeRight();
+                typeEscapeRight();
 
-            Thread.sleep(1000);
+                Thread.sleep(1000);
 
-            System.out.println("Set code: " + toCode);
-            setClipboard(toCode);
-            pasteFromClipboard();
-            Thread.sleep(1000);
-            typeEnter();
+                System.out.println("Set code: " + toCode);
+                setClipboard(toCode);
+                pasteFromClipboard();
+                Thread.sleep(1000);
+                typeEnter();
+            }
 
             // Now the package
             clickOnElementWithPosition("DesignExplorer.FirstRow.Reference");
