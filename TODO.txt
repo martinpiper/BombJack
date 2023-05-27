@@ -171,7 +171,7 @@
 		For: Video - BGCOLOUR - 1.1
 		>> This currently means the background register is assumed to be always on in the 1.0 board
 			A bodge wire can be used for this
-		
+	>> Daughter board tested working the same as emulation (main6.a) with and without kVideo_EnableDisplay_Use_BGColour
 
 
 
