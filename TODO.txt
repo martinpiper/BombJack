@@ -167,6 +167,12 @@
 	** Done: Will need to double check board/IC groups again
 	** Done: Order parts or check I have stock
 	*** When soldering: L5E2 and U264 should have pins/sockets on top which can connect to the sockets underneath on the main board.
+	>> U264 pin 15 on the daughter board should have been connected to USEBGCOLOUR (to U246 pin 4) (as per the main video layer)
+		For: Video - BGCOLOUR - 1.1
+		>> This currently means the background register is assumed to be always on in the 1.0 board
+			A bodge wire can be used for this
+		
+
 
 
 
