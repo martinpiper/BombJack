@@ -1,5 +1,15 @@
 * TODO:
 
+* APU emulation
+	To match the hardware, any write from the user port to the internal memory bus should really be delayed until:
+		The APU is disabled
+		The APU is reset
+		The APU instruction starts and it is not doing an InternalMEWR or the bus isn't InterceptBus
+		Or if InstrIsWaiting
+	
+	
+	
+
 * MegaWang logo (or text) for layout solder layers or silk screen
 
 
