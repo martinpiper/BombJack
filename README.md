@@ -70,12 +70,12 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 	1. Horizontal video signal generation
 	2. Vertical video signal generation
 	3. HBLANK and VBLANK signal generation
-	4. 32x32 sprite selection registers and comparison
-	5. Various signal timings generated for sprite loading, tile and colour fetch etc
 4.	Sprite logic - Part 1
 	1. Sprite RAM register access logic, timing with the external address/data bus and video internal timings
 	2. Temporary storage for sprite position, palette and frame
 	3. Bit plane access and bit shifters for output pixels to scan RAM
+	4. 32x32 sprite selection registers and comparison
+	5. Various signal timings generated for sprite loading, tile and colour fetch etc
 5.	Sprite logic - Part 2
 	1. Dual scan line RAM buffers
 	2. Transparent pixel test logic based on inverted pixel temporary storage and selection with NOR check
