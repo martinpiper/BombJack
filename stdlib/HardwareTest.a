@@ -414,6 +414,36 @@ HardwareTest_VideoPattern0
 	lda #200
 	sta CIA2PortBRS232
 
+
+
+	; Sprites2
+	+MBus24Bit_SetAddress_AXY kBus24Bit_Sprites2Planes_EBBS , kBus24Bit_Sprites2Planes_0
+	ldx #32
+;	ldx #0
+.s2_1
+	lda #0
+	ldy #28
+	jsr Bus24Bit_WriteAForY
+	+MBus24Bit_Send8BitValue 1
+	+MBus24Bit_Send8BitValue 2
+	+MBus24Bit_Send8BitValue 3
+	+MBus24Bit_Send8BitValue 6
+	dex
+	bne .s2_1
+
+	jsr Video_SetAddressSprites2
+	+MBus24Bit_Send8BitValue 0
+	+MBus24Bit_Send8BitValue 138
+	+MBus24Bit_Send8BitValue 32
+	+MBus24Bit_Send8BitValue 52
+	+MBus24Bit_Send8BitValue 255
+	+MBus24Bit_Send8BitValue 32
+	+MBus24Bit_Send8BitValue 32
+	+MBus24Bit_Send8BitValue 0
+	jsr Video_clearFourBytes
+
+
+
 	; If fire is held down, then pause on this screen
 	+WaitForFireRelease_A
 

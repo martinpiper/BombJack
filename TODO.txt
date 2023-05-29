@@ -3,6 +3,7 @@
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
+	> ; Debug for "output pixel wobble"
 	
 
 
