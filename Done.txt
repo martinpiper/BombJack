@@ -4261,7 +4261,7 @@ All layouts now use V3.1
 		>> Adding APU data RAM _OE to be disabled when external or internal memory is written, the data recording seems to show a fixed data held issue now and no data contention.
 		** It should be possible to bodge this change into the board using one wire and bending out the RAM chip _OE.
 			>> Bodge done. Tests with main6. and main6b. It seems a bit more stable but still not perfect.
-				With SPU data refresh it seems less inclined to crash horribly now.
+				With APU data refresh it seems less inclined to crash horribly now.
 		* Try slower clock rate for main6b, which should slow down the latched write.
 			Slower clock for main6a and main6b seems to work, it's definitely a lot more stable. No glitches seen.
 				The only glitches are those expected palette updates visible on the left of the screen, due to the slower raster clock used.
