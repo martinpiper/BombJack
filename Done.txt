@@ -4481,3 +4481,56 @@ All layouts now use V3.1
 		>> APU can now be reduced to less than: 189.043mm , 210.039mm eight layers though (Eight layers like the through hole tightly packed version)
 		* APU Needs some more spacing above and below the RAMs to enable routing
 			** Probably extra spacing in the quadrants
+
+
+
+
+* Video: There is a desire to have an optional background colour from a defined palette entry if the final output pixel is transparent.
+	This would make raster colour change effects much easier as only one palette entry would need to be changed instead of many for all possible rendered layers and their palette index values.
+	Video control register: U264: 1 bit to enable or 0 to disable this functionality. When disabled the behaviour is as before.
+		The option is to allow the last layer to use all 16 colours in a palette, including what would have been the transparent colour if it was on a different layer.
+	> Note: L5E2 would be a good choice to add most of the functionality as a hack daughter board.
+		An alternative would be to have this functionality in the Combiner board (root sheet 14) which could use optionally the same address space as the video board, just uses the unused latch bits...
+		From a final design flexibility point of view I don't want to have to force multiple pixel outputs through a new Combiner just to be able to access this functionality.
+		It would be far better to use a daughter board into L5E2 and select the signal, perhaps the U264 bit 4 pin 15 MIRRORED3 signal as it isn't being used.
+		> There is also a spare signal on U262 pin 12 to allow the latch select for the final pixel colour? This would be after the layer enable flags at 0x9e0a, so 0x9e0b
+		> It would be possible to unsolder U262 and L5E2 and use their current board positions to generate a plugin daughter board.
+			Note: IC placements on current board: "C:\Work\BombJack\V8.0\Bomb Jack - Video - Routed.pdsprj"
+		> Or just unsolder L5E2 and fly lead to U262 pin 12 would be less invasive.
+		>> Hmm need access to DB[0..7], closest net to L5E2 is: U264 directly below L5E2
+	> When enabled the lower 4 bits of the output pixel before it gets to L5E2 are compared for = 0
+		Using a 2-to-1 demux with the enable bit and transparent bit, select either the pixel or the new latched transparent value
+	> Needs test data and before/after comparison.
+		!TestData_DebugBackgroundColourChoice.txt
+	> MIRRORED3 now USEBGCOLOUR
+	> Created L5E2NEW
+	> U25 stores BGCOLOUR[0..7]
+		USEBGCOLOUR	PIXELTRANS	DEMUX
+		0			0			0
+		0			1			0
+		1			0			0
+		1			1			1
+		= AND
+	** For daughter board, add traces for:
+		>> Move this OLD L5E2 to connect with the L5E2NEW outputs
+			** OPX[0..7] L5E2 pins 4, 7, 8, 18, 14, 17, 13, 3 must connect to the L5E2NEW
+			** L5E2 outputs [0..7] must also connect, 2, 5, 6, 9, 12, 15, 16, 19 to L5E2NEW
+		** And keep U264 for DB[0..7]
+		>> BombJack - Video daughter board BGCOLOUR.pdsprj
+	** Will need to update the emulation
+	** Done: Add std lib define for new config and register
+		Add std init values
+		Removed: kVideo_EnableDisplay_Tiles_Enable kVideo_EnableDisplay_Tiles_BorderXShrink kVideo_EnableDisplay_Tiles_BorderYShrink
+		Added: kBus24Bit_VideoLayer_BackgroundColour	Video_SetAddressVideoBackgroundColour
+		Removed: Demo4_8 since I don't need to support the old 8 colour variant any more
+	** Done: And update SotB demo a/b demos to only use one palette entry, probably the first palette
+	** Done: Then run the emulated output data in the simulation
+		Validated emulated output with steps in: * For APU validation when running @Demo6:
+	** Done: Will need to double check board/IC groups again
+	** Done: Order parts or check I have stock
+	*** When soldering: L5E2 and U264 should have pins/sockets on top which can connect to the sockets underneath on the main board.
+	>> U264 pin 15 on the daughter board should have been connected to USEBGCOLOUR (to U246 pin 4) (as per the main video layer)
+		For: Video - BGCOLOUR - 1.1
+		>> This currently means the background register is assumed to be always on in the 1.0 board
+			A bodge wire can be used for this
+	>> Daughter board tested working the same as emulation (main6.a) with and without kVideo_EnableDisplay_Use_BGColour
