@@ -20,7 +20,11 @@
 		>> Is it the video conversion box?
 			This seems to be the only common factor... Perhaps I need to find a display that doesn't need the box...
 			Although running my (grounded!) finger along the back of the VGA output on the video board does shift the discolouration, due to capacitive related timing or filtering of the signals?
-
+	>> Using the "rubbish video converter" with Demo6 and Demo4 the discolouration artefacts are not visible.
+		The left button on the board needs to be pressed for it to auto detect the video signal from the VGA input
+		Once that is done the small display needs the joystick pressed right to force an "auto adjustment" of the screen geometry, to get the left/right borders accurate
+		Although the display is missing the top and bottom lines, and also at least the left hand edge of around 8 pixels.
+			Unless I manually tweak the display size/timings in the menu (right button) of the video conversion board
 
 
 
