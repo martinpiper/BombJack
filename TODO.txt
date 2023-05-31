@@ -4,7 +4,18 @@
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
 	> ; Debug for "output pixel wobble"
-	
+	>> Demo6B shows the every 8 pixel discolouration artefacts quite well on the smaller display
+		While the mostly green character based trees don't seem to show them while stationary, they are visible whilst scrolling?
+			The same tree graphic on the title screen which is sprites doesn't seem to show the issue
+		Also the moon and smaller lighter coloured blimp shows them obviously, whereas the darker coloured blimp does not
+		They are not a full pixel wide, it seems to be one edge (left or right, cannot be certain) of the pixel
+		They also seem to be obvious on the light coloured tile based rocks compared to the sky background
+		The wobbly pixels and the discolouration artefact are not linked to the X scroll position
+		>> This indicates there might be a link between the wobble and discolouration, timing perhaps?
+			Shouldn't be timing, since the pixel is latched and this would affect the whole pixel
+			> So it looks like it might be analog signal related? Switching voltage for the logic levels?
+				For main4 (where the twisty columns show the discolouration) try using chars for the scrolling background?
+
 
 
 
@@ -16,7 +27,16 @@
 		The APU instruction starts and it is not doing an InternalMEWR or the bus isn't InterceptBus
 		Or if InstrIsWaiting
 	
-	
+
+
+
+* Hardware, even with the slower (bodged) write latch timing, Demo6B in soak test did eventually show a salmon-pink top of the sky.
+	Resetting the C64 shows the APU consistently displaying this, so it indicates the internal APU memory is wrong.
+	This might also explain a rare blank screen issue that was observed once...
+	A swept APU data refresh, plus a reset of the APU in the VBLANK might effectively mitigate this, at the expense of a rare screen blank for a frame
+	Or making the latched write twice as long again might help...
+
+
 	
 
 * MegaWang logo (or text) for layout solder layers or silk screen
