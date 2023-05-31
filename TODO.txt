@@ -13,8 +13,13 @@
 		The wobbly pixels and the discolouration artefact are not linked to the X scroll position
 		>> This indicates there might be a link between the wobble and discolouration, timing perhaps?
 			Shouldn't be timing, since the pixel is latched and this would affect the whole pixel
+				The final pixels on the layers are all clocked into 8 bit latches on 6MHz
+				The final layer combination pixel is also clocked into two 6 bit latches on 6MHz
 			> So it looks like it might be analog signal related? Switching voltage for the logic levels?
-				For main4 (where the twisty columns show the discolouration) try using chars for the scrolling background?
+				* For main4 (where the twisty columns show the discolouration) try using chars for the scrolling background?
+		>> Is it the video conversion box?
+			This seems to be the only common factor... Perhaps I need to find a display that doesn't need the box...
+			Although running my (grounded!) finger along the back of the VGA output on the video board does shift the discolouration, due to capacitive related timing or filtering of the signals?
 
 
 
