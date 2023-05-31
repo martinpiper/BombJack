@@ -159,6 +159,9 @@ HardwareTest_VideoInitDisplay
 	jsr Video_SetAddressTileBackgroundRegister
 	lda #0
 	sta CIA2PortBRS232
+	jsr Video_SetAddressVideoOverscanExtentRegisters
+	lda #kBus24Bit_VideoLayer_OverscanExtent_UnsafeWide
+	sta CIA2PortBRS232
 	rts
 
 !macro HardwareTest_SendBitplaneData .a , .b {
