@@ -43,7 +43,12 @@
 	Resetting the C64 shows the APU consistently displaying this, so it indicates the internal APU memory is wrong.
 	This might also explain a rare blank screen issue that was observed once...
 	A swept APU data refresh, plus a reset of the APU in the VBLANK might effectively mitigate this, at the expense of a rare screen blank for a frame
-	Or making the latched write twice as long again might help...
+	> Or making the latched write twice as long again might help...
+	> Or shifting the internal memory write slot later?
+		Making it a configurable dip-switch?
+	>> Or is it because U142:A (which controls when to time the LatchedWriteActive) is using PCINCR which could in theory stall a writing instruction during its write?
+	>> Or is it because something that reads the internal memory is then conflicting with a write from the external bus to the internal memory?
+	
 
 
 	
