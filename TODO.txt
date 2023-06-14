@@ -228,6 +228,10 @@
 
 * APU: To get more instruction options, it would be possible to use the control register to allow extra RAM addressing for the instruction and data RAMs.
 	This would allow more data selection options, more registers, and more ALU options.
+	Or just use $0000 as well as $8000 for instructions?
+		Or shuffle the instructions around to $0000-$3fff
+		Then move registers to $8000?
+		
 
 
 
