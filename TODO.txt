@@ -45,7 +45,7 @@
 
 
 
-* Hardware, even with the slower (bodged) write latch timing, Demo6B in soak test did eventually show a salmon-pink top of the sky.
+* Hardware, even with the slower (bodged) write latch timing, Demo6 in soak test did eventually show a salmon-pink top of the sky.
 	Resetting the C64 shows the APU consistently displaying this, so it indicates the internal APU memory is wrong.
 	This might also explain a rare blank screen issue that was observed once...
 	A swept APU data refresh, plus a reset of the APU in the VBLANK might effectively mitigate this, at the expense of a rare screen blank for a frame
@@ -58,6 +58,16 @@
 		Seems OK
 	* Check the APU doesn't cache a write when in pass through mode, whilst it is not active.
 		Cache is flushed _MR when in pass through mode
+	* Without "jsr UpdateCommonScrolls" and "jsr UpdateTree*" there is no corruption
+		The UpdateScaledSprites and MusicPoll are still enabled
+			> But the audio board is removed...
+		Trying with just "jsr UpdateCommonScrolls" also no corruption
+		Trying with just "jsr UpdateTree*" also no corruption
+		With all updates, still no corruption, although there was a brief tree sprite flicker...
+		* Ah ha, the two (??) tree sprites suddenly went transparent, even though their x pos is being updated and the whole data for both sprites is being sent
+			kAPUData_Tree4cNum = 2, which is what pretty much all the sprite update chunks do, so it's not the definition or colour since all the data is refreshed
+			This indicates the "+MLittleEndian16Bit kBus24Bit_Sprites + (.offset * 4)" sprites address within APUMultiplexStrip was corrupted and it didn't update the sprites?
+
 	
 
 
