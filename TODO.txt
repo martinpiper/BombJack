@@ -48,6 +48,10 @@
 		Making it a configurable dip-switch?
 	>> Or is it because U142:A (which controls when to time the LatchedWriteActive) is using PCINCR which could in theory stall a writing instruction during its write?
 	>> Or is it because something that reads the internal memory is then conflicting with a write from the external bus to the internal memory?
+	* Check the timing of a cached write while the APU is active.
+		Seems OK
+	* Check the APU doesn't cache a write when in pass through mode, whilst it is not active.
+		Cache is flushed _MR when in pass through mode
 	
 
 
