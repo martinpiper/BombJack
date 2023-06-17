@@ -1,11 +1,5 @@
 * TODO:
 
-* Layer combination, move the outputs to the top edge, the inputs to the long edge
-
-
-
-
-
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
@@ -639,6 +633,20 @@
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with different palette for the second.
 	https://www.spriters-resource.com/arcade/outrun/
+	
+	
+	
+* Video combination layer:
+	At the moment the board is quite empty.
+	* There is scope for an optional pixel processing select:
+		For each output a selection of:
+			Transparency test
+			XOR with other input
+			AND with other input
+			OR with other input
+		Final output: XOR with constant value (a register for each output) (could be 0 meaning nothing happens)
+	* Would need a register, probably within the mode7 control address space... Root sheet 9
+		Since it is already being re-used by the vectors layer
 
 
 
