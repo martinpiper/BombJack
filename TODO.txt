@@ -647,6 +647,14 @@
 		Final output: XOR with constant value (a register for each output) (could be 0 meaning nothing happens)
 	* Would need a register, probably within the mode7 control address space... Root sheet 9
 		Since it is already being re-used by the vectors layer
+	* Expand @TC-8
+		Given add a 2-to-1 merge layer with registers at '0xa200'
+	* Done: ; Test combiner layer - Four registers
+	* Create combiner sub-circuit like the audio schematic
+	* Add XOR
+	* Add AND
+	* Add OR
+	* Add final 4 x 74153
 
 
 

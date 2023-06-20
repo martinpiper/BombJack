@@ -1,7 +1,13 @@
 ; Blank (address b$0000)
 d0
 
-!TestData_DebugPixelTiming.txt
+; Test combiner layer - Four registers
+d$a20001ff
+d$a20101fe
+d$a20201fd
+d$a20301fc
+
+;!TestData_DebugPixelTiming.txt
 !TestData_DebugVectors.txt
 !TestData_DebugScaledSprites.txt
 
@@ -759,7 +765,7 @@ b$27,b$14,b$70,b$48
 ; Enable display
 d$9e000120
 
-!TestData_DebugBackgroundColourChoice.txt
+;!TestData_DebugBackgroundColourChoice.txt
 
 d$0
 ; Wait for _VBLANK since we enable the screen
