@@ -1,0 +1,77 @@
+; Clear and default to just combine
+d$a2000100
+d$a2010100
+d$a2020100
+d$a2030100
+d$0
+^-$01
+
+; Just XOR all palettes
+d$a2000100
+d$a20101f0
+d$a2020100
+d$a20301f0
+d$0
+^-$01
+
+; XOR and AND
+d$a2000101
+d$a2010100
+d$a2020102
+d$a2030100
+d$0
+^-$01
+
+; Both OR
+d$a2000103
+d$a2010100
+d$a2020103
+d$a2030100
+d$0
+^-$01
+
+
+
+; Test combinator being updated mid-frame
+d$0
+w$ff01ff00,$40000000
+
+d$a2000100
+d$a2010100
+d$a2020101
+d$a2030100
+
+d$0
+w$ff01ff00,$60000000
+
+d$a2000102
+d$a2010100
+d$a2020103
+d$a2030100
+
+d$0
+w$ff01ff00,$80000000
+
+d$a2000100
+d$a2010180
+d$a2020101
+d$a2030180
+
+d$0
+w$ff01ff00,$c0000000
+
+d$0
+
+d$a2000101
+d$a2010100
+d$a2020102
+d$a2030100
+
+d$0
+^-$01
+
+; Then back to normal combine operation
+d$a2000100
+d$a2010100
+d$a2020100
+d$a2030100

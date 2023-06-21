@@ -650,11 +650,14 @@
 	* Expand @TC-8
 		Given add a 2-to-1 merge layer with registers at '0xa200'
 	* Done: ; Test combiner layer - Four registers
-	* Create combiner sub-circuit like the audio schematic
-	* Add XOR
-	* Add AND
-	* Add OR
-	* Add final 4 x 74153
+	* Done: Add XOR
+	* Done: Add AND
+	* Done: Add OR
+	* Done: Add final 4 x 74153
+	* Done: Create combiner sub-circuit like the audio schematic
+	>> OK - compareimages.bat 11
+	>> Seems to be OK - !TestData_Combinator.txt
+	* Needs emulation output test testing to match with emulation
 
 
 

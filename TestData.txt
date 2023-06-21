@@ -6,6 +6,12 @@ d$a20001ff
 d$a20101fe
 d$a20201fd
 d$a20301fc
+; Clear and default to just combine
+d$a2000100
+d$a2010100
+d$a2020100
+d$a2030100
+
 
 ;!TestData_DebugPixelTiming.txt
 !TestData_DebugVectors.txt
@@ -770,6 +776,11 @@ d$9e000120
 d$0
 ; Wait for _VBLANK since we enable the screen
 ^-$01
+
+
+
+!TestData_Combinator.txt
+
 
 ; Test overscan information being updated mid-frame
 d$0
