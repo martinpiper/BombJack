@@ -13,9 +13,14 @@ d$a2020100
 d$a2030100
 
 
-;!TestData_DebugPixelTiming.txt
+
+!TestData_DebugPixelTiming.txt
 !TestData_DebugVectors.txt
 !TestData_DebugScaledSprites.txt
+
+; Dither on
+d$a2000104
+;d$a2020104
 
 ; Setup full overscan border extents
 ; This may cause left border issues with tiles/chars/sprites as their data is shifted in over 8 pixels
@@ -771,7 +776,7 @@ b$27,b$14,b$70,b$48
 ; Enable display
 d$9e000120
 
-;!TestData_DebugBackgroundColourChoice.txt
+!TestData_DebugBackgroundColourChoice.txt
 
 d$0
 ; Wait for _VBLANK since we enable the screen

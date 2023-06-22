@@ -658,6 +658,12 @@
 	>> OK - compareimages.bat 11
 	>> Seems to be OK - !TestData_Combinator.txt
 	* Needs emulation output test testing to match with emulation
+	D[0..1] - Chooses combination mode:
+		0 - transparency test
+		1 - XOR
+		2 - AND
+		3 - OR
+	D2 - Dithering enable
 
 
 
