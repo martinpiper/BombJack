@@ -667,6 +667,7 @@
 	* First pass layout, needs to separate the board placement between the two inputs slightly.
 		Also the group box needs shrinking
 		The connectors could do with larger pad to via design rules
+	>> Sent for assembly V9.0
 
 
 
