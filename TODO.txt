@@ -629,49 +629,6 @@
 
 
 
-* For the video combination layer, for each pixel input, perhaps add a pixel XOR value that can be used to introduce fast changing palette effects?
-	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
-	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with different palette for the second.
-	https://www.spriters-resource.com/arcade/outrun/
-	
-	
-	
-* Video combination layer:
-	At the moment the board is quite empty.
-	* There is scope for an optional pixel processing select:
-		For each output a selection of:
-			Transparency test
-			XOR with other input
-			AND with other input
-			OR with other input
-		Final output: XOR with constant value (a register for each output) (could be 0 meaning nothing happens)
-	* Would need a register, probably within the mode7 control address space... Root sheet 9
-		Since it is already being re-used by the vectors layer
-	* Expand @TC-8
-		Given add a 2-to-1 merge layer with registers at '0xa200'
-	* Done: ; Test combiner layer - Four registers
-	* Done: Add XOR
-	* Done: Add AND
-	* Done: Add OR
-	* Done: Add final 4 x 74153
-	* Done: Create combiner sub-circuit like the audio schematic
-	>> OK - compareimages.bat 11
-	>> Seems to be OK - !TestData_Combinator.txt
-		D[0..1] - Chooses combination mode:
-			0 - transparency test
-			1 - XOR
-			2 - AND
-			3 - OR
-		D2 - Dithering enable
-	* Needs emulation output test testing to match with emulation
-	* First pass layout, needs to separate the board placement between the two inputs slightly.
-		Also the group box needs shrinking
-		The connectors could do with larger pad to via design rules
-	>> Sent for assembly V9.0
-
-
-
-
 * User port layout : Consider moving the ribbon cable header to the bus edge
 
 * User port: For the Raspberry Pi interface it is useful to have the 5V from the C64 drive the 5V side of the level shifters
