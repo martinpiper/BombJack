@@ -5,7 +5,8 @@
 * Itch IO project page: https://martin-piper.itch.io/bomb-jack-display-hardware
 * YouTube channel: https://www.youtube.com/c/MartinPiper6502
 * Buy me a ko-fi: https://ko-fi.com/martinpiper0750
-* Legacy Twitter links: https://twitter.com/hashtag/RetroTTLVideoCard https://twitter.com/hashtag/RetroTTL
+* Bluesky: https://bsky.app/profile/martinpiper.bsky.social
+* Twitter links: https://twitter.com/MartinPiper https://twitter.com/hashtag/RetroTTLVideoCard https://twitter.com/hashtag/RetroTTL
 * Threads: https://www.threads.net/@martinpiper1187
 * Mostly using these tags: #MegaWang #RetroTTL #RetroTTLVideoCard #C64 #Commodore64 #electronics
  
