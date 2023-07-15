@@ -114,7 +114,7 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 13.	Vector logic
 	1. Register logic - Bank display and kill
 	2. Scan RAM banks - Two banks
-14.	Pixel data combiner logic
+14.	Pixel data combiner (merge layer) logic
 	1. 2-1 pixel data combiners - Two blocks
 
 

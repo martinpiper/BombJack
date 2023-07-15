@@ -217,6 +217,17 @@ Video_SetAddressVideoBackgroundColour
 	rts
 }
 
+Video_SetAddressMergeLayer
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_MergeLayer_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_MergeLayer_Registers
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_MergeLayer_Registers
+	sta CIA2PortBRS232
+	rts
+
+
 ; Usually call this immediately after using Video_WaitVBlank
 Video_StartRasterTimers
 	; Start two timers, which should count raster position
@@ -267,6 +278,10 @@ Video_InitDisplaySpritesScrollsBackground
 }
 	sta CIA2PortBRS232
 	jsr Video_clearByte
+
+	; Default merge layer behaviour
+	jsr Video_SetAddressMergeLayer
+	jsr Video_clearFourBytes
 
 	jsr Video_SetAddressCharsControl
 	jsr Video_clearByte
