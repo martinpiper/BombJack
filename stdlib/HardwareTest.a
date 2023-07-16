@@ -381,27 +381,41 @@ HardwareTest_VideoPattern0
 !ifndef kBus24Bit_VideoLayer_HasOverscan {
 	lda #kBus24Bit_SpritesControlLoEnable
 } else {
-	lda #0
+	lda #1
 }
 	sta CIA2PortBRS232
-	lda #$04
+	lda #2
 	sta CIA2PortBRS232
 
 	jsr Video_SetAddressSprites
 	lda #0
 	sta CIA2PortBRS232
 	sta CIA2PortBRS232
-	lda #90
+	lda #100
 	sta CIA2PortBRS232
+	lda #50
 	sta CIA2PortBRS232
 
+	lda #1
 	sta CIA2PortBRS232
+	lda #kBus24Bit_Sprite_FullHeight
 	sta CIA2PortBRS232
+	lda #90
 	sta CIA2PortBRS232
+	lda #90
 	sta CIA2PortBRS232
 
 	lda #0
 	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	lda #90
+	sta CIA2PortBRS232
+	lda #120
+	sta CIA2PortBRS232
+
+	lda #1
+	sta CIA2PortBRS232
+	lda #0
 	sta CIA2PortBRS232
 	lda #90
 	sta CIA2PortBRS232
@@ -410,14 +424,20 @@ HardwareTest_VideoPattern0
 
 	lda #0
 	sta CIA2PortBRS232
-	lda #kBus24Bit_Sprite_FullHeight
+	lda #0
 	sta CIA2PortBRS232
 	lda #90
 	sta CIA2PortBRS232
-	lda #200
+	lda #180
 	sta CIA2PortBRS232
 
-
+	; Clear any remaining
+	lda #0
+	ldx #(kBus24Bit_SpritesMaxNum*4)
+.cl1
+	sta CIA2PortBRS232
+	dex
+	bne .cl1
 
 	; Sprites2
 	+MBus24Bit_SetAddress_AXY kBus24Bit_Sprites2Planes_EBBS , kBus24Bit_Sprites2Planes_0
@@ -449,5 +469,6 @@ HardwareTest_VideoPattern0
 
 	; If fire is held down, then pause on this screen
 	+WaitForFireRelease_A
+;	+WaitForFire_A
 
 	rts

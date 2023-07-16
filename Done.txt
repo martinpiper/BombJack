@@ -4583,3 +4583,12 @@ All layouts now use V3.1
 	This would be very useful for road layer palette cycling effects: 		http://www.extentofthejam.com/pseudo/#hw
 	Or an alternative would be to have the tiles layer have two roads of course. Perhaps a copy of the first road but with different palette for the second.
 	https://www.spriters-resource.com/arcade/outrun/
+
+
+
+
+* Merge layer: When the Sprites2 and Sprites layers were merged together and the xor pixel control was $0f
+	The left and right hand portions of the screen were showing alternate rows of weird palette data...
+	I think this is because the higher palette bits are not cleared during sprite rendering, but they hold the previous data instead
+	* Just needs testing by merging other layers, like the chars and tiles, to ensure it's not a dithering or xor merge layer bug...
+		It was the sprites2 scanline memory. Moving the default scaled sprite across the screen filled the scanline RAMs and removed the problem.

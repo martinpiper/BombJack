@@ -1,5 +1,13 @@
 * TODO:
 
+* Merge layer:
+	Control layer visibility with merge control register, AND with source layer visibility before passing to the relevant input pixel header
+	Also xor control for dither to change the pattern to the opposite phase
+		In emulation: if (enableDither && ((displayH ^ displayV) & 0x01) == 0x00) {
+
+	
+
+
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
