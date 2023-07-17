@@ -157,11 +157,19 @@ kBus24Bit_MergeLayer_Register_XORMask0	= $a201
 kBus24Bit_MergeLayer_Register_Control1	= $a202
 kBus24Bit_MergeLayer_Register_XORMask1	= $a203
 
-kBus24Bit_MergeLayer_Register_Control_Combine	= %00
-kBus24Bit_MergeLayer_Register_Control_XOR		= %01
-kBus24Bit_MergeLayer_Register_Control_AND		= %10
-kBus24Bit_MergeLayer_Register_Control_OR		= %11
-kBus24Bit_MergeLayer_Register_Control_Dither	= %100
+kBus24Bit_MergeLayer_Register_Control_Combine		= %00
+kBus24Bit_MergeLayer_Register_Control_XOR			= %01
+kBus24Bit_MergeLayer_Register_Control_AND			= %10
+kBus24Bit_MergeLayer_Register_Control_OR			= %11
+kBus24Bit_MergeLayer_Register_Control_Dither		= %100
+; TODO...
+kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
+kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
+kBus24Bit_MergeLayer_Register_Control_Visible		= %100000
+kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %1000000
+
+
+
 
 
 

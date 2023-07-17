@@ -2,8 +2,13 @@
 
 * Merge layer:
 	Control layer visibility with merge control register, AND with source layer visibility before passing to the relevant input pixel header
+		kBus24Bit_MergeLayer_Register_Control_Visible		= %100000
 	Also xor control for dither to change the pattern to the opposite phase
+		kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %1000000
 		In emulation: if (enableDither && ((displayH ^ displayV) & 0x01) == 0x00) {
+	Also "force first or second input to be used" bits, to ignore transparency test result. Would allow one input to use dithering.
+		kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
+		kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
 
 	
 
