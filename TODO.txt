@@ -44,7 +44,9 @@
 			1			1			0			1
 			1			1			1			1
 			= ( NOT a AND c) OR b
+	* Update the layer enable connections to allow the simulation to use the calculated enable flag using the merge layer visibility/enable control
 	* TODO: Simulation done. Emulation will need to be brought up to date.
+	* TODO: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
 
 	
 

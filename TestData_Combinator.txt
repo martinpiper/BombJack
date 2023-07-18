@@ -14,7 +14,7 @@ d$a20301f0
 d$0
 ^-$01
 
-; XOR and AND
+; XOR and AND operation
 d$a2000161
 d$a2010100
 d$a2020162
@@ -22,7 +22,7 @@ d$a2030100
 d$0
 ^-$01
 
-; Both OR
+; Both OR operation
 d$a2000163
 d$a2010100
 d$a2020163
@@ -31,8 +31,75 @@ d$0
 ^-$01
 
 
+; Test combinations of visible flags
+; Update tile scroll regs to aid debugging
+d$9e020101
+; With XOR operation
+d$a2000121
+d$a2010100
+d$a2020121
+d$a2030100
+d$0
+^-$01
+
+d$a2000141
+d$a2010100
+d$a2020141
+d$a2030100
+d$0
+^-$01
+
+d$a2000101
+d$a2010100
+d$a2020101
+d$a2030100
+d$0
+^-$01
+
+; Update tile scroll regs to aid debugging
+d$9e040101
+; Test combinations of force out flags
+d$a2000168
+d$a2010100
+d$a2020168
+d$a2030100
+d$0
+^-$01
+
+d$a2000170
+d$a2010100
+d$a2020170
+d$a2030100
+d$0
+^-$01
+
+d$a2000168
+d$a2010100
+d$a2020170
+d$a2030100
+d$0
+^-$01
+
+d$a2000170
+d$a2010100
+d$a2020168
+d$a2030100
+d$0
+^-$01
+
+; Both force out, indeterminate
+d$a2000178
+d$a2010100
+d$a2020178
+d$a2030100
+d$0
+^-$01
+
 
 ; Test combinator being updated mid-frame
+; Update tile scroll regs to aid debugging
+d$9e020102
+d$9e020102
 d$0
 w$ff01ff00,$40000000
 
