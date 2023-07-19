@@ -1,5 +1,11 @@
 * TODO:
 
+* Double check with the emulation just the scaled sprite output using @TC-14 without the merge layer logic active...
+	Some of the leading edges and trailing edges of pixels appear squashed with the merge active? Is it apparent without the merge layer?
+
+
+
+
 * Merge layer:
 	Control layer visibility passed to the relevant input pixel header using a combination of layer enable (VLAYEREN1) and visible bit enable
 		kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
@@ -46,6 +52,10 @@
 			= ( NOT a AND c) OR b
 	* Update the layer enable connections to allow the simulation to use the calculated enable flag using the merge layer visibility/enable control
 	* TODO: Simulation done. Emulation will need to be brought up to date.
+		Construct a new test using the default simulation setup to test the simulation and emulation behaviour
+		Probably use the assets from existing demos
+		Use its output in the simulation to validate the output with emulation
+		>> Needs lots of pixel alignment checks between simulation and emulation
 	* TODO: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
 
 	

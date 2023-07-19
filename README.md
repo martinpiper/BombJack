@@ -332,6 +332,7 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
    | $01           | Original RAMs                 | $9a00-$9a01          | Start/end 32x32 sprite index 0-f only   |
    | $01           | Extension mode7 registers     | $a000-$a017          | Mode7 registers                         |
    | $01           | Vectors                       | $a100   1 byte       | Vectors display bank 					|
+   | $01           | Combiner                      | $a200   4 bytes      | Combiner display bank 					|
    | Note: APU and vectors are by default using the same EBBS in the schematics										|
    | $02           | APU                           | $8000   8KB          | APU memory bank 0 instruction           |
    | $02           | APU                           | $4000   8KB          | APU memory bank 1 data                  |

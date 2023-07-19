@@ -162,7 +162,7 @@ kBus24Bit_MergeLayer_Register_Control_XOR			= %01
 kBus24Bit_MergeLayer_Register_Control_AND			= %10
 kBus24Bit_MergeLayer_Register_Control_OR			= %11
 kBus24Bit_MergeLayer_Register_Control_Dither		= %100
-; TODO...
+; TODO: Emulation...
 kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
 kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
 kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
