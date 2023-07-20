@@ -63,7 +63,9 @@
 	>> Emulation is now pixel perfect with simulation
 	* Done: Add automated simulation run and screenshot comparisons with emulation output tests
 	* Done: Tidy package allocations
-	* TODO: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
+	* Done: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
+		See: * For APU validation when running @Demo6:
+			In: C:\work\c64\VideoHardware\Done.txt
 
 	
 

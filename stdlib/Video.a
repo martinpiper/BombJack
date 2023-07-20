@@ -281,7 +281,14 @@ Video_InitDisplaySpritesScrollsBackground
 
 	; Default merge layer behaviour
 	jsr Video_SetAddressMergeLayer
-	jsr Video_clearFourBytes
+	lda #kBus24Bit_MergeLayer_Register_Control_Default
+	sta CIA2PortBRS232
+	lda #0
+	sta CIA2PortBRS232
+	lda #kBus24Bit_MergeLayer_Register_Control_Default
+	sta CIA2PortBRS232
+	lda #0
+	sta CIA2PortBRS232
 
 	jsr Video_SetAddressCharsControl
 	jsr Video_clearByte

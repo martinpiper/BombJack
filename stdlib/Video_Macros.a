@@ -169,6 +169,8 @@ kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
 kBus24Bit_MergeLayer_Register_Control_Visible_1		= %1000000
 kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %10000000
 
+; Good default to use
+kBus24Bit_MergeLayer_Register_Control_Default = kBus24Bit_MergeLayer_Register_Control_Visible_0 | kBus24Bit_MergeLayer_Register_Control_Visible_1
 
 
 
