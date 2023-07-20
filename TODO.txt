@@ -1,11 +1,5 @@
 * TODO:
 
-* Double check with the emulation just the scaled sprite output using @TC-14 without the merge layer logic active...
-	Some of the leading edges and trailing edges of pixels appear squashed with the merge active? Is it apparent without the merge layer?
-
-
-
-
 * Merge layer:
 	Control layer visibility passed to the relevant input pixel header using a combination of layer enable (VLAYEREN1) and visible bit enable
 		kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
@@ -50,12 +44,23 @@
 			1			1			0			1
 			1			1			1			1
 			= ( NOT a AND c) OR b
-	* Update the layer enable connections to allow the simulation to use the calculated enable flag using the merge layer visibility/enable control
-	* TODO: Simulation done. Emulation will need to be brought up to date.
+	* Done: Update the layer enable connections to allow the simulation to use the calculated enable flag using the merge layer visibility/enable control
+	* Done: Simulation done. Emulation will need to be brought up to date.
 		Construct a new test using the default simulation setup to test the simulation and emulation behaviour
 		Probably use the assets from existing demos
 		Use its output in the simulation to validate the output with emulation
 		>> Needs lots of pixel alignment checks between simulation and emulation
+		* Double check with the emulation just the scaled sprite output using @TC-14 without the merge layer logic active...
+			With merging active, some of the leading edges and trailing edges of pixels appear squashed with the merge active? Is it apparent without the merge layer?
+				Tip of the scaled sprite gun. Also the join between the T in TAG and the mode7 cloud has a transparent pixel where it should be cloud
+			>> Without merge layer and connecting scaled sprites and mode7 directly to layers, there are no leading edge issues.
+				The tip of the gun has correct 2x2 pixels, instead of the previously observed 1x2 pixels block.
+				The mode7 cloud is also fine.
+			>> BombJack Combiner V9.0 (assembled) does not have the scaled sprite 2x1 issue.
+				However the right hand edge of the T in TAG and the cloud do show the same transparent pixel issue, where there shouldn't be one.
+				>> Hmm, using a single latch might be better than an input pixel latch?
+					Yes seems to be working *much* better
+	* TODO: Tidy package allocations
 	* TODO: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
 
 	
