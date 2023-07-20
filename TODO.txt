@@ -60,6 +60,7 @@
 				However the right hand edge of the T in TAG and the cloud do show the same transparent pixel issue, where there shouldn't be one.
 				>> Hmm, using a single latch might be better than an input pixel latch?
 					Yes seems to be working *much* better
+	>> Emulation is now pixel perfect with simulation
 	* TODO: Tidy package allocations
 	* TODO: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
 
