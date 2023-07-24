@@ -106,7 +106,7 @@
 		Choose: RS274X
 				
 	Order note:
-		Your standard 1.6mm +/- 10% 1oz stackup is OK.
+		Your standard stackup is OK.
 
 	Assembly note:
 		Please assemble 1 board, leave the other boards bare. The BOM file "Stock Code" column contains the component ordering links.
