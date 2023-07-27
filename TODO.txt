@@ -295,6 +295,14 @@
 					Then latch the DB0-DB3 into suitable latch signals selected by DB4-DB7
 						This does mean at least 4 writes to send one 8 bit value
 							Low nybble data setup with DB4 lo and then DB4 to high to latch
+	** Maybe it would be better to have the signals PA2 , SERIALATN , SP1 , SP2 ( on the strobe _PC) to be used to address up to 16 latches?
+		This would allow address latches to be set independently, also a control register to set data direction (DDR)
+			> Note that PA2 and SERIALATN are on CIA2PortASerialBusVICBank
+			** Double check code for "; This pulses SP2" and "; This pulses SP1" as it seems identical?
+		* This would make it easier to design just a huge memory board... And allow 24 bit pass-through via the control register...
+		* The control register could be used to control external devices
+		* A jumper to allow the C64 to power this instead of relying on an external power supply
+			Needs LED with resistor...
 
 
 
