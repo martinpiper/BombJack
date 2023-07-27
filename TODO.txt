@@ -299,6 +299,10 @@
 		This would allow address latches to be set independently, also a control register to set data direction (DDR)
 			> Note that PA2 and SERIALATN are on CIA2PortASerialBusVICBank
 			** Double check code for "; This pulses SP2" and "; This pulses SP1" as it seems identical?
+				>> Ahh CIA2TimerAControl and CIA1TimerAControl
+					** Check that the correct output bit is set on the schematics...
+						Yes it is, CIA1/2 pin 39 SP, both with 3.3K pullups...
+							; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
 		* This would make it easier to design just a huge memory board... And allow 24 bit pass-through via the control register...
 		* The control register could be used to control external devices
 		* A jumper to allow the C64 to power this instead of relying on an external power supply

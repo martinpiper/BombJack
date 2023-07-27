@@ -41,6 +41,7 @@ Bus24Bit2_Init
 
 	; Strobe PA2 and SERIALATN
 	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
 	lda #%0000
 	sta CIA2PortBRS232
 	sta CIA2PortASerialBusVICBank
@@ -59,6 +60,7 @@ Bus24Bit2_Init
 
 	; This pulses SP2
 	; NOTE: SP2 is inverted
+	; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
 	; The nop is to show timing in the captured data
 	lda #%01000000
 	sta CIA2PortBRS232
@@ -90,6 +92,7 @@ Bus24Bit2_Init
 
 	; This pulses SP1
 	; NOTE: SP1 is inverted
+	; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
 	lda #%01000000
 	sta CIA2PortBRS232
 	sta CIA1TimerAControl
