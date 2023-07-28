@@ -8,6 +8,12 @@ While the bulk property search and replacement function in Proteus does exist, i
 
 The jar file with dependencies in the "target" folder can be executed from the java command line.
 
+* Make sure the main window is the same size and same display as was used to locate the coordinates 
+* Make sure the Design Explorer tab is the second tab in the main window
+* Make to add the CODE column to the Design Explorer view
+    * Menu->View->Property Columns->Drop down Stock Code (CODE)->Add->OK
+
+
 #### To update a design
 
 The command line takes two parameters: <Properties file for GUI element locators> <CSV file detailing search and replacement values>  
