@@ -1,0 +1,79 @@
+;$00000100 = DDR set to input from the C64
+;$00010000 = _PC
+;$01000000 = PA2
+;$02000000 = SERIALATN
+;$04000000 = SP1
+;$08000000 = SP2
+
+; During power-on reset
+d$00010000
+d$00010001
+d$00010002
+d$00010003
+d$00010004
+
+; After power-on reset
+
+; Set latch0
+d$00010004
+; Set latch0 = $37
+d$00000037
+d$00010037
+
+; Set latch1
+d$01010037
+; Set latch0 = $01
+d$01000001
+d$01010001
+
+; Set latch6 (Write RAM)
+d$06010000
+; Write $23
+d$06000023
+d$06010023
+; Write $34
+d$06000034
+d$06010034
+; Write $17
+d$06000017
+d$06010017
+; Write $98
+d$06000098
+d$06010098
+
+
+; Reset address...
+d$00010004
+; Set latch0 = $37
+d$00000037
+d$00010037
+
+; Set latch1
+d$01010037
+; Set latch0 = $01
+d$01000001
+d$01010001
+
+; Simulate C64 side setting user port DDR
+d$01010101
+; Set latch7
+d$07010101
+; Set latch7 = $01 (read RAM)
+d$07000101
+d$07010101
+
+; Set latch5
+d$05010101
+; "Write" latch5 (Read RAM)
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+

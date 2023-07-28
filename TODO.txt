@@ -302,6 +302,7 @@
 						This does mean at least 4 writes to send one 8 bit value
 							Low nybble data setup with DB4 lo and then DB4 to high to latch
 	** Maybe it would be better to have the signals PA2 , SERIALATN , SP1 , SP2 ( on the strobe _PC) to be used to address up to 16 latches?
+		>> Created UserPort20To32Bit1.pdsprj
 		This would allow address latches to be set independently, also a control register to set data direction (DDR)
 			> Note that PA2 and SERIALATN are on CIA2PortASerialBusVICBank
 			** Double check code for "; This pulses SP2" and "; This pulses SP1" as it seems identical?
@@ -311,10 +312,18 @@
 							; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
 		* This would make it easier to design just a huge memory board... And allow 24 bit pass-through via the control register...
 		* Also DDR in control register - Find out what the default C64 user port state would be in terms of signals and use that for reset to write, not output
+			** Does the C64 default to reading from the user port? If so this can be used to our advantage for example having the control register design simpler, because it doesn't need to reset the 74LS245 bus transceiver...
 		* The control register could be used to control external devices
 		* A jumper to allow the C64 to power this instead of relying on an external power supply
 			Needs LED with resistor...
 		* Headers for debug of the address and read/write signals and any pass-through to the old interface...
+		* Power on reset, ADM709LARZ (ADM709LAR), for resetting the control register...?
+			https://www.mouser.sg/ProductDetail/Analog-Devices/ADM709LARZ?qs=BpaRKvA4VqHy5OxrBQwb0w%3D%3D
+			To use: SOIC127P600X175-8N-ADM709LARZ
+		> Initial tests for write and read seem to be working...
+			output\DebugUserPort20To32Bit1.txt seems to have correct validation for reads at the correct address and data at the C64 user port...
+			
+			
 
 
 
