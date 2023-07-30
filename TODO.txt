@@ -326,7 +326,10 @@
 			This would allow the C64 to send data by "reading the RAM expansion" without needing to store it on the C64 side and have it sent to the video hardware.
 			Or it can choose to send through the data from the C64, with the _PC and PA2
 				Can it always send through PA2...? Or will it need a control register signal?
-			
+			* Default operation at power-on is to pass-through _PC, PA2, D[0..7] and FLAG2 by clearing at reset the control register
+				Hmm, the Bus24 init will need to set the relevant extra latch select lines to avoid setting latch7
+
+
 			
 			
 
