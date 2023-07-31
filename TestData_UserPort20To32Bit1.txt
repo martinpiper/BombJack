@@ -1,9 +1,9 @@
 ;$00000100 = DDR set to input from the C64
 ;$00010000 = _PC
-;$01000000 = PA2
-;$02000000 = SERIALATN
-;$04000000 = SP1
-;$08000000 = SP2
+;$01000000 = SP1
+;$02000000 = SP2
+;$04000000 = SERIALATN
+;$08000000 = PA2
 
 ; During power-on reset
 d$00010000
@@ -13,16 +13,17 @@ d$00010003
 d$00010004
 
 ; After power-on reset
+; Set latch7
+d$07000002
+d$07010002
 
 ; Set latch0
 d$00010004
-; Set latch0 = $37
 d$00000037
 d$00010037
 
 ; Set latch1
 d$01010037
-; Set latch0 = $01
 d$01000001
 d$01010001
 
@@ -96,6 +97,26 @@ d$00010004
 ; Set latch0 = $37
 d$00000037
 d$00010037
+
+; Set latch7 - Enable pass-through
+d$07000000
+d$07010000
+
+; PA2 toggle twice
+d$00010000
+d$08010000
+d$00010000
+d$08010000
+d$00010001
+d$08010002
+d$00010003
+d$08010004
+
+
+; Set latch7 - Enable RAM to pass-through
+d$07000001
+d$07010001
+
 
 ; Simulate C64 side setting user port DDR
 d$01010101

@@ -333,6 +333,8 @@
 			... avoiding logic contentions with the data bus. The C64 cannot set data...
 			>> Perhaps ALATCH5 can signify DDR for reading instead?
 				Yes this works.
+		** The direct pass-through seems to work, however need to think about PA2 setup of bytes using the RAM read to pass-through mechanism
+			Does it allow the CPU to set the external address then read RAM to the pass-through?
 
 			
 			
