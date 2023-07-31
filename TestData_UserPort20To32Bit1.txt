@@ -56,11 +56,6 @@ d$01010001
 
 ; Simulate C64 side setting user port DDR
 d$01010101
-; Set latch7
-d$07010101
-; Set latch7 = $01 (read RAM)
-d$07000101
-d$07010101
 
 ; Set latch5
 d$05010101
@@ -77,3 +72,57 @@ d$05010100
 d$05000100
 d$05010100
 
+
+
+
+; Set latch6 (Write RAM) continuing with the last read address
+d$06010000
+; Write $11
+d$06000011
+d$06010011
+; Write $22
+d$06000022
+d$06010022
+; Write $33
+d$06000033
+d$06010033
+; Write $44
+d$06000044
+d$06010044
+
+
+; Reset address...
+d$00010004
+; Set latch0 = $37
+d$00000037
+d$00010037
+
+; Simulate C64 side setting user port DDR
+d$01010101
+
+; Set latch5
+d$05010101
+; "Write" latch5 (Read RAM)
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100
+
+d$05000100
+d$05010100

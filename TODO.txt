@@ -328,7 +328,11 @@
 				Can it always send through PA2...? Or will it need a control register signal?
 			* Default operation at power-on is to pass-through _PC, PA2, D[0..7] and FLAG2 by clearing at reset the control register
 				Hmm, the Bus24 init will need to set the relevant extra latch select lines to avoid setting latch7
-
+				* Can have a control signal to select RAM read to external
+		** Once READMEM is set, the data bus sends to the C64, there needs to be some way to reset the interface...
+			... avoiding logic contentions with the data bus. The C64 cannot set data...
+			>> Perhaps ALATCH5 can signify DDR for reading instead?
+				Yes this works.
 
 			
 			
