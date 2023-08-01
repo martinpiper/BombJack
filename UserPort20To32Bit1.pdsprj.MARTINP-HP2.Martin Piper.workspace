@@ -1,34 +1,33 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="2">
+ <FRAME activewindow="1">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff10000000000000000f050000a7020000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="316" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
-    <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-    <centre x="7493000" y="-5275262"/>
+   <editor metric="0" gridmajor="2540000" mode="00000015" zoom="-1" scale="159" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+    <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
+    <centre x="33020000" y="1270000"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
-  <WINDOW type="default" module="DXP"/>
   <WINDOW type="default" module="ARES">
-   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="175" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="72571">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="169" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="75147">
     <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-    <centre x="-3175000" y="4254500"/>
+    <centre x="1016000" y="-238125"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
  </FRAME>
  <MODULE name="ARES">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="175" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="72571">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="169" flipped="0" gridminor="127000" gridmode="16" snapidx="2" snap="63500" xcursor="0" orgmode="0" snaprange="75147">
    <world y1="-12700000" x1="-15240000" y2="12700000" x2="15240000"/>
-   <centre x="-3175000" y="4254500"/>
+   <centre x="1016000" y="-238125"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="316" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
-   <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-   <centre x="7493000" y="-5275262"/>
+  <editor metric="0" gridmajor="2540000" mode="00000015" zoom="-1" scale="159" flipped="0" gridminor="254000" gridmode="0" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
+   <centre x="33020000" y="1270000"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
@@ -36,7 +35,7 @@
   <PWI>
    <POPUP w="800" x="188" flags="00000003" y="133" h="200" pid="0" iid="-1">
     <PROPERTIES>
-     <ITEM name="Message Column Width">558</ITEM>
+     <ITEM name="Message Column Width">678</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
      <ITEM name="Time Column Width">120</ITEM>
@@ -62,7 +61,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="1330" flags="0000800b" y="111" h="23" pid="1" iid="16">
+   <POPUP w="16" x="1330" flags="0000800b" y="111" h="62" pid="1" iid="16">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

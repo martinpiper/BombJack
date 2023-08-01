@@ -4,6 +4,7 @@
 ;$02000000 = SP2
 ;$04000000 = SERIALATN
 ;$08000000 = PA2
+;$80000000 = Break point
 
 ; During power-on reset
 d$00010000
@@ -17,6 +18,18 @@ d$00010004
 d$07010004
 d$07000002
 d$07010002
+
+; Set adders
+d$08010018
+d$08000018
+d$08010018
+d$09010001
+d$09000001
+d$09010001
+d$0a010000
+d$0a000000
+d$0a010000
+
 
 ; Set latch0
 d$00010004
@@ -75,6 +88,10 @@ d$05000100
 d$05010100
 
 
+; Write to latch3 which should read the added address...
+d$03010000
+d$03000000
+d$03010000
 
 
 ; Set latch6 (Write RAM) continuing with the last read address
@@ -99,6 +116,12 @@ d$00010004
 d$00000037
 d$00010037
 
+; Set latch1
+d$01010037
+; Set latch0 = $01
+d$01000001
+d$01010001
+
 ; Set latch7 - Enable pass-through
 ; When altering the pass-through operation via latch 7, do not track its _PC signal.
 
@@ -107,20 +130,24 @@ d$07000000
 d$07010000
 
 ; PA2 toggle twice
-; Note: Latch4 is chosen as it does nothing (right now)
-d$04010000
-d$0c010000
-d$04010000
-d$0c010000
+; Note: Latch7 controls pass-through PA2
+d$07000004
+d$07010004
+d$07000000
+d$07010000
+d$07000004
+d$07010004
+d$07000000
+d$07010000
 ; Write some direct bytes
 d$04010011
 d$04000011
-d$0c010022
-d$0c000022
+d$04010022
+d$04000022
 d$04010033
 d$04000033
-d$0c010044
-d$0c000044
+d$04010044
+d$04000044
 
 
 ; Set latch7 - Enable RAM to pass-through
@@ -147,6 +174,12 @@ d$05010100
 d$05000100
 d$05010100
 
+; Read from latch3 which should read the added address...
+d$03010100
+d$03000100
+d$03010100
+
+d$05010100
 d$05000100
 d$05010100
 
