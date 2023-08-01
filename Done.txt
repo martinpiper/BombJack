@@ -4592,3 +4592,151 @@ All layouts now use V3.1
 	I think this is because the higher palette bits are not cleared during sprite rendering, but they hold the previous data instead
 	* Just needs testing by merging other layers, like the chars and tiles, to ensure it's not a dithering or xor merge layer bug...
 		It was the sprites2 scanline memory. Moving the default scaled sprite across the screen filled the scanline RAMs and removed the problem.
+
+
+
+
+* User port: Expand this C64 user port breakout board to include the other data lines. Then I could add the ability to read RAM/registers from the video/audio expansion hardware.
+	This would include the ability to read the result of external maths calculations...
+	20/24 pins for the header?
+		https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Cable&contact%20gender=Pin%20%28Male%29&m=Samtec&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20positions=20%20Position~~26%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Shrouded&instock=y&rp=connectors%2Fheaders-wire-housings%7C~Number%20of%20Positions
+		
+	Cable? https://www.mouser.sg/c/wire-cable/cable-assemblies/ribbon-cables-idc-cables/?q=idc&connector%20end%20a%20pin%20count=20%20Position~~24%20Position&connector%20end%20b%20pin%20count=20%20Position~~24%20Position&gender=Female%20%2F%20Female&pitch=2.54%20mm&type=IDC%20Header%20Cable~~IDC%20Socket%20Cable&instock=y&rp=wire-cable%2Fcable-assemblies%2Fribbon-cables-idc-cables%7C~Type%7C~Connector%20End%20A%20Pin%20Count%7C~Connector%20End%20B%20Pin%20Count
+	>> Cable and header cost/availability is a factor in the design
+	Edge connector options if the EDAC one on the board isn't available? https://www.mouser.sg/c/connectors/card-edge-connectors/standard-card-edge-connectors/?board%20thickness=1.57%20mm&mounting%20angle=Straight~~Vertical&number%20of%20positions=24%20Position&pitch=3.96%20mm&instock=y&rp=connectors%2Fcard-edge-connectors%2Fstandard-card-edge-connectors%7C~Mounting%20Angle
+	
+	These signals (CIA2PortASerialBusVICBank		= $dd00		; 56576) could be used to allow individual EBS/ADDR/DATA/direction (read/write) to be selected
+		; Bit 2: RS232 TXD line, output bit.
+		; Bit 3: Serial bus ATN OUT; 0 = High; 1 = Low.
+		; Bit 4: Serial bus CLOCK OUT; 0 = High; 1 = Low.
+		; Bit 5: Serial bus DATA OUT; 0 = High; 1 = Low.
+	These 4 bits would give 16 addressable registers in the user port interface
+		Or at the very least 4 modes of operation...
+	Would need to check read signal operation with the DDR set appropriately. Port pin 8_PC2
+	>> Would also need to check the schematic to make sure the "serial bus" isn't connected to the serial port? To avoid hitting the disk drive...
+	20 positions:
+		Headers: https://www.mouser.sg/c/connectors/headers-wire-housings/?application=Board-to-Cable&contact%20gender=Pin%20%28Male%29&m=Samtec&mounting%20angle=Straight&mounting%20style=Through%20Hole&number%20of%20positions=20%20Position&number%20of%20rows=2%20Row&pitch=2.54%20mm&product=Headers&row%20spacing=2.54%20mm&termination%20style=Solder%20Pin&type=Shrouded&instock=y
+		Cables, be careful of reversed and polarity!: https://www.mouser.sg/c/wire-cable/cable-assemblies/ribbon-cables-idc-cables/?q=idc&connector%20end%20a%20pin%20count=20%20Position&connector%20end%20b%20pin%20count=20%20Position&gender=Female%20%2F%20Female&pitch=2.54%20mm&type=IDC%20Header%20Cable~~IDC%20Socket%20Cable&instock=y&rp=wire-cable%2Fcable-assemblies%2Fribbon-cables-idc-cables%7C~Type
+	Previous board used: TST-107-01-G-D : https://www.mouser.sg/ProductDetail/Samtec/TST-107-01-G-D?qs=FESYatJ8odJB1y56XqI29Q%3D%3D
+	Lots of headers: https://www.mouser.sg/ProductDetail/Samtec/TST-110-01-G-D?qs=rU5fayqh%252BE1iIX99OHEFCg%3D%3D
+	Only long 9in cable without reverse!: https://www.mouser.sg/ProductDetail/Samtec/HCSD-10-D-09.00-01-N?qs=Cqqh%252BS766wkrU15Kulb0SQ%3D%3D
+		Added cable options to schematic
+	Button: https://www.amazon.com/MakerSpot-Momentary-Tactile-Breadboard-Friendly/dp/B06XT3FLVM
+		Options: https://www.mouser.sg/ProductDetail/TE-Connectivity-PB/FSM2JRT?qs=g%252BEszo6zu8OVk6hda53nSw%3D%3D
+			But .197 hole width
+				Can use package TBLOCK-I2
+					Pins edited to C-90-40
+	> Extra CIA info: https://www.c64-wiki.com/wiki/CIA
+	> See updates for Bus24Bit2_Init
+		Total signals available: PA2 , SERIALATN , SP1 , SP2 and the strobe _PC for D0..7 read/write
+	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_360.html
+	> http://www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_362.html
+	> Schematics: http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c64/index.html
+	* Does _PC go low when reading the data?
+		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows: /PC	Port Control - Handshake output, Low pulse after read/write on port B.
+		Empirically tested
+	* CNT1 CNT2 have pullup resistors and ground filter capacitors and go to pin 40 on the CIAs
+		CIA pinout ( https://www.c64-wiki.com/wiki/CIA#Pinout ) shows pin 40 CNT is: CNT	Count - Internal timers can count pulses to this input. Can be used for frequency dependent operations.
+	* Some design options... Using the new signals:
+		** New 32 bit address space with option to use the old 24 bit board
+			Large read/write external memory, with auto increment
+			Still pass through _FLAG2 from 24 bit interface (video hardware) to the user port, also to the new internal 32 bit interface for any external processor
+			Option to let external device control the output to the old 24 bit interface board, to write data to the video hardware
+			Use case 0 (UC0): Pass through user port to the old interface
+			Use case 1 : Read/write large amounts of memory from the C64 user port, with offset and auto increment for faster screen scrolling or lots of extra graphics or decompression of video/audio data
+				Scrolling would be faster because only absolute loads/stores would be needed instead of load/stores with X/Y offsets
+				Decompression would be faster as the source data pointer would not need to be updated. However an end data pointer might be needed... Or an end of decompressed data pointer test...
+			Use case 2 : External processor calculates 3D data and then allows result memory to be read after it has completed calculation
+				A simple latch register, without contention, indicating "job complete" at a certain address range would be suitable
+			Use case 3 : External processor calculates and sends large amounts of data direct to the video hardware via the old 24 bit interface
+			* SERIALATN = 0 : Keep the old 24 bit board, and have an interface that uses the old 14 pin header. Pass through PA2, D0..7, _PC from computer when active
+				The 32 bit memory interface is bypassed by the user port, meaning the external processor can access the memory
+				The external processor would need to wait if wanting to access the old 24 bit interface
+					There will need to be a signal that indicates to the external processor that the old 14 pin header is needed
+					There will need to be a signal from the external processor that indicates that it wants the old 14 pin header, and it will need to promise to relinquish the old 14 pin header within a certain amount of time
+				UC0
+			* SERIALATN = 1 : New 32 bit memory interface mode
+				SP2 = 0 : External device controls the 24 bit and 32 bit interface
+					UC2 UC3
+				SP2 = 1 : User port controls the 32 bit memory interface
+					UC1
+					External devices would need to wait if they need to perform writes
+					The transition time from SP2 = 1 to PA2 = 0 or _PC = 0 can be such that existing writes from an external device have time to complete
+						The time is due to the C64 signalling control with SP2 and then the time needed to alter other signals. This would be, minimum, 4 ~1MHz cycles (sta $abs) for CIA control.
+						There will need to be a signal that indicates to the external processor that the address bus is needed
+						There will need to be a signal from the external processor that indicates that it wants the address bus, and it will need to promise to relinquish the bus within a certain amount of time
+					PA2 : Low, reset all external address and data bus drivers, start reading 4 bytes for the address and then extra bytes on _PC for address increment
+					SP1 = 0 : Read address, address bus drivers active but data bus drivers inactive, allowing read from external memory
+					SP1 = 1 : Write address, address bus and data drivers active.
+			> Options for suitable SRAM: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208%7C~32%20k%20x%208%7C~128%20k%20x%208%7C~256%20k%20x%208%7C~512%20k%20x%208%7C~1%20M%20x%208%7C~2%20M%20x%208&supply%20voltage%20-%20max=5.25%20V~~5.5%20V&supply%20voltage%20-%20min=4.5%20V~~4.75%20V&instock=y&rp=semiconductors%2Fmemory-ics%2Fsram%7C~Supply%20Voltage%20-%20Max%7C~Supply%20Voltage%20-%20Min&sort=memory%20size%7C1
+				> https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D
+					Stocked
+				> https://www.mouser.sg/ProductDetail/Infineon-Technologies/CY62158H-45ZSXI?qs=QmaLbtOb%252B600VoScfZ7T5g%3D%3D
+					Now not stocked: CY62158H-45ZSXI
+				>> Requested: https://support.labcenter.com/forums/viewtopic.php?f=6&t=8291
+					>> Added
+					>> SMT SMD Package test.pdsprj shows it works
+			> Options for connectors. While the normal backplane used two 64 pin (2 row x 32) Harting connectors, this is quite wide. So instead consider a 96 pin (3 row x 32) instead:
+				Right-angled connectors for board edge: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Right%20Angle&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&pitch=2.54%20mm&product=Headers&termination%20style=Solder%20Pin&instock=y
+				Straight receptacles for board: https://www.mouser.sg/c/connectors/backplane-connectors/din-41612-connectors/?m=HARTING&mounting%20angle=Straight&number%20of%20positions=96%20Position&number%20of%20rows=3%20Row&product=Receptacles&series=DIN-Signal%20C&termination%20style=Solder%20Pin&instock=y
+				Testing parts, these needed adjustment:
+				09031966921.step needs package adjustment: 2.3mm 0.5mm 0mm
+				09032966825222.step also needs adjustment:
+				** The real backplane board also needs model adjustment: 09022646824.step needs: 86.8mm 38.2mm 12.5mm
+				Choose the parts with most stock and in gold or copper
+	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
+		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
+			UM245R?	https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
+			Tech doc:
+				https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
+				https://ftdichip.com/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R
+			Code examples: https://ftdichip.com/software-examples/code-examples/
+			Could just send data to the COM port from the PC
+				Since there are 8 bits, it would be possible to use 4 bits for control, and 4 bits for parallel data
+			Although ideally being able to control other output lines on the C bus and read the _FLAG2 would be better
+			>> Connecting the board to the PC, usually creates a COM4: device (can be detected with the mode command)
+				echo abcd > COM4:
+				Pin 23 RXF# goes low when the echo command sends data
+					Then strobing low 12 RD# does show the expected ASCII data on the data pins 1 5 3 10 2 8 9 6 (DB0-DB7)
+					Very simple logic here could be using a clock crystal (1MHz might do) OR the clock with pin 23 RXF# and then use that for pin 12 RD# strobe
+					First latch the DB0-DB7 into a full latch, for signal stability.
+					Then latch the DB0-DB3 into suitable latch signals selected by DB4-DB7
+						This does mean at least 4 writes to send one 8 bit value
+							Low nybble data setup with DB4 lo and then DB4 to high to latch
+	** Maybe it would be better to have the signals PA2 , SERIALATN , SP1 , SP2 ( on the strobe _PC) to be used to address up to 16 latches?
+		>> Created UserPort20To32Bit1.pdsprj
+		This would allow address latches to be set independently, also a control register to set data direction (DDR)
+			> Note that PA2 and SERIALATN are on CIA2PortASerialBusVICBank
+			** Double check code for "; This pulses SP2" and "; This pulses SP1" as it seems identical?
+				>> Ahh CIA2TimerAControl and CIA1TimerAControl
+					** Check that the correct output bit is set on the schematics...
+						Yes it is, CIA1/2 pin 39 SP, both with 3.3K pullups...
+							; NOTE: The CIA2PortBRS232 writes are only to show timing with _PC, they are not needed for the protocol
+		* This would make it easier to design just a huge memory board... And allow 24 bit pass-through via the control register...
+		* Also DDR in control register - Find out what the default C64 user port state would be in terms of signals and use that for reset to write, not output
+			** Does the C64 default to reading from the user port? If so this can be used to our advantage for example having the control register design simpler, because it doesn't need to reset the 74LS245 bus transceiver...
+		* The control register could be used to control external devices
+		* A jumper to allow the C64 to power this instead of relying on an external power supply
+			Needs LED with resistor...
+		* Headers for debug of the address and read/write signals and any pass-through to the old interface...
+		* Power on reset, ADM709LARZ (ADM709LAR), for resetting the control register...?
+			https://www.mouser.sg/ProductDetail/Analog-Devices/ADM709LARZ?qs=BpaRKvA4VqHy5OxrBQwb0w%3D%3D
+			To use: SOIC127P600X175-8N-ADM709LARZ
+		> Initial tests for write and read seem to be working...
+			output\DebugUserPort20To32Bit1.txt seems to have correct validation for reads at the correct address and data at the C64 user port...
+		** TODO: Control register can allow the current RAM read data to be sent to the pass-through header, with the same _PC signal as used for the RAMs
+			This would allow the C64 to send data by "reading the RAM expansion" without needing to store it on the C64 side and have it sent to the video hardware.
+			Or it can choose to send through the data from the C64, with the _PC and PA2
+				Can it always send through PA2...? Or will it need a control register signal?
+			* Default operation at power-on is to pass-through _PC, PA2, D[0..7] and FLAG2 by clearing at reset the control register
+				Hmm, the Bus24 init will need to set the relevant extra latch select lines to avoid setting latch7
+				* Can have a control signal to select RAM read to external
+		** Once READMEM is set, the data bus sends to the C64, there needs to be some way to reset the interface...
+			... avoiding logic contentions with the data bus. The C64 cannot set data...
+			>> Perhaps ALATCH5 can signify DDR for reading instead?
+				Yes this works.
+		** The direct pass-through seems to work, however need to think about PA2 setup of bytes using the RAM read to pass-through mechanism
+			Does it allow the CPU to set the external address then read RAM to the pass-through?
+			Perhaps the final selector needs an always on latch to represent the high values from the tri-state?
+			>> Used 74LS153 instead
+		* Passed simulation checks
