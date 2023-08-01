@@ -337,6 +337,7 @@
 			Does it allow the CPU to set the external address then read RAM to the pass-through?
 			Perhaps the final selector needs an always on latch to represent the high values from the tri-state?
 			>> Used 74LS153 instead
+		* Passed simulation checks
 			
 
 
