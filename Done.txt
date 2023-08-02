@@ -3826,6 +3826,7 @@ All layouts now use V3.1
 		Signal	GND
 		Plane	GND
 		Signal	VCC
+	To see the VIA1 VIA2 VIA3 ... rules then click the All button in the design rule manager
 
 
 * Audio: Mounting hole size issue: https://support.labcenter.com/forums/viewtopic.php?f=11&t=8204

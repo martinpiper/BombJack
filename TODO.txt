@@ -14,8 +14,9 @@
 		If latch3 is read/write (_PC) then the address = current address + add value
 	Use the file "output\DebugUserPort20To32Bit1_Passthrough.txt" to validate this, not the file "output\DebugUserPort20To32Bit1.txt"
 		This is because file "output\DebugUserPort20To32Bit1.txt" is using _PC not logging PT_PC. It is debugging a different part of the design.
-
-
+	>> Changed to use: Eight layers.ltf
+		With VIA1 VIA2 etc
+		And all layers with power planes as fill
 
 
 
