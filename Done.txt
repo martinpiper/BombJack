@@ -4741,3 +4741,20 @@ All layouts now use V3.1
 			Perhaps the final selector needs an always on latch to represent the high values from the tri-state?
 			>> Used 74LS153 instead
 		* Passed simulation checks
+
+
+
+
+* UserPort20To32Bit1: Using SP2 to give an extra 8 registers above latch7
+	It would be possible to have 24 bit value for add/sub of the current address
+		Perhaps a 16 bit value, sign extended instead because 2MB at 32768 / 40 is still 819 screens wide with 64 rows... Which is plenty :D
+	It would be possible to clock this in by reading/writing latch3 (unused) to the counters
+	This could be used to set the screen width while reading data, to add a constant value at the end of the line...
+	>> latch8/9/10 are the add value latches
+		If latch3 is read/write (_PC) then the address = current address + add value
+	Use the file "output\DebugUserPort20To32Bit1_Passthrough.txt" to validate this, not the file "output\DebugUserPort20To32Bit1.txt"
+		This is because file "output\DebugUserPort20To32Bit1.txt" is using _PC not logging PT_PC. It is debugging a different part of the design.
+	>> Changed to use: Eight layers.ltf
+		With VIA1 VIA2 etc
+		And all layers with power planes as fill
+			Placed and routed OK with placement keepout areas.
