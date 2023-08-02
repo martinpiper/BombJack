@@ -12,7 +12,8 @@
 	This could be used to set the screen width while reading data, to add a constant value at the end of the line...
 	>> latch8/9/10 are the add value latches
 		If latch3 is read/write (_PC) then the address = current address + add value
-	
+	Use the file "output\DebugUserPort20To32Bit1_Passthrough.txt" to validate this, not the file "output\DebugUserPort20To32Bit1.txt"
+		This is because file "output\DebugUserPort20To32Bit1.txt" is using _PC not logging PT_PC. It is debugging a different part of the design.
 
 
 
