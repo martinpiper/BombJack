@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86472f8b-6695-4410-b417-28d002f647ff" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TestData_UserPort20To32Bit1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TestData_UserPort20To32Bit1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserPort20To32Bit1.pdsprj" beforeDir="false" afterPath="$PROJECT_DIR$/../UserPort20To32Bit1.pdsprj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +55,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DesignExplorer.properties ToSMTSOIC.csv specific" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
+      <module name="DesignUpdater" />
+      <option name="PROGRAM_PARAMETERS" value="DesignExplorer.properties ToSMTSOIC.csv 74LS32 74LS157" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DesignExplorer.properties ToSMTSOIC.csv" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.replicanet.DesignUpdater.Main" />
       <module name="DesignUpdater" />
@@ -66,6 +74,7 @@
     <list>
       <item itemvalue="Application.Debug -d" />
       <item itemvalue="Application.DesignExplorer.properties ToSMTSOIC.csv" />
+      <item itemvalue="Application.DesignExplorer.properties ToSMTSOIC.csv specific" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,8 +93,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java</url>
-          <line>49</line>
+          <line>62</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/replicanet/DesignUpdater/Main.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

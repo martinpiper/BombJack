@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.awt.Toolkit;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 
 public class Main {
@@ -37,6 +37,14 @@ public class Main {
 //            System.exit(0);
         }
 
+        Set<String> specifics = null;
+        if (args.length >2 ) {
+            specifics = new HashSet<>();
+            for (int i = 2 ; i < args.length ; i++) {
+                specifics.add(args[i]);
+            }
+        }
+
         System.getProperties().load(new FileInputStream(args[0]));
 
         // Expected header ordering: Value,Package,ToPackage,ToCode
@@ -47,6 +55,11 @@ public class Main {
         robot = new Robot();
 
         for (String[] row : records) {
+            if (specifics != null) {
+                if (!specifics.contains(row[0])) {
+                    continue;
+                }
+            }
             processTypeAndPackage(true, row[0] , row[1] , row[2] , row[3]);
         }
 
