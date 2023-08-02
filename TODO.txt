@@ -17,6 +17,7 @@
 	>> Changed to use: Eight layers.ltf
 		With VIA1 VIA2 etc
 		And all layers with power planes as fill
+			Placed and routed OK with placement keepout areas.
 
 
 
