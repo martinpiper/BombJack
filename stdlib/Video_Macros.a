@@ -162,9 +162,9 @@ kBus24Bit_MergeLayer_Register_Control_XOR			= %01
 kBus24Bit_MergeLayer_Register_Control_AND			= %10
 kBus24Bit_MergeLayer_Register_Control_OR			= %11
 kBus24Bit_MergeLayer_Register_Control_Dither		= %100
-; TODO: Emulation...
 kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
 kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
+; For a connected merged layer to be visible the merge layer hardware needs to be visible as well as the kBus24Bit_MergeLayer_Register_Control_Visible_X bit(s)
 kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
 kBus24Bit_MergeLayer_Register_Control_Visible_1		= %1000000
 kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %10000000
