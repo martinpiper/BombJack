@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="2">
+ <FRAME activewindow="0">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff5902000000000000570700009e020000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="25400000" mode="00000000" zoom="0" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="1" snap="127000" xcursor="0" orgmode="0" snaprange="215254">
-    <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-    <centre x="0" y="0"/>
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="261" flipped="0" gridminor="127000" gridmode="0" snapidx="1" snap="127000" xcursor="0" orgmode="0" snaprange="63500">
+    <world y1="-40640000" x1="-55880000" y2="40640000" x2="55880000"/>
+    <centre x="3048000" y="37015737"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -18,11 +18,12 @@
   </WINDOW>
   <WINDOW type="VIEW3D" module="VIEW3D">
    <camera>
-    <position x="-65206300" y="-11121274" z="19313274"/>
+    <position x="-65206300" y="8192000" z="28678750"/>
     <focus x="-65206300" y="8192000" z="0"/>
-    <up x="0" y="707106" z="707106"/>
+    <up x="0" y="1000000" z="0"/>
    </camera>
   </WINDOW>
+  <WINDOW type="default" module="DXP"/>
  </FRAME>
  <MODULE name="ARES">
   <editor metric="1" gridmajor="10000000" mode="00000000" zoom="-1" scale="89" flipped="0" gridminor="250000" gridmode="16" snapidx="3" snap="250000" xcursor="0" orgmode="0" snaprange="142696">
@@ -31,17 +32,10 @@
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
- <MODULE name="GVIEW">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="95" flipped="0" gridminor="254000" gridmode="0" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="133684">
-   <world y1="-2092959" x1="-69919000" y2="19164000" x2="-60465000"/>
-   <centre x="-65193250" y="8531690"/>
-   <origin x="0" y="0"/>
-  </editor>
- </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="25400000" mode="00000000" zoom="0" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="1" snap="127000" xcursor="0" orgmode="0" snaprange="215254">
-   <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>
-   <centre x="0" y="0"/>
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="261" flipped="0" gridminor="127000" gridmode="0" snapidx="1" snap="127000" xcursor="0" orgmode="0" snaprange="63500">
+   <world y1="-40640000" x1="-55880000" y2="40640000" x2="55880000"/>
+   <centre x="3048000" y="37015737"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>

@@ -4758,3 +4758,11 @@ All layouts now use V3.1
 		With VIA1 VIA2 etc
 		And all layers with power planes as fill
 			Placed and routed OK with placement keepout areas.
+
+
+
+
+* To use the older backplane with fewer slots, will need a bridge board like the daughter board on the new user port interface...
+	But for both connectors. Sian.
+	BackplaneBridge.pdsprj
+		>> Has the option of being routed without the debug headers in the middle resulting in a much cleaner route.

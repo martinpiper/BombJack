@@ -1,11 +1,5 @@
 * TODO:
 
-* To use the older backplane with fewer slots, will need a bridge board like the daughter board on the new user port interface...
-	But for both connectors. Sian.
-
-
-
-
 * APU wait for H position, with pixel exact timing in a raster bar to generate a smooth curve like that on the first frame of "!TestData_DebugPixelTiming.txt", needs to be tested on hardware, simulation, and in emulation
 	Produce a demo that shows the effect in emulation, then run on hardware and simulation
 
