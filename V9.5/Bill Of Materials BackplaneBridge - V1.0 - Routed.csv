@@ -1,0 +1,8 @@
+Category,Quantity,References,Value,Stock Code,Description,Group Layer,PCB Package,Supplier,Placed
+Capacitors,2,"C1,C2",EEUFR1E471YB,https://www.mouser.sg/ProductDetail/Panasonic/EEU-FR1E471YB?qs=n1SRcuzDZT1JwIghP%252BP6vA%3D%3D,FR-A_,Backplane,CAPPRD500W60D800H1500,,Top Copper
+Miscellaneous,1,EXPANSIONBUSA1,CONN-DIL34,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929852-01-17-30?qs=sGAEpiMZZMs%252BGHln7q6pm0R%252BIqgWC%252BQxCIlq0Hg83cE%3D,0.1in pitch DIL connector strip,Backplane,CONN-DIL34,,Not placed
+Miscellaneous,1,EXPANSIONBUSB1,CONN-DIL8,https://www.mouser.sg/ProductDetail/Mill-Max/803-47-008-10-001000?qs=sGAEpiMZZMvlX3nhDDO4AEvDUxDP%2FxEU0g06CSv%2FFqg%3D,0.1in pitch DIL connector strip,Backplane,CONN-DIL8,,Not placed
+Miscellaneous,1,EXPANSIONBUSC1,CONN-SIL2,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-02-10?qs=sGAEpiMZZMs%252BGHln7q6pm6DQXoV0bF8fKj%2FScW6NT6k%3D,0.1in pitch SIL connector strip,Backplane,CONN-SIL2,,Not placed
+Miscellaneous,2,"EXPANSIONBUSPS1,EXPANSIONBUSPS2",09021642922,https://www.mouser.sg/ProductDetail/HARTING/09021642922?qs=UV5Tb6pF94XZhGR3hSRdEQ%3D%3D,"DIN 41612 Connectors DIN-SIGNAL B064MS-3,0C1-1",,09021642922,,Bottom Copper
+Miscellaneous,2,"ROWCOL1,VIDEO1",CONN-DIL20,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/929850-01-20-10?qs=sGAEpiMZZMs%252BGHln7q6pmwu5ra4CY41iGmTOHot%252BMls%3D,0.1in pitch DIL connector strip,Backplane,CONN-DIL20,,Not placed
+Miscellaneous,2,"VIDEOP1,VIDEOP2",09021642922,,"DIN 41612 Connectors DIN-SIGNAL B064MS-3,0C1-1",Video,09021642922,,Bottom Copper
