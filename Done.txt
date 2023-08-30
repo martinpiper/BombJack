@@ -4766,3 +4766,12 @@ All layouts now use V3.1
 	But for both connectors. Sian.
 	BackplaneBridge.pdsprj
 		>> Has the option of being routed without the debug headers in the middle resulting in a much cleaner route.
+
+
+
+
+* APU wait for H position, with pixel exact timing in a raster bar to generate a smooth curve like that on the first frame of "!TestData_DebugPixelTiming.txt", needs to be tested on hardware, simulation, and in emulation
+	Produce a demo that shows the effect in emulation, then run on hardware and simulation
+	main12.a look for disabled "; APU demo test..."
+		The precise timing does work
+		Don't forget, the vector layer uses the same default memory map as the APU, so APU shouldn't really be on with vector screens updating

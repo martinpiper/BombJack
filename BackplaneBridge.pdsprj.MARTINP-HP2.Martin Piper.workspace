@@ -25,13 +25,6 @@
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
- <MODULE name="GVIEW">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="100" flipped="0" gridminor="254000" gridmode="0" snapidx="3" snap="127000" xcursor="0" orgmode="0" snaprange="127000">
-   <world y1="-14411960" x1="-2798960" y2="5775959" x2="5267960"/>
-   <centre x="1234500" y="-4318000"/>
-   <origin x="0" y="0"/>
-  </editor>
- </MODULE>
  <MODULE name="ISIS">
   <editor metric="0" gridmajor="25400000" mode="00000000" zoom="0" scale="59" flipped="0" gridminor="508000" gridmode="0" snapidx="1" snap="127000" xcursor="0" orgmode="0" snaprange="215254">
    <world y1="-19050000" x1="-26670000" y2="19050000" x2="26670000"/>

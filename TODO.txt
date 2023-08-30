@@ -1,10 +1,5 @@
 * TODO:
 
-* APU wait for H position, with pixel exact timing in a raster bar to generate a smooth curve like that on the first frame of "!TestData_DebugPixelTiming.txt", needs to be tested on hardware, simulation, and in emulation
-	Produce a demo that shows the effect in emulation, then run on hardware and simulation
-
-
-
 * Merge layer:
 	Control layer visibility passed to the relevant input pixel header using a combination of layer enable (VLAYEREN1) and visible bit enable
 		kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
