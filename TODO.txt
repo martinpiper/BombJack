@@ -1,72 +1,10 @@
 * TODO:
 
-* Merge layer:
-	Control layer visibility passed to the relevant input pixel header using a combination of layer enable (VLAYEREN1) and visible bit enable
-		kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
-		kBus24Bit_MergeLayer_Register_Control_Visible_1		= %1000000
-			COMBRA5
-			COMBRA6
-	Also xor control for dither to change the pattern to the opposite phase
-		kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %10000000
-			COMBRA7
-		In emulation: if (enableDither && ((displayH ^ displayV) & 0x01) == 0x00) {
-		>> During simulation debugging, this dither pattern wasn't correct: COMBRA7
-			It turns out the extra 74LS86 is finally pushing the pixel path timing over...
-			Recalling this thread: https://support.labcenter.com/forums/viewtopic.php?p=25675&hilit=TDZLOQ#p25675
-			It mentions TDZLOQ, searching the C:\ProgramData\Labcenter Electronics\Proteus 8 Professional files for TDZLOQ
-			Found: C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\MODELS\DIGITAL.LML
-				Searching for 74LS86 found:
-					74LS86 : TDLHIH=20n, TDHLIH=13n, TDLHIL=12n, TDHLIL=10n, OCOPS=[NULL], INVERT=[NULL]
-			Doing edit properties on the part (Ctrl+E)
-				Adding:
-					TDLHIH=1n
-					TDHLIH=1n
-					TDLHIL=1n
-					TDHLIL=1n
-			Fixed the dithering output issue, confirming it is a pixel path timing issue
-		A better fix might be to latch the incoming pixel values?
-			This will shift the screen output one pixel to the right...
-			>> This fixes the issue very well
-	Also "force first or second input to be used" bits, to ignore transparency test result. Would allow one input to use dithering.
-		kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
-			COMBRA3
-		kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
-			COMBRA4
-			a			b			c
-			COMBRA3		COMBRA4		in_choice	choice
-			0			0			0			0
-			0			0			1			1
-			0			1			0			1
-			0			1			1			1
-			1			0			0			0
-			1			0			1			0
-			>> This illegal indeterminate state and constant 1 output simplifies the logic
-			1			1			0			1
-			1			1			1			1
-			= ( NOT a AND c) OR b
-	* Done: Update the layer enable connections to allow the simulation to use the calculated enable flag using the merge layer visibility/enable control
-	* Done: Simulation done. Emulation will need to be brought up to date.
-		Construct a new test using the default simulation setup to test the simulation and emulation behaviour
-		Probably use the assets from existing demos
-		Use its output in the simulation to validate the output with emulation
-		>> Needs lots of pixel alignment checks between simulation and emulation
-		* Double check with the emulation just the scaled sprite output using @TC-14 without the merge layer logic active...
-			With merging active, some of the leading edges and trailing edges of pixels appear squashed with the merge active? Is it apparent without the merge layer?
-				Tip of the scaled sprite gun. Also the join between the T in TAG and the mode7 cloud has a transparent pixel where it should be cloud
-			>> Without merge layer and connecting scaled sprites and mode7 directly to layers, there are no leading edge issues.
-				The tip of the gun has correct 2x2 pixels, instead of the previously observed 1x2 pixels block.
-				The mode7 cloud is also fine.
-			>> BombJack Combiner V9.0 (assembled) does not have the scaled sprite 2x1 issue.
-				However the right hand edge of the T in TAG and the cloud do show the same transparent pixel issue, where there shouldn't be one.
-				>> Hmm, using a single latch might be better than an input pixel latch?
-					Yes seems to be working *much* better
-	>> Emulation is now pixel perfect with simulation
-	* Done: Add automated simulation run and screenshot comparisons with emulation output tests
-	* Done: Tidy package allocations
-	* Done: Test simulation with @demo6 data instructions will need updating to disconnect the merge layer and connect/enable the pixel outputs
-		See: * For APU validation when running @Demo6:
-			In: C:\work\c64\VideoHardware\Done.txt
-
+* UserPort20To32Bit1.pdsprj
+	At the moment the pass-through PA2 (PTPA2) is coming from a latch. This is because PS2 is used to select the upper bank of 8 latches, 16 in total.
+	Think... In pass-through mode, how long does it take to toggle this PTPA2 register compared to the previous user port design?
+		Is there a better way to just properly pass-through PA2?	
+	
 	
 
 
