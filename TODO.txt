@@ -1,5 +1,11 @@
 * TODO:
 
+* UserPort20To32Bit1.pdsprj need to make sure that the external user port can be setup with the usual PA2 clear and external writes, then...
+	... and then write DMA from internal memory to external without any interruption of external PA2 toggling.
+	
+
+
+
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
