@@ -35,10 +35,10 @@ d$08010003
 d$08000003
 d$08010003
 
-; Set latch7 - Disable pass-through
-d$07010004
-d$07000002
-d$07010002
+; Set latch7 - Disabled mode, ($03)
+d$07010003
+d$07000003
+d$07010003
 
 ; Set adders
 d$08010018
@@ -153,6 +153,7 @@ d$07010000
 ; Latch 7 bits
 ; $01	Choose RAM
 ; $02	Pass-through disable
+; $03	Disabled, low data, high PA2 high _PC
 ; $04	Internal PA2
 
 
