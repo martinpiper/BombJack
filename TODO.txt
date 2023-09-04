@@ -1,13 +1,5 @@
 * TODO:
 
-* UserPort20To32Bit1.pdsprj
-	At the moment the pass-through PA2 (PTPA2) is coming from a latch. This is because PS2 is used to select the upper bank of 8 latches, 16 in total.
-	Think... In pass-through mode, how long does it take to toggle this PTPA2 register compared to the previous user port design?
-		Is there a better way to just properly pass-through PA2?	
-	
-	
-
-
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?

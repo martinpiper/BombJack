@@ -14,6 +14,27 @@ d$00010003
 d$00010004
 
 ; After power-on reset
+; Default is pass-through mode, these inputs should be seen at the output, as long as latch7 isn't altered
+d$08010000
+d$08010001
+d$00010002
+d$00010003
+
+d$08010000
+d$08010001
+d$08000001
+d$08010001
+
+d$08010001
+d$08010002
+d$08000002
+d$08010002
+
+d$08010002
+d$08010003
+d$08000003
+d$08010003
+
 ; Set latch7 - Disable pass-through
 d$07010004
 d$07000002
@@ -129,17 +150,27 @@ d$07010000
 d$07000000
 d$07010000
 
+; Latch 7 bits
+; $01	Choose RAM
+; $02	Pass-through disable
+; $04	Internal PA2
+
+
 ; PA2 toggle twice
-; Note: Latch7 controls pass-through PA2
-d$07000004
-d$07010004
-d$07000000
-d$07010000
-d$07000004
-d$07010004
-d$07000000
-d$07010000
-; Write some direct bytes
+; Note: Latch7 controls internal PA2
+d$07000006
+d$07010006
+d$07000002
+d$07010002
+d$07000006
+d$07010006
+d$07000002
+d$07010002
+
+; Break
+;d$80000000
+
+; Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
 d$04010011
 d$04000011
 d$04010022

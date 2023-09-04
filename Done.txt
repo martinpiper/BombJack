@@ -4851,3 +4851,14 @@ All layouts now use V3.1
 
 * Update the large EEU-FR1E471YB caps with proper package/footprint
 	Should be "CAPPRD350W65D800H1650 POS/NEG" not CAPPRD500W60D800H1500
+
+
+
+
+* UserPort20To32Bit1.pdsprj
+	At the moment the pass-through PA2 (PTPA2) is coming from a latch. This is because PS2 is used to select the upper bank of 8 latches, 16 in total.
+	Think... In pass-through mode, how long does it take to toggle this PTPA2 register compared to the previous user port design?
+		Is there a better way to just properly pass-through PA2?
+		> Perhaps while the control register is all zero, including the pass-through signal, then this does a real pass-through
+		It would still have to simultaneously update the control registers with the correct signal combinations when there is a write.
+		PA2 reflected to PTPA2 now, when control reg lower two bits = %00
