@@ -2,7 +2,6 @@
 
 * UserPort20To32Bit1.pdsprj need to make sure that the external user port can be setup with the usual PA2 clear and external writes, then...
 	... and then write DMA from internal memory to external without any interruption of external PA2 toggling.
-	
 
 
 
