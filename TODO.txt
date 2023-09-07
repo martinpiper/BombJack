@@ -5,6 +5,21 @@
 
 
 
+* Currently the address logic is to use the address lines directly, since the EBBS register is 8 bits this gives a maximum of 8 possible address high activations for data.
+	> While this allows simultaneous writes to two address at once, by having more than one high bit in the address, this functionality isn't really used. Also it does limit the destination hardware addressing options.
+	> If, for example, I want to have two or three character layers, plus vectors, plus APU, plus audio, then the addressing options quickly gets exhausted.
+	* Instead, decode the address properly, giving a theoretical 256 addresses for hardware data destinations
+		An easier expansion would be to decode 16/32 addresses, 4/5 bits.
+		A few 74LS138 would do this (root sheet 1 Bombjack schematic)
+		The existing boards use a 8 bit DIP switch (e.g. DSW1) output to SPEBS4
+			>> If these are set to all off, then the output (SPEBS4) can be connected (bodged) to the address decoder output
+			>> A better design would be have on each board a couple of 74LS138 with the dip switch selecting the address
+				Or perhaps use a SN74LS682NSR with suitable DIP switch to GND pull down for the whole 8 bits equality check? Which uses a SOIC127P780X200-20N
+					https://www.mouser.sg/c/semiconductors/logic-ics/logic-comparators/?q=74ls682&comparator%20type=Magnitude&mounting%20style=SMD%2FSMT
+				Or perhaps a SN74LS688DWR or SN74LS682NSR or SN74LS688NSR
+
+
+
 * Video layer seems to be responsible for some output pixel wobble and some every 8 pixel artefacts?
 	Test it with just sprites2 which isn't locked to the H/V counters and see if the problem persists
 	Also try capturing logic analyser output of the pixel headers before the resistors to check for a stable vertical line pattern with consistent timing?
