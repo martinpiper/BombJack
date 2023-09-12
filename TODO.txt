@@ -640,3 +640,9 @@
 	Or maybe the latch needs more decoupling capacitor support?
 	Check the original schematic for output latching, check for any extra filtering?
 
+
+
+
+* Sprites2: Currently if the last sprite register isn't cleared, then the hardware will loop around drawing the same things again until the end of the scanline
+	Ideally if the address reaches S2SPRIA6 (which isn't connected to the RAM address) then it should signal a reset of the logic like the normal line end condition
+	> Emulation advanceSprite() would need updating

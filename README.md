@@ -315,6 +315,9 @@ As per the original design all writes to the video hardware should be carefully 
 
 The original hardware has been expanded to include RAMs where the ROMs were located. These are addressed by an combination of EXPANSIONBUS3 to select the groups of RAMs and the EXPANSIONBUS group selector. It is entirely possible to write more than one group at a time by enabling multiple output bits in EXPANSIONBUS3.
 
+For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps of $800
+
+
    | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
    |---------------|-------------------------------|----------------------|-----------------------------------------|
    | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
