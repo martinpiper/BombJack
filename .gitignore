@@ -35,3 +35,4 @@ SimpleCPU.sts
 *.sts
 PiJack2/smp.raw
 PiJack2/binaryData.bin
+*.workspace
