@@ -128,6 +128,36 @@ Video_SetAddressPalette
 	sta CIA2PortBRS232
 	rts
 
+; Clears colout 0 in all palettes to the same input colour
+; Entry:
+; A/X = RGB 2 bytes
+Video_PalettesColour0ClearTo
+	sta .smPE1+1
+	stx .smPE2+1
+	lda #<kBus24Bit_VideoLayer_Palette
+	sta .smAddrP1+1
+	lda #>kBus24Bit_VideoLayer_Palette
+	sta .smAddrP2+1
+	ldx #16
+.spl1
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_VideoLayer_EBBS
+	sta CIA2PortBRS232
+.smAddrP1	lda #0
+	sta CIA2PortBRS232
+.smAddrP2	lda #0
+	sta CIA2PortBRS232
+.smPE1	lda #0
+	sta CIA2PortBRS232
+.smPE2	lda #0
+	sta CIA2PortBRS232
+	+MAddU8ToAddr16 16*2 , .smAddrP1+1 , .smAddrP2+1
+	dex
+	bne .spl1
+
+	rts
+
+
 
 Video_SetAddressSprites
 	jsr Bus24Bit_Reset

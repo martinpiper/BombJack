@@ -19,7 +19,8 @@
 
 kBus24Bit_VideoLayer_EBBS			= $01
 kBus24Bit_VideoLayer_Control		= $9e00
-kVideo_EnableDisplay_Use_BGColour			= $10
+kVideo_EnableDisplay_Use_BGColour			= $10	; Deliberately the same. An alias.
+kVideo_EnableDisplay_Use_BackgroundColour	= $10	; Deliberately the same. An alias.
 kVideo_EnableDisplay_Enable					= $20
 kVideo_EnableDisplay_Unused1				= $40
 kVideo_EnableDisplay_Unused2				= $80
