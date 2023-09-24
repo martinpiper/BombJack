@@ -1,15 +1,5 @@
 * TODO:
 
-* Double check that the last layer, without background transparency enabled, can display the full 16 colours from all 16 palettes.
-	Create a palette and create the blocks?
-	Or convert a suitable image? Colour wheel?
-		>> "C:\Users\marti\Pictures\ColourWheel1.png"
-
-
-
-
-
-
 * UserPort20To32Bit1.pdsprj need to make sure that the external user port can be setup with the usual PA2 clear and external writes, then...
 	... and then write DMA from internal memory to external without any interruption of external PA2 toggling.
 
