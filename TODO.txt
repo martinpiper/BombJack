@@ -17,6 +17,7 @@
 				Or perhaps use a comparator SN74LS682NSR with suitable DIP switch to GND pull down for the whole 8 bits equality check? Which uses a SOIC127P780X200-20N
 					https://www.mouser.sg/c/semiconductors/logic-ics/logic-comparators/?q=74ls682&comparator%20type=Magnitude&mounting%20style=SMD%2FSMT
 				Or perhaps a SN74LS688DWR or SN74LS682NSR or SN74LS688NSR
+			>> SN74LS682NSR has 20K ohm on the Q inputs, which would be very useful for connecting to active low dip switches...
 		>> Perhaps using the same INRAMSEL1 part for the edge connector. Both active low and active high outputs, labelled as such
 			Could copy out the combiner board, plus the comparator, plus not gates
 			Could also test in in place in the main schematic.
