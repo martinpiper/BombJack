@@ -1,5 +1,5 @@
 ; This tests the tile screen disable followed by rapid background colour changes on the mode7 screen
-d$9e000120	; Disable the tile screen
+d$9e0a010b	; Disable the tile screen
 d0
 ; wait for X/Y pos in DigitalData
 w$ff01ff00,$40008000
@@ -71,4 +71,7 @@ d$a01401f7
 
 
 d$a01401fe
+d$0
+
+d$9e0a010f	; Enable all layers again
 d$0

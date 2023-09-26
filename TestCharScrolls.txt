@@ -353,3 +353,10 @@ d$90020101
 d$0
 
 
+
+; Ensure the display is on and all layers visible
+^-$01
+d$0
+d$9e000120
+d$9e0a010f
+d$0

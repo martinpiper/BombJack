@@ -786,6 +786,7 @@ d$0
 
 !TestData_Combinator.txt
 
+d$9e0801e4
 
 ; Test overscan information being updated mid-frame
 d$0
@@ -843,7 +844,7 @@ d$0
 d$0
 
 
-;!TestMode7Registers.txt
+!TestMode7Registers.txt
 
 
 ; Wait for _VBLANK and shrink bottom border

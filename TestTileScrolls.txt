@@ -1,7 +1,7 @@
-; Disable sprites, chars, mode7
+; Just enable tiles
 d$9e0a0104
-; Ensure tiles enabled
-d$9e000130
+; Ensure display enabled
+d$9e000120
 
 d$0
 ^-$01
@@ -38,7 +38,6 @@ d$0
 ; Very quick sub-tile scroll test
 ^-$01
 d$0
-d$9e0001f2
 d$9e010108
 d$9e020100
 d$9e030100
@@ -61,8 +60,10 @@ d$0
 d$0
 d$9e010108
 d$0
-; Tile screen disable
+
+; Ensure the display is on and all layers visible
 ^-$01
 d$0
 d$9e000120
+d$9e0a010f
 d$0

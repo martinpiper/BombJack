@@ -1,23 +1,29 @@
+d$9e0a0101	; Only enable sprites
+
 ; Tests writing to the sprite registers during the off-screen time
 d$0
-w$ff01ff00,$55018000
+w$ff01ff00,$55016000
 d$98430110
 d$0
-w$ff01ff00,$56018000
+w$ff01ff00,$56016000
 d$98430120
 d$0
-w$ff01ff00,$57018000
+w$ff01ff00,$57016000
 d$98430130
 d$0
-w$ff01ff00,$58018000
+w$ff01ff00,$58016000
 d$98430140
 d$0
-w$ff01ff00,$59018000
+w$ff01ff00,$59016000
 d$98430150
 d$0
-w$ff01ff00,$5a018000
+w$ff01ff00,$5a016000
 d$98430160
 d$0
-w$ff01ff00,$5b018000
+w$ff01ff00,$5b016000
 d$98430170
 d$0
+
+d$9e0a010f	; Enable all layers
+d$0
+
