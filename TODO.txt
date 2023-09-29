@@ -1,5 +1,18 @@
 * TODO:
 
+* Mode7 as SMT board change notes:
+	>> Adjust board edge: width: 140.456mm
+	Technology->Apply technology data from template:
+		Template file: Eight layers.ltf
+	Then create any missing power planes but keep the signal settings unchanged
+	~117 missing...
+	>> Add some narrow paths around RAM chips
+	* Needs more spacing...
+	
+
+
+
+
 * UserPort20To32Bit1.pdsprj need to make sure that the external user port can be setup with the usual PA2 clear and external writes, then...
 	... and then write DMA from internal memory to external without any interruption of external PA2 toggling.
 
