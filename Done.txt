@@ -4862,3 +4862,16 @@ All layouts now use V3.1
 		> Perhaps while the control register is all zero, including the pass-through signal, then this does a real pass-through
 		It would still have to simultaneously update the control registers with the correct signal combinations when there is a write.
 		PA2 reflected to PTPA2 now, when control reg lower two bits = %00
+
+
+
+
+* Mode7 as SMT board change notes:
+	>> Adjust board edge: width: 164.736mm
+	Technology->Apply technology data from template:
+		Template file: Eight layers.ltf
+	Then create any missing power planes but keep the signal settings unchanged
+	~117 missing...
+	>> Add some narrow paths around RAM chips
+	* Needs more spacing...
+	>> V9.5\Mode7 - Routed - SMT.pdsprj : released

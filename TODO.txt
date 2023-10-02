@@ -1,18 +1,5 @@
 * TODO:
 
-* Mode7 as SMT board change notes:
-	>> Adjust board edge: width: 164.736mm
-	Technology->Apply technology data from template:
-		Template file: Eight layers.ltf
-	Then create any missing power planes but keep the signal settings unchanged
-	~117 missing...
-	>> Add some narrow paths around RAM chips
-	* Needs more spacing...
-
-
-
-
-
 * Would it be possible to automate the creation of schematic components, like AND/OR/NOT/NAND, and connect their pins?
 
 
