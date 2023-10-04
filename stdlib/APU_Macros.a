@@ -156,14 +156,14 @@ kAPU_InstructionSize	= 4
 	+MAPU kAPU_ExternalMEWR
 	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 	+MAPU kAPU_ExternalMEWR
-	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
 }
 
 !macro MAPU_ProcessWordB2 {
 	+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
 	+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
 	+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
-	+MAPU kAPU_Incr_ADDRB2
+	+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
 }
 
 !macro MAPU_ProcessRasterWord {
