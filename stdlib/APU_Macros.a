@@ -2,7 +2,7 @@
 ; Any Load is timed to pulse low on the PCINCR (cycle 5)
 ; Any MEWR is timed to pulse low on the PCINCR (cycle 6+0/1)
 ; Any Incr is timed at cycle 6+3, which means 3 cycles into the *next* instruction if active in the previous instruction. Effectively after any Load or MEWR pulses. This only happens if the instructions successfully transitions.
-; Note Incr is not a pulse, like Load or MEWR, it has to be an edge transition to the next instruction. This means the Incr only happens when the next instruction does not have Incr.
+; Note Incr is not a pulse, unlike Load or MEWR, it has to be an edge transition to the next instruction. This means the Incr only happens when the next instruction does not have Incr.
 kAPU_Reset_ADDRB1		= %00000000000000000000000000000001
 kAPU_Reset_PC			= %00000000000000000000000000000010
 kAPU_InternalMEWR		= %00000000000000000000000000000100
@@ -120,6 +120,11 @@ kAPU_InstructionSize	= 4
 	+MAPU kAPU_Incr_ADDRB1
 }
 
+!macro MAPU_LoadEBS2FromB1 {
+	+MAPU kAPU_Load_EBS2
+	+MAPU kAPU_Incr_ADDRB1
+}
+
 !macro MAPU_LoadEADDR2FromB1 {
 	+MAPU kAPU_Load_EADDR2Lo
 	+MAPU kAPU_Incr_ADDRB1
@@ -162,6 +167,16 @@ kAPU_InstructionSize	= 4
 !macro MAPU_ProcessWordB2 {
 	+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
 	+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
+	+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
+}
+
+!macro MAPU_ProcessByteB1 {
+	+MAPU kAPU_ExternalMEWR
+	+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+}
+
+!macro MAPU_ProcessByteB2 {
 	+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
 	+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
 }
