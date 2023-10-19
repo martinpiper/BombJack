@@ -140,13 +140,18 @@ kBus24Bit_TileScreenPlanes_3		= $0000
 kBus24Bit_Mode7Screen_EBBS			= $01
 kBus24Bit_Mode7Screen_Registers		= $a000
 
+kBus24Bit_Mode7ScreenPlanes_EBBS	= $08
+kBus24Bit_Mode7ScreenMap			= $2000
+kBus24Bit_Mode7ScreenPlanes_0		= $4000
+kBus24Bit_Mode7ScreenPlanes_1		= $8000
+
 
 kBus24Bit_VectorsScreen_EBBS		= $01
 kBus24Bit_VectorsScreen_Registers	= $a100
-kBus24Bit_VectorsScreen_Bank0_EBBS		= $02
-kBus24Bit_VectorsScreen_Bank0_Plane		= $0000
-kBus24Bit_VectorsScreen_Bank1_EBBS		= $02
-kBus24Bit_VectorsScreen_Bank1_Plane		= $8000
+kBus24Bit_VectorsScreen_Bank0_EBBS	= $02
+kBus24Bit_VectorsScreen_Bank0_Plane	= $0000
+kBus24Bit_VectorsScreen_Bank1_EBBS	= $02
+kBus24Bit_VectorsScreen_Bank1_Plane	= $8000
 
 kBus24Bit_VectorsScreen_Control_Kill	= %10000000
 
