@@ -23,7 +23,7 @@ kVideo_EnableDisplay_Use_BGColour			= $10	; Deliberately the same. An alias.
 kVideo_EnableDisplay_Use_BackgroundColour	= $10	; Deliberately the same. An alias.
 kVideo_EnableDisplay_Enable					= $20
 kVideo_EnableDisplay_Unused1				= $40
-kVideo_EnableDisplay_Unused2				= $80
+kVideo_EnableDisplay_BorderShrinkY			= $80
 kBus24Bit_VideoLayer_Priority		= $9e08
 kBus24Bit_VideoLayer_Priority_Default		= %11100100
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
