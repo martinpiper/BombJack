@@ -31,6 +31,8 @@
 		>> Before changes, run simulation for comparison images. Up to frame 50 should be OK.
 			Then make changes, run simulation for comparison, should be no differences since the test data uses correct addressing
 		* Oh, 74LS682 model is missing: https://support.labcenter.com/forums/viewtopic.php?t=8478
+			Model added in this version: https://support.labcenter.com/forums/viewtopic.php?t=8491
+			
 		
 
 			
