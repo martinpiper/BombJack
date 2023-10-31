@@ -40,9 +40,22 @@
 			S1POS1H S1POS2H S1POS4H etc
 		* _MDL _CDL _VPL will need new versions for the higher clocked sprites
 			Prefix with S1
-		
+		* Also SLOAD _SLOAD need S1 prefixes
+		** These new signals will need to be removed from the video generation layer and removed from the backplane really
+			None of the other layers use them as they all have independant scroll values
+		>> First pass works
+			> Notable changes are that output scanlines are shifted to the right by one pixel. Probably due to the delayed start of S1_LINESTART
+				> Using VID_LINESTART for the new counter fixes that pixel shift
+					>> But at higher clocks the start of the line is unstable... which caused lines of the sprites to be dislocated
+					>> This indicates the scan output reset is unstable, probably a split clock with the higher speed clock?
+			> There are scanline RAM logic contentions
 
-			
+
+
+
+* S2_LINESTART uses a NOT for S2LINESTART but it could probably use the NOT output from the 74175 instead?
+
+		
 
 
 
