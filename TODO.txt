@@ -48,6 +48,15 @@
 				> Using VID_LINESTART for the new counter fixes that pixel shift
 					>> But at higher clocks the start of the line is unstable... which caused lines of the sprites to be dislocated
 					>> This indicates the scan output reset is unstable, probably a split clock with the higher speed clock?
+						Sprites2 used S2_LONGLINESTART, perhaps try something similar?
+					>> The signal should not depend on any higher speed signals, like _CONTRLDA/B
+						>> S1_LONGLINESTART to reset the scanline counters was very stable but resulted in sprite positions being shifted 6 pixels to the left
+							But VID_LINESTART resulted in 8 pixels shift, which is even worse!
+							Use S1_LONGLINESTART
+							>> With the higher clock rate (14.31818M) it renders the last sprite completely, not just its left hand 8 pixels edge.
+
+			> Some rubbish data on the far left edge, probably need to clear the shifters...
+					
 			> There are scanline RAM logic contentions
 
 

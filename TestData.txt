@@ -602,6 +602,13 @@ b$25,b$14,b$b0,b$38
 b$26,b$14,b$90,b$40
 b$27,b$14,b$70,b$48
 
+; Extra sprites beyond the 24... Displayed at higher clock speeds.
+b$10,b$03,b$50,b$00
+b$11,b$03,b$40,b$08
+b$12,b$03,b$30,b$10
+b$13,b$03,b$20,b$18		; Half width
+
+
 
 
 ;; Spread out all over the screen
