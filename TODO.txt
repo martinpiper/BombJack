@@ -32,7 +32,7 @@
 			Then make changes, run simulation for comparison, should be no differences since the test data uses correct addressing
 		* Oh, 74LS682 model is missing: https://support.labcenter.com/forums/viewtopic.php?t=8478
 			Model added in this version: https://support.labcenter.com/forums/viewtopic.php?t=8491
-	> Perhaps a good test would be to make the normal sprites board use a faster internal clock (like the scales sprites)? And add the comparator at the same time?
+	> Perhaps a good test would be to make the normal sprites board use a faster internal clock (like the scaled sprites2 layer)? And add the comparator at the same time?
 		This would also allow extra normal sprites, plus test the updated digital logic for the scanline update instead of using the analog pullup resistors method.
 		
 
