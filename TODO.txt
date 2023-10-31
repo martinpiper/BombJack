@@ -34,6 +34,12 @@
 			Model added in this version: https://support.labcenter.com/forums/viewtopic.php?t=8491
 	> Perhaps a good test would be to make the normal sprites board use a faster internal clock (like the scaled sprites2 layer)? And add the comparator at the same time?
 		This would also allow extra normal sprites, plus test the updated digital logic for the scanline update instead of using the analog pullup resistors method.
+		* There is also scope for any sprite that fails the Y extent test to cause the next sprite to be rendered quicker. (Again like the scaled sprites).
+			But this would require some reorganisation of the load timing signals...
+		* 1H 2H 4H etc will need new faster counting S1POS prefixed versions
+			S1POS1H S1POS2H S1POS4H etc
+		* _MDL _CDL _VPL will need new versions for the higher clocked sprites
+			Prefix with S1
 		
 
 			
