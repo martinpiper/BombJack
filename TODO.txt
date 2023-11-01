@@ -54,8 +54,9 @@
 							But VID_LINESTART resulted in 8 pixels shift, which is even worse!
 							Use S1_LONGLINESTART
 							>> With the higher clock rate (14.31818M) it renders the last sprite completely, not just its left hand 8 pixels edge.
+			> 16MHz looks good https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-160?qs=GxOUx7aO6nxPyxaB%252BrVtIQ%3D%3D
 
-			> Some rubbish data on the far left edge, probably need to clear the shifters...
+			> Some rubbish data on the far left edge, probably need to clear the shifters...? Hidden by the border though
 					
 			> There are scanline RAM logic contentions
 

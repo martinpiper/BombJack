@@ -606,7 +606,12 @@ b$27,b$14,b$70,b$48
 b$10,b$03,b$50,b$00
 b$11,b$03,b$40,b$08
 b$12,b$03,b$30,b$10
-b$13,b$03,b$20,b$18		; Half width
+b$13,b$03,b$20,b$18		; Half width @ 14.31818MHz
+
+b$14,b$02,b$50,b$20
+b$15,b$02,b$40,b$28
+b$16,b$02,b$30,b$30		; Displayed at 16MHz
+b$17,b$02,b$20,b$38		; Not displayed, corrupt pixels on the left screen edge
 
 
 
