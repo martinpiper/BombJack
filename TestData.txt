@@ -476,6 +476,8 @@ s$80008000
 ;b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20
 
 
+!TestData_DebugSprites.txt
+
 
 ; Start and end (exclusive) of double size 32x32 sprite index
 s$9a000100
@@ -484,8 +486,6 @@ b$04,b$08
 
 ; Write sprite register data into RAM mapped at $9800 with EBS $01
 s$98000100
-; Hires mode sprite registers start at $9840
-;s$98400100
 
 
 ; Byte ordering

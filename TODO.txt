@@ -1,5 +1,10 @@
 * TODO:
 
+* Add sheet identifiers, probably in very large text
+
+
+
+
 * Would it be possible to automate the creation of schematic components, like AND/OR/NOT/NAND, and connect their pins?
 
 
@@ -59,6 +64,9 @@
 			> Some rubbish data on the far left edge, probably need to clear the shifters...? Hidden by the border though
 					
 			> There are scanline RAM logic contentions
+				Not every line, about every 8 lines or so. Mostly at the start of the line when RH=0 or RH=1
+	>> Added 74LS682 for EBS comparison. Note the DIP switch is now to ground, so it's inversed.
+		> TestData_DebugSprites.txt updated to test frame movement into side borders
 
 
 
