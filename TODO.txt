@@ -60,6 +60,7 @@
 							Use S1_LONGLINESTART
 							>> With the higher clock rate (14.31818M) it renders the last sprite completely, not just its left hand 8 pixels edge.
 			> 16MHz looks good https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-160?qs=GxOUx7aO6nxPyxaB%252BrVtIQ%3D%3D
+				18MHz (the next clock rate) produces some sprite gaps and corruption
 
 			> Some rubbish data on the far left edge, probably need to clear the shifters...? Hidden by the border though
 					
@@ -67,6 +68,10 @@
 				Not every line, about every 8 lines or so. Mostly at the start of the line when RH=0 or RH=1
 	>> Added 74LS682 for EBS comparison. Note the DIP switch is now to ground, so it's inversed.
 		> TestData_DebugSprites.txt updated to test frame movement into side borders
+		
+	> Components set to Sprites group
+
+	* Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious oritentation and marking the switch options
 
 
 
