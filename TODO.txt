@@ -73,8 +73,10 @@
 	
 	> Done: Eight layers.LTF seems to be OK at this board size
 		GND top and bottom layers, alternate with VCC internally.
-
+		>> V9.5
+	
 	* Done: Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious orientation and marking the switch options
+
 
 
 
