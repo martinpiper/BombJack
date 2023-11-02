@@ -77,9 +77,15 @@
 	
 	* Done: Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious orientation and marking the switch options
 
-	* To fix the occasional contentions perhaps use two delay chains. One to delay the "do pixels" signal by 1 clock, so the scanline RAMs turn off during the long scan start.
+	* Done: To fix the occasional contentions perhaps use two delay chains. One to delay the "do pixels" signal by 1 clock, so the scanline RAMs turn off during the long scan start.
 		This should avoid clocks during this change over period and avoid the short clocks as well...
 		> Perhaps the input VID_LINESTART to U480 should be S1DELVID_LINESTART then S1_LONGLINESTART can be inverted and used for RAM _CE
+		> Logic analyser shows that S1_LONGLINESTART is not held low properly... It has a blip in the middle!!
+			That would certainly account for S1LONGLINESTART not controlling the outputs to the internal scanline buffer and activating at the wrong time.
+			>> This removes the logic contention during render.
+		> S1_LONGLINESTART can also be reduced in length by one 6MHz clock. No need to a longer delay chain.
+		
+	* Need to reduce Sprites components
 
 
 
