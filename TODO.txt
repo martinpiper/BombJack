@@ -1,5 +1,10 @@
 * TODO:
 
+* Sprites2: Would the FF outputs benefit from being off during the scanline flip transition at higher clock speeds? Like the Sprites transition.
+
+
+
+
 * Add sheet identifiers, probably in very large text
 
 
