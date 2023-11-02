@@ -79,6 +79,7 @@
 
 	* To fix the occasional contentions perhaps use two delay chains. One to delay the "do pixels" signal by 1 clock, so the scanline RAMs turn off during the long scan start.
 		This should avoid clocks during this change over period and avoid the short clocks as well...
+		> Perhaps the input VID_LINESTART to U480 should be S1DELVID_LINESTART then S1_LONGLINESTART can be inverted and used for RAM _CE
 
 
 
