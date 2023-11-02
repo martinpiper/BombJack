@@ -476,6 +476,8 @@ s$80008000
 ;b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20
 
 
+;!TestData_DebugSprites.txt
+
 
 ; Start and end (exclusive) of double size 32x32 sprite index
 s$9a000100
@@ -484,8 +486,6 @@ b$04,b$08
 
 ; Write sprite register data into RAM mapped at $9800 with EBS $01
 s$98000100
-; Hires mode sprite registers start at $9840
-;s$98400100
 
 
 ; Byte ordering
@@ -600,7 +600,19 @@ b$23,b$14,b$70,b$18
 b$24,b$14,b$d0,b$30
 b$25,b$14,b$b0,b$38
 b$26,b$14,b$90,b$40
-b$27,b$14,b$70,b$48
+b$24,b$14,b$70,b$48		; Half width at VIDCLK
+
+; Extra sprites beyond the 24... Displayed at higher clock speeds.
+b$10,b$03,b$50,b$10
+b$11,b$03,b$40,b$18
+b$12,b$03,b$30,b$20
+b$24,b$03,b$20,b$28		; Half width @ 14.31818MHz
+
+b$14,b$02,b$50,b$30
+b$15,b$02,b$40,b$38
+b$24,b$02,b$30,b$40		; Displayed at 16MHz
+b$24,b$02,b$20,b$48		; Not displayed, corrupt pixels on the left screen edge, single pixel on the left hand sprite edge
+
 
 
 

@@ -3293,7 +3293,8 @@ All layouts now use V3.1
 		NOTE: Sizes vary from DIL08 to DIL14
 		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format&sort=frequency
 		>> Selection of sizes:
-		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?frequency=2%20MHz%7C~4%20MHz%7C~8%20MHz%7C~10%20MHz~~14.31818%20MHz&operating%20supply%20voltage=5%20V&output%20format=CMOS~~CMOS%2C%20TTL%7C~TTL&product%20type=Clock%20Oscillators&termination%20style=Radial&instock=y&sort=frequency&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Output%20Format%7C~Frequency
+		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?output%20format=TTL&product%20type=Standard%20Oscillators&termination%20style=Radial&instock=y
+		
 		>> Specifically DIP-8:
 		https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?length=13.2%20mm&package%20%2F%20case=DIP-8&width=13.2%20mm&instock=y&sort=frequency
 	* At 14.2MHz the S2FRAME6HalfX/S2FRAME6HalfY signals arrive a little late which causes the first X pixel for the "quadrant" flipped sprite to be incorrect. Ignoring this the calculation is OK at 14.31818MHz, giving an extra 71 pixels of fill rate per scan line
