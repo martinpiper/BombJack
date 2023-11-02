@@ -85,7 +85,7 @@
 			>> This removes the logic contention during render.
 		> S1_LONGLINESTART can also be reduced in length by one 6MHz clock. No need to a longer delay chain.
 		
-	* Need to reduce Sprites components
+	* Done: Need to reduce Sprites components
 
 
 
