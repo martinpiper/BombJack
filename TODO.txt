@@ -69,9 +69,13 @@
 	>> Added 74LS682 for EBS comparison. Note the DIP switch is now to ground, so it's inversed.
 		> TestData_DebugSprites.txt updated to test frame movement into side borders
 		
-	> Components set to Sprites group
+	> Done: Components set to Sprites group
+	
+	> Done: Eight layers.LTF seems to be OK at this board size
+		GND top and bottom layers, alternate with VCC internally.
 
-	* Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious oritentation and marking the switch options
+	* Done: Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious orientation and marking the switch options
+
 
 
 
