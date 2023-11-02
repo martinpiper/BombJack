@@ -14,12 +14,12 @@ d$a2030100
 
 
 
-;!TestData_DebugPixelTiming.txt
-;!TestData_DebugVectors.txt
-;!TestData_DebugScaledSprites.txt
+!TestData_DebugPixelTiming.txt
+!TestData_DebugVectors.txt
+!TestData_DebugScaledSprites.txt
 
 ; Dither on
-;d$a2000164
+d$a2000164
 ;d$a2020164
 
 ; Setup full overscan border extents
@@ -476,7 +476,7 @@ s$80008000
 ;b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20,b$20
 
 
-!TestData_DebugSprites.txt
+;!TestData_DebugSprites.txt
 
 
 ; Start and end (exclusive) of double size 32x32 sprite index
