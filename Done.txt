@@ -4876,3 +4876,76 @@ All layouts now use V3.1
 	>> Add some narrow paths around RAM chips
 	* Needs more spacing...
 	>> V9.5\Mode7 - Routed - SMT.pdsprj : released
+
+
+
+
+* Currently the address logic is to use the address lines directly, since the EBBS register is 8 bits this gives a maximum of 8 possible address high activations for data.
+	> While this allows simultaneous writes to two address at once, by having more than one high bit in the address, this functionality isn't really used. Also it does limit the destination hardware addressing options.
+	> If, for example, I want to have two or three character layers, plus vectors, plus APU, plus audio, then the addressing options quickly gets exhausted.
+	* Instead, decode the address properly, giving a theoretical 256 addresses for hardware data destinations
+		An easier expansion would be to decode 16/32 addresses, 4/5 bits.
+		A few 74LS138 would do this (root sheet 1 Bombjack schematic)
+		The existing boards use a 8 bit DIP switch (e.g. DSW1) output to SPEBS4
+			>> If these are set to all off, then the output (SPEBS4) can be connected (bodged) to the address decoder output
+			>> A better design would be have on each board a couple of 74LS138 with the dip switch selecting the address
+				Or perhaps use a comparator SN74LS682NSR with suitable DIP switch to GND pull down for the whole 8 bits equality check? Which uses a SOIC127P780X200-20N
+					https://www.mouser.sg/c/semiconductors/logic-ics/logic-comparators/?q=74ls682&comparator%20type=Magnitude&mounting%20style=SMD%2FSMT
+				Or perhaps a SN74LS688DWR or SN74LS682NSR or SN74LS688NSR
+			>> SN74LS682NSR has 20K ohm on the Q inputs, which would be very useful for connecting to driven ground dip switches...
+		>> Perhaps using the same INRAMSEL1 part for the edge connector. Both active low and active high outputs, labelled as such
+			Could copy out the combiner board, plus the comparator, plus not gates
+			Could also test in in place in the main schematic.
+		>> Before changes, run simulation for comparison images. Up to frame 50 should be OK.
+			Then make changes, run simulation for comparison, should be no differences since the test data uses correct addressing
+		* Oh, 74LS682 model is missing: https://support.labcenter.com/forums/viewtopic.php?t=8478
+			Model added in this version: https://support.labcenter.com/forums/viewtopic.php?t=8491
+	> Perhaps a good test would be to make the normal sprites board use a faster internal clock (like the scaled sprites2 layer)? And add the comparator at the same time?
+		This would also allow extra normal sprites, plus test the updated digital logic for the scanline update instead of using the analog pullup resistors method.
+		* There is also scope for any sprite that fails the Y extent test to cause the next sprite to be rendered quicker. (Again like the scaled sprites).
+			But this would require some reorganisation of the load timing signals...
+		* 1H 2H 4H etc will need new faster counting S1POS prefixed versions
+			S1POS1H S1POS2H S1POS4H etc
+		* _MDL _CDL _VPL will need new versions for the higher clocked sprites
+			Prefix with S1
+		* Also SLOAD _SLOAD need S1 prefixes
+		** These new signals will need to be removed from the video generation layer and removed from the backplane really
+			None of the other layers use them as they all have independant scroll values
+		>> First pass works
+			> Notable changes are that output scanlines are shifted to the right by one pixel. Probably due to the delayed start of S1_LINESTART
+				> Using VID_LINESTART for the new counter fixes that pixel shift
+					>> But at higher clocks the start of the line is unstable... which caused lines of the sprites to be dislocated
+					>> This indicates the scan output reset is unstable, probably a split clock with the higher speed clock?
+						Sprites2 used S2_LONGLINESTART, perhaps try something similar?
+					>> The signal should not depend on any higher speed signals, like _CONTRLDA/B
+						>> S1_LONGLINESTART to reset the scanline counters was very stable but resulted in sprite positions being shifted 6 pixels to the left
+							But VID_LINESTART resulted in 8 pixels shift, which is even worse!
+							Use S1_LONGLINESTART
+							>> With the higher clock rate (14.31818M) it renders the last sprite completely, not just its left hand 8 pixels edge.
+			> 16MHz looks good https://www.mouser.sg/ProductDetail/ECS/ECS-100AX-160?qs=GxOUx7aO6nxPyxaB%252BrVtIQ%3D%3D
+				18MHz (the next clock rate) produces some sprite gaps and corruption
+
+			> Some rubbish data on the far left edge, probably need to clear the shifters...? Hidden by the border though
+					
+			> There are scanline RAM logic contentions
+				Not every line, about every 8 lines or so. Mostly at the start of the line when RH=0 or RH=1
+	>> Added 74LS682 for EBS comparison. Note the DIP switch is now to ground, so it's inversed.
+		> TestData_DebugSprites.txt updated to test frame movement into side borders
+		
+	> Done: Components set to Sprites group
+	
+	> Done: Eight layers.LTF seems to be OK at this board size
+		GND top and bottom layers, alternate with VCC internally.
+		>> V9.5
+	
+	* Done: Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious orientation and marking the switch options
+
+	* Done: To fix the occasional contentions perhaps use two delay chains. One to delay the "do pixels" signal by 1 clock, so the scanline RAMs turn off during the long scan start.
+		This should avoid clocks during this change over period and avoid the short clocks as well...
+		> Perhaps the input VID_LINESTART to U480 should be S1DELVID_LINESTART then S1_LONGLINESTART can be inverted and used for RAM _CE
+		> Logic analyser shows that S1_LONGLINESTART is not held low properly... It has a blip in the middle!!
+			That would certainly account for S1LONGLINESTART not controlling the outputs to the internal scanline buffer and activating at the wrong time.
+			>> This removes the logic contention during render.
+		> S1_LONGLINESTART can also be reduced in length by one 6MHz clock. No need to a longer delay chain.
+		
+	* Done: Need to reduce Sprites components
