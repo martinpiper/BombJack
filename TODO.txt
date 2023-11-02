@@ -77,6 +77,8 @@
 	
 	* Done: Clock and clock select dip switch need to be located on the board edge, preferably bottom edge with obvious orientation and marking the switch options
 
+	* To fix the occasional contentions perhaps use two delay chains. One to delay the "do pixels" signal by 1 clock, so the scanline RAMs turn off during the long scan start.
+		This should avoid clocks during this change over period and avoid the short clocks as well...
 
 
 
