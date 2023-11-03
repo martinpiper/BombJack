@@ -78,7 +78,7 @@
 
 					Capacitors	59	One 100nF (0.1uF) capacitor for SMT ICs marked with extra SDC near pin 1	CL05B104KO5NNNC	https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D	Decoupling capacitors for each SDC component	All with suffix -CAP	Top Copper
 
-			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals
+			** Remove oscillators (VIDCLK, AUDCLK, *CLK etc.), prefer clock crystals, but keep their headers/sockets
 			** EPROMs as sockets, not ICs
 			** Check EPROMs with their sockets are not too close to ICs, especially the ends of the ICs hitting the EPROM pins
 
