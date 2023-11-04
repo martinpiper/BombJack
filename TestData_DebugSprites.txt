@@ -30,7 +30,7 @@ s$98000100
 ; x
 
 ; Top half of normal screen, all the same frame, palette and flips, with some positional differences to highlight 32x32 flags
-b$10,b$04,b$d0,b$00
+b$24,b$04,b$d0,b$0e	; Sprite should be touching the left hand screen border and be completely visible
 b$11,b$04,b$b0,b$08
 b$12,b$04,b$90,b$10
 b$13,b$04,b$70,b$18
@@ -76,7 +76,7 @@ b$24,b$03,b$20,b$28		; Half width @ 14.31818MHz
 b$14,b$02,b$50,b$30
 b$15,b$02,b$40,b$38
 b$24,b$02,b$30,b$40		; Displayed at 16MHz
-b$24,b$02,b$20,b$48		; Not displayed, corrupt pixels on the left screen edge
+b$24,b$02,b$20,b$48		; Not displayed, corrupt pixels on the left screen edge, single pixel on the left hand sprite edge
 
 d$0
 
