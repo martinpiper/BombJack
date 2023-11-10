@@ -33,6 +33,18 @@
 
 
 
+* UserPort20To32Bit1.pdsprj would it be feasible to have an automatic DMA transfer mode from internal RAM to external RAM clocked at a much higher speed than the C64 DMA controlled mode?
+	Could have a 16 bit counter, inversed of course, that counts up to 0 when enabled and then automatically stops counting once it overflows.
+	A latch that gets set on a suitable signal edge, probably positive.
+	Once the counter overflows it resets the enable latch.
+	A register bit to read the state of the enable latch back again.
+	The use case is the C64 has stored lots of data in the RAM, it then sets up the external address as usual, then signals the automatic DMA transfer. This would quickly transfer a large chunk of data in the vsync for example.
+	The C64 then polls the status register bit.
+	
+
+
+
+
 * S2_LINESTART uses a NOT for S2LINESTART but it could probably use the NOT output from the 74175 instead?
 
 		
