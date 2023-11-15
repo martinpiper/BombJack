@@ -1,5 +1,10 @@
 * TODO:
 
+* Need a WaitForFire_A that only triggers after a certain time/count :)
+
+
+
+
 * Sprites: Do I use the "256 pixel tall" flag to choose an extra 256 bank of sprite definitions?
 	SRAM 8-bit parallel otions: https://www.mouser.sg/c/semiconductors/memory-ics/sram/?interface%20type=Parallel&organization=1%20k%20x%208%7C~2%20k%20x%208%7C~4%20k%20x%208%7C~8%20k%20x%208%7C~16%20k%20x%208%7C~32%20k%20x%208%7C~64%20k%20x%208%7C~128%20k%20x%208%7C~256%20k%20x%208%7C~512%20k%20x%208%7C~1%20M%20x%208%7C~2%20M%20x%208%7C~4%20M%20x%208%7C~8%20M%20x%208%7C~16%20M%20x%208%7C~18%20M%20x%208&instock=y&sort=memory%20size%7C1
 

@@ -4949,3 +4949,15 @@ All layouts now use V3.1
 		> S1_LONGLINESTART can also be reduced in length by one 6MHz clock. No need to a longer delay chain.
 		
 	* Done: Need to reduce Sprites components
+
+
+
+
+* Demo7
+	With kBus24Bit_SpritesMaxNum = 32
+	To test the new sprites board for 31 usable sprites
+	The sprite positions are mostly OK except when enabling the full boss, by moving it upwards onto the screen to display more of its sprites
+	On the occaisional couple of frames, when the vertically moving red spinning sprite is near the middle, GapFind_Scan is returning a gap close to the very top of the screen
+	This causes the boss at the bottom of the screen to run out of sprites.
+	> It was the sprite vertical placement, there really wasn't enough of a gap
+	>> Define kEnableMoresprites
