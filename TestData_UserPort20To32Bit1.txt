@@ -113,7 +113,7 @@ d=latch1 | $01
 d=latch1 | _PC | $01
 
 ; Simulate C64 side setting user port DDR
-d=$01010001 | DDR
+d=latch1 | _PC | $01 | DDR
 
 ; Set latch5
 d=latch5 | _PC | $01 | DDR
