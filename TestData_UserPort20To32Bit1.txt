@@ -24,6 +24,20 @@
 ; Set to input from the C64
 .DDR = $00000100
 
+
+; Latch7 bits
+; $00	Pass-through (default on reset)
+; $01	Choose RAM
+; $02	Pass-through disable
+; $03	Disabled, low data, high PA2 high _PC
+; $04	Internal PA2
+.latch7_Passthrough=$00
+.latch7_RAM=$01
+.latch7_PassthroughDisable=$02
+.latch7_Disabled=$03
+.latch7_InternalPA2=$04
+
+
 ; Used for debugging
 .BreakPoint = $80000000
 
@@ -172,17 +186,6 @@ d=latch7 | _PC | $00
 d=latch7 | $00
 d=latch7 | _PC | $00
 
-; Latch7 bits
-; $01	Choose RAM
-; $02	Pass-through disable
-; $03	Disabled, low data, high PA2 high _PC
-; $04	Internal PA2
-.latch7_RAM=$01
-.latch7_PassthroughDisable=$02
-.latch7_Disabled=$03
-.latch7_InternalPA2=$04
-
-
 ; PA2 toggle twice
 ; Note: Latch7 controls internal PA2
 d=latch7 | latch7_PassthroughDisable | latch7_InternalPA2
@@ -215,37 +218,37 @@ d=latch7 | _PC | $01
 
 
 ; Simulate C64 side setting user port DDR
-d=$07010001	| DDR
+d=latch7 | _PC | $01	| DDR
 
 ; Set latch5
-d=$05010001	| DDR
+d=latch5 | _PC | $01	| DDR
 ; "Write" latch5 (Read RAM)
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
 ; Read from latch3 which should read the added address...
-d=$03010000	| DDR
-d=$03000000	| DDR
-d=$03010000	| DDR
+d=latch3 | _PC | $00	| DDR
+d=latch3 | $00	| DDR
+d=latch3 | _PC | $00	| DDR
 
-d=$05010000	| DDR
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | _PC | $00	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
 
-d=$05000000	| DDR
-d=$05010000	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
