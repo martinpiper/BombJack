@@ -1,10 +1,16 @@
-;$00000100 = DDR set to input from the C64
-;$00010000 = _PC
-;$01000000 = SP1
-;$02000000 = SP2
-;$04000000 = SERIALATN
-;$08000000 = PA2
-;$80000000 = Break point
+; Signals from the user port
+._PC = $00010000	; Low is write
+.SP1 = $01000000
+.SP2 = $02000000
+.SERIALATN = $04000000
+.PA2 = $08000000
+
+; Set to input from the C64
+.DDR = $00000100
+
+; Used for debugging
+.BreakPoint = $80000000
+
 
 ; During power-on reset
 d$00010000
@@ -189,37 +195,37 @@ d$07010001
 
 
 ; Simulate C64 side setting user port DDR
-d$07010101
+d=$07010001	DDR
 
 ; Set latch5
-d$05010101
+d=$05010001	DDR
 ; "Write" latch5 (Read RAM)
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
 ; Read from latch3 which should read the added address...
-d$03010100
-d$03000100
-d$03010100
+d=$03010000	DDR
+d=$03000000	DDR
+d=$03010000	DDR
 
-d$05010100
-d$05000100
-d$05010100
+d=$05010000	DDR
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
 
-d$05000100
-d$05010100
+d=$05000000	DDR
+d=$05010000	DDR
