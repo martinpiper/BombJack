@@ -72,9 +72,9 @@ d=latch8 | $03
 d=latch8 | _PC | $03
 
 ; Set latch7 - Disabled mode, ($03)
-d=latch7 | _PC | $03
-d=latch7 | $03
-d=latch7 | _PC | $03
+d=latch7 | _PC | latch7_Disabled
+d=latch7 | latch7_Disabled
+d=latch7 | _PC | latch7_Disabled
 
 ; Set adders
 d=latch8 | _PC | $18
@@ -182,9 +182,9 @@ d=latch1 | _PC | $01
 ; Set latch7 - Enable pass-through
 ; When altering the pass-through operation via latch7, do not track its _PC signal.
 
-d=latch7 | _PC | $00
-d=latch7 | $00
-d=latch7 | _PC | $00
+d=latch7 | _PC | latch7_Passthrough
+d=latch7 | latch7_Passthrough
+d=latch7 | _PC | latch7_Passthrough
 
 ; PA2 toggle twice
 ; Note: Latch7 controls internal PA2
@@ -212,13 +212,13 @@ d=latch4 | $44
 
 
 ; Set latch7 - Enable RAM to pass-through
-d=latch7 | _PC | $01
-d=latch7 | $01
-d=latch7 | _PC | $01
+d=latch7 | _PC | latch7_RAM
+d=latch7 | latch7_RAM
+d=latch7 | _PC | latch7_RAM
 
 
 ; Simulate C64 side setting user port DDR
-d=latch7 | _PC | $01	| DDR
+d=latch7 | _PC | latch7_RAM	| DDR
 
 ; Set latch5
 d=latch5 | _PC | $01	| DDR
