@@ -63,54 +63,54 @@ d=latch7 | $03
 d=latch7 | _PC | $03
 
 ; Set adders
-d$08010018
-d$08000018
-d$08010018
-d$09010001
-d$09000001
-d$09010001
-d$0a010000
-d$0a000000
-d$0a010000
+d=latch8 | _PC | $18
+d=latch8 | $18
+d=latch8 | _PC | $18
+d=latch9 | _PC | $01
+d=latch9 | $01
+d=latch9 | _PC | $01
+d=latch10 | _PC | $00
+d=latch10 | $00
+d=latch10 | _PC | $00
 
 
 ; Set latch0
-d$00010004
-d$00000037
-d$00010037
+d=latch0 | _PC | $04
+d=latch0 | $37
+d=latch0 | _PC | $37
 
 ; Set latch1
-d$01010037
-d$01000001
-d$01010001
+d=latch1 | _PC | $37
+d=latch1 | $01
+d=latch1 | _PC | $01
 
 ; Set latch6 (Write RAM)
-d$06010000
+d=latch6 | _PC | $00
 ; Write $23
-d$06000023
-d$06010023
+d=latch6 | $23
+d=latch6 | _PC | $23
 ; Write $34
-d$06000034
-d$06010034
+d=latch6 | $34
+d=latch6 | _PC | $34
 ; Write $17
-d$06000017
-d$06010017
+d=latch6 | $17
+d=latch6 | _PC | $17
 ; Write $98
-d$06000098
-d$06010098
+d=latch6 | $98
+d=latch6 | _PC | $98
 
 
 ; Reset address...
-d$00010004
+d=latch0 | _PC | $04
 ; Set latch0 = $37
-d$00000037
-d$00010037
+d=latch0 | $37
+d=latch0 | _PC | $37
 
 ; Set latch1
-d$01010037
+d=latch1 | _PC | $37
 ; Set latch0 = $01
-d$01000001
-d$01010001
+d=latch1 | $01
+d=latch1 | _PC | $01
 
 ; Simulate C64 side setting user port DDR
 d$01010101
@@ -132,45 +132,45 @@ d$05010100
 
 
 ; Write to latch3 which should read the added address...
-d$03010000
-d$03000000
-d$03010000
+d=latch3 | _PC | $00
+d=latch3 | $00
+d=latch3 | _PC | $00
 
 
 ; Set latch6 (Write RAM) continuing with the last read address
-d$06010000
+d=latch6 | _PC | $00
 ; Write $11
-d$06000011
-d$06010011
+d=latch6 | $11
+d=latch6 | _PC | $11
 ; Write $22
-d$06000022
-d$06010022
+d=latch6 | $22
+d=latch6 | _PC | $22
 ; Write $33
-d$06000033
-d$06010033
+d=latch6 | $33
+d=latch6 | _PC | $33
 ; Write $44
-d$06000044
-d$06010044
+d=latch6 | $44
+d=latch6 | _PC | $44
 
 
 ; Reset address...
-d$00010004
+d=latch0 | _PC | $04
 ; Set latch0 = $37
-d$00000037
-d$00010037
+d=latch0 | $37
+d=latch0 | _PC | $37
 
 ; Set latch1
-d$01010037
+d=latch1 | _PC | $37
 ; Set latch0 = $01
-d$01000001
-d$01010001
+d=latch1 | $01
+d=latch1 | _PC | $01
 
 ; Set latch7 - Enable pass-through
 ; When altering the pass-through operation via latch 7, do not track its _PC signal.
 
-d$07010000
-d$07000000
-d$07010000
+d=latch7 | _PC | $00
+d=latch7 | $00
+d=latch7 | _PC | $00
 
 ; Latch 7 bits
 ; $01	Choose RAM
@@ -181,67 +181,67 @@ d$07010000
 
 ; PA2 toggle twice
 ; Note: Latch7 controls internal PA2
-d$07000006
-d$07010006
-d$07000002
-d$07010002
-d$07000006
-d$07010006
-d$07000002
-d$07010002
+d=latch7 | $06
+d=latch7 | _PC | $06
+d=latch7 | $02
+d=latch7 | _PC | $02
+d=latch7 | $06
+d=latch7 | _PC | $06
+d=latch7 | $02
+d=latch7 | _PC | $02
 
 ; Break
 ;d$80000000
 
 ; Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
-d$04010011
-d$04000011
-d$04010022
-d$04000022
-d$04010033
-d$04000033
-d$04010044
-d$04000044
+d=latch4 | _PC | $11
+d=latch4 | $11
+d=latch4 | _PC | $22
+d=latch4 | $22
+d=latch4 | _PC | $33
+d=latch4 | $33
+d=latch4 | _PC | $44
+d=latch4 | $44
 
 
 ; Set latch7 - Enable RAM to pass-through
-d$07010001
-d$07000001
-d$07010001
+d=latch7 | _PC | $01
+d=latch7 | $01
+d=latch7 | _PC | $01
 
 
 ; Simulate C64 side setting user port DDR
-d=$07010001	DDR
+d=$07010001	| DDR
 
 ; Set latch5
-d=$05010001	DDR
+d=$05010001	| DDR
 ; "Write" latch5 (Read RAM)
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
 ; Read from latch3 which should read the added address...
-d=$03010000	DDR
-d=$03000000	DDR
-d=$03010000	DDR
+d=$03010000	| DDR
+d=$03000000	| DDR
+d=$03010000	| DDR
 
-d=$05010000	DDR
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05010000	| DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
 
-d=$05000000	DDR
-d=$05010000	DDR
+d=$05000000	| DDR
+d=$05010000	| DDR
