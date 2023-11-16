@@ -4,6 +4,22 @@
 .SP2 = $02000000
 .SERIALATN = $04000000
 .PA2 = $08000000
+.latch0 = $00000000
+.latch1 = $01000000
+.latch2 = $02000000
+.latch3 = $03000000
+.latch4 = $04000000
+.latch5 = $05000000
+.latch6 = $06000000
+.latch7 = $07000000
+.latch8 = $08000000
+.latch9 = $09000000
+.latch10 = $0a000000
+.latch11 = $0b000000
+.latch12 = $0c000000
+.latch13 = $0d000000
+.latch14 = $0e000000
+.latch15 = $0f000000
 
 ; Set to input from the C64
 .DDR = $00000100
@@ -13,38 +29,38 @@
 
 
 ; During power-on reset
-d$00010000
-d$00010001
-d$00010002
-d$00010003
-d$00010004
+d=_PC | $00
+d=_PC | $01
+d=_PC | $02
+d=_PC | $03
+d=_PC | $04
 
 ; After power-on reset
 ; Default is pass-through mode, these inputs should be seen at the output, as long as latch7 isn't altered
-d$08010000
-d$08010001
-d$00010002
-d$00010003
+d=latch8 | _PC | $00
+d=latch8 | _PC | $01
+d=_PC | $02
+d=_PC | $03
 
-d$08010000
-d$08010001
-d$08000001
-d$08010001
+d=latch8 | _PC | $00
+d=latch8 | _PC | $01
+d=latch8 | $01
+d=latch8 | _PC | $01
 
-d$08010001
-d$08010002
-d$08000002
-d$08010002
+d=latch8 | _PC | $01
+d=latch8 | _PC | $02
+d=latch8 | $02
+d=latch8 | _PC | $02
 
-d$08010002
-d$08010003
-d$08000003
-d$08010003
+d=latch8 | _PC | $02
+d=latch8 | _PC | $03
+d=latch8 | $03
+d=latch8 | _PC | $03
 
 ; Set latch7 - Disabled mode, ($03)
-d$07010003
-d$07000003
-d$07010003
+d=latch7 | _PC | $03
+d=latch7 | $03
+d=latch7 | _PC | $03
 
 ; Set adders
 d$08010018
