@@ -30,10 +30,13 @@
 * UserPort20To32Bit1.pdsprj need to make sure that the external user port can be setup with the usual PA2 clear and external writes, then...
 	Done: ... and then write DMA from internal memory to external without any interruption of external PA2 toggling.
 		See: "PA2 toggle twice" and "Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable""Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
-	There is scope here for having a descriptive test, that steps the simulation, then having an immediate output override file created that sets the digital data outputs.
-	That override file could be temporary and be deleted once the step happens.
-	Also there is scope for having the data inputs read and output to a file so that they can be tested. This would also be a temporary file to be deleted by the test.
-	The same high level test can then be used, with some different glue, to test the emulation implementation and even real hardware.
+	>> Added to the digtial data recorder:
+		LABELVALUE0=PT_PC=$10000
+		LABELVALUE1=PTPA2=$8000000
+	* There is scope here for having a descriptive test, that steps the simulation, then having an immediate output override file created that sets the digital data outputs.
+		That override file could be temporary and be deleted once the step happens.
+		Also there is scope for having the data inputs read and output to a file so that they can be tested. This would also be a temporary file to be deleted by the test.
+		The same high level test can then be used, with some different glue, to test the emulation implementation and even real hardware.
 
 
 
