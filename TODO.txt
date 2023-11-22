@@ -49,7 +49,16 @@
 	A register bit to read the state of the enable latch back again.
 	The use case is the C64 has stored lots of data in the RAM, it then sets up the external address as usual, then signals the automatic DMA transfer. This would quickly transfer a large chunk of data in the vsync for example.
 	The C64 then polls the status register bit.
-	
+	> Technically the APU can do this, but it has limited onboard memory.
+		A really fast transfer from the expansion RAM to hardware could allow upload of new sprites/tiles/samples in the VBLANK
+	* Spare latch signals, searching for LATCH* and ALATCH* nets with 1 connection (single pin net): 11 12 13 14 15
+	>> So LATCH5/ALATCH5 are used by the C64 to read RAM
+		* If the control register (latch7) (U5) has a bit that enables the fast DMA using a clocked counter, then it can add active low signals in the places where LATCH5 and ALATCH5 are.
+		* 16 bits for the count up value (inversed count to zero or overflow basically)
+		* _READMEM would need an extra input.
+		* Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
+		
+		
 
 
 
