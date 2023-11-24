@@ -57,7 +57,13 @@
 		* 16 bits for the count up value (inversed count to zero or overflow basically)
 		* _READMEM would need an extra input.
 		* Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
-		
+
+
+
+
+
+* UserPort20To32Bit1.pdsprj hold power reset low, latch reset to 0, until the first positive edge of a control register bit change from 0 to 1.
+	This is to ensure there are no issues with the data direction of the interface.
 		
 
 
