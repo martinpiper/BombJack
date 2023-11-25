@@ -61,7 +61,8 @@
 		* Done: If the control register (latch7) (U5) has a bit that enables the fast DMA using a clocked counter, then it can add active low signals in the places where LATCH5 and ALATCH5 are.
 		* Done: 16 bits for the count up value (inversed count to zero or overflow basically)
 		* Done: _READMEM would need an extra input.
-		* Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
+		* Done: Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
+			Latch13
 
 
 
