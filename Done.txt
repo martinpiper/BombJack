@@ -4961,3 +4961,30 @@ All layouts now use V3.1
 	This causes the boss at the bottom of the screen to run out of sprites.
 	> It was the sprite vertical placement, there really wasn't enough of a gap
 	>> Define kEnableMoresprites
+
+
+
+
+
+* UserPort20To32Bit1.pdsprj would it be feasible to have an automatic DMA transfer mode from internal RAM to external RAM clocked at a much higher speed than the C64 DMA controlled mode?
+	Could have a 16 bit counter, inversed of course, that counts up to 0 when enabled and then automatically stops counting once it overflows.
+	A latch that gets set on a suitable signal edge, probably positive.
+		>> FASTDMASTART .latch7_FastDMAStart=$08
+		>> U45:A
+	Once the counter overflows it resets the enable latch.
+	A register bit to read the state of the enable latch back again.
+	The use case is the C64 has stored lots of data in the RAM, it then sets up the external address as usual, then signals the automatic DMA transfer. This would quickly transfer a large chunk of data in the vsync for example.
+	The C64 then polls the status register bit.
+	> Technically the APU can do this, but it has limited onboard memory.
+		A really fast transfer from the expansion RAM to hardware could allow upload of new sprites/tiles/samples in the VBLANK
+	* Spare latch signals, searching for LATCH* and ALATCH* nets with 1 connection (single pin net): 11 12 13 14 15
+		>> LATCH11 and LATCH12 are counter lo and hi
+		>> FastDMAStop and _FastDMAStop are generated on the RCO carry from the length counter
+		>> Generates _FastDMAPC and then _FastDMADoCount at FastDMACLK / 4
+	>> So LATCH5/ALATCH5 are used by the C64 to read RAM
+		* Done: If the control register (latch7) (U5) has a bit that enables the fast DMA using a clocked counter, then it can add active low signals in the places where LATCH5 and ALATCH5 are.
+		* Done: 16 bits for the count up value (inversed count to zero or overflow basically)
+		* Done: _READMEM would need an extra input.
+		* Done: Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
+			Latch13
+		>> Logic analyser shows data and external _PC signal well timed.
