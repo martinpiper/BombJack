@@ -35,7 +35,7 @@ In the end to get some clarity on the sprite plotting specifically I started to 
 
 ## Digital display and audio simulation
 
-The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
+The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. I later updated the design to use 15 bit colour with 16x16 palette entries. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
 
 This simulation can also be used to debug failures in original boards, since disabling chips or signals in the simulation can produce similar output display artefacts. For example disabling one of the scan line RAM chips (4A/4B/4C/4D) produces alternate pixels and bright lines, similar to the original hardware.
 
