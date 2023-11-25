@@ -36,6 +36,7 @@
 .latch7_PassthroughDisable=$02
 .latch7_Disabled=$03
 .latch7_InternalPA2=$04
+.latch7_FastDMAStart=$08
 
 
 ; Used for debugging
@@ -252,3 +253,42 @@ d=latch5 | _PC | $00	| DDR
 
 d=latch5 | $00	| DDR
 d=latch5 | _PC | $00	| DDR
+
+
+
+; Fast DMA test
+; DDR switch
+d=latch7 | _PC | latch7_Disabled | DDR
+
+; Set latch7 - Disabled mode, ($03)
+d=latch7 | _PC | latch7_Disabled
+d=latch7 | latch7_Disabled
+d=latch7 | _PC | latch7_Disabled
+
+; Reset address...
+d=latch0 | _PC | $04
+; Set latch0 = $37
+d=latch0 | $37
+d=latch0 | _PC | $37
+
+; Set latch1
+d=latch1 | _PC | $37
+; Set latch0 = $01
+d=latch1 | $01
+d=latch1 | _PC | $01
+
+; Set counter latches
+d=latch11 | _PC | $04
+d=latch11 | $13
+d=latch11 | _PC | $13
+
+d=latch12 | _PC | $fe
+d=latch12 | $fe
+d=latch12 | _PC | $fe
+
+; Enable the DMA length counter
+d=latch7 | _PC | latch7_RAM | latch7_FastDMAStart
+d=latch7 | latch7_RAM | latch7_FastDMAStart
+d=latch7 | _PC | latch7_RAM | latch7_FastDMAStart
+
+
