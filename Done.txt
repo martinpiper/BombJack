@@ -4988,3 +4988,4 @@ All layouts now use V3.1
 		* Done: Also there needs to be a way to read the status for completed reading, which would need to alter how U1 behaves.
 			Latch13
 		>> Logic analyser shows data and external _PC signal well timed.
+		>> MegaWang memory expansion V0.2
