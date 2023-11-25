@@ -47,6 +47,8 @@
 	This is to ensure there are no issues with the data direction of the interface.
 	* Actually make the highest bit of latch7 the backup reset on low. So the normal reset clears the register, then only when the code explicitly sets the high bit to 1 does it stop the reset.
 		This can also be used to explicitly reset all state.
+	>> .latch7_ResetDone=$80
+		PREPOWRESET PREPOWRESET2 HPREPOWRESET
 
 		
 

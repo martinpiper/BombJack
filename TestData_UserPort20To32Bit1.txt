@@ -37,6 +37,7 @@
 .latch7_Disabled=$03
 .latch7_InternalPA2=$04
 .latch7_FastDMAStart=$08
+.latch7_ResetDone=$80
 
 
 ; Used for debugging
@@ -73,9 +74,9 @@ d=latch8 | $03
 d=latch8 | _PC | $03
 
 ; Set latch7 - Disabled mode, ($03)
-d=latch7 | _PC | latch7_Disabled
-d=latch7 | latch7_Disabled
-d=latch7 | _PC | latch7_Disabled
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
+d=latch7 | latch7_ResetDone | latch7_Disabled
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
 
 ; Set adders
 d=latch8 | _PC | $18
@@ -183,20 +184,20 @@ d=latch1 | _PC | $01
 ; Set latch7 - Enable pass-through
 ; When altering the pass-through operation via latch7, do not track its _PC signal.
 
-d=latch7 | _PC | latch7_Passthrough
-d=latch7 | latch7_Passthrough
-d=latch7 | _PC | latch7_Passthrough
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+d=latch7 | latch7_ResetDone | latch7_Passthrough
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
 
 ; PA2 toggle twice
 ; Note: Latch7 controls internal PA2
-d=latch7 | latch7_PassthroughDisable | latch7_InternalPA2
-d=latch7 | _PC | latch7_PassthroughDisable | latch7_InternalPA2
-d=latch7 | latch7_PassthroughDisable
-d=latch7 | _PC | latch7_PassthroughDisable
-d=latch7 | latch7_PassthroughDisable | latch7_InternalPA2
-d=latch7 | _PC | latch7_PassthroughDisable | latch7_InternalPA2
-d=latch7 | latch7_PassthroughDisable
-d=latch7 | _PC | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable
 
 ; Break
 ;d=BreakPoint
@@ -213,13 +214,13 @@ d=latch4 | $44
 
 
 ; Set latch7 - Enable RAM to pass-through
-d=latch7 | _PC | latch7_RAM
-d=latch7 | latch7_RAM
-d=latch7 | _PC | latch7_RAM
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM
+d=latch7 | latch7_ResetDone | latch7_RAM
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM
 
 
 ; Simulate C64 side setting user port DDR
-d=latch7 | _PC | latch7_RAM	| DDR
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM	| DDR
 
 ; Set latch5
 d=latch5 | _PC | $01	| DDR
@@ -258,12 +259,12 @@ d=latch5 | _PC | $00	| DDR
 
 ; Fast DMA test
 ; DDR switch
-d=latch7 | _PC | latch7_Disabled | DDR
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | DDR
 
 ; Set latch7 - Disabled mode, ($03)
-d=latch7 | _PC | latch7_Disabled
-d=latch7 | latch7_Disabled
-d=latch7 | _PC | latch7_Disabled
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
+d=latch7 | latch7_ResetDone | latch7_Disabled
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
 
 ; Reset address...
 d=latch0 | _PC | $04
@@ -287,9 +288,9 @@ d=latch12 | $fe
 d=latch12 | _PC | $fe
 
 ; Enable the DMA length counter
-d=latch7 | _PC | latch7_RAM | latch7_FastDMAStart
-d=latch7 | latch7_RAM | latch7_FastDMAStart
-d=latch7 | _PC | latch7_RAM | latch7_FastDMAStart
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart
+d=latch7 | latch7_ResetDone | latch7_RAM | latch7_FastDMAStart
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart
 
 
 ; simulate the C64 switching to read latch13, the status of the DMA
