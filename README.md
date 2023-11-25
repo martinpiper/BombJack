@@ -33,11 +33,23 @@ I was looking at Bomb Jack boards on ebay and pondering how they had enough fill
 
 In the end to get some clarity on the sprite plotting specifically I started to transcribe what was thought to be the sprite logic portion of the schematic into Proteus, since it can simulate digital electronics really well.
 
-## Digital display simulation
+## Digital display and audio simulation
 
 The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
 
 This simulation can also be used to debug failures in original boards, since disabling chips or signals in the simulation can produce similar output display artefacts. For example disabling one of the scan line RAM chips (4A/4B/4C/4D) produces alternate pixels and bright lines, similar to the original hardware.
+
+## Why not use a CPLD or FPGA?
+
+Good question! For my thinking, it is a question of what level to want to teach. In software eningeering there are numerous languages, C/C++, Python, Java, Forth, Pascal, etc. There is also machine code and usually some form of assembler mnemonic language which directly maps to machine code, the user accessible low-level language used by a particular CPU. Below that there can be microcode which is often not user accesible, this tends to control the internal state of a CPU. As a software engineer, I see value in using higher level languages, but often use low-level assembler when I want to optimise.
+
+A FPGA or CPLD, while it deals with logical operations, is usually programmed via a higher level language (VHDL or Verilog or similar) abstraction above the low-level logic cells actually used by the device, often (not always) the same code can be compield for subtly different devices with minimal changes.
+
+7400-series discrete logic, specifically 74LS series logic used in this project, can be considered to be low-level, analogous to using machine code or assembler. There is a lower level, which is using discrete transistors to create logic cells, like NAND, OR, NOT, etc. but that really is a low level more like microcode.
+
+The use of high level or low-level programming is a contextual decision, often my knowledge of low-level architecture and performace informs my decision making processes when using high level languages. While it is certainly possible to code an application entirely with only high level language knowledge, it is an advantage to know low-level architecture to help debug hopefully rare performance or error situations.
+
+All that said, I believe that knowing how to engineer a solution using low-level discrete logic is an advantage, in other words it helps to improve the use of higher level CPLD or FPGA engineering to know lower level architecture. This is why this project exists, to help teach how to solve engineering problems using low-level discrete logic.
 
 ## Developer technical details
 
