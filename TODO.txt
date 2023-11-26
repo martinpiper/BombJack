@@ -41,12 +41,6 @@
 
 
 
-* UserPort20To32Bit1 : While in reset keep data bus driver away from user port. 
-
-
-
-
-
 * S2_LINESTART uses a NOT for S2LINESTART but it could probably use the NOT output from the 74175 instead?
 
 		

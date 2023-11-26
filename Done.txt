@@ -5005,3 +5005,9 @@ All layouts now use V3.1
 
 
 * UserPort20To32Bit1 : Move clocked DMA one slot later
+
+
+
+
+* UserPort20To32Bit1 : While in reset keep data bus driver away from user port. 
+	This is until latch7_ResetDone is used.
