@@ -5000,3 +5000,8 @@ All layouts now use V3.1
 		This can also be used to explicitly reset all state.
 	>> .latch7_ResetDone=$80
 		PREPOWRESET PREPOWRESET2 HPREPOWRESET
+
+
+
+
+* UserPort20To32Bit1 : Move clocked DMA one slot later
