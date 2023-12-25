@@ -5,6 +5,17 @@
 
 
 
+* SimpleCPU.pdsprj multiply?
+	https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm
+
+
+
+
+* SimpleCPU.pdsprj if the EEPROM is changed to fast SRAM (tested by reducing the access speeds) then it could be clocked to about 16-20MHz
+
+
+
+
 * Need a WaitForFire_A that only triggers after a certain time/count :)
 
 
