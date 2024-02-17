@@ -690,3 +690,16 @@
 * Sprites2: Currently if the last sprite register isn't cleared, then the hardware will loop around drawing the same things again until the end of the scanline
 	Ideally if the address reaches S2SPRIA6 (which isn't connected to the RAM address) then it should signal a reset of the logic like the normal line end condition
 	> Emulation advanceSprite() would need updating
+
+
+
+
+* Dcode truth table generator and solver, as well as the boolean expression solver, are very useful: https://www.dcode.fr/boolean-truth-table
+	But this website might not be available forever...
+	The solvers seem to be API based, so the code is hidden?
+	It would be useful to have transparent code that can solve these problems.
+		Truth table to boolean expression
+		Boolean expression to logic operation, AND/OR/NOT/NAND/XOR solver
+		In addition:
+			Solve to 6502 code...
+			Suggest optional input NOT to produce smaller output logic and/or code.
