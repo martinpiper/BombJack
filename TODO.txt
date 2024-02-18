@@ -133,6 +133,9 @@
 	* The input memory could do with being a different clock rate to the main APU?
 		>> Already is VSMDD2 clock 500k
 	** APU simulation does crash after roughly 4.1 to 4.5 seconds, the member gradually creeps up to around 3.8 GB then boom
+		> The queued events were endlessly accumulating because there were no waits...
+			>> Added: IGNOREQUEUE=1 to the digital data model, also updated the DigitalData TestJig
+
 
 
 	
