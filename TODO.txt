@@ -125,8 +125,14 @@
 		* Ah ha, the two (??) tree sprites suddenly went transparent, even though their x pos is being updated and the whole data for both sprites is being sent
 			kAPUData_Tree4cNum = 2, which is what pretty much all the sprite update chunks do, so it's not the definition or colour since all the data is refreshed
 			This indicates the "+MLittleEndian16Bit kBus24Bit_Sprites + (.offset * 4)" sprites address within APUMultiplexStrip was corrupted and it didn't update the sprites?
-
-	
+* APU: Validate internal RAM write timings
+	To check the APU for user port data potentially getting corrupted
+		>> VSMDD6 Already output MWFAILINTERNAL
+	> Note procedure in: For APU validation when running @Demo6:
+		>> In Proteus open the APU project
+	* The input memory could do with being a different clock rate to the main APU?
+		>> Already is VSMDD2 clock 500k
+	** APU simulation does crash after roughly 4.1 to 4.5 seconds, the member gradually creeps up to around 3.8 GB then boom
 
 
 	
