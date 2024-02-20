@@ -135,6 +135,7 @@
 	** APU simulation does crash after roughly 4.1 to 4.5 seconds, the member gradually creeps up to around 3.8 GB then boom
 		> The queued events were endlessly accumulating because there were no waits...
 			>> Added: IGNOREQUEUE=1 to the digital data model, also updated the DigitalData TestJig
+	* Now the APU simulation can run for at least 30 seconds with "..\C64\VideoHardware\target\debugDataJustUserPort.txt", no memory write failure for MWFAILINTERNAL
 
 
 
