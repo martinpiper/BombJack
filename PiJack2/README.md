@@ -29,7 +29,7 @@
 	This starts a qemu monitor on port 55555
 	"c:\Program Files\qemu\qemu-system-arm.exe" -s -kernel pigfx.elf -cpu arm1176 -m 512 -M raspi0 -no-reboot -serial stdio -append "" -monitor tcp::55555,server,nowait
 
-	To copy to the SD card, make sure t is NOT THE RECOVERY drive:
+	To copy to the SD card, make sure it is NOT THE RECOVERY drive:
 		copy bin\kernel.img g: /y
 		copy bin\kernel.img f: /y
 		
@@ -54,6 +54,11 @@
 		Otherwise it's a corruption happening while sending to the C64?
 
 	
+>> qemu and gpio emulation: https://cs.unibo.it/~davide.berardi6/post/20201204-1.html
+	"Qemu offers a debug protocol, documented in [3], qtest." ...
+
+
+
 
 * TODO:
 	* Done: Remember that the PS2 keyboard support needs to be removed, this is using the GPIO, so that code can be an example of how to read the GPIO directly
