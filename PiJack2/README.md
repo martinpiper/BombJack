@@ -56,7 +56,8 @@
 	
 >> qemu and gpio emulation: https://cs.unibo.it/~davide.berardi6/post/20201204-1.html
 	"Qemu offers a debug protocol, documented in [3], qtest." ...
-
+>> https://stackoverflow.com/questions/60764018/how-to-connect-gpio-in-qemu-emulated-machine-to-an-object-in-host
+>> https://phwl.org/2021/emulated-ARM-Linux-with-Buildroot-and-QEMU/
 
 
 
