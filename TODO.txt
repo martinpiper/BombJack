@@ -713,3 +713,35 @@
 		In addition:
 			Solve to 6502 code...
 			Suggest optional input NOT to produce smaller output logic and/or code.
+
+
+
+
+
+* Fixed width header connector side, with fixed connector placement.
+	Length can vary
+
+
+
+
+* Do I want a DIP switch bank for memory bank select? Instead of a wire for BANKSEL
+	Would some of the old sprite/block CDL/MDL/etc signals be unused with a completely new revision?
+	The APU does use the RH/RV so that's not available.
+	> But check the existing backplanes do connect even the "unused" signals. It should.
+
+
+
+
+* Switch to select APU cache write slot?
+
+
+
+
+* New version numbering for a new revision?
+
+
+
+
+* Tutorials/Teaching aid/Book?
+	Video game hardware and software design
+	
