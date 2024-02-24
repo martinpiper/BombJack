@@ -729,6 +729,15 @@
 	The APU does use the RH/RV so that's not available.
 	> But check the existing backplanes do connect even the "unused" signals. It should.
 	BANKSEL and pixel header outputs would technically need to be on the opposite edge...
+	* Signals to remove since they are not used...
+		> And remove associated logic
+		SLOAD
+		_SLOAD
+		_VPL
+		_CDL
+		_MDL
+		
+		
 
 
 
