@@ -728,6 +728,7 @@
 	Would some of the old sprite/block CDL/MDL/etc signals be unused with a completely new revision?
 	The APU does use the RH/RV so that's not available.
 	> But check the existing backplanes do connect even the "unused" signals. It should.
+	BANKSEL and pixel header outputs would technically need to be on the opposite edge...
 
 
 
