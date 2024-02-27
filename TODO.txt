@@ -738,6 +738,7 @@
 			_CDL
 			_MDL
 	* Since the video board generates these, then the video board can repurpose the signals for the address selector
+	* The BANKSEL header can be retained, just not populated unless really needed for backwards compatibility.
 	
 	
 
