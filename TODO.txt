@@ -780,8 +780,10 @@
 
 
 
-* Possible to expand the palette by adding a register to assert the extra address lines
+* Possible to expand the palette by adding a register to assert the extra address lines A8-A10, utilising all of the 6116 SRAM space
 	This register would allow very fast palette bank switching without needing extra address space in the 9c00 range.
+	The lower bits of $9e00 could be used, since they are not used by anything else.
+
 
 
 

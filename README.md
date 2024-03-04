@@ -142,7 +142,8 @@ Note: Most control registers can be updated at any point during the frame and th
 0x9c00-0x9cff	Palette RAM
 
 
-0x9e00	0x20	Enable display
+0x9e00	0x10	Use background colour
+		0x20	Enable display
 		0x80	BorderY shrink
 
 0x9e08	Layer priority select, for each layer select the input header pixel input
@@ -164,6 +165,11 @@ Note: Most control registers can be updated at any point during the frame and th
 		0x02	Enable layer 2		Chars															0x9000 Chars control register	0x02	Chars screen disable
 		0x04	Enable layer 3		Tiles															0x9e00	0x10	Enable tiles
 		0x08	Enable layer 4		Background or mode7												0xa015	: Flags	:	0 : Enable display
+
+0x9e0b	Background colour
+	If the final pixel is transparent and 0x9e00 0x10 is set, then the palette information is read from this colour value
+	If the final pixel is transparent and 0x9e00 0x10 is not set, then the palette information is read from the last layer colour value
+
 
 
 
