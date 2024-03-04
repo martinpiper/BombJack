@@ -532,6 +532,11 @@
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116SA20TPG?qs=JcGQCygHkIYbYYjhCwPjqQ%3D%3D
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPGI?qs=GVScuG1d83j4PLGc6sWfNQ%3D%3D
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPG?qs=SmUuHNCnblrwZH5u1F5zAw%3D%3D
+	>> The above TPG are also end of life. Will probably need to use SO parts:
+		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116SA15SOG8?qs=JcGQCygHkIaMnzDF8w351A%3D%3D
+			SOIC127P786X210-24N
+			Will need a -CAP variant
+		
 
 
 
@@ -763,3 +768,24 @@
 * Tutorials/Teaching aid/Book?
 	Video game hardware and software design
 	
+	
+	
+	
+* Racking: 6U
+	https://sg.rs-online.com/web/c/enclosures-server-racks/19-inch-racking/subracks/?applied-dimensions=4294517432
+	https://sg.rs-online.com/web/p/subracks/4372551
+	PCB card guides:
+		https://sg.rs-online.com/web/p/pcb-card-guides/5073643?gb=s
+
+
+
+
+* Possible to expand the palette by adding a register to assert the extra address lines
+	This register would allow very fast palette bank switching without needing extra address space in the 9c00 range.
+
+
+
+
+* Video board: Add reset line on power on with suitable IC.
+	This could be used by all boards, like the audio board, to clear register states like the volume or display enable.
+
