@@ -139,7 +139,7 @@ Note: Most control registers can be updated at any point during the frame and th
 0x9000			Chars control register
 		<unused>
 
-0x9c00-0x9cff	Palette RAM
+0x9c00-0x9dff	Palette RAM
 
 
 0x9e00	0x10	Use background colour
