@@ -785,6 +785,7 @@
 	The lower bits of $9e00 could be used, since they are not used by anything else.
 		But a separate latch would be best.
 	>> Also consider, is a palette upgrade to RGB555 a good idea? To use the wider 15 bits of the two 6116 SRAMs?
+		@Demo13 would be a good example of the improved colour space.
 
 
 
