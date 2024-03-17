@@ -1,0 +1,79 @@
+Just RGB565
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --imagequantize 63 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData.bin --convertwritepass
+
+
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --paletteoffset 0 --splitmaps --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData.bin --chars --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --tilewh 8 8 --fitpalettes --outputplanes ../tmp/Demo13Chars_plane --outputscrcol ../tmp/Demo13Chars_map.bin --convertwritepass
+
+
+
+
+
+
+
+
+With splits
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 4 4 4 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 128 --imagequantize 55 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData0.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 4 4 4 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 128 --imagewh 1024 512 --imagequantize 50 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData1.bin --convertwritepass
+
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --paletteoffset 0 --splitmaps --palettesize 16 --rgbshift 4 4 4 --nostacking --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData0.bin --chars --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 128 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/t --outputscrcol ../tmp/t.bin --convertpass --preservedata --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData1.bin --removeregions --startxy 0 128 --imagewh 1024 512 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/Demo13Chars_plane --outputscrcol ../tmp/Demo13Chars_map.bin --convertwritepass
+
+
+
+
+
+With two splits and RGB565
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 128 --imagequantize 75 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData0.bin --convertwritepass
+
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 128 --imagewh 1024 512 --imagequantize 48 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData1.bin --convertwritepass
+
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --paletteoffset 0 --splitmaps --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData0.bin --chars --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 128 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/t --outputscrcol ../tmp/t.bin --convertpass --preservedata --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData1.bin --removeregions --startxy 0 128 --imagewh 1024 512 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/Demo13Chars_plane --outputscrcol ../tmp/Demo13Chars_map.bin --convertwritepass
+
+
+
+
+
+
+With four splits
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 64 --imagequantize 75 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData0.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 64 --imagewh 1024 128 --imagequantize 70 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData1.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 128 --imagewh 1024 192 --imagequantize 65 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData2.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 192 --imagewh 1024 512 --imagequantize 65 --tilewh 8 8 --outputpalettes ../tmp/Demo13PaletteData3.bin --convertwritepass
+
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --paletteoffset 0 --splitmaps --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData0.bin --chars --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 64 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/t --outputscrcol ../tmp/t.bin --convertpass --preservedata --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData1.bin --removeregions --startxy 0 64 --imagewh 1024 128 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/t --outputscrcol ../tmp/t.bin --convertpass --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData2.bin --removeregions --startxy 0 128 --imagewh 1024 192 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/t --outputscrcol ../tmp/t.bin --convertpass --newpalettes --loadpaletteraw ../tmp/Demo13PaletteData3.bin --removeregions --startxy 0 192 --imagewh 1024 512 --tilewh 8 8 --fitpalettes --outputplanes ../tmp/Demo13Chars_plane --outputscrcol ../tmp/Demo13Chars_map.bin --convertwritepass
+
+
+
+This produces a blockier finish to the image, when the palettes are quantized
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 64 --imagequantize 175 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData0.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 64 --imagewh 1024 128 --imagequantize 175 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData1.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 128 --imagewh 1024 192 --imagequantize 175 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData2.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 192 --imagewh 1024 512 --imagequantize 175 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData3.bin --convertwritepass
+
+
+
+Without image quantize, just palette, which doesn't work at all well...
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 0 --imagewh 1024 64 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData0.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 64 --imagewh 1024 128 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData1.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 128 --imagewh 1024 192 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData2.bin --convertwritepass
+
+java -jar ..\..\..\ImageToBitplane\target\imagetobitplane-1.0-SNAPSHOT-jar-with-dependencies.jar --minpalettesize 16 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --resetforcergb --numbitplanes 4 --image "ColourWheel1.png" --startxy 0 192 --imagewh 1024 512 --tilewh 8 8 --nowritepass --palettequantize 16 --outputpalettes ../tmp/Demo13PaletteData3.bin --convertwritepass

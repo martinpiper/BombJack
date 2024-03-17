@@ -786,6 +786,14 @@
 		But a separate latch would be best.
 	>> Also consider, is a palette upgrade to RGB555 a good idea? To use the wider 15 bits of the two 6116 SRAMs?
 		@Demo13 would be a good example of the improved colour space.
+		Two stages, implement extra palettes for regular horizontal bands down the screen. Use the image conversion command line to split the input image into sections.
+		Then increase the colour depth by using RGB shift values of 3 2 3
+	>> ImageToBitplane --rgbshift now works with RGB 565
+	>> Added: Given set the video display to RGB colour 5 6 5
+	> Use -imagewh width height to split the image into palette bands
+	>> See: C:\Work\BombJack\V10.0\RGB565 conversion test notes.txt
+	> TODO: Given set the video display with palette bank
+	> TODO: Quantize image until target palettes reached
 
 
 
