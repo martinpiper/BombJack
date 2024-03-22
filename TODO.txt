@@ -794,6 +794,8 @@
 	>> See: C:\Work\BombJack\V10.0\RGB565 conversion test notes.txt
 	> TODO: Given set the video display with palette bank
 	> TODO: Quantize image until target palettes reached
+	>> Updated to include digital RGB565 colour. Old RGB444 project file copied.
+	** Resistor ladders need updates...
 
 
 
