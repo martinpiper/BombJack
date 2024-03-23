@@ -170,7 +170,8 @@ Note: Most control registers can be updated at any point during the frame and th
 	If the final pixel is transparent and 0x9e00 0x10 is set, then the palette information is read from this colour value
 	If the final pixel is transparent and 0x9e00 0x10 is not set, then the palette information is read from the last layer colour value
 
-
+0x9e0c	Palette bank number
+	See: kBus24Bit_VideoLayer_ExpandedPalettes
 
 
 Sprite 32x32 size select

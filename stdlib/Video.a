@@ -25,6 +25,10 @@ Video_DisableDisplay
 	jsr Video_SetAddressVideoControlRegisters
 	lda #$00
 	sta CIA2PortBRS232
+!ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
+	jsr Video_SetAddressVideoPaletteBankRegister
+	jsr Video_clearByte
+}
 	rts
 
 
@@ -72,6 +76,18 @@ Video_SetAddressVideoControlRegisters
 	lda #>kBus24Bit_VideoLayer_Control
 	sta CIA2PortBRS232
 	rts
+
+!ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
+Video_SetAddressVideoPaletteBankRegister
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_VideoLayer_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_VideoLayer_PaletteBank
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_VideoLayer_PaletteBank
+	sta CIA2PortBRS232
+	rts
+}
 
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 Video_SetAddressVideoOverscanExtentRegisters
@@ -298,7 +314,11 @@ Video_InitDisplaySpritesScrollsBackground
 	sta CIA2PortBRS232
 	lda #kBus24Bit_VideoLayer_BackgroundColour_Default
 	sta CIA2PortBRS232
+!ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
+	jsr Video_clearByte
 }
+}
+
 	; Sprites enable, no large sprites
 	jsr Video_SetAddressSpritesControl
 !ifndef kBus24Bit_VideoLayer_HasOverscan {

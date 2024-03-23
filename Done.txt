@@ -5012,3 +5012,10 @@ All layouts now use V3.1
 
 * UserPort20To32Bit1 : While in reset keep data bus driver away from user port. 
 	This is until latch7_ResetDone is used.
+
+
+
+* Demo9: When moving to RGB565 the chars background, with all the subtle shades of colour, went from 5 palettes to 16 :D
+	This is because the expanded colour rnage just uses more variation.
+	It needed to use RGB444 on image import, then RGB565 on bitplane outpout and palette matching.
+	Similar with Demo7, which relies on a certain number of palettes being used for each of the sections and was using slightly more than 16 palettes.

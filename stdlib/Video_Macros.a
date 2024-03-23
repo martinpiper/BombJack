@@ -60,6 +60,9 @@ kBus24Bit_VideoLayer_XPos_SpriteIndex_8			= $080
 kBus24Bit_VideoLayer_XPos_SpriteIndex_12		= $0c0
 kBus24Bit_VideoLayer_XPos_SpriteIndex_16		= $100
 kBus24Bit_VideoLayer_XPos_SpriteIndex_20		= $140
+!ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
+kBus24Bit_VideoLayer_PaletteBank	= $9e0c
+}
 }
 kBus24Bit_VideoLayer_Palette		= $9c00
 
@@ -181,8 +184,17 @@ kBus24Bit_MergeLayer_Register_Control_Default = kBus24Bit_MergeLayer_Register_Co
 
 
 
-
-
+!ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
+!macro MBus24Bit_MakePaletteRGB .r , .g , .b {
+	+MLittleEndian16Bit (.r>>3) | ((.g>>2)<<5) | ((.b>>3)<<11)
+}
+!macro MBus24Bit_SendPaletteRGB .r , .g , .b {
+	lda #< ((.r>>3) | ((.g>>2)<<5) | ((.b>>3)<<11))
+	sta CIA2PortBRS232
+	lda #> ((.r>>3) | ((.g>>2)<<5) | ((.b>>3)<<11))
+	sta CIA2PortBRS232
+}
+} else {
 !macro MBus24Bit_MakePaletteRGB .r , .g , .b {
 	+MLittleEndian16Bit (.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8)
 }
@@ -191,6 +203,7 @@ kBus24Bit_MergeLayer_Register_Control_Default = kBus24Bit_MergeLayer_Register_Co
 	sta CIA2PortBRS232
 	lda #> ((.r>>4) | ((.g>>4)<<4) | ((.b>>4)<<8))
 	sta CIA2PortBRS232
+}
 }
 
 
