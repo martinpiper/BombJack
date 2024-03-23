@@ -796,6 +796,12 @@
 	> TODO: Quantize image until target palettes reached
 	>> Updated to include digital RGB565 colour. Old RGB444 project file copied.
 	** Resistor ladders need updates...
+		Will the maximum voltages need balancing given the difference in resistors?
+			Check voltage of RGB565 white and black and mid
+	* TestData.txt and associated binary files will need RGB565 conversion
+	* Comparing output schematics seems fine:
+		Original hex part: https://www.ti.com/lit/ds/symlink/sn74ls174.pdf?ts=1711156919617&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
+		Octal used in the audio board: https://www.ti.com/lit/ds/symlink/sn74ls373.pdf?ts=1711156789418&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
 
 
 
