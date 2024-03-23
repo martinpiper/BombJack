@@ -802,7 +802,8 @@
 				All outputs use 6 bits, the R and B lower bits use 0 voltage from the hex latches.
 			Done: Use three latches, probably use three hex instead of two hex like before.
 	* Done: Update demos to use RGB565
-	** Update schematic for R-2R and latches... Noting which latch has which colour.
+	** Done: Update schematic for R-2R and latches... Noting which latch has which colour.
+		Removed obsolete connectors, keeping VGA, and moved the video signal output together.
 	* TestData.txt and associated binary files will need RGB565 conversion
 	* Comparing output schematics seems fine:
 		Original hex part: https://www.ti.com/lit/ds/symlink/sn74ls174.pdf?ts=1711156919617&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
