@@ -766,10 +766,4 @@
 
 
 
-* Video board: Add reset line on power on with suitable IC.
-	This could be used by all boards, like the audio board, to clear register states like the volume or display enable.
-
-
-
-
 * Remove top and bottom edge components and size for rack mount.

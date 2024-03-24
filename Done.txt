@@ -5085,3 +5085,11 @@ All layouts now use V3.1
 
 
 * Remove video clock osc and hardwire the crystal.
+
+
+
+
+* Video board: Add reset line on power on with suitable IC.
+	This could be used by all boards, like the audio board, to clear register states like the volume or display enable.
+	> VIDPOWRESET to B15 VIDEOP1
+	> Used by U264 display control register
