@@ -5069,3 +5069,8 @@ All layouts now use V3.1
 	* Done: Since the video board generates these, then the video board can repurpose the signals for the address selector
 		Also updated the Audio, APU, Backplane, BackplaneBridge projects
 	* The BANKSEL header can be retained, just not populated unless really needed for backwards compatibility.
+
+
+
+
+* Video EBS0 select needs a full comparator and DIP switch

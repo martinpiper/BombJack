@@ -741,8 +741,7 @@
 
 
 
-* Video EBS0 select needs a full comparator and DIP switch
-	All the other layers also need this for their EBS selectors, except root sheet 4 which has this already.
+* All the other layers also need comparator this for their EBS selectors, except root sheet 4 and video which has this already.
 
 
 
