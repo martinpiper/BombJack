@@ -5053,3 +5053,19 @@ All layouts now use V3.1
 		Original hex part: https://www.ti.com/lit/ds/symlink/sn74ls174.pdf?ts=1711156919617&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
 		Octal used in the audio board: https://www.ti.com/lit/ds/symlink/sn74ls373.pdf?ts=1711156789418&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
 	* Using RAM 6264 means the parts are still in stock
+
+
+
+* Populate BANKSEL signals to backplane from Video card
+	* Signals to remove since they are not used...
+		> Done: And remove associated logic
+		>> Done: Video:
+			SLOAD	=	_EXTCSB800
+			_SLOAD	=	_EXTCSB000
+			_VPL	=	_EXTCS9000
+			_CDL	=	_EXTCS9800
+			_MDL	=	_EXTCSA000
+		> New maps:	_EXTCS8000	_EXTCS8800	_EXTCSA800
+	* Done: Since the video board generates these, then the video board can repurpose the signals for the address selector
+		Also updated the Audio, APU, Backplane, BackplaneBridge projects
+	* The BANKSEL header can be retained, just not populated unless really needed for backwards compatibility.

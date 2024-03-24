@@ -733,19 +733,9 @@
 	Would some of the old sprite/block CDL/MDL/etc signals be unused with a completely new revision?
 	The APU does use the RH/RV so that's not available.
 	> But check the existing backplanes do connect even the "unused" signals. It should.
+		Checked, it does.
 	BANKSEL and pixel header outputs would technically need to be on the opposite edge...
-	* Signals to remove since they are not used...
-		> Done: And remove associated logic
-		>> Done: Video:
-			SLOAD	=	_EXTCSB800
-			_SLOAD	=	_EXTCSB000
-			_VPL	=	_EXTCS9000
-			_CDL	=	_EXTCS9800
-			_MDL	=	_EXTCSA000
-		> New maps:	_EXTCS8000	_EXTCS8800	_EXTCSA800
-	* Done: Since the video board generates these, then the video board can repurpose the signals for the address selector
-		Also updated the Audio, APU, Backplane, BackplaneBridge projects
-	* The BANKSEL header can be retained, just not populated unless really needed for backwards compatibility.
+		For racking
 	
 	
 
