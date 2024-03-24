@@ -780,39 +780,6 @@
 
 
 
-* Possible to expand the palette by adding a register to assert the extra address lines A8-A10, utilising all of the 6116 SRAM space
-	This register would allow very fast palette bank switching without needing extra address space in the 9c00 range.
-	The lower bits of $9e00 could be used, since they are not used by anything else.
-		But a separate latch would be best.
-	>> Also consider, is a palette upgrade to RGB555 a good idea? To use the wider 15 bits of the two 6116 SRAMs?
-		@Demo13 would be a good example of the improved colour space.
-		Two stages, implement extra palettes for regular horizontal bands down the screen. Use the image conversion command line to split the input image into sections.
-		Then increase the colour depth by using RGB shift values of 3 2 3
-	>> ImageToBitplane --rgbshift now works with RGB 565
-	>> Added: Given set the video display to RGB colour 5 6 5
-	> Use -imagewh width height to split the image into palette bands
-	>> See: C:\Work\BombJack\V10.0\RGB565 conversion test notes.txt
-	> TODO: Given set the video display with palette bank
-	> TODO: Quantize image until target palettes reached
-	>> Updated to include digital RGB565 colour. Old RGB444 project file copied.
-	** Done: Resistor ladders need updates...
-		Will the maximum voltages need balancing given the difference in resistors?
-			Check voltage of RGB565 white and black and mid
-				Checked with R-2R calculator, the difference is minimal with a 75ohm display resistor...
-				All outputs use 6 bits, the R and B lower bits use 0 voltage from the hex latches.
-			Done: Use three latches, probably use three hex instead of two hex like before.
-	* Done: Update demos to use RGB565
-	** Done: Update schematic for R-2R and latches... Noting which latch has which colour.
-		Removed obsolete connectors, keeping VGA, and moved the video signal output together.
-	* TestData.txt and associated binary files will need RGB565 conversion
-	* Comparing output schematics seems fine:
-		Original hex part: https://www.ti.com/lit/ds/symlink/sn74ls174.pdf?ts=1711156919617&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
-		Octal used in the audio board: https://www.ti.com/lit/ds/symlink/sn74ls373.pdf?ts=1711156789418&ref_url=https%253A%252F%252Fwww.mouser.sg%252F
-	* Using RAM 6264 means the parts are still in stock
-
-
-
-
 * Video board: Add reset line on power on with suitable IC.
 	This could be used by all boards, like the audio board, to clear register states like the volume or display enable.
 
