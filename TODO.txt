@@ -751,11 +751,6 @@
 
 
 
-* New version numbering for a new revision?
-
-
-
-
 * Tutorials/Teaching aid/Book?
 	Video game hardware and software design
 	
@@ -774,10 +769,6 @@
 * Video board: Add reset line on power on with suitable IC.
 	This could be used by all boards, like the audio board, to clear register states like the volume or display enable.
 
-
-
-
-* Remove video clock osc and hardwire the crystal.
 
 
 

@@ -5074,3 +5074,14 @@ All layouts now use V3.1
 
 
 * Video EBS0 select needs a full comparator and DIP switch
+
+
+
+
+* New version numbering for a new revision?
+	MegaWang V10.0 Video
+	etc
+
+
+
+* Remove video clock osc and hardwire the crystal.
