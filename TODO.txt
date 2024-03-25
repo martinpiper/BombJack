@@ -760,9 +760,8 @@
 * Racking: 6U
 	https://sg.rs-online.com/web/c/enclosures-server-racks/19-inch-racking/subracks/?applied-dimensions=4294517432
 	https://sg.rs-online.com/web/p/subracks/4372551
-	PCB card guides:
-		https://sg.rs-online.com/web/p/pcb-card-guides/5073643?gb=s
-
+	PCB rack rails: https://sg.rs-online.com/web/p/rack-rails/0487735?gb=s
+	Screw pack?: https://sg.rs-online.com/web/p/rack-mounting-hardware/2918644
 
 
 
