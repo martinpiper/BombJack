@@ -770,12 +770,3 @@
 
 
 
-* Video: Analogue area, these digital signals are straying into the area:
-	OPXG0 OPXG1 OPXG2 they are routing via the top and bottom?
-	Maybe the 7B2 7C2 needs to be placed near the entrances to the latches?
-	> Narrow the horizontal keepout areas between the components.
-	> Move the resistor ladders down to the edge of the keepout.
-	> Create breakouts to vias for the OPX* signals near the left for each latch.
-	> Also breakouts near the left for 6MHz and FINALENABLEPIXELS
-	> Widen the gap between the output latches an the resistor ladders
-
