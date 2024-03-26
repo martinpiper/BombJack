@@ -5105,3 +5105,7 @@ All layouts now use V3.1
 	> Create breakouts to vias for the OPX* signals near the left for each latch.
 	> Also breakouts near the left for 6MHz and FINALENABLEPIXELS
 	> Widen the gap between the output latches an the resistor ladders
+
+
+
+* Added an optional DSW13 for VIDPOWRESET to LOCALVIDPOWRESET or to choose 5V
