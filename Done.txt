@@ -5109,3 +5109,4 @@ All layouts now use V3.1
 
 
 * Added an optional DSW13 for VIDPOWRESET to LOCALVIDPOWRESET or to choose 5V
+	With default silkscreen hint.
