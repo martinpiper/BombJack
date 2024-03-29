@@ -5110,3 +5110,15 @@ All layouts now use V3.1
 
 * Added an optional DSW13 for VIDPOWRESET to LOCALVIDPOWRESET or to choose 5V
 	With default silkscreen hint.
+
+
+
+
+* MegaWang logo (or text) for layout solder layers or silk screen
+	main9.a kJustForLogo and kJustForLogoMonchrome
+	Scale half
+	MegaWang 2000 Turbo Edition logo half.bmp
+	> But it would impact the component labels... doh.
+	Changed board text to "MegaWang" instead
+	Used Bombjack\MegaWang 2000 Turbo Edition logo.bmp
+
