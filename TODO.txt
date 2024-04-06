@@ -760,3 +760,20 @@
 
 
 
+
+* Check the emulated video layer has the precise comparator for EBBS.
+
+
+
+
+* A full bitmap display layer?
+	Double buffered?
+	A bit like the vector layer but more memory and no RLE
+	Can be scrolled?
+
+
+
+
+* Upgrading the 6116 RAMs to 6264 RAMs would be made possible by adding an extra control register to map those higher address lines. Similar to the palette bank register.
+	For the sprites boards this would allow sprite positions to be populated across banks and then very quickly switched on a scanline, or even during a scanline, to allow faster raster line multiplexing.
+	This is faster since sprite position updates would not need to be timed according to the sprite (or scaled sprite) drawing schedule.
