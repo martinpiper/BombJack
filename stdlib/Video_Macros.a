@@ -65,6 +65,11 @@ kBus24Bit_VideoLayer_PaletteBank	= $9e0c
 }
 }
 kBus24Bit_VideoLayer_Palette		= $9c00
+kBus24Bit_VideoLayer_NumPalettes			= 16
+kBus24Bit_VideoLayer_ColoursPerPalette		= 16
+kBus24Bit_VideoLayer_BytesPerColour			= 2
+kBus24Bit_VideoLayer_BytesPerPalette		= kBus24Bit_VideoLayer_ColoursPerPalette * kBus24Bit_VideoLayer_BytesPerColour
+kBus24Bit_VideoLayer_BytesPerPaletteBank	= kBus24Bit_VideoLayer_BytesPerPalette * kBus24Bit_VideoLayer_NumPalettes
 
 kBus24Bit_VideoLayer_Priority_Sprites		= %00
 kBus24Bit_VideoLayer_Priority_Chars			= %01
