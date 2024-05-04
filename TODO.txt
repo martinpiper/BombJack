@@ -777,3 +777,12 @@
 * Upgrading the 6116 RAMs to 6264 RAMs would be made possible by adding an extra control register to map those higher address lines. Similar to the palette bank register.
 	For the sprites boards this would allow sprite positions to be populated across banks and then very quickly switched on a scanline, or even during a scanline, to allow faster raster line multiplexing.
 	This is faster since sprite position updates would not need to be timed according to the sprite (or scaled sprite) drawing schedule.
+
+
+
+
+* After getting new RGB565 video, the APU hardware tests, the THO 74LS with bodge wires:
+	Using the fastest clock rate, VIDCLK, with the new or old video board, is very unreliable with Demo6a/b/c but it used to work before. None of the rasters happen, the screen doesn't scroll etc. The scaled sprites animate but they are using the CPU.
+	Switching to the next slower clock rate, VIDCLK/2, the startup is reliable.
+	However demo7 with the multiplexed APU sprites was more reliable, but would sometimes get stuck in a fail to start APU state (especially after demo6) with the fastest clock rate, the slower clock rate is reliable.
+	Demo13 will start OK with faster and slow cock rate
