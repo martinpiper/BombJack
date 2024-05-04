@@ -781,8 +781,20 @@
 
 
 
-* After getting new RGB565 video, the APU hardware tests, the THO 74LS with bodge wires:
+* Debugging APU startup: After getting new RGB565 video, the APU hardware tests, the THO 74LS with bodge wires:
 	Using the fastest clock rate, VIDCLK, with the new or old video board, is very unreliable with Demo6a/b/c but it used to work before. None of the rasters happen, the screen doesn't scroll etc. The scaled sprites animate but they are using the CPU.
 	Switching to the next slower clock rate, VIDCLK/2, the startup is reliable.
 	However demo7 with the multiplexed APU sprites was more reliable, but would sometimes get stuck in a fail to start APU state (especially after demo6) with the fastest clock rate, the slower clock rate is reliable.
 	Demo13 will start OK with faster and slow cock rate
+	>> Debugging more:
+		main6b.a
+		If this:
+			jsr DisplayScreen
+			jsr APU_Enable
+		Is changed to wait a VBlank before enabling the APU:
+			jsr DisplayScreen
+			jsr Video_WaitVBlank
+			jsr APU_Enable
+		Then the startup is reliable at the faster clock rate.
+	> Question is why? Is the APU getting stuck waiting for something?
+		Is it getting confused waiting for VIDCLK to start?
