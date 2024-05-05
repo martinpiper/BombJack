@@ -43,7 +43,7 @@ This simulation can also be used to debug failures in original boards, since dis
 
 Good question! For my thinking, it is a question of what level to want to teach. In software eningeering there are numerous languages, C/C++, Python, Java, Forth, Pascal, etc. There is also machine code and usually some form of assembler mnemonic language which directly maps to machine code, the user accessible low-level language used by a particular CPU. Below that there can be microcode which is often not user accesible, this tends to control the internal state of a CPU. As a software engineer, I see value in using higher level languages, but often use low-level assembler when I want to optimise.
 
-A FPGA or CPLD, while it deals with logical operations, is usually programmed via a higher level language (VHDL or Verilog or similar) abstraction above the low-level logic cells actually used by the device, often (not always) the same code can be compield for subtly different devices with minimal changes.
+A FPGA or CPLD, while it deals with logical operations, is usually programmed via a higher level language (VHDL or Verilog or similar) abstraction above the low-level logic cells actually used by the device, often (not always) the same code can be compiled for subtly different devices with minimal changes.
 
 7400-series discrete logic, specifically 74LS series logic used in this project, can be considered to be low-level, analogous to using machine code or assembler. There is a lower level, which is using discrete transistors to create logic cells, like NAND, OR, NOT, etc. but that really is a low level more like microcode.
 

@@ -798,3 +798,15 @@
 		Then the startup is reliable at the faster clock rate.
 	> Question is why? Is the APU getting stuck waiting for something?
 		Is it getting confused waiting for VIDCLK to start?
+
+
+
+
+* Audio: Add a "sample bank" register, or use the bits from an existing register?, to allow more than 64KB of sample data?
+	Could then perhaps use a larger SMT SRAM.
+
+
+
+
+* Video: Perhaps expand the range of the RGB565 voltage levels and allow the pots to have more impact?
+	Might be possible to bodge with parallel resistors.
