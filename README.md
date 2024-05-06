@@ -130,6 +130,12 @@ The Proteus sheet numbers correspond to the original schematic page numbers as w
 	1. 2-1 pixel data combiners - Two blocks
 
 
+### How to access the hardware
+
+In the original hardware, used in the Bombjack arcade game, the Z80 data and its address bus was partially connected to the hardware with a couple of address windows at $9000 to $9fff (perhaps a bit wider than that), this was mostly write RAM as far as the Z80 was concerned. It was sprite registers, some control registers, palette and char screen RAM. The rest of the video internal memory was ROM, and could not be addressed by the Z80. The Z80 would have to time writes to the video address space (RAM) during the VBLANK when the video hardware was not expecting to read RAM to avoid contention.
+
+
+For this updated hardware, the C64 (or a Z80) sends data bytes via the user port (parallel transfer, so it's fast, one clock cycle to write), with some control signals, to write to a 24 bit address space in the hardware. This is usually accomplished by the UserPortTo24BitAddress.pdsprj (or better) project. Basically a control signal resets the internal state, the next few bytes are the address to write, then next bytes are consecutively written to the address space. There is a signal from the hardware to the C64 via the user port for screen refresh (VBLANK) which is read as an NMI (CIA2 FLAG pin) request on the C64. This means there is no bus contention with the C64 memory bus to the hardware. Writes to the hardware which involve RAM, rather than register latches, should usually be timed to coincide with VBLANK or HBLANK to avoid visual glitches.
 
 
 ### Memory map
