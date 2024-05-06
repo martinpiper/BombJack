@@ -33,6 +33,9 @@ I was looking at Bomb Jack boards on ebay and pondering how they had enough fill
 
 In the end to get some clarity on the sprite plotting specifically I started to transcribe what was thought to be the sprite logic portion of the schematic into Proteus, since it can simulate digital electronics really well.
 
+Interestingly the Amiga computer, with its custom chips, was designed and prototyped using breadboards: https://arstechnica.com/gadgets/2007/08/a-history-of-the-amiga-part-3/
+
+
 ## Digital display and audio simulation
 
 The arcade hardware uses resistor ladders to convert 4x3 bit RGB+H+V sync digital signals into analog, this is a typical model for the period. I later updated the design to use 15 bit colour with 16x16 palette entries. Since the simulation software is optimised for digital model it makes sense to have a digital display driver simulation that accepts digital signals. Hence I created this Proteus VSM module: https://github.com/martinpiper/DigitalDisplay
