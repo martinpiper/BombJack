@@ -5,6 +5,7 @@
 
 
 * UserPort20To32Bit1 is there a quick and cheap way to allow a very simple latched input from an external FTDI?
+	> Perhaps isolate the userport from the C64 on a particular FTDI signal and latch the userport inputs from the FTDI?
 	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
 		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
 			UM245R?	https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
