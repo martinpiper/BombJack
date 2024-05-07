@@ -4687,25 +4687,6 @@ All layouts now use V3.1
 				09032966825222.step also needs adjustment:
 				** The real backplane board also needs model adjustment: 09022646824.step needs: 86.8mm 38.2mm 12.5mm
 				Choose the parts with most stock and in gold or copper
-	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
-		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
-			UM245R?	https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
-			Tech doc:
-				https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
-				https://ftdichip.com/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R
-			Code examples: https://ftdichip.com/software-examples/code-examples/
-			Could just send data to the COM port from the PC
-				Since there are 8 bits, it would be possible to use 4 bits for control, and 4 bits for parallel data
-			Although ideally being able to control other output lines on the C bus and read the _FLAG2 would be better
-			>> Connecting the board to the PC, usually creates a COM4: device (can be detected with the mode command)
-				echo abcd > COM4:
-				Pin 23 RXF# goes low when the echo command sends data
-					Then strobing low 12 RD# does show the expected ASCII data on the data pins 1 5 3 10 2 8 9 6 (DB0-DB7)
-					Very simple logic here could be using a clock crystal (1MHz might do) OR the clock with pin 23 RXF# and then use that for pin 12 RD# strobe
-					First latch the DB0-DB7 into a full latch, for signal stability.
-					Then latch the DB0-DB3 into suitable latch signals selected by DB4-DB7
-						This does mean at least 4 writes to send one 8 bit value
-							Low nybble data setup with DB4 lo and then DB4 to high to latch
 	** Maybe it would be better to have the signals PA2 , SERIALATN , SP1 , SP2 ( on the strobe _PC) to be used to address up to 16 latches?
 		>> Created UserPort20To32Bit1.pdsprj
 		This would allow address latches to be set independently, also a control register to set data direction (DDR)
