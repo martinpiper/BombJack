@@ -203,14 +203,18 @@ d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable
 ;d=BreakPoint
 
 ; Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
-d=latch4 | _PC | $11
-d=latch4 | $11
-d=latch4 | _PC | $22
-d=latch4 | $22
-d=latch4 | _PC | $33
-d=latch4 | $33
-d=latch4 | _PC | $44
-d=latch4 | $44
+d=latch4 | _PC | $55
+d=latch4 | $55
+d=latch4 | _PC | $55
+d=latch4 | _PC | $66
+d=latch4 | $66
+d=latch4 | _PC | $66
+d=latch4 | _PC | $77
+d=latch4 | $77
+d=latch4 | _PC | $77
+d=latch4 | _PC | $88
+d=latch4 | $88
+d=latch4 | _PC | $88
 
 
 ; Set latch7 - Enable RAM to pass-through
