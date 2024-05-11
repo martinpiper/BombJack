@@ -18,7 +18,8 @@
 			Although ideally being able to control other output lines on the C bus and read the _FLAG2 would be better
 			>> Note: The J1 jumper power options of logic levels on page 11: https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
 				Connect pins 2 and 3, basically.
-			>> Note: Page 20 self powered mode, disconnect J2 and power the board with 5V to pin 15 and GND pin 7 and 24.
+			>> Note: Page 20 self powered mode, disconnect J2 and power the board with 5V to pin 21 & 15 and GND pin 7 & 24.
+				However bus powered, page 19, might be better as it doesn't need to jumper to be configured.
 			>> Note: Dimensions and pins on page 14
 			>> Connecting the board to the PC, usually creates a COM4: device (can be detected with the mode command)
 				echo abcd > COM4:
