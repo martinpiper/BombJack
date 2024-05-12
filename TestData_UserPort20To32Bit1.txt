@@ -26,11 +26,13 @@
 
 
 ; Latch7 bits
-; $00	Pass-through (default on reset)
-; $01	Choose RAM
-; $02	Pass-through disable
-; $03	Disabled, low data, high PA2 high _PC
-; $04	Internal PA2
+; $00	Mode: Pass-through (default on reset)
+; $01	Mode: Choose RAM
+; $02	Mode: Pass-through disable
+; $03	Mode: Disabled, low data, high PA2 high _PC
+; $04	Internal PA2 value
+; $08	Fast DMA start
+; $80	Reset has completed, wakeup the interface
 .latch7_Passthrough=$00
 .latch7_RAM=$01
 .latch7_PassthroughDisable=$02
@@ -270,6 +272,7 @@ d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | DDR | latch7_InternalPA2
 ; Set latch7 - Disabled mode, ($03)
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | latch7_Disabled | latch7_InternalPA2
+; At this point latch7_Disabled is used which forces PA2 to be high no matter what.
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
 
 ; Reset address...
