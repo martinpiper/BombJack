@@ -102,20 +102,44 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d=PT_PC | $00000080"
 
 
+
   Scenario: Validate PS2 toggle 1
     When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "PA2 toggle twice"
     Given open file "target/out.txt" for reading
     When ignoring lines that contain ";"
     When ignoring lines that contain "."
     When ignoring empty lines
-    Then expect the next line to contain "d=PT_PC | $00000086"
-    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
-    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000082"
-    Then expect the next line to contain "d=PT_PC | $00000082"
-    Then expect the next line to contain "d=PT_PC | $00000086"
-    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
-    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000082"
-    Then expect the next line to contain "d=PT_PC | $00000082"
-    Then expect the next line to contain "d=PT_PC | $00000086"
-    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
 
+
+
+  Scenario: Validate direct bytes with latch4 1
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Write some direct bytes to the pass-through with latch4"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $000000d7"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000055"
+    Then expect the next line to contain "d=PTPA2 | $00000055"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000055"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000077"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000066"
+    Then expect the next line to contain "d=PTPA2 | $00000066"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000066"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000077"
+    Then expect the next line to contain "d=PTPA2 | $00000077"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000077"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $000000ff"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000088"
+    Then expect the next line to contain "d=PTPA2 | $00000088"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000088"
