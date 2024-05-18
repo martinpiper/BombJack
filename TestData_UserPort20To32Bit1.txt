@@ -46,14 +46,14 @@
 .BreakPoint = $80000000
 
 
-; During power-on reset
+:emit During power-on reset
 d=latch0 | _PC | $00
 d=latch0 | _PC | $01
 d=latch0 | _PC | $02
 d=latch0 | _PC | $03
 d=latch0 | _PC | $04
 
-; After power-on reset
+:emit After power-on reset
 ; Default is pass-through mode, these inputs should be seen at the output, as long as latch7 isn't altered
 ; Note: latch8 is effectively PA2 and latch0 is not PA2
 d=latch8 | _PC | $00
@@ -76,12 +76,12 @@ d=latch8 | _PC | $03
 d=latch8 | $03
 d=latch8 | _PC | $03
 
-; Set latch7 - Disabled mode, ($03)
+:emit Set latch7 - Disabled mode, ($03)
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
 d=latch7 | latch7_ResetDone | latch7_Disabled
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
 
-; Set adders
+:emit Set adders
 d=latch8 | _PC | $18
 d=latch8 | $18
 d=latch8 | _PC | $18
@@ -93,17 +93,17 @@ d=latch10 | $00
 d=latch10 | _PC | $00
 
 
-; Set latch0
+:emit Set latch0
 d=latch0 | _PC | $04
 d=latch0 | $37
 d=latch0 | _PC | $37
 
-; Set latch1
+:emit Set latch1
 d=latch1 | _PC | $37
 d=latch1 | $01
 d=latch1 | _PC | $01
 
-; Set latch6 (Write RAM)
+:emit Set latch6 (Write RAM)
 d=latch6 | _PC | $00
 ; Write $23
 d=latch6 | $23
@@ -119,22 +119,22 @@ d=latch6 | $98
 d=latch6 | _PC | $98
 
 
-; Reset address...
+:emit Reset address...
 d=latch0 | _PC | $04
 ; Set latch0 = $37
 d=latch0 | $37
 d=latch0 | _PC | $37
 
-; Set latch1
+:emit Set latch1
 d=latch1 | _PC | $37
-; Set latch0 = $01
+; Set latch1 = $01
 d=latch1 | $01
 d=latch1 | _PC | $01
 
-; Simulate C64 side setting user port DDR
+:emit Simulate C64 side setting user port DDR
 d=latch1 | _PC | $01 | DDR
 
-; Set latch5
+:emit Set latch5
 d=latch5 | _PC | $01 | DDR
 ; "Write" latch5 (Read RAM)
 d=latch5 | $00 | DDR
@@ -150,13 +150,13 @@ d=latch5 | $00 | DDR
 d=latch5 | _PC | $00 | DDR
 
 
-; Write to latch3 which should read the added address...
+:emit Write to latch3 which should read the added address...
 d=latch3 | _PC | $00
 d=latch3 | $00
 d=latch3 | _PC | $00
 
 
-; Set latch6 (Write RAM) continuing with the last read address
+:emit Set latch6 (Write RAM) continuing with the last read address
 d=latch6 | _PC | $00
 ; Write $11
 d=latch6 | $11
@@ -172,26 +172,26 @@ d=latch6 | $44
 d=latch6 | _PC | $44
 
 
-; Reset address...
+:emit Reset address...
 d=latch0 | _PC | $04
 ; Set latch0 = $37
 d=latch0 | $37
 d=latch0 | _PC | $37
 
-; Set latch1
+:emit Set latch1
 d=latch1 | _PC | $37
 ; Set latch0 = $01
 d=latch1 | $01
 d=latch1 | _PC | $01
 
-; Set latch7 - Enable pass-through
+:emit Set latch7 - Enable pass-through
 ; When altering the pass-through operation via latch7, do not track its _PC signal.
 
 d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
 d=latch7 | latch7_ResetDone | latch7_Passthrough
 d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
 
-; PA2 toggle twice
+:emit PA2 toggle twice
 ; Note: Latch7 controls internal PA2
 d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
@@ -207,7 +207,7 @@ d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalP
 ; Break
 ;d=BreakPoint
 
-; Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
+:emit Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
 d=latch4 | _PC | $55
 d=latch4 | $55
 d=latch4 | _PC | $55
@@ -222,16 +222,16 @@ d=latch4 | $88
 d=latch4 | _PC | $88
 
 
-; Set latch7 - Enable RAM to pass-through
+:emit Set latch7 - Enable RAM to pass-through
 d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | latch7_RAM | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_InternalPA2
 
 
-; Simulate C64 side setting user port DDR
+:emit Simulate C64 side setting user port DDR
 d=latch7 | latch7_ResetDone | _PC | latch7_RAM	| DDR | latch7_InternalPA2
 
-; Set latch5
+:emit Set latch5
 d=latch5 | _PC | $01	| DDR
 ; "Write" latch5 (Read RAM)
 d=latch5 | $00	| DDR
@@ -246,7 +246,7 @@ d=latch5 | _PC | $00	| DDR
 d=latch5 | $00	| DDR
 d=latch5 | _PC | $00	| DDR
 
-; Read from latch3 which should read the added address...
+:emit Read from latch3 which should read the added address...
 d=latch3 | _PC | $00	| DDR
 d=latch3 | $00	| DDR
 d=latch3 | _PC | $00	| DDR
@@ -266,29 +266,29 @@ d=latch5 | _PC | $00	| DDR
 
 
 
-; Fast DMA test
+:emit Fast DMA test
 ; DDR switch
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | DDR | latch7_InternalPA2
 
-; Set latch7 - Disabled mode, ($03)
+:emit Set latch7 - Disabled mode, ($03)
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | latch7_Disabled | latch7_InternalPA2
 ; At this point latch7_Disabled is used which forces PA2 to be high no matter what.
 d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
 
-; Reset address...
+:emit Reset address...
 d=latch0 | _PC | $04
 ; Set latch0 = $37
 d=latch0 | $37
 d=latch0 | _PC | $37
 
-; Set latch1
+:emit Set latch1
 d=latch1 | _PC | $37
 ; Set latch0 = $01
 d=latch1 | $01
 d=latch1 | _PC | $01
 
-; Set counter latches
+:emit Set counter latches
 d=latch11 | _PC | $04
 d=latch11 | $13
 d=latch11 | _PC | $13
@@ -297,13 +297,13 @@ d=latch12 | _PC | $fe
 d=latch12 | $fe
 d=latch12 | _PC | $fe
 
-; Enable the DMA length counter
+:emit Enable the DMA length counter
 d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
 d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
 
 
-; simulate the C64 switching to read latch13, the status of the DMA
+:emit Simulate the C64 switching to read latch13, the status of the DMA
 d=latch13 | _PC  | DDR
 d=latch13 | DDR
 d=latch13 | _PC  | DDR

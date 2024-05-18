@@ -23,6 +23,7 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
 
     Given open file "output\DebugUserPort20To32Bit1_RAMWrite.txt" for reading
     When ignoring lines that contain ";"
+    When ignoring empty lines
     Then expect the next line to contain "d$00013723"
     Then expect the next line to contain "d$00013834"
     Then expect the next line to contain "d$00013917"
@@ -34,15 +35,12 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
 
 
 
-  Scenario: Validate passthrough 1, until: Set latch7 - Disabled mode, ($03)
-    Given open file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" for reading
+  Scenario: Validate passthrough 1
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "During power-on reset"
+    Given open file "target/out.txt" for reading
     When ignoring lines that contain ";"
     When ignoring lines that contain "."
-    Then expect the next line to contain "d=PT_PC | $000000ff"
-    Then expect the next line to contain "d=PT_PC"
-    Then expect the next line to contain "d$00000000"
-    Then expect the next line to contain "d=PT_PC"
-    Then expect the next line to contain "d$00000000"
+    When ignoring empty lines
     Then expect the next line to contain "d=PT_PC"
     Then expect the next line to contain "d=PT_PC | $00000001"
     Then expect the next line to contain "d=PT_PC | $00000003"
@@ -50,6 +48,15 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d=PT_PC | $00000003"
     Then expect the next line to contain "d=PT_PC | $00000007"
     Then expect the next line to contain "d=PT_PC | $00000004"
+
+
+
+  Scenario: Validate passthrough 2
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "After power-on reset"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000004"
     Then expect the next line to contain "d=PTPA2 | PT_PC"
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000001"
@@ -68,3 +75,47 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000002"
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
     Then expect the next line to contain "d=PTPA2 | $00000003"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
+
+
+
+  Scenario: Validate disabled mode 1
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Disabled mode"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PT_PC | $00000083"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000083"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+
+
+
+  Scenario: Validate passthrough 3
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable pass-through"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000080"
+    Then expect the next line to contain "d=PT_PC | $00000080"
+
+
+  Scenario: Validate PS2 toggle 1
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "PA2 toggle twice"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PT_PC | $00000086"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000082"
+    Then expect the next line to contain "d=PT_PC | $00000082"
+    Then expect the next line to contain "d=PT_PC | $00000086"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000082"
+    Then expect the next line to contain "d=PT_PC | $00000082"
+    Then expect the next line to contain "d=PT_PC | $00000086"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000086"
+
