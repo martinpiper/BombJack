@@ -22,27 +22,12 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
   Scenario: RAM validation test 1
 
     Given open file "output\DebugUserPort20To32Bit1_RAMWrite.txt" for reading
-    And skip line
-    And skip line
+    When ignoring lines that contain ";"
     Then expect the next line to contain "d$00013723"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00013834"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00013917"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00013a98"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00025311"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00025422"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00025533"
-    And skip line
-    And skip line
     Then expect the next line to contain "d$00025644"
