@@ -55,6 +55,7 @@ d=latch0 | _PC | $04
 
 ; After power-on reset
 ; Default is pass-through mode, these inputs should be seen at the output, as long as latch7 isn't altered
+; Note: latch8 is effectively PA2 and latch0 is not PA2
 d=latch8 | _PC | $00
 d=latch8 | _PC | $01
 d=latch0 | _PC | $02
