@@ -19,7 +19,7 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
 
 
 
-  Scenario: RAM validation test 1
+  Scenario: RAM validation test 1, for the full execution
 
     Given open file "output\DebugUserPort20To32Bit1_RAMWrite.txt" for reading
     When ignoring lines that contain ";"
@@ -31,3 +31,40 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d$00025422"
     Then expect the next line to contain "d$00025533"
     Then expect the next line to contain "d$00025644"
+
+
+
+  Scenario: Validate passthrough 1, until: Set latch7 - Disabled mode, ($03)
+    Given open file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    Then expect the next line to contain "d=PT_PC | $000000ff"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d$00000000"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d$00000000"
+    Then expect the next line to contain "d=PT_PC"
+    Then expect the next line to contain "d=PT_PC | $00000001"
+    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PT_PC | $00000002"
+    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PT_PC | $00000007"
+    Then expect the next line to contain "d=PT_PC | $00000004"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000004"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000001"
+    Then expect the next line to contain "d=PT_PC | $00000001"
+    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PT_PC | $00000002"
+    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000001"
+    Then expect the next line to contain "d=PTPA2 | $00000001"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000001"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000002"
+    Then expect the next line to contain "d=PTPA2 | $00000002"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000002"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
+    Then expect the next line to contain "d=PTPA2 | $00000003"
