@@ -182,3 +182,57 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000044"
     Then accounting for transient values expect the next line to contain "PTPA2 | $00000044"
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000044"
+
+
+
+
+  Scenario: Fast DMA test 1
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Fast DMA test"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000098"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC"
+    Then accounting for transient values expect the next line to contain "PTPA2"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC"
+    Given close current file
+
+
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Around here should be more non-zero bytes read"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $0000004"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000044"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000044"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC"
+    Then accounting for transient values expect the next line to contain "PTPA2"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC"
+    Given close current file

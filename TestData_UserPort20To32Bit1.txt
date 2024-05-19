@@ -445,6 +445,7 @@ d=latch13 | DDR
 d=latch13 | _PC  | DDR
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
+:emit Around here should be more non-zero bytes read
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
 d=latch13 | DDR
