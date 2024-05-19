@@ -139,6 +139,23 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
 
 
 
+  Scenario: Validate RAM read to back to C64 1
+    When processing each line in file "output\DebugUserPort20To32Bit1.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch5 again for read RAM"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d$00013723"
+    Then expect the next line to contain "d$00013834"
+    Then expect the next line to contain "d$00013917"
+    Then expect the next line to contain "d$00013a98"
+    Then expect the next line to contain "d$00013b00"
+    Then expect the next line to contain "d$00025311"
+    Then expect the next line to contain "d$00025422"
+    Then expect the next line to contain "d$00025533"
+    Then expect the next line to contain "d$00025644"
+
+
 
   Scenario: Validate RAM read to pass-through 1
     When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable RAM to pass-through"
