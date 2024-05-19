@@ -140,7 +140,7 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
 
 
 
-  Scenario: Validate RAM read to pass-through
+  Scenario: Validate RAM read to pass-through 1
     When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable RAM to pass-through"
     Given open file "target/out.txt" for reading
     When ignoring lines that contain ";"
@@ -161,3 +161,24 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
     Then accounting for transient values expect the next line to contain "PTPA2 | $00000098"
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
+
+
+  Scenario: Validate RAM read to pass-through 2
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Read from latch3 which should read the added address..."
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000011"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000022"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000033"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000044"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000044"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000044"
