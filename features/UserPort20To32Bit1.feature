@@ -137,3 +137,27 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then accounting for transient values expect the next line to contain "d=PTPA2 | $00000088"
     Then accounting for transient values expect the next line to contain "d=PTPA2 | PT_PC | $00000088"
 
+
+
+
+  Scenario: Validate RAM read to pass-through
+    When processing each line in file "output\DebugUserPort20To32Bit1_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable RAM to pass-through"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then expect the next line to contain "d=PTPA2 | PT_PC"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000023"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000034"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000017"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
+    Then accounting for transient values expect the next line to contain "PTPA2 | $00000098"
+    Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
