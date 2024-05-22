@@ -501,10 +501,14 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
 
 #### Sprite scan RAM logic
 
+	A sprite in 16x16 mode, with a Y register value of 224, which uses internal inverted logic, will have a calculated sprite Y coordinate of 256 - 224 = 32, this will be the last calculated scan line of the sprite. The result of the scan line calculation will be rendered and visible on the next scan line 33.
+	15 scan lines above calculated scan line 32 is the first calculated scan line of the sprite, in this example scan line 17, and the next scan line 18 is the first visible scan line of the sprite.
+
+
 	Assume the sprite scan line RAM has been cleared by a previous scan rendering all the pixels and clearing the values of $ff.
 		Old revision: The weak pull-up resisters connected to the RAM output help to clear the RAM values to $ff
 			These are overidden by any pull down logic 0 from the RAM or the input 74258 demultiplexors
-		New revision: Uses digital logic to switch between $ff and input values as needed. This is cleaner tha using pull-up resistors which needed to be tuned for the actual TTL chips used.
+		New revision: Uses digital logic to switch between $ff and input values as needed. This is much more stable than using pull-up resistors which needed to be tuned for the actual TTL chips used.
 	For each sprite the index, colour, X and Y pos are read
 		After a successful Y pos test with the vertical raster position...
 			The sprite data counter is set with the X position of the sprite, then for 16 (or 32) pixels
@@ -514,11 +518,16 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
 			If it is transparent, the value from the input pixel from the current sprite is output by 3C/3D 3B/3A by the 74258 demultiplexors, which inverts the information. This could be a transparent pixel with its colour, or an opaque pixel with its colour.
 			If it is not transparent, an opaque sprite pixel exists for this position, then the value just read from the RAM is selected by the 74258 demultiplexors, inverted and written back to the RAM
 			In effect, the first opaque (non-transparent) pixel from the sprite written to the scan line RAM has priority and the rest of the pixels from sprites are ignored
+
+
+	Timing enabling or disabling the sprite display and updating sprite registers allows multiplexing. See: kBus24Bit_VideoLayer_XPos_SpriteIndex_*
+	The sprite scan line schedule, which renders each sprite in 16 pixel chunks, can be syncronised to the video pixel clock, or overclocked.
+	When syncronised to the video pixel clock each 16x16 sprite takes 16 pixels to process. If the sprite clock is overclocked, the scan schedule will correspondingly contract by the ratio of video clock to sprite clock. In other words each sprite will take fewer than 16 pixels to process.
+	Overclocking the sprite pixel clock will alter the timing for sprite multiplexing: kBus24Bit_VideoLayer_XPos_SpriteIndex_*
+
+
 	Remember, the scanline before a sprite is visible/displayed on the screen is the actual scanline used for rendering the sprite data.
 		The x position of the sprite does not affect its rendering timing in the scanline, only the sprite register address used affects its rendering schedule time, see: Raster line schedule
-
-
-	A sprite in 16x16 mode, with a Y register value of 224, which uses the internal inverted logic, will have a sprite Y coordinate of 256 - 224 = 32, this will be the apparant bottom of the sprite.
 
 ### APU - What is it
 
