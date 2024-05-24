@@ -33,6 +33,7 @@
 							Low nybble data setup with DB4 lo and then DB4 to high to latch
 		* Design could use FTDI pin 23 RXF# low to turn off U1 U53. Add selector ror the rest of the signals like PA2 _PC CNT1 SP1 CNT2 SP2 etc
 			This would mean the USB controls _PC via software without using any extra logic...
+		> U54 FTDI UM245R added to the schematic, with footprint, and FTDI signal names
 
 
 
