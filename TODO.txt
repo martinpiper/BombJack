@@ -37,7 +37,7 @@
 		>> The data generator will need extra signals to emulate the FTDI signals.
 	* Done: Add a suitable wiped 24 pin socket stock code to U54 for the FTDI part
 		>> https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4824-6000-CP?qs=IGgAdOvCTsTMKKLHpU5gNg%3D%3D
-
+		> The link the to device is now in the SUPPLIER section: https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
 
 
 
