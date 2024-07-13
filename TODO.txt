@@ -779,6 +779,7 @@
 
 
 * Switch to select APU cache write slot?
+* Also switch to decide the speed of the cache write process.
 
 
 
