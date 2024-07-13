@@ -42,10 +42,13 @@
 		> DDR moved to D28
 		> _PC moved to D29
 	* FTDI data signals added to D8..D15
-		_FTDITXE	= D16
-		_FTDIRXF	= D17
-		FTDIWR		= D18
-		_FTDIRD		= D19
+		_FTDITXEPre	= D16
+		_FTDIRXFPre	= D17
+		_FTDITXEPre and _FTDIRXFPre, especially _FTDIRXFPre, will need some simulated but not on the board logic to latch and unlatch to emulate a FTDI ready to read (or write) signals.
+			_FTDIRXF is for reading data from FTDI
+		FTDIWR for writing to FTDI, would come from the board
+		_FTDIRD for reading from FTDI, comes from the board, under a timed schedule
+
 
 
 * SimpleCPU.pdsprj multiply?
