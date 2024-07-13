@@ -1,5 +1,5 @@
 ; Signals from the user port
-._PC = $00010000	; Low is write
+._PC = $20000000	; Low is write
 .SP1 = $01000000
 .SP2 = $02000000
 .SERIALATN = $04000000
@@ -25,6 +25,11 @@
 .latch14 = $0e000000
 .latch15 = $0f000000
 
+; Signals from the FTDI device
+.FTDITXE = $00010000
+.FTDIRXF = $00020000
+.FTDIWR = $00040000
+.FTDIRD = $00080000
 
 
 ; Latch7 bits
