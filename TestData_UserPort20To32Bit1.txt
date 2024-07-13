@@ -4,6 +4,10 @@
 .SP2 = $02000000
 .SERIALATN = $04000000
 .PA2 = $08000000
+
+; Set to input from the C64, not a user port pin as such
+.DDR = $10000000
+
 .latch0 = $00000000
 .latch1 = $01000000
 .latch2 = $02000000
@@ -21,8 +25,6 @@
 .latch14 = $0e000000
 .latch15 = $0f000000
 
-; Set to input from the C64
-.DDR = $00000100
 
 
 ; Latch7 bits

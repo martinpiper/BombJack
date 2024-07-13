@@ -39,6 +39,7 @@
 		>> https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4824-6000-CP?qs=IGgAdOvCTsTMKKLHpU5gNg%3D%3D
 		> The link the to device is now in the SUPPLIER section: https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
 	* Remap the data generator signals so that the FTDI data 0..7 signals are at D8-D15, which means moving the other signals for the user port stuff higher.
+		> DDR moved to D28
 
 
 * SimpleCPU.pdsprj multiply?
