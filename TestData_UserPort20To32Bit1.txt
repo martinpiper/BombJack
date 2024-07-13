@@ -26,11 +26,17 @@
 .latch15 = $0f000000
 
 ; Signals from the FTDI device
-.FTDITXE = $00010000
-.FTDIRXF = $00020000
+._FTDITXE = $00010000
+._FTDIRXF = $00020000
 .FTDIWR = $00040000
-.FTDIRD = $00080000
+._FTDIRD = $00080000
 
+; Signal groups for the FTDI control nybble
+.FTDIN_0 = $00000000
+.FTDIN_1 = $00001000
+.FTDIN_2 = $00002000
+.FTDIN_3 = $00003000
+.FTDIN_PC = $00004000
 
 ; Latch7 bits
 ; $00	Mode: Pass-through (default on reset)
