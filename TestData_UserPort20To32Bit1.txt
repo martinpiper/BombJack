@@ -26,10 +26,8 @@
 .latch15 = $0f000000
 
 ; Signals from the FTDI device
-._FTDITXE = $00010000
-._FTDIRXF = $00020000
-.FTDIWR = $00040000
-._FTDIRD = $00080000
+._FTDITXEPre = $00010000
+._FTDIRXFPre = $00020000
 
 ; Signal groups for the FTDI control nybble
 .FTDIN_0 = $00000000
@@ -575,3 +573,46 @@ d=latch13 | DDR
 d=latch13 | _PC  | DDR
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
+
+:emit Switch the DDR back and set latch0
+d=latch0 | _PC  | DDR
+d=latch0 | _PC
+
+:emit Signal bytes ready from FTDI
+; Nybble 4
+d=latch0 | _PC | $4400
+d=latch0 | _PC | $4400 | _FTDIRXFPre
+d=latch0 | _PC | $4400
+
+d=latch0 | _PC | $0400
+d=latch0 | _PC | $0400 | _FTDIRXFPre
+d=latch0 | _PC | $0400
+
+; Nybble 7
+d=latch0 | _PC | $5700
+d=latch0 | _PC | $5700 | _FTDIRXFPre
+d=latch0 | _PC | $5700
+
+d=latch0 | _PC | $1700
+d=latch0 | _PC | $1700 | _FTDIRXFPre
+d=latch0 | _PC | $1700
+
+; Nybble f
+d=latch0 | _PC | $6f00
+d=latch0 | _PC | $6f00 | _FTDIRXFPre
+d=latch0 | _PC | $6f00
+
+d=latch0 | _PC | $2f00
+d=latch0 | _PC | $2f00 | _FTDIRXFPre
+d=latch0 | _PC | $2f00
+
+; Nybble 1
+d=latch0 | _PC | $7100
+d=latch0 | _PC | $7100 | _FTDIRXFPre
+d=latch0 | _PC | $7100
+
+d=latch0 | _PC | $3100
+d=latch0 | _PC | $3100 | _FTDIRXFPre
+d=latch0 | _PC | $3100
+
+

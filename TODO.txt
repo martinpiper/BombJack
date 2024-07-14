@@ -48,6 +48,12 @@
 			_FTDIRXF is for reading data from FTDI
 		FTDIWR for writing to FTDI, would come from the board
 		_FTDIRD for reading from FTDI, comes from the board, under a timed schedule
+	> Sheet 2 is the main FTDI logic. See: :emit Signal bytes ready from FTDI
+		The four 4-bit latches seem to store each of the nybbles
+	* Now to make the internals choose between the user port signals or the faked user port signals from the FTDI latched values
+		One of the signals from the FTDI latches can be used for the 2-1 selector, where 0 means use the user port signals
+		> Hmm this is tricky, since the C64 user port must not have logic contentions and the UD0..7 signals need isolating...
+		>> It might be better to hit the RAMs directly by selecting the RAM address or the internal D0..7 signals instead?
 
 
 
