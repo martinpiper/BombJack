@@ -54,6 +54,10 @@
 		One of the signals from the FTDI latches can be used for the 2-1 selector, where 0 means use the user port signals
 		> Hmm this is tricky, since the C64 user port must not have logic contentions and the UD0..7 signals need isolating...
 		>> It might be better to hit the RAMs directly by selecting the RAM address or the internal D0..7 signals instead?
+		>> Stop the UD0 related transceivers from working using FTDI_USE as an input for _CE
+	> PREPOWRESET used for FTDI logic, since we don't want to use any reset that comes from the user port processing side.
+		We don't want to have to have the C64 stop the reset with latch7 before FTDI is able to send bytes.
+
 
 
 
