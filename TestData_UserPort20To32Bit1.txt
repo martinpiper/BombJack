@@ -36,6 +36,15 @@
 .FTDIN_3 = $00003000
 .FTDIN_PC = $00004000
 
+; Bits for each control nybble
+.FTDIN_2_UserPort_SP1 = $00002100
+.FTDIN_2_UserPort_SP2 = $00002200
+.FTDIN_2_UserPort_ATN = $00002400
+.FTDIN_2_UserPort_PA2 = $00002800
+.FTDIN_3_UserPort_PC  = $00003100
+; Use the FTDI signals, not the user port signals
+.FTDIN_3_UserPort_Use = $00003200
+
 ; Latch7 bits
 ; $00	Mode: Pass-through (default on reset)
 ; $01	Mode: Choose RAM
@@ -579,40 +588,35 @@ d=latch0 | _PC  | DDR
 d=latch0 | _PC
 
 :emit Signal bytes ready from FTDI
-; Nybble 4
-d=latch0 | _PC | $4400
-d=latch0 | _PC | $4400 | _FTDIRXFPre
-d=latch0 | _PC | $4400
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
 
-d=latch0 | _PC | $0400
-d=latch0 | _PC | $0400 | _FTDIRXFPre
-d=latch0 | _PC | $0400
-
-; Nybble 7
-d=latch0 | _PC | $5700
-d=latch0 | _PC | $5700 | _FTDIRXFPre
-d=latch0 | _PC | $5700
-
-d=latch0 | _PC | $1700
-d=latch0 | _PC | $1700 | _FTDIRXFPre
-d=latch0 | _PC | $1700
-
-; Nybble f
-d=latch0 | _PC | $6f00
-d=latch0 | _PC | $6f00 | _FTDIRXFPre
-d=latch0 | _PC | $6f00
-
-d=latch0 | _PC | $2f00
-d=latch0 | _PC | $2f00 | _FTDIRXFPre
-d=latch0 | _PC | $2f00
-
-; Nybble 1
-d=latch0 | _PC | $7100
-d=latch0 | _PC | $7100 | _FTDIRXFPre
-d=latch0 | _PC | $7100
-
-d=latch0 | _PC | $3100
-d=latch0 | _PC | $3100 | _FTDIRXFPre
-d=latch0 | _PC | $3100
+d=latch0 | _PC | FTDIN_0 | $0400
+d=latch0 | _PC | FTDIN_0 | $0400 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | $0400
 
 
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
+
+d=latch0 | _PC | FTDIN_1 | $0700
+d=latch0 | _PC | FTDIN_1 | $0700 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | $0700
+
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00
+
+d=latch0 | _PC | FTDIN_2 | $0f00
+d=latch0 | _PC | FTDIN_2 | $0f00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | $0f00
+
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
