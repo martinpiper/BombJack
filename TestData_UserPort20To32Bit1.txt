@@ -587,6 +587,12 @@ d=latch13 | _PC  | DDR
 d=latch0 | _PC  | DDR
 d=latch0 | _PC
 
+:emit Set latch7 - Enable pass-through - Again
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+d=latch7 | latch7_ResetDone | latch7_Passthrough
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+
+
 :emit Signal bytes ready from FTDI
 d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
 d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400 | _FTDIRXFPre
@@ -605,14 +611,17 @@ d=latch0 | _PC | FTDIN_1 | $0700
 d=latch0 | _PC | FTDIN_1 | $0700 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_1 | $0700
 
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0f00
+; Setup latch6 (write RAM)
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
 
-d=latch0 | _PC | FTDIN_2 | $0f00
-d=latch0 | _PC | FTDIN_2 | $0f00 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_2 | $0f00
+d=latch0 | _PC | FTDIN_2 | $0600
+d=latch0 | _PC | FTDIN_2 | $0600 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | $0600
 
+:emit Use FTDI now
+; Hi user port _PC here
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
@@ -620,3 +629,34 @@ d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+; Lo user port _PC here
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+
+; Hi user port _PC here - 2
+:emit Should get $74 written to the RAM by FTDI
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+
+
+
+:emit Stop using FTDI now
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_PC
