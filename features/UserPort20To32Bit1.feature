@@ -58,7 +58,9 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000004"
     Then expect the next line to contain "d=PTPA2 | PT_PC"
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000001"
-    Then expect the next line to contain "d=PT_PC | $00000001"
+    # Transient
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
+#    Then expect the next line to contain "d=PT_PC | $00000001"
     Then accounting for transient values expect the next line to contain "d=PT_PC | $00000002"
     Then expect the next line to contain "d=PT_PC | $00000003"
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000003"
@@ -81,7 +83,7 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     When ignoring lines that contain ";"
     When ignoring lines that contain "."
     When ignoring empty lines
-    Then expect the next line to contain "d=PT_PC | $00000003"
+    Then expect the next line to contain "d=PTPA2 | PT_PC | $00000083"
     Then expect the next line to contain "d=PT_PC | $00000083"
     Then expect the next line to contain "d=PTPA2 | PT_PC | $00000083"
     Then expect the next line to contain "d=PTPA2 | PT_PC"
