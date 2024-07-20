@@ -113,6 +113,39 @@ d=latch10 | $00
 d=latch10 | _PC | $00
 
 
+
+:emit Set latch0
+d=latch0 | _PC | $04
+d=latch0 | $07
+d=latch0 | _PC | $07
+
+:emit Set latch1
+d=latch1 | _PC | $37
+d=latch1 | $02
+d=latch1 | _PC | $02
+
+:emit Set latch2
+d=latch2 | _PC | $01
+d=latch2 | $10
+d=latch2 | _PC | $10
+
+:emit Set latch6 (Write RAM) next bank
+d=latch6 | _PC | $00
+; Write $dc
+d=latch6 | $dc
+d=latch6 | _PC | $dc
+; Write $ed
+d=latch6 | $ed
+d=latch6 | _PC | $ed
+; Write $fe
+d=latch6 | $fe
+d=latch6 | _PC | $fe
+; Write $0f
+d=latch6 | $0f
+d=latch6 | _PC | $0f
+
+
+
 :emit Set latch0
 d=latch0 | _PC | $04
 d=latch0 | $37
@@ -122,6 +155,11 @@ d=latch0 | _PC | $37
 d=latch1 | _PC | $37
 d=latch1 | $01
 d=latch1 | _PC | $01
+
+:emit Set latch2
+d=latch2 | _PC | $01
+d=latch2 | $00
+d=latch2 | _PC | $00
 
 :emit Set latch6 (Write RAM)
 d=latch6 | _PC | $00

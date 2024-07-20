@@ -62,6 +62,7 @@
 		> :emit Should get $74 written to the RAM by FTDI
 	* Done: For the layout, need some extra debug headers for the FTDI signals, and also extra space for the extra components
 	* Need to check >1MB RAM writes and reads, check the U3 decoder and _CS1 RAM logic works, especially across the 1MB memory page boundary
+		>> :emit Set latch6 (Write RAM) next bank
 	
 
 

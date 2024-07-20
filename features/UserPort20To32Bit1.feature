@@ -24,6 +24,10 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Given open file "output\DebugUserPort20To32Bit1_RAMWrite.txt" for reading
     When ignoring lines that contain ";"
     When ignoring empty lines
+    Then expect the next line to contain "d$100207dc"
+    Then expect the next line to contain "d$100208ed"
+    Then expect the next line to contain "d$100209fe"
+    Then expect the next line to contain "d$10020a0f"
     Then expect the next line to contain "d$00013723"
     Then expect the next line to contain "d$00013834"
     Then expect the next line to contain "d$00013917"
