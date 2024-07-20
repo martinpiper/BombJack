@@ -60,8 +60,9 @@
 		We don't want to have to have the C64 stop the reset with latch7 before FTDI is able to send bytes.
 	>> Need some tests for the FTDI signals
 		> :emit Should get $74 written to the RAM by FTDI
-	* For the layout, need some extra debug headers for the FTDI signals, and also extra space for the extra components
-
+	* Done: For the layout, need some extra debug headers for the FTDI signals, and also extra space for the extra components
+	* Need to check >1MB RAM writes and reads, check the U3 decoder and _CS1 RAM logic works, especially across the 1MB memory page boundary
+	
 
 
 
