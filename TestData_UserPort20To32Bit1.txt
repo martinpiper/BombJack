@@ -611,7 +611,7 @@ d=latch0 | _PC | FTDIN_1 | $0700
 d=latch0 | _PC | FTDIN_1 | $0700 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_1 | $0700
 
-; Setup latch6 (write RAM)
+; Setup FTDI latch6 (write RAM)
 d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
 d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
@@ -641,6 +641,45 @@ d=latch0 | _PC | FTDIN_3_UserPort_Use
 
 ; Hi user port _PC here - 2
 :emit Should get $74 written to the RAM by FTDI
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+
+
+
+:emit Signal bytes ready from FTDI - 2
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
+
+d=latch0 | _PC | FTDIN_0 | $0b00
+d=latch0 | _PC | FTDIN_0 | $0b00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | $0b00
+
+
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
+
+d=latch0 | _PC | FTDIN_1 | $0800
+d=latch0 | _PC | FTDIN_1 | $0800 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | $0800
+
+; Lo user port _PC here
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+
+:emit Should get $8b written to the RAM by FTDI
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC

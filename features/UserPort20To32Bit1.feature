@@ -33,6 +33,7 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then expect the next line to contain "d$00025533"
     Then expect the next line to contain "d$00025644"
     Then expect the next line to contain "d$00032374"
+    Then expect the next line to contain "d$0003248b"
 
 
 
