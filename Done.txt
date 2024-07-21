@@ -5103,3 +5103,68 @@ All layouts now use V3.1
 	Changed board text to "MegaWang" instead
 	Used Bombjack\MegaWang 2000 Turbo Edition logo.bmp
 
+
+
+
+
+* UserPort20To32Bit1 is there a quick and cheap way to allow a very simple latched input from an external FTDI?
+	> Perhaps isolate the userport from the C64 on a particular FTDI signal and latch the userport inputs from the FTDI?
+	* To make it easy to quickly program the interface with large amounts of data, a USB cable would be a good option.
+		An FTDI interface could allow a USB PC to send megabytes of data, then allow the C64 to read it easily.
+			UM245R?	https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
+			Tech doc:
+				https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
+				https://ftdichip.com/Documents/AppNotes/AN_232R-01_Bit_Bang_Mode_Available_For_FT232R_and_Ft245R
+			Code examples: https://ftdichip.com/software-examples/code-examples/
+			Could just send data to the COM port from the PC
+				Since there are 8 bits, it would be possible to use 4 bits for control, and 4 bits for parallel data
+			Although ideally being able to control other output lines on the C bus and read the _FLAG2 would be better
+			>> Note: The J1 jumper power options of logic levels on page 11: https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
+				Connect pins 2 and 3, basically.
+			>> Note: Page 20 self powered mode, disconnect J2 and power the board with 5V to pin 21 & 15 and GND pin 7 & 24.
+				However bus powered, page 19, might be better as it doesn't need to jumper to be configured.
+			>> Note: Dimensions and pins on page 14
+			>> Connecting the board to the PC, usually creates a COM4: device (can be detected with the mode command)
+				echo abcd > COM4:
+				Pin 23 RXF# goes low when the echo command sends data
+					Note page 12 has RXF# and RD# timings: https://ftdichip.com/wp-content/uploads/2020/08/DS_UM245R.pdf
+					Then strobing low 12 RD# does show the expected ASCII data on the data pins 1 5 3 10 2 8 9 6 (DB0-DB7)
+					Very simple logic here could be using a clock crystal (1MHz might do) OR the clock with pin 23 RXF# and then use that for pin 12 RD# strobe
+					First latch the DB0-DB7 into a full latch, for signal stability.
+					Then latch the DB0-DB3 into suitable latch signals selected by DB4-DB7
+						This does mean at least 4 writes to send one 8 bit value
+							Low nybble data setup with DB4 lo and then DB4 to high to latch
+		* Design could use FTDI pin 23 RXF# low to turn off U1 U53. Add selector for the rest of the signals like PA2 _PC CNT1 SP1 CNT2 SP2 etc
+			This would mean the USB controls _PC via software without using any extra logic...
+		>> U54 FTDI UM245R added to the schematic, with footprint, and FTDI signal names
+		>> The data generator will need extra signals to emulate the FTDI signals.
+	* Done: Add a suitable wiped 24 pin socket stock code to U54 for the FTDI part
+		>> https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4824-6000-CP?qs=IGgAdOvCTsTMKKLHpU5gNg%3D%3D
+		> The link the to device is now in the SUPPLIER section: https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D
+	* Remap the data generator signals so that the FTDI data 0..7 signals are at D8-D15, which means moving the other signals for the user port stuff higher.
+		> DDR moved to D28
+		> _PC moved to D29
+	* FTDI data signals added to D8..D15
+		_FTDITXEPre	= D16
+		_FTDIRXFPre	= D17
+		_FTDITXEPre and _FTDIRXFPre, especially _FTDIRXFPre, will need some simulated but not on the board logic to latch and unlatch to emulate a FTDI ready to read (or write) signals.
+			_FTDIRXF is for reading data from FTDI
+		FTDIWR for writing to FTDI, would come from the board
+		_FTDIRD for reading from FTDI, comes from the board, under a timed schedule
+	> Sheet 2 is the main FTDI logic. See: :emit Signal bytes ready from FTDI
+		The four 4-bit latches seem to store each of the nybbles
+	* Now to make the internals choose between the user port signals or the faked user port signals from the FTDI latched values
+		One of the signals from the FTDI latches can be used for the 2-1 selector, where 0 means use the user port signals
+		> Hmm this is tricky, since the C64 user port must not have logic contentions and the UD0..7 signals need isolating...
+		>> It might be better to hit the RAMs directly by selecting the RAM address or the internal D0..7 signals instead?
+		>> Stop the UD0 related transceivers from working using FTDI_USE as an input for _CE
+		> Added a couple of demux and a driver to handle the signals when FTDI_USE is enabled and the inverted _FTDI_USE
+	> PREPOWRESET used for FTDI logic, since we don't want to use any reset that comes from the user port processing side.
+		We don't want to have to have the C64 stop the reset with latch7 before FTDI is able to send bytes.
+	>> Need some tests for the FTDI signals
+		> :emit Should get $74 written to the RAM by FTDI
+	* Done: For the layout, need some extra debug headers for the FTDI signals, and also extra space for the extra components
+	* Need to check >1MB RAM writes and reads, check the U3 decoder and _CS1 RAM logic works, especially across the 1MB memory page boundary
+		>> :emit Set latch6 (Write RAM) next bank
+	> Extra VIA DRC rooms around the FTDI socket pins and OSC socket
+		Also connected the RAM to cap nets in the layout as they would most often report spurious auto-route issues
