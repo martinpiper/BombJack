@@ -69,6 +69,29 @@
 
 
 
+
+* UserPort20To32Bit1 power considerations.
+	2	+5V	(100 mA MAX.)
+	file:///C:/work/C64Docs/www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_360.html
+	Need to estimate the current of all the components
+
+
+
+
+* UserPort20To32Bit1 software emulation needed.
+	Like the current user port interface the software can save just the signals received in a format that the simulation can accept as test data
+
+
+
+
+* UserPort20To32Bit1 Will the fast DMA to the next user port interface actually work with the target interface write timing and address updates?
+	The consideration here is that the target interface, the next one in the chain, might not work faster than 1MHz?
+	
+
+
+
+
+
 * SimpleCPU.pdsprj multiply?
 	https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm
 
