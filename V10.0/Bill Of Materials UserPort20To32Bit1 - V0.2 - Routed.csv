@@ -1,0 +1,35 @@
+Category,Quantity,References,Value,Stock Code,Description,Group Layer,PCB Package,Supplier,Placed
+Capacitors,5,"C1,C2,C3,C4,C5",CL05B104KO5NNNC,https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D,Samsung Electro-Mechanics CL05B104KO5NNNC 100nF Multilayer Ceramic Capacitor MLCC 16V dc +/-10% Tolerance SMD,,CAPC1005X55N,,Top Copper
+Resistors,1,R208,200,https://www.mouser.sg/ProductDetail/Vishay-BC-Components/PR02000202000JR500?qs=LCMWAU1DZcxqc7IWkiXYPw%3D%3D,Generic resistor symbol,,RES40,,Top Copper
+Integrated Circuits,3,"U1,U53,U70",74LS245,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS245DWR?qs=w32V8uFkMxmdnuKq6FiFpw%3D%3D,Octal Bus Transceivers With Tristate Outputs,,SOIC127P1030X265-20N-CAP,,Top Copper
+Integrated Circuits,8,"U2,U3,U8,U28,U29,U52,U59,U61",74LS138,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS138DR?qs=SL3LIuy2dWwYDw%252Bne7f7PA%3D%3D,3-Line to 8-Line Decoders/Demultiplexers,,SOIC127P600X175-16N-CAP,,Top Copper
+Integrated Circuits,2,"U4,U7",74LS04,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS04DR?qs=SL3LIuy2dWzOhepjTMFpMg%3D%3D,Hex Inverters,,SOIC127P600X175-14N-CAP,,Top Copper
+Integrated Circuits,5,"U5,U30,U31,U32,U60",74LS273,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS273NSR?qs=SL3LIuy2dWxsq%2FCTeVMKZg%3D%3D,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,SOIC127P780X200-20N-CAP,,Top Copper
+Integrated Circuits,1,U6,ADM709LARZ,https://www.mouser.sg/ProductDetail/Analog-Devices/ADM709LARZ?qs=BpaRKvA4VqHy5OxrBQwb0w%3D%3D,Processor Supervisor 4.65V 200uA 8-SOIC,,SOIC127P600X175-8N,,Top Copper
+Integrated Circuits,1,U9,74LS21,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS21DR?qs=SL3LIuy2dWyPPAPwa0NRqg%3D%3D,Dual 4-Input Positive-AND Gates,,SOIC127P600X175-14N-CAP,,Top Copper
+Integrated Circuits,1,U10,74LS11,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS11DR?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIaoHi3xvjif4%3D,Triple 3-Input Positive-AND Gates,,SOIC127P600X175-14N-CAP,,Top Copper
+Integrated Circuits,1,U11,74LS373,,Octal D-Type Transparent Latches with 3-state Outputs,,NULL,,Not placed
+Integrated Circuits,12,"U12,U13,U14,U15,U16,U17,U46,U47,U48,U49,U51,U58",74LS161,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS161ADR?qs=SL3LIuy2dWx%252BNiLsCGC3nA%3D%3D,Synchronous 4-Bit Binary Counters,,SOIC127P600X175-16N-CAP,,Top Copper
+Integrated Circuits,2,"U18,U50",74LS08,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS08DR?qs=SL3LIuy2dWwzq5fnFo78kw%3D%3D,Quadruple 2-Input Positive-AND Gates,,SOIC127P600X175-14N-CAP,,Top Copper
+Integrated Circuits,1,U19,74LS273,,Octal D-Type Positive-Edge-Triggered Flip-Flops With Clear,,NULL,,Not placed
+Integrated Circuits,2,"U20,U21",IS62C10248AL,https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D,1M x 8 Ultra Low Power CMOS Static Ram,,SOP80P1176X120-44,,Top Copper
+Integrated Circuits,5,"U22,U23,U24,U25,U26",74LS153,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS153DR?qs=SL3LIuy2dWyFs2m7ewa9VQ%3D%3D,Dual 1-of-4 Data Selectors/Multiplexers,,SOIC127P600X175-16N-CAP,,Top Copper
+Integrated Circuits,3,"U27,U67,U71",74LS32,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32DR?qs=SL3LIuy2dWwtfBSQ6o0JPg%3D%3D,Quad 2-input positive-OR gates,,SOIC127P600X175-14N-CAP,,Top Copper
+Integrated Circuits,6,"U33,U34,U35,U36,U37,U38",74283,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS283D?qs=RnzODY3cU8uoUhrsuMKPjw%3D%3D,4-Bit Binary Full Adders With Fast Carry,,SOIC127P600X175-16N-CAP,,Top Copper
+Integrated Circuits,8,"U39,U40,U41,U42,U43,U44,U68,U69",74LS157,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157DR?qs=SL3LIuy2dWw%2F%252Bp7AA8LUjg%3D%3D,Quadruple 1-of-2 Data Selectors/Multiplexers,,SOIC127P600X175-16N-CAP,,Top Copper
+Integrated Circuits,1,U45,7474,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS74ADR?qs=UG%2F8xqv%2F6WdOEnCo3YslYA%3D%3D,Dual Positive-Edge-Triggered D-Type Flip-Flops With Clear And Preset,,SOIC127P600X175-14N-CAP,https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj,Top Copper
+Integrated Circuits,1,U54,FTDI UM245R,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4824-6000-CP?qs=IGgAdOvCTsTMKKLHpU5gNg%3D%3D,Interface Development Tools USB to Parallel FIFO Dev Mod for FT245R,,UM245R,https://www.mouser.sg/ProductDetail/FTDI/UM245R?qs=Xb8IjHhkxj4TWAlYgWlsig%3D%3D,Top Copper
+Integrated Circuits,1,U55,NOT,,Simple Digital Inverter,,NULL,,Not placed
+Integrated Circuits,1,U56,DTFF,,Universal D-Type Flip-Flop Digital Primitive Model With D/Clock/Set/Reset Inputs and Complementary Outputs,,NULL,,Not placed
+Integrated Circuits,1,U57,AND_2,,AND Gate Digital Primitive Model,,NULL,,Not placed
+Integrated Circuits,1,U62,7427,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS27DR?qs=sGAEpiMZZMutXGli8Ay4kP28D9wZ8SQIfOvGfytTqpc%3D,Triple 3-Input Positive NOR Gates,,SOIC127P600X175-14N-CAP,https://www.mouser.sg/ProductDetail/Mill-Max/110-93-314-41-801000?qs=%2Fha2pyFaduiAoJI%252BFT3Un6AU4u1EPWQWyNo%252BHzE50tJ%252B9XjMyXXSECwGDt8yOlKj,Top Copper
+Integrated Circuits,4,"U63,U64,U65,U66",74175,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS175DR?qs=SL3LIuy2dWx6xZTuuqz08w%3D%3D,Quadruple D-Type Positive-Edge-Triggered Flip-Flops With Clear,,SOIC127P600X175-16N-CAP,https://www.mouser.sg/ProductDetail/Mill-Max/110-13-316-41-801000?qs=WZeyYeqMOWd122xzWNZKKg%3D%3D,Top Copper
+Diodes,1,D204,LED-RED,https://www.mouser.sg/ProductDetail/Cree-LED/C503C-RCN-CYCZaAA1?qs=mwfrHz%252BSIuGPYiPc7W1Mew%3D%3D,Animated LED model (Red),,LED,,Top Copper
+Miscellaneous,7,"J1,J2,J3,J4,J5,J6,J7",TSW-105-14-F-D,https://www.mouser.sg/ProductDetail/Samtec/TSW-105-14-F-D?qs=rU5fayqh%252BE0orAMa0LVLqA%3D%3D,"10 Position, Classic PCB Header Strips, 0.100&quot; pitch",,TSW-105-XX-YY-D,,Top Copper
+Miscellaneous,1,JP1,JUMPER,https://www.mouser.sg/ProductDetail/TE-Connectivity/87224-2?qs=ZDXmSm13591yVHBRfmL3UQ%3D%3D,Animated Jumper,,872242,,Top Copper
+Miscellaneous,1,OSC1,SQRWIDOSCDIL,https://www.mouser.sg/ProductDetail/3M-Electronic-Solutions-Division/4814-3000-CP?qs=IGgAdOvCTsSwgxfUvPVZeg%3D%3D,,,SQRWIDOSCDIL14,,Top Copper
+Miscellaneous,1,POWER 5V,163-179PH-EX,https://www.mouser.sg/ProductDetail/163-179PH-EX,DC Power Connectors PCB 2.1MM,,163179PHEX,,Top Copper
+Miscellaneous,1,USER1,TST-107-01-G-D,https://www.mouser.sg/ProductDetail/Samtec/TST-107-01-G-D?qs=FESYatJ8odJB1y56XqI29Q%3D%3D,"14 Position, Shrouded PCB Headers, 0.100&quot; pitch",,TST-107-XX-Y-D,,Top Copper
+Miscellaneous,1,USER BUS,TST-110-01-G-D,https://www.mouser.sg/ProductDetail/Samtec/TST-110-01-G-D?qs=rU5fayqh%252BE1iIX99OHEFCg%3D%3D,"20 Position, Shrouded PCB Headers, 0.100&quot; pitch",,TST-110-XX-Y-D,,Top Copper
+Miscellaneous,1,VSMDD1,VSMDIGITALDATA,,Digital Data Generator (Virtual Instrument),,NULL,,Not placed
+Miscellaneous,4,"VSMDD2,VSMDD3,VSMDD4,VSMDD5",VSMDIGITALDATAINPUT,,Digital Data Generator (Virtual Instrument),,NULL,,Not placed

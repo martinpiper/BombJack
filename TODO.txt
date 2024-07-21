@@ -86,6 +86,11 @@
 
 * UserPort20To32Bit1 Will the fast DMA to the next user port interface actually work with the target interface write timing and address updates?
 	The consideration here is that the target interface, the next one in the chain, might not work faster than 1MHz?
+	The older user port interface, takes 8 4MHz cycles to fully retire a byte arriving at the user port. 1000ns
+		This is plenty fast enough for the C64, which maximally can write a byte every 4 1MHz cycles, as the usual case is 8 1MHz cycles.
+	The new fast DMA takes 4 cycles of the clock/2 to retire each byte.
+		At 16MHz this is 600ns, so the fast DMA clock will need to be slower than 8MHz.
+		Or the old interface will need a faster clock than 4MHz.
 	
 
 
