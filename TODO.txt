@@ -15,6 +15,9 @@
 
 * UserPort20To32Bit1 software emulation needed.
 	Like the current user port interface the software can save just the signals received in a format that the simulation can accept as test data
+	Starting to implement a test case: C64WithNewUserPort20to32Bit1.feature
+	Will need extra syntax to enable the 20To32Bit interface and specify RAM banks
+	Also syntax to populate its internal RAM, pretending it is a USB transfer in effect
 
 
 
