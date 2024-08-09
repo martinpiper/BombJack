@@ -18,6 +18,10 @@
 	Starting to implement a test case: C64WithNewUserPort20to32Bit1.feature
 	Will need extra syntax to enable the 20To32Bit interface and specify RAM banks
 	Also syntax to populate its internal RAM, pretending it is a USB transfer in effect
+	Note the default state of the four latch control signals from a powered on C64 are all high: "C:\Temp\User port breakout V1.1 - 1.LPF"
+		https://www.pctestinstruments.com/downloads.asp
+		Indicating that latch7 isn't going to get accidentally populated with the "reset done" flag
+
 
 
 

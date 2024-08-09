@@ -1,0 +1,48 @@
+!zn
+; Initialise the Bus20To32Bit1 interface
+; Corresponds to user port breakout V1.1
+Bus20To32Bit1_Init
+	; Setup PA2 and SERIALATN for writing
+	lda #%00001100
+	sta CIA2PortADDR
+
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+
+	; Set latch7 = $80
+	; NOTE: SP1 is inverted
+;	lda #%01000000
+	lda #%00000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%00000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+
+	; Set the reset done bit
+	lda #%10000000
+	sta CIA2PortBRS232
+
+	rts
+
+
+Bus20To32Bit1_SetLatch6
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%00000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+
+	rts
