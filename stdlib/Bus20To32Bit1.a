@@ -1,4 +1,13 @@
 !zn
+kBus20To32Bit1_latch7_Passthrough=$00
+kBus20To32Bit1_latch7_RAM=$01
+kBus20To32Bit1_latch7_PassthroughDisable=$02
+kBus20To32Bit1_latch7_Disabled=$03
+kBus20To32Bit1_latch7_InternalPA2=$04
+kBus20To32Bit1_latch7_FastDMAStart=$08
+kBus20To32Bit1_latch7_ResetDone=$80
+
+
 ; Initialise the Bus20To32Bit1 interface
 ; Corresponds to user port breakout V1.1
 Bus20To32Bit1_Init
@@ -6,14 +15,64 @@ Bus20To32Bit1_Init
 	lda #%00001100
 	sta CIA2PortADDR
 
+	jsr Bus20To32Bit1_WriteMode
+	jsr Bus20To32Bit1_ShortReset
+
+	rts
+
+Bus20To32Bit1_ShortReset
+	jsr Bus20To32Bit1_SetLatch7
+	lda #0
+	+MBus24Bit_Send8BitValueFromA
+	; Set the reset done bit
+	lda #kBus20To32Bit1_latch7_ResetDone
+	+MBus24Bit_Send8BitValueFromA
+	rts
+
+
+; Decode in LSB bit order:
+; .SP1 = $01
+; .SP2 = $02
+; .SERIALATN = $04
+; .PA2 = $08
+
+Bus20To32Bit1_ReadMode
+	lda #0
+	sta CIA2PortBDDR
+	rts
+
+Bus20To32Bit1_WriteMode
 	; Setup output of 8 bits
 	lda #$ff
 	sta CIA2PortBDDR
+	rts
 
-	; Set latch7 = $80
+
+
+
+Bus20To32Bit1_SetLatch5
+
 	; NOTE: SP1 is inverted
-;	lda #%01000000
 	lda #%00000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%01000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+
+Bus20To32Bit1_SetLatch6
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
 	sta CIA1TimerAControl
 
 	; NOTE: SP2 is inverted
@@ -24,17 +83,14 @@ Bus20To32Bit1_Init
 	lda #%0000
 	sta CIA2PortASerialBusVICBank
 
-	; Set the reset done bit
-	lda #%10000000
-	+MBus24Bit_Send8BitValueFromA
-
 	rts
 
 
-Bus20To32Bit1_SetLatch6
+
+Bus20To32Bit1_SetLatch7
 
 	; NOTE: SP1 is inverted
-	lda #%01000000
+	lda #%00000000
 	sta CIA1TimerAControl
 
 	; NOTE: SP2 is inverted
