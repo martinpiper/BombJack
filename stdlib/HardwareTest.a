@@ -433,7 +433,7 @@ HardwareTest_VideoPattern0
 
 	; Clear any remaining
 	lda #0
-	ldx #(kBus24Bit_SpritesMaxNum*4)
+	ldx #((kBus24Bit_SpritesMaxNum-5)*4)
 .cl1
 	sta CIA2PortBRS232
 	dex
