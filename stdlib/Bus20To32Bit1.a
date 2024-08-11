@@ -49,6 +49,77 @@ Bus20To32Bit1_WriteMode
 
 
 
+Bus20To32Bit1_SetLatch0
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%01000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%1000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch1
+
+	; NOTE: SP1 is inverted
+	lda #%00000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%01000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%1000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch2
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%00000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%1000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch3
+
+	; NOTE: SP1 is inverted
+	lda #%00000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%00000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #%1000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
 
 Bus20To32Bit1_SetLatch5
 
@@ -99,6 +170,60 @@ Bus20To32Bit1_SetLatch7
 
 	; NOTE: PA2 is not inverted. SERIALATN is inverted.
 	lda #%0000
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch8
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%01000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch9
+
+	; NOTE: SP1 is inverted
+	lda #%00000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%01000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+
+	rts
+
+
+
+Bus20To32Bit1_SetLatch10
+
+	; NOTE: SP1 is inverted
+	lda #%01000000
+	sta CIA1TimerAControl
+
+	; NOTE: SP2 is inverted
+	lda #%00000000
+	sta CIA2TimerAControl
+
+	; NOTE: PA2 is not inverted. SERIALATN is inverted.
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
 	sta CIA2PortASerialBusVICBank
 
 	rts
