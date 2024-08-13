@@ -11,7 +11,9 @@
 		Learn more...	https://support.microsoft.com/en-us/windows/a-driver-can-t-load-on-this-device-8eea34e5-ff4b-16ec-870d-61a4a43b3dd5
 		Go to the Core isolation page in Windows Security.
 		Turn the Memory Integrity setting Off if it isn’t already. You'll need to restart your computer for the changes to take effect.
-		
+	Updated drivers? C:\Users\marti\Downloads\CDM-v2.12.36.4.U-WHQL-Certified\x64
+	https://ftdichip.com/drivers/vcp-drivers/
+	
 
 
 

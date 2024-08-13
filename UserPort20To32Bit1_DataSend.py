@@ -1,20 +1,20 @@
 import serial
 
-#serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_NONE, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
-serialPort = serial.Serial(port="COM5")
+serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+#serialPort = serial.Serial(port="COM5")
+
+print(serialPort)
 
 
 def sendRawByte(value):
-    toSendWithEnable = bytearray([value | 0x40])
-    toSendNoEnable = bytearray([value])
+    toSendWithEnable = bytearray([value | 0x40, value])
     # Setup data for the FTDI latches.
-    serialPort.write(toSendWithEnable)
     # The no enable version is important, because it switches off the selector with the data still held, which causes a positive edge on the FTDI latches to load the held data.
-    serialPort.write(toSendNoEnable)
+    serialPort.write(toSendWithEnable)
 
 
 def sendFTDILatchNybble(latch, nybble):
-    nybble = nybble & 0x0f;
+    nybble = nybble & 0x0f
     sendRawByte((latch << 4) | nybble)
 
 
@@ -60,6 +60,8 @@ while i < (10 * 1024):
     setDataByte(0x01)       # Colour 1 white
     sendCompleteData()
     i = i + 1
+    if ((i % 1024) == 0):
+        print(i)
 
 
 # Reset the interface again
