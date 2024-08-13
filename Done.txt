@@ -5168,3 +5168,4 @@ All layouts now use V3.1
 		>> :emit Set latch6 (Write RAM) next bank
 	> Extra VIA DRC rooms around the FTDI socket pins and OSC socket
 		Also connected the RAM to cap nets in the layout as they would most often report spurious auto-route issues
+	>> FTDI Drivers: "C:\Users\marti\Downloads\CDM212364_Setup\CDM212364_Setup.exe"

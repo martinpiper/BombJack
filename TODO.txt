@@ -1,5 +1,22 @@
 * TODO:
 
+* UserPort20To32Bit1 and FTDI data generation
+    Via COM port, python?
+        pip install pyserial
+    cmd->mode command shows COM5:  for the FTDI
+	LogicPort analyser error...
+		A driver cannot load on this device
+		Driver: ftdibus.sys
+		A security setting is preventing this driver from loading...
+		Learn more...	https://support.microsoft.com/en-us/windows/a-driver-can-t-load-on-this-device-8eea34e5-ff4b-16ec-870d-61a4a43b3dd5
+		Go to the Core isolation page in Windows Security.
+		Turn the Memory Integrity setting Off if it isn’t already. You'll need to restart your computer for the changes to take effect.
+		
+
+
+
+
+
 * UserPort20To32Bit1 add headers suitable for external CPU expansion?
 
 
@@ -9,6 +26,8 @@
 	2	+5V	(100 mA MAX.)
 	file:///C:/work/C64Docs/www.devili.iki.fi/Computers/Commodore/C64/Programmers_Reference/Chapter_6/page_360.html
 	Need to estimate the current of all the components
+	> Measuring using the power adapter shows a ~5 watt increase with the new interface. Which gives roughly 1A of power draw. This might be too much for the C64 user port.
+
 
 
 
