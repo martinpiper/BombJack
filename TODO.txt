@@ -1,5 +1,17 @@
 * TODO:
 
+* FTDI data injection, sometimes unreliable, interference issue?
+	The data stored, even for 10240 bytes, seems to sometimes miss a byte...
+	
+	
+
+
+* The RAM expansion user port headers need to be rotated to avoid cable twists.
+
+
+
+
+
 * UserPort20To32Bit1 and FTDI data generation
     Via COM port, python?
         pip install pyserial
