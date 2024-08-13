@@ -3,6 +3,8 @@
 * FTDI data injection, sometimes unreliable, interference issue?
 	The data stored, even for 10240 bytes, seems to sometimes miss a byte...
 	Is it the fast DMA clock causing this? Try moving back to 1MHz...
+	Is it missing bytes, or duplicating them?
+	Does this happen with the C64 side or is it FTDI?
 
 	
 	
