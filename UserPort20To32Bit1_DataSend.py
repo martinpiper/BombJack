@@ -31,6 +31,7 @@ def sendCompleteData():
     sendFTDILatchNybble(3, 0x01)    # Hi _PC
     sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use
     sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use
+    sendFTDILatchNybble(3, 0x02)  # Lo _PC Hi Use
     sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use
     sendFTDILatchNybble(3, 0x01)    # Hi _PC
 
@@ -53,15 +54,28 @@ sendCompleteData()
 # Write RAM
 setLatch(6)
 i = 0
-# 10 rows of 1024 characters
-while i < (10 * 1024):
-    setDataByte(0x00)       # Screen @
+char = 0
+# Some rows of 1024 characters
+while i < (256 * 1024):
+#    setDataByte(0x00)       # Screen @
+    setDataByte(char)
     sendCompleteData()
     setDataByte(0x01)       # Colour 1 white
     sendCompleteData()
     i = i + 1
     if ((i % 1024) == 0):
         print(i)
+        char = char + 1
+
+
+
+# Then some ending bytes
+setDataByte(0xff)       # Screen @
+i = 0
+while i < 32:
+    sendCompleteData()
+    sendCompleteData()
+    i = i + 1
 
 
 # Reset the interface again

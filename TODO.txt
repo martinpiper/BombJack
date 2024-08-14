@@ -3,8 +3,14 @@
 * FTDI data injection, sometimes unreliable, interference issue?
 	The data stored, even for 10240 bytes, seems to sometimes miss a byte...
 	Is it the fast DMA clock causing this? Try moving back to 1MHz...
+		>> 1MHz clock definitely seems to be more reliable, but not 100% reliable.
 	Is it missing bytes, or duplicating them?
+		>> Seems to be missing bytes.
 	Does this happen with the C64 side or is it FTDI?
+		>> C64 code TestInterface_WriteRAMLong does not have this issue. So the problem is with the FTDI side.
+		>> c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\work\BDD6502\testcmp.prg
+	>> Experimenting with signal transitions, sending two "sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use" before the "sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use" seems to make it very reliable!
+
 
 	
 	
