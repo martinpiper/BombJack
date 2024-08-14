@@ -10,7 +10,8 @@
 		>> C64 code TestInterface_WriteRAMLong does not have this issue. So the problem is with the FTDI side.
 		>> c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\work\BDD6502\testcmp.prg
 	>> Experimenting with signal transitions, sending two "sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use" before the "sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use" seems to make it very reliable!
-
+	>> Setting FTDI Use at the start and removing it at the end of the DataSend python utility seems to be faster and reliable for 256*1024*2 bytes, even when the C64 is trying to read the data
+		Also it has the advantage of of blocking the C64 completely during this write time.
 
 	
 	

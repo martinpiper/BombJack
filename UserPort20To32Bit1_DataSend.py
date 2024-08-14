@@ -1,7 +1,8 @@
 import serial
 
-serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
-#serialPort = serial.Serial(port="COM5")
+#serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+#serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
+serialPort = serial.Serial(port="COM5", baudrate=512000)
 
 print(serialPort)
 
@@ -23,17 +24,16 @@ def setLatch(latch):
 
 
 def setDataByte(value):
+    value = int(value)
     sendFTDILatchNybble(0, value)
     sendFTDILatchNybble(1, value >> 4)
 
 
 def sendCompleteData():
-    sendFTDILatchNybble(3, 0x01)    # Hi _PC
-    sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use
-    sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use
     sendFTDILatchNybble(3, 0x02)  # Lo _PC Hi Use
-    sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use
-    sendFTDILatchNybble(3, 0x01)    # Hi _PC
+    sendFTDILatchNybble(3, 0x02)  # Lo _PC Hi Use
+    sendFTDILatchNybble(3, 0x03)  # Hi _PC Hi Use
+    sendFTDILatchNybble(3, 0x03)  # Hi _PC Hi Use
 
 
 # Reset the FTDI interface latches to clear
@@ -41,7 +41,9 @@ sendFTDILatchNybble(0, 0)
 sendFTDILatchNybble(1, 0)
 sendFTDILatchNybble(2, 0)
 sendFTDILatchNybble(3, 0)
-
+# Prepare the interface for FTDI usage
+sendFTDILatchNybble(3, 0x03)  # Hi _PC Hi Use
+sendFTDILatchNybble(3, 0x03)  # Hi _PC Hi Use
 
 # Reset the interface
 setLatch(7)
@@ -60,7 +62,7 @@ while i < (256 * 1024):
 #    setDataByte(0x00)       # Screen @
     setDataByte(char)
     sendCompleteData()
-    setDataByte(0x01)       # Colour 1 white
+    setDataByte(i / 16)       # Colour 1 white
     sendCompleteData()
     i = i + 1
     if ((i % 1024) == 0):
@@ -85,3 +87,6 @@ sendCompleteData()
 setDataByte(0x80)
 sendCompleteData()
 
+# Stop using FTDI mode
+sendFTDILatchNybble(3, 0x01)  # Hi _PC
+sendFTDILatchNybble(3, 0x01)  # Hi _PC
