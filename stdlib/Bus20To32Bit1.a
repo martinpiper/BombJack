@@ -15,12 +15,12 @@ Bus20To32Bit1_Init
 	lda #%00001100
 	sta CIA2PortADDR
 
-	jsr Bus20To32Bit1_WriteMode
 	jsr Bus20To32Bit1_ShortReset
 
 	rts
 
 Bus20To32Bit1_ShortReset
+	jsr Bus20To32Bit1_WriteMode
 	jsr Bus20To32Bit1_SetLatch7
 	lda #0
 	+MBus24Bit_Send8BitValueFromA
