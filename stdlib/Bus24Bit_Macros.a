@@ -60,6 +60,11 @@
 	+MBus24Bit_SendLE16BitValue .addr
 }
 
+!macro MBus24Bit_SetAddressNoReset_A .ebbs , .addr {
+	+MBus24Bit_Send8BitValue .ebbs
+	+MBus24Bit_SendLE16BitValue .addr
+}
+
 
 !macro MBus24Bit_FastSpeedCopy .label , .length {
 !for .i , .length {

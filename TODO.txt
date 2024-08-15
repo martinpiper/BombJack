@@ -1,5 +1,13 @@
 * TODO:
 
+* UserPort20To32Bit1 hardware bug
+	U53 which outputs ENABLEFASTDMA for reading ALATCH13 is not chosen correctly with U1 which is enabled in other situations
+		U1 should be switched off by low ALATCH13
+
+
+
+
+
 * FTDI data injection, sometimes unreliable, interference issue?
 	The data stored, even for 10240 bytes, seems to sometimes miss a byte...
 	Is it the fast DMA clock causing this? Try moving back to 1MHz...
@@ -11,7 +19,7 @@
 		>> c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\work\BDD6502\testcmp.prg
 	>> Experimenting with signal transitions, sending two "sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use" before the "sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use" seems to make it very reliable!
 	>> Setting FTDI Use at the start and removing it at the end of the DataSend python utility seems to be faster and reliable for 256*1024*2 bytes, even when the C64 is trying to read the data
-		Also it has the advantage of of blocking the C64 completely during this write time.
+		Also it has the advantage of blocking the C64 completely during this write time.
 
 	
 	
@@ -77,7 +85,7 @@
 	The new fast DMA takes 4 cycles of the clock/2 to retire each byte.
 		At 16MHz this is 500ns, so the fast DMA clock will need to be slower than 8MHz.
 		Or the old interface will need a faster clock than 4MHz.
-	
+	>> clockAccumulatorByteTime = 4.0;    // TODO: Adjust to match hardware
 
 
 

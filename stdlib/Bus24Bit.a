@@ -154,7 +154,7 @@ Bus24Bit_Reset
 	; Reset the state input again
 	lda #%000
 	sta CIA2PortASerialBusVICBank
-	lda #%100
+	lda #CIA2PortASerialBusVICBank_PA2
 	sta CIA2PortASerialBusVICBank
 	rts
 
