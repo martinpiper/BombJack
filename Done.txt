@@ -5169,3 +5169,12 @@ All layouts now use V3.1
 	> Extra VIA DRC rooms around the FTDI socket pins and OSC socket
 		Also connected the RAM to cap nets in the layout as they would most often report spurious auto-route issues
 	>> FTDI Drivers: "C:\Users\marti\Downloads\CDM212364_Setup\CDM212364_Setup.exe"
+	
+	
+	
+* UserPort20To32Bit1 hardware bug
+	U53 which outputs ENABLEFASTDMA for reading ALATCH13 is not chosen correctly with U1 which is enabled in other situations
+		U1 should be switched off by low ALATCH13
+	>> Not a hardware bug. The code wasn't testing the actual bit of latch 13, it was assuming the register was zero when it was not.
+		The other bits float high...
+	> Use: kBus20To32Bit1_latch13_DMAInProgress 

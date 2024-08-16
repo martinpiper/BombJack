@@ -261,3 +261,18 @@ Feature: Tests the UserPort20To32Bit1 hardware with expected output
     Then accounting for transient values expect the next line to contain "PTPA2"
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC"
     Given close current file
+
+
+    When processing each line in file "output\DebugUserPort20To32Bit1.txt" and only output to file "target/out.txt" lines after finding a line containing "DMA Still in progress"
+    Given open file "target/out.txt" for reading
+    When ignoring lines that contain ";"
+    When ignoring lines that contain "."
+    When ignoring empty lines
+    Then expect the next line to contain "d$000320ff"
+    Then expect the next line to contain "d$000323fe"
+    Then expect the next line to contain "d$000323fe"
+    Then expect the next line to contain "d$000323fe"
+    Then expect the next line to contain "d$000323fe"
+    Then expect the next line to contain "d$000323fe"
+    Then expect the next line to contain "d$000323fe"
+

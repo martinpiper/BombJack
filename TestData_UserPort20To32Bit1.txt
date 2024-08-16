@@ -606,8 +606,10 @@ d=latch13 | DDR
 d=latch13 | _PC  | DDR
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
+:emit DMA Still in progress
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
+:emit DMA Should complete here
 d=latch13 | DDR
 d=latch13 | _PC  | DDR
 d=latch13 | DDR

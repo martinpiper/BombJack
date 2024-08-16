@@ -1,8 +1,6 @@
 * TODO:
 
-* UserPort20To32Bit1 hardware bug
-	U53 which outputs ENABLEFASTDMA for reading ALATCH13 is not chosen correctly with U1 which is enabled in other situations
-		U1 should be switched off by low ALATCH13
+* UserPort20To32Bit1 match emulation with hardware and refuse to read or write RAM via the latches when the DMA is active
 
 
 

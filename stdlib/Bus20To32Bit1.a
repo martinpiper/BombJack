@@ -7,6 +7,8 @@ kBus20To32Bit1_latch7_InternalPA2=$04
 kBus20To32Bit1_latch7_FastDMAStart=$08
 kBus20To32Bit1_latch7_ResetDone=$80
 
+kBus20To32Bit1_latch13_DMAInProgress = %00000001
+
 
 ; Initialise the Bus20To32Bit1 interface
 ; Corresponds to user port breakout V1.1
