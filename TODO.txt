@@ -4,6 +4,19 @@
 
 
 
+* UserPort20To32Bit1 FTDI read mode.
+	Perhaps a new signal similar to FTDI_USE, create FTDI_READ, on the positive edge latch that as an intention to read a byte from the current internal state.
+	This intention would turn off U70
+	Also wait until TXE# is low
+		Low FTDI_READ resets a counter to schedule a byte read
+		Counter will help hold FTDI_PC low then high for a few cycles
+		During this, the data is written by WR negative edge, high to low
+			The current D0..7 is then exposed to FTDI_D0..7 with transceiver U70
+		Counter will reset intention at the end of the cycle
+		
+
+
+
 
 
 * FTDI data injection, sometimes unreliable, interference issue?
