@@ -47,8 +47,9 @@
 		This would allow the 14 output control signals currently in the four latches to be merged into two banks, not four.
 	Instead of that FTDI timer U58 using FastDMACalcCLK it can use a clck divided source with optional DIP switch.
 	The clock output can also switch a DIP switch for the DMA.
+	Instead of the USB bytes alrering _PC, logic should be able to handle this: (This should quadruple the speed)
 		_PC high ORs to output, holding it high
-		When writing the last latch and _PC is low then use a timed write pulse.
+		When writing the last latch and _PC is low then use a low timed write pulse, from the clock scheduler.
 		Means writing the first latch generates no pulse, always.
 	
 
