@@ -36,6 +36,21 @@
 		Is this because with 4MHz it is catching a partial shorter clock at the start or the intersection of a nother clock boundary?
 		Perhaps douwn sample the 4MHz for FTDI and keep the higher clock for DMA in a new revision?
 		>> Check for short clock boundary conditions...
+		
+		
+
+
+* UserPort20To32Bit1 FTDI write can be optimised
+	Instead of U61 enable E1 being set and reset by sending two bytes, it can come from a new signal two ticks after FTDIByteLatch
+		This would double the byte sending speed.
+	Instead of U61 and U60 using 2 latch signals and only 4 data signals, it would be possible to use 7 data signals and 1 latch bank selector, perhaps even removing the need to U60.
+		This would allow the 14 output control signals currently in the four latches to be merged into two banks, not four.
+	Instead of that FTDI timer U58 using FastDMACalcCLK it can use a clck divided source with optional DIP switch.
+	The clock output can also switch a DIP switch for the DMA.
+		_PC high ORs to output, holding it high
+		When writing the last latch and _PC is low then use a timed write pulse.
+		Means writing the first latch generates no pulse, always.
+	
 
 	
 	
