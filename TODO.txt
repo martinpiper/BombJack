@@ -40,8 +40,10 @@
 
 
 * UserPort20To32Bit1 FTDI write can be optimised
-	Instead of U61 enable E1 being set and reset by sending two bytes, it can come from a new signal two ticks after FTDIByteLatch
+	Done: Instead of U61 enable E1 being set and reset by sending two bytes, it can come from a new signal two ticks after FTDIByteLatch
 		This would double the byte sending speed.
+		> Removed: FTDIN_PC
+		> Also changed _FTDIRD generation, to hold at 0 while the attempt to read a byte from FTID happens
 	Instead of U61 and U60 using 2 latch signals and only 4 data signals, it would be possible to use 7 data signals and 1 latch bank selector, perhaps even removing the need to U60.
 		This would allow the 14 output control signals currently in the four latches to be merged into two banks, not four.
 	Instead of that FTDI timer U58 using FastDMACalcCLK it can use a clck divided source with optional DIP switch.
@@ -52,7 +54,6 @@
 		Means writing the first latch generates no pulse, always.
 	>> TestData_UserPort20To32Bit2.txt
 	>> UserPort20To32Bit2.pdsprj
-	
 
 	
 	

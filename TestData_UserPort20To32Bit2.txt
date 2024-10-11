@@ -34,7 +34,6 @@
 .FTDIN_1 = $00001000
 .FTDIN_2 = $00002000
 .FTDIN_3 = $00003000
-.FTDIN_PC = $00004000
 
 ; Bits for each control nybble
 .FTDIN_2_UserPort_SP1 = $00002100
@@ -632,59 +631,37 @@ d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
 d=latch7 | latch7_ResetDone | latch7_Passthrough
 d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
 
+; Break
+;d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough | BreakPoint
 
 :emit Signal bytes ready from FTDI
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
-
 d=latch0 | _PC | FTDIN_0 | $0400
 d=latch0 | _PC | FTDIN_0 | $0400 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_0 | $0400
 
-
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
 
 d=latch0 | _PC | FTDIN_1 | $0700
 d=latch0 | _PC | FTDIN_1 | $0700 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_1 | $0700
 
 ; Setup FTDI latch6 (write RAM)
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
-
 d=latch0 | _PC | FTDIN_2 | $0600
 d=latch0 | _PC | FTDIN_2 | $0600 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_2 | $0600
 
 :emit Use FTDI now
 ; Hi user port _PC here
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 
 ; Lo user port _PC here
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
-
 d=latch0 | _PC | FTDIN_3_UserPort_Use
 d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use
 
 ; Hi user port _PC here - 2
 :emit Should get $74 written to the RAM by FTDI
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
@@ -693,37 +670,21 @@ d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 
 
 :emit Signal bytes ready from FTDI - 2
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
-
 d=latch0 | _PC | FTDIN_0 | $0b00
 d=latch0 | _PC | FTDIN_0 | $0b00 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_0 | $0b00
 
-
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800 | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
 
 d=latch0 | _PC | FTDIN_1 | $0800
 d=latch0 | _PC | FTDIN_1 | $0800 | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_1 | $0800
 
 ; Lo user port _PC here
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
-
 d=latch0 | _PC | FTDIN_3_UserPort_Use
 d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use
 
 :emit Should get $8b written to the RAM by FTDI
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
-
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
@@ -732,10 +693,6 @@ d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
 
 
 :emit Stop using FTDI now
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
-d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
-
 d=latch0 | _PC | FTDIN_3_UserPort_PC
 d=latch0 | _PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
 d=latch0 | _PC | FTDIN_3_UserPort_PC
