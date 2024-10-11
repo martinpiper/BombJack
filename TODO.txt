@@ -59,6 +59,7 @@
 	>> TestData_UserPort20To32Bit2.txt
 	>> UserPort20To32Bit2.pdsprj
 	Done: Check _FTDIRD for transient false posiive signals
+	Ensure debug headers expose the new signals for data reading, latching etc
 
 	
 	
