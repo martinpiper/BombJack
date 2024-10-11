@@ -1,0 +1,90 @@
+; D[0..7]	= UD[0..7]
+; D16		= PA2
+; D17 		= _PC
+
+d0
+
+; First address setup
+d$00020000
+d$00030000
+d$00030000
+
+; Sending _PC timed data, note there is no data setup time, like the C64
+; There is also a longer held time (_PC = 1), to simulate the delay between opcodes storing data to the user port.
+; For example, the fastest write to the user port is sta absolute, which is 4 cycles
+d$00010001
+d$00030001
+d$00030001
+
+d$00010010
+d$00030010
+d$00030010
+
+d$00010002
+d$00030002
+d$00030002
+
+d$00010001
+d$00030001
+d$00030001
+
+d$00010002
+d$00030002
+d$00030002
+
+d$00010082
+d$00030082
+d$00030082
+
+d$00010081
+d$00030081
+d$00030081
+
+d$00030000
+d$00030000
+d$00030000
+d$00030000
+d$00030000
+d$00030000
+
+
+; Second address setup; Second address setup
+d$00020000
+d$00030000
+d$00020000
+d$00030000
+
+d$00010001
+d$00030001
+d$00030001
+
+d$00010024
+d$00030024
+d$00030024
+
+d$00010001
+d$00030001
+d$00030001
+
+d$00010011
+d$00030011
+d$00030011
+
+d$00010022
+d$00030022
+d$00030022
+
+d$00010032
+d$00030032
+d$00030032
+
+d$00010041
+d$00030041
+d$00030041
+
+d$00030000
+d$00030000
+d$00030000
+d$00030000
+d$00030000
+d$00030000
