@@ -50,7 +50,7 @@
 		_PC high ORs to output, holding it high
 		When writing the last latch and _PC is low then use a low timed write pulse, from the clock scheduler.
 		Means writing the first latch generates no pulse, always.
-	>> TestUserPortTo24BitAddress2.txt
+	>> TestData_UserPort20To32Bit2.txt
 	>> UserPort20To32Bit2.pdsprj
 	
 

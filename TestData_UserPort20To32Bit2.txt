@@ -1,0 +1,741 @@
+; Signals from the user port
+._PC = $20000000	; Low is write
+.SP1 = $01000000
+.SP2 = $02000000
+.SERIALATN = $04000000
+.PA2 = $08000000
+
+; Set to input from the C64, not a user port pin as such
+.DDR = $10000000
+
+.latch0 = $00000000
+.latch1 = $01000000
+.latch2 = $02000000
+.latch3 = $03000000
+.latch4 = $04000000
+.latch5 = $05000000
+.latch6 = $06000000
+.latch7 = $07000000
+.latch8 = $08000000
+.latch9 = $09000000
+.latch10 = $0a000000
+.latch11 = $0b000000
+.latch12 = $0c000000
+.latch13 = $0d000000
+.latch14 = $0e000000
+.latch15 = $0f000000
+
+; Signals from the FTDI device
+._FTDITXEPre = $00010000
+._FTDIRXFPre = $00020000
+
+; Signal groups for the FTDI control nybble
+.FTDIN_0 = $00000000
+.FTDIN_1 = $00001000
+.FTDIN_2 = $00002000
+.FTDIN_3 = $00003000
+.FTDIN_PC = $00004000
+
+; Bits for each control nybble
+.FTDIN_2_UserPort_SP1 = $00002100
+.FTDIN_2_UserPort_SP2 = $00002200
+.FTDIN_2_UserPort_ATN = $00002400
+.FTDIN_2_UserPort_PA2 = $00002800
+.FTDIN_3_UserPort_PC  = $00003100
+; Use the FTDI signals, not the user port signals
+.FTDIN_3_UserPort_Use = $00003200
+
+; Latch7 bits
+; $00	Mode: Pass-through (default on reset)
+; $01	Mode: Choose RAM
+; $02	Mode: Pass-through disable
+; $03	Mode: Disabled, low data, high PA2 high _PC
+; $04	Internal PA2 value
+; $08	Fast DMA start
+; $80	Reset has completed, wakeup the interface
+.latch7_Passthrough=$00
+.latch7_RAM=$01
+.latch7_PassthroughDisable=$02
+.latch7_Disabled=$03
+.latch7_InternalPA2=$04
+.latch7_FastDMAStart=$08
+.latch7_ResetDone=$80
+
+
+; Used for debugging
+.BreakPoint = $80000000
+
+
+:emit During power-on reset
+d=latch0 | _PC | $00
+d=latch0 | _PC | $01
+d=latch0 | _PC | $02
+d=latch0 | _PC | $03
+d=latch0 | _PC | $04
+
+:emit After power-on reset
+; Default is pass-through mode, these inputs should be seen at the output, as long as latch7 isn't altered
+; Note: latch8 is effectively PA2 and latch0 is not PA2
+d=latch8 | _PC | $00
+d=latch8 | _PC | $01
+d=latch0 | _PC | $02
+d=latch0 | _PC | $03
+
+d=latch8 | _PC | $00
+d=latch8 | _PC | $01
+d=latch8 | $01
+d=latch8 | _PC | $01
+
+d=latch8 | _PC | $01
+d=latch8 | _PC | $02
+d=latch8 | $02
+d=latch8 | _PC | $02
+
+d=latch8 | _PC | $02
+d=latch8 | _PC | $03
+d=latch8 | $03
+d=latch8 | _PC | $03
+
+:emit Set latch7 - Disabled mode, ($03)
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
+d=latch7 | latch7_ResetDone | latch7_Disabled
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled
+
+:emit Set adders
+d=latch8 | _PC | $18
+d=latch8 | $18
+d=latch8 | _PC | $18
+d=latch9 | _PC | $01
+d=latch9 | $01
+d=latch9 | _PC | $01
+d=latch10 | _PC | $00
+d=latch10 | $00
+d=latch10 | _PC | $00
+
+
+
+:emit Set latch0
+d=latch0 | _PC | $04
+d=latch0 | $07
+d=latch0 | _PC | $07
+
+:emit Set latch1
+d=latch1 | _PC | $37
+d=latch1 | $02
+d=latch1 | _PC | $02
+
+:emit Set latch2
+d=latch2 | _PC | $01
+d=latch2 | $10
+d=latch2 | _PC | $10
+
+:emit Set latch6 (Write RAM) next bank
+d=latch6 | _PC | $00
+; Write $dc
+d=latch6 | $dc
+d=latch6 | _PC | $dc
+; Write $ed
+d=latch6 | $ed
+d=latch6 | _PC | $ed
+; Write $fe
+d=latch6 | $fe
+d=latch6 | _PC | $fe
+; Write $0f
+d=latch6 | $0f
+d=latch6 | _PC | $0f
+
+
+
+:emit Set latch0
+d=latch0 | _PC | $04
+d=latch0 | $37
+d=latch0 | _PC | $37
+
+:emit Set latch1
+d=latch1 | _PC | $37
+d=latch1 | $01
+d=latch1 | _PC | $01
+
+:emit Set latch2
+d=latch2 | _PC | $01
+d=latch2 | $00
+d=latch2 | _PC | $00
+
+:emit Set latch6 (Write RAM)
+d=latch6 | _PC | $00
+; Write $23
+d=latch6 | $23
+d=latch6 | _PC | $23
+; Write $34
+d=latch6 | $34
+d=latch6 | _PC | $34
+; Write $17
+d=latch6 | $17
+d=latch6 | _PC | $17
+; Write $98
+d=latch6 | $98
+d=latch6 | _PC | $98
+
+
+:emit Reset address...
+d=latch0 | _PC | $04
+; Set latch0 = $37
+d=latch0 | $37
+d=latch0 | _PC | $37
+
+:emit Set latch1
+d=latch1 | _PC | $37
+; Set latch1 = $01
+d=latch1 | $01
+d=latch1 | _PC | $01
+
+:emit Simulate C64 side setting user port DDR
+d=latch1 | _PC | $01 | DDR
+
+:emit Set latch5 for read RAM
+d=latch5 | _PC | $01 | DDR
+; "Write" latch5 (Read RAM)
+d=latch5 | $00 | DDR
+d=latch5 | _PC | $00 | DDR
+
+d=latch5 | $00 | DDR
+d=latch5 | _PC | $00 | DDR
+
+d=latch5 | $00 | DDR
+d=latch5 | _PC | $00 | DDR
+
+d=latch5 | $00 | DDR
+d=latch5 | _PC | $00 | DDR
+
+
+:emit Write to latch3 which should read the added address...
+d=latch3 | _PC | $00
+d=latch3 | $00
+d=latch3 | _PC | $00
+
+
+:emit Set latch6 (Write RAM) continuing with the last read address
+d=latch6 | _PC | $00
+; Write $11
+d=latch6 | $11
+d=latch6 | _PC | $11
+; Write $22
+d=latch6 | $22
+d=latch6 | _PC | $22
+; Write $33
+d=latch6 | $33
+d=latch6 | _PC | $33
+; Write $44
+d=latch6 | $44
+d=latch6 | _PC | $44
+
+
+:emit Reset address...
+d=latch0 | _PC | $04
+; Set latch0 = $37
+d=latch0 | $37
+d=latch0 | _PC | $37
+
+:emit Set latch1
+d=latch1 | _PC | $37
+; Set latch0 = $01
+d=latch1 | $01
+d=latch1 | _PC | $01
+
+:emit Set latch7 - Enable pass-through
+; When altering the pass-through operation via latch7, do not track its _PC signal.
+
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+d=latch7 | latch7_ResetDone | latch7_Passthrough
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+
+:emit PA2 toggle twice
+; Note: Latch7 controls internal PA2
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable
+d=latch7 | latch7_ResetDone | latch7_PassthroughDisable | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_PassthroughDisable | latch7_InternalPA2
+
+; Break
+;d=BreakPoint
+
+:emit Write some direct bytes to the pass-through with latch4, only when using "$02	Pass-through disable"
+d=latch4 | _PC | $55
+d=latch4 | $55
+d=latch4 | _PC | $55
+d=latch4 | _PC | $66
+d=latch4 | $66
+d=latch4 | _PC | $66
+d=latch4 | _PC | $77
+d=latch4 | $77
+d=latch4 | _PC | $77
+d=latch4 | _PC | $88
+d=latch4 | $88
+d=latch4 | _PC | $88
+
+
+:emit Set latch7 - Enable RAM to pass-through
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_RAM | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_InternalPA2
+
+
+:emit Simulate C64 side setting user port DDR
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM	| DDR | latch7_InternalPA2
+
+:emit Set latch5 again for read RAM
+d=latch5 | _PC | $01	| DDR
+; "Write" latch5 (Read RAM)
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+:emit Read from latch3 which should read the added address...
+d=latch3 | _PC | $00	| DDR
+d=latch3 | $00	| DDR
+d=latch3 | _PC | $00	| DDR
+
+d=latch5 | _PC | $00	| DDR
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+d=latch5 | $00	| DDR
+d=latch5 | _PC | $00	| DDR
+
+
+
+:emit Fast DMA test
+; DDR switch
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | DDR | latch7_InternalPA2
+
+:emit Set latch7 - Disabled mode, ($03)
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_Disabled | latch7_InternalPA2
+; At this point latch7_Disabled is used which forces PA2 to be high no matter what.
+d=latch7 | latch7_ResetDone | _PC | latch7_Disabled | latch7_InternalPA2
+
+:emit Reset address...
+d=latch0 | _PC | $04
+; Set latch0 = $37
+d=latch0 | $37
+d=latch0 | _PC | $37
+
+:emit Set latch1
+d=latch1 | _PC | $37
+; Set latch0 = $01
+d=latch1 | $01
+d=latch1 | _PC | $01
+
+:emit Set counter latches
+d=latch11 | _PC | $04
+d=latch11 | $13
+d=latch11 | _PC | $13
+
+d=latch12 | _PC | $fe
+d=latch12 | $fe
+d=latch12 | _PC | $fe
+
+:emit Enable the DMA length counter
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
+d=latch7 | latch7_ResetDone | _PC | latch7_RAM | latch7_FastDMAStart | latch7_InternalPA2
+
+
+:emit Simulate the C64 switching to read latch13, the status of the DMA
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+:emit Around here should be more non-zero bytes read
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+:emit DMA Still in progress
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+:emit DMA Should complete here
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+d=latch13 | DDR
+d=latch13 | _PC  | DDR
+
+:emit Switch the DDR back and set latch0
+d=latch0 | _PC  | DDR
+d=latch0 | _PC
+
+:emit Set latch7 - Enable pass-through - Again
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+d=latch7 | latch7_ResetDone | latch7_Passthrough
+d=latch7 | latch7_ResetDone | _PC | latch7_Passthrough
+
+
+:emit Signal bytes ready from FTDI
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0400
+
+d=latch0 | _PC | FTDIN_0 | $0400
+d=latch0 | _PC | FTDIN_0 | $0400 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | $0400
+
+
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0700
+
+d=latch0 | _PC | FTDIN_1 | $0700
+d=latch0 | _PC | FTDIN_1 | $0700 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | $0700
+
+; Setup FTDI latch6 (write RAM)
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | FTDIN_PC | $0600
+
+d=latch0 | _PC | FTDIN_2 | $0600
+d=latch0 | _PC | FTDIN_2 | $0600 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_2 | $0600
+
+:emit Use FTDI now
+; Hi user port _PC here
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+; Lo user port _PC here
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+
+; Hi user port _PC here - 2
+:emit Should get $74 written to the RAM by FTDI
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+
+
+
+:emit Signal bytes ready from FTDI - 2
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | FTDIN_PC | $0b00
+
+d=latch0 | _PC | FTDIN_0 | $0b00
+d=latch0 | _PC | FTDIN_0 | $0b00 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_0 | $0b00
+
+
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | FTDIN_PC | $0800
+
+d=latch0 | _PC | FTDIN_1 | $0800
+d=latch0 | _PC | FTDIN_1 | $0800 | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_1 | $0800
+
+; Lo user port _PC here
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+d=latch0 | _PC | FTDIN_3_UserPort_Use | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use
+
+:emit Should get $8b written to the RAM by FTDI
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_Use | FTDIN_3_UserPort_PC
+
+
+
+
+:emit Stop using FTDI now
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_PC | FTDIN_3_UserPort_PC
+
+d=latch0 | _PC | FTDIN_3_UserPort_PC
+d=latch0 | _PC | FTDIN_3_UserPort_PC | _FTDIRXFPre
+d=latch0 | _PC | FTDIN_3_UserPort_PC
