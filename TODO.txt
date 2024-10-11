@@ -44,12 +44,12 @@
 		This would double the byte sending speed.
 		> Removed: FTDIN_PC
 		> Also changed _FTDIRD generation, to hold at 0 while the attempt to read a byte from FTID happens
-	Instead of U61 and U60 using 2 latch signals and only 4 data signals, it would be possible to use 7 data signals and 1 latch bank selector
+	Done: Instead of U61 and U60 using 2 latch signals and only 4 data signals, it would be possible to use 7 data signals and 1 latch bank selector
 		This would allow the 14 output control signals currently in the four latches to be merged into two banks, not four.
 		> Removed: FTDIN_2 FTDIN_3
 		> Replaced selector with 74S139
 		> Altered signals in test data file
-	>> perhaps even removing the need to U60.
+	>> Done: perhaps even removing the need to U60.
 	Instead of that FTDI timer U58 using FastDMACalcCLK it can use a clock divided source with optional DIP switch.
 	The clock output can also switch a DIP switch for the DMA.
 	Instead of the USB bytes altering _PC, logic should be able to handle this: (This should quadruple the speed)
