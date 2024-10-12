@@ -31,10 +31,11 @@
 		Also it has the advantage of blocking the C64 completely during this write time.
 	> With 4MHz it seems to be a little more unreliable, even with the signal changes in the data send utility.
 	> However the DMA transfer is nice and reliable.
-		Is this because with 4MHz it is catching a partial shorter clock at the start or the intersection of a nother clock boundary?
+		Is this because with 4MHz it is catching a partial shorter clock at the start or the intersection of another clock boundary?
 		Perhaps douwn sample the 4MHz for FTDI and keep the higher clock for DMA in a new revision?
 		>> Check for short clock boundary conditions...
 			* Perhaps sync the clock for the FTDI read so that any read pulses are timed nicely?
+		> Added DSW3 to configure an earlier low _FTDIRD based on the FTDI counter schedule (LSB), or to remove the least significant bit (Off)
 		
 		
 
