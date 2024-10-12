@@ -63,7 +63,7 @@
 	>> UserPort20To32Bit2.pdsprj
 	Done: Check _FTDIRD for transient false posiive signals
 	> Layout: MegaWang memory expansion V2.0
-	Ensure debug headers expose the new signals for data reading, latching etc
+	Done: Ensure debug headers expose the new signals for data reading, latching etc
 
 	
 	
