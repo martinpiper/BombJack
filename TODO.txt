@@ -737,6 +737,13 @@
 * User port: For the Raspberry Pi interface it is useful to have the 5V from the C64 drive the 5V side of the level shifters
 	This would need an extra line for the C64 5V and call the net "C645V", be careful not to connect it to the 5V on the externally powered user port interface!
 	Adafruit. Sparkfun. TXB0108
+	Level shifters etc:
+		https://www.ti.com/product/TXB0108
+		https://www.ti.com/product/SN74AUC245
+		https://www.ti.com/product/SN74LVC257A
+		https://www.alldatasheet.com/datasheet-pdf/pdf/15463/PHILIPS/74F595.html
+
+		
 
 
 
@@ -948,3 +955,35 @@
 
 * Video: Perhaps expand the range of the RGB565 voltage levels and allow the pots to have more impact?
 	Might be possible to bodge with parallel resistors.
+
+
+
+
+* Sprites, scaled or normal or rotated.
+	Have two full frame buffers. One being displayed and cleared, the other being drawn to.
+	Change the draw logic so that it processes each sprite rectangle into the frame buffer.
+	The frame buffer can have 512 wide spans, making the row lookup maths easier.
+	Sprites2 (or Sprites3) might need to change register currentSpriteScaleExtentX ro be the pixel width of the sprite on screen, for horizontal clipping optimisation. Same as currentSpriteSizeY
+		Might also want a sprite row stride value to add. Instead of assuming it is 32 x 32 pixels.
+		Might want a sprite data start address, 16 bits or even bigger?, instead of a specific value that gets multiplied
+			16 bits, with 4 bit palettetised data, would give effectively two banks of 256x256 pixels = 128 32x32 sprites, or sprites of other sizes...
+		If the visible top left is frame buffer 0x0 then the off screen edge check only needs >= comparators and not <= ...
+	Logic:
+		Load sprite details from RAM into registers
+			Incude working sprite address as well as row start address?
+			Include working X pos
+		With current 9 bit X pos and Y pos
+			If X and Y and X+width and Y+height are outside the screen area then advance the current sprite
+			Else if X and X+width are outside the row area then signal to advance to the next row
+			Else if Y and Y+height are outside the screen then signal advance to the next row
+			Else draw pixels per fast clock
+				Load pixel data from working sprite address
+				Store to frame buffer address, with transparency check
+				Add scaleX value to working sprite address (now 16+8 bits)
+		On signal:
+			Advance the current sprite
+				Load the next sprite registers into latches
+			Advance to the next row
+				Add sprite row stride (32) or perhaps an extra stride value to the sprite data address
+				Load into working sprite address
+				Load sprite X pos in working latches
