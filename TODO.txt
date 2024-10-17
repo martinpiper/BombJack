@@ -987,3 +987,13 @@
 				Add sprite row stride (32) or perhaps an extra stride value to the sprite data address
 				Load into working sprite address
 				Load sprite X pos in working latches
+	* Access to sprite RAM is however an issue since it cannot draw and write to the same RAM
+		Two buffers would be OK, at the same address. When one is being used to render the other accepts writes.
+		This swaps precisely on vsync *and* when a flag is set that indicates a new buffer is ready. This flag can be set after data transfer is complete, just before the wait for vsync.
+			>> To avoid missing a wait for vsync, clear the Vsync IRQ, then set the transfer complete flag, then wait for the vsync.
+		This would allow maximum drawing time
+	> At the moment with Sprites2 the maximum sprite clocks (per line) at 16MHz are 16 * 384 / 12.096 = 507.9
+		In reality there is a lot of wasted time due to using a scanline buffer, so assuming 32x32 sprites, 16,252 pixels
+	> With this new design, more of the screen is used for drawing clocks: 16 * 384 * 262 / 224 / 12.096 = 594.1
+		But in reality this increases the screen draw coverage to 16 * 384 * 262 pixels per frame = 1,609,728, assuming 32x32 sprites = 50,304
+	>> In theory, this should be a large boost over Sprites2 and Sprites3
