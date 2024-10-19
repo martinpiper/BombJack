@@ -997,3 +997,15 @@
 	> With this new design, more of the screen is used for drawing clocks: 16 * 384 * 262 / 224 / 12.096 = 594.1
 		But in reality this increases the screen draw coverage to 16 * 384 * 262 pixels per frame = 1,609,728, assuming 32x32 sprites = 50,304
 	>> In theory, this should be a large boost over Sprites2 and Sprites3
+	>> ImageToBitplane: Demo9 Sprites4
+		--paletteoffset 0 --palettesize 16 --rgbshift 5 6 5 --nostacking --newpalettes --loadpaletteraw ../tmp/Demo9PaletteData.bin --resetforcergb --forcergb 255 0 255 --numbitplanes 4 --image "Demo9/sprites2.png" --tilewh 32 32 --fitpalettes --outputscaled4 ../tmp/Demo9Sprites4 --outputsprites ../tmp/Demo9Sprites4Sheet.txt --namesuffix _scaled_  --convertwritepass
+		kVarsEmitSpriteFrame_scaled_0_0_0_tileAddress=0
+		kVarsEmitSpriteFrame_scaled_0_0_0_tileWidth=32
+		kVarsEmitSpriteFrame_scaled_0_0_0_tileHeight=32
+	> Sprites4 layer seems to work in emulation
+		@TC-17
+		Scenario: Testing Sprites4 layer
+		Given add a Sprites4 layer with registers at '0x8800' and addressEx '0x08'
+	* It would be better to store the sprites without nybble pairs, use lo/hi buffer arrangement instead
+		The sprite address itself can be internally multiplied by two instead
+		This would remove the stress on the nybble selector
