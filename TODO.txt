@@ -1006,6 +1006,7 @@
 		@TC-17
 		Scenario: Testing Sprites4 layer
 		Given add a Sprites4 layer with registers at '0x8800' and addressEx '0x08'
+		Given add a Sprites4 layer with registers at '0x8800' and addressEx '0x08' and running at 14.31818MHz
 	* Done: It would be better to store the sprites without nybble pairs, use lo/hi buffer arrangement instead
 		This would remove the stress on the nybble selector
 	* The first few register bytes should be configuration latches
