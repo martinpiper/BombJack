@@ -1012,7 +1012,7 @@
 	* The first eight register bytes should be configuration latches, will also go to RAM but will be unused for the draw start
 		Flag for swap sprite registers buffer when on vsync
 			Done: triggerBufferSwap
-		Left border adjust * 2, used during scanline output
-		Top border adjust * 2, used during scanline output
+		Done: Two bytes: Left border adjust, used during scanline output
+		Done: Two bytes: Top border adjust, used during scanline output
 		Sprite Y extent (* 2) stop drawing when >=
 		Sprite X extent (* 2) stop drawing when >=
