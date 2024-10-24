@@ -1014,11 +1014,12 @@
 			Done: triggerBufferSwap
 		Done: Two bytes: Left border adjust, used during scanline output
 		Done: Two bytes: Top border adjust, used during scanline output
-		Sprite Y extent (* 2) stop drawing when >=
 		Sprite X extent (* 2) stop drawing when >=
+		Sprite Y extent (* 2) stop drawing when >=
 	* Now time for so stress test code, see how many we can throw around, probably a rotating cube.
 		Find the frame maximum, right up until the first partial drop-out
 			Seems to be 111 sprites with current sprite pattern
 		Then implement bounding edge culling...
 		Find new frame maximum
 		Compare with Sprites2
+		190 32x32 sprites with new clipping tests...
