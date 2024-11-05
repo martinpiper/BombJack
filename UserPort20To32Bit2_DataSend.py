@@ -18,9 +18,8 @@ print(serialPort)
 
 def sendRawByte(value):
     global totalBytesSent, startTime
-    toSendWithEnable = bytearray([value | 0x40, value])
+    toSendWithEnable = bytearray([value])
     # Setup data for the FTDI latches.
-    # The no enable version is important, because it switches off the selector with the data still held, which causes a positive edge on the FTDI latches to load the held data.
     serialPort.write(toSendWithEnable)
     totalBytesSent = totalBytesSent + 1
     if ((totalBytesSent % 10240) == 0):
@@ -57,7 +56,7 @@ def sendDataByte(value):
     enablePCOnWrite()
     value = int(value)
     sendFTDILatchData(0, value & 0x7f)
-    sendFTDILatchData(1, (value >> 1) & 0x40)
+    sendFTDILatchData(1, ((value >> 1) & 0x40) | (lastLatches[1] & 0xbf))
 
 
 # Reset the FTDI interface latches to clear
@@ -78,7 +77,7 @@ i = 0
 char = 0
 # Some rows of 1024 characters
 while i < (256 * 1024):
-    #    sendDataByte(0x00)       # Screen @
+#    sendDataByte(0x00)       # Screen @
     sendDataByte(char)
     sendDataByte(i / 16)  # Colour 1 white
     i = i + 1
