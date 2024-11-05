@@ -5178,3 +5178,73 @@ All layouts now use V3.1
 	>> Not a hardware bug. The code wasn't testing the actual bit of latch 13, it was assuming the register was zero when it was not.
 		The other bits float high...
 	> Use: kBus20To32Bit1_latch13_DMAInProgress 
+
+
+
+
+
+* UserPort20To32Bit1 and FTDI data generation
+    Via COM port, python?
+        pip install pyserial
+    cmd->mode command shows COM5:  for the FTDI
+	LogicPort analyser error...
+		A driver cannot load on this device
+		Driver: ftdibus.sys
+		A security setting is preventing this driver from loading...
+		Learn more...	https://support.microsoft.com/en-us/windows/a-driver-can-t-load-on-this-device-8eea34e5-ff4b-16ec-870d-61a4a43b3dd5
+		Go to the Core isolation page in Windows Security.
+		Turn the Memory Integrity setting Off if it isn’t already. You'll need to restart your computer for the changes to take effect.
+	Updated drivers? C:\Users\marti\Downloads\CDM-v2.12.36.4.U-WHQL-Certified\x64
+	https://ftdichip.com/drivers/vcp-drivers/
+
+
+* UserPort20To32Bit1 FTDI write can be optimised
+	Done: Instead of U61 enable E1 being set and reset by sending two bytes, it can come from a new signal two ticks after FTDIByteLatch
+		This would double the byte sending speed.
+		> Removed: FTDIN_PC
+		> Also changed _FTDIRD generation, to hold at 0 while the attempt to read a byte from FTID happens
+	Done: Instead of U61 and U60 using 2 latch signals and only 4 data signals, it would be possible to use 7 data signals and 1 latch bank selector
+		This would allow the 14 output control signals currently in the four latches to be merged into two banks, not four.
+		> Removed: FTDIN_2 FTDIN_3
+		> Replaced selector with 74S139
+		> Altered signals in test data file
+	>> Done: perhaps even removing the need to U60.
+	Done: Instead of that FTDI timer U58 using FastDMACalcCLK it can use a clock divided source with optional DIP switch.
+		FTDICLK
+	Done: The clock output can also switch a DIP switch for the DMA.
+		DMACLK
+	Done: Instead of the USB bytes altering _PC, logic should be able to handle this: (This should quadruple the speed)
+		_PC high ORs to output, holding it high
+		When writing the last latch and _PC is low then use a low timed write pulse, from the clock scheduler.
+		Means writing the first latch generates no pulse, always.
+	>> TestData_UserPort20To32Bit2.txt
+	>> UserPort20To32Bit2.pdsprj
+	Done: Check _FTDIRD for transient false posiive signals
+	> Layout: MegaWang memory expansion V2.0
+	Done: Ensure debug headers expose the new signals for data reading, latching etc
+
+
+* FTDI data injection, sometimes unreliable, interference issue?
+	The data stored, even for 10240 bytes, seems to sometimes miss a byte...
+	Is it the fast DMA clock causing this? Try moving back to 1MHz...
+		>> 1MHz clock definitely seems to be more reliable, but not 100% reliable.
+	Is it missing bytes, or duplicating them?
+		>> Seems to be missing bytes.
+	Does this happen with the C64 side or is it FTDI?
+		>> C64 code TestInterface_WriteRAMLong does not have this issue. So the problem is with the FTDI side.
+		>> c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\work\BDD6502\testcmp.prg
+	>> Experimenting with signal transitions, sending two "sendFTDILatchNybble(3, 0x02)    # Lo _PC Hi Use" before the "sendFTDILatchNybble(3, 0x03)    # Hi _PC Hi Use" seems to make it very reliable!
+	>> Setting FTDI Use at the start and removing it at the end of the DataSend python utility seems to be faster and reliable for 256*1024*2 bytes, even when the C64 is trying to read the data
+		Also it has the advantage of blocking the C64 completely during this write time.
+	> With 4MHz it seems to be a little more unreliable, even with the signal changes in the data send utility.
+	> However the DMA transfer is nice and reliable.
+		Is this because with 4MHz it is catching a partial shorter clock at the start or the intersection of another clock boundary?
+		Perhaps douwn sample the 4MHz for FTDI and keep the higher clock for DMA in a new revision?
+		>> Check for short clock boundary conditions...
+			* Perhaps sync the clock for the FTDI read so that any read pulses are timed nicely?
+		> Added DSW3 to configure an earlier low _FTDIRD based on the FTDI counter schedule (LSB), or to remove the least significant bit (Off)
+	>> UserPort20To32Bit2_DataSend.py
+	# Using 4MHz
+	# 2 * 1024 * 1024  RAM bytes sent
+	# 125947  bytes per second
+	# Using different clock speeds, with the DIP switch clock divider does change the speed. Indicating we are FTDI limited now. Previous code was Python serial limited.
