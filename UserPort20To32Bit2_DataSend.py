@@ -1,4 +1,5 @@
 import random
+import sys
 
 import serial
 import time
@@ -75,27 +76,37 @@ sendDataByte(0x80)
 
 # Write RAM
 setLatch(6)
-i = 0
-char = random.randint(0, 255)
-# Some rows of 1024 characters
-while i < (2 * 1024 * 1024):
-#while i < (256 * 1024):
-#while i < (20 * 1024):
-#    sendDataByte(0x00)       # Screen @
-#    sendDataByte(0x00)       # Screen Black
-    sendDataByte(char)
-#    sendDataByte(i / 16)  # Colour
-    sendDataByte(i / 4)  # Colour
-    i = i + 1
-    if ((i % 10240) == 0):
-        char = char + 1
 
-# Then some ending bytes
-i = 0
-while i < 32:
-    sendDataByte(0xff)  # Screen @
-    sendDataByte(0xff)  # Screen @
-    i = i + 1
+if len(sys.argv) < 2:
+    i = 0
+    char = random.randint(0, 255)
+    # Some rows of 1024 characters
+    while i < (2 * 1024 * 1024):
+        # while i < (256 * 1024):
+        # while i < (20 * 1024):
+        #    sendDataByte(0x00)       # Screen @
+        #    sendDataByte(0x00)       # Screen Black
+        sendDataByte(char)
+        #    sendDataByte(i / 16)  # Colour
+        sendDataByte(i / 4)  # Colour
+        i = i + 1
+        if ((i % 10240) == 0):
+            char = char + 1
+
+    # Then some ending bytes
+    i = 0
+    while i < 32:
+        sendDataByte(0xff)  # Screen @
+        sendDataByte(0xff)  # Screen @
+        i = i + 1
+else:
+    file = open(sys.argv[1], 'rb')
+    fileData = file.read()
+    i = 0
+    while i < len(fileData):
+        sendDataByte(fileData[i])
+        i = i + 1
+
 
 # Reset the interface again
 setLatch(7)

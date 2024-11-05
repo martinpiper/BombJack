@@ -1,5 +1,18 @@
 * TODO:
 
+* Sample demo using the new user port interface
+	C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\ffmpeg.exe -i "C:\Users\marti\Downloads\xenon2.mod"  -filter:a "volume=4.0" -y -acodec pcm_u8 -ar 22050 -ac 1 c:\temp\t.wav
+	c:\work\c64\BerzerkRedux\MashSamples\Release\MashSamples.exe -h $4e -s 22050 c:\temp\t.wav 8000 c:\temp\smp.raw
+	c:\work\c64\BerzerkRedux\MashSamples\Release\MashSamples.exe -h $4e -s 22050 c:\temp\t.wav 16000 c:\temp\smp.raw
+	>> C64WithNewUserPort20to32Bit1.a
+	>> ; Simple sample stream demo
+		; 20 = 8000 Hz
+		; 8 = 16000 Hz
+	
+	
+
+
+
 * UserPort20To32Bit1 match emulation with hardware and refuse to read or write RAM via the latches when the DMA is active
 
 
