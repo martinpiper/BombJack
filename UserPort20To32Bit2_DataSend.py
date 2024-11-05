@@ -1,31 +1,29 @@
+import random
+
 import serial
 import time
 
 # serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
-# serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
-serialPort = serial.Serial(port="COM5", baudrate=512000)
+serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
+#serialPort = serial.Serial(port="COM5", baudrate=115200)
+#serialPort = serial.Serial(port="COM5", baudrate=4000000)
 
-# Using 1MHz
-# 256000  RAM bytes sent
-# 18195  bytes per second
-# Using 4MHz does not alter the transfer time, it is FTDI limited then, the DMA is four times faster though :)
+
+# Using 4MHz
+# 2 * 1024 * 1024  RAM bytes sent
+# 125947  bytes per second
+# Using different clock speeds, with the DIP switch clock divider does change the speed. Indicating we are FTDI limited now. Previous code was Python serial limited.
 
 totalBytesSent = 0
 startTime = time.time()
 
 print(serialPort)
 
+toSendBytes = bytearray()
+
 
 def sendRawByte(value):
-    global totalBytesSent, startTime
-    toSendWithEnable = bytearray([value])
-    # Setup data for the FTDI latches.
-    serialPort.write(toSendWithEnable)
-    totalBytesSent = totalBytesSent + 1
-    if ((totalBytesSent % 10240) == 0):
-        deltaTime = time.time() - startTime
-        if (deltaTime > 0):
-            print(int(totalBytesSent / deltaTime), " bytes per second")
+    toSendBytes.append(value)
 
 
 lastLatches = [0, 0]
@@ -53,11 +51,15 @@ def setLatch(latch):
 
 
 def sendDataByte(value):
+    global totalBytesSent, startTime
+    totalBytesSent = totalBytesSent + 1
     enablePCOnWrite()
     value = int(value)
     sendFTDILatchData(0, value & 0x7f)
     sendFTDILatchData(1, ((value >> 1) & 0x40) | (lastLatches[1] & 0xbf))
 
+
+print("Preparing data...")
 
 # Reset the FTDI interface latches to clear
 sendFTDILatchData(0, 0)
@@ -74,15 +76,18 @@ sendDataByte(0x80)
 # Write RAM
 setLatch(6)
 i = 0
-char = 0
+char = random.randint(0, 255)
 # Some rows of 1024 characters
-while i < (256 * 1024):
+while i < (2 * 1024 * 1024):
+#while i < (256 * 1024):
+#while i < (20 * 1024):
 #    sendDataByte(0x00)       # Screen @
+#    sendDataByte(0x00)       # Screen Black
     sendDataByte(char)
-    sendDataByte(i / 16)  # Colour 1 white
+#    sendDataByte(i / 16)  # Colour
+    sendDataByte(i / 4)  # Colour
     i = i + 1
     if ((i % 10240) == 0):
-        print(i, " RAM bytes sent")
         char = char + 1
 
 # Then some ending bytes
@@ -99,3 +104,10 @@ sendDataByte(0x80)
 
 # Stop using FTDI mode
 sendFTDILatchData(1, 0x10)  # Hi _PC
+
+print("Final buffer send...")
+serialPort.write(toSendBytes)
+
+deltaTime = time.time() - startTime
+if deltaTime > 0:
+    print(int(totalBytesSent / deltaTime), " bytes per second")
