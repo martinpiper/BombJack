@@ -117,7 +117,12 @@ sendDataByte(0x80)
 sendFTDILatchData(1, 0x10)  # Hi _PC
 
 print("Final buffer send...")
-serialPort.write(toSendBytes)
+pos = 0
+chunkSize = 256000
+while pos < len(toSendBytes):
+    serialPort.write(toSendBytes[pos:pos+chunkSize])
+    pos = pos + chunkSize
+    print( int(100 * pos / len(toSendBytes)), " percent")
 
 deltaTime = time.time() - startTime
 if deltaTime > 0:

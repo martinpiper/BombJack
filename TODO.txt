@@ -8,7 +8,7 @@
 	>> ; Simple sample stream demo
 		; 20 = 8000 Hz
 		; 8 = 16000 Hz
-	* Add chunked transfer
+	* Done: Add chunked transfer
 	
 	
 
