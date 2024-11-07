@@ -120,7 +120,7 @@ print("Final buffer send...")
 pos = 0
 chunkSize = 256000
 while pos < len(toSendBytes):
-    serialPort.write(toSendBytes[pos:pos+chunkSize])
+    serialPort.write(toSendBytes[pos:min(pos+chunkSize,len(toSendBytes))])
     pos = pos + chunkSize
     print( int(100 * pos / len(toSendBytes)), " percent")
 
