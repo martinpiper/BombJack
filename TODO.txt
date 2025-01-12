@@ -969,4 +969,5 @@
 	* Reconsider the current sprite address * 2 design in light of wanting to have pixel accuracy for the start of sprite data
 		This would allow the CPU to decide to scroll sprites internally with pixel accuracy or position sprite start and width information to have precise screen edge clipping with pixel accuracy.
 		Consider making the sprite address more than 16 bits wide.
+		Also reconsider the sprite pixel nybble layout in memory
 	* Also going to have to decide on the RAM to use. Perhaps the same RAM that's used in the RAM expansion.
