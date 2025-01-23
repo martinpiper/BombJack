@@ -972,3 +972,5 @@
 			Which SRAM? 8MB max (1<<23 bits due to pixel nybble doubling shift)
 		Done: Also reconsider the sprite pixel nybble layout in memory
 	* Also going to have to decide on the RAM to use. Perhaps the same RAM that's used in the RAM expansion.
+	* Demo14: Why does it need "Given video display processes 8 pixels per instruction" to avoid flickering?
+		Something to do with bad scales leading to bad extents?? Or frame time?
