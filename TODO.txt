@@ -974,3 +974,15 @@
 	* Also going to have to decide on the RAM to use. Perhaps the same RAM that's used in the RAM expansion.
 	* Demo14: Why does it need "Given video display processes 8 pixels per instruction" to avoid flickering?
 		Something to do with bad scales leading to bad extents?? Or frame time?
+		>> See: ; This delay causes flickering?!
+		>> Why are we seeing 76 rendered sprites, then 0? Why is "triggerBufferSwap true" for two consecutive frames when the code should be taking much longer to run than one frame?
+			1>Reached sprite: 0 reachedEndOfLine false triggerBufferSwap false drawingWith 0 writingTo 1
+			1>Reached sprite: 0 reachedEndOfLine true triggerBufferSwap false drawingWith 0 writingTo 1
+			1>** Set triggerBufferSwap : Reached sprite: 0 reachedEndOfLine true triggerBufferSwap false drawingWith 0 writingTo 1
+			1>Reached sprite: 0 reachedEndOfLine true triggerBufferSwap true drawingWith 0 writingTo 1
+			1>** Set triggerBufferSwap : Reached sprite: 76 reachedEndOfLine true triggerBufferSwap false drawingWith 1 writingTo 0
+			1>Reached sprite: 76 reachedEndOfLine true triggerBufferSwap true drawingWith 1 writingTo 0
+			1>Reached sprite: 0 reachedEndOfLine true triggerBufferSwap false drawingWith 0 writingTo 1
+			1>** Set triggerBufferSwap : Reached sprite: 0 reachedEndOfLine true triggerBufferSwap false drawingWith 0 writingTo 1
+		> VBlank is not the same as _vsync, the C64 syncs on VBlank (EXTWantIRQ), so the C64 code was accessing the sprite regisers buffer at the wrong time.
+			Added VBlank to the display layers so the buffer switch happens in sync with the C64 expecting the external VBlank.
