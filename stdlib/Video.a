@@ -144,7 +144,7 @@ Video_SetAddressPalette
 	sta CIA2PortBRS232
 	rts
 
-; Clears colout 0 in all palettes to the same input colour
+; Clears colour 0 in all palettes to the same input colour
 ; Entry:
 ; A/X = RGB 2 bytes
 Video_PalettesColour0ClearTo
