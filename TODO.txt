@@ -41,6 +41,21 @@
 
 
 
+* UserPort20To32Bit2
+	During test: Validate RAM read to back to C64 1
+	Double check that latch5 with passthrough disable does not result in any _PC writes and PA2 changes changes in: DebugUserPort20To32Bit2_PassthroughChange.txt
+
+
+
+* UserPort20To32Bit2
+	The latches and latch7 values need documentation
+	Consult the test code features/C64WithNewUserPort20to32Bit1.a
+	The the expected read values seen by the C64 in the simulation match the expected returns during com.loomcom.symon.devices.UserPortTo24BitAddress#read
+		Double check that it is OK for this to use break instead of returning 0xff for some options: switch (bus32Latches[7] & kbus32_latch7_SelectMask) {
+
+
+
+
 
 * UserPort20To32Bit1 power considerations.
 	2	+5V	(100 mA MAX.)
