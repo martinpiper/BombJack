@@ -35,6 +35,14 @@
 	lda CIA2PortBRS232
 }
 
+!macro MBus24Bit_Get8BitValueToX {
+	ldx CIA2PortBRS232
+}
+
+!macro MBus24Bit_Get8BitValueToY {
+	ldy CIA2PortBRS232
+}
+
 !macro MBus24Bit_SendLE24BitValue .value {
 	lda #<.value
 	sta CIA2PortBRS232
