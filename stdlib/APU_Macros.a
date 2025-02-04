@@ -205,6 +205,10 @@ kAPU_InstructionSize	= 4
 	jsr Bus24Bit_SetAddressBus
 }
 
+!macro MAPU_SetDataUpdateBusNoReset .label {
+	+MBus24Bit_SetAddressNoReset_A kBus24Bit_APU_EBBS , kBus24Bit_APU_Data + .label - APUData_Start
+}
+
 !macro MAPU_DataUpdate16Bits .label {
 	+MAPU_SetDataUpdateBus .label
 	lda .label

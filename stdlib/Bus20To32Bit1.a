@@ -9,6 +9,16 @@ kBus20To32Bit1_latch7_ResetDone=$80
 
 kBus20To32Bit1_latch13_DMAInProgress = %00000001
 
+kBus20To32Bit1_latch_bus32CurrentAddress_24		= 0
+kBus20To32Bit1_latch_doAdd						= 3
+kBus20To32Bit1_latch_doDirectWrite				= 4
+kBus20To32Bit1_latch_doRAMRead					= 5
+kBus20To32Bit1_latch_doRAMWrite					= 6
+kBus20To32Bit1_latch_control					= 7
+kBus20To32Bit1_latch_bus32AddAddress_24			= 8
+kBus20To32Bit1_latch_bus32FastDMACounter_16		= 11
+kBus20To32Bit1_latch_bus32FastDMAStatus			= 13
+
 
 ; Initialise the Bus20To32Bit1 interface
 ; Corresponds to user port breakout V1.1
