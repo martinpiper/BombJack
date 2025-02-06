@@ -26,6 +26,11 @@
 	sta CIA2PortBRS232
 }
 
+!macro MBus24Bit_Get8BitValueToAddress .value {
+	lda CIA2PortBRS232
+	sta .value
+}
+
 !macro MBus24Bit_Send8BitValue .value {
 	lda #.value
 	sta CIA2PortBRS232
