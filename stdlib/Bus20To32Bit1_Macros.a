@@ -269,7 +269,7 @@
 
 ; Set latches with register optimisation
 
-!macro MBus20To32Bit1_UsingState_UsingState_ReadMode_A {
+!macro MBus20To32Bit1_UsingState_ReadMode_A {
 !if MBus20To32Bit1_IsRead != 1 {
 !set MBus20To32Bit1_IsRead = 1
 	; Setup input of 8 bits
