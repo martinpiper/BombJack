@@ -7,6 +7,12 @@
 ; .SERIALATN = $04
 ; .PA2 = $08
 
+!set MBus20To32Bit1_IsRead = -1
+!set MBus20To32Bit1_IsSP1 = -1
+!set MBus20To32Bit1_IsSP2 = -1
+!set MBus20To32Bit1_IsATN = -1
+!set MBus20To32Bit1_IsPA2 = -1
+
 !macro MBus20To32Bit1_ReadMode_A {
 !set MBus20To32Bit1_IsRead = 1
 	; Setup input of 8 bits
@@ -262,3 +268,403 @@
 
 
 ; Set latches with register optimisation
+
+!macro MBus20To32Bit1_UsingState_UsingState_ReadMode_A {
+!if MBus20To32Bit1_IsRead != 1 {
+!set MBus20To32Bit1_IsRead = 1
+	; Setup input of 8 bits
+	lda #0
+	sta CIA2PortBDDR
+}
+}
+
+!macro MBus20To32Bit1_UsingState_WriteMode_A {
+!if MBus20To32Bit1_IsRead != 0 {
+!set MBus20To32Bit1_IsRead = 0
+	; Setup output of 8 bits
+	lda #$ff
+	sta CIA2PortBDDR
+}
+}
+
+
+!macro MBus20To32Bit1_UsingState_SetLatch0_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+
+
+!macro MBus20To32Bit1_UsingState_SetLatch1_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch2_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch3_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #CIA2PortASerialBusVICBank_Inv_ATN
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch4_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch5_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+
+!macro MBus20To32Bit1_UsingState_SetLatch6_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch7_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 0
+	lda #%0000
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch8_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch9_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch10_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch11_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 0 {
+!set MBus20To32Bit1_IsSP2 = 0
+	lda #%00000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 1
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_Inv_ATN | CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch12_A {
+!if MBus20To32Bit1_IsSP1 != 1 {
+!set MBus20To32Bit1_IsSP1 = 1
+	lda #%01000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
+
+!macro MBus20To32Bit1_UsingState_SetLatch13_A {
+!if MBus20To32Bit1_IsSP1 != 0 {
+!set MBus20To32Bit1_IsSP1 = 0
+	lda #%00000000
+	sta CIA1TimerAControl
+}
+
+!if MBus20To32Bit1_IsSP2 != 1 {
+!set MBus20To32Bit1_IsSP2 = 1
+	lda #%01000000
+	sta CIA2TimerAControl
+}
+
+!if MBus20To32Bit1_IsATN != 0 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+!if MBus20To32Bit1_IsPA2 != 1 {
+!set MBus20To32Bit1_IsATN = 0
+!set MBus20To32Bit1_IsPA2 = 1
+	lda #CIA2PortASerialBusVICBank_PA2
+	sta CIA2PortASerialBusVICBank
+}
+}
