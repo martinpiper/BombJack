@@ -986,7 +986,18 @@
 		TODO: Consider making the sprite address more than 16 bits wide, meaning 11 bytes per sprite instead of 10.
 			Which SRAM? 8MB max (1<<23 bits due to pixel nybble doubling shift)
 		Done: Also reconsider the sprite pixel nybble layout in memory
-	* Also going to have to decide on the RAM to use. Perhaps the same RAM that's used in the RAM expansion.
+	* Also going to have to decide on the sprite data RAM to use. Perhaps the same RAM that's used in the RAM expansion.
+	* Frame buffer RAM options:
+		The Sprite4 design calls for [2][512*512] frame buffers
+			= 262144 bytes
+			= 256 kilobytes
+		https://www.mouser.sg/ProductDetail/Infineon-Technologies/CY62138FLL-45SXI?qs=7NE86GkllXdH%2F8BJe%2FJfYw%3D%3D
+		Given Proteus has a 1 megabyte option: https://support.labcenter.com/forums/viewtopic.php?t=8291
+			The IS6XC10248AL.PDSPRJ example can be used to make a CY62138FLL-45SXI
+				Added: CY62138FLL.pdsprj
+					Edit properties->Attach hierarchy model
+						Enables the child sheet, like a sub circuit
+							Use Tools->Model Compiler to create the ITF file: "C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\MODELS\CY62138FLL.MDF"
 	* Demo14: Why does it need "Given video display processes 8 pixels per instruction" to avoid flickering?
 		Something to do with bad scales leading to bad extents?? Or frame time?
 		>> See: ; This delay causes flickering?!
