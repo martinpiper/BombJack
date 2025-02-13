@@ -14,8 +14,8 @@ d$a2030100
 
 
 
-!TestData_DebugPixelTiming.txt
-!TestData_DebugVectors.txt
+;!TestData_DebugPixelTiming.txt
+;!TestData_DebugVectors.txt
 !TestData_DebugScaledSprites.txt
 
 ; Dither on

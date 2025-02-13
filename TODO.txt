@@ -1013,3 +1013,18 @@
 			1>** Set triggerBufferSwap : Reached sprite: 0 reachedEndOfLine true triggerBufferSwap false drawingWith 0 writingTo 1
 		> VBlank is not the same as _vsync, the C64 syncs on VBlank (EXTWantIRQ), so the C64 code was accessing the sprite regisers buffer at the wrong time.
 			Added VBlank to the display layers so the buffer switch happens in sync with the C64 expecting the external VBlank.
+	* S4_FRAMESTARTPULSE changed usage of S2_LINESTART
+		And the complementary S4FRAMESTARTPULSE
+		> S4_FRAMESTARTPULSEDELAYED
+		> S2_LONGLINESTART changed to S2_LONGFRAMESTART
+	> S2_DISPLAY used for chip selects to the frame buffers, derived from _EVSYNC, instead it is now derviced from S2_LONGFRAMESTART
+	> Done: Is used to restart the counter for the frame buffer, S2_LONGFRAMESTART, however this should be altered so that the X count is reset on S2_LINESTART
+		> And the Y value comes from either the working sprite Y pos, or the current drawn scan to the video layer.
+			For now S2INSIDEHEIGHT0.. could be used instead of "working Y pos"
+			* currentLineV0.. can be used
+			For the left block: When S2DOPIXEL == 0
+	* leftBorderAdjust and topBorderAdjust need to be included. The sprite screen clipping relies on the **fetching/drawing** displayH/displayV being updated
+		This will mean some selected adders for one path since the row counter starts from 0...
+	* Next, need to figure out the sprite schedule to advance to the next Y/row
+		Two options, 1. assume the old sprite method is still active and use 32x32 for now
+			2. Convert to the entire new data...

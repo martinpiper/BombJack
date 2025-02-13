@@ -225,6 +225,55 @@ d$0
 ^-$01
 d$0
 
+; Adding some identical frames, for debugging purposes
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
+d$0
+^-$01
+d$0
+
 ; Now test the end of list
 d$92620100
 
