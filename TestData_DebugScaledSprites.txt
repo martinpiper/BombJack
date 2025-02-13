@@ -86,6 +86,12 @@ b$20
 b$20
 b$c0
 
+; Debug: End the sprite list
+b$00
+b$00
+b$00
+; End debug
+
 b$4b
 b$80
 b$30

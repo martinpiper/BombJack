@@ -1028,3 +1028,8 @@
 	* Next, need to figure out the sprite schedule to advance to the next Y/row
 		Two options, 1. assume the old sprite method is still active and use 32x32 for now
 			2. Convert to the entire new data...
+		> Option 1.
+			* Sprite draw at Y position
+				S2_SPRITEHEIGHTFAIL can be used for the sprite height test instead
+			* S2_XPIXELREACHED does not need to reset the schedule at U302, it needs to reload the X pos and reset the X scale value
+	* U344 the lookup EPROM, not needed because eventually yhe sprite scaled coordinate will be used and accumlated each pixel row
