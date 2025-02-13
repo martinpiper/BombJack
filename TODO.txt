@@ -998,6 +998,7 @@
 					Edit properties->Attach hierarchy model
 						Enables the child sheet, like a sub circuit
 							Use Tools->Model Compiler to create the ITF file: "C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\MODELS\CY62138FLL.MDF"
+			* Check the device timing...
 	* Demo14: Why does it need "Given video display processes 8 pixels per instruction" to avoid flickering?
 		Something to do with bad scales leading to bad extents?? Or frame time?
 		>> See: ; This delay causes flickering?!
