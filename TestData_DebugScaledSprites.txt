@@ -86,12 +86,6 @@ b$20
 b$20
 b$c0
 
-; Debug: End the sprite list
-b$00
-b$00
-b$00
-; End debug
-
 b$4b
 b$80
 b$30
@@ -226,55 +220,6 @@ b$33
 
 ; Sprites2 enable
 d$9e0a0101
-
-d$0
-^-$01
-d$0
-
-; Adding some identical frames, for debugging purposes
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
-
-d$0
-^-$01
-d$0
 
 d$0
 ^-$01

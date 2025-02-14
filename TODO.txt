@@ -1035,4 +1035,4 @@
 	* U344 the lookup EPROM, not needed because eventually yhe sprite scaled coordinate will be used and accumlated each pixel row
 	* Going to need a latch that signals when the pixel rendering is ready and when it needs to load/add X/Y coordinates for the start of the next row
 	* Check in detail the scaled pixels behaviour in emulation with specifc test data, especially with respect to the scale start value (half scale used in Sprites2)
-	
+	* Going to need Sprites4 simulation debug data
