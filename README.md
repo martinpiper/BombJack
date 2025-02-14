@@ -373,6 +373,7 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
    | Note: Audio and Sprites2 are by default using the same EBBS in the schematics									|
    | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $04           | Sprites2 data                 | $2000   8KB++        | Sprites2 bit planes                     |
+   | $04           | Sprites4 data                 | $0000   64KB++       | Sprites2 bit planes, plus extra address |
    | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
    | $80           | Char screen                   | $4000   8KB          | Chars into U258                         |
    | $80           | Char screen colours           | $8000   8KB          | Chars colours into U137                 |

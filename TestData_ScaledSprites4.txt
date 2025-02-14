@@ -1,0 +1,97 @@
+; Automatically created by DisplayBombJack
+; From @TC-17-3 with changes EBS/Address changes to match current schematic
+
+; Palette
+d$9c0001e7
+d$9c010138
+d$9c02011f
+d$9c030100
+d$9c0401e0
+d$9c050107
+d$9c060100
+d$9c0701f8
+d$9c0801ff
+d$9c0901ff
+
+; Sprite data
+d$00000421
+d$00010443
+d$00020423
+d$00030401
+d$00040410
+d$00050432
+d$00060421
+d$00070443
+
+
+; Sprite registers
+; Not ready
+d$88000100
+d$88010100
+d$88020100
+d$88030100
+d$88040100
+d$880501a8
+d$88060170
+d$88070100
+d$88080100
+d$88090110
+d$880a0110
+d$880b0110
+d$880c0110
+d$880d0100
+d$880e0100
+d$880f0100
+d$88100108
+d$88110108
+d$88120103
+d$88130100
+d$88140140
+d$88150104
+d$88160140
+d$88170104
+d$88180100
+d$88190100
+d$881a0100
+d$881b0120
+d$881c0120
+d$881d0103
+d$881e0100
+d$881f0180
+d$88200102
+d$88210180
+d$88220102
+d$88230100
+d$88240100
+d$88250100
+d$88260140
+d$88270140
+d$88280103
+d$88290100
+d$882a0100
+d$882b0100
+; Ready
+d$88000101
+
+
+; Priority, borders, layer enable, background colour
+d$9e0801e4
+d$9e090129
+d$9e0a010f
+d$9e0b0100
+
+; Enable, priority, borders, layer enable, background colour
+d$9e000130
+
+; Frame 1
+d$0
+^-$01
+d$0
+; Frame 2
+d$0
+^-$01
+d$0
+; Frame 3
+d$0
+^-$01
+d$0
