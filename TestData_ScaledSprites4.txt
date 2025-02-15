@@ -97,6 +97,19 @@ d$9e090129
 d$9e0a010f
 d$9e0b0100
 
+; The sprite enable signal won't get through unless the combinators are setup
+; Test combiner layer - Four registers
+d$a20001ff
+d$a20101fe
+d$a20201fd
+d$a20301fc
+; Clear and default to just combine
+d$a2000160
+d$a2010100
+d$a2020160
+d$a2030100
+
+
 ; Enable, priority, borders, layer enable, background colour
 d$9e000130
 

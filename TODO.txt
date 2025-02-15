@@ -1041,5 +1041,6 @@
 		Can use the debug output from @TC-17-3
 		> TestData_ScaledSprites4.txt
 	* Done: Add latches for the first 8 registers
-	* Start reading sprite data from address 8
-	* Increment sprite reading address every byte, since a sprite is not a power of 2 bytes anymore
+	* Done: Start reading sprite data from address 8
+	* Done: Increment sprite reading address every byte, since a sprite is not a power of 2 bytes anymore
+		> S2IncAddr..
