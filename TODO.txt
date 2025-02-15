@@ -1045,3 +1045,7 @@
 	* Done: Increment sprite reading address every byte, since a sprite is not a power of 2 bytes anymore
 		> S2IncAddr..
 		> Faking a "sprite draw complete" signal shows the next sprites are read and the end of list logic works.
+	* Add video hires option, twice the horizontal resolution
+	* Add full RGB input option, last display layer background replacement perhaps?!, no transparency
+	* Add bitmap render indexed
+		And RGB
