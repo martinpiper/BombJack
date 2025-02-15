@@ -1,6 +1,12 @@
 ; Automatically created by DisplayBombJack
 ; From @TC-17-3 with changes EBS/Address changes to match current schematic
 
+; Reset
+d$0
+d$0
+d$0
+
+
 ; Palette
 d$9c0001e7
 d$9c010138
