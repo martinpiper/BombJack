@@ -1032,7 +1032,7 @@
 			* Sprite draw at Y position
 				S2_SPRITEHEIGHTFAIL can be used for the sprite height test instead
 			* S2_XPIXELREACHED does not need to reset the schedule at U302, it needs to reload the X pos and reset the X scale value
-	* U344 the lookup EPROM, not needed because eventually the sprite scaled coordinate will be used and accumulated each pixel row
+	* U344 the lookup EPROM uses: BombJack\GenerateSprites4Lookup\
 	* Going to need a latch that signals when the pixel rendering is ready and when it needs to load/add X/Y coordinates for the start of the next row
 		case 24:
 			// End of sprite row logic, in a separate state
@@ -1045,7 +1045,25 @@
 	* Done: Increment sprite reading address every byte, since a sprite is not a power of 2 bytes anymore
 		> S2IncAddr..
 		> Faking a "sprite draw complete" signal shows the next sprites are read and the end of list logic works.
+	* // TODO: This is actually 6 clocks on the hardware, since it is 3 x 8 bit loads from RAM
+	> currentSpriteXPixel update logic S4_LoadStartValueSpriteXPixel and S4LoadStartValueSpriteXPixel
+		S4_UpdateCurrentSpriteXPixel controls when to update currentSpriteXPixel
+	> currentSpriteYPixel update logic S4_LoadStartValueSpriteYPixel and S4LoadStartValueSpriteYPixel
+		S4_UpdateCurrentSpriteYPixel controls when to update currentSpriteYPixel
+	> Three states for the main pixel draw:
+		S4_JustBeforeDrawingPixels
+			updateSpriteRow(); EPROM lookup etc
+		S4EnableXPosCount
+		S4_AfterPixelDrawingCalc
+	> Pixel output logic enabled with S4EnableXPosCount
+	> S4MultiplyResult[0..7] is the lookyp table multiply result for updateSpriteRow()
+	* updateSpriteRow() can be triggered during S4_JustBeforeDrawingPixels
+		> currentSpriteXWorking loaded with S4_JustBeforeDrawingPixels
+		* currentSpriteSizeXWorking load, can be inverse loaded and counter...
+	* For         int fetchingH = (displayH + leftBorderAdjust) & 0x1ff;        int fetchingV = (displayV + topBorderAdjust) & 0x1ff;
+		This could avoid the pixel read/write counters and use added values and selected. This avoids the counter _MR logic.
 
+		
 
 
 * Add video hires option, twice the horizontal resolution
