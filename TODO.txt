@@ -1071,8 +1071,8 @@
 		> S4currentSpriteSizeY
 		> S4currentSpriteSizeYIsZero
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
-	* There is also a spurious pixel to the bottom left corner, under the bottom edge.
-
+	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
+		> Created S4_disablePixelOutput
 		
 
 
