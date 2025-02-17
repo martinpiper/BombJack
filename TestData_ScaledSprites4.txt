@@ -74,18 +74,6 @@ d$882b0100
 ;d$88150100
 
 
-; Palette
-d$9c0001e7
-d$9c010138
-d$9c02011f
-d$9c030100
-d$9c0401e0
-d$9c050107
-d$9c060100
-d$9c0701f8
-d$9c0801ff
-d$9c0901ff
-
 ; Sprite data
 d$00000421
 d$00010443
@@ -101,18 +89,26 @@ d$00070443
 d$88000101
 
 
-; Priority, borders, layer enable, background colour
+; Priority, borders, layer enable, background colour, palette bank
 d$9e0801e4
 d$9e090129
 d$9e0a010f
 d$9e0b0100
+d$9e0c0100
+
+; Palette
+d$9c0001e7
+d$9c010138
+d$9c02011f
+d$9c030100
+d$9c0401e0
+d$9c050107
+d$9c060100
+d$9c0701f8
+d$9c0801ff
+d$9c0901ff
 
 ; The sprite enable signal won't get through unless the combinators are setup
-; Test combiner layer - Four registers
-d$a20001ff
-d$a20101fe
-d$a20201fd
-d$a20301fc
 ; Clear and default to just combine
 d$a2000160
 d$a2010100
@@ -122,6 +118,8 @@ d$a2030100
 
 ; Enable, priority, borders, layer enable, background colour
 d$9e000130
+
+
 
 ; Frame 1
 d$0

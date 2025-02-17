@@ -12,16 +12,6 @@ int main(int argc, char** argv)
 		{
 			int multiply = currentSpriteYPixel * (currentSpriteStride + 1);
 
-			// And clamp
-			if (multiply > 65535)
-			{
-				multiply = 65535;
-			}
-			if (multiply < 0)
-			{
-				multiply = 0;
-			}
-
 			fputc(multiply & 0xff, fpL);
 			fputc((multiply >> 8) & 0xff, fpH);
 		}

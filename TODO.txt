@@ -1066,6 +1066,7 @@
 	* Done: For   int fetchingH = (displayH + leftBorderAdjust) & 0x1ff;        int fetchingV = (displayV + topBorderAdjust) & 0x1ff;
 		This could avoid the pixel read/write counters and use added values and selected. This avoids the counter _MR logic.
 	* Sprite address logic for currentSpriteAddressWorking
+		> S4internalAddress
 	* Done: S4NextSpriteRow trigger
 	* Done: currentSpriteSizeY working value
 		> S4currentSpriteSizeY
@@ -1073,6 +1074,8 @@
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
+	* S4_disablePixelOutput pay close attention to removing X=0 writes
+	* First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 		
 
 
