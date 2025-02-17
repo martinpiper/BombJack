@@ -64,6 +64,12 @@ d$88290100
 d$882a0100
 d$882b0100
 
+; Debug: End of list, no sprites
+;d$88080100
+;d$88090100
+;d$880A0100
+
+
 ; Palette
 d$9c0001e7
 d$9c010138
