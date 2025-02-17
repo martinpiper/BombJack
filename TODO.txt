@@ -1062,7 +1062,7 @@
 		* currentSpriteSizeXWorking load, can be inverse loaded and counter...
 	* Done: For   int fetchingH = (displayH + leftBorderAdjust) & 0x1ff;        int fetchingV = (displayV + topBorderAdjust) & 0x1ff;
 		This could avoid the pixel read/write counters and use added values and selected. This avoids the counter _MR logic.
-		
+	* Sprite address logic for currentSpriteAddressWorking	
 
 		
 

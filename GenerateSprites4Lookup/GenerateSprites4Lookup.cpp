@@ -3,7 +3,8 @@
 
 int main(int argc, char** argv)
 {
-	FILE *fp = fopen("Sprite4Lookup.bin", "wb");
+	FILE *fpL = fopen("Sprite4LookupLow.bin", "wb");
+	FILE *fpH = fopen("Sprite4LookupHigh.bin", "wb");
 
 	for (int currentSpriteStride = 0; currentSpriteStride < 256; currentSpriteStride++)
 	{
@@ -12,20 +13,22 @@ int main(int argc, char** argv)
 			int multiply = currentSpriteYPixel * (currentSpriteStride + 1);
 
 			// And clamp
-			if (multiply > 255)
+			if (multiply > 65535)
 			{
-				multiply = 255;
+				multiply = 65535;
 			}
 			if (multiply < 0)
 			{
 				multiply = 0;
 			}
 
-			fputc(multiply, fp);
+			fputc(multiply & 0xff, fpL);
+			fputc((multiply >> 8) & 0xff, fpH);
 		}
 	}
 
-	fclose(fp);
+	fclose(fpL);
+	fclose(fpH);
 
 	return 0;
 }
