@@ -1075,7 +1075,9 @@
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
-	* First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
+	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
+	* Trivial reject and clip test logic
+	* Double buffered sprite registers
 		
 
 
