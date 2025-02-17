@@ -1059,10 +1059,16 @@
 	> S4MultiplyResult[0..7] is the lookyp table multiply result for updateSpriteRow()
 	* updateSpriteRow() can be triggered during S4_JustBeforeDrawingPixels
 		> currentSpriteXWorking loaded with S4_JustBeforeDrawingPixels
-		* currentSpriteSizeXWorking load, can be inverse loaded and counter...
+		* Done: currentSpriteSizeXWorking load, can be inverse loaded and counter...
+			S4currentSpriteSizeXWorking[0..7]
+			> S4currentSpriteSizeXWorkingIsZero
+				> S4NextSpriteRow
 	* Done: For   int fetchingH = (displayH + leftBorderAdjust) & 0x1ff;        int fetchingV = (displayV + topBorderAdjust) & 0x1ff;
 		This could avoid the pixel read/write counters and use added values and selected. This avoids the counter _MR logic.
-	* Sprite address logic for currentSpriteAddressWorking	
+	* Sprite address logic for currentSpriteAddressWorking
+	* Done: S4NextSpriteRow trigger
+	* currentSpriteSizeY working value
+	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
 
 		
 
