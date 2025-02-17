@@ -1056,8 +1056,8 @@
 		S4EnableXPosCount
 		S4_AfterPixelDrawingCalc
 	> Pixel output logic enabled with S4EnableXPosCount
-	> S4MultiplyResult[0..7] is the lookyp table multiply result for updateSpriteRow()
-	* updateSpriteRow() can be triggered during S4_JustBeforeDrawingPixels
+	> S4MultiplyResult[0..15] is the lookup table multiply result for updateSpriteRow()
+	* Done: updateSpriteRow() can be triggered during S4_JustBeforeDrawingPixels
 		> currentSpriteXWorking loaded with S4_JustBeforeDrawingPixels
 		* Done: currentSpriteSizeXWorking load, can be inverse loaded and counter...
 			S4currentSpriteSizeXWorking[0..7]
@@ -1067,8 +1067,11 @@
 		This could avoid the pixel read/write counters and use added values and selected. This avoids the counter _MR logic.
 	* Sprite address logic for currentSpriteAddressWorking
 	* Done: S4NextSpriteRow trigger
-	* currentSpriteSizeY working value
+	* Done: currentSpriteSizeY working value
+		> S4currentSpriteSizeY
+		> S4currentSpriteSizeYIsZero
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
+	* There is also a spurious pixel to the bottom left corner, under the bottom edge.
 
 		
 
