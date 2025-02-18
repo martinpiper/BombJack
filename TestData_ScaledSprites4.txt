@@ -134,3 +134,133 @@ d$0
 d$0
 ^-$01
 d$0
+
+; Waste a small amount of time
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+
+; Not ready
+d$88000100
+
+; Sprite 0
+d$88080100
+d$88090140
+d$880a0110
+d$880b0120
+d$880c0110
+d$880d0100
+d$880e0100
+d$880f0102
+d$88100108
+d$88110108
+d$88120103
+
+; End of list, one sprite
+d$88130100
+d$88140100
+d$88150100
+
+; Ready
+d$88000101
+
+
+
+; Frame 4
+d$0
+^-$01
+d$0
+
+; Waste a small amount of time
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+
+; Not ready
+d$88000100
+
+; Sprite 0
+d$88080100
+d$88090150
+d$880a0110
+d$880b01fc	; Steps over MSBX
+d$880c0110
+d$880d0100
+d$880e0100
+d$880f0102
+d$88100108
+d$88110108
+d$88120103
+
+; End of list, one sprite
+d$88130100
+d$88140100
+d$88150100
+
+; Ready
+d$88000101
+
+
+
+; Frame 5
+d$0
+^-$01
+d$0
+
+; Waste a small amount of time
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+d$0
+
+; Not ready
+d$88000100
+
+; Sprite 0
+d$88080110	; MSBX
+d$88090160
+d$880a0110
+d$880b0110
+d$880c0110
+d$880d0100
+d$880e0100
+d$880f0102
+d$88100108
+d$88110108
+d$88120103
+
+; End of list, one sprite
+d$88130100
+d$88140100
+d$88150100
+
+; Ready
+d$88000101
