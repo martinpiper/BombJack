@@ -1072,6 +1072,8 @@
 		> S4currentSpriteSizeY
 		> S4currentSpriteSizeYIsZero
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
+		> Mostly works with 14.318MHz option, but there is some pixel weirdness... Especially the top left pixel drops down for one clock?!
+		> Added extra state S4_JustBeforeDrawingPixels2 and reduced EPROM access time to 45ns, no improvement.
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
