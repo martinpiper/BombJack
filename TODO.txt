@@ -1080,6 +1080,7 @@
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
 	* Double buffered sprite registers
+		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
 		
 
 
