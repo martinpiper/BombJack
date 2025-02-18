@@ -1073,6 +1073,7 @@
 		> S4currentSpriteSizeYIsZero
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
 		> Mostly works with 14.318MHz option, but there is some pixel weirdness... Especially the top left pixel drops down for one clock?!
+			Perhaps it is the very long sprite address calculation pathway? Try splitting the result from the multiply, saving it, then using that in the X adder...
 		> Added extra state S4_JustBeforeDrawingPixels2 and reduced EPROM access time to 45ns, no improvement.
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
