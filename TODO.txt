@@ -1091,3 +1091,9 @@
 
 * Add bitmap render indexed
 	And RGB
+
+
+
+* Current auto placer settings. Placement grid 50th ,  edge boundary 50th
+	Changing to grid 200th with push and shove is much faster.
+	Considering there needs to be spacing for routing of complex design, this is perhaps a good tradeoff.
