@@ -1066,6 +1066,7 @@
 	> Three states for the main pixel draw:
 		S4_JustBeforeDrawingPixels
 			updateSpriteRow(); EPROM lookup etc
+		S4_JustBeforeDrawingPixels2
 		S4EnableXPosCount
 		S4_AfterPixelDrawingCalc
 	> Pixel output logic enabled with S4EnableXPosCount
@@ -1129,11 +1130,8 @@
 		See the title screen letters, when they are small, After Burner demo data
 			>> Oh it's visible in the emulation, I must have the wrong scale...
 				ScaleTab macro fixed.
-	
-			
-					
-				
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
+		>> Perhaps select transparent pixels from sprite RAM?
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
 	* Double buffered sprite registers

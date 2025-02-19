@@ -10,29 +10,31 @@ d$0
 ; Not ready
 d$88000100
 ; Origin
-d$88010100
-d$88020100
-d$88030100
-d$88040100
+d$880101e0
+d$880201ff
+d$880301e0
+d$880401ff
 ; Extents
 d$880501a8
 d$88060170
 ; Extra address
 d$88070101
 
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Sprite registers start
+s$88080100
+
 ; Sprite registers start
 ; Sprite 0
-d$88080100
-d$88090110
-d$880a0110
-d$880b0120
-d$880c0110
-d$880d0100
-d$880e0100
-d$880f0102
-d$88100108
-d$88110108
-d$88120103
+b$00
+b$10,b$10
+b$20,b$10
+b$00,b$20,b$02
+b$08,b$08
+b$03
 
 ; Sprite 1
 d$88130100
@@ -41,7 +43,7 @@ d$88150104
 d$88160140
 d$88170104
 d$88180100
-d$88190100
+d$88190120
 d$881a0102
 d$881b0120
 d$881c0120
@@ -54,7 +56,7 @@ d$88200102
 d$88210180
 d$88220102
 d$88230100
-d$88240100
+d$88240120
 d$88250102
 d$88260140
 d$88270140
@@ -76,14 +78,25 @@ d$882b0100
 
 
 ; Sprite data
-d$00000421
-d$00010443
-d$00020423
-d$00030401
-d$00040410
-d$00050432
-d$00060421
-d$00070443
+; Guard sprite data, should not get drawn
+d$0ffc0455
+d$0ffd0455
+d$0ffe0455
+d$0fff0455
+; Real sprite data
+d$10000421
+d$10010443
+d$10020423
+d$10030401
+d$10040410
+d$10050432
+d$10060421
+d$10070443
+; Guard sprite data, should not get drawn
+d$10080455
+d$10090455
+d$100a0455
+d$100b0455
 
 
 ; Ready
@@ -92,7 +105,9 @@ d$88000101
 
 ; Priority, borders, layer enable, background colour, palette bank
 d$9e0801e4
-d$9e090129
+;d$9e090129
+; Setup full overscan border extents
+d$9e09010f
 d$9e0a010f
 d$9e0b0100
 d$9e0c0100
@@ -108,6 +123,8 @@ d$9c060100
 d$9c0701f8
 d$9c0801ff
 d$9c0901ff
+d$9c0a0177
+d$9c0b0177
 
 ; The sprite enable signal won't get through unless the combinators are setup
 ; Clear and default to just combine
@@ -153,7 +170,7 @@ d$880a0110
 d$880b0120
 d$880c0110
 d$880d0100
-d$880e0100
+d$880e0120
 d$880f0102
 d$88100108
 d$88110108
@@ -198,7 +215,7 @@ d$880a0110
 d$880b01fc	; Steps over MSBX
 d$880c0110
 d$880d0100
-d$880e0100
+d$880e0120
 d$880f0102
 d$88100108
 d$88110108
@@ -251,7 +268,7 @@ d$880a0110
 d$880b0110
 d$880c0110
 d$880d0100
-d$880e0100
+d$880e0120
 d$880f0102
 d$88100108
 d$88110108
