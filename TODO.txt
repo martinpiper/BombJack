@@ -1102,6 +1102,15 @@
 						96,73 and 97,73
 						96,97 and 97,97
 			>> Note the Y difference is 24 pixels
+			> First top of horizon visible frame (not the partial frame displaying the bottom edge)
+			RV break = 0x18 (25)
+			Note the right frame buffer logic is displaying/clearing pixels
+			S2IDHB. ~= 0x104d when starting the problem
+				>> Put break at 0x104c
+				>> RAM outputs 0xff just before, as expected
+				>> But at 0x104e there is a wrong pixel output
+				>> RAM is float output?!
+				
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
