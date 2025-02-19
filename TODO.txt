@@ -1121,9 +1121,14 @@
 			> Step back out to the video layer...
 			>> The IP[1..8] changes @0x104e
 		>> It's coming from the mode7 layer, not the Sprites4 layer
-	* S2SPRENABLE needs to be one the final pixel output
+	* Done: S2SPRENABLE needs to be one the final pixel output
 	* There is one final bright red dot on the top line that sometimes gets displayed
+		Visible when using the test data, also inthe After Burner demo where it is displayed as a black dot...
 	* Consider delaying the Sprites4 pixel final load by an OR gate, in the frame buffer colour load latch (inverting type)
+	* Done: Check certain scale values and sprite sizes, add bright pixels to the test data, before and after the sprite, to catch boundary issues
+		See the title screen letters, when they are small, After Burner demo data
+			>> Oh it's visible in the emulation, I must have the wrong scale...
+				ScaleTab macro fixed.
 	
 			
 					
