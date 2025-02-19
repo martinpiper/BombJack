@@ -1,5 +1,11 @@
 * TODO:
 
+* 74LS257 is going end of life. https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS257BD?qs=w32V8uFkMxmoIw8HEV54bg%3D%3D
+	Use 74LS157 instead https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS157DR?qs=SL3LIuy2dWw%2F%252Bp7AA8LUjg%3D%3D
+
+
+
+
 * UserPort20To32Bit1 perhaps the very rare FTDI transfer issue can be solved by "suaring off" the signal for whether the FTDI is busty or not, by latching the external signal form the current clock.
 	This would sync the signal with the clock edge, instead of being transient.
 
@@ -1081,9 +1087,21 @@
 	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
 		> Mostly works with 14.318MHz option, but there is some pixel weirdness... Especially the top left pixel drops down for one clock?!
 			Perhaps it is the very long sprite address calculation pathway? Try splitting the result from the multiply, saving it, then using that in the X adder...
+				> Should not be this, since the input Y coordinate is stable, the later X coordinate input is reduced in time skew...
 		> Added extra state S4_JustBeforeDrawingPixels2 and reduced EPROM access time to 45ns, no improvement.
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
+	* Done: After Burner demo data, shows vertical empty pixel for the whole screen height.
+		> Fixed by adding a S4FetchingH.. latch on 6MHz
+		>> Also added S4FetchingV latch
+	* After Burner demo data, shows occasional spurious pixels.
+		>> "C:\work\BombJack\output\debug00000002.bmp"
+			Most noticable at position 96,121 and 97,121
+				Also 96,25 97,25
+						96,49 and 97,49
+						96,73 and 97,73
+						96,97 and 97,97
+			>> Note the Y difference is 24 pixels
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
