@@ -1094,7 +1094,7 @@
 	* Done: After Burner demo data, shows vertical empty pixel for the whole screen height.
 		> Fixed by adding a S4FetchingH.. latch on 6MHz
 		>> Also added S4FetchingV latch
-	* After Burner demo data, shows occasional spurious pixels.
+	* Done: After Burner demo data, shows occasional spurious pixels.
 		>> "C:\work\BombJack\output\debug00000002.bmp"
 			Most noticable at position 96,121 and 97,121
 				Also 96,25 97,25
@@ -1110,6 +1110,23 @@
 				>> RAM outputs 0xff just before, as expected
 				>> But at 0x104e there is a wrong pixel output
 				>> RAM is float output?!
+				>> Single step time was 50n
+					> Try 25n step
+			> S2IDHB @0x104c S2CLKB -ve S2IDHB stable
+			> Then just after S2CLKB +ve S2IDHB ++ to 0x104d
+			> Try debugging from 0x1048 instead, due to poetential for pixel latch delays...
+				>> S2M[10..17] = 0 during the problem...
+				> Step back to the combiner...
+				>> S2OV[0..7] also = 0 during the problem
+			> Step back out to the video layer...
+			>> The IP[1..8] changes @0x104e
+		>> It's coming from the mode7 layer, not the Sprites4 layer
+	* S2SPRENABLE needs to be one the final pixel output
+	* There is one final bright red dot on the top line that sometimes gets displayed
+	* Consider delaying the Sprites4 pixel final load by an OR gate, in the frame buffer colour load latch (inverting type)
+	
+			
+					
 				
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
