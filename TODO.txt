@@ -1132,6 +1132,7 @@
 				ScaleTab macro fixed.
 	* S4_disablePixelOutput pay close attention to removing X=0 writes
 		>> Perhaps select transparent pixels from sprite RAM?
+		> S4disablePixelOutput on the selector doesn't work because it blanks the pixel too early
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
 	* Double buffered sprite registers
