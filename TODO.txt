@@ -1085,10 +1085,11 @@
 	* Done: currentSpriteSizeY working value
 		> S4currentSpriteSizeY
 		> S4currentSpriteSizeYIsZero
-	* There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
-		> Mostly works with 14.318MHz option, but there is some pixel weirdness... Especially the top left pixel drops down for one clock?!
+	* Done: There are spurious red pixels appearing, which seem to be uncleared pixels in the frame buffer?!
+		> Done: Mostly works with 14.318MHz option, but there is some pixel weirdness... Especially the top left pixel drops down for one clock?!
 			Perhaps it is the very long sprite address calculation pathway? Try splitting the result from the multiply, saving it, then using that in the X adder...
 				> Should not be this, since the input Y coordinate is stable, the later X coordinate input is reduced in time skew...
+			>> After clocking improvements, this is not seen
 		> Added extra state S4_JustBeforeDrawingPixels2 and reduced EPROM access time to 45ns, no improvement.
 	* Done: There is also a spurious pixel to the bottom left corner, under the bottom edge.
 		> Created S4_disablePixelOutput
@@ -1145,16 +1146,42 @@
 			For example S2_ENDOFLIST , S2_LOGICRESET , S2_LDPALETTE
 	> First sprite pixel display test with TestData_ScaledSprites4.txt matches emulation
 	* Trivial reject and clip test logic
+		Test data can overdraw and waste time until the draw times out, then implement and check
+		* Could enable the reject logic with a control bit in the control register
 	* Double buffered sprite registers
 		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
 	* Done: Exact EBBS matching
 	* Use the comparator 74LS682 for == 0 (or value) checks...
+	* Option for calculation clock and separate pixel output clock?
+	* Layer enable should only affect final output. Not calculation.
+	* Add another signal in the control register for enable calculation.
+		* Default which is disabled just allows the frame buffers to be cleared
+	* Match the emulation position with the hardware
+		* Overclocking tests
+		* When using the output from @TC-17-2. Over clocking at 13.7MHz seems OK, but 14.31818MHz introduces some severe sprite issues in the second aircraft
+			>> 13.8MHz shows a spurious dark blue pixel in the empty lower right portion of the water sprite
+			> Need to test with precise image comparison between the reference VIDCLK version and the output version
+		* When using the output from @TC-17-3. Over clocking at 13.7MHz seems OK
+		* TestData_ScaledSprites4.txt at 13.7MHz shows a spurious pixel write to the left hand edge, data from the right hand edge of the sprite, probably the 0 X coord issue again
+			>> X size check?
+			>> This is because the border is completely open...
+			>> At VIDCLK there is no issue.
+			>> 12.3MHz is OK. 12.4MHz is not.
+			> Perhaps try using S4disablePixelOutputSafe or S4_disablePixelOutputSafe to turn off the S2M9 select so that it selects the original value and avoid the write with new data?
+				>> Using S4_disablePixelOutput AND S2M9 into the _A/B select does stop the left edge spurious write, but it also shortens the right edge detect by one pixel, so it stops one pixel too early...
+					>> Delaying it by a clock, or half a clock, does not help...
+			> An option would be to include this behaviour in the emulation, then tweak the demo so that X coord 0 is avoided in the left hand edge.
+				>> This would mean that the clip test is wasteful by one pixel on the left edge... But since the extent is already multiplied by 2 (8 bit value) then this should be an acceptable trade-off.
+					This clip window and pixel reject is not meant to be precisely pixel and cycle accurate anyway.
 
 
 
 
 * Check mode7 with Demo14 background. Regularly spaced spurious pixels were spotted in simulation when running After Burner.
 	Might be carry timing related?
+	Gets worse with rotation, especially debugold00001095.bmp
+	Using "C:\temp\AfterBurnerdebugData.txt"
+	* Isolate the frame data to reproduce and debug mode7
 
 
 
