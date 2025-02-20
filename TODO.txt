@@ -1134,6 +1134,7 @@
 				This gets written at RH=0x1f RV=0xf1 SD_LDSIZEY is 0, just before being loaded
 	* Consider delaying the Sprites4 pixel final load by an OR gate, in the frame buffer colour load latch (inverting type)
 		Then test with higher clock speed
+		>> Not a good change, it introduced some pixel errors at higher clock speeds.
 	* Done: Check certain scale values and sprite sizes, add bright pixels to the test data, before and after the sprite, to catch boundary issues
 		See the title screen letters, when they are small, After Burner demo data
 			>> Oh it's visible in the emulation, I must have the wrong scale...
@@ -1173,7 +1174,15 @@
 			> An option would be to include this behaviour in the emulation, then tweak the demo so that X coord 0 is avoided in the left hand edge.
 				>> This would mean that the clip test is wasteful by one pixel on the left edge... But since the extent is already multiplied by 2 (8 bit value) then this should be an acceptable trade-off.
 					This clip window and pixel reject is not meant to be precisely pixel and cycle accurate anyway.
+			>> Interesting, removing the pixel output clock's reset signal actually improved the situation.
+				> Removed 7432 OR with S4_disablePixelOutput S2_DOPIXEL on the left, and S2DOPIXEL on the right
+	* Done: Emulation needs to output "random" black pixels on the first two pixels on the left when using overscan 0x09 mode.
 
+
+
+* Done: Emulation displays two more screen pixels on the right hand edge compared to hardware simulation?!
+	>> With overscan 0x1e 0x1f
+	>> Ahh with 0x19 it's OK. The far edge overscan settings that have no sense from a hardware signal output level are different, but the emulation is meant to show more data for those.
 
 
 
