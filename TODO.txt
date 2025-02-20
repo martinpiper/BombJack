@@ -1157,7 +1157,7 @@
 	* Layer enable should only affect final output. Not calculation.
 	* Add another signal in the control register for enable calculation.
 		* Default which is disabled just allows the frame buffers to be cleared
-	* Match the emulation position with the hardware
+	* Done: Match the emulation position with the hardware
 		* Overclocking tests
 		* When using the output from @TC-17-2. Over clocking at 13.7MHz seems OK, but 14.31818MHz introduces some severe sprite issues in the second aircraft
 			>> 13.8MHz shows a spurious dark blue pixel in the empty lower right portion of the water sprite
@@ -1176,6 +1176,7 @@
 					This clip window and pixel reject is not meant to be precisely pixel and cycle accurate anyway.
 			>> Interesting, removing the pixel output clock's reset signal actually improved the situation.
 				> Removed 7432 OR with S4_disablePixelOutput S2_DOPIXEL on the left, and S2DOPIXEL on the right
+		>> don't forget, the simulated hardware uses layer combiners, which introduce pixel position delays
 	* Done: Emulation needs to output "random" black pixels on the first two pixels on the left when using overscan 0x09 mode.
 
 
