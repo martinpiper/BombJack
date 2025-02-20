@@ -1149,7 +1149,14 @@
 		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
 	* Done: Exact EBBS matching
 	* Use the comparator 74LS682 for == 0 (or value) checks...
-		
+
+
+
+
+* Check mode7 with Demo14 background. Regularly spaced spurious pixels were spotted in simulation when running After Burner.
+	Might be carry timing related?
+
+
 
 
 * Add video hires option, twice the horizontal resolution
