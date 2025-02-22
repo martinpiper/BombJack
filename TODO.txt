@@ -1153,6 +1153,9 @@
 			> The usage of the current fetchingH&V logic means the counters are not dual use anymore.
 			>> S4currentSpriteX[0..8]
 		>> S4_advanceSprite0 Works: if ( ((currentSpriteY/2) & 0xff) >= extentYPos && (((currentSpriteY + currentSpriteSizeY)/2) & 0xff) >= extentYPos)
+			Also checked with S4_JustBeforeDrawingPixels since the input signals are stable, reduces the clip time by one visible pixel on the new row :)
+		* Check X and Y extent when on screen matches emulation...
+		* Remove identical emulation TC output to help speed up simulation checks...
 
 	* Double buffered sprite registers
 		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
