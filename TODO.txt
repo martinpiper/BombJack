@@ -1149,6 +1149,10 @@
 	* Trivial reject and clip test logic
 		Test data can overdraw and waste time until the draw times out, then implement and check
 		* Could enable the reject logic with a control bit in the control register
+		* The two output pixel counters for the X pos can now be merged into one, line the Y count, since only one output is using each counter value at a time
+			> The usage of the current fetchingH&V logic means the counters are not dual use anymore.
+		>> S4_advanceSprite0 Works: if ( ((currentSpriteY/2) & 0xff) >= extentYPos && (((currentSpriteY + currentSpriteSizeY)/2) & 0xff) >= extentYPos)
+
 	* Double buffered sprite registers
 		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
 	* Done: Exact EBBS matching
