@@ -1155,6 +1155,11 @@
 		>> S4_advanceSprite0 Works: if ( ((currentSpriteY/2) & 0xff) >= extentYPos && (((currentSpriteY + currentSpriteSizeY)/2) & 0xff) >= extentYPos)
 			Also checked with S4_JustBeforeDrawingPixels since the input signals are stable, reduces the clip time by one visible pixel on the new row :)
 		>> S4_advanceSprite1 Works: if ( ((currentSpriteX/2) & 0xff) >= extentXPos && (((currentSpriteX + currentSpriteSizeX)/2) & 0xff) >= extentXPos)
+			>> Needed extra fixes for the position and sprite width 256 and 257
+			>> Since it uses the register values, not working values, the test is moved to state 21 S4_JustBeforeDrawingPixels
+				>> It cannot be an earlier state because the sprite register fetch address in RAM needs to be incremented properly
+		>> S4advanceSprite2 Works: if ( ((currentSpriteXWorking/2) & 0xff) >= extentXPos && ((currentSpriteX/2) & 0xff) < extentXPos)
+			>> Needed to follow the same pixel output disable logic as for working pixel width = 0 to avoid end of line spurious pixels
 		* Check X and Y extent when on screen matches emulation...
 		* Remove identical emulation TC output to help speed up simulation checks...
 
