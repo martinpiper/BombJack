@@ -1154,6 +1154,7 @@
 			>> S4currentSpriteX[0..8]
 		>> S4_advanceSprite0 Works: if ( ((currentSpriteY/2) & 0xff) >= extentYPos && (((currentSpriteY + currentSpriteSizeY)/2) & 0xff) >= extentYPos)
 			Also checked with S4_JustBeforeDrawingPixels since the input signals are stable, reduces the clip time by one visible pixel on the new row :)
+		>> S4_advanceSprite1 Works: if ( ((currentSpriteX/2) & 0xff) >= extentXPos && (((currentSpriteX + currentSpriteSizeX)/2) & 0xff) >= extentXPos)
 		* Check X and Y extent when on screen matches emulation...
 		* Remove identical emulation TC output to help speed up simulation checks...
 
@@ -1186,6 +1187,9 @@
 				> Removed 7432 OR with S4_disablePixelOutput S2_DOPIXEL on the left, and S2DOPIXEL on the right
 		>> don't forget, the simulated hardware uses layer combiners, which introduce pixel position delays
 	* Done: Emulation needs to output "random" black pixels on the first two pixels on the left when using overscan 0x09 mode.
+	* Note: Minimum width is 2 pixels
+		0 = 256 width
+		1 = 257 width
 
 
 
