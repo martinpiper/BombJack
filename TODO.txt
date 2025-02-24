@@ -1209,7 +1209,7 @@
 	* Done: RAM placement with extra decoupling caps for their power
 		Spread out the lower left quadrant...
 	* Done: VIA label. Decoupling caps placement
-	* Merge ICs and set group
+	* Done: Merge ICs and set group
 
 
 
