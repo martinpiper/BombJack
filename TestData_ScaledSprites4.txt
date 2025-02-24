@@ -8,7 +8,7 @@ d$0
 
 ; Sprite registers
 ; Not ready
-d$88000100
+d$88000102
 ; Origin
 d$880101e0
 d$880201ff
@@ -100,7 +100,7 @@ d$100b0455
 
 
 ; Ready
-d$88000101
+d$88000103
 
 
 ; Priority, borders, layer enable, background colour, palette bank
@@ -161,7 +161,7 @@ d$0
 d$0
 
 ; Not ready
-d$88000100
+d$88000102
 
 ; Sprite 0
 d$88080100
@@ -182,7 +182,7 @@ d$88140100
 d$88150100
 
 ; Ready
-d$88000101
+d$88000103
 
 
 
@@ -206,7 +206,7 @@ d$0
 d$0
 
 ; Not ready
-d$88000100
+d$88000102
 
 ; Sprite 0
 d$88080100
@@ -227,7 +227,7 @@ d$88140100
 d$88150100
 
 ; Ready
-d$88000101
+d$88000103
 
 
 
@@ -259,7 +259,7 @@ d$0
 d$0
 
 ; Not ready
-d$88000100
+d$88000102
 
 ; Sprite 0
 d$88080110	; MSBX
@@ -280,4 +280,4 @@ d$88140100
 d$88150100
 
 ; Ready
-d$88000101
+d$88000103

@@ -1168,7 +1168,11 @@
 	* Done: Exact EBBS matching
 	* Use the comparator 74LS682 for == 0 (or value) checks...
 	* Option for calculation clock and separate pixel output clock?
-	* Layer enable should only affect final output. Not calculation.
+	* Done: Layer enable should only affect final output. Not calculation.
+		Sprite2Enable and its _Sprite2Enable
+		Sprite2Enable => S4CalculationEnable
+		_Sprite2Enable => S4_CalculationEnable
+		>> Bit 1 in the flags register is "enable calculation"
 	* Add another signal in the control register for enable calculation.
 		* Default which is disabled just allows the frame buffers to be cleared
 	* Done: Match the emulation position with the hardware
