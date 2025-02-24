@@ -1162,7 +1162,6 @@
 			>> Needed to follow the same pixel output disable logic as for working pixel width = 0 to avoid end of line spurious pixels
 		* Check X and Y extent when on screen matches emulation...
 		* Remove identical emulation TC output to help speed up simulation checks...
-
 	* Double buffered sprite registers
 		> Register S4RAMIsReady => S4triggerBufferSwap which is tested on S4FRAMESTARTPULSE and toggles S4RAMToWrite/S4_RAMToWrite
 	* Done: Exact EBBS matching
@@ -1207,6 +1206,9 @@
 		C:\Work\BombJack\output\compareimagesForTestCase.bat 2 TC-17-4
 		"C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000002.bmp" "C:\work\BDD6502\target\frames\TC-17-4-000002.bmp"
 	* Add some audio, "get ready", engine, missle, explosion?
+	* Done: RAM placement with extra decoupling caps for their power
+		Spread out the lower left quadrant...
+	* Done: VIA label. Decoupling caps placement
 
 
 
