@@ -1,4 +1,6 @@
 @echo off
+pushd %~dp0
+
 setlocal EnableDelayedExpansion
 
 for /L %%i in (0, 1, %1) do (
@@ -7,3 +9,5 @@ for /L %%i in (0, 1, %1) do (
 	 c:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -quiet -metric AE debugold!t!.bmp debug!t!.bmp -compare -format "%%[distortion]" info:
 	 echo          !t!
 )
+
+popd

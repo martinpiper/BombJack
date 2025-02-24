@@ -1197,7 +1197,9 @@
 		1 = 257 width
 	* Done: Match emulation with hardware timing. Mostly the extra clocks before and after the pixel output
 	* Test H/V flips with hardware
-	* Add automated image compare with simulation output
+	* Done: Add automated image compare with simulation output
+		C:\Work\BombJack\output\compareimagesForTestCase.bat 42 TC-17-3
+		"C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000005.bmp" "C:\work\BDD6502\target\frames\TC-17-3-000005.bmp"
 	* Add some audio, "get ready", engine, missle, explosion?
 
 
