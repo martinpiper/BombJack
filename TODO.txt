@@ -1198,6 +1198,7 @@
 	* Match emulation with hardware timing. Mostly the extra clocks before and after the pixel output
 	* Test H/V flips with hardware
 	* Add automated image compare with simulation output
+	* Add some audio, "get ready", engine, missle, explosion?
 
 
 
