@@ -1210,6 +1210,7 @@
 		Spread out the lower left quadrant...
 	* Done: VIA label. Decoupling caps placement
 	* Done: Merge ICs and set group
+	* Place some key ICs in the relevant portions of the layout
 
 
 
