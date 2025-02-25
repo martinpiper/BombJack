@@ -1210,7 +1210,8 @@
 		Spread out the lower left quadrant...
 	* Done: VIA label. Decoupling caps placement
 	* Done: Merge ICs and set group
-	* Place some key ICs in the relevant portions of the layout
+	* Done: Place some key ICs in the relevant portions of the layout
+	* Done: Double check the new RAM footprint SOIC127P1412X300-32N
 
 
 
