@@ -3586,6 +3586,12 @@ All layouts now use V3.1
 	Add a note to the schematic (and design notes) detailing the component ordering links.
 	Data sheet https://www.jameco.com/Jameco/Products/ProdDS/203625.pdf
 	Start Menu\Programs\Batronix\Prog-Express
+		>> Batronix BX32 Batupo
+		>> https://www.batronix.com/shop/programmer/BX32/batupo-I.html
+		>> Can program AT27C512R-45PU
+			>> https://www.mouser.sg/ProductDetail/556-AT27C512R-45PU
+		>> Note: This is not a UV EPROM
+
 	
 	
 	
