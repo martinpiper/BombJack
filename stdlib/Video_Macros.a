@@ -129,7 +129,7 @@ kBus24Bit_Sprites4_Controls			= $8800
 kBus24Bit_Sprites4_Registers		= $8808
 kBus24Bit_Sprites4_MSBX				= $10
 kBus24Bit_Sprites4_MSBY				= $20
-kBus24Bit_Sprites4Planes_EBBS		= $05	; Note: Conflict with imprecise default Audio
+kBus24Bit_Sprites4Planes_EBBS		= $05	; Note: Conflict with non-exact default Audio
 kBus24Bit_Sprites4Planes_0			= $0000
 
 
