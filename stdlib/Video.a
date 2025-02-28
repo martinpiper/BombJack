@@ -295,6 +295,13 @@ Video_clearByte
 	sta CIA2PortBRS232
 	rts
 
+Video_clearThreeBytes
+	lda #$00
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	sta CIA2PortBRS232
+	rts
+
 Video_clearFourBytes
 	lda #$00
 	sta CIA2PortBRS232

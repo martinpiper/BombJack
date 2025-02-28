@@ -439,6 +439,56 @@ HardwareTest_VideoPattern0
 	dex
 	bne .cl1
 
+!ifdef kHardwareTest_UsingSprites4 {
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4
+	; Flag not ready and enable logic
+	+MBus24Bit_Send8BitValue %10
+	; Offsets
+	jsr Video_clearFourBytes
+	; Extents
+	+MBus24Bit_Send8BitValue $a8
+	+MBus24Bit_Send8BitValue $70
+	; Bank
+	+MBus24Bit_Send8BitValue 0
+
+	; Graphics
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4Planes_EBBS , kBus24Bit_Sprites4Planes_0
+	ldx #4
+.s4_1
+	+MBus24Bit_Send8BitValue $01
+	+MBus24Bit_Send8BitValue $23
+	+MBus24Bit_Send8BitValue $45
+	+MBus24Bit_Send8BitValue $67
+	+MBus24Bit_Send8BitValue $89
+	dex
+	bne .s4_1
+
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4 + 8
+	; Palette
+	+MBus24Bit_Send8BitValue 0
+	; Y pos and size
+	+MBus24Bit_Send8BitValue 128
+	+MBus24Bit_Send8BitValue 32
+	; X pos and size
+	+MBus24Bit_Send8BitValue 230
+	+MBus24Bit_Send8BitValue 64
+	; Address
+	jsr Video_clearThreeBytes
+	; Scales
+	+MBus24Bit_Send8BitValue $08
+	+MBus24Bit_Send8BitValue $04
+	; Stride
+	+MBus24Bit_Send8BitValue 4
+	; End of list
+	jsr Video_clearThreeBytes
+
+
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4
+	; Flag ready and enable logic
+	+MBus24Bit_Send8BitValue %11
+
+
+} else {
 	; Sprites2
 	+MBus24Bit_SetAddress_AXY kBus24Bit_Sprites2Planes_EBBS , kBus24Bit_Sprites2Planes_0
 	ldx #32
@@ -464,7 +514,7 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_Send8BitValue 32
 	+MBus24Bit_Send8BitValue 0
 	jsr Video_clearFourBytes
-
+}
 
 
 	; If fire is held down, then pause on this screen
