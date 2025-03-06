@@ -1275,3 +1275,29 @@
 	Perhaps merge this with the 24 bit bus functionality? i.e. UserPort20To32Bit3 can generate the 24 bit address directly without needing to send to the external user port?
 	This would allow UserPort20To32Bit3 to maintain at least two independant external 24 bit addresses that count. There could be a select bit in latch7 control.
 		This would be useful for sending sprites from mainline code, while also using an IRQ to send audio writes.
+
+
+
+
+* APU: Consider updating the memory so that much more data and code can be sent
+	As above "it would be possible to use the control register"
+
+
+
+* APU Square the bus arbitration clocking, using a latch.
+
+
+
+
+* APU Precise EBBS address matching
+
+
+
+* APU Try to decompress music with APU code and add needed logic.
+	Probably memory indexing?
+	Or comparisons?
+	
+	
+	
+* Using the external display and the test data I can see some left hand pixel sparkles on the tiles/characters/mode7 layers
+	This is because it shows higher resolution data
