@@ -1301,11 +1301,3 @@
 	
 * Using the external display and the test data I can see some left hand pixel sparkles on the tiles/characters/mode7 layers
 	This is because it shows higher resolution data
-
-
-
-* .sendDMA1
-	; TODO: It seems that the emulation DMA with length and the harsware DMA with length differ, meaning that chaining the blocks doesn't seem to be matching the length properly
-	; The emulation is probably sending the right amount of data, since it adavances through the memory correctly.
-	; The hardware is probably not, maybe it is sending too much?
-	; For now the workaround is to track the address in code rather than relying on it accumulating correctly
