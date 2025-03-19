@@ -833,6 +833,8 @@
 
 * Fixed width header connector side, with fixed connector placement.
 	Length can vary
+	For enclosure work
+
 
 
 
@@ -1261,6 +1263,12 @@
 
 * Add bitmap render indexed
 	And RGB
+		>> Could use PIXELTRANS and add an extra bit like "USEBGCOLOUR" to signify that full RGB should be read from the extra input
+		This would then allow a selector for "OPXR1" and similar signals
+		The connector will need at least 16 signals
+		Maybe just use the 20 pin used in the UserPort20To32Bit2 design. Since it is known and working.
+
+
 
 
 
@@ -1306,3 +1314,8 @@
 
 
 * Move connectors to the edge opposite to the backplane connector. Keep the adjacent edges free to allow slot to be used.
+
+
+
+
+* For each display layer, and audio and APU, add DIP switch for INRAMSEL1 / BANKSEL option. This will be much better than attaching fly leads between layers.
