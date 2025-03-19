@@ -1301,3 +1301,8 @@
 	
 * Using the external display and the test data I can see some left hand pixel sparkles on the tiles/characters/mode7 layers
 	This is because it shows higher resolution data
+
+
+
+* Address selection lines for INRAMSEL1 by putting these on the backplane. This can replace INRAMSEL1. Or at least allow for DIP switches on each layer, eventually removing the need for INRAMSEL1.
+	Also expand the selection range?
