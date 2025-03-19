@@ -1306,3 +1306,7 @@
 
 * Address selection lines for INRAMSEL1 by putting these on the backplane. This can replace INRAMSEL1. Or at least allow for DIP switches on each layer, eventually removing the need for INRAMSEL1.
 	Also expand the selection range?
+
+
+
+* Move connectors to the edge opposite to the backplane connector. Keep the adjacent edges free to allow slot to be used.
