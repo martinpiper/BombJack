@@ -1268,6 +1268,7 @@
 		This would then allow a selector for "OPXR1" and similar signals
 		The connector will need at least 16 signals
 		Maybe just use the 20 pin used in the UserPort20To32Bit2 design. Since it is known and working.
+	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\AH_Eye resized-result.png" -extent "512x512" -gravity northwest -flip -define bmp:subtype=RGB565 bmp2:c:\temp\t.bmp
 
 
 
