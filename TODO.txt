@@ -924,6 +924,7 @@
 
 * Audio: Add a "sample bank" register, or use the bits from an existing register?, to allow more than 64KB of sample data?
 	Could then perhaps use a larger SMT SRAM.
+	This would simplify the design a lot by removing 8 8KB SRAMs and their support logic.
 
 
 
