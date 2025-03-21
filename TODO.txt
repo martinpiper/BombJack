@@ -1279,6 +1279,12 @@
 	>> 01 a300 = Extra address
 	>> 01 a301/a302 = Scroll X
 	>> 01 a303/a304 = Scroll Y
+	>> Schematic: EnableBackgroundRGB added BMOPXR0 etc for the bitmap RGB connector
+	* Done: Need right angled shrouded connector
+		https://www.mouser.sg/ProductDetail/Samtec/TST-110-04-L-D-RA?qs=rU5fayqh%252BE0tH2YmPykHsg%3D%3D
+		TST-110-04-L-D-RA
+	* Done: Add video logic for background RGB connector
+	* Need background bitmap RGB logic
 
 
 

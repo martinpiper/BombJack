@@ -370,7 +370,8 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
    | $02           | APU                           | $2000   8KB          | APU bank 2 registers                    |
    | $02           | Vectors                       | $0000   16KB         | Vectors bank 0 data						|
    | $02           | Vectors                       | $8000   16KB         | Vectors bank 1 data						|
-   | Note: Audio and Sprites2 are by default using the same EBBS in the schematics									|
+   | $03           | BitmapRGB                     | $0000   64KB++       | Bitmap RGB data, plus extra address		|
+   | Note: Audio and Sprites2 and Sprites4 are by default using the same EBBS in the schematics									|
    | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $04           | Sprites2 data                 | $2000   8KB++        | Sprites2 bit planes                     |
    | $05           | Sprites4 data                 | $0000   64KB++       | Sprites2 bit planes, plus extra address |
