@@ -1268,12 +1268,17 @@
 		This would then allow a selector for "OPXR1" and similar signals
 		The connector will need at least 16 signals
 		Maybe just use the 20 pin used in the UserPort20To32Bit2 design. Since it is known and working.
+	>> The -swap 0,2 and -flip swaps the BGR format data to RGB format and also vertically flips the data ready for the hardware to read directly. This causes the BMP file, if opened, to appear "wrong"
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Work\C64\VideoHardware\assets\ColourWheel1.png" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Work\C64\VideoHardware\assets\Demo13\AH_KingTut_aga.png" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\AH_Eye resized.png" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\Singapore\photo-1553323855-ae6b970d63a1.jpg" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
+	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\Singapore\photo-1553323855-ae6b970d63a1.jpg" -resize "!1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
+	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Downloads\ed8699414ffeef6cdd9152f497acd526_l-1024x1024.webp" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> Given the display has RGB background functionality
-	* Scroll X/Y
+	>> 01 a300 = Extra address
+	>> 01 a301/a302 = Scroll X
+	>> 01 a303/a304 = Scroll Y
 
 
 
@@ -1324,3 +1329,8 @@
 
 
 * For each display layer, and audio and APU, add DIP switch for INRAMSEL1 / BANKSEL option. This will be much better than attaching fly leads between layers.
+
+
+
+
+* Update test data creation to include Sprites4 data
