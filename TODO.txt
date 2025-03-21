@@ -1285,7 +1285,7 @@
 		TST-110-04-L-D-RA
 	* Done: Add video logic for background RGB connector
 	* Need background bitmap RGB logic
-
+	* {GROUP=BackgroundRGB} and prefix BGRGB
 
 
 * Current auto placer settings. Placement grid 50th ,  edge boundary 50th
