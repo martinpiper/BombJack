@@ -204,7 +204,6 @@ HardwareTest_VideoInitDisplay
 !zn
 HardwareTest_VideoPattern0
 	jsr HardwareTest_VideoInit
-	jsr HardwareTest_VideoInitDisplay
 
 	jsr Video_SetAddressPalette
 	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
@@ -377,6 +376,8 @@ HardwareTest_VideoPattern0
 	jsr Bus24Bit_WriteAForY
 	+HardwareTest_SendBitplaneData 1 , 4
 
+	jsr HardwareTest_VideoInitDisplay
+
 	jsr Video_SetAddressSpritesControl
 !ifndef kBus24Bit_VideoLayer_HasOverscan {
 	lda #kBus24Bit_SpritesControlLoEnable
@@ -516,6 +517,8 @@ HardwareTest_VideoPattern0
 	jsr Video_clearFourBytes
 }
 
+	jsr Video_WaitVBlank
+	jsr Video_WaitVBlank
 
 	; If fire is held down, then pause on this screen
 	+WaitForFireRelease_A

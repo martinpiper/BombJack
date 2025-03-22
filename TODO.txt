@@ -1340,3 +1340,12 @@
 
 
 * Update test data creation to include Sprites4 data
+
+
+
+* For the layers, Sprites4, Sprites, Chars consider adding logic that disables the _OE of their RAMs entirely.
+	This can be an extra control bit.
+	This is because "In simulation this stops destination RAM corruption" during Demo14 tests
+	>> BitmapRGB shows this contention corruption quite well.
+		However it might be a lot less obvious in hardware, although even the Chars screen RAM writes are somewhat unsafe during the screen display period.
+
