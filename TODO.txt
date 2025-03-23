@@ -1279,7 +1279,7 @@
 	>> 01 a300 = Extra address
 	>> 01 a301/a302 = Scroll X
 	>> 01 a303/a304 = Scroll Y
-	>> Schematic: EnableBackgroundRGB added BMOPXR0 etc for the bitmap RGB connector
+	>> Schematic: EnableBackgroundRGB added BMOPXR0 etc for the bitmap RGB connector (emulation enableBackgroundRGBFunctionality)
 	* Done: Need right angled shrouded connector
 		https://www.mouser.sg/ProductDetail/Samtec/TST-110-04-L-D-RA?qs=rU5fayqh%252BE0tH2YmPykHsg%3D%3D
 		TST-110-04-L-D-RA
@@ -1343,4 +1343,4 @@
 	>> BitmapRGB shows this contention corruption quite well.
 		However it might be a lot less obvious in hardware, although even the Chars screen RAM writes are somewhat unsafe during the screen display period.
 	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
-
+	* Make this a DIP switch...
