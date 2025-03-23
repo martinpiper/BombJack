@@ -5265,3 +5265,23 @@ All layouts now use V3.1
 	>> The emulation was sending one too many bytes. Fixed that.
 		Now Demo14 DMA data send with block chaining now works, so removed the workaround code to recalculate the address.
 		Verified with hardware.
+
+
+
+
+* Using the external display and the test data I can see some left hand pixel sparkles on the tiles/characters/mode7 layers
+	This is because it shows higher resolution data
+	>> If I create a Delayed6MHz that uses _6MHz and an OR and use that for the final three latches, the problem is fixed.
+		* Check the original schematic for the timing of the signal for this final latch
+			>> The original is latching the result of the palette RAMs directly, which have longer delay for output changes
+	>> compareimages.bat 10 with TestData shows no pixel changes
+	>> Consider a bank of DIP switches that select one of several delay slots for this, experiment with zero delay up to 3 slots?
+	* Does this also signal latch transient issue affect the audio layer or is that able to source a cleaner signal?
+		> Less likely since the audio LOADOUTPUT comes from the 27C512 EPROM output, which has longer output delay like that palette RAMs of the original video board.
+			Also the input address change is several clocks before the LOADOUTPUT latch.
+		** DigitalDisplay could do with a scrolling digital logic display? Or at the very least a timed sweeping display? The signal time base repeats and the final logic level is output as a vertical line?
+	>> OUTLATCHCLK and DSW16 and DSW17
+		DEL is the delayed 6MHz signal
+		RAW is the unmodified 6MHz signal
+		_DEL is the delayed _6MHz signal
+		_RAW is the unmodified _6MHz signal
