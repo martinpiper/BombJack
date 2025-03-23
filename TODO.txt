@@ -1325,7 +1325,15 @@
 	
 * Using the external display and the test data I can see some left hand pixel sparkles on the tiles/characters/mode7 layers
 	This is because it shows higher resolution data
-
+	>> If I create a Delayed6MHz that uses _6MHz and an OR and use that for the final three latches, the problem is fixed.
+		* Check the original schematic for the timing of the signal for this final latch
+	>> compareimages.bat 10 with TestData shows no pixel changes
+	>> Consider a bank of DIP switches that select one of several delay slots for this, experiment with zero delay up to 3 slots?
+	>> Does this also signal latch transient issue affect the audio layer or is that able to source a cleaner signal?
+		** DigitalDisplay could do with a scrolling digital logic display? Or at the very least a timed sweeping display? The signal time base repeats and the final logic level is output as a vertical line?
+		
+
+
 
 
 
@@ -1348,4 +1356,5 @@
 	This is because "In simulation this stops destination RAM corruption" during Demo14 tests
 	>> BitmapRGB shows this contention corruption quite well.
 		However it might be a lot less obvious in hardware, although even the Chars screen RAM writes are somewhat unsafe during the screen display period.
+	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 
