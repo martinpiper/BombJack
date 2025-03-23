@@ -1344,3 +1344,4 @@
 		However it might be a lot less obvious in hardware, although even the Chars screen RAM writes are somewhat unsafe during the screen display period.
 	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 	* Make this a DIP switch...
+		>> BitmapRGB DSW18 1 = logic 2 = GND
