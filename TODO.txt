@@ -542,7 +542,8 @@
 		This one looks good: https://www.mouser.sg/ProductDetail/Analog-Devices/ADA4430-1YKSZ-R7?qs=BpaRKvA4VqFNXyz5Q8X2jQ%3D%3D
 			https://www.mouser.sg/datasheet/2/609/ADA4430_1-2955604.pdf
 			Would need three for RGB
-
+			ADA4430-1YKSZ-R7
+		>> Placed three with DIPSW-2 to choose the outputs with a disable DIPSW-2 to ground
 		
 
 
