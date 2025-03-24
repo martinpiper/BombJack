@@ -538,6 +538,11 @@
 		Page 43 bottom right shows 47pf C128 50V AX CER (axial ceramic?) to ground with ferrite beads
 			https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/mlccs-multilayer-ceramic-capacitors/multilayer-ceramic-capacitors-mlcc-leaded/?capacitance=47%20pF&termination%20style=Axial&voltage%20rating%20dc=50%20VDC&instock=y
 			https://www.mouser.sg/ProductDetail/Hitachi-Metals/FT-3AM-B4ARLY-PF?qs=0lSvoLzn4L9HT5vJRSDFaw%3D%3D
+	* Video low-pass filters: https://www.mouser.sg/c/semiconductors/multimedia-ics/video-ics/?type=Low%20Pass%20Filter
+		This one looks good: https://www.mouser.sg/ProductDetail/Analog-Devices/ADA4430-1YKSZ-R7?qs=BpaRKvA4VqFNXyz5Q8X2jQ%3D%3D
+			https://www.mouser.sg/datasheet/2/609/ADA4430_1-2955604.pdf
+			Would need three for RGB
+
 		
 
 
