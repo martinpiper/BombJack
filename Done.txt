@@ -5285,3 +5285,6 @@ All layouts now use V3.1
 		RAW is the unmodified 6MHz signal
 		_DEL is the delayed _6MHz signal
 		_RAW is the unmodified _6MHz signal
+	>> Cannot reproduce this "fix". I think what happened is that the external view window size and therefore image scale was filtering out the high frequency noise and hiding the vertical lines.
+		The later added video filtering ICs is probably going to work better.
+	>> Remove the added DIP switches.
