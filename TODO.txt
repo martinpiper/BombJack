@@ -1351,3 +1351,9 @@
 	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 	* Make this a DIP switch...
 		>> BitmapRGB DSW18 1 = logic 2 = GND
+
+
+
+* Sprites4 hardware: TODO: Why is this different on the hardware compared to the simulation and emulation?!
+	When the carrier scales up during the game itnro, I can see one pixel vertical line gaps.
+
