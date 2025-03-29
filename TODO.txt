@@ -1356,4 +1356,6 @@
 
 * Sprites4 hardware: TODO: Why is this different on the hardware compared to the simulation and emulation?!
 	When the carrier scales up during the game itnro, I can see one pixel vertical line gaps.
-
+	>> ; TODO: This shows a built hardware difference compared to the simulation (and emulation). One right hand edge pixel is missing for these widths.
+		> A prime suspect is the OR gate tree calculating S4currentSpriteSizeXWorkingIsZero and S4_currentSpriteSizeXWorkingIsZero
+	>> Altering the MRenderFixedSpriteWithStride widths, it seems to be across a range of widths (i.e. all widths) instead of just large widths.
