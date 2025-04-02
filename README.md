@@ -222,6 +222,29 @@ At 0x9800 - 0x985f each sprite is described by 4 bytes:
 	Byte 7: Sprite frame (index) | 0x40 = halfX | 0x80 = halfY
 
 
+0x8800 Sprites4 registers (0x800 bytes)
+	0 : Control
+		Bit 0: Positive edge flag buffer swap
+		Bit 1: 1 = Calculation enable, 0 = Calculation disable. Disable calculation to reliably write data into sprite frame RAM.
+	1/2 : Left border adjust
+	3/4 : Top border adjust
+	5 : Extent X, the right hand clip window (divided by 2)
+	6 : Extent Y, the bottom clip window (divided by 2)
+	7 : Extra address, to allow sprite frame RAM to be addressed in chunks of 64KB (65,536 bytes)
+	8+ : 11 Bytes per sprite
+		* Palette | 0x10 = MSBX | 0x20 = MSBY | 0x40 = flipX | 0x80 = flipY
+		* Y pos
+		* Y size (in screen pixels, regardless of scale)
+		* X pos
+		* X size (in screen pixels, regardless of scale)
+		* Sprite address (24 bits)
+		* Y inv scale (*32)
+		* X inv scale (*32)
+		* Sprite stride-1
+
+	
+
+
 #### Tile and sprite data layout
 16x16 pixel tile and sprite data is stored in 8x8 cells and in memory order:
 	01

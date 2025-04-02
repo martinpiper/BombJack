@@ -1216,7 +1216,7 @@
 		"C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000005.bmp" "C:\work\BDD6502\target\frames\TC-17-3-000005.bmp"
 		C:\Work\BombJack\output\compareimagesForTestCase.bat 2 TC-17-4
 		"C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000002.bmp" "C:\work\BDD6502\target\frames\TC-17-4-000002.bmp"
-	* Add some audio, "get ready", engine, missle, explosion?
+	* Done: Add some audio, "get ready", engine, missle, explosion?
 	* Done: RAM placement with extra decoupling caps for their power
 		Spread out the lower left quadrant...
 	* Done: VIA label. Decoupling caps placement
@@ -1232,6 +1232,9 @@
 	X1 = -tan t/2
 	Y1 = sin t
 	X2 = -tan t/2   (again)
+	* Using the horizontal scan transformed into rotation to clear the frame buffer cannot clear the whole frame, due to clock rate, also there will be a rotation frame lag between clearing the current observed frame buffer and the next changed rotation.
+		So given those constraints, consider drawing rotated sprites into the linearly scanned frame buffer instead. This would have the advantage of enabling a different rotation for each sprite.
+
 
 
 
@@ -1355,7 +1358,7 @@
 
 
 * Sprites4 hardware: TODO: Why is this different on the hardware compared to the simulation and emulation?!
-	When the carrier scales up during the game itnro, I can see one pixel vertical line gaps.
+	When the carrier scales up during the game intro, I can see one pixel vertical line gaps.
 	>> ; TODO: This shows a built hardware difference compared to the simulation (and emulation). One right hand edge pixel is missing for these widths.
 		> A prime suspect is the OR gate tree calculating S4currentSpriteSizeXWorkingIsZero and S4_currentSpriteSizeXWorkingIsZero
 	>> Altering the MRenderFixedSpriteWithStride widths, it seems to be across a range of widths (i.e. all widths) instead of just large widths.
