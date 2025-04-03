@@ -1234,8 +1234,12 @@
 	X2 = -tan t/2   (again)
 	* Using the horizontal scan transformed into rotation to clear the frame buffer cannot clear the whole frame, due to clock rate, also there will be a rotation frame lag between clearing the current observed frame buffer and the next changed rotation.
 		So given those constraints, consider drawing rotated sprites into the linearly scanned frame buffer instead. This would have the advantage of enabling a different rotation for each sprite.
-
-
+	>> See: Sprites4.java: // Three 2D shears
+		This could probably do with a middle pixel round to remove some jadded edges
+	* Drawing rotated data to the frame buffer complicates the screen edge clipping and trivial rejection because the rotated points are no longer scanning left ot right top to bottom. Hmm...
+		Unless the screen bounding box is transformed too?
+		Or the rotated sprite axis aligned bounding box can be used for trivial rejection
+	
 
 
 
@@ -1354,6 +1358,13 @@
 	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 	* Make this a DIP switch...
 		>> BitmapRGB DSW18 1 = logic 2 = GND
+		
+		
+
+
+* BitmapRGB row and column all pixel add coordinate values RAM
+	This would allow per pixel X/Y transformations. Three tables would allow rotation.
+
 
 
 
