@@ -1368,25 +1368,6 @@
 
 
 
-* Sprites4 hardware: TODO: Why is this different on the hardware compared to the simulation and emulation?!
-	When the carrier scales up during the game intro, I can see one pixel vertical line gaps.
-	>> ; TODO: This shows a built hardware difference compared to the simulation (and emulation). One right hand edge pixel is missing for these widths.
-	>> Altering the MRenderFixedSpriteWithStride widths, it seems to be across a range of widths (i.e. all widths) instead of just large widths.
-	> A prime suspect is the OR gate tree calculating S4currentSpriteSizeXWorkingIsZero and S4_currentSpriteSizeXWorkingIsZero
-		>> Adding a comparator 74LS682 ==0 into the 7247 (3 input NOR) means the right hand edge pixel is removed, this is like what is seen on the hardwarre build.
-			>> Timing issue then? The comparator must be simulated faster than the OR gate tree.
-		>> Using the OR gate tree, and adding a latch that loads on _S2CalcCLK (negative edge of S2CalcCLK, half a clock away) still works...
-			>> Using the comparator with the latch also works.
-				Validated with VSMDD2 TestData.txt: compareimages.bat 6
-				Validated with VSMDD6: C:\Work\BombJack\output\compareimagesForTestCase.bat 42 TC-17-3
-					Ignoring, of course, where the frame transitions between test states due to memory being written mid frame.
-				Validated with VSMDD6: C:\Work\BombJack\output\compareimagesForTestCase.bat 2 TC-17-4
-				Validated with Demo14 and watching the carrier intro.
-			>> Removed the OR gate tree and replaced with a comparator, fixing the S4currentSpriteSizeXWorkingIsZero issue
-
-
-
-
 * Sprites4: Would the Y sprite size OR gate tree (similar to the S4currentSpriteSizeXWorkingIsZero work) benefit from using a comparator?
 
 
