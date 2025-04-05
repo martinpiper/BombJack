@@ -5593,3 +5593,10 @@ All layouts now use V3.1
 				Validated with VSMDD6: C:\Work\BombJack\output\compareimagesForTestCase.bat 2 TC-17-4
 				Validated with Demo14 and watching the carrier intro.
 			>> Removed the OR gate tree and replaced with a comparator, fixing the S4currentSpriteSizeXWorkingIsZero issue
+
+
+
+
+* Sprites4: Would the Y sprite size OR gate tree (similar to the S4currentSpriteSizeXWorkingIsZero work) benefit from using a comparator?
+	>> Removed Y sprite size OR gate tree and replaced with a comparator, but without an extra latch.
+		Validated with: C:\Work\BombJack\output\compareimagesForTestCase.bat 42 TC-17-3
