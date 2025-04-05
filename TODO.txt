@@ -1002,6 +1002,7 @@
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\Singapore\photo-1553323855-ae6b970d63a1.jpg" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Pictures\Singapore\photo-1553323855-ae6b970d63a1.jpg" -resize "!1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Downloads\ed8699414ffeef6cdd9152f497acd526_l-1024x1024.webp" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
+	>> C:\Downloads\ImageMagick-7.0.7-4-portable-Q16-x64\convert.exe -verbose "C:\Users\marti\Downloads\irixfileman.png" -extent "1024x1024" -gravity northwest -flip -type truecolor -define bmp:subtype=RGB565 -set colorspace RGB -separate -swap 0,2 -combine c:\temp\t.bmp
 	>> Given the display has RGB background functionality
 	>> 01 a300 = Extra address
 	>> 01 a301/a302 = Scroll X
@@ -1011,8 +1012,8 @@
 		https://www.mouser.sg/ProductDetail/Samtec/TST-110-04-L-D-RA?qs=rU5fayqh%252BE0tH2YmPykHsg%3D%3D
 		TST-110-04-L-D-RA
 	* Done: Add video logic for background RGB connector
-	* Need background bitmap RGB logic
-	* {GROUP=BackgroundRGB} and prefix BGRGB
+	* Done: Need background bitmap RGB logic
+	* Done: {GROUP=BackgroundRGB} and prefix BGRGB
 
 
 * Current auto placer settings. Placement grid 50th ,  edge boundary 50th
@@ -1093,4 +1094,3 @@
 	
 	
 	
-* Sprites4: Layout update version
