@@ -1083,6 +1083,8 @@
 
 
 * Sprites4: Would the Y sprite size OR gate tree (similar to the S4currentSpriteSizeXWorkingIsZero work) benefit from using a comparator?
+	>> Removed Y sprite size OR gate tree and replaced with a comparator, but without an extra latch.
+		Validated with: C:\Work\BombJack\output\compareimagesForTestCase.bat 42 TC-17-3
 
 
 
