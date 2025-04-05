@@ -880,6 +880,7 @@
 	PCB rack rails: https://sg.rs-online.com/web/p/rack-rails/0487735?gb=s
 	Screw pack?: https://sg.rs-online.com/web/p/rack-mounting-hardware/2918644
 	>> Each U is 1.75 inches
+		>> 6U = 10.5 inches = ~266.7mm
 	* Need the real height for the boards at this dimension...
 
 
