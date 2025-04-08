@@ -1048,7 +1048,8 @@
 	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 	* Make this a DIP switch...
 		>> BitmapRGB DSW18 1 = logic 2 = GND
-		
+	* Sprites4: Done as signal _S4DataOE, no DIP switch
+
 		
 
 
@@ -1059,6 +1060,12 @@
 
 
 * The EBBS selector DIP switch PCB markings should have a star next to every ON position.
+	>> Done:
+		Video
+		Sprites
+		Sprites4
+		BackgroundRGB
+
 
 
 
