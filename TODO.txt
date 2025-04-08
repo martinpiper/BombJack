@@ -1069,3 +1069,4 @@
 	
 	
 	
+* EPROMs could be used for lookup tables: https://www.mouser.sg/c/semiconductors/memory-ics/eprom/?interface%20type=Parallel&mounting%20style=Through%20Hole&supply%20voltage%20-%20max=5.5%20V&supply%20voltage%20-%20min=4.5%20V&instock=y&sort=memory%20size%7C1
