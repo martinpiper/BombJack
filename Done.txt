@@ -5652,4 +5652,29 @@ All layouts now use V3.1
 		0         C:\work\BDD6502\testdata\TC-17-3-00000003
 		8         C:\work\BDD6502\testdata\TC-17-3-00000005
 	>> "C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000005.bmp" "C:\work\BDD6502\target\frames\TC-17-3-000005.bmp"
-	>> During test, it was actually a little bit slower because it spent longer processing after the end of each row.
+	>> During test, while the width was accurate, it was actually a little bit slower because it spent longer processing after the end of each row.
+
+
+
+
+* Sprites4: Overclocking tests
+	* When using the output from @TC-17-2. Over clocking at 13.7MHz seems OK, but 14.31818MHz introduces some severe sprite issues in the second aircraft
+		>> When running at 13.7MHz there is one pixel difference: "C:\Program Files\Beyond Compare 5\BCompare.exe" debugold00000003.bmp debug00000003.bmp
+			One extra light blue pixel in the water
+			> VSMDD11 created to record various signals for comparison
+			"C:\Program Files\Beyond Compare 5\BCompare.exe" DebugSprites4InternalSignals_Working.txt DebugSprites4InternalSignals_Bug13_7.txt
+			The last sprite draw start seems to start at: d$e00fa200 and end at d$c0235200
+			Trimming these files for that last sprite draw
+			The upper nybble does correspond to the expected addresses low nybble for the sprite data in:   @TC-17-2	Scenario: Testing Sprites4 layer - 2
+			There are two lines for each address change, while readin gthe sprite registers, and also while plotting the sprite
+			Except there are 5 lines at the start of each sprite line
+			The last pixel drawn with the failing Y test takes 3 lines
+			Then the sprite end marker is started to be read with d$90235200
+			All the spurious reads are within the 5 lines of the start of the line, well within the last few lines stable period where the value read corrects itself, which is OK
+		>> At 14.31818MHz: "C:\Program Files\Beyond Compare 5\BCompare.exe" DebugSprites4InternalSignals_Working.txt DebugSprites4InternalSignals_Bug14_31818.txt
+			Seems to be fine, except a couple of spurious pixels...
+		>> At 16MHz: "C:\Program Files\Beyond Compare 5\BCompare.exe" DebugSprites4InternalSignals_Working.txt DebugSprites4InternalSignals_Bug16.txt
+			Many more bad pixels
+	>> These results seem to be an improvement over what was observed before the width comparison and output latch change
+		VSMDD11 Now disabled since it records a lot of data
+
