@@ -1070,12 +1070,6 @@
 
 
 
-* Done: Div 2 and div 4 clock divider DIP switch option for Sprites4
-	Then choose suitable oscillators from here: https://www.mouser.sg/c/passive-components/frequency-control-timing-devices/oscillators/standard-clock-oscillators/?package%20%2F%20case=DIP-14~~Half%20Size&product%20type=Standard%20Oscillators&supply%20voltage%20-%20max=5%20V~~5.5%20V&supply%20voltage%20-%20min=2.97%20V~~5%20V&termination%20style=Radial&instock=y&rp=passive-components%2Ffrequency-control-timing-devices%2Foscillators%2Fstandard-clock-oscillators%7C~Supply%20Voltage%20-%20Min%7C~Supply%20Voltage%20-%20Max%7C~Package%20%2F%20Case
-	For: 12 12.5 13 13.5 14
-	
-	
-	
 * EPROMs could be used for lookup tables: https://www.mouser.sg/c/semiconductors/memory-ics/eprom/?interface%20type=Parallel&mounting%20style=Through%20Hole&supply%20voltage%20-%20max=5.5%20V&supply%20voltage%20-%20min=4.5%20V&instock=y&sort=memory%20size%7C1
 
 
