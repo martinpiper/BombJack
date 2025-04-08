@@ -5644,3 +5644,12 @@ All layouts now use V3.1
 	* Done: Add video logic for background RGB connector
 	* Done: Need background bitmap RGB logic
 	* Done: {GROUP=BackgroundRGB} and prefix BGRGB
+
+
+
+* Not done Sprites4: Change the width compare latch to use a S2CalkCLK not _S2CalcCLK
+	>> cls && C:\Work\BombJack\output\compareimagesForTestCase.bat 42 TC-17-3
+		0         C:\work\BDD6502\testdata\TC-17-3-00000003
+		8         C:\work\BDD6502\testdata\TC-17-3-00000005
+	>> "C:\Program Files\Beyond Compare 5\BCompare.exe" "C:\work\BombJack\output\debug00000005.bmp" "C:\work\BDD6502\target\frames\TC-17-3-000005.bmp"
+	>> During test, it was actually a little bit slower because it spent longer processing after the end of each row.
