@@ -20,6 +20,14 @@
 	Push and shove
 	Vertical	
 
+
+** PCB options
+	Board		Placement	Layers		Signals		Power planes						Template
+	Sprites4	0.2in		8 			All			GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
+
+
+
+
 ** For each board, ensure the signal layers have a GND power plane created
 	Menu->Technology->Set Layer Stackup
 * When trying to auto-route, gradually reduce the plane to signal layers until route succeeds

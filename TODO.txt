@@ -823,7 +823,7 @@
 
 
 
-* Dcode truth table generator and solver, as well as the boolean expression solver, are very useful: https://www.dcode.fr/boolean-truth-table
+* Decode truth table generator and solver, as well as the boolean expression solver, are very useful: https://www.dcode.fr/boolean-truth-table
 	But this website might not be available forever...
 	The solvers seem to be API based, so the code is hidden?
 	It would be useful to have transparent code that can solve these problems.
@@ -1032,6 +1032,8 @@
 
 
 * For each display layer, and audio and APU, add DIP switch for INRAMSEL1 / BANKSEL option. This will be much better than attaching fly leads between layers.
+	* Done: Sprites4
+	* Done: BackgroundRGB
 
 
 
