@@ -1075,3 +1075,7 @@
 * EPROMs could be used for lookup tables: https://www.mouser.sg/c/semiconductors/memory-ics/eprom/?interface%20type=Parallel&mounting%20style=Through%20Hole&supply%20voltage%20-%20max=5.5%20V&supply%20voltage%20-%20min=4.5%20V&instock=y&sort=memory%20size%7C1
 
 
+
+
+* 74LS258 (variant SN74LS258BDR ) is out of stock, needs to go back to https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=SL3LIuy2dWzB02N5xNq5bw%3D%3D
+	Using DIL16CAP20 not SOIC127P600X175-16N-CAP
