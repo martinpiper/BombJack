@@ -5372,6 +5372,13 @@ All layouts now use V3.1
 					Edit properties->Attach hierarchy model
 						Enables the child sheet, like a sub circuit
 							Use Tools->Model Compiler to create the ITF file: "C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\MODELS\CY62138FLL.MDF"
+			>> Open the project CY62138FLL.pdsprj
+				Go to the sub-circuit sheet (page down)
+				Tools->Model Compiler
+				Go back to the top sheet
+				Right click the component (open menu) then choose Make Device
+					Use the default name
+				Then repeat the Make Device with the name "CY62138FLL-45SXI"
 			* Check the device timing...
 	* Demo14: Why does it need "Given video display processes 8 pixels per instruction" to avoid flickering?
 		Something to do with bad scales leading to bad extents?? Or frame time?
