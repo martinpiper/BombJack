@@ -369,8 +369,8 @@ The original hardware has been expanded to include RAMs where the ROMs were loca
 For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps of $800
 
 
-   | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               |
-   |---------------|-------------------------------|----------------------|-----------------------------------------|
+   | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               | Resolution	|
+   |---------------|-------------------------------|----------------------|-----------------------------------------|---------------|
    | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
    | $01           | Original RAMs                 | $9000                | Char screen control                     |
    | $01           | Original RAMs                 | $9001/2              | Char screen X scroll                    |
@@ -394,12 +394,12 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
    | $02           | Vectors                       | $0000   16KB         | Vectors bank 0 data						|
    | $02           | Vectors                       | $8000   16KB         | Vectors bank 1 data						|
    | $03           | BitmapRGB                     | $0000   64KB++       | Bitmap RGB data, plus extra address		|
-   | Note: Audio and Sprites2 and Sprites4 are by default using the same EBBS in the schematics									|
+   | Note: Audio and Sprites2 and Sprites4 are by default using the same EBBS in the schematics						|
    | $04           | Audio memory                  | $0000-$ffff          | Audio sample memory                     |
    | $04           | Sprites2 data                 | $2000   8KB++        | Sprites2 bit planes                     |
    | $05           | Sprites4 data                 | $0000   64KB++       | Sprites2 bit planes, plus extra address |
-   | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             |
-   | $80           | Char screen                   | $4000   8KB          | Chars into U258                         |
+   | $80           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles and colours into 4P7R             | 1024 x 1024	|
+   | $80           | Char screen                   | $4000   8KB          | Chars into U258                         | 1024 x 512	|
    | $80           | Char screen colours           | $8000   8KB          | Chars colours into U137                 |
    | $40           | Background 16x16 Root sheet 7 | $2000   8KB          | Tiles bit plane 0 into 8R7R             |
    | $40           | Background 16x16 Root sheet 7 | $4000   8KB          | Tiles bit plane 1 into 8N7R             |
