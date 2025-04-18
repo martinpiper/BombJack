@@ -1079,3 +1079,8 @@
 
 * 74LS258 (variant SN74LS258BDR ) is out of stock, needs to go back to https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=SL3LIuy2dWzB02N5xNq5bw%3D%3D
 	Using DIL16CAP20 not SOIC127P600X175-16N-CAP
+
+
+
+
+* APU: Sometimes the APU real hardwrae fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
