@@ -6,7 +6,7 @@
 
 
 
-* UserPort20To32Bit1 perhaps the very rare FTDI transfer issue can be solved by "suaring off" the signal for whether the FTDI is busty or not, by latching the external signal form the current clock.
+* UserPort20To32Bit1 perhaps the very rare FTDI transfer issue can be solved by "squaring off" the signal for whether the FTDI is busty or not, by latching the external signal form the current clock.
 	This would sync the signal with the clock edge, instead of being transient.
 
 
@@ -1084,3 +1084,11 @@
 
 
 * APU: Sometimes the APU real hardwrae fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
+
+
+
+
+* Audio: Perhaps upgrade to 1MB or 2MB for sample data, which would need an extra address byte per channel
+	Also look at inceasing the frequency range, increase clock speed and the byte/word range
+	Perhaps increase the channels
+
