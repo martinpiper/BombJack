@@ -5696,3 +5696,10 @@ All layouts now use V3.1
 
 
 * Sprites4: Put divider near clock
+
+
+
+
+* The EXTCS DIP switches need to not use the same signal name internally....
+	There was an issue on the Sprites4 V11.0 board
+		_EXTCS8800 => _SP4EXTCS8800
