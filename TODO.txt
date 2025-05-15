@@ -1032,6 +1032,7 @@
 
 
 * For each display layer, and audio and APU, add DIP switch for INRAMSEL1 / BANKSEL option. This will be much better than attaching fly leads between layers.
+	** Don't forget to create a new name for the internal signal if needed **
 	* Done: Sprites4
 	* Done: BackgroundRGB
 
