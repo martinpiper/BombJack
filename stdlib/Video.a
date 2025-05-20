@@ -1,4 +1,46 @@
 !zn
++MCheckNotInIO
+
+!ifdef kBus24Bit_VideoLayer_VBlankUseNMI {
+.setVBlankNMI !by 0
+.isVBlankNMI !by 0
+Video_WaitVBlank_FramesPassed !by 0
+Video_WaitVBlank
+	lda .setVBlankNMI
+	bne .isSetNMI
+
+	+MByteValueToAddress_A 1 , .setVBlankNMI
+	+MByteValueToAddress_A $7f , CIA2InterruptControl
+	+MWordValueToAddress_A .nmi , KERNALNMIServiceRoutineLo
+	+MByteValueToAddress_A %10010000 , CIA2InterruptControl
+
+.isSetNMI
+	; ACK Any previous VBLANK
+	lda #0
+	sta .isVBlankNMI
+;Video_WaitVBlank_startGuard
+.l1
+	lda .isVBlankNMI
+	beq .l1
+;Video_WaitVBlank_endGuard
+	rts
+
+.nmi
+	pha
+	+MByteValueToAddress_A 1 , .isVBlankNMI
+	inc Video_WaitVBlank_FramesPassed
+	lda ZPProcessorPort
+	pha
+	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort
+	; ACK NMI VBlank
+	lda CIA2InterruptControl
+	pla
+	sta ZPProcessorPort
+	pla
+	rti
+
+} else {
+
 ; Waits for the start of the _VBLANK to be triggered from the video, which is a negative edge on the _VBLANK line
 Video_WaitVBlank
 	; ACK Any previous VBLANK
@@ -13,6 +55,9 @@ Video_WaitVBlank_startGuard
 	beq .l1
 Video_WaitVBlank_endGuard
 	rts
+}
+
+
 
 
 Video_DisableDisplay
@@ -363,3 +408,5 @@ Video_InitDisplaySpritesScrollsBackground
 	jsr Video_clearFourBytes
 
 	rts
+
++MCheckNotInIO

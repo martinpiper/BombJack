@@ -1,4 +1,6 @@
 !zn
++MCheckNotInIO
+
 kBus20To32Bit1_latch7_Passthrough=$00
 kBus20To32Bit1_latch7_RAM=$01
 kBus20To32Bit1_latch7_PassthroughDisable=$02
@@ -140,3 +142,5 @@ Bus20To32Bit1_SetLatch12
 Bus20To32Bit1_SetLatch13
 	+MBus20To32Bit1_SetLatch13_A
 	rts
+
++MCheckNotInIO

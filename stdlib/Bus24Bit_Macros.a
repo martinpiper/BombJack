@@ -57,6 +57,17 @@
 	sta CIA2PortBRS232
 }
 
+!macro MBus24Bit_SendLE32BitValue .value {
+	lda #<.value
+	sta CIA2PortBRS232
+	lda #>.value
+	sta CIA2PortBRS232
+	lda #<(.value >> 16)
+	sta CIA2PortBRS232
+	lda #<(.value >> 24)
+	sta CIA2PortBRS232
+}
+
 
 !macro MBus24Bit_Send8BitValueFromA {
 	sta CIA2PortBRS232

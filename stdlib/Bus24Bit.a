@@ -1,4 +1,6 @@
 !zn
++MCheckNotInIO
+
 ; Initialise the bus
 Bus24Bit_Init
 	; Setup PA2 for writing
@@ -270,3 +272,5 @@ Bus24Bit_SetAddressBus
 	stx CIA2PortBRS232
 	sty CIA2PortBRS232
 	rts
+
++MCheckNotInIO

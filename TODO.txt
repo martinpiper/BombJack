@@ -1085,6 +1085,11 @@
 
 
 * APU: Sometimes the APU real hardwrae fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
+	>> ; Better APU setup, clear the start of APU instruction memory to be reset PC: I think this is because the start of memory first instruction, een in a reset state, was blocking memory access to the video hardware.
+	Perhaps create a jsr APU_ResetDisableClear that can be used at the start of code instead
+	>> See "Debugging APU startup:" above. 
+	* Perhaps the APU reset needs a power on reset IC added.
+	* Also check the reset really clears all the state
 
 
 
@@ -1092,4 +1097,3 @@
 * Audio: Perhaps upgrade to 1MB or 2MB for sample data, which would need an extra address byte per channel
 	Also look at inceasing the frequency range, increase clock speed and the byte/word range
 	Perhaps increase the channels
-	
