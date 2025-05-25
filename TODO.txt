@@ -1107,3 +1107,5 @@
 	Having the hardware automatically choose right to left and bottm to top mode based on the sprite coordinate would probably mitigate this demo14 refueling timeout.
 	>> After Burner X board has two explicit bits that signify these render directions: https://github.com/mamedev/mame/blob/master/src/mame/sega/sega16sp.cpp#L1070-L1072
 	>> Couldn't this be a couple of selectors with suitable add/sub logic paths?
+	**** // TODO: This is missing from the emulation logic and hardware, but it actually works and vastly improves performance.
+		** This is much much simpler than trying to add in direction
