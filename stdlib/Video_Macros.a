@@ -37,6 +37,9 @@ kBus24Bit_VideoLayer_XPos_OverscanExtent_Wide_right	= $152
 ; Some displays (more than for kBus24Bit_VideoLayer_OverscanExtent_Wide) might not display the full extent of the left/right screen edge, they might trim the edges by ~4 pixels compared to emulation
 kBus24Bit_VideoLayer_OverscanExtent_UnsafeWide	= $2a
 
+; This should not be used with a real display as it could push signal generation into the HBLANK portion, emulation and digital simulation debugging purposes are fine however.
+kBus24Bit_VideoLayer_OverscanExtent_UnsafeNoBorders = $0f
+
 
 kBus24Bit_VideoLayer_LayersEnable		= $9e0a
 kBus24Bit_VideoLayer_LayersEnable_Default		= %00001111

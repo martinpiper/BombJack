@@ -1,5 +1,20 @@
 !zn
 
+; Better APU setup, clear the start of APU instruction memory to be reset PC: I think this is because the start of memory first instruction, seen in a reset state, was blocking memory access to the video hardware. This initialises the first instruction with the reset followed by an empty instruction.
+APU_ResetDisableClear
+	jsr APU_ResetDisable
+	jsr APU_SetAddressAPUInstructions
+	+MBus24Bit_SendLE32BitValue kAPU_Reset_PC
+	jsr Video_clearFourBytes
+	jsr APU_ResetDisable
+	; Execute the reset instruction
+	jsr APU_Disable
+	jsr APU_Enable
+	jsr APU_ResetDisable
+
+	rts
+
+
 APU_ResetDisable
 	jsr APU_SetAddressAPURegisters
 	lda #%00

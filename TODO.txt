@@ -1084,9 +1084,9 @@
 
 
 
-* APU: Sometimes the APU real hardwrae fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
+* APU: Sometimes the APU real hardware fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
 	>> ; Better APU setup, clear the start of APU instruction memory to be reset PC: I think this is because the start of memory first instruction, een in a reset state, was blocking memory access to the video hardware.
-	Perhaps create a jsr APU_ResetDisableClear that can be used at the start of code instead
+	>> Perhaps create a jsr APU_ResetDisableClear that can be used at the start of code instead
 	>> See "Debugging APU startup:" above. 
 	* Perhaps the APU reset needs a power on reset IC added.
 	* Also check the reset really clears all the state
@@ -1097,3 +1097,13 @@
 * Audio: Perhaps upgrade to 1MB or 2MB for sample data, which would need an extra address byte per channel
 	Also look at inceasing the frequency range, increase clock speed and the byte/word range
 	Perhaps increase the channels
+
+
+
+* Sprites4: Hardware clipping, with direction
+	While hardware clipping off the right and bottom borders works well, the left and top borders still have quite a lot of processing since the logic needs to step over off screen pixels wh9ile getting on-screen.
+	This is especially noticable during the Demo14 refueling sequence when the large tanker aircraft scaled in from the top of the screen. The draw timeout is quite noticable.
+	Being able to render bottom to top and right to left would solve this left/top clipping issue, since the hardware can use the same "early out" technique as for the right/bottom extent test.
+	Having the hardware automatically choose right to left and bottm to top mode based on the sprite coordinate would probably mitigate this demo14 refueling timeout.
+	>> After Burner X board has two explicit bits that signify these render directions: https://github.com/mamedev/mame/blob/master/src/mame/sega/sega16sp.cpp#L1070-L1072
+	>> Couldn't this be a couple of selectors with suitable add/sub logic paths?
