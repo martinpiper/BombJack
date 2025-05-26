@@ -1109,3 +1109,12 @@
 	>> Couldn't this be a couple of selectors with suitable add/sub logic paths?
 	**** // TODO: This is missing from the emulation logic and hardware, but it actually works and vastly improves performance.
 		** This is much much simpler than trying to add in direction
+		>> # New top of screen reject test
+	>> After running @TC-17-3
+	>> Simulation (before any logic changes) with VSMDD6 enabled, and VSMDD2 disabled
+	>> cls && C:\Work\BombJack\output\compareimagesForTestCase.bat 44 TC-17-3
+	>> About to switch to Proteus9 >> Creating debugold 44 frames >> C:\Work\BombJack\output\compareimages.bat 44
+		>> Is Proteus V9 simulating faster? Check image time stamps for old and new executions for frames 0 to 44
+			V8 8:49:02 to 8:57:17 = 8:15
+			V9 9:00:01 to 9:04:38 = 4:37
+			> So yes, V9 is almost twice as fast
