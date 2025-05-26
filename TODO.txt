@@ -1118,3 +1118,6 @@
 			V8 8:49:02 to 8:57:17 = 8:15
 			V9 9:00:01 to 9:04:38 = 4:37
 			> So yes, V9 is almost twice as fast
+		>> Best place for the extra hardware logic is probably the "S4advanceSprite2" "S4_advanceSprite2" signal, used for the X clip check logic
+			>> S4_forNewTopOfScreenTest
+		>> MegaWang V11.1 Sprites4
