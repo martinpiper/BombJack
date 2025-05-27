@@ -1078,12 +1078,6 @@
 
 
 
-* 74LS258 (variant SN74LS258BDR ) is out of stock, needs to go back to https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=SL3LIuy2dWzB02N5xNq5bw%3D%3D
-	Using DIL16CAP20 not SOIC127P600X175-16N-CAP
-
-
-
-
 * APU: Sometimes the APU real hardware fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
 	>> ; Better APU setup, clear the start of APU instruction memory to be reset PC: I think this is because the start of memory first instruction, een in a reset state, was blocking memory access to the video hardware.
 	>> Perhaps create a jsr APU_ResetDisableClear that can be used at the start of code instead

@@ -23,7 +23,8 @@
 
 ** PCB options
 	Board		Placement	Layers		Signals		Power planes						Template
-	Sprites4	0.2in		8 			All			GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
+	Sprites4	50th		8 			All			GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
+		>> Shrink board right edge to match auto place
 
 
 
@@ -52,7 +53,7 @@
 			Supplier (not needed when not using IC sockets)
 			Placed
 		Uncheck box: Full CSV
-		Press CSV button ("a" document icon)
+		Press CSV button ("CSV" document icon)
 		Text Import window
 			Click top left grid, to select all cells
 			Drop down: Column type: Text

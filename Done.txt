@@ -5703,3 +5703,9 @@ All layouts now use V3.1
 * The EXTCS DIP switches need to not use the same signal name internally....
 	There was an issue on the Sprites4 V11.0 board
 		_EXTCS8800 => _SP4EXTCS8800
+
+
+
+
+* 74LS258 (variant SN74LS258BDR ) is out of stock, needs to go back to https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=SL3LIuy2dWzB02N5xNq5bw%3D%3D
+	Using DIL16CAP20 not SOIC127P600X175-16N-CAP
