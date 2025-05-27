@@ -25,6 +25,7 @@
 	Board		Placement	Layers		Signals		Power planes						Template
 	Sprites4	50th		8 			All			GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
 		>> Shrink board right edge to match auto place
+		>> Add DRC VIAx rooms around through hole components 74LS258 and edge connectors
 
 
 
