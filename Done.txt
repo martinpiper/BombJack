@@ -5709,3 +5709,28 @@ All layouts now use V3.1
 
 * 74LS258 (variant SN74LS258BDR ) is out of stock, needs to go back to https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS258BN?qs=SL3LIuy2dWzB02N5xNq5bw%3D%3D
 	Using DIL16CAP20 not SOIC127P600X175-16N-CAP
+
+
+
+
+* Sprites4: Hardware clipping, with direction
+	While hardware clipping off the right and bottom borders works well, the left and top borders still have quite a lot of processing since the logic needs to step over off screen pixels wh9ile getting on-screen.
+	This is especially noticable during the Demo14 refueling sequence when the large tanker aircraft scaled in from the top of the screen. The draw timeout is quite noticable.
+	Being able to render bottom to top and right to left would solve this left/top clipping issue, since the hardware can use the same "early out" technique as for the right/bottom extent test.
+	Having the hardware automatically choose right to left and bottm to top mode based on the sprite coordinate would probably mitigate this demo14 refueling timeout.
+	>> After Burner X board has two explicit bits that signify these render directions: https://github.com/mamedev/mame/blob/master/src/mame/sega/sega16sp.cpp#L1070-L1072
+	>> Couldn't this be a couple of selectors with suitable add/sub logic paths?
+	**** // TODO: This is missing from the emulation logic and hardware, but it actually works and vastly improves performance.
+		** This is much much simpler than trying to add in direction
+		>> # New top of screen reject test
+	>> After running @TC-17-3
+	>> Simulation (before any logic changes) with VSMDD6 enabled, and VSMDD2 disabled
+	>> cls && C:\Work\BombJack\output\compareimagesForTestCase.bat 44 TC-17-3
+	>> About to switch to Proteus9 >> Creating debugold 44 frames >> C:\Work\BombJack\output\compareimages.bat 44
+		>> Is Proteus V9 simulating faster? Check image time stamps for old and new executions for frames 0 to 44
+			V8 8:49:02 to 8:57:17 = 8:15
+			V9 9:00:01 to 9:04:38 = 4:37
+			> So yes, V9 is almost twice as fast
+		>> Best place for the extra hardware logic is probably the "S4advanceSprite2" "S4_advanceSprite2" signal, used for the X clip check logic
+			>> S4_forNewTopOfScreenTest
+		>> MegaWang V11.1 Sprites4
