@@ -151,7 +151,8 @@ Note: Most control registers can be updated at any point during the frame and th
 0x9c00-0x9dff	Palette RAM
 
 
-0x9e00	0x10	Use background colour
+0x9e00	0x01	Enable background RGB	(V12.0 video board)
+		0x10	Use background colour
 		0x20	Enable display
 		0x80	BorderY shrink
 
