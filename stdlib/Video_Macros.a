@@ -66,7 +66,10 @@ kBus24Bit_VideoLayer_XPos_SpriteIndex_20		= $140
 !ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
 kBus24Bit_VideoLayer_PaletteBank	= $9e0c
 }
+!ifdef kBus24Bit_VideoLayer_ExpandedPaletteLayers {
+kBus24Bit_VideoLayer_PaletteLayers	= $9e0d
 }
+} ; < ifdef kBus24Bit_VideoLayer_HasOverscan
 kBus24Bit_VideoLayer_Palette		= $9c00
 kBus24Bit_VideoLayer_NumPalettes			= 16
 kBus24Bit_VideoLayer_ColoursPerPalette		= 16

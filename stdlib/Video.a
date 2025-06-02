@@ -134,6 +134,18 @@ Video_SetAddressVideoPaletteBankRegister
 	rts
 }
 
+!ifdef kBus24Bit_VideoLayer_ExpandedPaletteLayers {
+Video_SetAddressVideoPaletteLayersRegister
+	jsr Bus24Bit_Reset
+	lda #kBus24Bit_VideoLayer_EBBS
+	sta CIA2PortBRS232
+	lda #<kBus24Bit_VideoLayer_PaletteLayers
+	sta CIA2PortBRS232
+	lda #>kBus24Bit_VideoLayer_PaletteLayers
+	sta CIA2PortBRS232
+	rts
+}
+
 !ifdef kBus24Bit_VideoLayer_HasOverscan {
 Video_SetAddressVideoOverscanExtentRegisters
 	jsr Bus24Bit_Reset

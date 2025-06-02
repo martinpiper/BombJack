@@ -182,6 +182,11 @@ Note: Most control registers can be updated at any point during the frame and th
 
 0x9e0c	Palette bank number
 	See: kBus24Bit_VideoLayer_ExpandedPalettes
+		Given set the video display with 32 palette banks
+
+0x9e0d	Palette layers
+	See: kBus24Bit_VideoLayer_ExpandedPaletteLayers
+		Given the display has palette layer expansion
 
 
 Sprite 32x32 size select
