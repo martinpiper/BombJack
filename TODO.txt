@@ -641,7 +641,8 @@
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116SA15SOG8?qs=JcGQCygHkIaMnzDF8w351A%3D%3D
 			Part number: 6116SA15SOG8
 			Using this footprint? SOIC127P786X210-24N
-			Will need a -CAP variant
+			Done: Will need a -CAP variant - SOIC127P786X210-24N-CAP
+				** Note power pins
 			
 		
 
