@@ -633,6 +633,8 @@
 	>>> Perhaps email Renesas Electronics and Alliance Memory to check on how long their options are likely to be around?
 		https://twitter.com/MartinPiper/status/1594159150476382211?s=20&t=QVV1iCGXh-cPtiAvdJ43ow
 	>> Last APU build from PCBWay used: 6116LA20TPG
+		LA=Battery backup option
+		SA=No battery option
 		Replace with one of the following:
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116SA20TPG?qs=JcGQCygHkIYbYYjhCwPjqQ%3D%3D
 		https://www.mouser.sg/ProductDetail/Renesas-Electronics/6116LA20TPGI?qs=GVScuG1d83j4PLGc6sWfNQ%3D%3D
