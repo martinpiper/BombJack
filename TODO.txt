@@ -544,7 +544,7 @@
 			Would need three for RGB
 			ADA4430-1YKSZ-R7
 		>> Placed three with DIPSW-2 to choose the outputs with a disable DIPSW-2 to ground
-		
+		>> Placed JP1/JP2/JP3 to allow resistor experiments
 
 
 * Try recording a high resolution APU bus sample using the DG?
