@@ -1103,3 +1103,12 @@
 		This has more risk, since it touches on more signals and might need extra guard logic to avoid unwanted Y position checks at the wrong time.
 		An earlier check would save a few extra pixel draw clocks, giving slightly more on-screen pixel draw time.
 	The current usage of the AND gate to signal the current row is completed has less logic and less risk.
+
+
+
+
+
+* Audio2: A very simple large memory sample playing board for music?
+	This could mix the input from the more complex sound board with sampled audio and output
+	If it was one channel then it could, with dip switch / jumper, choose which input stereo channel to mix with and which one to pass through
+	This could be useful for Demo14?
