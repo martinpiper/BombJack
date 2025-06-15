@@ -1112,3 +1112,5 @@
 	This could mix the input from the more complex sound board with sampled audio and output
 	If it was one channel then it could, with dip switch / jumper, choose which input stereo channel to mix with and which one to pass through
 	This could be useful for Demo14?
+	Could have start/end/speed (with accuracy bits)/volume
+	Automatic loop to the start when the end is reached
