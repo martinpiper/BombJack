@@ -1117,4 +1117,5 @@
 	>> Shortest cable 3ft: https://www.mouser.sg/ProductDetail/Bel/BC-A3MM003F?qs=DPoM0jnrROUiJi8FhC87Nw%3D%3D
 	>> Shorter 15cm right angled two pack: https://www.amazon.sg/Kework-Straight-Stereo-Headphone-Headset/dp/B07D1Z6PZL/ref=sr_1_36?crid=1KR4Q94MW7RX&dib=eyJ2IjoiMSJ9.NVf8cufiWKrkZcBcdZ9TA0yKyXLyX6QHvaWqnGJ0U-GAXt__QlryCF5jC8cZkcCcqHCBySbXDA5Wm3mkk4RyZMHCWSbGLpEtB8lbs2iDFh2I5QPwHVQGLoMbDSvIjqQ8Ok3CAp9AYwX0KAYpU_ezRU6eriLmHtV4Sx394oZqGclmu2Di2jTMsPNIt4LcPUMiY6F58OjKHEkzCA4NjLbsA45B9otxtP8RtHLq0jU44QWuYWQNFXfANMG6_9VifuvFhbQf2TcSvYM_BhbsTP4HVmKKmvIWOLUbpbdCMgyjE9c.4cpmrtIL06IqguZi3f0asCGEar3f-reCAuUWrzN4x7w&dib_tag=se&keywords=stereo%2Bheadphone%2Bextension%2Bcable%2Bpatch&qid=1749966435&sprefix=stereo%2Bheadphone%2Bextension%2Bcable%2Bpatch%2Caps%2C382&sr=8-36&th=1
 		>> Kework 15cm 1/8" 3.5mm TRS Jack Audio Flat Cable, 2 Pack, 90 Degree Angle Male to 90 Degree Angle Male 3.5mm 3 Pole Stereo Plug Headphone Headset AUX Cord
-
+	>> The original Audio board uses the entire 0x8000-0x87ff block. Is actually address decodes using EA3/4/5 and uses 0x8000 to 0x802f for its registers
+		It ignores 0x8030 - 0x803f because the address decoder U7 does not have those lines connected. This could be used by the expansion address board

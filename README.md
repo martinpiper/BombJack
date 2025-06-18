@@ -378,6 +378,7 @@ For EBBS = $01 the RAM address select lines are from $8000 until $b800 in steps 
    | EXPANSIONBUS3 | Group                         | EXPANSIONBUS address | Behaviour                               | Resolution	|
    |---------------|-------------------------------|----------------------|-----------------------------------------|---------------|
    | $01           | Audio registers               | $8000 11 bytes/voice | Audio registers                         |
+   | $01           | Sprites4 registers            | $8800                | Sprites4 registers                      |
    | $01           | Original RAMs                 | $9000                | Char screen control                     |
    | $01           | Original RAMs                 | $9001/2              | Char screen X scroll                    |
    | $01           | Original RAMs                 | $9003/4              | Char screen Y scroll                    |
