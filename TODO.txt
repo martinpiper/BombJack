@@ -1119,3 +1119,8 @@
 		>> Kework 15cm 1/8" 3.5mm TRS Jack Audio Flat Cable, 2 Pack, 90 Degree Angle Male to 90 Degree Angle Male 3.5mm 3 Pole Stereo Plug Headphone Headset AUX Cord
 	>> The original Audio board uses the entire 0x8000-0x87ff block. Is actually address decodes using EA3/4/5 and uses 0x8000 to 0x802f for its registers
 		It ignores 0x8030 - 0x803f because the address decoder U7 does not have those lines connected. This could be used by the expansion address board
+
+
+
+
+* Video: Maybe the connector edge is a little too tight and needs a few fractions of a mm removed...
