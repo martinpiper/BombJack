@@ -72,7 +72,7 @@ Video_DisableDisplay
 	sta CIA2PortBRS232
 !ifdef kBus24Bit_VideoLayer_ExpandedPalettes {
 	jsr Video_SetAddressVideoPaletteBankRegister
-	jsr Video_clearByte
+	jsr Video_clearFourBytes	; Palette bank and palette layers
 }
 	rts
 
