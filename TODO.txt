@@ -1124,9 +1124,3 @@
 
 
 * Video: Maybe the connector edge is a little too tight and needs a few fractions of a mm removed...
-
-
-
-
-* UserPort20To32Bit1
-	When the fast DMA transfer is completing, is there a weird state where the userport bus transceiver U1 and the latch 13 status U53 are not always active, or in a contention state?
