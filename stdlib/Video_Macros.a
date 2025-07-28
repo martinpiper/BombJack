@@ -268,3 +268,18 @@ kBus24Bit_CharScreenPlanes_3		= $0000
 !macro LinePlane8 .v {
 	!by .v&255
 }
+
+
+!macro MFrameCompensate_30fps_Before ~.labelBefore , .labelOver {
+.labelBefore
+	; Frame compensate, for 30 fps
+	lda Video_WaitVBlank_FramesPassed
+	cmp #2
+	bcc .labelOver
+}
+!macro MFrameCompensate_30fps_After .labelBefore , ~.labelOver {
+	dec Video_WaitVBlank_FramesPassed
+	dec Video_WaitVBlank_FramesPassed
+	jmp .labelBefore
+.labelOver
+}
