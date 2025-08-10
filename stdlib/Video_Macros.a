@@ -52,6 +52,7 @@ kBus24Bit_VideoLayer_LayersEnable_123			= %00000111
 kBus24Bit_VideoLayer_LayersEnable_124			= %00001011
 kBus24Bit_VideoLayer_LayersEnable_134			= %00001101
 kBus24Bit_VideoLayer_LayersEnable_234			= %00001110
+kBus24Bit_VideoLayer_LayersEnable_24			= %00001010
 kBus24Bit_VideoLayer_LayersEnable_1234			= %00001111
 kBus24Bit_VideoLayer_LayersEnable_None			= %00000000
 
