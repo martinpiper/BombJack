@@ -4,6 +4,10 @@ Hardware Purchase
 Buying the hardware
 ===================
 
+I plan to make the PCBs available from PCBWay: https://www.pcbway.com/project/member/shareproject/?bmbno=DA7C53B3-370F-46
+
+The below prices are for the through hole PCBs. The SMT PCBs are smaller and cheaper, prices to be confirmed.
+
 Are you sure you want to buy the hardware?
 
 | Item													| US$		|
@@ -18,7 +22,7 @@ Are you sure you want to buy the hardware?
 Important considerations
 ========================
 
-* Once the purchase is made *it cannot be cancelled or refunded once fabrication is requested* because you are buying a hand made one off bespoke solution
+* Once the purchase is made *it cannot be cancelled or refunded once fabrication is requested* because you are buying a hand made one-off bespoke solution
 * It takes at least 30 days, after the money is received, for populated PCBs to be delivered
 * Delivery of remaining components can also take 10 days, assuming there is stock
 * Construction and testing can take 5 days
