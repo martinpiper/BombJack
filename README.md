@@ -598,6 +598,10 @@ I use Proteus simulation and PCB design: https://www.labcenter.com/
 And PCBWay PCB manufacture: https://pcbway.com/g/Xr8ZrI
 ( Using the PCBWay referral link gives you a discount and also helps me reduce the cost of my next board. )
 
+
+## Purchase
+
+I plan to make the PCBs available from PCBWay: https://www.pcbway.com/project/member/shareproject/?bmbno=DA7C53B3-370F-46
 	
 ## References
 
