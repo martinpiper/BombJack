@@ -22,13 +22,17 @@
 
 
 ** PCB options
-	Version	Board		Placement	Layers		Signals				Power planes						Template
-	V11.1	Sprites4	50th		8 			All					GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
+	Version	Board			Placement	Layers		Signals				Power planes						Template
+	V11.1	Sprites4		50th		8 			All					GND VCC GND VCC GND GND VCC GND		Eight layers all signals and SMT space filling power planes.LTF
 				>> Shrink board right edge to match auto place
 				>> Add DRC VIAx rooms around through hole components 74LS258 and edge connectors
-	V11.0	Video		50th		8			Top, I3, I5,BOT		VCC GND GND VCC (exclusive planes)	Eight layers.LTF
+	V11.0	Video			50th		8			Top, I3, I5,BOT		VCC GND GND VCC (exclusive planes)	Eight layers.LTF
 				>> Pad-Pad clearance = 9th
 				>> Add DRC VIAx DRC config for 35th pad-pad
+	V11.0	BackgroundRGB	50th		6			All					GND VCC GND VCC GND GND
+				>> Right board edge moved to be level with the layer connector
+				>> Placement room fingers moved left to the DIP switches
+
 
 
 ** For each board, ensure the signal layers have a GND power plane created
