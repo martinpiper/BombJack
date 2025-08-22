@@ -1124,3 +1124,8 @@
 
 
 * Video: Maybe the connector edge is a little too tight and needs a few fractions of a mm removed...
+
+
+
+
+* BackgroundRGB: Add caps to RAMs
