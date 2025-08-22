@@ -122,7 +122,7 @@ chunkSize = 256000
 while pos < len(toSendBytes):
     serialPort.write(toSendBytes[pos:min(pos+chunkSize,len(toSendBytes))])
     pos = pos + chunkSize
-    print( int(100 * pos / len(toSendBytes)), " percent")
+    print( min(int(100 * pos / len(toSendBytes)),100), " percent")
 
 deltaTime = time.time() - startTime
 if deltaTime > 0:
