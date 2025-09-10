@@ -1,0 +1,55 @@
+!zn
+
+; Entry: A/X/Y = External address lo/hi/hihi
+Bus20To32Bit1_CopyFrom_SetExternalAddress
+	sta .sma1+1
+	stx .sma2+1
+	sty .sma3+1
+
+	jsr Bus20To32Bit1_Init
+
+	jsr Bus20To32Bit1_SetLatch0
+.sma1	lda #0
+	+MBus24Bit_Send8BitValueFromA
+	jsr Bus20To32Bit1_SetLatch1
+.sma2	lda #0
+	+MBus24Bit_Send8BitValueFromA
+	jsr Bus20To32Bit1_SetLatch2
+.sma3	lda #0
+	+MBus24Bit_Send8BitValueFromA
+
+	rts
+
+; Entry: A/X = Address lo/hi
+Bus20To32Bit1_CopyFrom_SetAddress
+	sta .smsa1+1
+	stx .smsa1+2
+	rts
+
+
+; Entry: A/X = Length lo/hi
+.length !word 0
+Bus20To32Bit1_CopyFrom
+	; Invert the length for a faster test
+	eor #$ff
+	sta .length
+	txa
+	eor #$ff
+	sta .length+1
+
+	jsr Bus20To32Bit1_ReadMode
+	jsr Bus20To32Bit1_SetLatch5
+
+.cl1
+	+MIncAddr16 .length , .length+1
+	beq .ret
+
+	+MBus24Bit_Get8BitValueToA
+.smsa1 sta $1234
+	+MIncAddr16 .smsa1+1 , .smsa1+2
+
+	jmp .cl1
+
+.ret
+	jsr Bus20To32Bit1_Init
+	rts
