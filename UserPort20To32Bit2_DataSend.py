@@ -4,10 +4,11 @@ import sys
 import serial
 import time
 
-# serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
-serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
+#serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+#serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
 #serialPort = serial.Serial(port="COM5", baudrate=115200)
 #serialPort = serial.Serial(port="COM5", baudrate=4000000)
+serialPort = serial.Serial(port="COM5", baudrate=4000000, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
 
 
 # Using 4MHz
