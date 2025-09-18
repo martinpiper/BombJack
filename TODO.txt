@@ -1104,3 +1104,8 @@
 	Square
 	Wide
 	Narrow
+
+
+
+
+* Backplane: Needs more power jacks and slots and large caps
