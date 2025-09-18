@@ -32,6 +32,7 @@
 	V11.0	BackgroundRGB	50th		6			All					GND VCC GND VCC GND GND
 				>> Right board edge moved to be level with the layer connector
 				>> Placement room fingers moved left to the DIP switches
+	V11.1	BackgroundRGB	50th		6			All					GND VCC GND VCC GND GND
 
 
 
