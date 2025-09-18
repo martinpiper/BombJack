@@ -520,33 +520,6 @@
 
 
 
-* Ceramic capacitors for filters: https://twitter.com/MartinPiper/status/1514627903647993856
-	Dedicated opamp for audio instead?
-	Also perhaps useful for the video output?
-
-	http://www.learningaboutelectronics.com/Articles/Filter-capacitor.php
-	https://learn.sparkfun.com/tutorials/capacitors/application-examples
-	https://www.arrow.com/en/research-and-events/articles/using-capacitors-to-filter-electrical-noise
-	
-		https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/?capacitance=20%20uF~~470%20uF&termination%20style=Axial~~Radial%7C~Through%20Hole&voltage%20rating%20dc=6.3%20VDC~~100%20VDC&instock=y&sort=capacitance%7C1&rp=passive-components%2Fcapacitors%2Fceramic-capacitors%7C~Termination%20Style%7C~Capacitance%7C~Voltage%20Rating%20DC
-		
-	* However for Road Blasters https://www.arcade-museum.com/manuals-videogames/R/Road%20Blasters%20Schematic%20Package.pdf
-		Page 11 shows 470 pf to ground on the RGB (lower right corner)
-		
-
-	* Spy Hunter https://www.jammarcade.net/files/Schematics/Arcade/Spy%20Hunter.pdf
-		Page 43 bottom right shows 47pf C128 50V AX CER (axial ceramic?) to ground with ferrite beads
-			https://www.mouser.sg/c/passive-components/capacitors/ceramic-capacitors/mlccs-multilayer-ceramic-capacitors/multilayer-ceramic-capacitors-mlcc-leaded/?capacitance=47%20pF&termination%20style=Axial&voltage%20rating%20dc=50%20VDC&instock=y
-			https://www.mouser.sg/ProductDetail/Hitachi-Metals/FT-3AM-B4ARLY-PF?qs=0lSvoLzn4L9HT5vJRSDFaw%3D%3D
-	* Video low-pass filters: https://www.mouser.sg/c/semiconductors/multimedia-ics/video-ics/?type=Low%20Pass%20Filter
-		This one looks good: https://www.mouser.sg/ProductDetail/Analog-Devices/ADA4430-1YKSZ-R7?qs=BpaRKvA4VqFNXyz5Q8X2jQ%3D%3D
-			https://www.mouser.sg/datasheet/2/609/ADA4430_1-2955604.pdf
-			Would need three for RGB
-			ADA4430-1YKSZ-R7
-		>> Placed three with DIPSW-2 to choose the outputs with a disable DIPSW-2 to ground
-		>> Placed JP1/JP2/JP3 to allow resistor experiments
-
-
 * Try recording a high resolution APU bus sample using the DG?
 
 
@@ -1049,17 +1022,17 @@
 * For the layers, Sprites4, Sprites, Chars consider adding logic that disables the _OE of their RAMs entirely.
 	This can be an extra control bit.
 	This is because "In simulation this stops destination RAM corruption" during Demo14 tests
-	>> BitmapRGB shows this contention corruption quite well.
+	>> BackgroundRGB shows this contention corruption quite well.
 		However it might be a lot less obvious in hardware, although even the Chars screen RAM writes are somewhat unsafe during the screen display period.
-	>> BitmapRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
+	>> BackgroundRGB tested with _OE = GND and it works better, no problems writing the data, but logic contentions are reported.
 	* Make this a DIP switch...
-		>> BitmapRGB DSW18 1 = logic 2 = GND
+		>> BackgroundRGB DSW18 1 = logic 2 = GND
 	* Sprites4: Done as signal _S4DataOE, no DIP switch
 
 		
 
 
-* BitmapRGB row and column all pixel add coordinate values RAM
+* BackgroundRGB row and column all pixel add coordinate values RAM
 	This would allow per pixel X/Y transformations. Three tables would allow rotation.
 
 
@@ -1127,5 +1100,7 @@
 
 
 
-
-* BackgroundRGB: Add caps to RAMs
+* BackgroundRGB: Geometry select
+	Square
+	Wide
+	Narrow
