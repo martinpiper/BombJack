@@ -834,6 +834,8 @@
 
 
 * All the other layers also need comparator this for their EBS selectors, except root sheet 4 and video which has this already.
+	* Done: Sprites
+	* Done: Chars
 
 
 
@@ -1011,6 +1013,8 @@
 	** Don't forget to create a new name for the internal signal if needed **
 	* Done: Sprites4
 	* Done: BackgroundRGB
+	* Done: Chars
+
 
 
 
