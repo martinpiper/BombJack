@@ -33,6 +33,8 @@
 				>> Right board edge moved to be level with the layer connector
 				>> Placement room fingers moved left to the DIP switches
 	V11.1	BackgroundRGB	50th		6			All					GND VCC GND VCC GND GND
+	V11.1	Chars			50th		6			Top, I3, I4,BOT		GND VCC GND VCC GND GND
+				>> Depending on auto-place the VIAx DRC rooms might need to be made smaller
 
 
 
