@@ -14,6 +14,10 @@ d0
 ;kAudio2Register_Rate16_Normal = 1<<12
 .kAudio2Register_Rate16_Normal = $1000
 
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
 ; Audio registers
 :emit Bank = 0
 d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Bank | $00
@@ -22,9 +26,10 @@ d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Control | $00
 :emit Volume = $ff
 d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Volume | $ff
 
-; Address auto-increment using data bits 16-31
-+16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
-<0,1,2,3,4,5,6,7,<
+s=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Address24
+b$e3,b$04,b$01
+s=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Length24
+b$17,b$23,b$01
 
 :emit Some sample data
 s=kAudio2Data_EBBS
