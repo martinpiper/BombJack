@@ -13,9 +13,9 @@ d$a2020160
 d$a2030100
 
 
-!TestData_ScaledSprites4.txt
-!TestData_DebugPixelTiming.txt
-!TestData_DebugVectors.txt
+;!TestData_ScaledSprites4.txt
+;!TestData_DebugPixelTiming.txt
+;!TestData_DebugVectors.txt
 ;!TestData_DebugScaledSprites.txt
 
 ; Dither on

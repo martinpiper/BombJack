@@ -1,0 +1,57 @@
+d0
+
+.kAudio2Data_EBBS = $00000600
+.kAudio2_EBBS = $00000100
+.kAudio2_LeftChannel = $80300000
+
+.kAudio2Register_Bank		= $00000000
+.kAudio2Register_Control	= $00010000
+.kAudio2Register_Control_Enable = $01
+.kAudio2Register_Volume		= $00020000
+.kAudio2Register_Address24	= $00030000
+.kAudio2Register_Length24	= $00060000
+.kAudio2Register_Rate16		= $00090000
+;kAudio2Register_Rate16_Normal = 1<<12
+.kAudio2Register_Rate16_Normal = $1000
+
+; Audio registers
+:emit Bank = 0
+d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Bank | $00
+:emit Active = 0
+d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Control | $00
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+:emit Some sample data
+s=kAudio2Data_EBBS
+
+b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07
+
+d0
+
+; Wait for the audio clock AUDCLK to start after 250m
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+
+d0
+
