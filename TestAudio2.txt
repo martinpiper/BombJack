@@ -26,8 +26,12 @@ d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Control | $00
 
 :emit Some sample data
 s=kAudio2Data_EBBS
-
 b$00,b$01,b$02,b$03,b$04,b$05,b$06,b$07
+:emit Bank = $10
+d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Bank | $10
+:emit Some sample data2
+s=kAudio2Data_EBBS
+b$80,b$81,b$82,b$83,b$84,b$85,b$86,b$87
 
 d0
 
