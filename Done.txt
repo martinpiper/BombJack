@@ -5781,3 +5781,10 @@ All layouts now use V3.1
 
 
 * BackgroundRGB: Debug pads, to help debug any memory write or other logic issues
+
+
+
+* Audio2: Increase rate range 62.5KHz is the maximum
+	Add power on reset
+	Add extra debug signals
+	Improve mixing output

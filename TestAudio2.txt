@@ -48,9 +48,9 @@ d=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Bank | $10
 s=kAudio2Data_EBBS
 b$80,b$81,b$82,b$83,b$84,b$85,b$86,b$87
 
-:emit Rate = $1000
+:emit Rate = $8000
 s=kAudio2_EBBS | kAudio2_LeftChannel | kAudio2Register_Rate16
-b$00,b$10
+b$00,b$80
 
 
 :emit Active = 1
