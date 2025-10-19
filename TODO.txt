@@ -1112,5 +1112,4 @@
 
 
 
-* Backplane: Needs more power jacks and slots and large caps
-	Perhaps bus drivers
+* Backplane: Perhaps needs bus drivers

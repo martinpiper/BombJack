@@ -5788,3 +5788,9 @@ All layouts now use V3.1
 	Add power on reset
 	Add extra debug signals
 	Improve mixing output
+
+
+
+
+* Backplane: Needs more power jacks and slots and large caps
+	>> MegaWang V12.0 Backplane
