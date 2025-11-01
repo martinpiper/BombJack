@@ -5,10 +5,10 @@ import serial
 import time
 
 #serialPort = serial.Serial(port="COM5", baudrate=115200, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
-#serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
+serialPort = serial.Serial(port="COM5") # This seems to be just as fast as explicitly setting the speed
 #serialPort = serial.Serial(port="COM5", baudrate=115200)
 #serialPort = serial.Serial(port="COM5", baudrate=4000000)
-serialPort = serial.Serial(port="COM5", baudrate=4000000, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+#serialPort = serial.Serial(port="COM5", baudrate=4000000, parity=serial.PARITY_ODD, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
 
 
 # Using 4MHz
@@ -103,6 +103,15 @@ if len(sys.argv) < 2:
 else:
     file = open(sys.argv[1], 'rb')
     fileData = file.read()
+    if len(sys.argv) >= 3:
+        if sys.argv[2].startswith("0x"):
+            offset = int(sys.argv[2][2:], 16)
+        elif sys.argv[2].startswith("$"):
+            offset = int(sys.argv[2][1:], 16)
+        else:
+            offset = int(sys.argv[2])
+        fileData = fileData[offset:]
+
     i = 0
     while i < len(fileData):
         sendDataByte(fileData[i])
@@ -119,7 +128,8 @@ sendFTDILatchData(1, 0x10)  # Hi _PC
 
 print("Final buffer send...")
 pos = 0
-chunkSize = 256000
+#chunkSize = 256000
+chunkSize = 64*1024
 while pos < len(toSendBytes):
     serialPort.write(toSendBytes[pos:min(pos+chunkSize,len(toSendBytes))])
     pos = pos + chunkSize
