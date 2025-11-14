@@ -193,17 +193,21 @@ kBus24Bit_MergeLayer_Register_XORMask0	= $a201
 kBus24Bit_MergeLayer_Register_Control1	= $a202
 kBus24Bit_MergeLayer_Register_XORMask1	= $a203
 
+; Select one pixel operation mode
 kBus24Bit_MergeLayer_Register_Control_Combine		= %00
 kBus24Bit_MergeLayer_Register_Control_XOR			= %01
 kBus24Bit_MergeLayer_Register_Control_AND			= %10
 kBus24Bit_MergeLayer_Register_Control_OR			= %11
-kBus24Bit_MergeLayer_Register_Control_Dither		= %100
-kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %1000
-kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %10000
-; For a connected merged layer to be visible the merge layer hardware needs to be visible as well as the kBus24Bit_MergeLayer_Register_Control_Visible_X bit(s)
-kBus24Bit_MergeLayer_Register_Control_Visible_0		= %100000
-kBus24Bit_MergeLayer_Register_Control_Visible_1		= %1000000
+; Control any dither
+kBus24Bit_MergeLayer_Register_Control_Dither		= %00000100
 kBus24Bit_MergeLayer_Register_Control_DitherPhase	= %10000000
+; Either option changes the Control_Combine output
+kBus24Bit_MergeLayer_Register_Control_ForceOut_0	= %00001000
+kBus24Bit_MergeLayer_Register_Control_ForceOut_1	= %00010000
+; For a connected merged layer to be visible the merge layer hardware needs to be visible as well as the kBus24Bit_MergeLayer_Register_Control_Visible_X bit(s)
+; These bits get routed to the target display layer enable control
+kBus24Bit_MergeLayer_Register_Control_Visible_0		= %00100000
+kBus24Bit_MergeLayer_Register_Control_Visible_1		= %01000000
 
 ; Good default to use
 kBus24Bit_MergeLayer_Register_Control_Default = kBus24Bit_MergeLayer_Register_Control_Visible_0 | kBus24Bit_MergeLayer_Register_Control_Visible_1

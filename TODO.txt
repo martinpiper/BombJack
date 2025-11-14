@@ -1113,3 +1113,12 @@
 
 
 * Backplane: Perhaps needs bus drivers
+
+
+
+
+* Chars: Could use 1MB https://www.mouser.sg/ProductDetail/ISSI/IS62C10248AL-55TLI?qs=X3Koi7Dgoq8ZcOQZeNRyCQ%3D%3D
+	Like that used in the Sprite4 layer... $17.83
+	Instead of the 8KB https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D at $6.96
+	Add a bank select register for writing and also use it for rendering.
+	Giving up to 128 banks of chars/screens
