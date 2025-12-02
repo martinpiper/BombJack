@@ -1122,3 +1122,4 @@
 	Instead of the 8KB https://www.mouser.sg/ProductDetail/Alliance-Memory/AS6C6264-55PCN?qs=sGAEpiMZZMt9mBA6nIyysDfDw0vDQxSwL3Jgh6owPVw%3D at $6.96
 	Add a bank select register for writing and also use it for rendering.
 	Giving up to 128 banks of chars/screens
+	* Characters layer has independent characters and screen extra address. Use larger memory.
