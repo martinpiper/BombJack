@@ -2127,7 +2127,7 @@ All layouts now use V3.1
 	Power:
 	https://www.mouser.sg/ProductDetail/163-179PH-EX
 	Plug? https://www.mouser.sg/ProductDetail/Kycon/KLDX-PA-0202-A-LT?qs=9%2Fra8%252BGZ9lYkOFeJAlqv2g%3D%3D
-	Plug wight angle with cable? https://www.mouser.sg/ProductDetail/Kobiconn/172-7445-E?qs=EIgIgHbwPd1ypjfossySSA%3D%3D
+	Plug right angle with cable? https://www.mouser.sg/ProductDetail/Kobiconn/172-7445-E?qs=EIgIgHbwPd1ypjfossySSA%3D%3D
 		Note datasheet: Operation Temperature: -10ºC¯ ~ + 80ºC
 	Fork spade crimp: https://www.mouser.sg/ProductDetail/TE-Connectivity/328281?qs=Zd7iEDjwU0oj8yLtEAzzGw%3D%3D
 	Userport:

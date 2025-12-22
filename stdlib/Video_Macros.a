@@ -19,6 +19,8 @@
 
 kBus24Bit_VideoLayer_EBBS			= $01
 kBus24Bit_VideoLayer_Control		= $9e00
+; Note: Bits 1 and 2 (%110) are for "Given the display has palette layer expansion", enablePaletteLayerExpansionFunctionality, backgroundPaletteLayerExpansion
+; Which uses xor logic in the output stage @TC-14
 kVideo_EnableDisplay_Use_BGColour			= $10	; Deliberately the same. An alias.
 kVideo_EnableDisplay_Use_BackgroundColour	= $10	; Deliberately the same. An alias.
 kVideo_EnableDisplay_Enable					= $20

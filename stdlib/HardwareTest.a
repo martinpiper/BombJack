@@ -202,29 +202,7 @@ HardwareTest_VideoInitDisplay
 }
 
 !zn
-HardwareTest_VideoPattern0
-	jsr HardwareTest_VideoInit
-
-	jsr Video_SetAddressPalette
-	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
-	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
-	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
-	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
-	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
-	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
-	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
-	+MBus24Bit_SendPaletteRGB 200 , 200 , 200
-	+MBus24Bit_SendPaletteRGB 150 , 150 , 150
-	+MBus24Bit_SendPaletteRGB 100 , 100 , 100
-	+MBus24Bit_SendPaletteRGB 50 , 50 , 50
-	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
-	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
-	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
-	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
-	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
-
-	; Chars
-	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
+HardwareTest_VideoPattern0_SendCharsMap
 	lda #0
 	tay
 	jsr Bus24Bit_WriteAForY
@@ -271,9 +249,9 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_Send8BitValueFromA
 	dex
 	bne .fl2
+	rts
 
-
-	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
+HardwareTest_VideoPattern0_SendCharsColourMap
 	lda #0
 	tay
 	ldx #2
@@ -292,19 +270,64 @@ HardwareTest_VideoPattern0
 	ldx #10
 	jsr Bus24Bit_WriteAForYThenX
 }
+	rts
+
+HardwareTest_VideoPattern0_SendCharsPlane0
+	+HardwareTest_SendBitplaneData 4 , 1
+	rts
+
+HardwareTest_VideoPattern0_SendCharsPlane1
+	+HardwareTest_SendBitplaneData 3 , 2
+	rts
+
+HardwareTest_VideoPattern0_SendCharsPlane2
+	+HardwareTest_SendBitplaneData 2 , 3
+	rts
+
+HardwareTest_VideoPattern0_SendCharsPlane3
+	+HardwareTest_SendBitplaneData 7 , 1
+	rts
+
+HardwareTest_VideoPattern0
+	jsr HardwareTest_VideoInit
+
+	jsr Video_SetAddressPalette
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 200 , 200 , 200
+	+MBus24Bit_SendPaletteRGB 150 , 150 , 150
+	+MBus24Bit_SendPaletteRGB 100 , 100 , 100
+	+MBus24Bit_SendPaletteRGB 50 , 50 , 50
+	+MBus24Bit_SendPaletteRGB 255 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 0
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
+	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
+
+	; Chars
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
+	jsr HardwareTest_VideoPattern0_SendCharsMap
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
+	jsr HardwareTest_VideoPattern0_SendCharsColourMap
 
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
-	+HardwareTest_SendBitplaneData 4 , 1
+	jsr HardwareTest_VideoPattern0_SendCharsPlane0
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_1
-	+HardwareTest_SendBitplaneData 3 , 2
+	jsr HardwareTest_VideoPattern0_SendCharsPlane1
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_2
-	+HardwareTest_SendBitplaneData 2 , 3
+	jsr HardwareTest_VideoPattern0_SendCharsPlane2
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3
-	+HardwareTest_SendBitplaneData 7 , 1
+	jsr HardwareTest_VideoPattern0_SendCharsPlane3
 
 	; Tiles
 	+MBus24Bit_SetAddress_AXY kBus24Bit_TileScreenMap_EBBS , kBus24Bit_TileScreenMap
