@@ -4,6 +4,7 @@
 !ifdef kBus24Bit_VideoLayer_VBlankUseNMI {
 .setVBlankNMI !by 0
 .isVBlankNMI !by 0
+Video_WaitVBlank_PreviousFramesPassed !by 0
 Video_WaitVBlank_FramesPassed !by 0
 Video_WaitVBlank
 	lda .setVBlankNMI
@@ -29,6 +30,7 @@ Video_WaitVBlank
 	pha
 	+MByteValueToAddress_A 1 , .isVBlankNMI
 	inc Video_WaitVBlank_FramesPassed
+	inc Video_WaitVBlank_PreviousFramesPassed
 	lda ZPProcessorPort
 	pha
 	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort

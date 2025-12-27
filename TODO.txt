@@ -1125,3 +1125,9 @@
 	Giving up to 128 banks of chars/screens
 	* Characters layer has independent characters and screen extra address. Use larger memory.
 	* Also like the Audio2 layer allow for offset into the 2KB bank slot
+
+
+
+* For UserPort20To32Bit1
+	Rotate the connectors for input and output
+	Also make the resistor larger
