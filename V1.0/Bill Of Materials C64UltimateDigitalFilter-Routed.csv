@@ -1,0 +1,4 @@
+﻿Category,Quantity,References,Value,Stock Code,Description,PCB Package,Placed
+Integrated Circuits,1,U1,74LS32,https://www.mouser.sg/ProductDetail/Texas-Instruments/SN74LS32DR?qs=SL3LIuy2dWwtfBSQ6o0JPg%3D%3D,Quad 2-input positive-OR gates,SOIC127P600X175-14N-CAP,Top Copper
+Miscellaneous,2,"J1,J2",TST-113-01-F-D,https://www.mouser.sg/ProductDetail/Samtec/TST-113-01-F-D?qs=rU5fayqh%252BE3q53WK6WjoLQ%3D%3D,"26 Position, Shrouded PCB Headers, 0.100&quot; pitch",TST-113-XX-Y-D,Top Copper
+Capacitors,1,One 100nF (0.1uF) capacitor for SMT ICs marked with extra SDC near pin 1,CL05B104KO5NNNC,https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D,Decoupling capacitors for each SDC component,All with suffix -CAP,Top Copper
