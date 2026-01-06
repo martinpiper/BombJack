@@ -1098,6 +1098,8 @@
 	>> The original Audio board uses the entire 0x8000-0x87ff block. Is actually address decodes using EA3/4/5 and uses 0x8000 to 0x802f for its registers
 		It ignores 0x8030 - 0x803f because the address decoder U7 does not have those lines connected. This could be used by the expansion address board
 	>> Audio2 is uncompressed, Audio3 is vcd compressed.
+	>> Audio3 scheduling the bit fetch shift operations could use a EPROM as microcode, this would reduce component count
+
 
 
 
