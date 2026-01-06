@@ -1132,3 +1132,8 @@
 * For UserPort20To32Bit1
 	Rotate the connectors for input and output
 	Also make the resistor larger
+
+
+
+
+* Process the BOM CSV, use the code URL to update the accurate part name and manufacturer
