@@ -1135,3 +1135,16 @@
 			> sample += delta
 			> checkLength()
 		applyVolume(sample)
+	> RateTickReached positive edge was causing the position to be incremented.
+		* Instead now, this can be used to set a flag indicating the whole "decompress the next sample" (now FetchSample) logic is active for the instruction schedule.
+			>> FetchSample
+		* The common position is then incremented when getNextBit needs data, see UpdateBitRead and SetBitsRead
+		* VoiceRateTick is the rate calculation, just before the FetchSample state is reset
+	* ScheduleEnd moved to the last slot schedule slot, apparent rate will change
+	* _Bit0CheckNumReadBits
+		>> _BufferEmpty
+
+
+
+* Audio3: Perhaps encodeDelta could use a different bit ordering to make decodeDelta() simpler to implement in logic
+	At the moment it maintains a numBits counter, instead interleave the bits.
