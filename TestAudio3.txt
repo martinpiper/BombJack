@@ -1,0 +1,71 @@
+d0
+
+.kAudio3Data_EBBS = $00000600
+.kAudio3_EBBS = $00000100
+.kAudio3_LeftChannel = $80300000
+
+.kAudio3Register_Bank		= $00000000
+.kAudio3Register_Control	= $00010000
+.kAudio3Register_Control_Enable = $01
+.kAudio3Register_Volume		= $00020000
+.kAudio3Register_Address24	= $00030000
+.kAudio3Register_Length24	= $00060000
+.kAudio3Register_Rate16		= $00090000
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Audio registers
+:emit Bank = 1
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
+:emit Active = 0
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control | $00
+:emit Volume = $ff
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Volume | $ff
+; Note the start address, to test the memory and bank addressing
+s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Address24
+b$e3,b$04,b$01
+s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Length24
+b$16,b$00,b$00
+
+:emit Some sample data
+; Note the start address, to test the memory and bank addressing
+s=kAudio3Data_EBBS | $04e30000
+<0,1,2,3,4,5,6,7,@$000000,>$10000,<TestAudio3Comp1.vcd
+;d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
+
+:emit Rate = $8000
+s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Rate16
+b$00,b$80
+
+
+:emit Active = 1
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control | $01
+
+d0
+
+; Wait for the audio clock AUDCLK to start after 250m
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+^-$01
+
+d0
+
