@@ -1138,11 +1138,15 @@
 	> RateTickReached positive edge was causing the position to be incremented.
 		* Instead now, this can be used to set a flag indicating the whole "decompress the next sample" (now FetchSample) logic is active for the instruction schedule.
 			>> FetchSample
-		* The common position is then incremented when getNextBit needs data, see UpdateBitRead and SetBitsRead
+		* The common position is then incremented when getNextBit needs data, see
+			>> UpdateBitRead
+			>> SetBitsRead
 		* VoiceRateTick is the rate calculation, just before the FetchSample state is reset
 	* ScheduleEnd moved to the last slot schedule slot, apparent rate will change
 	* _Bit0CheckNumReadBits
 		>> _BufferEmpty
+		>> _readOrShiftByte >> Using two 74194
+		>> thisOutputBit
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
 		0x80, 0x81, 0x81, 0x81, 0x81, 0x90, 0x90, 0x90, 0x90, 0x70, 0x70, 0x70, 0xff, 0x00, 0x00,
