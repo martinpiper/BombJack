@@ -1143,6 +1143,7 @@
 			>> _setBitsRead
 		* VoiceRateTick is the rate calculation, just before the FetchSample state is reset
 	* ScheduleEnd moved to the last slot schedule slot, apparent rate will change
+	* When FetchSample, then the fetch new sample logic becomes active
 	* _Bit0CheckNumReadBits
 		>> _BufferEmpty
 		>> _getNextBit >> Using two 74194
