@@ -1147,6 +1147,7 @@
 	* _Bit0CheckNumReadBits
 		>> _BufferEmpty
 		>> _getNextBit >> Using two 74194
+			>> _getNextBitAfter
 		>> thisOutputBit
 		>> _numBitsClear
 		>> _numBitsCountUp +ve edge
@@ -1155,6 +1156,7 @@
 		>> _numBitsLoopClear
 		>> _numBitsLoopCountUp and output to _numBitsLoopReached
 		>> _calculateNewSample and _calculateNewSample2
+		>> _clearCalculateSampleInternals
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
 		0x80, 0x81, 0x81, 0x81, 0x81, 0x90, 0x90, 0x90, 0x90, 0x70, 0x70, 0x70, 0xff, 0x00, 0x00,
