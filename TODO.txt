@@ -1153,7 +1153,7 @@
 		>> numBits[0..2]
 		>> _numBitsLoop[0...2]
 		>> _numBitsLoopClear
-		>> _numBitsLoopCountUp
+		>> _numBitsLoopCountUp and output to _numBitsLoopReached
 		>> _calculateNewSample and _calculateNewSample2
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
