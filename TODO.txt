@@ -1154,6 +1154,7 @@
 		>> _numBitsLoop[0...2]
 		>> _numBitsLoopClear
 		>> _numBitsLoopCountUp
+		>> _calculateNewSample and _calculateNewSample2
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
 		0x80, 0x81, 0x81, 0x81, 0x81, 0x90, 0x90, 0x90, 0x90, 0x70, 0x70, 0x70, 0xff, 0x00, 0x00,
