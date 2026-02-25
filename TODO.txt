@@ -1145,7 +1145,7 @@
 	* ScheduleEnd moved to the last slot schedule slot, apparent rate will change
 	* _Bit0CheckNumReadBits
 		>> _BufferEmpty
-		>> _readOrShiftByte >> Using two 74194
+		>> _getNextBit >> Using two 74194
 		>> thisOutputBit
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
