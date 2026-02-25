@@ -1139,8 +1139,8 @@
 		* Instead now, this can be used to set a flag indicating the whole "decompress the next sample" (now FetchSample) logic is active for the instruction schedule.
 			>> FetchSample
 		* The common position is then incremented when getNextBit needs data, see
-			>> UpdateBitRead
-			>> SetBitsRead
+			>> _updateBitsRead
+			>> _setBitsRead
 		* VoiceRateTick is the rate calculation, just before the FetchSample state is reset
 	* ScheduleEnd moved to the last slot schedule slot, apparent rate will change
 	* _Bit0CheckNumReadBits
