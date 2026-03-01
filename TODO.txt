@@ -1158,6 +1158,9 @@
 		>> _calculateNewSample and _calculateNewSample2
 		>> _clearCalculateSampleInternals
 		>> When calculating the delta: _calcDelta[0..
+			_thereAreDeltaBits
+			numBitsIsNotZero
+			_finishedDeltaCalculation
 	* Delta delta
 	* Test data from: VideoHardware/DeltaEncode/test.py
 		0x80, 0x81, 0x81, 0x81, 0x81, 0x90, 0x90, 0x90, 0x90, 0x70, 0x70, 0x70, 0xff, 0x00, 0x00,
