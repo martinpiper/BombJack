@@ -1207,6 +1207,29 @@
 		0 0x0
 		totalBits 183  bytes 22.875
 		ratio 65.35714285714286
+		The bits read, in read order, left to right
+			1  0  1  0  1  1  1  0
+			0  0  0  1  1  1  1  0
+			1  1  1  0  0  0  0  0 
+			0  1  0  0  0  0  0  1
+			1  1  0  0  0  0  0  0
+			0  0  1  0  0  0  1  1
+			1  1  0  0  0  0  0  0
+			0  0  0  1  1  1  1  1
+			1  1  1  1  1  0  0  0
+			0  0  0  0  0  1  1  1
+			1  1  1  1  1  0  0  0
+			0  0  0  0  0  0  1  0
+			1  1  1  1  1  1  1  1
+			0  0  0  0  0  0  0  1
+			0  0  0  0  0  0  0  1
+			0  0  0  0  0  0  1  0
+			0  0  0  0  0  1  0  0
+			0  0  0  1  0  0  0  0
+			0  1  0  0  0  0  0  0
+			1  1  0  0  0  0  0  0
+			0  0  0  0  0  0  1  1
+			0  0  0  0  0  1  
 	>> C:\\Temp\\testdata.vcd copied to TestAudio4Comp1.vcd test data input for TestAudio3.txt
 	> 0.000751164s
 	
