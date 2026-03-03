@@ -1240,4 +1240,5 @@
 	> TestAudio3Music1.txt and AudioPlay3.bat confirms the music data decode works
 	>> Now need to test higher clock speed and figure out the maximum sample rate.
 		Then update the emulation to match that rate
-		
+	>> Also remove the logic for signed to unsigned conversion and include that in an updated output stage instead.
+	
