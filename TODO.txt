@@ -1235,5 +1235,5 @@
 	>> I think the hardware is working, but the delta value 143 0x8f (for the step 0x70, 0xff) is encoded to be too large...
 	> The compression is generating a long unsigned delta of 8 bits for the sequence 0x70, 0xff
 		>> Fixed the compression to avoid unsigned 8 bits delta values, this never ahppens in the sample data used so far, but does happen in the contrived test data.
-
-		
+	>> Finally connect LOADOUTPUT
+	> Output from output\DebugAudio3Output.txt matches python unit test expectedDecompressedData
