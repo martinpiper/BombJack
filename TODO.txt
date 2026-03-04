@@ -1256,3 +1256,11 @@
 			= 26.8 us = 37313.432835821 Hz
 			Rate = 21954.55999999994 = 0x55C2
 			Tested with C:\Work\BombJack\TestAudio3Music1.txt and C:\Work\BombJack\AudioPlay3.bat
+
+
+
+
+* Need to process the CSV to replace component names with those from the mouser links
+* Also remove unplaced rows
+* Also create the decoupling cap counts
+* And remove things like the oscillators/eprom etc
