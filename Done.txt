@@ -5817,4 +5817,5 @@ All layouts now use V3.1
 				In the design... 2*8*23 steps = 384 steps. The difference is due to the half 8 step clock
 		25000 Hz to rate conversion = 32768*(25000/28089.887640449)
 			= 29163 = 0x71EB
+	> Currently fails at 38MHz in simulation, indicating there is plenty of headroom.
 	>> Adjust clock reset at end of schedule to round it out
