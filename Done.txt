@@ -5819,3 +5819,7 @@ All layouts now use V3.1
 			= 29163 = 0x71EB
 	> Currently fails at 38MHz in simulation, indicating there is plenty of headroom.
 	>> Adjust clock reset at end of schedule to round it out
+		https://www.unitjuggler.com/convert-frequency-from-%C2%B5s(p)-to-Hz.html
+		Before: -ve edge _clearCalculateSampleInternals = 35.6 us
+		> Added _endClkSchedule on U99 Y5 to reset the clk sequence earlier
+			= 26.8 us = 37313.432835821 Hz
