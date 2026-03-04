@@ -33,9 +33,9 @@ s=kAudio3Data_EBBS | $00000000
 <0,1,2,3,4,5,6,7,@$000000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
 ;d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
 
-:emit Rate = $8000
+:emit Rate = $55c2
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Rate16
-b$00,b$80
+b$c2,b$55
 
 
 :emit Active = 1

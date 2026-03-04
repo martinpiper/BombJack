@@ -1242,3 +1242,17 @@
 		Then update the emulation to match that rate
 	>> Done: Also remove the logic for signed to unsigned conversion and include that in an updated output stage instead.
 		> GenerateVolumeLookup\SignedSampleVolume.bin
+	> Time _clearCalculateSampleInternals
+		> 20MHz = Gives 35.6 us = 28089.887640449 Hz
+			= 356 measured steps
+				In the design... 2*8*23 steps = 384 steps. The difference is due to the half 8 step clock
+		25000 Hz to rate conversion = 32768*(25000/28089.887640449)
+			= 29163 = 0x71EB
+	> Currently fails at 38MHz in simulation, indicating there is plenty of headroom.
+	>> Adjust clock reset at end of schedule to round it out
+		https://www.unitjuggler.com/convert-frequency-from-%C2%B5s(p)-to-Hz.html
+		Before: -ve edge _clearCalculateSampleInternals = 35.6 us
+		> Added _endClkSchedule on U99 Y5 to reset the clk sequence earlier
+			= 26.8 us = 37313.432835821 Hz
+			Rate = 21954.55999999994 = 0x55C2
+			Tested with C:\Work\BombJack\TestAudio3Music1.txt and C:\Work\BombJack\AudioPlay3.bat

@@ -5811,15 +5811,6 @@ All layouts now use V3.1
 		It ignores 0x8030 - 0x803f because the address decoder U7 does not have those lines connected. This could be used by the expansion address board
 	>> Audio2 is uncompressed, Audio3 is vcd compressed.
 	>>> Done, tested. https://www.youtube.com/watch?v=16IcTzvIYJE
-	> Time _clearCalculateSampleInternals
-		> 20MHz = Gives 35.6 us = 28089.887640449 Hz
-			= 356 measured steps
-				In the design... 2*8*23 steps = 384 steps. The difference is due to the half 8 step clock
-		25000 Hz to rate conversion = 32768*(25000/28089.887640449)
-			= 29163 = 0x71EB
-	> Currently fails at 38MHz in simulation, indicating there is plenty of headroom.
-	>> Adjust clock reset at end of schedule to round it out
-		https://www.unitjuggler.com/convert-frequency-from-%C2%B5s(p)-to-Hz.html
-		Before: -ve edge _clearCalculateSampleInternals = 35.6 us
-		> Added _endClkSchedule on U99 Y5 to reset the clk sequence earlier
-			= 26.8 us = 37313.432835821 Hz
+
+
+			
