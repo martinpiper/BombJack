@@ -63,6 +63,10 @@
 			Placed
 		Uncheck box: Full CSV
 		Press CSV button ("CSV" document icon)
+		
+		Use: "C:\Work\BombJack\ProcessBOM.py" <file path for BOM csv file)
+		
+		>>> Old manual process:
 		Text Import window
 			Click top left grid, to select all cells
 			Drop down: Column type: Text
