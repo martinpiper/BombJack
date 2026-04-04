@@ -1126,3 +1126,7 @@
 
 
 
+* Audio3: Debugging sheet 3, bottom left, _VoiceIsActive to AUDOE and _EBSActive
+	Does not need the extra AND?
+	* Going to need a small minial prg that will send known output data, which can be read.
+		Probably start with 0 delta, then very small increments around the middle...
