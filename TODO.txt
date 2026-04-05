@@ -1133,6 +1133,7 @@
 	>> Using a rate of 0x8000, timing of _clearCalculateSampleInternals (A6) is 26.8 us = 37313.432835821 Hz
 		> Same as RateTickReached , FetchSample, _FetchSample
 	* Use the low clock to enable the output of the 74138 schedulers, this would guarantee non-overlapped clocks... Then remove the wider sub-timing spacing.
+		>> U99 added AUDCLKREAL to E2 for CLK0..3 and _endClkSchedule
 	>> TestAudio3Comp1.vcd comes from DeltaEncode test.py : MyTestCase expectedCompressedData
 		> LOADOUTPUT timing is constant at 13.4 us = 74626.865671642 Hz
 	>> C:\work\BDD6502\TODO.txt uses ffmpeg sample rate of 12500 Hz (not 25000 Hz) 
