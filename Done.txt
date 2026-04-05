@@ -5950,5 +5950,6 @@ All layouts now use V3.1
 		Before: -ve edge _clearCalculateSampleInternals = 35.6 us
 		> Added _endClkSchedule on U99 Y5 to reset the clk sequence earlier
 			= 26.8 us = 37313.432835821 Hz
-			Rate = 21954.55999999994 = 0x55C2
+			For 25000 Hz sample rate, then rate = 21954.55999999994 = 0x55C2
+			For 12500 Hz sample rate, then rate = 10977.40733792512 = 0x2AE1
 			Tested with C:\Work\BombJack\TestAudio3Music1.txt and C:\Work\BombJack\AudioPlay3.bat

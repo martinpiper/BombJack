@@ -1128,5 +1128,27 @@
 
 * Audio3: Debugging sheet 3, bottom left, _VoiceIsActive to AUDOE and _EBSActive
 	Does not need the extra AND?
-	* Going to need a small minial prg that will send known output data, which can be read.
+	* Going to need a small minimal prg that will send known output data, which can be read.
 		Probably start with 0 delta, then very small increments around the middle...
+	>> Using a rate of 0x8000, timing of _clearCalculateSampleInternals (A6) is 26.8 us = 37313.432835821 Hz
+		> Same as RateTickReached , FetchSample, _FetchSample
+	* Use the low clock to enable the output of the 74138 schedulers, this would guarantee non-overlapped clocks... Then remove the wider sub-timing spacing.
+	>> TestAudio3Comp1.vcd comes from DeltaEncode test.py : MyTestCase expectedCompressedData
+		> LOADOUTPUT timing is constant at 13.4 us = 74626.865671642 Hz
+	>> C:\work\BDD6502\TODO.txt uses ffmpeg sample rate of 12500 Hz (not 25000 Hz) 
+		Verified with: %USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 12500 C:\Temp\aburner_left.bin
+	* Time between _loadSampleOut / LOADOUTPUT and _calculateNewSample2 ?
+		>> 1.52 us
+	>> ..\acme.exe -v4 --lib ../ --lib ../../ --lib ../../../ --lib asm/ --msvc asm/main14.a && ..\bin\LZMPi.exe -c64mr bin\main.prg bin\main.cmp.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x bin\main.cmp.prg
+	>> Minimal sample test data
+		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.5 250 10 16
+		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
+		%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 1500 c:\temp\t.bin
+		c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200
+		c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
+		cd /d c:\work\BDD6502
+		..\C64\acme.exe -v3 --lib ../C64/ --lib ../ -o test.prg --labeldump test.lbl -f cbm features/TestAudio3Hardware.a && c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
+		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c C:\Temp\aburner_left.bin 5 c:\temp\t.vcd
+	>> Setting length $2000/$4000 seems to result in nothing being played, but $10000 is OK. Seems like the comparator is bad?
+	>> Reducing the number of encoding bits also seems to improve the playback...?!
+	

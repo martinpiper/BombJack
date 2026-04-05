@@ -29,13 +29,26 @@ s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Length24
 b$80,b$a7,b$0d
 
 :emit Some sample data
-s=kAudio3Data_EBBS | $00000000
+s=kAudio3Data_EBBS
 <0,1,2,3,4,5,6,7,@$000000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
-;d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
+s=kAudio3Data_EBBS
+<0,1,2,3,4,5,6,7,@$010000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $02
+s=kAudio3Data_EBBS
+<0,1,2,3,4,5,6,7,@$020000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $03
+s=kAudio3Data_EBBS
+<0,1,2,3,4,5,6,7,@$030000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $04
+s=kAudio3Data_EBBS
+<0,1,2,3,4,5,6,7,@$040000,>$10000,<C:\work\c64\VideoHardware\assets\Demo14\Audio\aburner_left.vcd
+; About 43 seconds worth of data
 
-:emit Rate = $55c2
+
+:emit Rate = $2AE1
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Rate16
-b$c2,b$55
+b$e1,b$2a
 
 
 :emit Active = 1
