@@ -1150,7 +1150,7 @@
 		cd /d c:\work\BDD6502
 		..\C64\acme.exe -v3 --lib ../C64/ --lib ../ -o test.prg --labeldump test.lbl -f cbm features/TestAudio3Hardware.a && c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c C:\Temp\aburner_left.bin 5 c:\temp\t.vcd
-	>> Setting length $2000/$4000 seems to result in nothing being played, but $10000 is OK. Seems like the comparator is bad?
+	>> Done: Setting length $2000/$4000 seems to result in nothing being played, but $10000 is OK. Seems like the comparator is bad?
 		Added extra clock and state guarding to avoid the comparison triggering too early
 	>> Reducing the number of encoding bits also seems to improve the playback...?!
 	
