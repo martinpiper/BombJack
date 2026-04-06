@@ -1135,7 +1135,7 @@
 	* Use the low clock to enable the output of the 74138 schedulers, this would guarantee non-overlapped clocks... Then remove the wider sub-timing spacing.
 		>> U99 added AUDCLKREAL to E2 for CLK0..3 and _endClkSchedule
 	>> TestAudio3Comp1.vcd comes from DeltaEncode test.py : MyTestCase expectedCompressedData
-		> LOADOUTPUT timing is constant at 13.4 us = 74626.865671642 Hz
+		> LOADOUTPUT (A2) timing is constant at 13.4 us = 74626.865671642 Hz
 	>> C:\work\BDD6502\TODO.txt uses ffmpeg sample rate of 12500 Hz (not 25000 Hz) 
 		Verified with: %USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 12500 C:\Temp\aburner_left.bin
 	* Time between _loadSampleOut / LOADOUTPUT and _calculateNewSample2 ?
@@ -1153,4 +1153,6 @@
 	>> Done: Setting length $2000/$4000 seems to result in nothing being played, but $10000 is OK. Seems like the comparator is bad?
 		Added extra clock and state guarding to avoid the comparison triggering too early
 	>> Reducing the number of encoding bits also seems to improve the playback...?!
-	
+	>> _endClkSchedule and ScheduleEnd have been rounded off with AUDCLKREAL
+		No timing adjustment needed, in simulation
+
