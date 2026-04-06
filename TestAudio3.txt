@@ -27,7 +27,7 @@ d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Volume | $ff
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Address24
 b$e3,b$04,b$01
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Length24
-b$16,b$00,b$00
+b$18,b$00,b$00
 
 :emit Some sample data
 ; Note the start address, to test the memory and bank addressing
