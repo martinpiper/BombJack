@@ -1155,4 +1155,4 @@
 	>> Reducing the number of encoding bits also seems to improve the playback...?!
 	>> _endClkSchedule and ScheduleEnd have been rounded off with AUDCLKREAL
 		No timing adjustment needed, in simulation
-
+	* Spurious _calcDelta5 signals can be seen in the logic analyser
