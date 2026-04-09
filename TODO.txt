@@ -1156,3 +1156,5 @@
 	>> _endClkSchedule and ScheduleEnd have been rounded off with AUDCLKREAL
 		No timing adjustment needed, in simulation
 	* Spurious _calcDelta5 signals can be seen in the logic analyser
+		Instead consider some state latches...
+
