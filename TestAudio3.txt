@@ -20,7 +20,7 @@ d0
 :emit Bank = 1
 d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
 :emit Active = 0
-d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control | $00
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control
 :emit Volume = $ff
 d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Volume | $ff
 ; Note the start address, to test the memory and bank addressing
@@ -41,7 +41,7 @@ b$00,b$80
 
 
 :emit Active = 1
-d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control | $01
+d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control | kAudio3Register_Control_Enable
 
 d0
 
