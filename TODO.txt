@@ -1158,3 +1158,10 @@
 	* Done: Spurious _calcDelta5 signals can be seen in the logic analyser
 		Done: Instead consider some state latches...
 
+
+
+* APU: Real hardware: This fails, it always chooses reset even when reg2 is 0: +MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
+	Emulation works fine
+	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
+		Might be reading from the wrong address?
+	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
