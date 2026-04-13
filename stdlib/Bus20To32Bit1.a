@@ -13,8 +13,8 @@ Bus20To32Bit1_Init
 	rts
 
 Bus20To32Bit1_ShortReset
-	jsr Bus20To32Bit1_WriteMode
 	jsr Bus20To32Bit1_SetLatch7
+	jsr Bus20To32Bit1_WriteMode
 	lda #0
 	+MBus24Bit_Send8BitValueFromA
 	; Set the reset done bit
