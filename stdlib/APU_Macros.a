@@ -234,6 +234,8 @@ kAPU_InstructionSize	= 4
 	+MLittleEndian16Bit .xpos
 	!by .ypos
 }
+MAPU_EmitWait_offset_xpos = 0
+MAPU_EmitWait_offset_ypos = 2
 
 
 kMAPUEmitChangePaletteIndexHSyncAdjust = 32
