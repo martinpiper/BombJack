@@ -335,6 +335,10 @@ Video_SetAddressMergeLayer
 
 ; Usually call this immediately after using Video_WaitVBlank
 Video_StartRasterTimers
+!ifdef kBus20To32Bit1_latch7_ResetDone {
+	; Note: Using the 32 bit user port interface, this function does affect the selected latch due to timer control writes, so use "jsr Bus20To32Bit1_Init" to before this.
+	jsr Bus20To32Bit1_Init
+}
 	; Start two timers, which should count raster position
 	lda #0
 	sta CIA1TimerAControl

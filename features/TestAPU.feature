@@ -39,7 +39,7 @@ Feature: Tests APU design
     When automation find window from pattern ".*APU.*Proteus.*"
     When automation focus window
     When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
+    When automation click current menu item "Run Simulation"
     Then automation wait for window close
 
 
