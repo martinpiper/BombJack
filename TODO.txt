@@ -1142,11 +1142,14 @@
 		>> 1.52 us
 	>> ..\acme.exe -v4 --lib ../ --lib ../../ --lib ../../../ --lib asm/ --msvc asm/main14.a && ..\bin\LZMPi.exe -c64mr bin\main.prg bin\main.cmp.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x bin\main.cmp.prg
 	>> Minimal sample test data
-		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.5 250 10 16
+		; A tone with some crackles
+		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.45 256 1000 16
+		; Silence, no crackles
+		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.0 256 1000 16
+		; Some phasing wrong sound at the start, then mostly silence
+		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.02 256 1000 16
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
 		%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 1500 c:\temp\t.bin
-		c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200
-		c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
 		cd /d c:\work\BDD6502
 		..\C64\acme.exe -v3 --lib ../C64/ --lib ../ -o test.prg --labeldump test.lbl -f cbm features/TestAudio3Hardware.a && c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c C:\Temp\aburner_left.bin 5 c:\temp\t.vcd
@@ -1165,3 +1168,8 @@
 	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
 		Might be reading from the wrong address?
 	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
+
+
+
+
+* Latch the result of the demux for stability
