@@ -1148,6 +1148,7 @@
 		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.0 256 1000 16
 		; Some phasing wrong sound at the start, then mostly silence
 		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.02 256 1000 16
+		
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
 		%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 1500 c:\temp\t.bin
 		cd /d c:\work\BDD6502
@@ -1160,6 +1161,9 @@
 		No timing adjustment needed, in simulation
 	* Done: Spurious _calcDelta5 signals can be seen in the logic analyser
 		Done: Instead consider some state latches...
+	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
+		Remember to start the capture, then fire fire to continue the audio start
+
 
 
 
