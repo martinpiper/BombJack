@@ -1163,6 +1163,7 @@
 		Done: Instead consider some state latches...
 	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
 		Remember to start the capture, then fire fire to continue the audio start
+	>> Maybe CLK0 -ve edge can be used to enable the demuxes, until _endClkSchedule is reached. A latch and reset.
 
 
 
