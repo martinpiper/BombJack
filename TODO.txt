@@ -1163,7 +1163,8 @@
 		"C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 204927.png"
 		Done: Instead consider some state latches...
 		> Added _EnableCalcStates and associated logic to only enable the voice calc states when they are not changing
-		>> Shows occaisional CLK0 double trigger: Screenshot 2026-05-16 210737.png
+		>> Done: Shows occasional CLK0 double trigger: Screenshot 2026-05-16 210737.png
+			> Removed by adding extra loadSampleOut filter
 	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
 		Remember to start the capture, then fire fire to continue the audio start
 		>>> "C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 194636.png"
