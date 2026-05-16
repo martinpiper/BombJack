@@ -1163,7 +1163,17 @@
 		Done: Instead consider some state latches...
 	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
 		Remember to start the capture, then fire fire to continue the audio start
+		>>> "C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 194636.png"
+		>>> "C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 194235.png"
+		The issue does not always happen at the same time. Many delta bytes, many of them 0, have been processed at this time.
+	> Using: c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 17 5 4000 32
+		Seems somewhat fine in the capture
+	> Using: c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 32 4 4000 32
+		Also seems somewhat fine
 	>> Maybe CLK0 -ve edge can be used to enable the demuxes, until _endClkSchedule is reached. A latch and reset.
+	>> Done: _getNextBit isn't on a debug header...
+		** thisOutputBit is on a debug header however
+
 
 
 
@@ -1173,7 +1183,6 @@
 	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
 		Might be reading from the wrong address?
 	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
-
 
 
 
