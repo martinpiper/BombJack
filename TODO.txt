@@ -1160,7 +1160,9 @@
 	>> _endClkSchedule and ScheduleEnd have been rounded off with AUDCLKREAL
 		No timing adjustment needed, in simulation
 	* Done: Spurious _calcDelta5 signals can be seen in the logic analyser, FULLSCHEDULE2
+		"C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 204927.png"
 		Done: Instead consider some state latches...
+		>> Shows occaisional CLK0 double trigger: Screenshot 2026-05-16 210737.png
 	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
 		Remember to start the capture, then fire fire to continue the audio start
 		>>> "C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 194636.png"
