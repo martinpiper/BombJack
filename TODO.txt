@@ -1162,6 +1162,7 @@
 	* Done: Spurious _calcDelta5 signals can be seen in the logic analyser, FULLSCHEDULE2
 		"C:\Users\marti\Pictures\Screenshots\Screenshot 2026-05-16 204927.png"
 		Done: Instead consider some state latches...
+		> Added _EnableCalcStates and associated logic to only enable the voice calc states when they are not changing
 		>> Shows occaisional CLK0 double trigger: Screenshot 2026-05-16 210737.png
 	>> Show the decode is just not entirely reliable. "C:\Temp\Audio3 2.LPF"
 		Remember to start the capture, then fire fire to continue the audio start
