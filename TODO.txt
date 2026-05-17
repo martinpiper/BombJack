@@ -1177,7 +1177,7 @@
 	>> Maybe CLK0 -ve edge can be used to enable the demuxes, until _endClkSchedule is reached. A latch and reset.
 	>> Done: _getNextBit isn't on a debug header...
 		** thisOutputBit is on a debug header however
-	* Clock guarding for: VoiceRateTick
+	* Clock guarding for: VoiceRateTick and _loadSampleOut
 	>>> Going to need a new board
 
 
