@@ -30,7 +30,6 @@ Feature: Tests Audio3 design
     Then expect the next line to contain "d$00000000"
     Then expect the next line to contain "d$00000080"
     Then expect the next line to contain "d$00000080"
-    Then expect the next line to contain "d$00000080"
     Then expect the next line to contain "d$00000081"
     Then expect the next line to contain "d$00000081"
     Then expect the next line to contain "d$00000081"
