@@ -1179,6 +1179,18 @@
 		** thisOutputBit is on a debug header however
 	* Clock guarding for: VoiceRateTick and _loadSampleOut
 	>>> Going to need a new board
+	>> V13.1 still crackles... sigh...
+	>> V13.1 "C:\Temp\Audio3-13.1-1.LPF" shows data gen with "32 4 4000 32" the initial output signed data is good at J7 accumulatedDelta0
+		But data sampled later, mid stream, is drifting out of spec?! "C:\Temp\Audio3-13.1-2.LPF"
+	> Added .playIt and reset voice on fire button, with debug screen colours
+	>> "C:\Temp\Audio3-13.1-3.LPF", which was captured by pressing fire and almost immediately triggering, seems to initial signed data being correct, but then getting corrupted at -46.15ms... In the pre-fill...
+		>>> And repeated restart shows the sound output is repeatable...! So the problem is in the digital side...
+			The initial tone, for about a second, is good.
+	>>> Using reduced encoding bits "C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 3 c:\temp\t.vcd" causes the good tone to go on for longer before output crackle is heard...
+		> Is the memory read beyond a certain point returning wrong data?
+		> Is it because a certain byte boundary coincides with a certain memory alignment?
+		>> Perhaps try a different start memory address and see if the alignment alters the timing of this repeatale event?
+	
 
 
 
