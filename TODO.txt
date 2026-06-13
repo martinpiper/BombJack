@@ -1190,6 +1190,7 @@
 		> Is the memory read beyond a certain point returning wrong data?
 		> Is it because a certain byte boundary coincides with a certain memory alignment?
 		>> Perhaps try a different start memory address and see if the alignment alters the timing of this repeatale event?
+		>> Or try some contrived data, see if a known bit pattern/address can generate a repeatable corrupt value.
 	
 
 
