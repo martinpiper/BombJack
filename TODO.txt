@@ -1191,6 +1191,14 @@
 		> Is it because a certain byte boundary coincides with a certain memory alignment?
 		>> Perhaps try a different start memory address and see if the alignment alters the timing of this repeatale event?
 		>> Or try some contrived data, see if a known bit pattern/address can generate a repeatable corrupt value.
+			> Using "!fill $8000 , $01" produces a consistent tone, with no drift. accumlatedDelta = 0 40 80 c0
+			> "!fill $8000 , $11" no drift accumlatedDelta = 0 4 8 c 10 14 ... counting up in fours
+			> This also works as expected, no drift, even mid-stream
+				!for .i , $40 {
+				!fill $100 , $01
+				!fill $100 , $11
+				}
+
 	
 
 
