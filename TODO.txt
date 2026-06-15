@@ -1150,7 +1150,9 @@
 		c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 0.02 256 1000 16
 		
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
+		C:\Work\C64\VideoHardware\DeltaEncode\main.py -d c:\temp\t.vcd C:\Temp\t.decomp
 		%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 1500 c:\temp\t.bin
+		%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 1500 C:\Temp\t.decomp
 		cd /d c:\work\BDD6502
 		..\C64\acme.exe -v3 --lib ../C64/ --lib ../ -o test.prg --labeldump test.lbl -f cbm features/TestAudio3Hardware.a && c:\work\c64\bin\LZMPi.exe -c64mbu c:\work\BDD6502\test.prg c:\temp\t.prg $200 && c:\Users\marti\Desktop\EF3\easytransfer-win32-1.2.0\easytransfer\ef3xfer.exe -x c:\temp\t.prg
 		C:\Work\C64\VideoHardware\DeltaEncode\main.py -c C:\Temp\aburner_left.bin 5 c:\temp\t.vcd
@@ -1198,6 +1200,14 @@
 				!fill $100 , $01
 				!fill $100 , $11
 				}
+	>>> Using this, which inserts a zero change just after a change if the last bit is used, this attempts to test a theory that the last bit is a buyte has timing issues...:
+            # Attempt to correct any hardware bug?
+            while len(outputBits) & 7 >= 7:
+                outputBits.append(1)
+		This seems to "fix" the issue with the output of datagen "32 4 4000 32". There is also no drift.
+		But real music data encoded with this tweak still crackles, even at bit size of 4
+		> I think it shifts the problem only for that data
+
 
 	
 
