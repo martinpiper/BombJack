@@ -1207,6 +1207,10 @@
 		This seems to "fix" the issue with the output of datagen "32 4 4000 32". There is also no drift.
 		But real music data encoded with this tweak still crackles, even at bit size of 4
 		> I think it shifts the problem only for that data
+		* The generated data has a specific repeating bit pattern. The alignment "fix" above works with that pattern but not general "real music" data...
+			... So, try reducing the bit pattern length to 1 and finding a "fix" for that, then see if it applies to the general data...
+			... Also for the general data with 1 bit the "fix" might need adjustment.
+			
 
 
 	
