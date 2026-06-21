@@ -1210,7 +1210,21 @@
 		* The generated data has a specific repeating bit pattern. The alignment "fix" above works with that pattern but not general "real music" data...
 			... So, try reducing the bit pattern length to 1 and finding a "fix" for that, then see if it applies to the general data...
 			... Also for the general data with 1 bit the "fix" might need adjustment.
+		>> In the previous data, there is a clamp to $7f ($ff) output, which introduces an odd sized sample. Try using this which has no clamp:
+			c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 32 3 4000 32
+			C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
+			>>> Hardware plays no problem, no drift. Hmm. Interesting.
+		>> Back to using:
+			c:\Work\C64\VideoHardware\DataGen\main.py c:\temp\t.bin 32 4 4000 32
+			C:\Work\C64\VideoHardware\DeltaEncode\main.py -c c:\temp\t.bin 7 c:\temp\t.vcd
+			>> During drift capture, noticed a wrong accumulatedDelta value of 4Ah ($4a), so set this as a trigger Menu bar->Setup->Trigger->Value of 4Ah for duration greater than 1.000E-6 seconds
+				>> Screenshot 2026-06-21 125254.png
+				"C:\Temp\Audio3-13.1-4.LPF"
+				>> Note how the start of the capture T-600us before the trigger, the data is fine.
+					The first wrong value is 9Bh at T-26.95ms: Screenshot 2026-06-21 125720.png
+					>>> The corrupt captured data, where it starts to go wrong, seems to be consistent and at the same time before the trigger
 			
+				
 
 
 	
