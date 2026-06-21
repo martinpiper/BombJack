@@ -1223,7 +1223,13 @@
 				>> Note how the start of the capture T-600us before the trigger, the data is fine.
 					The first wrong value is 9Bh at T-26.95ms: Screenshot 2026-06-21 125720.png
 					>>> The corrupt captured data, where it starts to go wrong, seems to be consistent and at the same time before the trigger
-			
+			>>> This alignment test also "fixes" the problem:
+				# Attempt to correct any hardware bug - 2?
+				while (((len(outputBits) & 7) + len(forOutput)) & 0x08) != (((len(outputBits) & 7) + len(forOutput) + len(theBits)) & 0x08):
+					outputBits.append(1)
+				>> This in effect removes the situation where the alignment of num bits and value bits cross a byte boundary
+					It does not completely work for music data however
+
 				
 
 
