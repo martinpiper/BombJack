@@ -1230,7 +1230,20 @@
 				>> This in effect removes the situation where the alignment of num bits and value bits cross a byte boundary
 					It does not completely work for music data however
 			** Try to to insert zero change samples one at a time to try to get repeatable corruption to happen sooner, as close to after sample start as possible.
-				Then add debig signals for the bit shifter and its clock
+				Then add debUg signals for the bit shifter and its clock
+				_clearCalculateSampleInternals	J8			10
+				calcDeltaState					J8			7
+				_getNextBit						DEBUGAUD3	7
+				_duringCalculatingNumBits		DEBUGAUD3	8
+				thisOutputBit					J2			10
+				AUDA0..7						DEBUGAUD2	8 to 1 (yes backwards)
+				Not in debug headers...
+					_BufferEmpty
+					afterByteFetchIncrement
+					_calculatingNumBits
+			* These are lacking clock stablisation...
+				_BufferEmpty
+				_getDeltaBit
 
 				
 
