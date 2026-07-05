@@ -1244,6 +1244,8 @@
 			* These are lacking clock stablisation...
 				_BufferEmpty
 				_getDeltaBit
+	>> Perhaps use this EPROM: https://www.mouser.sg/ProductDetail/Microchip-Technology/AT27C4096-90PU?qs=lURXKZrvvXfRH%2FhA7K6pZw%3D%3D
+		A0-A17 and O0-O15
 
 				
 
