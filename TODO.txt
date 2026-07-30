@@ -1246,11 +1246,68 @@
 				_getDeltaBit
 	>> Perhaps use this EPROM: https://www.mouser.sg/ProductDetail/Microchip-Technology/AT27C4096-90PU?qs=lURXKZrvvXfRH%2FhA7K6pZw%3D%3D
 		A0-A17 and O0-O15
+	>>> With extra signals "C:\Temp\Audio3-13.1-6.LPF" shows first wrong value 61h at cursor A, but signals are missing, for example _clearCalculateSampleInte
+		> Higher sample mode needed... 100Khz
+			"C:\Temp\Audio3-13.1-7.LPF" cusor A shows the first wrong value 61h
+				Cussor B is the previous correct 60 7f 60 sequence
+				Cussor C is the previous correct sequence
+			>> 100Khz is not fast enough to capture all details... "Screenshot 2026-07-30 183000.png"
+				>> 500Khz is...
+			> "C:\Temp\Audio3-13.1-8.LPF" same cursors and first wrong value 61h ... even after a power off reset... interesting
+				"Screenshot 2026-07-30 183854.png" Clearly shows the output bit is consistent for the two correct values but different for the wrong value...
+		>> Using 1MHz capture: "C:\Temp\Audio3-13.1-8.LPF"
+			Cursors A (wrong), B, C, D
+		>>> "Screenshot 2026-07-30 185114.png" shows a clear wrong 0 bit at thisOutputBit just before cursor A, resulting in a wrong deltaBeforeSign
+		> Time to look at AUDA0..7 to see if there is any weird step in the address value as it fetches the bits
+		>>> "C:\Temp\Audio3-13.1-9.LPF" does show the spurious bit coincides with the address changing during the last deltaBeforeSign bit is shifted in...
+		>> Hmm... Is this accidentally reading the sign bit at the wrong time? Check _getNextBit...
+		>> "C:\Temp\Audio3-13.1-9.LPF" at 5MHz and _getNextBit
+			It's not the sign bit... It really is shifting in a 0 bit. Comparing the cursor A/B/C _getNextBit timings, they seem to be the same...
+			But why is AUDA changing so frequently for 5/6 _getNextBit +ve edges?
+			>> Must compare with the simulation...
+			>>>>> Simulation obviously shows 8 _getNextBit per byte, but the hardware shows 5/6 _getNextBit per byte?!?!?!?!?!
+		
+		
+
+				
+			
+	
+	
+	
 
 				
 
+* DeltaEncode: But with rules for the maximum number of bits output for each delta length (remaining least significant delta bits are forced to be 0 in the positive delta)
+	>> 	outputBitsMaxRules
+	Foe example: outputBitsMaxRules[4] = 2
+		Means deltas of 4 bits in size have 2 least significant bits that are set to 0
+		Before: -c "C:\Temp\aburner_left.bin" 7 "C:\Temp\aburner_left.vcd"
+			input size byte 1455132
+			bytesChanged 0
+			totalBits 7175898  bytes 896987.25
+			ratio 61.64301589134182
+			numBitsDistribution [189746, 315677, 458224, 356881, 115977, 18056, 570, 1, 0]
+		Using:
+			outputBitsMaxRules[2] = 1
+			outputBitsMaxRules[3] = 2
+			outputBitsMaxRules[4] = 3
+			outputBitsMaxRules[5] = 3
+			outputBitsMaxRules[6] = 4
+			outputBitsMaxRules[7] = 5
+		After: 
+			input size byte 1455132
+			bytesChanged 531096
+			totalBits 5670374  bytes 708796.75
+			ratio 48.710134200883495
+			numBitsDistribution [181692, 301748, 450021, 381005, 123693, 16587, 385, 1, 0]
+		Verify:
+			%USERPROFILE%\Downloads\ffmpeg-20200422-2e38c63-win64-static\ffmpeg-20200422-2e38c63-win64-static\bin\ffplay.exe -f u8 -channels 1 -ar 12500 C:\Temp\aburner_left.vcd.decomp
+		>> Initial tests, without a full decompression check but with the compression data modification step, do indicate significant compression gains, with acceptable sound quality.
+			Hearing tests indicate some of the high frequencies, like in the snare, are reduced.
+		>> But this would need hardware decode changes, to mirror the input parameters for outputBitsMaxRules
+			> This could be done with extra registers and selectors based on the delta bit counter value...
+			> Or it could be baked into an EPROM with suitable logic changes...
 
-	
 
 
 
