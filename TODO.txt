@@ -1266,8 +1266,31 @@
 			But why is AUDA changing so frequently for 5/6 _getNextBit +ve edges?
 			>> Must compare with the simulation...
 			>>>>> Simulation obviously shows 8 _getNextBit per byte, but the hardware shows 5/6 _getNextBit per byte?!?!?!?!?!
+				>> Capturing at 20MHz "C:\Temp\Audio3-13.1-9.LPF" includes the missing _getNextBit signals
+				... so perhaps the timing is slightly off when the last bit, maybe sign bit, is fetched and coincides with the byte change?
+		> Now frustratingly the 61h wrong value is not the first wrong value "C:\Temp\Audio3-13.1-12.LPF"
+			At 10MHz there are _getNextBit signals per byte... The address seems to count up properly...
+			> Anyway, the first recorded (on _clearCalculateSampleInte low with following _getNextBit sequence) full 0x20 delta transition is at cursor A, then cursor B, cursor C
+		>> Note the values of deltaBeforeSign, they should be either 20h 1fh 0h, but the first wrong sequence seems to start somewhere at cursor D
+			>> Here there are repeated reads of 1 bits after the 1f delta. This decodes as multiple 0 delta values, which should not exist, except at the very end of the entire vcd file, which are not even included...???
+			Then followed by deltaBeforeSign=1h at cursor E which also should never appear in the data stream
+		>> OK Re-running the test after cooling down results in a first wrong value of 61h again... "C:\Temp\Audio3-13.1-14.LPF"
+			> at "cursor" T, cursor A in the start of the decode of the delta, which is 1Eh, which is wrong
+			> It is after a 60h->7fh transition, which should go back to 60h, the previous instance of this kind of transition is at cursor B
+		>>> Testing the same data and length of data ($8000) in the simulation shows the actual sample is very short, about 0.9 seconds of simulated time at 20MHz...
+			Does this mean the end of the sample data has been reached?! But it is lacking a proper termination and skipping the end of the data check?
+		>> DoCopy makes no sense. If the code uses:
+			+MBus24Bit_SetAddress_A $06 , ($100 * .i) + $0001
+			It stops the voice from starting, the logic analyser won't even see a "voice is active" signal change
+			But +MBus24Bit_SetAddress_A $06 , ($100 * .i) + $0002 and +MBus24Bit_SetAddress_A $06 , ($100 * .i) + $0000 the voice goes active...
+			>>> Massively changing the DoCopy routine and memory layout of the C64 does not change tthe result
+			Changing kAudio2Register_Bank to test the other RAM also produces no change in the result
+			>> Using "+MBus24Bit_SetAddress_A $06 , ($100 * .i) + $0002" does shift the wrong 61h value to the byte after compared to using offset $0000: "C:\Temp\Audio3-13.1-15.LPF"
+			** This indicates memory fetch logic is having problems? Is there a logic contention? Since the RAM chip is changed using the bank, it's unlikely to be that.
+			
+			
 		
-		
+			
 
 				
 			

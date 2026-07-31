@@ -19,6 +19,7 @@ d0
 ; Audio registers
 :emit Bank = 1
 d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
+;d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $00
 :emit Active = 0
 d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Control
 :emit Volume = $ff
@@ -26,13 +27,18 @@ d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Volume | $ff
 ; Note the start address, to test the memory and bank addressing
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Address24
 b$e3,b$04,b$01
+;b$00,b$00,b$00
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Length24
 b$18,b$00,b$00
+;b$00,b$80,b$00
 
 :emit Some sample data
 ; Note the start address, to test the memory and bank addressing
 s=kAudio3Data_EBBS | $04e30000
 <0,1,2,3,4,5,6,7,@$000000,>$10000,<TestAudio3Comp1.vcd
+;s=kAudio3Data_EBBS | $00000000
+;<0,1,2,3,4,5,6,7,@$000000,>$8000,<C:\temp\t.vcd
+;b$ff,b$ff,b$ff
 ;d=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Bank | $01
 
 :emit Rate = $8000
