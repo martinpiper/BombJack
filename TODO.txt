@@ -1291,7 +1291,12 @@
 		** Add SAMPD debug output, expand AUDA debug output
 		** Clock stablise _BufferEmpty, add debug output
 		** Add bit shifter value debug
+		** Add _VoiceLengthReached debug
 		** Make AUDOE rely on voice active, not _EBSActive, or make it GND
+		>> Pondering why the "set voice active" flag isn't being activated...
+			If _VoiceLengthReached was being held low, due to some reason, then this would stop the voice being set to be active...
+			*** Perhaps make the length check finally only active when _VoiceIsActive
+		*** Why is _voiceNotActive being used to set U65:A and U65:B ? Shouldn't it be VoiceIsActive?
 			
 		
 			
