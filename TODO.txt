@@ -1296,7 +1296,7 @@
 		>> Pondering why the "set voice active" flag isn't being activated...
 			If _VoiceLengthReached was being held low, due to some reason, then this would stop the voice being set to be active...
 			*** Perhaps make the length check finally only active when _VoiceIsActive
-		*** Why is _voiceNotActive being used to set U65:A and U65:B ? Shouldn't it be VoiceIsActive? Or perhaps just set it when scheduled to...?
+		*** This is correct, don't change it: Why is _voiceNotActive being used to set U65:A and U65:B ? Shouldn't it be VoiceIsActive? Or perhaps just set it when scheduled to...?
 			
 		
 			
