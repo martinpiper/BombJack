@@ -1292,6 +1292,7 @@
 		** Done: Add SAMPD debug output, expand AUDA debug output
 		** Clock stablise _BufferEmpty, add debug output
 			>> _BufferEmptyClocked
+			> Measured 370ns between SAMPD change and the next _getNextBit and BufferEmpty
 		** Add bit shifter value debug
 		** Add _VoiceLengthReached debug
 		** Done: Make AUDOE rely on voice active, not _EBSActive, or make it GND
