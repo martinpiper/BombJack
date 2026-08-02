@@ -1289,8 +1289,9 @@
 			** This indicates memory fetch logic is having problems? Is there a logic contention? Since the RAM chip is changed using the bank, it's unlikely to be that.
 		** Done: Reorganise the RAM isolation, using only 74LS373 and SAMPD, to reduce latency of input data. The LS245s can be removed, since _CS1 can be used.
 			Using _CS1 on the RAMs
-		** Add SAMPD debug output, expand AUDA debug output
+		** Done: Add SAMPD debug output, expand AUDA debug output
 		** Clock stablise _BufferEmpty, add debug output
+			>> _BufferEmptyClocked
 		** Add bit shifter value debug
 		** Add _VoiceLengthReached debug
 		** Done: Make AUDOE rely on voice active, not _EBSActive, or make it GND
