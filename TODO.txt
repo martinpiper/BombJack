@@ -1347,11 +1347,13 @@
 
 
 
-* APU: Real hardware: This fails, it always chooses reset even when reg2 is 0: +MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
+* Done: APU: Real hardware: This fails, it always chooses reset even when reg2 is 0: +MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
 	Emulation works fine
 	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
 		Might be reading from the wrong address?
 	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
+	* Perhaps avoid the edge for LATCHINSTR2 when _RESETINSTR?
+		>> TestDataAPU3.txt seems to work
 
 
 

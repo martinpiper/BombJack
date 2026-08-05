@@ -1,0 +1,88 @@
+; Blank (address $0000)
+d0
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Write control registers
+; Reset APU
+d$20000200
+d$20000201
+
+
+s$80000200
+<0,1,2,3,4,5,6,7,<TestAPU3.bin
+
+; Store data into APU memory bank 1 data
+s$40000200
+
+; Next RHRV to wait for
+b$60,b$00,b$f8
+; Sprite regs
+b$01,b$00,b$98
+; Reg2 value
+b$01
+; First write value
+b$73
+; Optional second write value
+b$16
+
+
+
+; Enable APU after writing memory
+d$20000203
+
+d$0
+
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+; Reg2 value
+d$40060200
+
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+; Reg2 value
+d$40060201
+
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+d$0
+w$ff01ff00,$f8020000
+w$ff01ff00,$f7020000
+d$0
+
+; Reg2 value
+d$40060200
