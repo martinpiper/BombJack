@@ -1358,3 +1358,11 @@
 
 
 * Latch the result of the demux for stability
+
+
+
+
+* APU: Might need to replace RAMs with: https://www.mouser.sg/en/ProductDetail/Alliance-Memory/AS7C164A-15JCN?qs=LD2UibpCYJrwS8TM%252BVE%2F6Q%3D%3D
+	Using SOJ28 of some width...
+	6116 are end of life
+	> Add extra banking register to fill extra instruction address space...
