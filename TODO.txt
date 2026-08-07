@@ -1369,3 +1369,5 @@
 		Can use spare bits of U24...
 	> TestAPU4.a	TestDataAPU4.txt
 
+* APU: Precise EBBS tests
+
