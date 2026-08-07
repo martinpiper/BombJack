@@ -1370,8 +1370,9 @@
 	> TestAPU4.a	TestDataAPU4.txt
 	>> V14.0
 	* Update emulation
+	>> checkAPU9
 	
 	
 
 * APU: Precise EBBS tests
-
+	* Check emulation

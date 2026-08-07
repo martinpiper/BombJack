@@ -2,6 +2,7 @@
 ; ..\c64\acme.exe -v4 --msvc "TestAPU4.a"
 
 ; This tests larger instruction memory with the newer version of the APU
+; Mirrors CheckAPU9.a
 
 !source "stdlib/APU_Macros.a"
 
