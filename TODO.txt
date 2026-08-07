@@ -1368,6 +1368,10 @@
 	> Add extra banking register to fill extra instruction address space...
 		Can use spare bits of U24...
 	> TestAPU4.a	TestDataAPU4.txt
+	>> V14.0
+	* Update emulation
+	
+	
 
 * APU: Precise EBBS tests
 
