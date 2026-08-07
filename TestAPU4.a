@@ -1,0 +1,57 @@
+; cd /d C:\Work\BombJack
+; ..\c64\acme.exe -v4 --msvc "TestAPU4.a"
+
+; This tests larger instruction memory with the newer version of the APU
+
+!source "stdlib/APU_Macros.a"
+
+!to "TestAPU4.bin" , plain
+
+*=0
+	+MAPU
+	+MAPU kAPU_Reset_ADDRB1
+	+MAPU
+	
+	; Sprite regs
+	+MAPU_LoadEBSFromB1
+	+MAPU_LoadEADDRFromB1
+
+	; Values to run calculation on
+	+MAPU kAPU_IDataRegLoad0
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad1
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad2
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad3
+	+MAPU kAPU_Incr_ADDRB1
+	+MAPU kAPU_IDataRegLoad4
+	+MAPU kAPU_Incr_ADDRB1
+
+!for .j , 4 {
+!for .i , 670 {
+	+MAPU kAPU_IDataRegLoad0 | kAPU_IDataSelectReg3AddReg4
+	+MAPU kAPU_IDataRegLoad1 | kAPU_IDataSelectReg3SubReg4
+	+MAPU kAPU_IDataRegLoad3 | kAPU_IDataSelectReg3AddReg4
+}
+	; Plus 4 extras
+	+MAPU kAPU_IDataRegLoad4 | kAPU_IDataSelectMemAddReg3
+	+MAPU kAPU_Incr_ADDRB1
+}
+
+	; These final writes should be towards the end of the expanded instruction memory
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg0
+	+MAPU kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg1
+	+MAPU kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg2
+	+MAPU kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg3
+	+MAPU kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg3AddReg4
+	+MAPU kAPU_Incr_EADDR
+	+MAPU kAPU_ExternalMEWR | kAPU_IDataSelectReg3SubReg4
+	+MAPU kAPU_Incr_EADDR
+
+	+MAPU kAPU_Reset_PC
+	+MAPU

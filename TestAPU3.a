@@ -1,7 +1,7 @@
 ; cd /d C:\Work\BombJack
 ; ..\c64\acme.exe -v4 --msvc "TestAPU3.a"
 
-; This tests complex internal and external memory bus interactions
+; This tests kAPU_Reset_PC with kAPU_SkipIfEQ behaviour with a different data source selected other than the default
 
 !source "stdlib/APU_Macros.a"
 

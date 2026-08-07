@@ -1,0 +1,50 @@
+; Blank (address $0000)
+d0
+
+; Address auto-increment using data bits 16-31
++16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,+
+<0,1,2,3,4,5,6,7,<
+
+; Write control registers
+; Reset APU
+d$20000200
+d$20000201
+
+; Write instructions into the four banks, with reset bit high
+d$20000201
+s$80000200
+<0,1,2,3,4,5,6,7,@$0000,>$2000,<TestAPU3.bin
+d$20000203
+s$80000200
+<0,1,2,3,4,5,6,7,@$2000,>$2000,<TestAPU3.bin
+d$20000205
+s$80000200
+<0,1,2,3,4,5,6,7,@$4000,>$2000,<TestAPU3.bin
+d$20000207
+s$80000200
+<0,1,2,3,4,5,6,7,@$6000,>$2000,<TestAPU3.bin
+
+; Store data into APU memory bank 1 data
+s$40000200
+
+; Sprite regs
+b$01,b$00,b$98
+; Values to run calculation on
+b$01
+b$73
+b$16
+b$39
+b$25
+; Plus 4 extras
+b$73
+b$16
+b$39
+b$25
+
+
+
+; Enable APU after writing memory
+d$20000203
+
+d$0
+
