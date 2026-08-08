@@ -1347,32 +1347,7 @@
 
 
 
-* Done: APU: Real hardware: This fails, it always chooses reset even when reg2 is 0: +MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
-	Emulation works fine
-	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
-		Might be reading from the wrong address?
-	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
-	* Perhaps avoid the edge for LATCHINSTR2 when _RESETINSTR?
-		>> TestDataAPU3.txt seems to work
+* Audio3 and APU EBBS. Current APU hardware (older revision) does nto have exact EBBS matching, Audio3 does...
+	>> After sending Audio3 data, the APU is definitely off, right? Disconnect the APU and test...
 
 
-
-* Latch the result of the demux for stability
-
-
-
-
-* APU: Might need to replace RAMs with: https://www.mouser.sg/en/ProductDetail/Alliance-Memory/AS7C164A-15JCN?qs=LD2UibpCYJrwS8TM%252BVE%2F6Q%3D%3D
-	Using SOJ28 of some width...
-	6116 are end of life
-	> Add extra banking register to fill extra instruction address space...
-		Can use spare bits of U24...
-	> TestAPU4.a	TestDataAPU4.txt
-	>> V14.0
-	* Update emulation
-	>> checkAPU9
-	
-	
-
-* APU: Precise EBBS tests
-	* Check emulation

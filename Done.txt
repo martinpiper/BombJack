@@ -5953,3 +5953,39 @@ All layouts now use V3.1
 			For 25000 Hz sample rate, then rate = 21954.55999999994 = 0x55C2
 			For 12500 Hz sample rate, then rate = 10977.40733792512 = 0x2AE1
 			Tested with C:\Work\BombJack\TestAudio3Music1.txt and C:\Work\BombJack\AudioPlay3.bat
+
+
+
+* Audio3: Latch the result of the demux for stability
+
+
+
+
+* Done: APU: Real hardware: This fails, it always chooses reset even when reg2 is 0: +MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
+	Emulation works fine
+	Might be related to previous ADDRB1Load16 and ; Decide to just exit the hiscore draw, for the title screen intro...
+		Might be reading from the wrong address?
+	Or maybe kAPU_SkipIfEQ needs to be held before kAPU_Reset_PC
+	* Perhaps avoid the edge for LATCHINSTR2 when _RESETINSTR?
+		>> TestDataAPU3.txt seems to work
+
+
+
+
+
+* APU: Might need to replace RAMs with: https://www.mouser.sg/en/ProductDetail/Alliance-Memory/AS7C164A-15JCN?qs=LD2UibpCYJrwS8TM%252BVE%2F6Q%3D%3D
+	Using SOJ28 of some width...
+	6116 are end of life
+	> Add extra banking register to fill extra instruction address space...
+		Can use spare bits of U24...
+	> TestAPU4.a	TestDataAPU4.txt
+	>> V14.0
+	* Update emulation
+	>> checkAPU9
+
+
+
+
+* APU: Precise EBBS tests
+	* Check emulation
+		> @TC-1 works. See: addressExActive using isExactEBBSAddress
