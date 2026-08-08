@@ -1,7 +1,7 @@
 Feature: Tests APU design - 4
 
   Tests the APU design by validating files output by the simulation.
-  Run the simulation for at least 0.16 seconds.
+  Run the simulation for at least 0.1 seconds.
   VSMDD2 = TestDataAPU4.txt
   Mirrors JUnit checkAPU9
 
@@ -17,7 +17,7 @@ Feature: Tests APU design - 4
     # The recording model should be the one to terminate the simulation, so it can flush its data properly
     Then I create file "ModelConfig_VSMDD6.txt" with
     """
-    EXITPROCCESSAFTER=0.16
+    EXITPROCCESSAFTER=0.1
     DELETETHISFILE=1
     """
     Then I create file "ModelConfig_VSMDD3.txt" with

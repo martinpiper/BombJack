@@ -5996,3 +5996,14 @@ All layouts now use V3.1
 
 * Check the emulated video layer has the precise comparator for EBBS.
 	>> And the display uses exact address matching
+
+
+
+
+* APU: Sometimes the APU real hardware fails to reset. Is this because the "wait for" circuitry is not resetting if the video is disabled?
+	>> ; Better APU setup, clear the start of APU instruction memory to be reset PC: I think this is because the start of memory first instruction, een in a reset state, was blocking memory access to the video hardware.
+	>> Perhaps create a jsr APU_ResetDisableClear that can be used at the start of code instead
+	>> See "Debugging APU startup:" above. 
+	* Perhaps the APU reset needs a power on reset IC added.
+	* Also check the reset really clears all the state
+	<< VIDPOWRESET on VIDEOP1 B15 from the video board
