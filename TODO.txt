@@ -218,7 +218,7 @@
 	A swept APU data refresh, plus a reset of the APU in the VBLANK might effectively mitigate this, at the expense of a rare screen blank for a frame
 	> Or making the latched write twice as long again might help...
 	> Or shifting the internal memory write slot later?
-		Making it a configurable dip-switch?
+		Done: Making it a configurable dip-switch? DSW3 for _MEWRSLOT and _LATCHEDWRITEPulse selection.
 	>> Or is it because U142:A (which controls when to time the LatchedWriteActive) is using PCINCR which could in theory stall a writing instruction during its write?
 	>> Or is it because something that reads the internal memory is then conflicting with a write from the external bus to the internal memory?
 	* Check the timing of a cached write while the APU is active.
