@@ -871,11 +871,6 @@
 
 
 
-* Check the emulated video layer has the precise comparator for EBBS.
-
-
-
-
 * A full bitmap display layer?
 	Double buffered?
 	A bit like the vector layer but more memory and no RLE
@@ -992,10 +987,6 @@
 
 * APU Square the bus arbitration clocking, using a latch.
 
-
-
-
-* APU Precise EBBS address matching
 
 
 

@@ -5989,3 +5989,10 @@ All layouts now use V3.1
 * APU: Precise EBBS tests
 	* Check emulation
 		> @TC-1 works. See: addressExActive using isExactEBBSAddress
+* APU Precise EBBS address matching
+
+
+
+
+* Check the emulated video layer has the precise comparator for EBBS.
+	>> And the display uses exact address matching
