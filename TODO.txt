@@ -985,11 +985,6 @@
 
 
 
-* APU Square the bus arbitration clocking, using a latch.
-
-
-
-
 * APU Try to decompress music with APU code and add needed logic.
 	Probably memory indexing?
 	Or comparisons?

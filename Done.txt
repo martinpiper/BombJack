@@ -6007,3 +6007,10 @@ All layouts now use V3.1
 	* Perhaps the APU reset needs a power on reset IC added.
 	* Also check the reset really clears all the state
 	<< VIDPOWRESET on VIDEOP1 B15 from the video board
+
+
+
+
+* APU Square the bus arbitration clocking, using a latch.
+	LatchedWriteDesired timed to USECLK
+	_LATCHEDWRITEPulse currently equals 320 ns
