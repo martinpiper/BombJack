@@ -841,12 +841,6 @@
 
 
 
-* Switch to select APU cache write slot?
-* Also switch to decide the speed of the cache write process.
-
-
-
-
 * Tutorials/Teaching aid/Book?
 	Video game hardware and software design
 	

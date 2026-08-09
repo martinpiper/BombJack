@@ -6014,3 +6014,11 @@ All layouts now use V3.1
 * APU Square the bus arbitration clocking, using a latch.
 	LatchedWriteDesired timed to USECLK
 	_LATCHEDWRITEPulse currently equals 320 ns
+
+
+
+
+* Switch to select APU cache write slot?
+	DSW3
+* Also switch to decide the speed of the cache write process.
+	DSW4
