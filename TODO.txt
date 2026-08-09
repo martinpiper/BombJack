@@ -1270,7 +1270,12 @@
 			If _VoiceLengthReached was being held low, due to some reason, then this would stop the voice being set to be active...
 			*** Done: Perhaps make the length check finally only active when _VoiceIsActive
 		*** This is correct, don't change it: Why is _voiceNotActive being used to set U65:A and U65:B ? Shouldn't it be VoiceIsActive? Or perhaps just set it when scheduled to...?
-			
+	**** I've been debugging the last Audio3 compressed audio board for a while, the audio starts fine and decodes thousands of samples correctly, then goes wrong...
+	There is unexplainable memory corruption, the data bits read back after a certain point are bad...
+	***** I just had a brainwave, the APU (Advanced Processing Unit) is the only other thing that writes to the 24 bit address bus...
+		After removing the APU the Audio3 hardware works
+		It turns out the APU, being the older revision, is looking across a large memory range which partially coincides with the range used by the Audio3 hardware sample memory.
+		So... the APU was intercepting sample data and turning itself on. It was running sample data as "code" and randomly spewing data over the address bus
 		
 			
 
