@@ -1276,7 +1276,10 @@
 		After removing the APU the Audio3 hardware works
 		It turns out the APU, being the older revision, is looking across a large memory range which partially coincides with the range used by the Audio3 hardware sample memory.
 		So... the APU was intercepting sample data and turning itself on. It was running sample data as "code" and randomly spewing data over the address bus
-		
+* Audio3 and APU EBBS. Current APU hardware (older revision) does nto have exact EBBS matching, Audio3 does...
+	>> After sending Audio3 data, the APU is definitely off, right? Disconnect the APU and test...
+	>> APU Was causing Audio3 issues due to APU address conflicts...
+	** Audio3 V13.1 works at 20MHz with unit test and also full cartridge test menu and game music
 			
 
 				
@@ -1317,12 +1320,5 @@
 		>> But this would need hardware decode changes, to mirror the input parameters for outputBitsMaxRules
 			> This could be done with extra registers and selectors based on the delta bit counter value...
 			> Or it could be baked into an EPROM with suitable logic changes...
-
-
-
-
-
-* Audio3 and APU EBBS. Current APU hardware (older revision) does nto have exact EBBS matching, Audio3 does...
-	>> After sending Audio3 data, the APU is definitely off, right? Disconnect the APU and test...
 
 
