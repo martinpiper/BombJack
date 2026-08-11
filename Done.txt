@@ -6022,3 +6022,9 @@ All layouts now use V3.1
 	DSW3
 * Also switch to decide the speed of the cache write process.
 	DSW4
+
+
+
+
+* APU: Remove instruction RAM _OE logic
+	Simplify but not remove: _INSTRRAMOE
