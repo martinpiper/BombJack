@@ -6028,3 +6028,22 @@ All layouts now use V3.1
 
 * APU: Remove instruction RAM _OE logic
 	Simplify but not remove: _INSTRRAMOE
+
+
+
+
+* Centroid processing
+	See: WithDecouplingOrientation.pdsprj
+		>> WithDecouplingOrientation_Base Design.csv
+	For all package with suffixes CAP20 -CAP:
+		K104K15X7RF53H5 CAP20	CAP20			middle
+		CL05B104KO5NNNC -CAP	CAPC1005X55N	middle
+	Each rotation and package will have different cap offsets and rotations
+	> Each package placed four times with rotation 0, 90, 180, 270, press + on the keypad
+		Placed so as to make box selection of the caps easier
+		Note adequate spacing between each IC, especially the wide versions
+	> Then each capacitor (CAP20 or CAPC1005X55N) placed to match, Note the rotations of the caps should be in ascending order too...
+		Usually need to place at an offset and drag over the pin to match, otherwise placing right over the pin results in the IC package being deleted
+		Note the pin numbering order on the cap and the combined decoupling cap package order
+	>> Tool can match each cap to the closest package... Calculating offset and rotation
+>		Use: C:\Work\BombJack\ProcessCentroid.py "C:\work\BombJack\WithDecouplingOrientation_Base Design.csv" <file path for PNP csv file>
