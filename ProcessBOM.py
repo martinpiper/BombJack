@@ -44,17 +44,27 @@ if __name__ == '__main__':
             processed.append(row)
 
     if countCAP20 > 0:
-        rowCAP = ["Capacitors", str(countCAP20), "One 100nF (0.1uF) capacitor for DIP ICs marked with extra DC near "
-                                                 "pin 1", "K104K15X7RF53H5",
-                  "https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw"
-                  "%3D%3D", "Decoupling capacitors for each DC component", "All with suffix CAP20", "Top Copper"]
+        capRefs = ""
+        for i in range(countCAP20):
+            if i > 0:
+                capRefs = capRefs + ","
+            capRefs = capRefs + "DC-" + str(i+1)
+        rowCAP = ["Capacitors", str(countCAP20), capRefs, "K104K15X7RF53H5",
+                  "https://www.mouser.sg/ProductDetail/Vishay-BC-Components/K104K15X7RF53H5?qs=sYfpZ29HcUSlgH5bSUHkYw%3D%3D",
+                  "Decoupling capacitors for each DC component. One 100nF (0.1uF) capacitor for DIP ICs marked with extra DC near pin 1",
+                  "All with suffix CAP20", "Top Copper"]
         processed.append(rowCAP)
 
     if countCAP > 0:
-        rowCAP = ["Capacitors", str(countCAP),
-                  "One 100nF (0.1uF) capacitor for SMT ICs marked with extra SDC near pin 1", "CL05B104KO5NNNC",
+        capRefs = ""
+        for i in range(countCAP):
+            if i > 0:
+                capRefs = capRefs + ","
+            capRefs = capRefs + "SDC-" + str(i+1)
+        rowCAP = ["Capacitors", str(countCAP), capRefs, "CL05B104KO5NNNC",
                   "https://www.mouser.sg/ProductDetail/Samsung-Electro-Mechanics/CL05B104KO5NNNC?qs=hqM3L16%252BxlfT2SKOuAUq6Q%3D%3D",
-                  "Decoupling capacitors for each SDC component", "All with suffix -CAP", "Top Copper"]
+                  "Decoupling capacitors for each SDC component. One 100nF (0.1uF) capacitor for SMT ICs marked with extra SDC near pin 1",
+                  "All with suffix -CAP", "Top Copper"]
         processed.append(rowCAP)
 
 #    output = open(sys.argv[1] + ".processed.csv", 'w', newline='', encoding='utf-8')
