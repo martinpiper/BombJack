@@ -46,9 +46,12 @@ s=kAudio3Data_EBBS
 ; About 43 seconds worth of data
 
 
-:emit Rate = $2AE1
+;:emit Rate = $2AE1
+:emit Rate = $323D
 s=kAudio3_EBBS | kAudio3_LeftChannel | kAudio3Register_Rate16
-b$e1,b$2a
+;b$e1,b$2a
+b$3d,b$32
+;b$00,b$80
 
 
 :emit Active = 1

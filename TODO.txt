@@ -1095,7 +1095,8 @@
 	Does not need the extra AND?
 	* Going to need a small minimal prg that will send known output data, which can be read.
 		Probably start with 0 delta, then very small increments around the middle...
-	>> Using a rate of 0x8000, timing of _clearCalculateSampleInternals (A6) is 26.8 us = 37313.432835821 Hz
+	>> Using a rate of 0x8000, timing of logic analyser GENERALSIGNALS signal _clearCalculateSampleInternals (A6) is 26.8 us = 37313.432835821 Hz
+		> 12500 * 32768 / 37313 = 10977 = 0x2ae1
 		> Same as RateTickReached , FetchSample, _FetchSample
 	* Use the low clock to enable the output of the 74138 schedulers, this would guarantee non-overlapped clocks... Then remove the wider sub-timing spacing.
 		>> U99 added AUDCLKREAL to E2 for CLK0..3 and _endClkSchedule
@@ -1279,8 +1280,12 @@
 	* I think a different approach is needed, a simpler linear programmable state machine to do the main part of the decode would be better.
 		> It can be clocked independantly of the main voice rate calculate sample logic.
 		> The final sample volume calculation would then work independantly too...
-				
-			
+
+*** Actually latched the output of the 74273 counters before the demux
+	Now LOADOUTPUT = 15.7 microseconds = 63694 Hz
+	Now _clearCalculateSampleInternals = 31.4 microseconds = 31847 Hz
+	> 12500 * 32768 / 31847 = 12861 = 0x323d
+	>> Also added LoadFinalOutputSample for the final latch U2 after volume, which is the same signal as the previous latch U16 for the result before volume
 	
 	
 	
