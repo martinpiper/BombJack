@@ -1,5 +1,28 @@
 !zn
 SetupAPU
+!if APUCode_Size > kSize_8K {
+	jsr APU_SetAddressAPUInstructions
+	+MWordValueTo_AX APUCode_Start
+	ldy #0
+	jsr Bus24Bit_CopySmallData
+	ldx #(>kSize_8K)-1
+	jsr Bus24Bit_CopySmallDataRepeatForX
+
+	jsr APU_SetAddressAPURegisters
+	+MBus24Bit_Send8BitValue (1<<2)
+
+	jsr APU_SetAddressAPUInstructions
+	+MWordValueTo_AX APUCode_Start + kSize_8K
+	ldy #<APUCode_Size
+	jsr Bus24Bit_CopySmallData
+!if >(APUCode_Size-kSize_8K) > 0 {
+	ldx #>(APUCode_Size-kSize_8K)
+	jsr Bus24Bit_CopySmallDataRepeatForX
+}
+	jsr APU_SetAddressAPURegisters
+	+MBus24Bit_Send8BitValue 0
+
+} else {
 	jsr APU_SetAddressAPUInstructions
 	+MWordValueTo_AX APUCode_Start
 	ldy #<APUCode_Size
@@ -7,6 +30,7 @@ SetupAPU
 !if >APUCode_Size > 0 {
 	ldx #>APUCode_Size
 	jsr Bus24Bit_CopySmallDataRepeatForX
+}
 }
 	jsr APU_SetAddressAPUData
 	+MWordValueTo_AX APUData_Start
@@ -16,4 +40,5 @@ SetupAPU
 	ldx #>APUData_Size
 	jsr Bus24Bit_CopySmallDataRepeatForX
 }
+
 	rts
