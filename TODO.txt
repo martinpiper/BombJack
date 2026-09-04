@@ -245,6 +245,14 @@
 		> The queued events were endlessly accumulating because there were no waits...
 			>> Added: IGNOREQUEUE=1 to the digital data model, also updated the DigitalData TestJig
 	* Now the APU simulation can run for at least 30 seconds with "..\C64\VideoHardware\target\debugDataJustUserPort.txt", no memory write failure for MWFAILINTERNAL
+* V9.4 APU uses "C:\work\BombJack\V9.4\APU - Routed - Tightly 2.pdsprj"
+	It needed two bodge wires:
+	U64 pin 6 to U17 pin 22		This made the data RAM _OE the opposite of the eventual _WE. This is present in the new V14.0 design.
+	U144 pin 2 to U126 pin 14	This changes the bus arbitration clock schedule to use the main clock divider VIDCLK / 2. The new V14.0 design has a new dip switch DSW4 for this.
+	Old V9.4 design uses 74139 Y2 (pin 6) for the bus arbitration _LATCHEDWRITEPulse. New V14.0 design uses a dip switch DSW3 selctor to pins 7/10. Noted with a * on the layout.
+	Old V9.4 design uses 74139 Y0 (pin 4) for the _MEWRSLOT timing. The APU write pulse timing, internal and external. In the new design this is selected via dip switch DSW3 pins 1/16, noted with a * on the layout.
+		> Testing the new V14.0 hardware with After Burner, this seemed to behave better if it used DSW3 pins 2/15 _MEWRSLOT1, not _MEWRSLOT0.
+		>> At some point it would probably be good to validate the simulation with this updated DSW3 setting... I nthe data output and also the simulation logic analyser.
 
 
 
