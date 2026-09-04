@@ -254,8 +254,15 @@
 		> Testing the new V14.0 hardware with After Burner, this seemed to behave better if it used DSW3 pins 2/15 _MEWRSLOT1, not _MEWRSLOT0.
 			When the scrolling score table moves up the screen with the horizontal row movement. Score table position glitches were observed. CPU writes APU data RAM, for scroll X positions.
 			And during the game with the mode7 horizon rotation and position changing, sprite4 glitches were observed. CPU writes sprite4, while APU writes mode7.
-		>> At some point it would probably be good to validate the simulation with this updated DSW3 setting... I nthe data output and also the simulation logic analyser.
+		>> At some point it would probably be good to validate the simulation with this updated DSW3 setting... In the data output and also the simulation logic analyser.
 			The main15 colour bar test, even with the rapid CPU scroll register updates, doesn't seem to glitch with either setting...
+			> Various tests to narrow down issues...
+				Writing simple moving sprites4 with CPU with APU disabled
+				APU waiting on a scanline down the screen, with CPU updating at the top of the screen while APU is waiting...
+				CPU writing to sprites4 while APU is updating screen background register
+				CPU writing to APU data, which then gets sent by APU to sprites4
+			> Try clcok slots and clock speeds...
+		>> Also note the counter is going directly to the demux... so it might have signal timing issues...
 
 
 
