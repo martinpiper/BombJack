@@ -252,7 +252,10 @@
 	Old V9.4 design uses 74139 Y2 (pin 6) for the bus arbitration _LATCHEDWRITEPulse. New V14.0 design uses a dip switch DSW3 selctor to pins 7/10. Noted with a * on the layout.
 	Old V9.4 design uses 74139 Y0 (pin 4) for the _MEWRSLOT timing. The APU write pulse timing, internal and external. In the new design this is selected via dip switch DSW3 pins 1/16, noted with a * on the layout.
 		> Testing the new V14.0 hardware with After Burner, this seemed to behave better if it used DSW3 pins 2/15 _MEWRSLOT1, not _MEWRSLOT0.
+			When the scrolling score table moves up the screen with the horizontal row movement. Score table position glitches were observed. CPU writes APU data RAM, for scroll X positions.
+			And during the game with the mode7 horizon rotation and position changing, sprite4 glitches were observed. CPU writes sprite4, while APU writes mode7.
 		>> At some point it would probably be good to validate the simulation with this updated DSW3 setting... I nthe data output and also the simulation logic analyser.
+			The main15 colour bar test, even with the rapid CPU scroll register updates, doesn't seem to glitch with either setting...
 
 
 
