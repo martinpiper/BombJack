@@ -6047,3 +6047,65 @@ All layouts now use V3.1
 		Note the pin numbering order on the cap and the combined decoupling cap package order
 	>> Tool can match each cap to the closest package... Calculating offset and rotation
 >		Use: C:\Work\BombJack\ProcessCentroid.py "C:\work\BombJack\WithDecouplingOrientation_Base Design.csv" <file path for PNP csv file>
+
+
+
+
+* APU: Hardware, even with the slower (bodged) write latch timing, Demo6 in soak test did eventually show a salmon-pink top of the sky.
+	Referencing the write cache improvements: APU V9.4 debugging : https://www.youtube.com/watch?v=MWFCDedPmM8
+	Resetting the C64 shows the APU consistently displaying this, so it indicates the internal APU memory is wrong.
+	This might also explain a rare blank screen issue that was observed once...
+	A swept APU data refresh, plus a reset of the APU in the VBLANK might effectively mitigate this, at the expense of a rare screen blank for a frame
+	> Or making the latched write twice as long again might help...
+	> Or shifting the internal memory write slot later?
+		Done: Making it a configurable dip-switch? DSW3 for _MEWRSLOT and _LATCHEDWRITEPulse selection.
+	>> Or is it because U142:A (which controls when to time the LatchedWriteActive) is using PCINCR which could in theory stall a writing instruction during its write?
+	>> Or is it because something that reads the internal memory is then conflicting with a write from the external bus to the internal memory?
+	* Check the timing of a cached write while the APU is active.
+		Seems OK
+	* Check the APU doesn't cache a write when in pass through mode, whilst it is not active.
+		Cache is flushed _MR when in pass through mode
+	* Without "jsr UpdateCommonScrolls" and "jsr UpdateTree*" there is no corruption
+		The UpdateScaledSprites and MusicPoll are still enabled
+			> But the audio board is removed...
+		Trying with just "jsr UpdateCommonScrolls" also no corruption
+		Trying with just "jsr UpdateTree*" also no corruption
+		With all updates, still no corruption, although there was a brief tree sprite flicker...
+		* Ah ha, the two (??) tree sprites suddenly went transparent, even though their x pos is being updated and the whole data for both sprites is being sent
+			kAPUData_Tree4cNum = 2, which is what pretty much all the sprite update chunks do, so it's not the definition or colour since all the data is refreshed
+			This indicates the "+MLittleEndian16Bit kBus24Bit_Sprites + (.offset * 4)" sprites address within APUMultiplexStrip was corrupted and it didn't update the sprites?
+* APU: Validate internal RAM write timings
+	To check the APU for user port data potentially getting corrupted
+		>> VSMDD6 Already output MWFAILINTERNAL
+	> Note procedure in: For APU validation when running @Demo6:
+		>> In Proteus open the APU project
+	* The input memory could do with being a different clock rate to the main APU?
+		>> Already is VSMDD2 clock 500k
+	** APU simulation does crash after roughly 4.1 to 4.5 seconds, the member gradually creeps up to around 3.8 GB then boom
+		> The queued events were endlessly accumulating because there were no waits...
+			>> Added: IGNOREQUEUE=1 to the digital data model, also updated the DigitalData TestJig
+	* Now the APU simulation can run for at least 30 seconds with "..\C64\VideoHardware\target\debugDataJustUserPort.txt", no memory write failure for MWFAILINTERNAL
+* V9.4 APU uses "C:\work\BombJack\V9.4\APU - Routed - Tightly 2.pdsprj"
+	It needed two bodge wires:
+	U64 pin 6 to U17 pin 22		This made the data RAM _OE the opposite of the eventual _WE. This is present in the new V14.0 design.
+	U144 pin 2 to U126 pin 14	This changes the bus arbitration clock schedule to use the main clock divider VIDCLK / 2. The new V14.0 design has a new dip switch DSW4 for this.
+	Old V9.4 design uses 74139 Y2 (pin 6) for the bus arbitration _LATCHEDWRITEPulse. New V14.0 design uses a dip switch DSW3 selctor to pins 7/10. Noted with a * on the layout.
+	Old V9.4 design uses 74139 Y0 (pin 4) for the _MEWRSLOT timing. The APU write pulse timing, internal and external. In the new design this is selected via dip switch DSW3 pins 1/16, noted with a * on the layout.
+		> Testing the new V14.0 hardware with After Burner, this seemed to behave better if it used DSW3 pins 2/15 _MEWRSLOT1, not _MEWRSLOT0.
+			When the scrolling score table moves up the screen with the horizontal row movement. Score table position glitches were observed. CPU writes APU data RAM, for scroll X positions.
+			And during the game with the mode7 horizon rotation and position changing, sprite4 glitches were observed. CPU writes sprite4, while APU writes mode7.
+		>> At some point it would probably be good to validate the simulation with this updated DSW3 setting... In the data output and also the simulation logic analyser.
+			The main15 colour bar test, even with the rapid CPU scroll register updates, doesn't seem to glitch with either setting...
+			> Various tests to narrow down issues...
+				Writing simple moving sprites4 with CPU with APU disabled
+				APU waiting on a scanline down the screen, with CPU updating at the top of the screen while APU is waiting...
+				CPU writing to sprites4 while APU is updating screen background register
+					>> ; A very large sprite formation
+						This test shows the sprites4 registers seem to be OK with default timings...
+				CPU writing to APU data, which then gets sent by APU to sprites4
+					>> ; CPU write to APU data and scroll registers test
+			> Try clock slots and clock speeds...
+				>> Setting USECLKMEM to use DSW4 pins 3/14 (VIDCLK/4) seems more reliable than pins 2/15 (VIDCLK/2) and much more reliable than pins 1/16 VIDCLK
+					With default layout clock slots for _MEWRSLOT and _LATCHEDWRITEPulse
+		>> Also note the counter is going directly to the demux... so it might have signal timing issues...
+>> APU V14.0 hardware tested
