@@ -6109,3 +6109,9 @@ All layouts now use V3.1
 					With default layout clock slots for _MEWRSLOT and _LATCHEDWRITEPulse
 		>> Also note the counter is going directly to the demux... so it might have signal timing issues...
 >> APU V14.0 hardware tested
+
+
+
+* Add new APU DSW4 write speed emulation option
+	And APU memory clock divider 4
+	
