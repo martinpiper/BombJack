@@ -1,22 +1,42 @@
 !zn
 SetupAPU
 !if APUCode_Size > kSize_8K {
+!macro MSendAPUCodeWholeChunk .bank , .fromAddress {
+	jsr APU_SetAddressAPURegisters
+	+MBus24Bit_Send8BitValue (.bank<<2)
+
 	jsr APU_SetAddressAPUInstructions
 	+MWordValueTo_AX APUCode_Start
 	ldy #0
 	jsr Bus24Bit_CopySmallData
 	ldx #(>kSize_8K)-1
 	jsr Bus24Bit_CopySmallDataRepeatForX
-
+}
+!set .bank = 0
+!if APUCode_Size > kSize_8K {
+	+MSendAPUCodeWholeChunk 0 , APUCode_Start
+	!set .bank = 1
+}
+!if APUCode_Size > (kSize_8K * 2) {
+!error "fixme this is bugged"
+	+MSendAPUCodeWholeChunk 1 , APUCode_Start + kSize_8K
+	!set .bank = 2
+}
+!if APUCode_Size > (kSize_8K * 3) {
+!error "fixme this is bugged"
+	+MSendAPUCodeWholeChunk 2 , APUCode_Start + (kSize_8K * 2)
+	!set .bank = 3
+}
+!if .bank != 0 {
 	jsr APU_SetAddressAPURegisters
-	+MBus24Bit_Send8BitValue (1<<2)
-
+	+MBus24Bit_Send8BitValue (.bank<<2)
+}
 	jsr APU_SetAddressAPUInstructions
-	+MWordValueTo_AX APUCode_Start + kSize_8K
+	+MWordValueTo_AX APUCode_Start + (kSize_8K * .bank)
 	ldy #<APUCode_Size
 	jsr Bus24Bit_CopySmallData
-!if >(APUCode_Size-kSize_8K) > 0 {
-	ldx #>(APUCode_Size-kSize_8K)
+!if >(APUCode_Size-(kSize_8K * .bank)) > 0 {
+	ldx #>(APUCode_Size-(kSize_8K * .bank))
 	jsr Bus24Bit_CopySmallDataRepeatForX
 }
 	jsr APU_SetAddressAPURegisters
@@ -32,6 +52,8 @@ SetupAPU
 	jsr Bus24Bit_CopySmallDataRepeatForX
 }
 }
+	; And now the data
+
 	jsr APU_SetAddressAPUData
 	+MWordValueTo_AX APUData_Start
 	ldy #<APUData_Size
