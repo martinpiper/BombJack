@@ -1286,3 +1286,10 @@
 
 
 
+* Demo14: Can implement the code for "; NOTE: APU: Real hardware: This fails, it always chooses reset even when reg2 is 0" now
+	; Decide to just exit the hiscore draw, for the title screen intro...
+		APUHiscoreOrExitFlag
+	>> Hmm it's still not working correctly?! The reset seems to always happen still...
+		_Reset_PC must be very quickly strobing low.
+		>> U71 needs to be latched before U70/U127
+		>> U144 also needs latching
