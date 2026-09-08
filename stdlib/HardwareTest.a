@@ -146,6 +146,31 @@ HardwareTest_Char_F
 ; Last blank char
 !fill 8 , 0
 
+!ifdef kHardwareTest_UsingMode7 {
+HardwareTestMode7Regs
+
+HardwareTestMode7Regs_scale_dX
+	+MLittleEndian24Bit $100
+HardwareTestMode7Regs_scale_dXY
+	+MLittleEndian24Bit 17
+HardwareTestMode7Regs_scale_dY
+	+MLittleEndian24Bit $100
+HardwareTestMode7Regs_scale_dYX
+	+MLittleEndian24Bit -17
+
+HardwareTestMode7Regs_xpos
+	+MLittleEndian24Bit -10240
+HardwareTestMode7Regs_ypos
+	+MLittleEndian24Bit -10240
+
+	!by 0
+	!by 0
+
+HardwareTestMode7Regs_backgroundColour !by 0
+HardwareTestMode7Regs_flags !by $1f
+HardwareTestMode7RegsSize = * - HardwareTestMode7Regs
+}
+
 !zn
 HardwareTest_VideoInit
 	jsr Bus24Bit_Init
@@ -308,6 +333,18 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_SendPaletteRGB 0 , 0 , 255
 	+MBus24Bit_SendPaletteRGB 0 , 255 , 255
 	+MBus24Bit_SendPaletteRGB 255 , 255 , 0
+
+!ifdef kHardwareTest_UsingMode7 {
+	; Mode7
+	+MBus24Bit_SetAddress_AXY kBus24Bit_Mode7ScreenPlanes_EBBS , kBus24Bit_Mode7ScreenMap
+	lda #0
+	tay
+	ldx #$1f
+	jsr Bus24Bit_WriteAForYThenX
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_Mode7ScreenPlanes_EBBS , kBus24Bit_Mode7ScreenPlanes_0
+	jsr HardwareTest_VideoPattern0_SendCharsPlane1
+}
 
 	; Chars
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
@@ -475,6 +512,19 @@ HardwareTest_VideoPattern0
 	; Bank
 	+MBus24Bit_Send8BitValue 0
 
+!ifdef kBus24Bit_Sprites4_Controls2 {
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4_Controls2
+	; Flag not ready and enable logic
+	+MBus24Bit_Send8BitValue %10
+	; Offsets
+	jsr Video_clearFourBytes
+	; Extents
+	+MBus24Bit_Send8BitValue $a8
+	+MBus24Bit_Send8BitValue $70
+	; Bank
+	+MBus24Bit_Send8BitValue 0
+}
+
 	; Graphics
 	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4Planes_EBBS , kBus24Bit_Sprites4Planes_0
 	ldx #4
@@ -506,10 +556,35 @@ HardwareTest_VideoPattern0
 	; End of list
 	jsr Video_clearThreeBytes
 
-
 	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4_Controls
 	; Flag ready and enable logic
 	+MBus24Bit_Send8BitValue %11
+
+!ifdef kBus24Bit_Sprites4_Registers2 {
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4_Registers2
+	; Palette
+	+MBus24Bit_Send8BitValue 0
+	; Y pos and size
+	+MBus24Bit_Send8BitValue 180
+	+MBus24Bit_Send8BitValue 32
+	; X pos and size
+	+MBus24Bit_Send8BitValue 130
+	+MBus24Bit_Send8BitValue 64
+	; Address
+	jsr Video_clearThreeBytes
+	; Scales
+	+MBus24Bit_Send8BitValue $08
+	+MBus24Bit_Send8BitValue $04
+	; Stride
+	+MBus24Bit_Send8BitValue 4
+	; End of list
+	jsr Video_clearThreeBytes
+
+	+MBus24Bit_SetAddress_A kBus24Bit_Sprites4_EBBS , kBus24Bit_Sprites4_Controls2
+	; Flag ready and enable logic
+	+MBus24Bit_Send8BitValue %11
+}
+
 
 
 } else {
@@ -538,6 +613,11 @@ HardwareTest_VideoPattern0
 	+MBus24Bit_Send8BitValue 32
 	+MBus24Bit_Send8BitValue 0
 	jsr Video_clearFourBytes
+}
+
+!ifdef kHardwareTest_UsingMode7 {
+	jsr Video_SetAddressMode7
+	+MBus24Bit_FastSpeedCopy HardwareTestMode7Regs , HardwareTestMode7RegsSize
 }
 
 	jsr Video_WaitVBlank
