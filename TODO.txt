@@ -1293,3 +1293,5 @@
 		_Reset_PC must be very quickly strobing low.
 		>> U71 needs to be latched before U70/U127
 		>> U144 also needs latching
+	* APU: Could buffer the external memory address and data, using drivers, but do not buffer the external write signal.
+		This would capture the data slightly more reliably assuming the memory write positive edge is slightly too early.
