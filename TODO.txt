@@ -1290,6 +1290,17 @@
 	; Decide to just exit the hiscore draw, for the title screen intro...
 		APUHiscoreOrExitFlag
 	>> Hmm it's still not working correctly?! The reset seems to always happen still...
+		; This fails
+		+MAPU kAPU_IDataRegLoad2
+		+MAPU kAPU_Incr_ADDRB1
+		+MAPU kAPU_IDataSelectReg2
+		+MAPU kAPU_Reset_PC | kAPU_SkipIfEQ | kAPU_IDataSelectReg2
+		; Real APU hardware, this works
+		+MAPU
+		+MAPU kAPU_Reset_PC | kAPU_SkipIfEQ
+		+MAPU
+		+MAPU kAPU_Incr_ADDRB1
+	* Hardware improvements
 		_Reset_PC must be very quickly strobing low.
 		>> U71 needs to be latched before U70/U127
 		>> U144 also needs latching

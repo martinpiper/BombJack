@@ -149,12 +149,13 @@ HardwareTest_Char_F
 !ifdef kHardwareTest_UsingMode7 {
 HardwareTestMode7Regs
 
+; Scaled and slightly rotated
 HardwareTestMode7Regs_scale_dX
-	+MLittleEndian24Bit $100
+	+MLittleEndian24Bit $80
 HardwareTestMode7Regs_scale_dXY
 	+MLittleEndian24Bit 17
 HardwareTestMode7Regs_scale_dY
-	+MLittleEndian24Bit $100
+	+MLittleEndian24Bit $80
 HardwareTestMode7Regs_scale_dYX
 	+MLittleEndian24Bit -17
 
@@ -343,7 +344,24 @@ HardwareTest_VideoPattern0
 	jsr Bus24Bit_WriteAForYThenX
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_Mode7ScreenPlanes_EBBS , kBus24Bit_Mode7ScreenPlanes_0
-	jsr HardwareTest_VideoPattern0_SendCharsPlane1
+!for .i , 4 {
+	+MBus24Bit_Send8BitValue 1
+	+MBus24Bit_Send8BitValue 2
+	+MBus24Bit_Send8BitValue 3
+	+MBus24Bit_Send8BitValue 4
+}
+	ldx #15
+.mcl1
+	+MBus24Bit_Send8BitValue 1
+	+MBus24Bit_Send8BitValue 2
+	+MBus24Bit_Send8BitValue 3
+	ldy #16-3
+.mcl2
+	+MBus24Bit_Send8BitValue 0
+	dey
+	bne .mcl2
+	dex
+	bne .mcl1
 }
 
 	; Chars
