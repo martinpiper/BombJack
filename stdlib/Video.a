@@ -11,7 +11,7 @@ Video_WaitVBlank
 	bne .isSetNMI
 
 	+MByteValueToAddress_A 1 , .setVBlankNMI
-	+MByteValueToAddress_A $7f , CIA2InterruptControl
+	+MByteValueToAddress_A CIAInterruptControlAllSources , CIA2InterruptControl
 	+MWordValueToAddress_A .nmi , KERNALNMIServiceRoutineLo
 	+MByteValueToAddress_A %10010000 , CIA2InterruptControl
 
