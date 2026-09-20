@@ -1,0 +1,40 @@
+!zn
+DebugTextScreen_VideoInitDisplay
+	jsr Bus24Bit_Init
+	jsr Video_DisableDisplay
+	jsr Video_InitDisplaySpritesScrollsBackground
+	lda #kVideo_EnableDisplay_Use_BGColour | kVideo_EnableDisplay_Enable
+	jsr Video_EnableDisplay
+	jsr Video_SetAddressVideoBackgroundColour
+	+MBus24Bit_Send8BitValue 0
+	jsr Video_SetAddressVideoOverscanExtentRegisters
+	+MBus24Bit_Send8BitValue kBus24Bit_VideoLayer_OverscanExtent_UnsafeWide
+
+	jsr Video_SetAddressPalette
+	+MBus24Bit_SendPaletteRGB 16 , 66 , 255
+	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
+
+	jsr Video_SetAddressVideoPriorityRegister
+	+MBus24Bit_VideoLayer_EmitPriority_NearToFar_A kBus24Bit_VideoLayer_Priority_Pixel1 , kBus24Bit_VideoLayer_Priority_Pixel1 , kBus24Bit_VideoLayer_Priority_Pixel1 , kBus24Bit_VideoLayer_Priority_Pixel1
+
+	jsr Video_SetAddressMergeLayer
+	+MBus24Bit_Send8BitValue kBus24Bit_MergeLayer_Register_Control_Default
+	+MBus24Bit_Send8BitValue 0
+	+MBus24Bit_Send8BitValue kBus24Bit_MergeLayer_Register_Control_Visible_1 | kBus24Bit_MergeLayer_Register_Control_ForceOut_1
+	+MBus24Bit_Send8BitValue 0
+
+	; Top left of the displayed screen is the start of the chars screen memory
+	jsr Video_SetAddressCharScrollRegisters
+	+MBus24Bit_SendLE16BitValue -8
+	+MBus24Bit_SendLE16BitValue -16
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
+	ldx #0
+.cl1
+	+MBus24Bit_Send8BitValueFromX
+	inx
+	bne .cl1
+
+
+	rts
