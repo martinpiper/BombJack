@@ -291,3 +291,18 @@ kBus24Bit_CharScreenPlanes_3		= $0000
 	jmp .labelBefore
 .labelOver
 }
+
+
+!ifdef kBus24Bit_VideoLayer_VBlankUseNMI {
+!macro Video_WaitVBlank_DisableNMI {
++MByteValueToAddress_A CIAInterruptControlAllSources , CIA2InterruptControl
+}
+!macro Video_WaitVBlank_EnableNMI {
++MByteValueToAddress_A %10010000 , CIA2InterruptControl
+}
+} else {
+!macro Video_WaitVBlank_DisableNMI {
+}
+!macro Video_WaitVBlank_EnableNMI {
+}
+}

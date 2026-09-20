@@ -12,7 +12,10 @@ DebugTextScreen_VideoInitDisplay
 
 	jsr Video_SetAddressPalette
 	+MBus24Bit_SendPaletteRGB 16 , 66 , 255
+	; Drop shadow
 	+MBus24Bit_SendPaletteRGB 0 , 0 , 0
+	; Because we are simply combining shifted bitplanes, these two colours are the text colour (text and text|shadow)
+	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
 	+MBus24Bit_SendPaletteRGB 255 , 255 , 255
 
 	jsr Video_SetAddressVideoPriorityRegister
@@ -26,7 +29,7 @@ DebugTextScreen_VideoInitDisplay
 
 	; Top left of the displayed screen is the start of the chars screen memory
 	jsr Video_SetAddressCharScrollRegisters
-	+MBus24Bit_SendLE16BitValue -8
+	+MBus24Bit_SendLE16BitValue -7
 	+MBus24Bit_SendLE16BitValue -16
 
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
@@ -36,5 +39,75 @@ DebugTextScreen_VideoInitDisplay
 	inx
 	bne .cl1
 
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+
+
+	; Generate debug text from CHARROM
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
+	+MBus24Bit_Send8BitValue 0
+	jsr .copyChars
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_1
+	jsr .copyChars2
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_2
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3
+	lda #0
+	tay
+	jsr Bus24Bit_WriteAForY
+
+	+Video_WaitVBlank_EnableNMI
+
+	; Clear "space"
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0 + (' ' * VIC2CharByteSize)
+	jsr .clearChar
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_1 + (' ' * VIC2CharByteSize)
+	jsr .clearChar
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_2 + (' ' * VIC2CharByteSize)
+	jsr .clearChar
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3 + (' ' * VIC2CharByteSize)
+	jsr .clearChar
 
 	rts
+
+.copyChars
+	+MACROCIAIRQControlDisable_A
+	sei
+
+	ldx #0
+.cl2
+	+MByteValueToAddress_A ProcessorPortCharROMBASICKERNAL , ZPProcessorPort
+	lda CHARROM,x
+	asl
+	pha
+	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort
+	pla
+	+MBus24Bit_Send8BitValueFromA
+	inx
+	bne .cl2
+	rts
+
+.copyChars2
+	+MACROCIAIRQControlDisable_A
+	sei
+
+	ldx #0
+.cl3
+	+MByteValueToAddress_A ProcessorPortCharROMBASICKERNAL , ZPProcessorPort
+	lda CHARROM,x
+	pha
+	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort
+	pla
+	+MBus24Bit_Send8BitValueFromA
+	inx
+	bne .cl3
+	rts
+
+.clearChar
+	lda #0
+	ldy #VIC2CharByteSize
+	jmp Bus24Bit_WriteAForY
