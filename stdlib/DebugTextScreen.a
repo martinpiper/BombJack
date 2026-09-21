@@ -111,3 +111,23 @@ DebugTextScreen_VideoInitDisplay
 	lda #0
 	ldy #VIC2CharByteSize
 	jmp Bus24Bit_WriteAForY
+
+.pos !word 0
+DebugTextScreen_SetPosition_XY
+	+MWordValueToAddress_A 0 , .pos
+
+	cpy #0
+	beq .ay1
+.ay2
+	+MAddU8ToAddr16 kBus24Bit_CharScreenWidth , .pos , .pos+1
+	dey
+	bne .ay2
+.ay1
+	txa
+	+MAddAToAddr16 .pos , .pos+1
+	ldx .pos
+	lda .pos+1
+	adc #>kBus24Bit_CharScreenMap
+	tay
+	lda #kBus24Bit_CharScreenMap_EBBS
+	jmp Bus24Bit_SetAddressBus
