@@ -31,7 +31,9 @@ DebugTextScreen_VideoInitDisplay
 	jsr Video_SetAddressCharScrollRegisters
 	+MBus24Bit_SendLE16BitValue -7
 	+MBus24Bit_SendLE16BitValue -16
+	rts
 
+DebugTextScreen_VideoInitCharset
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
 	ldx #0
 .cl1
@@ -47,18 +49,19 @@ DebugTextScreen_VideoInitDisplay
 
 	; Generate debug text from CHARROM
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_0
-	+MBus24Bit_Send8BitValue 0
 	jsr .copyChars
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_1
 	jsr .copyChars2
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_2
+	ldx #DebugTextScreen_NumCharsetPages
 	lda #0
 	tay
-	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForYThenX
 	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenPlanes_EBBS , kBus24Bit_CharScreenPlanes_3
+	ldx #DebugTextScreen_NumCharsetPages
 	lda #0
 	tay
-	jsr Bus24Bit_WriteAForY
+	jsr Bus24Bit_WriteAForYThenX
 
 	+Video_WaitVBlank_EnableNMI
 
@@ -74,36 +77,57 @@ DebugTextScreen_VideoInitDisplay
 
 	rts
 
+; Generates the drop shadow from CHARROM
 .copyChars
+	+MBus24Bit_Send8BitValue 0
+	ldy #DebugTextScreen_NumCharsetPages
 	+MACROCIAIRQControlDisable_A
 	sei
 
 	ldx #0
 .cl2
+	txa
+	and #7
+	cmp #7
+	bne .doByte
+	; Stop bottoms of chars from affect the tops of the next chars
+	+MBus24Bit_Send8BitValue 0
+	jmp .nextByte
+.doByte
 	+MByteValueToAddress_A ProcessorPortCharROMBASICKERNAL , ZPProcessorPort
-	lda CHARROM,x
+.sma1	lda CHARROM + VIC2MemorySetup_CharsSize,x
 	asl
 	pha
 	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort
 	pla
 	+MBus24Bit_Send8BitValueFromA
+.nextByte
 	inx
+	bne .cl2
+	inc .sma1+2
+	dey
 	bne .cl2
 	rts
 
+
+; Copies the CHARROM
 .copyChars2
+	ldy #DebugTextScreen_NumCharsetPages
 	+MACROCIAIRQControlDisable_A
 	sei
 
 	ldx #0
 .cl3
 	+MByteValueToAddress_A ProcessorPortCharROMBASICKERNAL , ZPProcessorPort
-	lda CHARROM,x
+.sma2	lda CHARROM + VIC2MemorySetup_CharsSize,x
 	pha
 	+MByteValueToAddress_A ProcessorPortAllRAMWithIO , ZPProcessorPort
 	pla
 	+MBus24Bit_Send8BitValueFromA
 	inx
+	bne .cl3
+	inc .sma2+2
+	dey
 	bne .cl3
 	rts
 
@@ -111,6 +135,7 @@ DebugTextScreen_VideoInitDisplay
 	lda #0
 	ldy #VIC2CharByteSize
 	jmp Bus24Bit_WriteAForY
+
 
 .pos !word 0
 DebugTextScreen_SetPosition_XY
@@ -131,3 +156,18 @@ DebugTextScreen_SetPosition_XY
 	tay
 	lda #kBus24Bit_CharScreenMap_EBBS
 	jmp Bus24Bit_SetAddressBus
+
+
+DebugTextScreen_Clear_A
+	pha
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharScreenMap
+	pla
+	ldy #<(kBus24Bit_CharScreenHeight * kBus24Bit_CharScreenWidth)
+	ldx #>(kBus24Bit_CharScreenHeight * kBus24Bit_CharScreenWidth)
+	jsr Bus24Bit_WriteAForYThenX
+
+	+MBus24Bit_SetAddress_AXY kBus24Bit_CharScreenMap_EBBS , kBus24Bit_CharColourMap
+	lda #0
+	ldy #<(kBus24Bit_CharScreenHeight * kBus24Bit_CharScreenWidth)
+	ldx #>(kBus24Bit_CharScreenHeight * kBus24Bit_CharScreenWidth)
+	jmp Bus24Bit_WriteAForYThenX
