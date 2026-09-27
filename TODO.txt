@@ -1306,3 +1306,7 @@
 		>> U144 also needs latching
 	* APU: Could buffer the external memory address and data, using drivers, but do not buffer the external write signal.
 		This would capture the data slightly more reliably assuming the memory write positive edge is slightly too early.
+
+
+
+* ProcessBOM.py to warn and remove rows without a stock code.
