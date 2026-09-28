@@ -10,8 +10,8 @@ d0
 d$20000200
 d$20000201
 
-
-!TestDataAPU2MemoryChunk2.txt
+; Direct to sprite registers, while APU is not active
+!TestDataAPU2MemoryChunk3.txt
 
 
 ; PC		12 bits of APU PC (the other half of the 8 KB RAM is used for potential decision points, conditional branching instructions)

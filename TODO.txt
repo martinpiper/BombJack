@@ -1310,3 +1310,9 @@
 
 
 * ProcessBOM.py to warn and remove rows without a stock code.
+
+
+
+
+* APU: Not entirely happy about all the 74138 being always active on the first slot...
+	And the first demux slot being used on the output external memory cache...

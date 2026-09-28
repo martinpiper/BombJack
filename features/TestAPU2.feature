@@ -1,6 +1,7 @@
 Feature: Tests APU design - 2
 
   Tests the APU design by validating files output by the simulation.
+  This tests complex internal and external memory bus interactions that happen at the same time.
   Run the simulation for at least 0.5 seconds.
   VSMDD2 = TestDataAPU2.txt
 
@@ -40,7 +41,7 @@ Feature: Tests APU design - 2
     When automation find window from pattern ".*APU.*Proteus.*"
     When automation focus window
     When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
+    When automation click current menu item "Run the simulation"
     Then automation wait for window close
 
 
@@ -58,4 +59,13 @@ Feature: Tests APU design - 2
   Scenario: Validates expected external memory writes
     When processing each line in file "output\DebugAPUOutputJust9800.txt" and only output to file "target/out2aDebugAPUOutputJust9800.txt" lines that do not contain any lines from "testdata/toMatchTestAPU2.txt"
     Given open file "target/out2aDebugAPUOutputJust9800.txt" for reading
+    Then expect end of file
+
+
+  Scenario: Validates memory accesses contain the expected data
+    # Truncate the file to only after the APU is initialised
+    When processing each line in file "testdata/toMatchTestAPU2.txt" and only output to file "target/out3DebugAPUOutput.txt" lines after finding a line containing "d$4105020f"
+    When processing each line in file "target\out3DebugAPUOutput.txt" and only output to file "target/out3aDebugAPUOutput.txt" lines that do not contain any lines from "output\DebugAPUOutputJust9800.txt"
+    # Indicating there areis no missing expected data
+    Given open file "target/out3aDebugAPUOutput.txt" for reading
     Then expect end of file

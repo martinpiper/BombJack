@@ -6115,3 +6115,6 @@ All layouts now use V3.1
 * Add new APU DSW4 write speed emulation option
 	And APU memory clock divider 4
 	
+	
+	
+* APU: Improved the counter/demux for external memory writes
