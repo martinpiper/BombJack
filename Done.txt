@@ -6118,3 +6118,7 @@ All layouts now use V3.1
 	
 	
 * APU: Improved the counter/demux for external memory writes
+	MEMORYSLOTS provides a view of the different _MEWRSLOT0..3 and _LATCHEDWRITEPulse0..3 options
+		... timed with EBS0..7 EA0..15 ED0..7
+	>> _MEWRSLOT1 seems to be better than _MEWRSLOT0 in the logic analyser, it has longer setup time
+	>> _LATCHEDWRITEPulse2 is optimal
