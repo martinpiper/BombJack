@@ -1326,4 +1326,33 @@
 	... the demo14 scrolling in score table really is not happy.
 	> Is there something different in the score panel code compared to the raster bar code?
 		Perhaps one reads from memory while trying to write and one reads from register?
+	> Raster bar code
+		+MAPU_LoadDoWait
+		+MAPU_ProcessRasterWord
+	> Score table
+		+MAPU_LoadDoWait
+		+MAPU_ProcessRasterWord
+		!macro MAPU_ProcessRasterWord {
+			+MAPU_LoadEADDRFromB1
+			+MAPU_ProcessWordB1
+		}
 	> Is the same seen for the runway/landing section?
+		The runway section draw seems fine, with the C64 off, with _MEWRSLOT0/1/2
+			; Restore EADDRLo
+			+MAPU kAPU_Load_EADDRLo | kAPU_IDataSelectReg2
+			+MAPU_ProcessWordB2
+			!macro MAPU_ProcessWordB2 {
+				+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
+				+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
+				+MAPU kAPU_ExternalMEWR | kAPU_ADDRB2Select
+				+MAPU kAPU_Incr_ADDRB2 | kAPU_Incr_EADDR
+			}
+			+MAPU kAPU_IDataSelectReg3SubReg4 | kAPU_IDataRegLoad3
+			+MAPU kAPU_IDataSelectReg3
+			+MAPU kAPU_PCLoad16 | kAPU_SkipIfEQ | kAPU_IDataSelectReg3
+			+MAPU
+	>> Looks like I'm going to have to try to reproduce the score table problem in main15.a, it might be register specific, like the char scroll registers...
+		>>> Is the the wait position in the score table?!
+			Raster bar code: 4 128 256
+			Score table: kBus24Bit_VideoLayer_XPos_HSYNC_start
+			Runway: kBus24Bit_VideoLayer_XPos_HSYNC_start
