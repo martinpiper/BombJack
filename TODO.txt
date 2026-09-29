@@ -1356,3 +1356,80 @@
 			Raster bar code: 4 128 256
 			Score table: kBus24Bit_VideoLayer_XPos_HSYNC_start
 			Runway: kBus24Bit_VideoLayer_XPos_HSYNC_start
+		* Reproduction main15.a: ; Hiscore APU test
+		>> This reproduces the problem, with expanded macros to show all the instructions
+		!for .i , NumScoreTableEntries {
+			+MAPU_LoadDoWait
+		;	+MAPU_ProcessRasterWord
+		;	+MAPU_LoadEADDRFromB1
+			+MAPU kAPU_Load_EADDRLo
+			+MAPU kAPU_Incr_ADDRB1
+			+MAPU kAPU_Load_EADDRHi
+			+MAPU kAPU_Incr_ADDRB1
+		;	+MAPU_ProcessWordB1
+			+MAPU kAPU_ExternalMEWR
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+			+MAPU kAPU_ExternalMEWR
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+		}
+		> Seems to get worse when warm
+		>> This fixes the problem, adding MAPU empty instructions
+		!for .i , NumScoreTableEntries {
+			+MAPU
+			+MAPU_LoadDoWait
+			+MAPU
+		;	+MAPU_ProcessRasterWord
+		;	+MAPU_LoadEADDRFromB1
+			+MAPU kAPU_Load_EADDRLo
+			+MAPU
+			+MAPU kAPU_Incr_ADDRB1
+			+MAPU
+			+MAPU kAPU_Load_EADDRHi
+			+MAPU
+			+MAPU kAPU_Incr_ADDRB1
+			+MAPU
+		;	+MAPU_ProcessWordB1
+			+MAPU kAPU_ExternalMEWR
+			+MAPU
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+			+MAPU
+			+MAPU kAPU_ExternalMEWR
+			+MAPU
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+			+MAPU
+		}
+		>> Narrowed down to this one, see ";; This one?" below. Commenting out that empty +MAPU causes APU issues:
+		!for .i , NumScoreTableEntries {
+			+MAPU
+			+MAPU_LoadDoWait
+			+MAPU
+		;	+MAPU_ProcessRasterWord
+		;	+MAPU_LoadEADDRFromB1
+			+MAPU kAPU_Load_EADDRLo
+			+MAPU
+			+MAPU kAPU_Incr_ADDRB1
+			+MAPU		;; This one?
+			+MAPU kAPU_Load_EADDRHi
+		;	+MAPU
+			+MAPU kAPU_Incr_ADDRB1
+		;	+MAPU
+		;	+MAPU_ProcessWordB1
+			+MAPU kAPU_ExternalMEWR
+		;	+MAPU
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+		;	+MAPU
+			+MAPU kAPU_ExternalMEWR
+		;	+MAPU
+			+MAPU kAPU_Incr_ADDRB1 | kAPU_Incr_EADDR
+		;	+MAPU
+		}
+		>> This seems to be reliable now:
+		!for .i , NumScoreTableEntries {
+			+MAPU
+			+MAPU_LoadDoWait
+			+MAPU
+		;	+MAPU_ProcessRasterWord
+			+MAPU_LoadEADDRFromB1Reliable
+			+MAPU_ProcessWordB1
+		}
+		>> There are still very rare palette and sprites2 position corruptions, this is probably down to the cache logic...
