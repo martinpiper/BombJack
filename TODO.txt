@@ -1316,6 +1316,9 @@
 
 * APU: Not entirely happy about all the 74138 being always active on the first slot...
 	And the first demux slot being used on the output external memory cache...
+		>> Output cache improved.
+		> The instruction scheduler and write slot needs improvement.
+
 
 
 
