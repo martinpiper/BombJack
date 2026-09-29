@@ -1316,3 +1316,11 @@
 
 * APU: Not entirely happy about all the 74138 being always active on the first slot...
 	And the first demux slot being used on the output external memory cache...
+
+
+
+* Demo14: APU: While the _MEWRSLOT1 seems to be better than _MEWRSLOT0 in the logic analyser, and Demo15 raster bars test with cached writes seems to pass...
+	... the demo14 scrolling in score table really is not happy.
+	> Is there something different in the score panel code compared to the raster bar code?
+		Perhaps one reads from memory while trying to write and one reads from register?
+	> Is the same seen for the runway/landing section?
