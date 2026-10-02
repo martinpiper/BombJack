@@ -6122,3 +6122,11 @@ All layouts now use V3.1
 		... timed with EBS0..7 EA0..15 ED0..7
 	>> _MEWRSLOT1 seems to be better than _MEWRSLOT0 in the logic analyser, it has longer setup time
 	>> _LATCHEDWRITEPulse2 is optimal
+
+
+
+
+* APU: Not entirely happy about all the 74138 being always active on the first slot...
+	And the first demux slot being used on the output external memory cache...
+		>> Output cache improved.
+		> The instruction scheduler and write slot needs improvement.
