@@ -998,6 +998,7 @@
 * Audio: Perhaps upgrade to 1MB or 2MB for sample data, which would need an extra address byte per channel
 	Also look at inceasing the frequency range, increase clock speed and the byte/word range
 	Perhaps increase the channels
+	Perhaps use RAM for the registers.
 
 
 
@@ -1255,7 +1256,7 @@
 
 * DeltaEncode: But with rules for the maximum number of bits output for each delta length (remaining least significant delta bits are forced to be 0 in the positive delta)
 	>> 	outputBitsMaxRules
-	Foe example: outputBitsMaxRules[4] = 2
+	For example: outputBitsMaxRules[4] = 2
 		Means deltas of 4 bits in size have 2 least significant bits that are set to 0
 		Before: -c "C:\Temp\aburner_left.bin" 7 "C:\Temp\aburner_left.vcd"
 			input size byte 1455132
