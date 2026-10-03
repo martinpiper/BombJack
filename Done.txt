@@ -6130,3 +6130,11 @@ All layouts now use V3.1
 	And the first demux slot being used on the output external memory cache...
 		>> Output cache improved.
 		> The instruction scheduler and write slot needs improvement.
+
+
+
+* NEXTINSTR timing, old and new
+	580 ns old
+	660 ns new, due to instruction schedule latching...
+		So tie PCINCR to NEXTINSTR instead, brings it back to 580 ns
+
