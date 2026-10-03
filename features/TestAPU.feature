@@ -1,3 +1,4 @@
+@APU
 Feature: Tests APU design
 
   Tests the APU design by validating files output by the simulation.
