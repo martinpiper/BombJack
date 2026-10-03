@@ -1426,3 +1426,14 @@
 			+MAPU_ProcessWordB1
 		}
 		>> There are still very rare palette and sprites2 position corruptions, this is probably down to the cache logic...
+
+
+
+
+* NEXTINSTR timing, old and new
+	580 ns old
+	660 ns new, due to instruction schedule latching...
+		So tie PCINCR to NEXTINSTR instead, brings it back to 580 ns
+
+
+	
