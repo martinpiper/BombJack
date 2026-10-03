@@ -39,8 +39,7 @@ Feature: Tests APU design - 4
 
 
     Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
-    When run simulation
-
+    When run the APU simulation
 
 
   Scenario: Validates expected external memory writes

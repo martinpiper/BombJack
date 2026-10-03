@@ -23,12 +23,8 @@ Feature: Tests SimpleCPU design
     """
 
     Given starting an automation process "cmd" with parameters: /c SimpleCPU.pdsprj
-    When automation find window from pattern ".*SimpleCPU.*Proteus.*"
-    When automation focus window
-    When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
-    Then automation wait for window close
-    
+    When run the SimpleCPU simulation
+
 
     Given open file "output\DebugCPUOutputInternal.txt" for reading
     And skip line

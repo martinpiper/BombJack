@@ -10,12 +10,29 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
       DELETETHISFILE=1
       """
 
+    Given I create file "ModelConfig_VSMDD2.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+    Given I create file "ModelConfig_VSMDD3.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+    Given I create file "ModelConfig_VSMDD4.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+    Given I create file "ModelConfig_VSMDD5.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+
     Given starting an automation process "cmd" with parameters: /c UserPort20To32Bit2.pdsprj
-    When automation find window from pattern ".*UserPort20To32Bit2.*Proteus.*"
-    When automation focus window
-    When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
-    Then automation wait for window close
+    When run the UserPort20To32Bit2 simulation
 
 
 

@@ -39,7 +39,7 @@ Feature: Tests APU design - 2
 
 
     Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
-    When run simulation
+    When run the APU simulation
 
 
   Scenario: Validates expected memory accesses for internal APU instruction memory
@@ -102,11 +102,8 @@ Feature: Tests APU design - 2
 
 
     Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
-    When automation find window from pattern ".*APU.*Proteus.*"
-    When automation focus window
-    When automation expand main menu item "Debug"
-    When automation click current menu item "Run the simulation"
-    Then automation wait for window close
+    When run the APU simulation
+
 
   Scenario: Validates memory accesses contain the expected data after a single pass
     # Truncate the file to only after the APU is initialised

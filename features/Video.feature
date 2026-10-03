@@ -1,6 +1,7 @@
+@Video
 Feature: Tests the video hardware with expected output
   
-  
+  @run
   Scenario: Simple image comparison test
 
     Then I create file "ModelConfig_VSMDD2.txt" with
@@ -11,12 +12,10 @@ Feature: Tests the video hardware with expected output
     """
 
     Given starting an automation process "cmd" with parameters: /c BombJack.pdsprj
-    When automation find window from pattern ".*BombJack.*Proteus.*"
-    When automation focus window
-    When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
-    Then automation wait for window close
+    When run the BombJack simulation
 
+  @check
+  Scenario: Check results
     Then expect image "testdata/debug00000000.bmp" to be identical to "output/debug00000000.bmp"
     Then expect image "testdata/debug00000001.bmp" to be identical to "output/debug00000001.bmp"
     Then expect image "testdata/debug00000002.bmp" to be identical to "output/debug00000002.bmp"

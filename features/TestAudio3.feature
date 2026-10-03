@@ -1,29 +1,30 @@
+@Audio3
 Feature: Tests Audio3 design
 
   Tests the Audio3 design by validating files output by the simulation.
 
+  @run
+  Scenario: Runs the test
 
-  Scenario: Validates expected data from unit test input
+    # In this test samples are not always generated, so the reocrder cannot exit the process.
+    Given I create file "ModelConfig_VSMDD2.txt" with
+    """
+    EXITPROCCESSAFTER=0.5
+    DELETETHISFILE=1
+    """
 
-#    Given I create file "ModelConfig_VSMDD2.txt" with
-#    """
-#    EXITPROCCESSAFTER=0.5
-#    DELETETHISFILE=1
-#    """
+    Given I create file "ModelConfig_VSMDD1.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
 
-#    Given starting an automation process "cmd" with parameters: /c Audio3.pdsprj
-#    Given wait for 5000 milliseconds
-#    When automation find window from pattern ".*Audio3.*Proteus.*"
-#    Given wait for 5000 milliseconds
-#    When automation focus window
-#    When automation wait for idle
-#    When automation expand main menu item "Debug"
-#    Given wait for 5000 milliseconds
-#    When automation wait for idle
-#    When automation click current menu item "Run Simulation"
-#    Then automation wait for window close
+    Given starting an automation process "cmd" with parameters: /c Audio3.pdsprj
+    When run the Audio3 simulation
     
 
+  @check
+  Scenario: Validates expected data from unit test input
     Given open file "output\DebugAudio3Output.txt" for reading
     When ignoring lines that contain ";"
     When ignoring empty lines

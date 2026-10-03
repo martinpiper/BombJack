@@ -37,7 +37,7 @@ Feature: Tests APU design
     """
 
     Given starting an automation process "cmd" with parameters "/c APU.pdsprj"
-    When run simulation
+    When run the APU simulation
 
 
 

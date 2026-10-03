@@ -11,13 +11,16 @@ Feature: Tests UserPortTo24BitAddress design
     EXITPROCCESSAFTER=0.5
     DELETETHISFILE=1
     """
+    
+    Given I create file "ModelConfig_VSMDD1.txt" with
+    """
+    FORCEFLUSH=1
+    DELETETHISFILE=1
+    """
+
 
     Given starting an automation process "cmd" with parameters: /c UserPortTo24BitAddress2.pdsprj
-    When automation find window from pattern ".*UserPortTo24BitAddress2.*Proteus.*"
-    When automation focus window
-    When automation expand main menu item "Debug"
-    When automation click current menu item "Run Simulation.*F12"
-    Then automation wait for window close
+    When run the UserPortTo24BitAddress2 simulation
 
 
     Given open file "output\DebugUserPortTo24BitAddress.txt" for reading
