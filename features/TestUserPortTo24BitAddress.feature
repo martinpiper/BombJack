@@ -3,6 +3,7 @@ Feature: Tests UserPortTo24BitAddress design
   Tests the UserPortTo24BitAddress design by validating files output by the simulation.
   Run the simulation for at least 0.5 seconds.
 
+  @run
   Scenario: Validates expected memory accesses for internal APU instruction memory
 
     Given I create file "ModelConfig_VSMDD2.txt" with
@@ -19,6 +20,9 @@ Feature: Tests UserPortTo24BitAddress design
     """
 
 
+
+  @check
+  Scenario: Validates expected data from unit test input
     Given starting an automation process "cmd" with parameters: /c UserPortTo24BitAddress2.pdsprj
     When run the UserPortTo24BitAddress2 simulation
 

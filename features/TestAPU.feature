@@ -5,6 +5,7 @@ Feature: Tests APU design
   Run the simulation for at least 0.16 seconds.
   VSMDD2 = TestDataAPU1.txt
 
+  @run
   Scenario: Assembles test and runs the simulation
     Given I run the command line: ..\c64\acme.exe -v4 --msvc "TestAPU1.a"
     Then property "test.BDD6502.lastProcessOutput" must contain string "Saving"
@@ -41,8 +42,12 @@ Feature: Tests APU design
 
 
 
+  @check
   Scenario: Validates expected memory accesses for internal APU instruction memory
     Given open file "output\DebugAPUOutput.txt" for reading
+    And skip line
+    And skip line
+    Then expect the next line to contain "d$00000000"
     And skip line
     And skip line
     And skip line
@@ -62,6 +67,7 @@ Feature: Tests APU design
 
 
 
+  @check
   Scenario: Validates expected memory accesses for internal APU data memory
     Given open file "output\DebugAPUOutputInternal.txt" for reading
     And skip line
@@ -102,6 +108,7 @@ Feature: Tests APU design
 
 
 
+  @check
   Scenario: Validates expected external memory writes
     Given open file "output\DebugAPUOutputJust9800.txt" for reading
     And skip line

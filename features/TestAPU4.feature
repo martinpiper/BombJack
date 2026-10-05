@@ -6,6 +6,7 @@ Feature: Tests APU design - 4
   VSMDD2 = TestDataAPU4.txt
   Mirrors JUnit checkAPU9
 
+  @run
   Scenario: Assembles test and runs the simulation
     Given I run the command line: ..\c64\acme.exe -v4 --msvc "TestAPU4.a"
     Then property "test.BDD6502.lastProcessOutput" must contain string "Saving"
@@ -42,6 +43,7 @@ Feature: Tests APU design - 4
     When run the APU simulation
 
 
+  @check
   Scenario: Validates expected external memory writes
     Given open file "output\DebugAPUOutputJust9800.txt" for reading
     And skip line

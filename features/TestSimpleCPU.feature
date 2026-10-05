@@ -4,6 +4,7 @@ Feature: Tests SimpleCPU design
   More info: https://docs.google.com/document/d/1scCYfTEw1mQYNbtYTEA1E8sRUwHvc7d2FfL6wf29QfI/edit?usp=sharing
 
 
+  @run
   Scenario: Validates expected memory accesses CPU writes
 
     Given I run the command line: ..\C64\acme.exe -v -f plain -o target/i0.bin --setpc 0 SimpleCPU_Fibonacci.a
@@ -26,6 +27,8 @@ Feature: Tests SimpleCPU design
     When run the SimpleCPU simulation
 
 
+  @check
+  Scenario: Validates expected data from unit test input
     Given open file "output\DebugCPUOutputInternal.txt" for reading
     And skip line
     And skip line

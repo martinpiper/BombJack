@@ -1,6 +1,7 @@
 Feature: Tests the UserPort20To32Bit2 hardware with expected output
   
   
+  @run
   Scenario: Execute schematic with test
 
     Then I create file "ModelConfig_VSMDD1.txt" with
@@ -36,6 +37,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: RAM validation test 1, for the full execution
 
     Given open file "output\DebugUserPort20To32Bit2_RAMWrite.txt" for reading
@@ -59,6 +61,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate passthrough 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "During power-on reset"
     Given open file "target/out.txt" for reading
@@ -73,6 +76,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate passthrough 2
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "After power-on reset"
     Given open file "target/out.txt" for reading
@@ -101,6 +105,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate disabled mode 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Disabled mode"
     Given open file "target/out.txt" for reading
@@ -114,6 +119,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate passthrough 3
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable pass-through"
     Given open file "target/out.txt" for reading
@@ -125,6 +131,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate PS2 toggle 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "PA2 toggle twice"
     Given open file "target/out.txt" for reading
@@ -144,6 +151,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate direct bytes with latch4 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Write some direct bytes to the pass-through with latch4"
     Given open file "target/out.txt" for reading
@@ -165,6 +173,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate RAM read to back to C64 1
     When processing each line in file "output\DebugUserPort20To32Bit2.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch5 again for read RAM"
     Given open file "target/out.txt" for reading
@@ -183,6 +192,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Validate RAM read to pass-through 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Set latch7 - Enable RAM to pass-through"
     Given open file "target/out.txt" for reading
@@ -206,6 +216,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
     Then accounting for transient values expect the next line to contain "PTPA2 | PT_PC | $00000098"
 
 
+  @check
   Scenario: Validate RAM read to pass-through 2
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Read from latch3 which should read the added address..."
     Given open file "target/out.txt" for reading
@@ -229,6 +240,7 @@ Feature: Tests the UserPort20To32Bit2 hardware with expected output
 
 
 
+  @check
   Scenario: Fast DMA test 1
     When processing each line in file "output\DebugUserPort20To32Bit2_PassthroughChange.txt" and only output to file "target/out.txt" lines after finding a line containing "Fast DMA test"
     Given open file "target/out.txt" for reading

@@ -42,3 +42,5 @@ d$0
 
 ; Reset APU after a frame
 d$20000200
+
+d$0
