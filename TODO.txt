@@ -1009,7 +1009,12 @@
 		An earlier check would save a few extra pixel draw clocks, giving slightly more on-screen pixel draw time.
 	The current usage of the AND gate to signal the current row is completed has less logic and less risk.
 
+* Sprites4: For the row draw clip test, it might be more optimal to draw right to left and test the left edge.
+	This could in theory be done automatically
 
+
+
+* Sprites4: Check the draw state (look for counter/decoder structure) and see if it needs to be latched...
 
 
 
